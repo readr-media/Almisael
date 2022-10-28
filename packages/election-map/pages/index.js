@@ -1,3 +1,5 @@
+import { MapContainer } from '../components/MapContainer'
+
 export default function Home() {
-  return <div>Home</div>
+  return <MapContainer />
 }
