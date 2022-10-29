@@ -2,7 +2,6 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { useElementDimension } from '../hook/useElementDimension'
 import { Map } from './Map'
-import { MapCompareButton } from './MapCompareButton'
 import { MapTooltip } from './MapTooltip'
 
 const Wrapper = styled.div`
@@ -25,9 +24,8 @@ const defaultTooltip = {
   coordinate: [],
 }
 
-export const MapControl = ({ mapData }) => {
+export const MapControl = ({ mapData, compareMode }) => {
   const [mapObject, setMapObject] = useState(defaultMapObject)
-  const [compareMode, setCompareMode] = useState(false)
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
 
@@ -59,12 +57,6 @@ export const MapControl = ({ mapData }) => {
             />
           </>
         )}
-        <MapCompareButton
-          compareMode={compareMode}
-          onCompareModeChange={() => {
-            setCompareMode((v) => !v)
-          }}
-        />
         <MapTooltip tooltip={tooltip} />
       </Wrapper>
     )
@@ -81,12 +73,6 @@ export const MapControl = ({ mapData }) => {
             setTooltip={setTooltip}
           />
         )}
-        <MapCompareButton
-          compareMode={compareMode}
-          onCompareModeChange={() => {
-            setCompareMode((v) => !v)
-          }}
-        />
         <MapTooltip tooltip={tooltip} />
       </Wrapper>
     )

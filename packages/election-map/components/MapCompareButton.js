@@ -1,26 +1,20 @@
 import styled from 'styled-components'
 
 const Button = styled.button`
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  font-size: 12px;
-
-  display: inline-block;
-  border: none;
-  margin: 0;
-  text-decoration: none;
-  background-color: gray;
-  color: #ffffff;
-  font-family: sans-serif;
-  cursor: pointer;
+  display: block;
+  margin: 20px 0 0 48px;
+  border: 1px solid #000;
+  background-color: #686868;
+  color: #fff1db;
+  border-radius: 8px;
+  line-height: 23px;
   text-align: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  width: 80px;
+  height: 32px;
 
-  &:hover {
-    background: lightgray;
-    color: white;
+  &:hover,
+  &:active {
+    background-color: #000;
   }
 `
 

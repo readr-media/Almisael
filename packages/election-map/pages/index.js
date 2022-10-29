@@ -1,5 +1,5 @@
-import { MapContainer } from '../components/MapContainer'
+import { Dashboard } from '../components/Dashboard'
 
 export default function Home() {
-  return <MapContainer />
+  return <Dashboard />
 }

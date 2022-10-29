@@ -102,7 +102,7 @@ export const SeatsChart = () => {
                       party: party.label,
                     }))
                   }}
-                  onMouseMove={() => {
+                  onMouseMove={(e) => {
                     setHoverParty((value) => ({
                       ...value,
                       coordinate: [e.clientX + 15, e.clientY],
