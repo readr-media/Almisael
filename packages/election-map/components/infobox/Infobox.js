@@ -1,7 +1,3 @@
-import { mockData as presidentMockData } from '../../mock-datas/maps/presidents/2020_president_country'
-import { mockData as mayorMockData } from '../../mock-datas/maps/mayors/2022_mayor_country'
-import { mockData as legislatorMockData } from '../../mock-datas/maps/legislators/2020_legislator_county_63000'
-import { mockData as councilmanMockData } from '../../mock-datas/maps/councilmen/2018_councilmen_county_63000'
 import styled from 'styled-components'
 
 const InfoboxWrapper = styled.div`
@@ -275,11 +271,12 @@ const CouncilmanInfobox = ({ level, profRate, districts }) => {
 //   `,
 // }
 
-export const Infobox = ({ type }) => {
+export const Infobox = ({ type, data }) => {
   let infobox
   switch (type) {
     case 'president': {
-      const { summary } = presidentMockData
+      console.log('infobox president')
+      const { summary } = data
       const { profRate, candidates } = summary
 
       infobox = (
@@ -292,7 +289,8 @@ export const Infobox = ({ type }) => {
       break
     }
     case 'mayor': {
-      const mayorCity = mayorMockData.districts[0]
+      console.log('infobox mayor')
+      const mayorCity = data.districts[0]
       const { profRate, candidates } = mayorCity
       infobox = (
         <MayorInfobox level={2} profRate={profRate} candidates={candidates} />
@@ -300,7 +298,8 @@ export const Infobox = ({ type }) => {
       break
     }
     case 'legislator': {
-      const { summary, districts } = legislatorMockData
+      console.log('infobox legislator')
+      const { summary, districts } = data
       const { profRate } = summary
       infobox = (
         <LegislatorInfobox
@@ -312,7 +311,8 @@ export const Infobox = ({ type }) => {
       break
     }
     case 'councilman': {
-      const { summary, districts } = councilmanMockData
+      console.log('infobox councilman')
+      const { summary, districts } = data
       const { profRate } = summary
       infobox = (
         <CouncilmanInfobox

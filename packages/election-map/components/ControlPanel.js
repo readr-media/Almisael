@@ -43,21 +43,18 @@ const Location = styled.span`
 `
 
 const locations = ['台南市', '七股區', '莊敬里']
-export const ControlPanel = () => {
+export const ControlPanel = ({ electionNamePairs, onElectionChange }) => {
   return (
     <Wrapper>
-      <ElectionSelect name="election-type">
-        <option value="presidenet" disabled>
-          總統
-        </option>
-        <option value="mayor">縣市首長</option>
-        <option value="legislator" disabled>
-          立法委員
-        </option>
-        <option value="counsilmen">縣市議員</option>
-        <option value="referenda" disabled>
-          公投
-        </option>
+      <ElectionSelect name="election-type" onChange={onElectionChange}>
+        {electionNamePairs.map((electionNamePair) => (
+          <option
+            value={electionNamePair.electionType}
+            key={electionNamePair.electionType}
+          >
+            {electionNamePair.electionName}
+          </option>
+        ))}
       </ElectionSelect>
       <MapReverseButton>回上層</MapReverseButton>
       <LocationsWrapper>

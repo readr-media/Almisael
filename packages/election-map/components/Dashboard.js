@@ -5,6 +5,7 @@ import { MapContainer } from './MapContainer'
 import { InfoboxPanel } from './InfoboxPanel'
 import { SeatsPanel } from './SeatsPanel'
 import { MapCompareButton } from './MapCompareButton'
+import { useElectionData } from '../hook/useElectinData'
 
 const Wrapper = styled.div`
   position: relative;
@@ -23,34 +24,19 @@ const PanelsWrapper = styled.div`
   z-index: 1;
 `
 
-// const defaultLevel = 0
-// const defaultElection = elections.mayor
-// const year = defaultElection.years[0]
-// const mappingData = defaultElection.levels[defaultLevel]
-
 export const Dashboard = () => {
   const [compareMode, setCompareMode] = useState(false)
-
-  const elections = [
-    { type: 'president' },
-    { type: 'mayor' },
-    {
-      type: 'legislator',
-      seats: { title: '立法委員席次圖' },
-    },
-    {
-      type: 'councilman',
-      seats: { title: '縣市議員席次圖' },
-    },
-  ]
-  // const election = elections[Math.floor(Math.random() * elections.length)]
-  const election = elections[3]
+  const { electionNamePairs, onElectionChange, election, infoboxData } =
+    useElectionData()
 
   return (
     <Wrapper>
       <PanelsWrapper>
-        <ControlPanel />
-        <InfoboxPanel type={election.type} />
+        <ControlPanel
+          electionNamePairs={electionNamePairs}
+          onElectionChange={onElectionChange}
+        />
+        <InfoboxPanel type={election.electionType} data={infoboxData} />
         <SeatsPanel seats={election.seats} />
         <MapCompareButton
           compareMode={compareMode}
