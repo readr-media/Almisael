@@ -10,7 +10,25 @@ const ElectionSelect = styled.select`
   margin: 36px 0 0 60px;
 `
 
-const MapReverseButton = styled.button`
+const MapLevelBackButton = styled.button`
+  display: block;
+  margin: 20px 0 0 48px;
+  border: 1px solid #000;
+  background-color: #686868;
+  color: #fff1db;
+  border-radius: 8px;
+  line-height: 23px;
+  text-align: center;
+  width: 80px;
+  height: 32px;
+
+  &:hover,
+  &:active {
+    background-color: #000;
+  }
+`
+
+const MapLevelResetButton = styled.button`
   display: block;
   margin: 20px 0 0 48px;
   border: 1px solid #000;
@@ -42,8 +60,19 @@ const Location = styled.span`
   }
 `
 
-const locations = ['台南市', '七股區', '莊敬里']
-export const ControlPanel = ({ electionNamePairs, onElectionChange }) => {
+export const ControlPanel = ({
+  electionNamePairs,
+  onElectionChange,
+  mapObject,
+}) => {
+  const { countyName, townName, constituencyName, villageName } = mapObject
+  const locations = [
+    countyName,
+    townName,
+    constituencyName,
+    villageName,
+  ].filter((name) => !!name)
+  if (!locations.length) locations.push('全國')
   return (
     <Wrapper>
       <ElectionSelect name="election-type" onChange={onElectionChange}>
@@ -56,7 +85,30 @@ export const ControlPanel = ({ electionNamePairs, onElectionChange }) => {
           </option>
         ))}
       </ElectionSelect>
-      <MapReverseButton>回上層</MapReverseButton>
+      <MapLevelBackButton
+        disabled={mapObject.level === 0}
+        onClick={() => {
+          const target = document.querySelector(
+            `#first-id-${mapObject.upperLevelId}`
+          )
+          console.log(target)
+          let event = new MouseEvent('click', { bubbles: true })
+          target.dispatchEvent(event)
+        }}
+      >
+        回上層
+      </MapLevelBackButton>
+      <MapLevelResetButton
+        disabled={mapObject.level === 0}
+        onClick={() => {
+          const target = document.querySelector(`#first-id-background`)
+          console.log(target)
+          let event = new MouseEvent('click', { bubbles: true })
+          target.dispatchEvent(event)
+        }}
+      >
+        回全國
+      </MapLevelResetButton>
       <LocationsWrapper>
         {locations.map((location, i) => (
           <Location key={i}>{location}</Location>
