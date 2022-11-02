@@ -10,12 +10,19 @@ const Wrapper = styled.div`
   position: relative;
 `
 
-const defaultMapObject = {
+export const defaultMapObject = {
+  level: 0,
   currentFeature: null,
   countyId: '',
+  countyName: '',
   townId: '',
+  townName: '',
   villageId: '',
+  villageName: '',
+  constituencyId: '',
+  constituencyName: '',
   activeId: '',
+  upperLevelId: 'background',
 }
 
 const defaultTooltip = {
@@ -24,10 +31,19 @@ const defaultTooltip = {
   coordinate: [],
 }
 
-export const MapControl = ({ mapData, compareMode }) => {
-  const [mapObject, setMapObject] = useState(defaultMapObject)
+export const MapControl = ({
+  mapData,
+  compareMode,
+  mapObject: sharedMapObject,
+  setMapObject: setSharedMapObject,
+}) => {
+  const [_mapObject, _setMapObject] = useState(defaultMapObject)
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
+
+  // use props' mapData if provided, otherwise use self-managed state (for shared component usage)
+  const mapObject = sharedMapObject ? sharedMapObject : _mapObject
+  const setMapObject = setSharedMapObject ? setSharedMapObject : _setMapObject
 
   if (compareMode) {
     const splitDimension = {

@@ -1,7 +1,7 @@
 import { useMapData } from '../hook/useMapData'
 import { MapControl } from './MapControl'
 
-export const MapContainer = ({ compareMode }) => {
+export const MapContainer = ({ compareMode, mapObject, setMapObject }) => {
   const mapData = useMapData()
 
   if (!mapData) {
@@ -10,7 +10,12 @@ export const MapContainer = ({ compareMode }) => {
 
   return (
     <>
-      <MapControl mapData={mapData} compareMode={compareMode} />
+      <MapControl
+        mapData={mapData}
+        compareMode={compareMode}
+        mapObject={mapObject}
+        setMapObject={setMapObject}
+      />
     </>
   )
 }

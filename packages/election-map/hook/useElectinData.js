@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { defaultMapObject } from '../components/MapControl'
+
 import { mockData as presidentMockData } from '../mock-datas/maps/presidents/2020_president_country'
 import { mockData as mayorMockData } from '../mock-datas/maps/mayors/2022_mayor_country'
 import { mockData as legislatorMockData } from '../mock-datas/maps/legislators/2020_legislator_county_63000'
@@ -123,6 +125,7 @@ const elections = [
 
 export const useElectionData = () => {
   const [election, setElection] = useState(elections[0])
+  const [mapObject, setMapObject] = useState(defaultMapObject)
 
   let infoboxData
   switch (election.electionType) {
@@ -154,7 +157,6 @@ export const useElectionData = () => {
   }
 
   return {
-    mapData: { 0: {}, 1: null, 2: null, 3: null },
     electionNamePairs: elections.map(({ electionType, electionName }) => ({
       electionType,
       electionName,
@@ -162,5 +164,7 @@ export const useElectionData = () => {
     onElectionChange,
     election,
     infoboxData,
+    mapObject,
+    setMapObject,
   }
 }

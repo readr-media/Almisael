@@ -1,5 +1,6 @@
 import * as d3 from 'd3'
 import { useEffect } from 'react'
+import { defaultMapObject } from './MapControl'
 
 export const Map = ({
   dimension,
@@ -82,73 +83,100 @@ export const Map = ({
     zoom(0)
   }, [width, height])
 
-  const countyClicked = (feature) => {
-    if (feature) {
-      const countyId = feature['properties']['COUNTYCODE']
-      console.log('---')
-      console.log('county_clicked:')
-      console.log('path id is:', `#id-${countyId}`)
-      console.log('d is:', feature)
-      console.log('---')
+  const nonLandClicked = () => {
+    setMapObject(() => defaultMapObject)
+  }
 
-      console.log('set countyId = ', countyId)
-      setMapObject((mapObject) => ({
-        ...mapObject,
-        currentFeature: feature,
-        countyId,
-        townId: '',
-        villageId: '',
-        activeId: countyId,
-      }))
-    } else {
-      setMapObject((mapObject) => ({
-        ...mapObject,
-        currentFeature: null,
-        countyId: '',
-        townId: '',
-        villageId: '',
-        activeId: '',
-      }))
-    }
+  const countyClicked = (feature) => {
+    const { COUNTYCODE: countyId, COUNTYNAME: countyName } = feature.properties
+    console.log('---')
+    console.log(`county:${countyName} clicked`)
+    console.log(`countyId = ${countyId}`)
+    console.log('path id is:', `#id-${countyId}`)
+    console.log('d is:', feature)
+    console.log('---')
+
+    console.log('set countyId = ', countyId)
+    setMapObject(() => ({
+      level: 1,
+      currentFeature: feature,
+      countyId,
+      countyName,
+      townId: '',
+      villageId: '',
+      villageId: '',
+      villageName: '',
+      constituencyId: '',
+      constituencyName: '',
+      activeId: countyId,
+      upperLevelId: 'background',
+    }))
   }
   const townClicked = (feature) => {
-    const countyId = feature['properties']['COUNTYCODE']
-    const townId = feature['properties']['TOWNCODE']
+    const {
+      COUNTYCODE: countyId,
+      COUNTYNAME: countyName,
+      TOWNCODE: townId,
+      TOWNNAME: townName,
+    } = feature.properties
+
     console.log('---')
-    console.log('town_clicked:')
+    console.log(`county:${countyName} town:${townName} clicked`)
+    console.log(`countyId = ${countyId}, townId = ${townId}`)
     console.log('path id is:', `#id-${townId}`)
     console.log('d is:', feature)
     console.log('---')
 
-    setMapObject((mapObject) => ({
-      ...mapObject,
+    setMapObject(() => ({
+      level: 2,
       currentFeature: feature,
       countyId,
+      countyName,
       townId,
+      townName,
       villageId: '',
+      villageName: '',
+      constituencyId: '',
+      constituencyName: '',
       activeId: townId,
+      upperLevelId: countyId,
     }))
   }
   const villageClicked = (feature) => {
-    const countyId = feature['properties']['COUNTYCODE']
-    const townId = feature['properties']['TOWNCODE']
-    const villageId = feature['properties']['VILLCODE']
+    const {
+      COUNTYCODE: countyId,
+      COUNTYNAME: countyName,
+      TOWNCODE: townId,
+      TOWNNAME: townName,
+      VILLCODE: villageId,
+      VILLNAME: villageName,
+    } = feature.properties
 
     console.log('---')
+    console.log(
+      `county:${countyName} town:${townName} village:${villageName} clicked`
+    )
+    console.log(
+      `countyId = ${countyId}, townId = ${townId}, villageId = ${villageId}`
+    )
     console.log('village_clicked:')
     console.log('path id is:', `#id-${villageId}`)
     console.log('d is:', feature)
     console.log('---')
 
-    console.log(
-      `countyId = ${countyId}, townId = ${townId}, villageId = ${villageId}`
-    )
     setMapObject((mapObject) => ({
       ...mapObject,
+      level: 3,
       countyId,
+      countyName,
       townId,
+      townName,
       villageId,
+      villageName,
+      constituencyId: '',
+      constituencyName: '',
       activeId: villageId,
+      upperLevelId: townId,
     }))
   }
 
@@ -161,11 +189,11 @@ export const Map = ({
     >
       <rect
         className="background"
-        id="id-background"
+        id={`${id}-id-background`}
         width={width}
         height={height}
         fill="white"
-        onClick={countyClicked.bind(null, null)}
+        onClick={nonLandClicked}
       />
       <g id={`${id}-control`}>
         <g id={`${id}-counties`}>
@@ -173,7 +201,7 @@ export const Map = ({
             <path
               key={feature.properties.COUNTYCODE}
               d={path(feature)}
-              id={`id-${feature['properties']['COUNTYCODE']}`}
+              id={`${id}-id-${feature['properties']['COUNTYCODE']}`}
               data-county-code={feature['properties']['COUNTYCODE']}
               fill="white"
               stroke="gray"
@@ -208,7 +236,7 @@ export const Map = ({
             <path
               key={feature.properties.TOWNCODE}
               d={path(feature)}
-              id={id}
+              id={`${id}-id-${feature['properties']['TOWNCODE']}`}
               data-county-code={feature['properties']['COUNTYCODE']}
               data-town-code={(() => {
                 const code = feature['properties']['TOWNCODE']
@@ -246,7 +274,7 @@ export const Map = ({
             <path
               key={feature.properties.VILLCODE}
               d={path(feature)}
-              id={`id-${feature['properties']['VILLCODE']}`}
+              id={`${id}-id-${feature['properties']['VILLCODE']}`}
               data-county-code={feature['properties']['COUNTYCODE']}
               data-town-code={(() => {
                 const code = feature['properties']['TOWNCODE']

@@ -26,8 +26,14 @@ const PanelsWrapper = styled.div`
 
 export const Dashboard = () => {
   const [compareMode, setCompareMode] = useState(false)
-  const { electionNamePairs, onElectionChange, election, infoboxData } =
-    useElectionData()
+  const {
+    electionNamePairs,
+    onElectionChange,
+    election,
+    infoboxData,
+    mapObject,
+    setMapObject,
+  } = useElectionData()
 
   return (
     <Wrapper>
@@ -35,6 +41,7 @@ export const Dashboard = () => {
         <ControlPanel
           electionNamePairs={electionNamePairs}
           onElectionChange={onElectionChange}
+          mapObject={mapObject}
         />
         <InfoboxPanel type={election.electionType} data={infoboxData} />
         <SeatsPanel seats={election.seats} />
@@ -45,7 +52,11 @@ export const Dashboard = () => {
           }}
         />
       </PanelsWrapper>
-      <MapContainer compareMode={compareMode} />
+      <MapContainer
+        compareMode={compareMode}
+        mapObject={mapObject}
+        setMapObject={setMapObject}
+      />
     </Wrapper>
   )
 }
