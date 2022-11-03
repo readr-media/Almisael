@@ -19,7 +19,7 @@ export const mockData = {
           canNo: 2,
           name: '汪志冰',
           party: '國民黨',
-          tksRate: 40.38,
+          tksRate: 60.38,
           candVictor: ' ',
         },
         {

@@ -25,7 +25,7 @@ export const mockData = {
           canNo: 3,
           name: '黃珊珊',
           party: '民眾黨',
-          tksRate: 38.61,
+          tksRate: 78.61,
           candVictor: ' ',
         },
       ],

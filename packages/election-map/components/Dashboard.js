@@ -30,6 +30,7 @@ export const Dashboard = () => {
     electionNamePairs,
     onElectionChange,
     election,
+    mapData,
     infoboxData,
     mapObject,
     setMapObject,
@@ -43,7 +44,7 @@ export const Dashboard = () => {
           onElectionChange={onElectionChange}
           mapObject={mapObject}
         />
-        <InfoboxPanel type={election.electionType} data={infoboxData} />
+        <InfoboxPanel data={infoboxData} />
         <SeatsPanel seats={election.seats} />
         <MapCompareButton
           compareMode={compareMode}
@@ -55,7 +56,9 @@ export const Dashboard = () => {
       <MapContainer
         compareMode={compareMode}
         mapObject={mapObject}
+        electionData={mapData}
         setMapObject={setMapObject}
+        electionType={election.electionType}
       />
     </Wrapper>
   )

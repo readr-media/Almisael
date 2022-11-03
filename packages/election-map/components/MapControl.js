@@ -36,6 +36,8 @@ export const MapControl = ({
   compareMode,
   mapObject: sharedMapObject,
   setMapObject: setSharedMapObject,
+  electionData,
+  electionType,
 }) => {
   const [_mapObject, _setMapObject] = useState(defaultMapObject)
   const [tooltip, setTooltip] = useState(defaultTooltip)
@@ -62,6 +64,8 @@ export const MapControl = ({
               mapObject={mapObject}
               setMapObject={setMapObject}
               setTooltip={setTooltip}
+              electionData={electionData}
+              electionType={electionType}
             />
             <Map
               dimension={splitDimension}
@@ -70,6 +74,8 @@ export const MapControl = ({
               mapObject={mapObject}
               setMapObject={setMapObject}
               setTooltip={setTooltip}
+              electionData={electionData}
+              electionType={electionType}
             />
           </>
         )}
@@ -87,6 +93,8 @@ export const MapControl = ({
             mapObject={mapObject}
             setMapObject={setMapObject}
             setTooltip={setTooltip}
+            electionData={electionData}
+            electionType={electionType}
           />
         )}
         <MapTooltip tooltip={tooltip} />

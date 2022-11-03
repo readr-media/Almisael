@@ -40,8 +40,8 @@ export const mockData = {
         {
           canNo: 2,
           name: '韓國瑜',
-          party: '民進黨',
-          tksRate: 38.61,
+          party: '國民黨',
+          tksRate: 78.61,
           candVictor: ' ',
         },
       ],
@@ -63,7 +63,7 @@ export const mockData = {
         {
           canNo: 2,
           name: '韓國瑜',
-          party: '民進黨',
+          party: '國民黨',
           tksRate: 38.61,
           candVictor: ' ',
         },
@@ -86,7 +86,7 @@ export const mockData = {
         {
           canNo: 2,
           name: '韓國瑜',
-          party: '民進黨',
+          party: '國民黨',
           tksRate: 38.61,
           candVictor: ' ',
         },

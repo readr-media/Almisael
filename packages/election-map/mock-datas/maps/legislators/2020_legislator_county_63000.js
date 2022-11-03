@@ -31,8 +31,8 @@ export const mockData = {
         {
           canNo: 3,
           name: '李婉鈺',
-          party: '一邊一國行動黨',
-          tksRate: 3.21,
+          party: '無黨團結聯盟',
+          tksRate: 60.21,
           candVictor: ' ',
         },
       ],

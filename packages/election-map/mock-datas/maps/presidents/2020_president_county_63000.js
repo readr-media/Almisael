@@ -11,7 +11,7 @@ export const mockData = {
           canNo: 1,
           name: '蔡英文',
           party: '民進黨',
-          tksRate: 57.13,
+          tksRate: 77.13,
           candVictor: '*',
         },
         {

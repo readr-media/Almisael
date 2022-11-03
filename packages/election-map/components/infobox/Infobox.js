@@ -32,11 +32,12 @@ const ElectedIcon = styled.img`
   margin-left: 14px;
 `
 
-const PresidentInfobox = ({ level, profRate, candidates }) => {
+const PresidentInfobox = ({ level, data }) => {
+  const { profRate, candidates } = data
   return (
     <InfoboxScrollWrapper>
       <PresidentTitle>
-        {level === 1 && '總'}投票率 {profRate}%
+        {level === 0 && '總'}投票率 {profRate}%
       </PresidentTitle>
       {candidates.map((candidate) => {
         const elected = candidate.candVictor === '*'
@@ -67,14 +68,15 @@ const MayorCandidate = styled.p`
   ${({ elected }) => elected && 'color: green;'}
 `
 
-const MayorInfobox = ({ level, profRate, candidates }) => {
-  if (level === -1) {
+const MayorInfobox = ({ level, data }) => {
+  if (level === 0) {
     return (
       <InfoboxScrollWrapper>
         <InfoboxText>點擊地圖看更多資料</InfoboxText>
       </InfoboxScrollWrapper>
     )
   }
+  const { profRate, candidates } = data
   return (
     <InfoboxScrollWrapper>
       <MayorTitle>
@@ -98,7 +100,7 @@ const MayorInfobox = ({ level, profRate, candidates }) => {
 const LegislatorDistrict = styled.div`
   padding: 20px 0;
   border-top: 1px solid #000;
-  &:first-of-type {
+  &:nth-of-type(2) {
     border-top: unset;
     padding-top: unset;
   }
@@ -124,39 +126,67 @@ const LegislatorCandidate = styled.div`
   ${({ elected }) => elected && 'color: green;'}
 `
 
-const LegislatorInfobox = ({ level, profRate, districts }) => {
-  if (level === -1) {
+const LegislatorInfobox = ({ level, data }) => {
+  if (level === 0) {
     return (
       <InfoboxScrollWrapper>
         <InfoboxText>點擊地圖看更多資料</InfoboxText>
       </InfoboxScrollWrapper>
     )
   }
+  if (level === 1) {
+    const { summary, districts } = data
+    const { profRate } = summary
+
+    return (
+      <InfoboxScrollWrapper>
+        <LegislatorTitle>投票率 {profRate}%</LegislatorTitle>
+        {districts.map(({ county, area, range, candidates }) => {
+          const legislatorIdPrefix = county + area
+          const constituency = range.split(' ')[1]
+          const candidateComps = candidates.map((candidate) => {
+            const elected = candidate.candVictor === '*'
+            return (
+              <LegislatorCandidate
+                elected={elected}
+                key={legislatorIdPrefix + candidate.canNo}
+              >
+                {candidate.name} {candidate.party} {candidate.tksRate}%
+                {elected && (
+                  <ElectedIcon src={'/images/elected.svg'} alt="elected" />
+                )}
+              </LegislatorCandidate>
+            )
+          })
+          return (
+            <LegislatorDistrict key={legislatorIdPrefix}>
+              <LegislatorConstituency>{constituency}</LegislatorConstituency>
+              {candidateComps}
+            </LegislatorDistrict>
+          )
+        })}
+      </InfoboxScrollWrapper>
+    )
+  }
+
+  const { profRate, candidates, county, area } = data
+  const legislatorIdPrefix = county + area
+
   return (
     <InfoboxScrollWrapper>
-      {districts.map(({ county, area, range, candidates }) => {
-        const legislatorIdPrefix = county + area
-        const constituency = range.split(' ')[1]
-        const candidateComps = candidates.map((candidate) => {
-          const elected = candidate.candVictor === '*'
-          return (
-            <LegislatorCandidate
-              elected={elected}
-              key={legislatorIdPrefix + candidate.canNo}
-            >
-              {candidate.name} {candidate.party} {candidate.tksRate}%
-              {elected && (
-                <ElectedIcon src={'/images/elected.svg'} alt="elected" />
-              )}
-            </LegislatorCandidate>
-          )
-        })
+      <LegislatorTitle>投票率 {profRate}%</LegislatorTitle>
+      {candidates.map((candidate) => {
+        const elected = candidate.candVictor === '*'
         return (
-          <LegislatorDistrict key={legislatorIdPrefix}>
-            <LegislatorConstituency>{constituency}</LegislatorConstituency>
-            <LegislatorTitle>投票率 {profRate}%</LegislatorTitle>
-            {candidateComps}
-          </LegislatorDistrict>
+          <LegislatorCandidate
+            elected={elected}
+            key={legislatorIdPrefix + candidate.canNo}
+          >
+            {candidate.name} {candidate.party} {candidate.tksRate}%
+            {elected && (
+              <ElectedIcon src={'/images/elected.svg'} alt="elected" />
+            )}
+          </LegislatorCandidate>
         )
       })}
     </InfoboxScrollWrapper>
@@ -192,39 +222,65 @@ const CouncilmanCandidate = styled.div`
   ${({ elected }) => elected && 'color: green;'}
 `
 
-const CouncilmanInfobox = ({ level, profRate, districts }) => {
-  if (level === -1) {
+const CouncilmanInfobox = ({ level, data }) => {
+  if (level === 0) {
     return (
       <InfoboxScrollWrapper>
         <InfoboxText>點擊地圖看更多資料</InfoboxText>
       </InfoboxScrollWrapper>
     )
   }
+  if (level === 1) {
+    const { districts } = data
+    return (
+      <InfoboxScrollWrapper>
+        {districts.map(({ county, area, range, candidates, profRate }) => {
+          const councilmandPrefix = county + area
+          const constituency = range.split(' ')[1]
+          const candidateComps = candidates.map((candidate) => {
+            const elected = candidate.candVictor === '*'
+            return (
+              <CouncilmanCandidate
+                elected={elected}
+                key={councilmandPrefix + candidate.canNo}
+              >
+                {candidate.name} {candidate.party} {candidate.tksRate}%
+                {elected && (
+                  <ElectedIcon src={'/images/elected.svg'} alt="elected" />
+                )}
+              </CouncilmanCandidate>
+            )
+          })
+          return (
+            <CouncilmanDistrict key={councilmandPrefix}>
+              <CouncilmanConstituency>{constituency}</CouncilmanConstituency>
+              <CouncilmanTitle>投票率 {profRate}%</CouncilmanTitle>
+              {candidateComps}
+            </CouncilmanDistrict>
+          )
+        })}
+      </InfoboxScrollWrapper>
+    )
+  }
+
+  const { profRate, candidates, county, area } = data
+  const councilmandPrefix = county + area
+
   return (
     <InfoboxScrollWrapper>
-      {districts.map(({ county, area, range, candidates }) => {
-        const councilmandPrefix = county + area
-        const constituency = range.split(' ')[1]
-        const candidateComps = candidates.map((candidate) => {
-          const elected = candidate.candVictor === '*'
-          return (
-            <CouncilmanCandidate
-              elected={elected}
-              key={councilmandPrefix + candidate.canNo}
-            >
-              {candidate.name} {candidate.party} {candidate.tksRate}%
-              {elected && (
-                <ElectedIcon src={'/images/elected.svg'} alt="elected" />
-              )}
-            </CouncilmanCandidate>
-          )
-        })
+      <CouncilmanTitle>投票率 {profRate}%</CouncilmanTitle>
+      {candidates.map((candidate) => {
+        const elected = candidate.candVictor === '*'
         return (
-          <CouncilmanDistrict key={councilmandPrefix}>
-            <CouncilmanConstituency>{constituency}</CouncilmanConstituency>
-            <CouncilmanTitle>投票率 {profRate}%</CouncilmanTitle>
-            {candidateComps}
-          </CouncilmanDistrict>
+          <CouncilmanCandidate
+            elected={elected}
+            key={councilmandPrefix + candidate.canNo}
+          >
+            {candidate.name} {candidate.party} {candidate.tksRate}%
+            {elected && (
+              <ElectedIcon src={'/images/elected.svg'} alt="elected" />
+            )}
+          </CouncilmanCandidate>
         )
       })}
     </InfoboxScrollWrapper>
@@ -271,56 +327,25 @@ const CouncilmanInfobox = ({ level, profRate, districts }) => {
 //   `,
 // }
 
-export const Infobox = ({ type, data }) => {
+export const Infobox = ({ data }) => {
+  const { electionType, level, electionData } = data
   let infobox
-  switch (type) {
+  switch (electionType) {
     case 'president': {
-      console.log('infobox president')
-      const { summary } = data
-      const { profRate, candidates } = summary
-
-      infobox = (
-        <PresidentInfobox
-          level={1}
-          profRate={profRate}
-          candidates={candidates}
-        />
-      )
+      infobox = <PresidentInfobox level={level} data={electionData} />
       break
     }
     case 'mayor': {
-      console.log('infobox mayor')
-      const mayorCity = data.districts[0]
-      const { profRate, candidates } = mayorCity
-      infobox = (
-        <MayorInfobox level={2} profRate={profRate} candidates={candidates} />
-      )
+      infobox = <MayorInfobox level={level} data={electionData} />
       break
     }
     case 'legislator': {
-      console.log('infobox legislator')
-      const { summary, districts } = data
-      const { profRate } = summary
-      infobox = (
-        <LegislatorInfobox
-          level={1}
-          profRate={profRate}
-          districts={districts}
-        />
-      )
+      infobox = <LegislatorInfobox level={level} data={electionData} />
       break
     }
     case 'councilman': {
       console.log('infobox councilman')
-      const { summary, districts } = data
-      const { profRate } = summary
-      infobox = (
-        <CouncilmanInfobox
-          level={1}
-          profRate={profRate}
-          districts={districts}
-        />
-      )
+      infobox = <CouncilmanInfobox level={level} data={electionData} />
       break
     }
     case 'referenda':

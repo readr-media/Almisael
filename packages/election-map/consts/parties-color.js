@@ -65,3 +65,10 @@ export const partiesColor = [
     color: '#333333',
   },
 ]
+
+export const getPartyColor = (party) => {
+  return (
+    partiesColor.find((partyColor) => partyColor.name === party)?.color ||
+    'coral'
+  )
+}

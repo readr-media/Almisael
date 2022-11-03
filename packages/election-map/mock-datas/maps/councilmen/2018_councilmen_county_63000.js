@@ -16,21 +16,21 @@ export const mockData = {
       candidates: [
         {
           canNo: 1,
-          name: '吳思瑤',
+          name: '吳思',
           party: '無黨籍',
           tksRate: 52.12,
           candVictor: '*',
         },
         {
           canNo: 2,
-          name: '汪志冰',
+          name: '汪志',
           party: '國民黨',
           tksRate: 40.38,
           candVictor: ' ',
         },
         {
           canNo: 3,
-          name: '李婉鈺',
+          name: '李婉',
           party: '一邊一國行動黨',
           tksRate: 3.21,
           candVictor: ' ',
@@ -46,21 +46,21 @@ export const mockData = {
       candidates: [
         {
           canNo: 1,
-          name: '吳思瑤',
+          name: '思瑤',
           party: '無黨籍',
           tksRate: 52.12,
           candVictor: '*',
         },
         {
           canNo: 2,
-          name: '汪志冰',
+          name: '志冰',
           party: '國民黨',
           tksRate: 40.38,
           candVictor: ' ',
         },
         {
           canNo: 3,
-          name: '李婉鈺',
+          name: '婉鈺',
           party: '一邊一國行動黨',
           tksRate: 3.21,
           candVictor: ' ',
@@ -76,21 +76,21 @@ export const mockData = {
       candidates: [
         {
           canNo: 1,
-          name: '吳思瑤',
+          name: '吳瑤',
           party: '無黨籍',
           tksRate: 52.12,
           candVictor: '*',
         },
         {
           canNo: 2,
-          name: '汪志冰',
+          name: '汪冰',
           party: '國民黨',
           tksRate: 40.38,
-          candVictor: ' ',
+          candVictor: '*',
         },
         {
           canNo: 3,
-          name: '李婉鈺',
+          name: '李鈺',
           party: '一邊一國行動黨',
           tksRate: 3.21,
           candVictor: ' ',

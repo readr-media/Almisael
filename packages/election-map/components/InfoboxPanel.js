@@ -8,10 +8,10 @@ const InfoboxWrapper = styled(CollapsibleWrapper)`
   margin: 22px 0 0 48px;
 `
 
-export const InfoboxPanel = ({ type, data }) => {
+export const InfoboxPanel = ({ data }) => {
   return (
     <InfoboxWrapper title={'詳細資訊'}>
-      <Infobox type={type} data={data} />
+      <Infobox data={data} />
     </InfoboxWrapper>
   )
 }

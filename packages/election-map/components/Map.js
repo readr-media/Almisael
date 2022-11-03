@@ -1,6 +1,7 @@
 import * as d3 from 'd3'
 import { useEffect } from 'react'
 import { defaultMapObject } from './MapControl'
+import { getPartyColor } from '../consts/parties-color'
 
 export const Map = ({
   dimension,
@@ -9,7 +10,10 @@ export const Map = ({
   mapObject,
   setMapObject,
   setTooltip,
+  electionData,
+  electionType,
 }) => {
+  // eslint-disable-next-line no-unused-vars
   const { currentFeature, countyId, townId, villageId, activeId } = mapObject
   const { width, height } = dimension
   const { counties, towns, villages } = mapData
@@ -180,6 +184,106 @@ export const Map = ({
     }))
   }
 
+  const getWinningCandidate = (candidates) => {
+    return candidates.reduce((pre, next) =>
+      pre.tksRate > next.tksRate ? pre : next
+    )
+  }
+
+  // eslint-disable-next-line no-unused-vars
+  const getCountyColor = (countyCode) => {
+    if (electionType === 'councilman') {
+      return '#555'
+    }
+    if (!electionData[0]) {
+      return 'white'
+    }
+    // const countyCandidates = electionData[0].districts.find(
+    //   (district) => district.county === countyCode
+    // )?.candidates
+    const countyCandidates = electionData[0].districts[0].candidates
+
+    if (countyCandidates) {
+      const winningCandidate = getWinningCandidate(countyCandidates)
+      const color = getPartyColor(winningCandidate.party)
+      return color
+    }
+    return 'white'
+  }
+
+  // eslint-disable-next-line no-unused-vars
+  const getTownColor = (townCode) => {
+    if (electionType === 'councilman') {
+      return '#444'
+    }
+
+    if (electionType === 'legislator') {
+      // const constituencyCandidates = electionData[1].districts.find(
+      //   (district) => district.county + district.area + '0' === townCode
+      // )?.candidates
+      const constituencyCandidates = electionData[1].districts[0].candidates
+
+      if (constituencyCandidates) {
+        const winningCandidate = getWinningCandidate(constituencyCandidates)
+        const color = getPartyColor(winningCandidate.party)
+        return color
+      }
+    }
+
+    if (!electionData[1]) {
+      return 'white'
+    }
+
+    // const townCandidates = electionData[1].districts.find(
+    //   (district) => district.county + district.town === townCode
+    // )?.candidates
+    const townCandidates = electionData[1].districts[0].candidates
+
+    if (townCandidates) {
+      const winningCandidate = getWinningCandidate(townCandidates)
+      const color = getPartyColor(winningCandidate.party)
+      return color
+    }
+    return 'white'
+  }
+
+  // eslint-disable-next-line no-unused-vars
+  const getVillageColor = (villCode) => {
+    if (electionType === 'councilman') {
+      return '#333'
+    }
+
+    if (electionType === 'legislator') {
+      // const villageCandidates = electionData[2].districts.find(
+      //   (district) =>
+      //   district.county + district.area + '0' + district.vill === villCode
+      //   )?.candidates
+      const villageCandidates = electionData[2].districts[0].candidates
+
+      if (villageCandidates) {
+        const winningCandidate = getWinningCandidate(villageCandidates)
+        const color = getPartyColor(winningCandidate.party)
+        return color
+      }
+    }
+
+    if (!electionData[2]) {
+      return 'white'
+    }
+
+    // const villageCandidates = electionData[2].districts.find(
+    //   (district) => district.county + district.town + district.vill === villCode
+    // )?.candidates
+    const villageCandidates = electionData[2].districts[0].candidates
+
+    if (villageCandidates) {
+      const winningCandidate = getWinningCandidate(villageCandidates)
+      const color = getPartyColor(winningCandidate.party)
+      return color
+    }
+    return 'white'
+  }
+
   return (
     <svg
       preserveAspectRatio="xMidYMid"
@@ -203,7 +307,8 @@ export const Map = ({
               d={path(feature)}
               id={`${id}-id-${feature['properties']['COUNTYCODE']}`}
               data-county-code={feature['properties']['COUNTYCODE']}
-              fill="white"
+              // fill="white"
+              fill={getCountyColor(feature['properties']['COUNTYCODE'])}
               stroke="gray"
               strokeWidth="0.3"
               strokeLinejoin="round"
@@ -242,7 +347,8 @@ export const Map = ({
                 const code = feature['properties']['TOWNCODE']
                 return code.slice(code.length - 3, code.length)
               })()}
-              fill={!townId && countyId === activeId ? 'lightcoral' : 'white'}
+              // fill={!townId && countyId === activeId ? 'lightcoral' : 'white'}
+              fill={getTownColor(feature['properties']['TOWNCODE'])}
               stroke="gray"
               strokeWidth="0.3"
               onClick={townClicked.bind(null, feature)}
@@ -284,20 +390,20 @@ export const Map = ({
                 const code = feature['properties']['VILLCODE']
                 return code.slice(code.length - 3, code.length)
               })()}
-              fill={
-                !villageId
-                  ? townId === activeId
-                    ? 'lightcoral'
-                    : 'white'
-                  : feature['properties']['VILLCODE'] === activeId
-                  ? 'lightcoral'
-                  : 'white'
-              }
+              // fill={
+              //   !villageId
+              //     ? townId === activeId
+              //       ? 'lightcoral'
+              //       : 'white'
+              //     : feature['properties']['VILLCODE'] === activeId
+              //     ? 'lightcoral'
+              //     : 'white'
+              // }
+              fill={getVillageColor(feature['properties']['VILLCODE'])}
               stroke="gray"
               strokeWidth="0.1"
               onClick={villageClicked.bind(null, feature)}
               onMouseOver={() => {
-                console.log(feature)
                 setTooltip((tooltip) => ({
                   ...tooltip,
                   show: true,
