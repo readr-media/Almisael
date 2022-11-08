@@ -7,6 +7,13 @@ import {
   defaultColor,
 } from '../consts/colors'
 
+import styled from 'styled-components'
+
+const SVG = styled.svg`
+  use {
+    pointer-events: none;
+  }
+`
 export const Map = ({
   dimension,
   mapData,
@@ -189,6 +196,10 @@ export const Map = ({
   }
 
   const getWinningCandidate = (candidates) => {
+    const noWinner = candidates.every(
+      (candidate, i, candidates) => candidate.tksRate === candidates[0].tksRate
+    )
+    if (noWinner) return null
     return candidates.reduce((pre, next) =>
       pre.tksRate > next.tksRate ? pre : next
     )
@@ -216,7 +227,7 @@ export const Map = ({
       return '#555'
     }
     if (!electionData[0]) {
-      return 'white'
+      return defaultColor
     }
     // const countyCandidates = electionData[0].districts.find(
     //   (district) => district.county === countyCode
@@ -224,11 +235,13 @@ export const Map = ({
     const countyCandidates = electionData[0]?.districts[0].candidates
     if (countyCandidates) {
       const winningCandidate = getWinningCandidate(countyCandidates)
-      const color = getGradiantPartyColor(
-        winningCandidate.party,
-        winningCandidate.tksRate
-      )
-      return color
+      if (winningCandidate) {
+        const color = getGradiantPartyColor(
+          winningCandidate.party,
+          winningCandidate.tksRate
+        )
+        return color
+      }
     }
     return defaultColor
   }
@@ -266,16 +279,18 @@ export const Map = ({
 
       if (constituencyCandidates) {
         const winningCandidate = getWinningCandidate(constituencyCandidates)
-        const color = getGradiantPartyColor(
-          winningCandidate.party,
-          winningCandidate.tksRate
-        )
-        return color
+        if (winningCandidate) {
+          const color = getGradiantPartyColor(
+            winningCandidate.party,
+            winningCandidate.tksRate
+          )
+          return color
+        }
       }
     }
 
     if (!electionData[1]) {
-      return 'white'
+      return defaultColor
     }
 
     // const townCandidates = electionData[1].districts.find(
@@ -285,11 +300,13 @@ export const Map = ({
 
     if (townCandidates) {
       const winningCandidate = getWinningCandidate(townCandidates)
-      const color = getGradiantPartyColor(
-        winningCandidate.party,
-        winningCandidate.tksRate
-      )
-      return color
+      if (winningCandidate) {
+        const color = getGradiantPartyColor(
+          winningCandidate.party,
+          winningCandidate.tksRate
+        )
+        return color
+      }
     }
     return defaultColor
   }
@@ -328,16 +345,18 @@ export const Map = ({
 
       if (villageCandidates) {
         const winningCandidate = getWinningCandidate(villageCandidates)
-        const color = getGradiantPartyColor(
-          winningCandidate.party,
-          winningCandidate.tksRate
-        )
-        return color
+        if (winningCandidate) {
+          const color = getGradiantPartyColor(
+            winningCandidate.party,
+            winningCandidate.tksRate
+          )
+          return color
+        }
       }
     }
 
     if (!electionData[2]) {
-      return 'white'
+      return defaultColor
     }
 
     // const villageCandidates = electionData[2].districts.find(
@@ -347,17 +366,19 @@ export const Map = ({
 
     if (villageCandidates) {
       const winningCandidate = getWinningCandidate(villageCandidates)
-      const color = getGradiantPartyColor(
-        winningCandidate.party,
-        winningCandidate.tksRate
-      )
-      return color
+      if (winningCandidate) {
+        const color = getGradiantPartyColor(
+          winningCandidate.party,
+          winningCandidate.tksRate
+        )
+        return color
+      }
     }
     return defaultColor
   }
 
   return (
-    <svg
+    <SVG
       preserveAspectRatio="xMidYMid"
       width={width}
       height={height}
@@ -380,8 +401,16 @@ export const Map = ({
               id={`${id}-id-${feature['properties']['COUNTYCODE']}`}
               data-county-code={feature['properties']['COUNTYCODE']}
               // fill="white"
-              fill={getCountyColor(feature['properties']['COUNTYCODE'])}
-              stroke="gray"
+              fill={
+                feature['properties']['COUNTYCODE'] === activeId
+                  ? undefined
+                  : getCountyColor(feature['properties']['COUNTYCODE'])
+              }
+              stroke={
+                feature['properties']['COUNTYCODE'] === activeId
+                  ? undefined
+                  : 'gray'
+              }
               strokeWidth="0.3"
               strokeLinejoin="round"
               onClick={countyClicked.bind(null, feature)}
@@ -407,6 +436,9 @@ export const Map = ({
               }
             />
           ))}
+          {/* {mapObject.level === 1 && (
+            <use href={`#${id}-id-${activeId}`} x="0" />
+          )} */}
         </g>
         <g id={`${id}-towns`}>
           {displayingTowns?.features?.map((feature) => (
@@ -419,9 +451,17 @@ export const Map = ({
                 const code = feature['properties']['TOWNCODE']
                 return code.slice(code.length - 3, code.length)
               })()}
-              // fill={!townId && countyId === activeId ? 'lightcoral' : 'white'}
-              fill={getTownColor(feature['properties']['TOWNCODE'])}
-              stroke="gray"
+              // fill={!townId && countyId === activeId ? 'lightcoral' : defaultColor}
+              fill={
+                feature['properties']['TOWNCODE'] === activeId
+                  ? 'transparent'
+                  : getTownColor(feature['properties']['TOWNCODE'])
+              }
+              stroke={
+                feature['properties']['TOWNCODE'] === activeId
+                  ? undefined
+                  : 'gray'
+              }
               strokeWidth="0.3"
               onClick={townClicked.bind(null, feature)}
               onMouseOver={() =>
@@ -466,14 +506,20 @@ export const Map = ({
               //   !villageId
               //     ? townId === activeId
               //       ? 'lightcoral'
-              //       : 'white'
+              //       : defaultColor
               //     : feature['properties']['VILLCODE'] === activeId
               //     ? 'lightcoral'
-              //     : 'white'
+              //     : defaultColor
               // }
               fill={getVillageColor(feature['properties']['VILLCODE'])}
-              stroke="gray"
-              strokeWidth="0.1"
+              stroke={
+                feature['properties']['VILLCODE'] === activeId
+                  ? undefined
+                  : 'gray'
+              }
+              strokeWidth={
+                feature['properties']['VILLCODE'] === activeId ? 0.2 : 0.1
+              }
               onClick={villageClicked.bind(null, feature)}
               onMouseOver={() => {
                 setTooltip((tooltip) => ({
@@ -497,8 +543,17 @@ export const Map = ({
               }
             />
           ))}
+
+          {activeId && (
+            // duplicate active map on above
+            <use
+              href={`#${id}-id-${activeId}`}
+              fill="transparent"
+              stroke="white"
+            />
+          )}
         </g>
       </g>
-    </svg>
+    </SVG>
   )
 }
