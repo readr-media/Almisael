@@ -71,12 +71,13 @@ export const partiesColor = [
 const hexToRgba = (hex, alpha) => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
   if (!result) console.error('hexToRgba not accept non hex color')
-  const r = parseInt(result[1], 16)
-  const g = parseInt(result[2], 16)
-  const b = parseInt(result[3], 16)
-  const a = alpha
 
-  return `rgba(${r}, ${g}, ${b}, ${a})`
+  return {
+    r: parseInt(result[1], 16),
+    g: parseInt(result[2], 16),
+    b: parseInt(result[3], 16),
+    a: alpha,
+  }
 }
 
 const getAlphaByPercent = (percent) => {
@@ -93,12 +94,27 @@ const getAlphaByPercent = (percent) => {
   }
 }
 
+// get rgb from rgba with white(rgba(255,255,255,1)) background
+const rgbaToRgb = (rgbaObj, bg = { r: 255, g: 255, b: 255, a: 1 }) => {
+  bg.a = 1 - rgbaObj.a
+  const r = Math.round(
+    (rgbaObj.a * (rgbaObj.r / 255) + bg.a * (bg.r / 255)) * 255
+  )
+  const g = Math.round(
+    (rgbaObj.a * (rgbaObj.g / 255) + bg.a * (bg.g / 255)) * 255
+  )
+  const b = Math.round(
+    (rgbaObj.a * (rgbaObj.b / 255) + bg.a * (bg.b / 255)) * 255
+  )
+  return `rgb(${r}, ${g}, ${b})`
+}
+
 export const getGradiantPartyColor = (party, percent) => {
   const color =
     partiesColor.find((partyColor) => partyColor.name === party)?.color ||
     defaultColor
 
-  return hexToRgba(color, getAlphaByPercent(percent))
+  return rgbaToRgb(hexToRgba(color, getAlphaByPercent(percent)))
 }
 
 const referendaColor = [
@@ -117,5 +133,5 @@ const referendaColor = [
 export const getGradiantReferendaColor = (agree, percent) => {
   const [agreeColor, disagreeColor] = referendaColor
   const color = agree ? agreeColor.color : disagreeColor.color
-  return hexToRgba(color, getAlphaByPercent(percent))
+  return rgbaToRgb(hexToRgba(color, getAlphaByPercent(percent)))
 }
