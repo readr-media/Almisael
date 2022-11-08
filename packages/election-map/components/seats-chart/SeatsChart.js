@@ -1,6 +1,6 @@
 import { mockData as councilmanSeats } from '../../mock-datas/seats-distribution/councilmen/2018_councilmen_county_63000'
 import styled from 'styled-components'
-import { partiesColor } from '../../consts/parties-color'
+import { partiesColor } from '../../consts/colors'
 import { useState } from 'react'
 
 const SeatsChartWrapper = styled.div`

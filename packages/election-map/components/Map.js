@@ -1,7 +1,11 @@
 import * as d3 from 'd3'
 import { useEffect } from 'react'
 import { defaultMapObject } from './MapControl'
-import { getPartyColor } from '../consts/parties-color'
+import {
+  getGradiantPartyColor,
+  getGradiantReferendaColor,
+  defaultColor,
+} from '../consts/colors'
 
 export const Map = ({
   dimension,
@@ -192,6 +196,22 @@ export const Map = ({
 
   // eslint-disable-next-line no-unused-vars
   const getCountyColor = (countyCode) => {
+    if (electionType === 'referenda') {
+      const { agreeRate, disagreeRate } =
+        electionData[0].districts.find(
+          (district) => district.county === countyCode
+        ) || {}
+      if (agreeRate) {
+        const agree = agreeRate >= disagreeRate
+        const color = getGradiantReferendaColor(
+          agree,
+          agree ? agreeRate : disagreeRate
+        )
+        return color
+      } else {
+        return defaultColor
+      }
+    }
     if (electionType === 'councilman') {
       return '#555'
     }
@@ -205,7 +225,10 @@ export const Map = ({
 
     if (countyCandidates) {
       const winningCandidate = getWinningCandidate(countyCandidates)
-      const color = getPartyColor(winningCandidate.party)
+      const color = getGradiantPartyColor(
+        winningCandidate.party,
+        winningCandidate.tksRate
+      )
       return color
     }
     return 'white'
@@ -213,6 +236,23 @@ export const Map = ({
 
   // eslint-disable-next-line no-unused-vars
   const getTownColor = (townCode) => {
+    if (electionType === 'referenda') {
+      const { agreeRate, disagreeRate } =
+        electionData[1].districts.find(
+          (district) => district.county + district.town === townCode
+        ) || {}
+      if (agreeRate) {
+        const agree = agreeRate >= disagreeRate
+        const color = getGradiantReferendaColor(
+          agree,
+          agree ? agreeRate : disagreeRate
+        )
+        return color
+      } else {
+        return defaultColor
+      }
+    }
+
     if (electionType === 'councilman') {
       return '#444'
     }
@@ -225,7 +265,10 @@ export const Map = ({
 
       if (constituencyCandidates) {
         const winningCandidate = getWinningCandidate(constituencyCandidates)
-        const color = getPartyColor(winningCandidate.party)
+        const color = getGradiantPartyColor(
+          winningCandidate.party,
+          winningCandidate.tksRate
+        )
         return color
       }
     }
@@ -241,7 +284,10 @@ export const Map = ({
 
     if (townCandidates) {
       const winningCandidate = getWinningCandidate(townCandidates)
-      const color = getPartyColor(winningCandidate.party)
+      const color = getGradiantPartyColor(
+        winningCandidate.party,
+        winningCandidate.tksRate
+      )
       return color
     }
     return 'white'
@@ -249,6 +295,24 @@ export const Map = ({
 
   // eslint-disable-next-line no-unused-vars
   const getVillageColor = (villCode) => {
+    if (electionType === 'referenda') {
+      const { agreeRate, disagreeRate } =
+        electionData[2].districts.find(
+          (district) =>
+            district.county + district.town + district.vill === villCode
+        ) || {}
+      if (agreeRate) {
+        const agree = agreeRate >= disagreeRate
+        const color = getGradiantReferendaColor(
+          agree,
+          agree ? agreeRate : disagreeRate
+        )
+        return color
+      } else {
+        return defaultColor
+      }
+    }
+
     if (electionType === 'councilman') {
       return '#333'
     }
@@ -262,7 +326,10 @@ export const Map = ({
 
       if (villageCandidates) {
         const winningCandidate = getWinningCandidate(villageCandidates)
-        const color = getPartyColor(winningCandidate.party)
+        const color = getGradiantPartyColor(
+          winningCandidate.party,
+          winningCandidate.tksRate
+        )
         return color
       }
     }
@@ -278,7 +345,10 @@ export const Map = ({
 
     if (villageCandidates) {
       const winningCandidate = getWinningCandidate(villageCandidates)
-      const color = getPartyColor(winningCandidate.party)
+      const color = getGradiantPartyColor(
+        winningCandidate.party,
+        winningCandidate.tksRate
+      )
       return color
     }
     return 'white'

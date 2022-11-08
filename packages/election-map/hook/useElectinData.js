@@ -15,6 +15,10 @@ import { mockData as CouncilmanConstituency } from '../mock-datas/maps/councilme
 import { mockData as legislatorCounty } from '../mock-datas/maps/legislators/2020_legislator_county_63000'
 import { mockData as legislatorConstituency } from '../mock-datas/maps/legislators/2020_legislator_constituency_6300001'
 
+import { mockData as referendaCountry } from '../mock-datas/maps/referenda/2020_referenda_01_country'
+import { mockData as referendaCounty } from '../mock-datas/maps/referenda/2020_referenda_01_county_63000'
+import { mockData as referendaTown } from '../mock-datas/maps/referenda/2020_referenda_01_town_63000010'
+
 const elections = [
   {
     electionType: 'mayor',
@@ -103,6 +107,33 @@ const elections = [
     electionName: '立法委員',
     years: [2020, 2016, 2012, 2008, 2004, 2000],
     seats: { wrapperTitle: '立法委員席次圖', componentTitle: '立法委員選舉' },
+    levels: [
+      {
+        //level 0 country
+        mapJson: 'tw_country.topojson',
+        electionDatas: null,
+      },
+      {
+        // level 1 county
+        mapJson: 'tw_county_63000.topojson',
+        electionDatas: 'legislator_county_63000.json',
+      },
+      {
+        // level 2 constituency
+        mapJson: 'tw_town_63000010.topojson',
+        electionDatas: 'legislator_constituency_63000010.json',
+      },
+      {
+        // level 3 village
+        mapJson: 'tw_vill_63000010010.topojson',
+        electionDatas: null,
+      },
+    ],
+  },
+  {
+    electionType: 'referenda',
+    electionName: '全國性公民投票',
+    years: [2020, 2016, 2012, 2008, 2004, 2000],
     levels: [
       {
         //level 0 country
@@ -296,7 +327,45 @@ export const useElectionData = () => {
 
       break
     case 'referenda':
-      infoboxData = null
+      mapData = { 0: referendaCountry, 1: referendaCounty, 2: referendaTown }
+
+      switch (mapObject.level) {
+        case 0:
+          infoboxData.electionData = mapData[0].summary
+          break
+        case 1:
+          infoboxData.electionData = mapData[0].districts.find(
+            (district) => district.county === mapObject.activeId
+          )
+          // dev
+          if (!infoboxData.electionData) {
+            infoboxData.electionData = mapData[0].districts[0]
+          }
+          break
+        case 2:
+          infoboxData.electionData = mapData[1].districts.find(
+            (district) => district.county + district.town === mapObject.activeId
+          )
+          // dev
+          if (!infoboxData.electionData) {
+            infoboxData.electionData = mapData[1].districts[0]
+          }
+          break
+        case 3:
+          infoboxData.electionData = mapData[2].districts.find(
+            (district) =>
+              district.county + district.town + district.vill ===
+              mapObject.activeId
+          )
+          // dev
+          if (!infoboxData.electionData) {
+            infoboxData.electionData = mapData[2].districts[0]
+          }
+          break
+
+        default:
+          break
+      }
       break
 
     default:

@@ -6,7 +6,7 @@ export const mockData = {
       town: '010',
       vill: '010',
       profRate: 80.0,
-      agreeRate: 60.9,
+      agreeRate: 30.9,
       disagreeRate: 39.1,
       adptVictor: 'Y',
     },

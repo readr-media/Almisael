@@ -287,6 +287,53 @@ const CouncilmanInfobox = ({ level, data }) => {
   )
 }
 
+const ReferendaTitle = styled.p`
+  margin: 0 0 20px;
+  font-weight: 700;
+`
+
+const ReferendaPassWrapper = styled.span`
+  color: #ff8585;
+`
+
+const ReferendaCandidate = styled.div``
+
+const ReferendaInfobox = ({ data }) => {
+  const { profRate, adptVictor, agreeRate, disagreeRate } = data
+  const noResult = adptVictor !== 'Y' && adptVictor !== 'N'
+  const pass = adptVictor === 'Y'
+  return (
+    <InfoboxScrollWrapper>
+      <ReferendaTitle>
+        此案是否通過{' '}
+        {pass ? <ReferendaPassWrapper>是</ReferendaPassWrapper> : '否'}
+        <br />
+        投票率 {profRate}%
+      </ReferendaTitle>
+      {noResult ? (
+        <>
+          <ReferendaCandidate>同意 {agreeRate}%</ReferendaCandidate>
+          <ReferendaCandidate>不同意 {disagreeRate}%</ReferendaCandidate>
+        </>
+      ) : pass ? (
+        <>
+          <ReferendaCandidate>
+            <ReferendaPassWrapper>同意 {agreeRate}%</ReferendaPassWrapper>
+          </ReferendaCandidate>
+          <ReferendaCandidate>不同意 {disagreeRate}%</ReferendaCandidate>
+        </>
+      ) : (
+        <>
+          <ReferendaCandidate>同意 {agreeRate}%</ReferendaCandidate>
+          <ReferendaCandidate>
+            <ReferendaPassWrapper>不同意 {disagreeRate}%</ReferendaPassWrapper>
+          </ReferendaCandidate>
+        </>
+      )}
+    </InfoboxScrollWrapper>
+  )
+}
+
 /**
  * The complete Triforce, or one or more components of the Triforce.
  * @typedef {Object} InfoboxTemplateInput
@@ -349,6 +396,9 @@ export const Infobox = ({ data }) => {
       break
     }
     case 'referenda':
+      console.log('referenda')
+      infobox = <ReferendaInfobox data={electionData} />
+      break
     default:
       break
   }
