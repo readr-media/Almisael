@@ -1,9 +1,6 @@
-import { useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { defaultMapObject } from '../components/MapControl'
-
-import { mockData as mayorCountry } from '../mock-datas/maps/mayors/2022_mayor_country'
-import { mockData as mayorCounty } from '../mock-datas/maps/mayors/2022_mayor_county_63000'
-import { mockData as mayorTown } from '../mock-datas/maps/mayors/2022_mayor_town_63000010'
+import axios from 'axios'
 
 import { mockData as presidentCountry } from '../mock-datas/maps/presidents/2020_president_country'
 import { mockData as presidentCounty } from '../mock-datas/maps/presidents/2020_president_county_63000'
@@ -19,6 +16,7 @@ import { mockData as referendaCountry } from '../mock-datas/maps/referenda/2020_
 import { mockData as referendaCounty } from '../mock-datas/maps/referenda/2020_referenda_01_county_63000'
 import { mockData as referendaTown } from '../mock-datas/maps/referenda/2020_referenda_01_town_63000010'
 
+const gcsBaseUrl = 'https://whoareyou-gcs.readr.tw/elections-dev/2022'
 const elections = [
   {
     electionType: 'mayor',
@@ -166,211 +164,274 @@ const elections = [
 export const useElectionData = () => {
   const [election, setElection] = useState(elections[0])
   const [mapObject, setMapObject] = useState(defaultMapObject)
+  const [mapData, setMapData] = useState({})
+  const [infoboxData, setInfoboxData] = useState({})
 
-  let mapData
-  const infoboxData = {
-    electionType: election.electionType,
-    level: mapObject.level,
-  }
-  switch (election.electionType) {
-    case 'president':
-      mapData = { 0: presidentCountry, 1: presidentCounty, 2: presidentTown }
+  const prepareData = useCallback(async (election, mapObject, mapData) => {
+    let newMapData = mapData
+    const newInfoboxData = {
+      electionType: election.electionType,
+      level: mapObject.level,
+    }
 
-      switch (mapObject.level) {
-        case 0:
-          infoboxData.electionData = mapData[0].summary
-          break
-        case 1:
-          infoboxData.electionData = mapData[0].districts.find(
-            (district) => district.county === mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[0].districts[0]
+    switch (election.electionType) {
+      case 'president':
+        _mapData = {
+          0: presidentCountry,
+          1: presidentCounty,
+          2: presidentTown,
+        }
+
+        switch (mapObject.level) {
+          case 0:
+            newInfoboxData.electionData = _mapData[0].summary
+            break
+          case 1:
+            newInfoboxData.electionData = _mapData[0].districts.find(
+              (district) => district.county === mapObject.activeId
+            )
+            // dev
+            if (!newInfoboxData.electionData) {
+              newInfoboxData.electionData = _mapData[0].districts[0]
+            }
+            break
+          case 2:
+            newInfoboxData.electionData = _mapData[1].districts.find(
+              (district) =>
+                district.county + district.town === mapObject.activeId
+            )
+            // dev
+            if (!newInfoboxData.electionData) {
+              newInfoboxData.electionData = _mapData[1].districts[0]
+            }
+            break
+          case 3:
+            newInfoboxData.electionData = _mapData[2].districts.find(
+              (district) =>
+                district.county + district.town + district.vill ===
+                mapObject.activeId
+            )
+            // dev
+            if (!newInfoboxData.electionData) {
+              newInfoboxData.electionData = _mapData[2].districts[0]
+            }
+            break
+
+          default:
+            break
+        }
+        break
+      case 'mayor':
+        console.log(newMapData)
+        switch (mapObject.level) {
+          case 0: {
+            if (!newMapData[0]) {
+              const url =
+                gcsBaseUrl +
+                '/' +
+                election.electionType +
+                '/map/' +
+                'country.json'
+              try {
+                const { data } = await axios.get(url)
+                newMapData = { 0: data }
+              } catch (error) {
+                console.error(error)
+              }
+            }
+            break
           }
-          break
-        case 2:
-          infoboxData.electionData = mapData[1].districts.find(
-            (district) => district.county + district.town === mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[1].districts[0]
-          }
-          break
-        case 3:
-          infoboxData.electionData = mapData[2].districts.find(
-            (district) =>
-              district.county + district.town + district.vill ===
-              mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[2].districts[0]
-          }
-          break
+          case 1: {
+            const { countyId } = mapObject
+            if (!newMapData[1] || !newMapData[1][countyId]) {
+              const url =
+                gcsBaseUrl +
+                '/' +
+                election.electionType +
+                '/map/county/' +
+                `${countyId}.json`
+              try {
+                const { data } = await axios.get(url)
+                const countyData = { ...newMapData[1] }
+                countyData[countyId] = data
+                newMapData = { ...newMapData, 1: countyData }
+              } catch (error) {
+                console.error(error)
+              }
+            }
 
-        default:
-          break
-      }
-      break
-    case 'mayor':
-      mapData = { 0: mayorCountry, 1: mayorCounty, 2: mayorTown }
-
-      switch (mapObject.level) {
-        case 0:
-          break
-        case 1:
-          infoboxData.electionData = mapData[0].districts.find(
-            (district) => district.county === mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[0].districts[0]
+            newInfoboxData.electionData = newMapData[0].districts.find(
+              (district) => district.county === mapObject.activeId
+            )
+            break
           }
-          break
-        case 2:
-          infoboxData.electionData = mapData[1].districts.find(
-            (district) => district.county + district.town === mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[1].districts[0]
+          case 2: {
+            const { townId, countyId } = mapObject
+
+            if (!newMapData[2] || !newMapData[2][townId]) {
+              const url =
+                gcsBaseUrl +
+                '/' +
+                election.electionType +
+                '/map/town/' +
+                `${townId}.json`
+
+              try {
+                const { data } = await axios.get(url)
+                const townData = { ...newMapData[2] }
+                townData[townId] = data
+                newMapData = { ...newMapData, 2: townData }
+              } catch (error) {
+                console.error(e)
+              }
+            }
+            newInfoboxData.electionData = newMapData[1][
+              countyId
+            ].districts.find(
+              (district) =>
+                district.county + district.town === mapObject.activeId
+            )
+            break
           }
-          break
-        case 3:
-          infoboxData.electionData = mapData[2].districts.find(
-            (district) =>
-              district.county + district.town + district.vill ===
-              mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[2].districts[0]
+          case 3: {
+            const { townId } = mapObject
+            newInfoboxData.electionData = newMapData[2][townId].districts.find(
+              (district) =>
+                district.county + district.town + district.vill ===
+                mapObject.activeId
+            )
+            break
           }
-          break
 
-        default:
-          break
-      }
-      break
-    case 'legislator':
-      mapData = { 0: null, 1: legislatorCounty, 2: legislatorConstituency }
+          default:
+            break
+        }
+        break
+      case 'legislator':
+        _mapData = { 0: null, 1: legislatorCounty, 2: legislatorConstituency }
 
-      switch (mapObject.level) {
-        case 0:
-          break
-        case 1:
-          infoboxData.electionData = mapData[1]
-          break
-        case 2:
-          infoboxData.electionData = mapData[1].districts.find(
-            (district) =>
-              district.county + district.area + '0' === mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[1].districts[0]
-          }
-          break
-        case 3:
-          infoboxData.electionData = mapData[2].districts.find(
-            (district) =>
-              district.county + district.area + '0' + district.vill ===
-              mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[2].districts[0]
-          }
-          break
+        switch (mapObject.level) {
+          case 0:
+            break
+          case 1:
+            newInfoboxData.electionData = _mapData[1]
+            break
+          case 2:
+            newInfoboxData.electionData = _mapData[1].districts.find(
+              (district) =>
+                district.county + district.area + '0' === mapObject.activeId
+            )
+            // dev
+            if (!newInfoboxData.electionData) {
+              newInfoboxData.electionData = _mapData[1].districts[0]
+            }
+            break
+          case 3:
+            newInfoboxData.electionData = _mapData[2].districts.find(
+              (district) =>
+                district.county + district.area + '0' + district.vill ===
+                mapObject.activeId
+            )
+            // dev
+            if (!newInfoboxData.electionData) {
+              newInfoboxData.electionData = _mapData[2].districts[0]
+            }
+            break
 
-        default:
-          break
-      }
+          default:
+            break
+        }
 
-      break
-    case 'councilman':
-      mapData = { 0: null, 1: councilmanCounty, 2: CouncilmanConstituency }
+        break
+      case 'councilman':
+        _mapData = { 0: null, 1: councilmanCounty, 2: CouncilmanConstituency }
 
-      switch (mapObject.level) {
-        case 0:
-          break
-        case 1:
-          infoboxData.electionData = mapData[1]
-          break
-        case 2:
-          infoboxData.electionData = mapData[1].districts.find(
-            (district) =>
-              district.county + district.area + '0' === mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[1].districts[0]
-          }
-          break
-        case 3:
-          infoboxData.electionData = mapData[2].districts.find(
-            (district) =>
-              district.county + district.area + '0' + district.vill ===
-              mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[2].districts[0]
-          }
-          break
+        switch (mapObject.level) {
+          case 0:
+            break
+          case 1:
+            newInfoboxData.electionData = _mapData[1]
+            break
+          case 2:
+            newInfoboxData.electionData = _mapData[1].districts.find(
+              (district) =>
+                district.county + district.area + '0' === mapObject.activeId
+            )
+            // dev
+            if (!newInfoboxData.electionData) {
+              newInfoboxData.electionData = _mapData[1].districts[0]
+            }
+            break
+          case 3:
+            newInfoboxData.electionData = _mapData[2].districts.find(
+              (district) =>
+                district.county + district.area + '0' + district.vill ===
+                mapObject.activeId
+            )
+            // dev
+            if (!newInfoboxData.electionData) {
+              newInfoboxData.electionData = _mapData[2].districts[0]
+            }
+            break
 
-        default:
-          break
-      }
+          default:
+            break
+        }
 
-      break
-    case 'referenda':
-      mapData = { 0: referendaCountry, 1: referendaCounty, 2: referendaTown }
+        break
+      case 'referenda':
+        _mapData = {
+          0: referendaCountry,
+          1: referendaCounty,
+          2: referendaTown,
+        }
 
-      switch (mapObject.level) {
-        case 0:
-          infoboxData.electionData = mapData[0].summary
-          break
-        case 1:
-          infoboxData.electionData = mapData[0].districts.find(
-            (district) => district.county === mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[0].districts[0]
-          }
-          break
-        case 2:
-          infoboxData.electionData = mapData[1].districts.find(
-            (district) => district.county + district.town === mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[1].districts[0]
-          }
-          break
-        case 3:
-          infoboxData.electionData = mapData[2].districts.find(
-            (district) =>
-              district.county + district.town + district.vill ===
-              mapObject.activeId
-          )
-          // dev
-          if (!infoboxData.electionData) {
-            infoboxData.electionData = mapData[2].districts[0]
-          }
-          break
+        switch (mapObject.level) {
+          case 0:
+            newInfoboxData.electionData = _mapData[0].summary
+            break
+          case 1:
+            newInfoboxData.electionData = _mapData[0].districts.find(
+              (district) => district.county === mapObject.activeId
+            )
+            // dev
+            if (!newInfoboxData.electionData) {
+              newInfoboxData.electionData = _mapData[0].districts[0]
+            }
+            break
+          case 2:
+            newInfoboxData.electionData = _mapData[1].districts.find(
+              (district) =>
+                district.county + district.town === mapObject.activeId
+            )
+            // dev
+            if (!newInfoboxData.electionData) {
+              newInfoboxData.electionData = _mapData[1].districts[0]
+            }
+            break
+          case 3:
+            newInfoboxData.electionData = _mapData[2].districts.find(
+              (district) =>
+                district.county + district.town + district.vill ===
+                mapObject.activeId
+            )
+            // dev
+            if (!newInfoboxData.electionData) {
+              newInfoboxData.electionData = _mapData[2].districts[0]
+            }
+            break
 
-        default:
-          break
-      }
-      break
+          default:
+            break
+        }
+        break
 
-    default:
-      break
-  }
+      default:
+        break
+    }
+
+    return { newInfoboxData, newMapData }
+  }, [])
 
   const onElectionChange = (e) => {
     const electionType = e.target.value
@@ -378,6 +439,29 @@ export const useElectionData = () => {
       elections.find((election) => election.electionType === electionType)
     )
   }
+
+  const onMapObjectChange = async (newMapObject) => {
+    const { newInfoboxData, newMapData } = await prepareData(
+      election,
+      newMapObject,
+      mapData
+    )
+    setInfoboxData(newInfoboxData)
+    setMapData(newMapData)
+    setMapObject(newMapObject)
+  }
+
+  useEffect(() => {
+    console.log('useEffect called')
+    prepareData(election, mapObject, mapData).then(
+      ({ newInfoboxData, newMapData }) => {
+        console.log('newMapData', newMapData)
+        setInfoboxData(newInfoboxData)
+        setMapData(newMapData)
+      }
+    )
+  }, [election, mapData, mapObject, prepareData])
+  console.log('mapData', mapData)
 
   return {
     electionNamePairs: elections.map(({ electionType, electionName }) => ({
@@ -389,6 +473,6 @@ export const useElectionData = () => {
     mapData,
     infoboxData,
     mapObject,
-    setMapObject,
+    setMapObject: onMapObjectChange,
   }
 }

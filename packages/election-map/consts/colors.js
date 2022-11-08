@@ -3,12 +3,12 @@ export const defaultColor = '#AFAFAF'
 export const partiesColor = [
   {
     index: 1,
-    name: '國民黨',
+    name: '中國國民黨',
     color: '#7CA1FF',
   },
   {
     index: 2,
-    name: '民進黨',
+    name: '民主進步黨',
     color: '#499A6C',
   },
   {

@@ -92,7 +92,7 @@ export const Map = ({
   }, [width, height])
 
   const nonLandClicked = () => {
-    setMapObject(() => defaultMapObject)
+    setMapObject(defaultMapObject)
   }
 
   const countyClicked = (feature) => {
@@ -105,7 +105,7 @@ export const Map = ({
     console.log('---')
 
     console.log('set countyId = ', countyId)
-    setMapObject(() => ({
+    setMapObject({
       level: 1,
       currentFeature: feature,
       countyId,
@@ -118,7 +118,7 @@ export const Map = ({
       constituencyName: '',
       activeId: countyId,
       upperLevelId: 'background',
-    }))
+    })
   }
   const townClicked = (feature) => {
     const {
@@ -135,7 +135,7 @@ export const Map = ({
     console.log('d is:', feature)
     console.log('---')
 
-    setMapObject(() => ({
+    setMapObject({
       level: 2,
       currentFeature: feature,
       countyId,
@@ -148,7 +148,7 @@ export const Map = ({
       constituencyName: '',
       activeId: townId,
       upperLevelId: countyId,
-    }))
+    })
   }
   const villageClicked = (feature) => {
     const {
@@ -172,7 +172,7 @@ export const Map = ({
     console.log('d is:', feature)
     console.log('---')
 
-    setMapObject((mapObject) => ({
+    setMapObject({
       ...mapObject,
       level: 3,
       countyId,
@@ -185,7 +185,7 @@ export const Map = ({
       constituencyName: '',
       activeId: villageId,
       upperLevelId: townId,
-    }))
+    })
   }
 
   const getWinningCandidate = (candidates) => {
@@ -221,8 +221,7 @@ export const Map = ({
     // const countyCandidates = electionData[0].districts.find(
     //   (district) => district.county === countyCode
     // )?.candidates
-    const countyCandidates = electionData[0].districts[0].candidates
-
+    const countyCandidates = electionData[0]?.districts[0].candidates
     if (countyCandidates) {
       const winningCandidate = getWinningCandidate(countyCandidates)
       const color = getGradiantPartyColor(
@@ -231,14 +230,16 @@ export const Map = ({
       )
       return color
     }
-    return 'white'
+    return defaultColor
   }
 
   // eslint-disable-next-line no-unused-vars
   const getTownColor = (townCode) => {
+    const countyCode = townCode.slice(0, -3)
+
     if (electionType === 'referenda') {
       const { agreeRate, disagreeRate } =
-        electionData[1].districts.find(
+        electionData[1][countyCode].districts.find(
           (district) => district.county + district.town === townCode
         ) || {}
       if (agreeRate) {
@@ -280,7 +281,7 @@ export const Map = ({
     // const townCandidates = electionData[1].districts.find(
     //   (district) => district.county + district.town === townCode
     // )?.candidates
-    const townCandidates = electionData[1].districts[0].candidates
+    const townCandidates = electionData[1][countyCode]?.districts[0].candidates
 
     if (townCandidates) {
       const winningCandidate = getWinningCandidate(townCandidates)
@@ -290,11 +291,12 @@ export const Map = ({
       )
       return color
     }
-    return 'white'
+    return defaultColor
   }
 
   // eslint-disable-next-line no-unused-vars
   const getVillageColor = (villCode) => {
+    const townCode = villCode.slice(0, -3)
     if (electionType === 'referenda') {
       const { agreeRate, disagreeRate } =
         electionData[2].districts.find(
@@ -341,7 +343,7 @@ export const Map = ({
     // const villageCandidates = electionData[2].districts.find(
     //   (district) => district.county + district.town + district.vill === villCode
     // )?.candidates
-    const villageCandidates = electionData[2].districts[0].candidates
+    const villageCandidates = electionData[2][townCode]?.districts[0].candidates
 
     if (villageCandidates) {
       const winningCandidate = getWinningCandidate(villageCandidates)
@@ -351,7 +353,7 @@ export const Map = ({
       )
       return color
     }
-    return 'white'
+    return defaultColor
   }
 
   return (
