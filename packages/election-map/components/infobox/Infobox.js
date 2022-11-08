@@ -42,7 +42,7 @@ const PresidentInfobox = ({ level, data }) => {
       {candidates.map((candidate) => {
         const elected = candidate.candVictor === '*'
         return (
-          <PresidentCandidate elected={elected} key={candidate.canNo}>
+          <PresidentCandidate elected={elected} key={candidate.candNo}>
             {candidate.name} {candidate.party} {candidate.tksRate}%
             {elected && (
               <ElectedIcon src={'/images/elected.svg'} alt="elected" />
@@ -85,7 +85,7 @@ const MayorInfobox = ({ level, data }) => {
       {candidates.map((candidate) => {
         const elected = candidate.candVictor === '*'
         return (
-          <MayorCandidate elected={elected} key={candidate.canNo}>
+          <MayorCandidate elected={elected} key={candidate.candNo}>
             {candidate.name} {candidate.party} {candidate.tksRate}%
             {elected && (
               <ElectedIcon src={'/images/elected.svg'} alt="elected" />
@@ -149,7 +149,7 @@ const LegislatorInfobox = ({ level, data }) => {
             return (
               <LegislatorCandidate
                 elected={elected}
-                key={legislatorIdPrefix + candidate.canNo}
+                key={legislatorIdPrefix + candidate.candNo}
               >
                 {candidate.name} {candidate.party} {candidate.tksRate}%
                 {elected && (
@@ -180,7 +180,7 @@ const LegislatorInfobox = ({ level, data }) => {
         return (
           <LegislatorCandidate
             elected={elected}
-            key={legislatorIdPrefix + candidate.canNo}
+            key={legislatorIdPrefix + candidate.candNo}
           >
             {candidate.name} {candidate.party} {candidate.tksRate}%
             {elected && (
@@ -242,7 +242,7 @@ const CouncilmanInfobox = ({ level, data }) => {
             return (
               <CouncilmanCandidate
                 elected={elected}
-                key={councilmandPrefix + candidate.canNo}
+                key={councilmandPrefix + candidate.candNo}
               >
                 {candidate.name} {candidate.party} {candidate.tksRate}%
                 {elected && (
@@ -274,7 +274,7 @@ const CouncilmanInfobox = ({ level, data }) => {
         return (
           <CouncilmanCandidate
             elected={elected}
-            key={councilmandPrefix + candidate.canNo}
+            key={councilmandPrefix + candidate.candNo}
           >
             {candidate.name} {candidate.party} {candidate.tksRate}%
             {elected && (
