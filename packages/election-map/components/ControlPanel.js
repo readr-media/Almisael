@@ -1,18 +1,21 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
+  width: 320px;
   & * {
     pointer-events: auto;
   }
 `
 
 const ElectionSelect = styled.select`
-  margin: 36px 0 0 60px;
+  margin: 92px 0 0 12px;
+`
+
+const MapButtonWrapper = styled.div`
+  margin-top: 20px;
 `
 
 const MapLevelBackButton = styled.button`
-  display: block;
-  margin: 20px 0 0 48px;
   border: 1px solid #000;
   background-color: #686868;
   color: #fff1db;
@@ -29,8 +32,7 @@ const MapLevelBackButton = styled.button`
 `
 
 const MapLevelResetButton = styled.button`
-  display: block;
-  margin: 20px 0 0 48px;
+  margin-left: 4px;
   border: 1px solid #000;
   background-color: #686868;
   color: #fff1db;
@@ -47,7 +49,7 @@ const MapLevelResetButton = styled.button`
 `
 
 const LocationsWrapper = styled.div`
-  margin: 13px 0 0 48px;
+  margin: 13px 0 0;
 `
 
 const Location = styled.span`
@@ -85,28 +87,30 @@ export const ControlPanel = ({
           </option>
         ))}
       </ElectionSelect>
-      <MapLevelBackButton
-        disabled={mapObject.level === 0}
-        onClick={() => {
-          const target = document.querySelector(
-            `#first-id-${mapObject.upperLevelId}`
-          )
-          let event = new MouseEvent('click', { bubbles: true })
-          target.dispatchEvent(event)
-        }}
-      >
-        回上層
-      </MapLevelBackButton>
-      <MapLevelResetButton
-        disabled={mapObject.level === 0}
-        onClick={() => {
-          const target = document.querySelector(`#first-id-background`)
-          let event = new MouseEvent('click', { bubbles: true })
-          target.dispatchEvent(event)
-        }}
-      >
-        回全國
-      </MapLevelResetButton>
+      <MapButtonWrapper>
+        <MapLevelBackButton
+          disabled={mapObject.level === 0}
+          onClick={() => {
+            const target = document.querySelector(
+              `#first-id-${mapObject.upperLevelId}`
+            )
+            let event = new MouseEvent('click', { bubbles: true })
+            target.dispatchEvent(event)
+          }}
+        >
+          回上層
+        </MapLevelBackButton>
+        <MapLevelResetButton
+          disabled={mapObject.level === 0}
+          onClick={() => {
+            const target = document.querySelector(`#first-id-background`)
+            let event = new MouseEvent('click', { bubbles: true })
+            target.dispatchEvent(event)
+          }}
+        >
+          回全國
+        </MapLevelResetButton>
+      </MapButtonWrapper>
       <LocationsWrapper>
         {locations.map((location, i) => (
           <Location key={i}>{location}</Location>

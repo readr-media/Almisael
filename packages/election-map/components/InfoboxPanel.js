@@ -5,7 +5,7 @@ const InfoboxWrapper = styled(CollapsibleWrapper)`
   width: 320px;
   background-color: white;
   pointer-events: auto;
-  margin: 22px 0 0 48px;
+  margin: 22px 0 0;
 `
 
 export const InfoboxPanel = ({ data }) => {

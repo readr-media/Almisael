@@ -6,7 +6,7 @@ const SeatsChartWrapper = styled(CollapsibleWrapper)`
   width: 320px;
   background-color: white;
   pointer-events: auto;
-  margin: 9px 0 0 48px;
+  margin: 9px 0 0;
 `
 
 export const SeatsPanel = ({ seats }) => {

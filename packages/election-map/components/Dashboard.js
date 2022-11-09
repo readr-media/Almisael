@@ -19,6 +19,7 @@ const PanelsWrapper = styled.div`
   & > * {
     pointer-events: auto;
   }
+  padding-left: 48px;
   top: 0;
   left: 0;
   width: 100vw;
