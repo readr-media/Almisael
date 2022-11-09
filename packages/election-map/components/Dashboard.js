@@ -11,6 +11,7 @@ import ElectionVoteComparisonPanel from './ElectionVoteComparisonPanel'
 
 const Wrapper = styled.div`
   position: relative;
+  background-color: #fff1db;
 `
 
 const PanelsWrapper = styled.div`

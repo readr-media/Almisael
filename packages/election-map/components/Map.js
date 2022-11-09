@@ -388,7 +388,7 @@ export const Map = ({
         id={`${id}-id-background`}
         width={width}
         height={height}
-        fill="white"
+        fill="#FFF1DB"
         onClick={nonLandClicked}
       />
       <g id={`${id}-control`}>
@@ -399,7 +399,6 @@ export const Map = ({
               d={path(feature)}
               id={`${id}-id-${feature['properties']['COUNTYCODE']}`}
               data-county-code={feature['properties']['COUNTYCODE']}
-              // fill="white"
               fill={
                 feature['properties']['COUNTYCODE'] === activeId
                   ? undefined
@@ -516,9 +515,7 @@ export const Map = ({
                   ? undefined
                   : 'gray'
               }
-              strokeWidth={
-                feature['properties']['VILLCODE'] === activeId ? 0.2 : 0.1
-              }
+              strokeWidth="0.1"
               onClick={villageClicked.bind(null, feature)}
               onMouseOver={() => {
                 setTooltip((tooltip) => ({
