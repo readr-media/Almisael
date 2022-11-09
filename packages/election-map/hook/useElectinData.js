@@ -234,7 +234,7 @@ export const useElectionData = () => {
                 'country.json'
               try {
                 const { data } = await axios.get(url)
-                newMapData = { 0: data }
+                newMapData = { ...newMapData, 0: data }
               } catch (error) {
                 console.error(error)
               }
@@ -282,7 +282,7 @@ export const useElectionData = () => {
                 townData[townId] = data
                 newMapData = { ...newMapData, 2: townData }
               } catch (error) {
-                console.error(e)
+                console.error(error)
               }
             }
             newInfoboxData.electionData = newMapData[1][
@@ -295,11 +295,17 @@ export const useElectionData = () => {
           }
           case 3: {
             const { townId } = mapObject
-            newInfoboxData.electionData = newMapData[2][townId].districts.find(
-              (district) =>
-                district.county + district.town + district.vill ===
-                mapObject.activeId
-            )
+            try {
+              newInfoboxData.electionData = newMapData[2][
+                townId
+              ].districts.find(
+                (district) =>
+                  district.county + district.town + district.vill ===
+                  mapObject.activeId
+              )
+            } catch (error) {
+              console.log(`mayor no data for town: ${townId}, error: `, error)
+            }
             break
           }
 

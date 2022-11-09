@@ -313,6 +313,10 @@ export const Map = ({
 
   // eslint-disable-next-line no-unused-vars
   const getVillageColor = (villCode) => {
+    if (!electionData[2]) {
+      return defaultColor
+    }
+
     const townCode = villCode.slice(0, -3)
     if (electionType === 'referenda') {
       const { agreeRate, disagreeRate } =
@@ -353,10 +357,6 @@ export const Map = ({
           return color
         }
       }
-    }
-
-    if (!electionData[2]) {
-      return defaultColor
     }
 
     // const villageCandidates = electionData[2].districts.find(

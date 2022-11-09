@@ -76,6 +76,18 @@ const MayorInfobox = ({ level, data }) => {
       </InfoboxScrollWrapper>
     )
   }
+  if (!data) {
+    return (
+      <InfoboxWrapper>
+        <InfoboxScrollWrapper>
+          <InfoboxText>
+            目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出
+          </InfoboxText>
+        </InfoboxScrollWrapper>
+      </InfoboxWrapper>
+    )
+  }
+
   const { profRate, candidates } = data
   return (
     <InfoboxScrollWrapper>
@@ -230,6 +242,18 @@ const CouncilmanInfobox = ({ level, data }) => {
       </InfoboxScrollWrapper>
     )
   }
+  if (!data) {
+    return (
+      <InfoboxWrapper>
+        <InfoboxScrollWrapper>
+          <InfoboxText>
+            目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出
+          </InfoboxText>
+        </InfoboxScrollWrapper>
+      </InfoboxWrapper>
+    )
+  }
+
   if (level === 1) {
     const { districts } = data
     return (
@@ -299,6 +323,17 @@ const ReferendaPassWrapper = styled.span`
 const ReferendaCandidate = styled.div``
 
 const ReferendaInfobox = ({ data }) => {
+  if (!data) {
+    return (
+      <InfoboxWrapper>
+        <InfoboxScrollWrapper>
+          <InfoboxText>
+            目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出
+          </InfoboxText>
+        </InfoboxScrollWrapper>
+      </InfoboxWrapper>
+    )
+  }
   const { profRate, adptVictor, agreeRate, disagreeRate } = data
   const noResult = adptVictor !== 'Y' && adptVictor !== 'N'
   const pass = adptVictor === 'Y'
