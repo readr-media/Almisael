@@ -11,7 +11,7 @@ const Tooltip = styled.div`
   ${({ coordinate }) =>
     coordinate.length
       ? `
-        top: ${coordinate[1] + 30}px;
+        top: ${coordinate[1] + 80}px;
         left: ${coordinate[0] - 30}px;
       `
       : `
