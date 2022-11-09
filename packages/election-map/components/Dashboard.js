@@ -7,6 +7,7 @@ import { SeatsPanel } from './SeatsPanel'
 import { MapCompareButton } from './MapCompareButton'
 import { useElectionData } from '../hook/useElectinData'
 import { SpinningModal } from './SpinningModal'
+import ElectionVoteComparisonPanel from './ElectionVoteComparisonPanel'
 
 const Wrapper = styled.div`
   position: relative;
@@ -45,6 +46,7 @@ export const Dashboard = () => {
     election,
     mapData,
     infoboxData,
+    evcData,
     mapObject,
     setMapObject,
   } = useElectionData(showLoading)
@@ -66,6 +68,7 @@ export const Dashboard = () => {
             setCompareMode((v) => !v)
           }}
         />
+        <ElectionVoteComparisonPanel data={evcData} />
       </PanelsWrapper>
       <MapContainer
         showLoading={showLoading}
