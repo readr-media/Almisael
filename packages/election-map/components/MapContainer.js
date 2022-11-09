@@ -7,11 +7,12 @@ export const MapContainer = ({
   setMapObject,
   electionData,
   electionType,
+  showLoading,
 }) => {
-  const mapData = useMapData()
+  const mapData = useMapData(showLoading)
 
   if (!mapData) {
-    return <p>Loading...</p>
+    return <div></div>
   }
 
   return (

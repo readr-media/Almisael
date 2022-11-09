@@ -8,7 +8,7 @@ const twTownsJson = 'https://cdn.jsdelivr.net/npm/taiwan-atlas/towns-10t.json'
 const villagesJson =
   'https://cdn.jsdelivr.net/npm/taiwan-atlas/villages-10t.json'
 
-export const useMapData = () => {
+export const useMapData = (showLoading) => {
   const [mapData, setMapData] = useState(null)
 
   useEffect(() => {
@@ -29,11 +29,13 @@ export const useMapData = () => {
         towns: feature(townsTopoJson, towns),
         villages: feature(villagesTopoJson, villages),
       })
+      showLoading(false)
     }
     if (!mapData) {
+      showLoading(true)
       fetchMapJsons()
     }
-  }, [])
+  }, [showLoading])
 
   return mapData
 }

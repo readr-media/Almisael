@@ -162,7 +162,7 @@ const elections = [
 // const mappingData = defaultElection.levels[defaultLevel]
 
 const defaultMapData = { 0: null, 1: null, 2: null }
-export const useElectionData = () => {
+export const useElectionData = (showLoading) => {
   const [election, setElection] = useState(elections[0])
   const [mapObject, setMapObject] = useState(defaultMapObject)
   const [mapData, setMapData] = useState(defaultMapData)
@@ -489,7 +489,7 @@ export const useElectionData = () => {
   useEffect(() => {
     const refetch = async () => {
       console.log('refetch data.. hold on')
-
+      showLoading(true)
       const { level, activeId } = mapObject
       const newMapData = defaultMapData
       for (let index = 0; index <= level; index++) {
@@ -552,11 +552,12 @@ export const useElectionData = () => {
       }
       setMapData(newMapData)
       setShouldRefetch(false)
+      showLoading(false)
     }
     if (shouldRefetch) {
       refetch()
     }
-  }, [shouldRefetch, mapObject, election.electionType])
+  }, [shouldRefetch, mapObject, election.electionType, showLoading])
 
   return {
     electionNamePairs: elections.map(({ electionType, electionName }) => ({
