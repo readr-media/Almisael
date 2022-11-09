@@ -12,10 +12,6 @@ import { mockData as CouncilmanConstituency } from '../mock-datas/maps/councilme
 import { mockData as legislatorCounty } from '../mock-datas/maps/legislators/2020_legislator_county_63000'
 import { mockData as legislatorConstituency } from '../mock-datas/maps/legislators/2020_legislator_constituency_6300001'
 
-import { mockData as referendaCountry } from '../mock-datas/maps/referenda/2020_referenda_01_country'
-import { mockData as referendaCounty } from '../mock-datas/maps/referenda/2020_referenda_01_county_63000'
-import { mockData as referendaTown } from '../mock-datas/maps/referenda/2020_referenda_01_town_63000010'
-
 const gcsBaseUrl = 'https://whoareyou-gcs.readr.tw/elections-dev'
 const elections = [
   {
@@ -163,7 +159,7 @@ const elections = [
 
 const defaultMapData = { 0: null, 1: null, 2: null }
 export const useElectionData = (showLoading) => {
-  const [election, setElection] = useState(elections[0])
+  const [election, setElection] = useState(elections[4])
   const [mapObject, setMapObject] = useState(defaultMapObject)
   const [mapData, setMapData] = useState(defaultMapData)
   const [infoboxData, setInfoboxData] = useState({})
@@ -232,6 +228,7 @@ export const useElectionData = (showLoading) => {
                 const evcDataUrl =
                   gcsBaseUrl + '/v2/2022/' + election.electionType + '/all.json'
                 const { data } = await axios.get(evcDataUrl)
+                console.log('newEvcData', data)
                 newEvcData = data
               }
               if (!newMapData[0]) {
@@ -402,46 +399,112 @@ export const useElectionData = (showLoading) => {
 
           break
         case 'referenda':
-          _mapData = {
-            0: referendaCountry,
-            1: referendaCounty,
-            2: referendaTown,
-          }
-
           switch (mapObject.level) {
-            case 0:
-              newInfoboxData.electionData = _mapData[0].summary
+            case 0: {
+              // if (!newEvcData) {
+              //   const evcDataUrl =
+              //     gcsBaseUrl + '/v2/2022/' + 'referendum' + '/all.json'
+              //   const { data } = await axios.get(evcDataUrl)
+              //   newEvcData = data
+              // }
+              if (!newMapData[0]) {
+                console.log('fetching country data')
+                const mapDataUrl =
+                  gcsBaseUrl +
+                  '/2022/' +
+                  'referendum' +
+                  '/map/F1/' +
+                  'country.json'
+                try {
+                  const { data } = await axios.get(mapDataUrl)
+                  newMapData = { ...newMapData, 0: data }
+                } catch (error) {
+                  console.error(error)
+                }
+              } else {
+                console.log('no need to fetch country data')
+              }
+              //dev
+              newInfoboxData.electionData = newMapData[0].summary
               break
-            case 1:
-              newInfoboxData.electionData = _mapData[0].districts.find(
+            }
+            case 1: {
+              const { countyId } = mapObject
+              if (!newMapData[1] || !newMapData[1][countyId]) {
+                console.log('fetching county data')
+                const mapDataUrl =
+                  gcsBaseUrl +
+                  '/2022/' +
+                  'referendum' +
+                  '/map/F1/county/' +
+                  `${countyId}.json`
+                try {
+                  const { data } = await axios.get(mapDataUrl)
+                  const countyData = { ...newMapData[1], [countyId]: data }
+                  newMapData = { ...newMapData, 1: countyData }
+                  console.log(newMapData)
+                } catch (error) {
+                  console.error(error)
+                }
+              } else {
+                console.log('no need to fetch county data')
+              }
+
+              newInfoboxData.electionData = newMapData[0].districts.find(
                 (district) => district.county === mapObject.activeId
               )
-              // dev
-              if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = _mapData[0].districts[0]
-              }
               break
-            case 2:
-              newInfoboxData.electionData = _mapData[1].districts.find(
+            }
+            case 2: {
+              const { townId, countyId } = mapObject
+
+              if (!newMapData[2] || !newMapData[2][townId]) {
+                console.log('fetching town data')
+                const mapDataUrl =
+                  gcsBaseUrl +
+                  '/2022/' +
+                  'referendum' +
+                  '/map/F1/town/' +
+                  `${townId}.json`
+
+                try {
+                  const { data } = await axios.get(mapDataUrl)
+                  console.log('data', data)
+                  const townData = { ...newMapData[2], [townId]: data }
+                  newMapData = { ...newMapData, 2: townData }
+                } catch (error) {
+                  console.error(error)
+                }
+              } else {
+                console.log('no need to fetch town data')
+              }
+
+              newInfoboxData.electionData = newMapData[1][
+                countyId
+              ].districts.find(
                 (district) =>
                   district.county + district.town === mapObject.activeId
               )
-              // dev
-              if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = _mapData[1].districts[0]
+              break
+            }
+            case 3: {
+              const { townId } = mapObject
+              try {
+                newInfoboxData.electionData = newMapData[2][
+                  townId
+                ].districts.find(
+                  (district) =>
+                    district.county + district.town + district.vill ===
+                    mapObject.activeId
+                )
+              } catch (error) {
+                console.log(
+                  `referendum no data for town: ${townId}, error: `,
+                  error
+                )
               }
               break
-            case 3:
-              newInfoboxData.electionData = _mapData[2].districts.find(
-                (district) =>
-                  district.county + district.town + district.vill ===
-                  mapObject.activeId
-              )
-              // dev
-              if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = _mapData[2].districts[0]
-              }
-              break
+            }
 
             default:
               break
@@ -493,7 +556,7 @@ export const useElectionData = (showLoading) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShouldRefetch(true)
-    }, 500000)
+    }, 10000000)
 
     return () => {
       clearInterval(interval)
@@ -508,65 +571,141 @@ export const useElectionData = (showLoading) => {
       const newMapData = defaultMapData
       let newEvcData
       for (let index = 0; index <= level; index++) {
-        switch (index) {
-          case 0: {
-            const evcDataUrl =
-              gcsBaseUrl + '/v2/2022/' + election.electionType + '/all.json'
-            try {
-              const { data } = await axios.get(evcDataUrl)
-              newEvcData = data
-            } catch (error) {
-              console.error(error)
-            }
+        switch (election.electionType) {
+          case 'mayor': {
+            switch (index) {
+              case 0: {
+                // const evcDataUrl =
+                //   gcsBaseUrl + '/v2/2022/' + election.electionType + '/all.json'
+                // try {
+                //   const { data } = await axios.get(evcDataUrl)
+                //   newEvcData = data
+                // } catch (error) {
+                //   console.error(error)
+                // }
 
-            const mapDataUrl =
-              gcsBaseUrl +
-              '/2022/' +
-              election.electionType +
-              '/map/' +
-              'country.json'
-            try {
-              const { data } = await axios.get(mapDataUrl)
-              newMapData[0] = data
-            } catch (error) {
-              console.error(error)
+                const mapDataUrl =
+                  gcsBaseUrl +
+                  '/2022/' +
+                  election.electionType +
+                  '/map/' +
+                  'country.json'
+                try {
+                  const { data } = await axios.get(mapDataUrl)
+                  newMapData[0] = data
+                } catch (error) {
+                  console.error(error)
+                }
+                break
+              }
+              case 1: {
+                const countyId = activeId.slice(0, 5)
+                const url =
+                  gcsBaseUrl +
+                  '/2022/' +
+                  election.electionType +
+                  '/map/county/' +
+                  `${countyId}.json`
+                try {
+                  const { data } = await axios.get(url)
+                  const countyData = { [countyId]: data }
+                  newMapData[1] = countyData
+                } catch (error) {
+                  console.error(error)
+                }
+                break
+              }
+              case 2: {
+                const townId = activeId.slice(0, 8)
+                const url =
+                  gcsBaseUrl +
+                  '/2022/' +
+                  election.electionType +
+                  '/map/town/' +
+                  `${townId}.json`
+
+                try {
+                  const { data } = await axios.get(url)
+                  const townData = { [townId]: data }
+                  newMapData[2] = townData
+                } catch (error) {
+                  console.error(error)
+                }
+
+                break
+              }
+
+              default:
+                break
             }
             break
           }
-          case 1: {
-            const countyId = activeId.slice(0, 5)
-            const url =
-              gcsBaseUrl +
-              '/2022/' +
-              election.electionType +
-              '/map/county/' +
-              `${countyId}.json`
-            try {
-              const { data } = await axios.get(url)
-              const countyData = { [countyId]: data }
-              newMapData[1] = countyData
-            } catch (error) {
-              console.error(error)
-            }
-            break
-          }
-          case 2: {
-            const townId = activeId.slice(0, 8)
-            const url =
-              gcsBaseUrl +
-              '/2022/' +
-              election.electionType +
-              '/map/town/' +
-              `${townId}.json`
+          case 'referenda': {
+            switch (index) {
+              case 0: {
+                // const evcDataUrl =
+                //   gcsBaseUrl + '/v2/2022/' + 'referendum' + '/all.json'
+                // try {
+                //   const { data } = await axios.get(evcDataUrl)
+                //   newEvcData = data
+                // } catch (error) {
+                //   console.error(error)
+                // }
 
-            try {
-              const { data } = await axios.get(url)
-              const townData = { [townId]: data }
-              newMapData[2] = townData
-            } catch (error) {
-              console.error(error)
-            }
+                const mapDataUrl =
+                  gcsBaseUrl +
+                  '/2022/' +
+                  'referendum' +
+                  '/map/F1/' +
+                  'country.json'
+                try {
+                  const { data } = await axios.get(mapDataUrl)
+                  newMapData[0] = data
+                } catch (error) {
+                  console.error(error)
+                }
+                break
+              }
+              case 1: {
+                const countyId = activeId.slice(0, 5)
+                const mapDataUrl =
+                  gcsBaseUrl +
+                  '/2022/' +
+                  'referendum' +
+                  '/map/F1/county/' +
+                  `${countyId}.json`
+                try {
+                  const { data } = await axios.get(mapDataUrl)
+                  const countyData = { [countyId]: data }
+                  newMapData[1] = countyData
+                } catch (error) {
+                  console.error(error)
+                }
+                break
+              }
+              case 2: {
+                const townId = activeId.slice(0, 8)
+                const mapDataUrl =
+                  gcsBaseUrl +
+                  '/2022/' +
+                  'referendum' +
+                  '/map/F1/town/' +
+                  `${townId}.json`
 
+                try {
+                  const { data } = await axios.get(mapDataUrl)
+                  const townData = { [townId]: data }
+                  newMapData[2] = townData
+                } catch (error) {
+                  console.error(error)
+                }
+
+                break
+              }
+
+              default:
+                break
+            }
             break
           }
 

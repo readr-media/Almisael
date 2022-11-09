@@ -76,7 +76,10 @@ const MayorInfobox = ({ level, data }) => {
       </InfoboxScrollWrapper>
     )
   }
-  if (!data) {
+
+  const { profRate, candidates } = data
+
+  if (!profRate) {
     return (
       <InfoboxWrapper>
         <InfoboxScrollWrapper>
@@ -88,7 +91,6 @@ const MayorInfobox = ({ level, data }) => {
     )
   }
 
-  const { profRate, candidates } = data
   return (
     <InfoboxScrollWrapper>
       <MayorTitle>
@@ -323,7 +325,8 @@ const ReferendaPassWrapper = styled.span`
 const ReferendaCandidate = styled.div``
 
 const ReferendaInfobox = ({ data }) => {
-  if (!data) {
+  const { profRate, adptVictor, agreeRate, disagreeRate } = data
+  if (!profRate) {
     return (
       <InfoboxWrapper>
         <InfoboxScrollWrapper>
@@ -334,7 +337,7 @@ const ReferendaInfobox = ({ data }) => {
       </InfoboxWrapper>
     )
   }
-  const { profRate, adptVictor, agreeRate, disagreeRate } = data
+
   const noResult = adptVictor !== 'Y' && adptVictor !== 'N'
   const pass = adptVictor === 'Y'
   return (
