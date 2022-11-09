@@ -66,6 +66,7 @@ export const ControlPanel = ({
   electionNamePairs,
   onElectionChange,
   mapObject,
+  election,
 }) => {
   const { countyName, townName, constituencyName, villageName } = mapObject
   const locations = [
@@ -77,7 +78,11 @@ export const ControlPanel = ({
   if (!locations.length) locations.push('全國')
   return (
     <Wrapper>
-      <ElectionSelect name="election-type" onChange={onElectionChange}>
+      <ElectionSelect
+        value={election.electionType}
+        name="election-type"
+        onChange={onElectionChange}
+      >
         {electionNamePairs.map((electionNamePair) => (
           <option
             value={electionNamePair.electionType}

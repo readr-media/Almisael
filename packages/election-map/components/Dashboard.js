@@ -61,6 +61,7 @@ export const Dashboard = () => {
           electionNamePairs={electionNamePairs}
           onElectionChange={onElectionChange}
           mapObject={mapObject}
+          election={election}
         />
         <InfoboxPanel data={infoboxData} />
         <SeatsPanel seats={election.seats} />

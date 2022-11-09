@@ -206,6 +206,10 @@ export const Map = ({
 
   // eslint-disable-next-line no-unused-vars
   const getCountyColor = (countyCode) => {
+    if (!electionData[0]) {
+      return defaultColor
+    }
+
     if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
         electionData[0].districts.find(
@@ -224,9 +228,6 @@ export const Map = ({
     }
     if (electionType === 'councilman') {
       return '#555'
-    }
-    if (!electionData[0]) {
-      return defaultColor
     }
 
     const countyCandidates = electionData[0]?.districts?.find(
@@ -248,6 +249,10 @@ export const Map = ({
   // eslint-disable-next-line no-unused-vars
   const getTownColor = (townCode) => {
     const countyCode = townCode.slice(0, -3)
+
+    if (!electionData[1]) {
+      return defaultColor
+    }
 
     if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
@@ -286,10 +291,6 @@ export const Map = ({
           return color
         }
       }
-    }
-
-    if (!electionData[1]) {
-      return defaultColor
     }
 
     // const townCandidates = electionData[1].districts.find(

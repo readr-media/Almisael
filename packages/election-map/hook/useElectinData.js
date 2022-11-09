@@ -41,89 +41,89 @@ const elections = [
       },
     ],
   },
-  {
-    electionType: 'councilman',
-    electionName: '縣市議員',
-    years: [2022, 2018, 2014, 2010, 2006, 2002],
-    seats: { wrapperTitle: '縣市議員席次圖', componentTitle: '議員選舉' },
-    levels: [
-      {
-        //level 0 country
-        mapJson: 'tw_country.topojson',
-        electionDatas: null,
-      },
-      {
-        // level 1 county
-        mapJson: 'tw_county_63000.topojson',
-        electionDatas: 'councilmen_county_63000.json',
-      },
-      {
-        // level 2 constituency
-        mapJson: 'tw_town_63000010.topojson',
-        electionDatas: 'councilmen_constituency_63000010.json',
-      },
-      {
-        // level 3 village
-        mapJson: 'tw_vill_63000010010.topojson',
-        electionDatas: null,
-      },
-    ],
-  },
-  {
-    electionType: 'president',
-    electionName: '總統',
-    years: [2020, 2016, 2012, 2008, 2004, 2000],
-    levels: [
-      {
-        //level 0 country
-        mapJson: 'tw_country.topojson',
-        electionDatas: 'president_country.json',
-      },
-      {
-        //level 1 county
-        mapJson: 'tw_county_63000.topojson',
-        electionDatas: 'president_county_63000.json',
-      },
-      {
-        //level 2 town
-        mapJson: 'tw_town_63000010.topojson',
-        electionDatas: 'president_town_63000010.json',
-      },
-      {
-        //level 3 village
-        mapJson: 'tw_vill_63000010010.topojson',
-        electionDatas: null,
-      },
-    ],
-  },
-  {
-    electionType: 'legislator',
-    electionName: '立法委員',
-    years: [2020, 2016, 2012, 2008, 2004, 2000],
-    seats: { wrapperTitle: '立法委員席次圖', componentTitle: '立法委員選舉' },
-    levels: [
-      {
-        //level 0 country
-        mapJson: 'tw_country.topojson',
-        electionDatas: null,
-      },
-      {
-        // level 1 county
-        mapJson: 'tw_county_63000.topojson',
-        electionDatas: 'legislator_county_63000.json',
-      },
-      {
-        // level 2 constituency
-        mapJson: 'tw_town_63000010.topojson',
-        electionDatas: 'legislator_constituency_63000010.json',
-      },
-      {
-        // level 3 village
-        mapJson: 'tw_vill_63000010010.topojson',
-        electionDatas: null,
-      },
-    ],
-  },
+  // {
+  //   electionType: 'councilman',
+  //   electionName: '縣市議員',
+  //   years: [2022, 2018, 2014, 2010, 2006, 2002],
+  //   seats: { wrapperTitle: '縣市議員席次圖', componentTitle: '議員選舉' },
+  //   levels: [
+  //     {
+  //       //level 0 country
+  //       mapJson: 'tw_country.topojson',
+  //       electionDatas: null,
+  //     },
+  //     {
+  //       // level 1 county
+  //       mapJson: 'tw_county_63000.topojson',
+  //       electionDatas: 'councilmen_county_63000.json',
+  //     },
+  //     {
+  //       // level 2 constituency
+  //       mapJson: 'tw_town_63000010.topojson',
+  //       electionDatas: 'councilmen_constituency_63000010.json',
+  //     },
+  //     {
+  //       // level 3 village
+  //       mapJson: 'tw_vill_63000010010.topojson',
+  //       electionDatas: null,
+  //     },
+  //   ],
+  // },
+  // {
+  //   electionType: 'president',
+  //   electionName: '總統',
+  //   years: [2020, 2016, 2012, 2008, 2004, 2000],
+  //   levels: [
+  //     {
+  //       //level 0 country
+  //       mapJson: 'tw_country.topojson',
+  //       electionDatas: 'president_country.json',
+  //     },
+  //     {
+  //       //level 1 county
+  //       mapJson: 'tw_county_63000.topojson',
+  //       electionDatas: 'president_county_63000.json',
+  //     },
+  //     {
+  //       //level 2 town
+  //       mapJson: 'tw_town_63000010.topojson',
+  //       electionDatas: 'president_town_63000010.json',
+  //     },
+  //     {
+  //       //level 3 village
+  //       mapJson: 'tw_vill_63000010010.topojson',
+  //       electionDatas: null,
+  //     },
+  //   ],
+  // },
+  // {
+  //   electionType: 'legislator',
+  //   electionName: '立法委員',
+  //   years: [2020, 2016, 2012, 2008, 2004, 2000],
+  //   seats: { wrapperTitle: '立法委員席次圖', componentTitle: '立法委員選舉' },
+  //   levels: [
+  //     {
+  //       //level 0 country
+  //       mapJson: 'tw_country.topojson',
+  //       electionDatas: null,
+  //     },
+  //     {
+  //       // level 1 county
+  //       mapJson: 'tw_county_63000.topojson',
+  //       electionDatas: 'legislator_county_63000.json',
+  //     },
+  //     {
+  //       // level 2 constituency
+  //       mapJson: 'tw_town_63000010.topojson',
+  //       electionDatas: 'legislator_constituency_63000010.json',
+  //     },
+  //     {
+  //       // level 3 village
+  //       mapJson: 'tw_vill_63000010010.topojson',
+  //       electionDatas: null,
+  //     },
+  //   ],
+  // },
   {
     electionType: 'referendum',
     electionName: '全國性公民投票',
@@ -152,19 +152,22 @@ const elections = [
     ],
   },
 ]
-// const defaultLevel = 0
-// const defaultElection = elections.mayor
-// const year = defaultElection.years[0]
-// const mappingData = defaultElection.levels[defaultLevel]
 
 const defaultMapData = { 0: null, 1: null, 2: null }
+const defaultElectionMapData = elections.reduce((obj, election) => {
+  obj[election.electionType] = defaultMapData
+  return obj
+}, {})
+
 export const useElectionData = (showLoading) => {
-  const [election, setElection] = useState(elections[4])
+  const [election, setElection] = useState(elections[0])
+  const [electionMapData, setElectionMapData] = useState(defaultElectionMapData)
   const [mapObject, setMapObject] = useState(defaultMapObject)
-  const [mapData, setMapData] = useState(defaultMapData)
   const [infoboxData, setInfoboxData] = useState({})
   const [shouldRefetch, setShouldRefetch] = useState(false)
   const [evcData, setEvcData] = useState()
+
+  const mapData = electionMapData[election.electionType]
 
   const prepareData = useCallback(
     async (election, mapObject, mapData, evcData) => {
@@ -174,9 +177,10 @@ export const useElectionData = (showLoading) => {
         electionType: election.electionType,
         level: mapObject.level,
       }
+
       switch (election.electionType) {
         case 'president':
-          _mapData = {
+          newMapData = {
             0: presidentCountry,
             1: presidentCounty,
             2: presidentTown,
@@ -184,36 +188,36 @@ export const useElectionData = (showLoading) => {
 
           switch (mapObject.level) {
             case 0:
-              newInfoboxData.electionData = _mapData[0].summary
+              newInfoboxData.electionData = newMapData[0].summary
               break
             case 1:
-              newInfoboxData.electionData = _mapData[0].districts.find(
+              newInfoboxData.electionData = newMapData[0].districts.find(
                 (district) => district.county === mapObject.activeId
               )
               // dev
               if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = _mapData[0].districts[0]
+                newInfoboxData.electionData = newMapData[0].districts[0]
               }
               break
             case 2:
-              newInfoboxData.electionData = _mapData[1].districts.find(
+              newInfoboxData.electionData = newMapData[1].districts.find(
                 (district) =>
                   district.county + district.town === mapObject.activeId
               )
               // dev
               if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = _mapData[1].districts[0]
+                newInfoboxData.electionData = newMapData[1].districts[0]
               }
               break
             case 3:
-              newInfoboxData.electionData = _mapData[2].districts.find(
+              newInfoboxData.electionData = newMapData[2].districts.find(
                 (district) =>
                   district.county + district.town + district.vill ===
                   mapObject.activeId
               )
               // dev
               if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = _mapData[2].districts[0]
+                newInfoboxData.electionData = newMapData[2].districts[0]
               }
               break
 
@@ -327,33 +331,37 @@ export const useElectionData = (showLoading) => {
           }
           break
         case 'legislator':
-          _mapData = { 0: null, 1: legislatorCounty, 2: legislatorConstituency }
+          newMapData = {
+            0: null,
+            1: legislatorCounty,
+            2: legislatorConstituency,
+          }
 
           switch (mapObject.level) {
             case 0:
               break
             case 1:
-              newInfoboxData.electionData = _mapData[1]
+              newInfoboxData.electionData = newMapData[1]
               break
             case 2:
-              newInfoboxData.electionData = _mapData[1].districts.find(
+              newInfoboxData.electionData = newMapData[1].districts.find(
                 (district) =>
                   district.county + district.area + '0' === mapObject.activeId
               )
               // dev
               if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = _mapData[1].districts[0]
+                newInfoboxData.electionData = newMapData[1].districts[0]
               }
               break
             case 3:
-              newInfoboxData.electionData = _mapData[2].districts.find(
+              newInfoboxData.electionData = newMapData[2].districts.find(
                 (district) =>
                   district.county + district.area + '0' + district.vill ===
                   mapObject.activeId
               )
               // dev
               if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = _mapData[2].districts[0]
+                newInfoboxData.electionData = newMapData[2].districts[0]
               }
               break
 
@@ -363,33 +371,37 @@ export const useElectionData = (showLoading) => {
 
           break
         case 'councilman':
-          _mapData = { 0: null, 1: councilmanCounty, 2: CouncilmanConstituency }
+          newMapData = {
+            0: null,
+            1: councilmanCounty,
+            2: CouncilmanConstituency,
+          }
 
           switch (mapObject.level) {
             case 0:
               break
             case 1:
-              newInfoboxData.electionData = _mapData[1]
+              newInfoboxData.electionData = newMapData[1]
               break
             case 2:
-              newInfoboxData.electionData = _mapData[1].districts.find(
+              newInfoboxData.electionData = newMapData[1].districts.find(
                 (district) =>
                   district.county + district.area + '0' === mapObject.activeId
               )
               // dev
               if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = _mapData[1].districts[0]
+                newInfoboxData.electionData = newMapData[1].districts[0]
               }
               break
             case 3:
-              newInfoboxData.electionData = _mapData[2].districts.find(
+              newInfoboxData.electionData = newMapData[2].districts.find(
                 (district) =>
                   district.county + district.area + '0' + district.vill ===
                   mapObject.activeId
               )
               // dev
               if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = _mapData[2].districts[0]
+                newInfoboxData.electionData = newMapData[2].districts[0]
               }
               break
 
@@ -515,9 +527,10 @@ export const useElectionData = (showLoading) => {
           break
       }
 
+      showLoading(false)
       return { newInfoboxData, newMapData, newEvcData }
     },
-    []
+    [showLoading]
   )
 
   const onElectionChange = (e) => {
@@ -525,6 +538,11 @@ export const useElectionData = (showLoading) => {
     setElection(
       elections.find((election) => election.electionType === electionType)
     )
+    setElectionMapData(defaultElectionMapData)
+    setMapObject(defaultMapObject)
+    setInfoboxData({})
+    setEvcData()
+    showLoading(true)
   }
 
   const onMapObjectChange = async (newMapObject) => {
@@ -533,11 +551,14 @@ export const useElectionData = (showLoading) => {
     const { newInfoboxData, newMapData, newEvcData } = await prepareData(
       election,
       newMapObject,
-      mapData,
+      electionMapData[election.electionType],
       evcData
     )
     setInfoboxData(newInfoboxData)
-    setMapData(newMapData)
+    setElectionMapData((oldData) => ({
+      ...oldData,
+      [election.electionType]: newMapData,
+    }))
     setEvcData(newEvcData)
     setMapObject(newMapObject)
   }
@@ -546,11 +567,14 @@ export const useElectionData = (showLoading) => {
     prepareData(election, mapObject, mapData, evcData).then(
       ({ newInfoboxData, newMapData, newEvcData }) => {
         setInfoboxData(newInfoboxData)
-        setMapData(newMapData)
+        setElectionMapData((oldData) => ({
+          ...oldData,
+          [election.electionType]: newMapData,
+        }))
         setEvcData(newEvcData)
       }
     )
-  }, [election, mapData, evcData, mapObject, prepareData])
+  }, [election, evcData, mapObject, prepareData, mapData])
 
   // create interval to periodically trigger refetch and let react lifecycle to handle the refetch
   useEffect(() => {
@@ -713,7 +737,10 @@ export const useElectionData = (showLoading) => {
             break
         }
       }
-      setMapData(newMapData)
+      setElectionMapData((oldData) => ({
+        ...oldData,
+        [election.electionType]: newMapData,
+      }))
       setEvcData(newEvcData)
       setShouldRefetch(false)
       showLoading(false)
