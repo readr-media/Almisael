@@ -479,7 +479,7 @@ export const useElectionData = (showLoading) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShouldRefetch(true)
-    }, 10000)
+    }, 100000)
 
     return () => {
       clearInterval(interval)

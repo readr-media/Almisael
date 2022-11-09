@@ -91,7 +91,6 @@ export const ControlPanel = ({
           const target = document.querySelector(
             `#first-id-${mapObject.upperLevelId}`
           )
-          console.log(target)
           let event = new MouseEvent('click', { bubbles: true })
           target.dispatchEvent(event)
         }}
@@ -102,7 +101,6 @@ export const ControlPanel = ({
         disabled={mapObject.level === 0}
         onClick={() => {
           const target = document.querySelector(`#first-id-background`)
-          console.log(target)
           let event = new MouseEvent('click', { bubbles: true })
           target.dispatchEvent(event)
         }}

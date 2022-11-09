@@ -35,7 +35,7 @@ export const Dashboard = () => {
     } else {
       setTimeout(() => {
         setLoading(false)
-      }, 100)
+      }, 200)
     }
   }, [])
 
