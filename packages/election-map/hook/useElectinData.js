@@ -125,7 +125,7 @@ const elections = [
     ],
   },
   {
-    electionType: 'referenda',
+    electionType: 'referendum',
     electionName: '全國性公民投票',
     years: [2020, 2016, 2012, 2008, 2004, 2000],
     levels: [
@@ -398,7 +398,7 @@ export const useElectionData = (showLoading) => {
           }
 
           break
-        case 'referenda':
+        case 'referendum':
           switch (mapObject.level) {
             case 0: {
               // if (!newEvcData) {
@@ -640,7 +640,7 @@ export const useElectionData = (showLoading) => {
             }
             break
           }
-          case 'referenda': {
+          case 'referendum': {
             switch (index) {
               case 0: {
                 // const evcDataUrl =

@@ -313,18 +313,18 @@ const CouncilmanInfobox = ({ level, data }) => {
   )
 }
 
-const ReferendaTitle = styled.p`
+const ReferendumTitle = styled.p`
   margin: 0 0 20px;
   font-weight: 700;
 `
 
-const ReferendaPassWrapper = styled.span`
+const ReferendumPassWrapper = styled.span`
   color: #ff8585;
 `
 
-const ReferendaCandidate = styled.div``
+const ReferendumCandidate = styled.div``
 
-const ReferendaInfobox = ({ data }) => {
+const ReferendumInfobox = ({ data }) => {
   const { profRate, adptVictor, agreeRate, disagreeRate } = data
   if (!profRate) {
     return (
@@ -342,30 +342,32 @@ const ReferendaInfobox = ({ data }) => {
   const pass = adptVictor === 'Y'
   return (
     <InfoboxScrollWrapper>
-      <ReferendaTitle>
+      <ReferendumTitle>
         此案是否通過{' '}
-        {pass ? <ReferendaPassWrapper>是</ReferendaPassWrapper> : '否'}
+        {pass ? <ReferendumPassWrapper>是</ReferendumPassWrapper> : '否'}
         <br />
         投票率 {profRate}%
-      </ReferendaTitle>
+      </ReferendumTitle>
       {noResult ? (
         <>
-          <ReferendaCandidate>同意 {agreeRate}%</ReferendaCandidate>
-          <ReferendaCandidate>不同意 {disagreeRate}%</ReferendaCandidate>
+          <ReferendumCandidate>同意 {agreeRate}%</ReferendumCandidate>
+          <ReferendumCandidate>不同意 {disagreeRate}%</ReferendumCandidate>
         </>
       ) : pass ? (
         <>
-          <ReferendaCandidate>
-            <ReferendaPassWrapper>同意 {agreeRate}%</ReferendaPassWrapper>
-          </ReferendaCandidate>
-          <ReferendaCandidate>不同意 {disagreeRate}%</ReferendaCandidate>
+          <ReferendumCandidate>
+            <ReferendumPassWrapper>同意 {agreeRate}%</ReferendumPassWrapper>
+          </ReferendumCandidate>
+          <ReferendumCandidate>不同意 {disagreeRate}%</ReferendumCandidate>
         </>
       ) : (
         <>
-          <ReferendaCandidate>同意 {agreeRate}%</ReferendaCandidate>
-          <ReferendaCandidate>
-            <ReferendaPassWrapper>不同意 {disagreeRate}%</ReferendaPassWrapper>
-          </ReferendaCandidate>
+          <ReferendumCandidate>同意 {agreeRate}%</ReferendumCandidate>
+          <ReferendumCandidate>
+            <ReferendumPassWrapper>
+              不同意 {disagreeRate}%
+            </ReferendumPassWrapper>
+          </ReferendumCandidate>
         </>
       )}
     </InfoboxScrollWrapper>
@@ -433,9 +435,9 @@ export const Infobox = ({ data }) => {
       infobox = <CouncilmanInfobox level={level} data={electionData} />
       break
     }
-    case 'referenda':
-      console.log('referenda')
-      infobox = <ReferendaInfobox data={electionData} />
+    case 'referendum':
+      console.log('referendum')
+      infobox = <ReferendumInfobox data={electionData} />
       break
     default:
       break
@@ -491,5 +493,5 @@ ${公投案號} ${公投案簡稱}
  * Legislators level: 1. county 2. constituency 3. village
  * Indigenous Legislators level: 1. country, 2. county, 3. towns 4. village
  * Legislators Party level: 1. country, 2. county, 3. towns 4. village
- * Referenda level: 1. country, 2. county, 3. towns 4. village
+ * Referendum level: 1. country, 2. county, 3. towns 4. village
  */

@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { defaultMapObject } from './MapControl'
 import {
   getGradiantPartyColor,
-  getGradiantReferendaColor,
+  getGradiantReferendumColor,
   defaultColor,
 } from '../consts/colors'
 
@@ -206,14 +206,14 @@ export const Map = ({
 
   // eslint-disable-next-line no-unused-vars
   const getCountyColor = (countyCode) => {
-    if (electionType === 'referenda') {
+    if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
         electionData[0].districts.find(
           (district) => district.county === countyCode
         ) || {}
       if (agreeRate) {
         const agree = agreeRate >= disagreeRate
-        const color = getGradiantReferendaColor(
+        const color = getGradiantReferendumColor(
           agree,
           agree ? agreeRate : disagreeRate
         )
@@ -249,14 +249,14 @@ export const Map = ({
   const getTownColor = (townCode) => {
     const countyCode = townCode.slice(0, -3)
 
-    if (electionType === 'referenda') {
+    if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
         electionData[1][countyCode].districts.find(
           (district) => district.county + district.town === townCode
         ) || {}
       if (agreeRate) {
         const agree = agreeRate >= disagreeRate
-        const color = getGradiantReferendaColor(
+        const color = getGradiantReferendumColor(
           agree,
           agree ? agreeRate : disagreeRate
         )
@@ -317,7 +317,7 @@ export const Map = ({
       return defaultColor
     }
 
-    if (electionType === 'referenda') {
+    if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
         electionData[2][townCode].districts.find(
           (district) =>
@@ -325,7 +325,7 @@ export const Map = ({
         ) || {}
       if (agreeRate) {
         const agree = agreeRate >= disagreeRate
-        const color = getGradiantReferendaColor(
+        const color = getGradiantReferendumColor(
           agree,
           agree ? agreeRate : disagreeRate
         )

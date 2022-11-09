@@ -117,7 +117,7 @@ export const getGradiantPartyColor = (party, percent) => {
   return rgbaToRgb(hexToRgba(color, getAlphaByPercent(percent)))
 }
 
-const referendaColor = [
+const referendumColor = [
   {
     index: 1,
     name: '同意',
@@ -130,8 +130,8 @@ const referendaColor = [
   },
 ]
 
-export const getGradiantReferendaColor = (agree, percent) => {
-  const [agreeColor, disagreeColor] = referendaColor
+export const getGradiantReferendumColor = (agree, percent) => {
+  const [agreeColor, disagreeColor] = referendumColor
   const color = agree ? agreeColor.color : disagreeColor.color
   return rgbaToRgb(hexToRgba(color, getAlphaByPercent(percent)))
 }
