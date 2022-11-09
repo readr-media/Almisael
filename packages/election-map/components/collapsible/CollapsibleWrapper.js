@@ -1,7 +1,11 @@
 import { useCallback, useState } from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  overflow: hidden;
+  border: 1px solid #000;
+  border-radius: ${({ collapse }) => (collapse ? `0 0 16px 16px;` : `unset`)};
+`
 const CollapseButton = styled.div`
   position: relative;
   padding: 0 11px 0 23px;
@@ -24,22 +28,16 @@ const CollapseButtonIcon = styled.img`
 `
 
 const CollapseContent = styled.div`
-  border: solid 1px black;
-  border-radius: 0 0 16px 16px;
-
   max-height: ${({ collapse, scrollHeight }) =>
     collapse ? `${scrollHeight}px` : '0'};
-  overflow: hidden;
 
   ${({ collapse, scrollHeight }) =>
     collapse
       ? `
         max-height: ${scrollHeight}px;
-        border: solid 1px black;
       `
       : `
         max-height: 0;
-        border: solid 0px black;
       `}
 `
 
@@ -60,7 +58,7 @@ export const CollapsibleWrapper = ({ children, title, className }) => {
   }, [])
 
   return (
-    <Wrapper className={className}>
+    <Wrapper className={className} collapse={collapse}>
       <CollapseButton
         onClick={() => {
           setCollapse((v) => !v)
