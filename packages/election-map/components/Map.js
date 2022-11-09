@@ -104,14 +104,13 @@ export const Map = ({
 
   const countyClicked = (feature) => {
     const { COUNTYCODE: countyId, COUNTYNAME: countyName } = feature.properties
-    console.log('---')
-    console.log(`county:${countyName} clicked`)
-    console.log(`countyId = ${countyId}`)
-    console.log('path id is:', `#id-${countyId}`)
-    console.log('d is:', feature)
-    console.log('---')
+    // console.log('---')
+    // console.log(`county:${countyName} clicked`)
+    // console.log(`countyId = ${countyId}`)
+    // console.log('path id is:', `#id-${countyId}`)
+    // console.log('d is:', feature)
+    // console.log('---')
 
-    console.log('set countyId = ', countyId)
     setMapObject({
       level: 1,
       currentFeature: feature,
@@ -135,12 +134,12 @@ export const Map = ({
       TOWNNAME: townName,
     } = feature.properties
 
-    console.log('---')
-    console.log(`county:${countyName} town:${townName} clicked`)
-    console.log(`countyId = ${countyId}, townId = ${townId}`)
-    console.log('path id is:', `#id-${townId}`)
-    console.log('d is:', feature)
-    console.log('---')
+    // console.log('---')
+    // console.log(`county:${countyName} town:${townName} clicked`)
+    // console.log(`countyId = ${countyId}, townId = ${townId}`)
+    // console.log('path id is:', `#id-${townId}`)
+    // console.log('d is:', feature)
+    // console.log('---')
 
     setMapObject({
       level: 2,
@@ -167,17 +166,17 @@ export const Map = ({
       VILLNAME: villageName,
     } = feature.properties
 
-    console.log('---')
-    console.log(
-      `county:${countyName} town:${townName} village:${villageName} clicked`
-    )
-    console.log(
-      `countyId = ${countyId}, townId = ${townId}, villageId = ${villageId}`
-    )
-    console.log('village_clicked:')
-    console.log('path id is:', `#id-${villageId}`)
-    console.log('d is:', feature)
-    console.log('---')
+    // console.log('---')
+    // console.log(
+    //   `county:${countyName} town:${townName} village:${villageName} clicked`
+    // )
+    // console.log(
+    //   `countyId = ${countyId}, townId = ${townId}, villageId = ${villageId}`
+    // )
+    // console.log('village_clicked:')
+    // console.log('path id is:', `#id-${villageId}`)
+    // console.log('d is:', feature)
+    // console.log('---')
 
     setMapObject({
       ...mapObject,
@@ -229,10 +228,10 @@ export const Map = ({
     if (!electionData[0]) {
       return defaultColor
     }
-    // const countyCandidates = electionData[0].districts.find(
-    //   (district) => district.county === countyCode
-    // )?.candidates
-    const countyCandidates = electionData[0]?.districts[0].candidates
+
+    const countyCandidates = electionData[0]?.districts?.find(
+      (district) => district.county === countyCode
+    )?.candidates
     if (countyCandidates) {
       const winningCandidate = getWinningCandidate(countyCandidates)
       if (winningCandidate) {
