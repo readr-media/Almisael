@@ -13,7 +13,7 @@ export const partiesColor = [
   },
   {
     index: 3,
-    name: '民眾黨',
+    name: '台灣民眾黨',
     color: '#7EDBDB',
   },
   {
@@ -66,6 +66,11 @@ export const partiesColor = [
     name: '無黨籍',
     color: '#333333',
   },
+  {
+    index: 1000,
+    name: '其他政黨',
+    color: '#958090',
+  },
 ]
 
 const hexToRgba = (hex, alpha) => {
@@ -112,7 +117,7 @@ const rgbaToRgb = (rgbaObj, bg = { r: 255, g: 255, b: 255, a: 1 }) => {
 export const getGradiantPartyColor = (party, percent) => {
   const color =
     partiesColor.find((partyColor) => partyColor.name === party)?.color ||
-    defaultColor
+    partiesColor[partiesColor.length - 1].color
 
   return rgbaToRgb(hexToRgba(color, getAlphaByPercent(percent)))
 }
