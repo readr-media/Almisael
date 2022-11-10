@@ -158,13 +158,15 @@ const elections = [
 
 const defaultMapData = { 0: null, 1: null, 2: null }
 const defaultElectionMapData = elections.reduce((obj, election) => {
-  obj[election.electionType] = defaultMapData
+  obj[election.electionType] = { ...defaultMapData }
   return obj
 }, {})
 
 export const useElectionData = (showLoading) => {
   const [election, setElection] = useState(elections[0])
-  const [electionMapData, setElectionMapData] = useState(defaultElectionMapData)
+  const [electionMapData, setElectionMapData] = useState({
+    ...defaultElectionMapData,
+  })
   const [mapObject, setMapObject] = useState(defaultMapObject)
   const [infoboxData, setInfoboxData] = useState({})
   const [shouldRefetch, setShouldRefetch] = useState(false)
@@ -174,6 +176,7 @@ export const useElectionData = (showLoading) => {
 
   const prepareData = useCallback(
     async (election, mapObject, mapData, evcData) => {
+      console.log('prepareData called')
       let newMapData = mapData
       let newEvcData = evcData
       const newInfoboxData = {
@@ -260,7 +263,7 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
               } else {
-                console.log('no need to fetch country data')
+                console.log('fetching country data pass')
               }
               break
             }
@@ -286,7 +289,7 @@ export const useElectionData = (showLoading) => {
                   console.log('pass 嘉義市選舉資料')
                 }
               } else {
-                console.log('no need to fetch county data')
+                console.log('fetching county data pass')
               }
 
               newInfoboxData.electionData = newMapData[0]?.districts.find(
@@ -319,7 +322,7 @@ export const useElectionData = (showLoading) => {
                   console.log('pass 嘉義市選舉資料')
                 }
               } else {
-                console.log('no need to fetch town data')
+                console.log('fetching town data pass')
               }
               try {
                 newInfoboxData.electionData = newMapData[1][
@@ -468,7 +471,7 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
               } else {
-                console.log('no need to fetch country data')
+                console.log('fetching country data pass')
               }
               //dev
               newInfoboxData.electionData = newMapData[0].summary
@@ -493,7 +496,7 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
               } else {
-                console.log('no need to fetch county data')
+                console.log('fetching county data pass')
               }
 
               newInfoboxData.electionData = newMapData[0].districts.find(
@@ -522,7 +525,7 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
               } else {
-                console.log('no need to fetch town data')
+                console.log('fetching town data pass')
               }
 
               try {
@@ -580,7 +583,7 @@ export const useElectionData = (showLoading) => {
     setElection(
       elections.find((election) => election.electionType === electionType)
     )
-    setElectionMapData(defaultElectionMapData)
+    setElectionMapData({ ...defaultElectionMapData })
     setMapObject(defaultMapObject)
     setInfoboxData({})
     setEvcData()
@@ -622,7 +625,7 @@ export const useElectionData = (showLoading) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShouldRefetch(true)
-    }, 10 * 60 * 1000)
+    }, 3 * 60 * 1000)
 
     return () => {
       clearInterval(interval)
@@ -631,10 +634,10 @@ export const useElectionData = (showLoading) => {
 
   useEffect(() => {
     const refetch = async () => {
-      console.log('refetch data.. hold on')
+      console.log('refetch data..')
       showLoading(true)
       const { level, activeId } = mapObject
-      const newMapData = defaultMapData
+      const newMapData = { ...defaultMapData }
       let newEvcData
       for (let index = 0; index <= level; index++) {
         switch (election.electionType) {
@@ -787,8 +790,8 @@ export const useElectionData = (showLoading) => {
             break
         }
       }
-      setElectionMapData((oldData) => ({
-        ...oldData,
+      setElectionMapData(() => ({
+        ...defaultElectionMapData,
         [election.electionType]: newMapData,
       }))
       setEvcData(newEvcData)
@@ -799,6 +802,19 @@ export const useElectionData = (showLoading) => {
       refetch()
     }
   }, [shouldRefetch, mapObject, election.electionType, showLoading])
+
+  // console.log(
+  //   'election\n',
+  //   election,
+  //   '\nelectionMapData\n',
+  //   electionMapData,
+  //   '\nmapData\n',
+  //   mapData,
+  //   '\ninfoboxData\n',
+  //   infoboxData,
+  //   '\nmapObject\n',
+  //   mapObject
+  // )
 
   return {
     electionNamePairs: elections.map(({ electionType, electionName }) => ({
