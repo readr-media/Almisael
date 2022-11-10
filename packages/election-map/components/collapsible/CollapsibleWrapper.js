@@ -22,9 +22,12 @@ const CollapseButtonTitle = styled.p`
   margin: 0;
 `
 
-const CollapseButtonIcon = styled.img`
+const CollapseButtonIcon = styled.div`
   width: 16px;
   height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 const CollapseContent = styled.div`
@@ -40,6 +43,33 @@ const CollapseContent = styled.div`
         max-height: 0;
       `}
 `
+
+const downTriangle = (
+  <svg
+    width="14"
+    height="12"
+    viewBox="0 0 14 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7 12L0.0717975 -1.30507e-06L13.9282 -9.36995e-08L7 12Z"
+      fill="white"
+    />
+  </svg>
+)
+
+const upTriangle = (
+  <svg
+    width="14"
+    height="12"
+    viewBox="0 0 14 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M7 0L13.9282 12H0.0717969L7 0Z" fill="white" />
+  </svg>
+)
 
 export const CollapsibleWrapper = ({ children, title, className }) => {
   const [collapse, setCollapse] = useState(true)
@@ -71,6 +101,9 @@ export const CollapsibleWrapper = ({ children, title, className }) => {
             collapse ? '/images/down_triangle.svg' : '/images/up_triangle.svg'
           }
         />
+        <CollapseButtonIcon>
+          {collapse ? downTriangle : upTriangle}
+        </CollapseButtonIcon>
       </CollapseButton>
       <CollapseContent collapse={collapse} scrollHeight={scrollHeight}>
         {children}
