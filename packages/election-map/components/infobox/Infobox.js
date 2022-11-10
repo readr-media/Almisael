@@ -128,15 +128,22 @@ const MayorInfobox = ({ level, data }) => {
       <MayorTitle>
         {level === 1 && '總'}投票率 {profRate}%
       </MayorTitle>
-      {candidates.map((candidate) => {
-        const elected = candidate.candVictor === '*'
-        return (
-          <MayorCandidate elected={elected} key={candidate.candNo}>
-            {candidate.name} {candidate.party} {candidate.tksRate}%
-            {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
-          </MayorCandidate>
-        )
-      })}
+      {candidates
+        .sort((cand1, cand2) => {
+          if (cand1.tksRate === cand2.tksRate) {
+            return 0
+          }
+          return cand1.tksRate < cand2.tksRate ? 1 : -1
+        })
+        .map((candidate) => {
+          const elected = candidate.candVictor === '*'
+          return (
+            <MayorCandidate elected={elected} key={candidate.candNo}>
+              {candidate.name} {candidate.party} {candidate.tksRate}%
+              {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
+            </MayorCandidate>
+          )
+        })}
     </InfoboxScrollWrapper>
   )
 }

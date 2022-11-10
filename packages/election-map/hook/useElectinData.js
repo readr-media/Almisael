@@ -429,12 +429,12 @@ export const useElectionData = (showLoading) => {
         case 'referendum':
           switch (mapObject.level) {
             case 0: {
-              // if (!newEvcData) {
-              //   const evcDataUrl =
-              //     gcsBaseUrl + '/v2/2022/' + 'referendum' + '/all.json'
-              //   const { data } = await axios.get(evcDataUrl)
-              //   newEvcData = data
-              // }
+              if (!newEvcData) {
+                const evcDataUrl =
+                  gcsBaseUrl + '/v2/2022/' + 'referendum' + '/all.json'
+                const { data } = await axios.get(evcDataUrl)
+                newEvcData = data
+              }
               if (!newMapData[0]) {
                 console.log('fetching country data')
                 const mapDataUrl =
@@ -604,7 +604,7 @@ export const useElectionData = (showLoading) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShouldRefetch(true)
-    }, 10000000)
+    }, 6000000)
 
     return () => {
       clearInterval(interval)
