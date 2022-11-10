@@ -77,17 +77,23 @@ const MayorInfobox = ({ level, data }) => {
     )
   }
 
+  if (!data) {
+    return (
+      <InfoboxScrollWrapper>
+        <InfoboxText>無資料</InfoboxText>
+      </InfoboxScrollWrapper>
+    )
+  }
+
   const { profRate, candidates } = data
 
   if (!profRate) {
     return (
-      <InfoboxWrapper>
-        <InfoboxScrollWrapper>
-          <InfoboxText>
-            目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出
-          </InfoboxText>
-        </InfoboxScrollWrapper>
-      </InfoboxWrapper>
+      <InfoboxScrollWrapper>
+        <InfoboxText>
+          目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出
+        </InfoboxText>
+      </InfoboxScrollWrapper>
     )
   }
 
@@ -325,16 +331,22 @@ const ReferendumPassWrapper = styled.span`
 const ReferendumCandidate = styled.div``
 
 const ReferendumInfobox = ({ data }) => {
+  if (!data) {
+    return (
+      <InfoboxScrollWrapper>
+        <InfoboxText>無資料</InfoboxText>
+      </InfoboxScrollWrapper>
+    )
+  }
+
   const { profRate, adptVictor, agreeRate, disagreeRate } = data
   if (!profRate) {
     return (
-      <InfoboxWrapper>
-        <InfoboxScrollWrapper>
-          <InfoboxText>
-            目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出
-          </InfoboxText>
-        </InfoboxScrollWrapper>
-      </InfoboxWrapper>
+      <InfoboxScrollWrapper>
+        <InfoboxText>
+          目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出
+        </InfoboxText>
+      </InfoboxScrollWrapper>
     )
   }
 

@@ -258,18 +258,22 @@ export const useElectionData = (showLoading) => {
               const { countyId } = mapObject
               if (!newMapData[1] || !newMapData[1][countyId]) {
                 console.log('fetching county data')
-                const url =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  election.electionType +
-                  '/map/county/' +
-                  `${countyId}.json`
-                try {
-                  const { data } = await axios.get(url)
-                  const countyData = { ...newMapData[1], [countyId]: data }
-                  newMapData = { ...newMapData, 1: countyData }
-                } catch (error) {
-                  console.error(error)
+                if (countyId !== '10020') {
+                  const url =
+                    gcsBaseUrl +
+                    '/2022/' +
+                    election.electionType +
+                    '/map/county/' +
+                    `${countyId}.json`
+                  try {
+                    const { data } = await axios.get(url)
+                    const countyData = { ...newMapData[1], [countyId]: data }
+                    newMapData = { ...newMapData, 1: countyData }
+                  } catch (error) {
+                    console.error(error)
+                  }
+                } else {
+                  console.log('pass 嘉義市選舉資料')
                 }
               } else {
                 console.log('no need to fetch county data')
@@ -285,29 +289,41 @@ export const useElectionData = (showLoading) => {
 
               if (!newMapData[2] || !newMapData[2][townId]) {
                 console.log('fetching town data')
-                const url =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  election.electionType +
-                  '/map/town/' +
-                  `${townId}.json`
+                const countyId = townId.slice(0, 5)
+                if (countyId !== '10020') {
+                  const url =
+                    gcsBaseUrl +
+                    '/2022/' +
+                    election.electionType +
+                    '/map/town/' +
+                    `${townId}.json`
 
-                try {
-                  const { data } = await axios.get(url)
-                  const townData = { ...newMapData[2], [townId]: data }
-                  newMapData = { ...newMapData, 2: townData }
-                } catch (error) {
-                  console.error(error)
+                  try {
+                    const { data } = await axios.get(url)
+                    const townData = { ...newMapData[2], [townId]: data }
+                    newMapData = { ...newMapData, 2: townData }
+                  } catch (error) {
+                    console.error(error)
+                  }
+                } else {
+                  console.log('pass 嘉義市選舉資料')
                 }
               } else {
                 console.log('no need to fetch town data')
               }
-              newInfoboxData.electionData = newMapData[1][
-                countyId
-              ].districts.find(
-                (district) =>
-                  district.county + district.town === mapObject.activeId
-              )
+              try {
+                newInfoboxData.electionData = newMapData[1][
+                  countyId
+                ]?.districts.find(
+                  (district) =>
+                    district.county + district.town === mapObject.activeId
+                )
+              } catch (error) {
+                console.log(
+                  `mayor no data for county: ${countyId}, error: `,
+                  error
+                )
+              }
               break
             }
             case 3: {
@@ -491,12 +507,20 @@ export const useElectionData = (showLoading) => {
                 console.log('no need to fetch town data')
               }
 
-              newInfoboxData.electionData = newMapData[1][
-                countyId
-              ].districts.find(
-                (district) =>
-                  district.county + district.town === mapObject.activeId
-              )
+              try {
+                newInfoboxData.electionData = newMapData[1][
+                  countyId
+                ].districts.find(
+                  (district) =>
+                    district.county + district.town === mapObject.activeId
+                )
+              } catch (error) {
+                console.log(
+                  `referendum no data for town: ${countyId}, error: `,
+                  error
+                )
+              }
+
               break
             }
             case 3: {
