@@ -113,7 +113,7 @@ const MayorInfobox = ({ level, data }) => {
 
   const { profRate, candidates } = data
 
-  if (!profRate) {
+  if (!profRate && profRate !== 0) {
     return (
       <InfoboxScrollWrapper>
         <InfoboxText>
@@ -356,7 +356,7 @@ const ReferendumInfobox = ({ data }) => {
   }
 
   const { profRate, adptVictor, agreeRate, disagreeRate } = data
-  if (!profRate) {
+  if (!profRate && profRate !== 0) {
     return (
       <InfoboxScrollWrapper>
         <InfoboxText>
