@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useState } from 'react'
 import { defaultMapObject } from '../components/MapControl'
 import axios from 'axios'
+import evc from '@readr-media/react-election-votes-comparison'
+
+const DataLoader = evc.DataLoader
 
 import { mockData as presidentCountry } from '../mock-datas/maps/presidents/2020_president_country'
 import { mockData as presidentCounty } from '../mock-datas/maps/presidents/2020_president_county_63000'
@@ -229,11 +232,18 @@ export const useElectionData = (showLoading) => {
           switch (mapObject.level) {
             case 0: {
               if (!newEvcData) {
-                const evcDataUrl =
-                  gcsBaseUrl + '/v2/2022/' + election.electionType + '/all.json'
-                const { data } = await axios.get(evcDataUrl)
-                console.log('newEvcData', data)
-                newEvcData = data
+                const dataLoader = new DataLoader({
+                  apiUrl: gcsBaseUrl,
+                  year: '2022',
+                  type: election.electionType,
+                  district: 'all',
+                })
+                try {
+                  const data = await dataLoader.loadData()
+                  newEvcData = data
+                } catch (error) {
+                  console.error(error)
+                }
               }
               if (!newMapData[0]) {
                 console.log('fetching country data')
@@ -430,10 +440,18 @@ export const useElectionData = (showLoading) => {
           switch (mapObject.level) {
             case 0: {
               if (!newEvcData) {
-                const evcDataUrl =
-                  gcsBaseUrl + '/v2/2022/' + 'referendum' + '/all.json'
-                const { data } = await axios.get(evcDataUrl)
-                newEvcData = data
+                const dataLoader = new DataLoader({
+                  apiUrl: gcsBaseUrl,
+                  year: '2022',
+                  type: election.electionType,
+                  district: 'all',
+                })
+                try {
+                  const data = await dataLoader.loadData()
+                  newEvcData = data
+                } catch (error) {
+                  console.error(error)
+                }
               }
               if (!newMapData[0]) {
                 console.log('fetching country data')
@@ -604,7 +622,7 @@ export const useElectionData = (showLoading) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShouldRefetch(true)
-    }, 6000000)
+    }, 10 * 60 * 1000)
 
     return () => {
       clearInterval(interval)
@@ -623,14 +641,18 @@ export const useElectionData = (showLoading) => {
           case 'mayor': {
             switch (index) {
               case 0: {
-                // const evcDataUrl =
-                //   gcsBaseUrl + '/v2/2022/' + election.electionType + '/all.json'
-                // try {
-                //   const { data } = await axios.get(evcDataUrl)
-                //   newEvcData = data
-                // } catch (error) {
-                //   console.error(error)
-                // }
+                const dataLoader = new DataLoader({
+                  apiUrl: gcsBaseUrl,
+                  year: '2022',
+                  type: election.electionType,
+                  district: 'all',
+                })
+                try {
+                  const data = await dataLoader.loadData()
+                  newEvcData = data
+                } catch (error) {
+                  console.error(error)
+                }
 
                 const mapDataUrl =
                   gcsBaseUrl +
@@ -691,14 +713,18 @@ export const useElectionData = (showLoading) => {
           case 'referendum': {
             switch (index) {
               case 0: {
-                // const evcDataUrl =
-                //   gcsBaseUrl + '/v2/2022/' + 'referendum' + '/all.json'
-                // try {
-                //   const { data } = await axios.get(evcDataUrl)
-                //   newEvcData = data
-                // } catch (error) {
-                //   console.error(error)
-                // }
+                const dataLoader = new DataLoader({
+                  apiUrl: gcsBaseUrl,
+                  year: '2022',
+                  type: election.electionType,
+                  district: 'all',
+                })
+                try {
+                  const data = await dataLoader.loadData()
+                  newEvcData = data
+                } catch (error) {
+                  console.error(error)
+                }
 
                 const mapDataUrl =
                   gcsBaseUrl +
