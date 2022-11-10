@@ -212,7 +212,7 @@ export const Map = ({
 
     if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
-        electionData[0].districts.find(
+        electionData[0]?.districts?.find(
           (district) => district.county === countyCode
         ) || {}
       if (agreeRate) {
@@ -256,7 +256,7 @@ export const Map = ({
 
     if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
-        electionData[1][countyCode].districts.find(
+        electionData[1][countyCode]?.districts?.find(
           (district) => district.county + district.town === townCode
         ) || {}
       if (agreeRate) {
@@ -293,10 +293,9 @@ export const Map = ({
       }
     }
 
-    // const townCandidates = electionData[1].districts.find(
-    //   (district) => district.county + district.town === townCode
-    // )?.candidates
-    const townCandidates = electionData[1][countyCode]?.districts[0].candidates
+    const townCandidates = electionData[1][countyCode]?.districts?.find(
+      (district) => district.county + district.town === townCode
+    )?.candidates
 
     if (townCandidates) {
       const winningCandidate = getWinningCandidate(townCandidates)
@@ -320,7 +319,7 @@ export const Map = ({
 
     if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
-        electionData[2][townCode].districts.find(
+        electionData[2][townCode]?.districts?.find(
           (district) =>
             district.county + district.town + district.vill === villCode
         ) || {}
@@ -359,10 +358,9 @@ export const Map = ({
       }
     }
 
-    // const villageCandidates = electionData[2].districts.find(
-    //   (district) => district.county + district.town + district.vill === villCode
-    // )?.candidates
-    const villageCandidates = electionData[2][townCode]?.districts[0].candidates
+    const villageCandidates = electionData[2][townCode]?.districts?.find(
+      (district) => district.county + district.town + district.vill === villCode
+    )?.candidates
 
     if (villageCandidates) {
       const winningCandidate = getWinningCandidate(villageCandidates)

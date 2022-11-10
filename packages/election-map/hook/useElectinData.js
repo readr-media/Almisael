@@ -275,7 +275,7 @@ export const useElectionData = (showLoading) => {
                 console.log('no need to fetch county data')
               }
 
-              newInfoboxData.electionData = newMapData[0].districts.find(
+              newInfoboxData.electionData = newMapData[0]?.districts.find(
                 (district) => district.county === mapObject.activeId
               )
               break
