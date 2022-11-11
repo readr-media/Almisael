@@ -1,6 +1,5 @@
 import * as d3 from 'd3'
 import { useEffect } from 'react'
-import { defaultMapObject } from './MapControl'
 import {
   getGradiantPartyColor,
   getGradiantReferendumColor,
@@ -99,7 +98,7 @@ export const Map = ({
   }, [width, height])
 
   const nonLandClicked = () => {
-    setMapObject(defaultMapObject)
+    setMapObject()
   }
 
   const countyClicked = (feature) => {

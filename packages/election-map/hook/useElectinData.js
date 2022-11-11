@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
-import { defaultMapObject } from '../components/MapControl'
 import axios from 'axios'
 import evc from '@readr-media/react-election-votes-comparison'
+import { json } from 'd3'
+import { feature } from 'topojson'
 
 const DataLoader = evc.DataLoader
 
@@ -156,6 +157,21 @@ const elections = [
   },
 ]
 
+const defaultMapObject = {
+  level: 0,
+  currentFeature: null,
+  countyId: '',
+  countyName: '',
+  townId: '',
+  townName: '',
+  villageId: '',
+  villageName: '',
+  constituencyId: '',
+  constituencyName: '',
+  activeId: '',
+  upperLevelId: 'background',
+}
+
 const defaultMapData = { 0: null, 1: null, 2: null }
 const defaultElectionMapData = elections.reduce((obj, election) => {
   obj[election.electionType] = { ...defaultMapData }
@@ -163,18 +179,53 @@ const defaultElectionMapData = elections.reduce((obj, election) => {
 }, {})
 
 export const useElectionData = (showLoading) => {
-  const [election, setElection] = useState(elections[0])
+  const [election, setElection] = useState(elections[1])
+  const [mapGeoJsons, setMapGeoJsons] = useState()
+
   const [electionMapData, setElectionMapData] = useState({
     ...defaultElectionMapData,
   })
-  const [mapObject, setMapObject] = useState(defaultMapObject)
-  const [infoboxData, setInfoboxData] = useState({})
-  const [shouldRefetch, setShouldRefetch] = useState(false)
   const [evcData, setEvcData] = useState()
+  const [infoboxData, setInfoboxData] = useState({})
+
+  const [mapObject, setMapObject] = useState(defaultMapObject)
+  const [shouldRefetch, setShouldRefetch] = useState(false)
 
   const mapData = electionMapData[election.electionType]
 
-  const prepareData = useCallback(
+  const prepareGeojsons = useCallback(async () => {
+    const twCountiesJson =
+      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan-map-counties.json'
+    const twTownsJson =
+      'https://cdn.jsdelivr.net/npm/taiwan-atlas/towns-10t.json'
+    const twVillagesJson =
+      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan-map-villages.json'
+    try {
+      const responses = await Promise.allSettled([
+        json(twCountiesJson),
+        json(twTownsJson),
+        json(twVillagesJson),
+      ])
+      const mapJsons = responses.map((response) => response.value)
+
+      const [countiesTopoJson, townsTopoJson, villagesTopoJson] = mapJsons
+
+      const counties = feature(
+        countiesTopoJson,
+        countiesTopoJson.objects.counties
+      )
+      const towns = feature(townsTopoJson, townsTopoJson.objects.towns)
+      const villages = feature(
+        villagesTopoJson,
+        villagesTopoJson.objects.villages
+      )
+      return { counties, towns, villages }
+    } catch (error) {
+      console.error('fetch map error', error)
+    }
+  }, [])
+
+  const prepareElectionData = useCallback(
     async (election, mapObject, mapData, evcData) => {
       console.log('prepareData called')
       let newMapData = mapData
@@ -590,15 +641,16 @@ export const useElectionData = (showLoading) => {
     showLoading(true)
   }
 
-  const onMapObjectChange = async (newMapObject) => {
+  const onMapObjectChange = async (newMapObject = defaultMapData) => {
     // fetch data before map scales, useEffect will called prepareData again,
     // make sure to avoid fetch duplicate data
-    const { newInfoboxData, newMapData, newEvcData } = await prepareData(
-      election,
-      newMapObject,
-      electionMapData[election.electionType],
-      evcData
-    )
+    const { newInfoboxData, newMapData, newEvcData } =
+      await prepareElectionData(
+        election,
+        newMapObject,
+        electionMapData[election.electionType],
+        evcData
+      )
     setInfoboxData(newInfoboxData)
     setElectionMapData((oldData) => ({
       ...oldData,
@@ -609,8 +661,13 @@ export const useElectionData = (showLoading) => {
   }
 
   useEffect(() => {
-    prepareData(election, mapObject, mapData, evcData).then(
-      ({ newInfoboxData, newMapData, newEvcData }) => {
+    showLoading(true)
+    Promise.allSettled([
+      prepareElectionData(election, mapObject, mapData, evcData),
+      mapGeoJsons ? undefined : prepareGeojsons(),
+    ]).then((results) => {
+      if (results[0]?.value) {
+        const { newInfoboxData, newMapData, newEvcData } = results[0].value
         setInfoboxData(newInfoboxData)
         setElectionMapData((oldData) => ({
           ...oldData,
@@ -618,8 +675,22 @@ export const useElectionData = (showLoading) => {
         }))
         setEvcData(newEvcData)
       }
-    )
-  }, [election, evcData, mapObject, prepareData, mapData])
+      if (results[1]?.value) {
+        const newMapGeoJsons = results[1].value
+        setMapGeoJsons(newMapGeoJsons)
+      }
+      showLoading(false)
+    })
+  }, [
+    election,
+    evcData,
+    mapObject,
+    prepareElectionData,
+    mapData,
+    mapGeoJsons,
+    prepareGeojsons,
+    showLoading,
+  ])
 
   // create interval to periodically trigger refetch and let react lifecycle to handle the refetch
   useEffect(() => {
@@ -828,5 +899,6 @@ export const useElectionData = (showLoading) => {
     evcData,
     mapObject,
     setMapObject: onMapObjectChange,
+    mapGeoJsons,
   }
 }

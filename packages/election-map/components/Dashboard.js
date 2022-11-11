@@ -51,6 +51,7 @@ export const Dashboard = () => {
     evcData,
     mapObject,
     setMapObject,
+    mapGeoJsons,
   } = useElectionData(showLoading)
 
   return (
@@ -80,6 +81,7 @@ export const Dashboard = () => {
         electionData={mapData}
         setMapObject={setMapObject}
         electionType={election.electionType}
+        mapData={mapGeoJsons}
       />
     </Wrapper>
   )
