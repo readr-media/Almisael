@@ -17,26 +17,59 @@ import { mockData as legislatorCounty } from '../mock-datas/maps/legislators/202
 import { mockData as legislatorConstituency } from '../mock-datas/maps/legislators/2020_legislator_constituency_6300001'
 
 const gcsBaseUrl = 'https://whoareyou-gcs.readr.tw/elections-dev'
+
+const fetchEVCData = async (year, electionType, district) => {
+  const dataLoader = new DataLoader({
+    apiUrl: gcsBaseUrl,
+    year,
+    type: electionType,
+    district,
+  })
+  return await dataLoader.loadData()
+}
+
+const fetchMayorMapData = async ({
+  electionType,
+  year,
+  folderName,
+  fileName,
+}) => {
+  const mapDataUrl = `${gcsBaseUrl}/${year}/${electionType}/map/${folderName}/${fileName}.json`
+  const { data } = await axios.get(mapDataUrl)
+  return data
+}
+const fetchReferendumMapData = async ({
+  electionType,
+  year,
+  folderName,
+  fileName,
+  number,
+}) => {
+  const mapDataUrl = `${gcsBaseUrl}/${year}/${electionType}/map/${number}/${folderName}/${fileName}.json`
+  const { data } = await axios.get(mapDataUrl)
+  return data
+}
+
 const elections = [
   {
-    electionType: 'mayor',
-    electionName: '縣市首長',
-    years: [2022, 2018, 2014, 2010, 2006, 2002],
+    electionType: 'president',
+    electionName: '總統',
+    years: [{ year: 2020 }, { year: 2016 }, { year: 2012 }],
     levels: [
       {
         //level 0 country
         mapJson: 'tw_country.topojson',
-        electionDatas: 'mayor_country.json',
+        electionDatas: 'president_country.json',
       },
       {
         //level 1 county
         mapJson: 'tw_county_63000.topojson',
-        electionDatas: 'mayor_county_63000.json',
+        electionDatas: 'president_county_63000.json',
       },
       {
         //level 2 town
         mapJson: 'tw_town_63000010.topojson',
-        electionDatas: 'mayor_town_63000010.json',
+        electionDatas: 'president_town_63000010.json',
       },
       {
         //level 3 village
@@ -45,93 +78,143 @@ const elections = [
       },
     ],
   },
-  // {
-  //   electionType: 'councilman',
-  //   electionName: '縣市議員',
-  //   years: [2022, 2018, 2014, 2010, 2006, 2002],
-  //   seats: { wrapperTitle: '縣市議員席次圖', componentTitle: '議員選舉' },
-  //   levels: [
-  //     {
-  //       //level 0 country
-  //       mapJson: 'tw_country.topojson',
-  //       electionDatas: null,
-  //     },
-  //     {
-  //       // level 1 county
-  //       mapJson: 'tw_county_63000.topojson',
-  //       electionDatas: 'councilmen_county_63000.json',
-  //     },
-  //     {
-  //       // level 2 constituency
-  //       mapJson: 'tw_town_63000010.topojson',
-  //       electionDatas: 'councilmen_constituency_63000010.json',
-  //     },
-  //     {
-  //       // level 3 village
-  //       mapJson: 'tw_vill_63000010010.topojson',
-  //       electionDatas: null,
-  //     },
-  //   ],
-  // },
-  // {
-  //   electionType: 'president',
-  //   electionName: '總統',
-  //   years: [2020, 2016, 2012, 2008, 2004, 2000],
-  //   levels: [
-  //     {
-  //       //level 0 country
-  //       mapJson: 'tw_country.topojson',
-  //       electionDatas: 'president_country.json',
-  //     },
-  //     {
-  //       //level 1 county
-  //       mapJson: 'tw_county_63000.topojson',
-  //       electionDatas: 'president_county_63000.json',
-  //     },
-  //     {
-  //       //level 2 town
-  //       mapJson: 'tw_town_63000010.topojson',
-  //       electionDatas: 'president_town_63000010.json',
-  //     },
-  //     {
-  //       //level 3 village
-  //       mapJson: 'tw_vill_63000010010.topojson',
-  //       electionDatas: null,
-  //     },
-  //   ],
-  // },
-  // {
-  //   electionType: 'legislator',
-  //   electionName: '立法委員',
-  //   years: [2020, 2016, 2012, 2008, 2004, 2000],
-  //   seats: { wrapperTitle: '立法委員席次圖', componentTitle: '立法委員選舉' },
-  //   levels: [
-  //     {
-  //       //level 0 country
-  //       mapJson: 'tw_country.topojson',
-  //       electionDatas: null,
-  //     },
-  //     {
-  //       // level 1 county
-  //       mapJson: 'tw_county_63000.topojson',
-  //       electionDatas: 'legislator_county_63000.json',
-  //     },
-  //     {
-  //       // level 2 constituency
-  //       mapJson: 'tw_town_63000010.topojson',
-  //       electionDatas: 'legislator_constituency_63000010.json',
-  //     },
-  //     {
-  //       // level 3 village
-  //       mapJson: 'tw_vill_63000010010.topojson',
-  //       electionDatas: null,
-  //     },
-  //   ],
-  // },
+  {
+    electionType: 'mayor',
+    electionName: '縣市首長',
+    years: [{ year: 2022 }, { year: 2018 }, { year: 2014 }, { year: 2010 }],
+    meta: {
+      evc: { district: 'all' },
+      map: {
+        folderNames: {
+          0: '',
+          1: 'county',
+          2: 'town',
+        },
+        fileNames: {
+          0: 'country',
+          1: '',
+          2: '',
+        },
+      },
+    },
+  },
+  {
+    electionType: 'legislator',
+    electionName: '立法委員',
+    subType: ['區域', '原住民'],
+    years: [{ year: 2020 }, { year: 2016 }, { year: 2012 }],
+    seats: { wrapperTitle: '立法委員席次圖', componentTitle: '立法委員選舉' },
+    levels: [
+      {
+        //level 0 country
+        mapJson: 'tw_country.topojson',
+        electionDatas: null,
+      },
+      {
+        // level 1 county
+        mapJson: 'tw_county_63000.topojson',
+        electionDatas: 'legislator_county_63000.json',
+      },
+      {
+        // level 2 constituency
+        mapJson: 'tw_town_63000010.topojson',
+        electionDatas: 'legislator_constituency_63000010.json',
+      },
+      {
+        // level 3 village
+        mapJson: 'tw_vill_63000010010.topojson',
+        electionDatas: null,
+      },
+    ],
+  },
+  {
+    electionType: 'legislator-party',
+    electionName: '立法委員（不分區）',
+    years: [{ year: 2020 }, { year: 2016 }, { year: 2012 }],
+    seats: { wrapperTitle: '立法委員席次圖', componentTitle: '立法委員選舉' },
+    levels: [
+      {
+        //level 0 country
+        mapJson: 'tw_country.topojson',
+        electionDatas: null,
+      },
+      {
+        // level 1 county
+        mapJson: 'tw_county_63000.topojson',
+        electionDatas: 'legislator_county_63000.json',
+      },
+      {
+        // level 2 constituency
+        mapJson: 'tw_town_63000010.topojson',
+        electionDatas: 'legislator_constituency_63000010.json',
+      },
+      {
+        // level 3 village
+        mapJson: 'tw_vill_63000010010.topojson',
+        electionDatas: null,
+      },
+    ],
+  },
+  {
+    electionType: 'councilman',
+    subType: ['區域', '原住民'],
+    electionName: '縣市議員',
+    years: [{ year: 2022 }, { year: 2018 }, { year: 2014 }, { year: 2010 }],
+    seats: { wrapperTitle: '縣市議員席次圖', componentTitle: '議員選舉' },
+    levels: [
+      {
+        //level 0 country
+        mapJson: 'tw_country.topojson',
+        electionDatas: null,
+      },
+      {
+        // level 1 county
+        mapJson: 'tw_county_63000.topojson',
+        electionDatas: 'councilmen_county_63000.json',
+      },
+      {
+        // level 2 constituency
+        mapJson: 'tw_town_63000010.topojson',
+        electionDatas: 'councilmen_constituency_63000010.json',
+      },
+      {
+        // level 3 village
+        mapJson: 'tw_vill_63000010010.topojson',
+        electionDatas: null,
+      },
+    ],
+  },
   {
     electionType: 'referendum',
     electionName: '全國性公民投票',
-    years: [2020, 2016, 2012, 2008, 2004, 2000],
+    years: [
+      { year: 2022, number: ['F1'] },
+      { year: 2021, number: ['20', '19', '18', '17'] },
+      {
+        year: 2018,
+        number: ['16', '15', '14', '13', '12', '11', '10', '9', '8', '7'],
+      },
+    ],
+    meta: {
+      evc: { district: 'all' },
+      map: {
+        folderNames: {
+          0: '',
+          1: 'county',
+          2: 'town',
+        },
+        fileNames: {
+          0: 'country',
+          1: '',
+          2: '',
+        },
+      },
+    },
+  },
+  {
+    electionType: 'referendum-local',
+    electionName: '地方性公民投票',
+    years: [{ year: 2021, number: ['Hsinchu-1'] }],
     levels: [
       {
         //level 0 country
@@ -192,12 +275,13 @@ export const useElectionData = (showLoading) => {
   const [shouldRefetch, setShouldRefetch] = useState(false)
 
   const mapData = electionMapData[election.electionType]
+  const year = election.years[0].year
 
   const prepareGeojsons = useCallback(async () => {
     const twCountiesJson =
       'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan-map-counties.json'
     const twTownsJson =
-      'https://cdn.jsdelivr.net/npm/taiwan-atlas/towns-10t.json'
+      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan-map-towns.json'
     const twVillagesJson =
       'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan-map-villages.json'
     try {
@@ -226,16 +310,17 @@ export const useElectionData = (showLoading) => {
   }, [])
 
   const prepareElectionData = useCallback(
-    async (election, mapObject, mapData, evcData) => {
-      console.log('prepareData called')
+    async (election, mapObject, mapData, evcData, year) => {
       let newMapData = mapData
       let newEvcData = evcData
+      const { level } = mapObject
+      const { electionType } = election
       const newInfoboxData = {
-        electionType: election.electionType,
+        electionType,
         level: mapObject.level,
       }
 
-      switch (election.electionType) {
+      switch (electionType) {
         case 'president':
           newMapData = {
             0: presidentCountry,
@@ -243,7 +328,7 @@ export const useElectionData = (showLoading) => {
             2: presidentTown,
           }
 
-          switch (mapObject.level) {
+          switch (level) {
             case 0:
               newInfoboxData.electionData = newMapData[0].summary
               break
@@ -283,17 +368,15 @@ export const useElectionData = (showLoading) => {
           }
           break
         case 'mayor':
-          switch (mapObject.level) {
+          switch (level) {
             case 0: {
               if (!newEvcData) {
-                const dataLoader = new DataLoader({
-                  apiUrl: gcsBaseUrl,
-                  year: '2022',
-                  type: election.electionType,
-                  district: 'all',
-                })
                 try {
-                  const data = await dataLoader.loadData()
+                  const data = await fetchEVCData(
+                    year,
+                    electionType,
+                    election.meta.evc.district
+                  )
                   newEvcData = data
                 } catch (error) {
                   console.error(error)
@@ -301,20 +384,17 @@ export const useElectionData = (showLoading) => {
               }
               if (!newMapData[0]) {
                 console.log('fetching country data')
-                const mapDataUrl =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  election.electionType +
-                  '/map/' +
-                  'country.json'
                 try {
-                  const { data } = await axios.get(mapDataUrl)
+                  const data = await fetchMayorMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[level],
+                    fileName: election.meta.map.fileNames[level],
+                  })
                   newMapData = { ...newMapData, 0: data }
                 } catch (error) {
                   console.error(error)
                 }
-              } else {
-                console.log('fetching country data pass')
               }
               break
             }
@@ -323,14 +403,13 @@ export const useElectionData = (showLoading) => {
               if (!newMapData[1] || !newMapData[1][countyId]) {
                 console.log('fetching county data')
                 if (countyId !== '10020') {
-                  const url =
-                    gcsBaseUrl +
-                    '/2022/' +
-                    election.electionType +
-                    '/map/county/' +
-                    `${countyId}.json`
                   try {
-                    const { data } = await axios.get(url)
+                    const data = await fetchMayorMapData({
+                      electionType,
+                      year,
+                      folderName: election.meta.map.folderNames[level],
+                      fileName: countyId,
+                    })
                     const countyData = { ...newMapData[1], [countyId]: data }
                     newMapData = { ...newMapData, 1: countyData }
                   } catch (error) {
@@ -339,8 +418,6 @@ export const useElectionData = (showLoading) => {
                 } else {
                   console.log('pass 嘉義市選舉資料')
                 }
-              } else {
-                console.log('fetching county data pass')
               }
 
               newInfoboxData.electionData = newMapData[0]?.districts.find(
@@ -355,15 +432,13 @@ export const useElectionData = (showLoading) => {
                 console.log('fetching town data')
                 const countyId = townId.slice(0, 5)
                 if (countyId !== '10020') {
-                  const url =
-                    gcsBaseUrl +
-                    '/2022/' +
-                    election.electionType +
-                    '/map/town/' +
-                    `${townId}.json`
-
                   try {
-                    const { data } = await axios.get(url)
+                    const data = await fetchMayorMapData({
+                      electionType,
+                      year,
+                      folderName: election.meta.map.folderNames[level],
+                      fileName: townId,
+                    })
                     const townData = { ...newMapData[2], [townId]: data }
                     newMapData = { ...newMapData, 2: townData }
                   } catch (error) {
@@ -372,8 +447,6 @@ export const useElectionData = (showLoading) => {
                 } else {
                   console.log('pass 嘉義市選舉資料')
                 }
-              } else {
-                console.log('fetching town data pass')
               }
               try {
                 newInfoboxData.electionData = newMapData[1][
@@ -491,17 +564,15 @@ export const useElectionData = (showLoading) => {
 
           break
         case 'referendum':
-          switch (mapObject.level) {
+          switch (level) {
             case 0: {
               if (!newEvcData) {
-                const dataLoader = new DataLoader({
-                  apiUrl: gcsBaseUrl,
-                  year: '2022',
-                  type: election.electionType,
-                  district: 'all',
-                })
                 try {
-                  const data = await dataLoader.loadData()
+                  const data = await fetchEVCData(
+                    year,
+                    electionType,
+                    election.meta.evc.district
+                  )
                   newEvcData = data
                 } catch (error) {
                   console.error(error)
@@ -509,20 +580,18 @@ export const useElectionData = (showLoading) => {
               }
               if (!newMapData[0]) {
                 console.log('fetching country data')
-                const mapDataUrl =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  'referendum' +
-                  '/map/F1/' +
-                  'country.json'
                 try {
-                  const { data } = await axios.get(mapDataUrl)
+                  const data = await fetchReferendumMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[level],
+                    fileName: election.meta.map.fileNames[level],
+                    number: 'F1',
+                  })
                   newMapData = { ...newMapData, 0: data }
                 } catch (error) {
                   console.error(error)
                 }
-              } else {
-                console.log('fetching country data pass')
               }
               //dev
               newInfoboxData.electionData = newMapData[0].summary
@@ -532,22 +601,20 @@ export const useElectionData = (showLoading) => {
               const { countyId } = mapObject
               if (!newMapData[1] || !newMapData[1][countyId]) {
                 console.log('fetching county data')
-                const mapDataUrl =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  'referendum' +
-                  '/map/F1/county/' +
-                  `${countyId}.json`
                 try {
-                  const { data } = await axios.get(mapDataUrl)
+                  const data = await fetchReferendumMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[level],
+                    fileName: countyId,
+                    number: 'F1',
+                  })
                   const countyData = { ...newMapData[1], [countyId]: data }
                   newMapData = { ...newMapData, 1: countyData }
                   console.log(newMapData)
                 } catch (error) {
                   console.error(error)
                 }
-              } else {
-                console.log('fetching county data pass')
               }
 
               newInfoboxData.electionData = newMapData[0].districts.find(
@@ -560,23 +627,20 @@ export const useElectionData = (showLoading) => {
 
               if (!newMapData[2] || !newMapData[2][townId]) {
                 console.log('fetching town data')
-                const mapDataUrl =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  'referendum' +
-                  '/map/F1/town/' +
-                  `${townId}.json`
-
                 try {
-                  const { data } = await axios.get(mapDataUrl)
+                  const data = await fetchReferendumMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[level],
+                    fileName: townId,
+                    number: 'F1',
+                  })
                   console.log('data', data)
                   const townData = { ...newMapData[2], [townId]: data }
                   newMapData = { ...newMapData, 2: townData }
                 } catch (error) {
                   console.error(error)
                 }
-              } else {
-                console.log('fetching town data pass')
               }
 
               try {
@@ -641,7 +705,7 @@ export const useElectionData = (showLoading) => {
     showLoading(true)
   }
 
-  const onMapObjectChange = async (newMapObject = defaultMapData) => {
+  const onMapObjectChange = async (newMapObject = defaultMapObject) => {
     // fetch data before map scales, useEffect will called prepareData again,
     // make sure to avoid fetch duplicate data
     const { newInfoboxData, newMapData, newEvcData } =
@@ -649,7 +713,8 @@ export const useElectionData = (showLoading) => {
         election,
         newMapObject,
         electionMapData[election.electionType],
-        evcData
+        evcData,
+        year
       )
     setInfoboxData(newInfoboxData)
     setElectionMapData((oldData) => ({
@@ -663,7 +728,7 @@ export const useElectionData = (showLoading) => {
   useEffect(() => {
     showLoading(true)
     Promise.allSettled([
-      prepareElectionData(election, mapObject, mapData, evcData),
+      prepareElectionData(election, mapObject, mapData, evcData, year),
       mapGeoJsons ? undefined : prepareGeojsons(),
     ]).then((results) => {
       if (results[0]?.value) {
@@ -690,6 +755,7 @@ export const useElectionData = (showLoading) => {
     mapGeoJsons,
     prepareGeojsons,
     showLoading,
+    year,
   ])
 
   // create interval to periodically trigger refetch and let react lifecycle to handle the refetch
@@ -697,6 +763,7 @@ export const useElectionData = (showLoading) => {
     const interval = setInterval(() => {
       setShouldRefetch(true)
     }, 3 * 60 * 1000)
+    // }, 6 * 1000)
 
     return () => {
       clearInterval(interval)
@@ -709,33 +776,31 @@ export const useElectionData = (showLoading) => {
       showLoading(true)
       const { level, activeId } = mapObject
       const newMapData = { ...defaultMapData }
+      const { electionType } = election
       let newEvcData
-      for (let index = 0; index <= level; index++) {
-        switch (election.electionType) {
+      for (let currentLevel = 0; currentLevel <= level; currentLevel++) {
+        switch (electionType) {
           case 'mayor': {
-            switch (index) {
+            switch (currentLevel) {
               case 0: {
-                const dataLoader = new DataLoader({
-                  apiUrl: gcsBaseUrl,
-                  year: '2022',
-                  type: election.electionType,
-                  district: 'all',
-                })
                 try {
-                  const data = await dataLoader.loadData()
+                  const data = await fetchEVCData(
+                    year,
+                    electionType,
+                    election.meta.evc.district
+                  )
                   newEvcData = data
                 } catch (error) {
                   console.error(error)
                 }
 
-                const mapDataUrl =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  election.electionType +
-                  '/map/' +
-                  'country.json'
                 try {
-                  const { data } = await axios.get(mapDataUrl)
+                  const data = await fetchMayorMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[currentLevel],
+                    fileName: 'country',
+                  })
                   newMapData[0] = data
                 } catch (error) {
                   console.error(error)
@@ -744,14 +809,13 @@ export const useElectionData = (showLoading) => {
               }
               case 1: {
                 const countyId = activeId.slice(0, 5)
-                const url =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  election.electionType +
-                  '/map/county/' +
-                  `${countyId}.json`
                 try {
-                  const { data } = await axios.get(url)
+                  const data = await fetchMayorMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[currentLevel],
+                    fileName: countyId,
+                  })
                   const countyData = { [countyId]: data }
                   newMapData[1] = countyData
                 } catch (error) {
@@ -761,15 +825,13 @@ export const useElectionData = (showLoading) => {
               }
               case 2: {
                 const townId = activeId.slice(0, 8)
-                const url =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  election.electionType +
-                  '/map/town/' +
-                  `${townId}.json`
-
                 try {
-                  const { data } = await axios.get(url)
+                  const data = await fetchMayorMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[currentLevel],
+                    fileName: townId,
+                  })
                   const townData = { [townId]: data }
                   newMapData[2] = townData
                 } catch (error) {
@@ -785,29 +847,23 @@ export const useElectionData = (showLoading) => {
             break
           }
           case 'referendum': {
-            switch (index) {
+            switch (currentLevel) {
               case 0: {
-                const dataLoader = new DataLoader({
-                  apiUrl: gcsBaseUrl,
-                  year: '2022',
-                  type: election.electionType,
-                  district: 'all',
-                })
                 try {
-                  const data = await dataLoader.loadData()
+                  const data = await fetchEVCData(year, electionType, 'all')
                   newEvcData = data
                 } catch (error) {
                   console.error(error)
                 }
 
-                const mapDataUrl =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  'referendum' +
-                  '/map/F1/' +
-                  'country.json'
                 try {
-                  const { data } = await axios.get(mapDataUrl)
+                  const data = await fetchReferendumMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[currentLevel],
+                    fileName: election.meta.map.fileNames[currentLevel],
+                    number: 'F1',
+                  })
                   newMapData[0] = data
                 } catch (error) {
                   console.error(error)
@@ -816,14 +872,14 @@ export const useElectionData = (showLoading) => {
               }
               case 1: {
                 const countyId = activeId.slice(0, 5)
-                const mapDataUrl =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  'referendum' +
-                  '/map/F1/county/' +
-                  `${countyId}.json`
                 try {
-                  const { data } = await axios.get(mapDataUrl)
+                  const data = await fetchReferendumMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[currentLevel],
+                    fileName: countyId,
+                    number: 'F1',
+                  })
                   const countyData = { [countyId]: data }
                   newMapData[1] = countyData
                 } catch (error) {
@@ -833,21 +889,19 @@ export const useElectionData = (showLoading) => {
               }
               case 2: {
                 const townId = activeId.slice(0, 8)
-                const mapDataUrl =
-                  gcsBaseUrl +
-                  '/2022/' +
-                  'referendum' +
-                  '/map/F1/town/' +
-                  `${townId}.json`
-
                 try {
-                  const { data } = await axios.get(mapDataUrl)
+                  const data = await fetchReferendumMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[currentLevel],
+                    fileName: townId,
+                    number: 'F1',
+                  })
                   const townData = { [townId]: data }
                   newMapData[2] = townData
                 } catch (error) {
                   console.error(error)
                 }
-
                 break
               }
 
@@ -872,7 +926,14 @@ export const useElectionData = (showLoading) => {
     if (shouldRefetch) {
       refetch()
     }
-  }, [shouldRefetch, mapObject, election.electionType, showLoading])
+  }, [
+    shouldRefetch,
+    mapObject,
+    election.electionType,
+    showLoading,
+    election,
+    year,
+  ])
 
   // console.log(
   //   'election\n',
