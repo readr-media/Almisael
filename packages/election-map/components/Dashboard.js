@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { ControlPanel } from './ControlPanel'
 import { MapContainer } from './MapContainer'
@@ -31,14 +31,19 @@ const PanelsWrapper = styled.div`
 export const Dashboard = () => {
   const [compareMode, setCompareMode] = useState(false)
   const [loading, setLoading] = useState(false)
+  const loadingTimout = useRef(null)
 
   const showLoading = useCallback((show) => {
     if (show) {
-      setLoading(true)
+      clearTimeout(loadingTimout.current)
+      loadingTimout.current = setTimeout(() => {
+        setLoading(true)
+      }, 100)
     } else {
+      clearTimeout(loadingTimout.current)
       setTimeout(() => {
         setLoading(false)
-      }, 200)
+      }, 300)
     }
   }, [])
 
