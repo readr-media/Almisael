@@ -54,9 +54,11 @@ export const Dashboard = () => {
     mapData,
     infoboxData,
     evcData,
+    seatData,
     mapObject,
     setMapObject,
     mapGeoJsons,
+    year,
   } = useElectionData(showLoading)
 
   return (
@@ -70,7 +72,14 @@ export const Dashboard = () => {
           election={election}
         />
         <InfoboxPanel data={infoboxData} />
-        <SeatsPanel seats={election.seats} />
+        <SeatsPanel
+          meta={{
+            ...election.meta.seat,
+            year,
+            location: election.meta.seat?.mapping[mapObject.countyId],
+          }}
+          data={seatData}
+        />
         <MapCompareButton
           compareMode={compareMode}
           onCompareModeChange={() => {

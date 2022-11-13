@@ -15,6 +15,12 @@ import { mockData as legislatorConstituency } from '../mock-datas/maps/legislato
 
 const gcsBaseUrl = 'https://whoareyou-gcs.readr.tw/elections-dev'
 
+const fetchSeatData = async ({ electionType, year, folderName, fileName }) => {
+  const seatDataUrl = `${gcsBaseUrl}/${year}/${electionType}/seat/${folderName}/${fileName}.json`
+  const { data } = await axios.get(seatDataUrl)
+  return data
+}
+
 const fetchEVCData = async ({ year, electionType, district }) => {
   const dataLoader = new DataLoader({
     apiUrl: gcsBaseUrl,
@@ -209,6 +215,34 @@ const elections = [
           2: '',
         },
       },
+      seat: {
+        wrapperTitle: '縣市議員席次圖',
+        componentTitle: '議員選舉',
+        mapping: {
+          10007: '彰化縣',
+          10020: '嘉義市',
+          10010: '嘉義縣',
+          10018: '新竹市',
+          10004: '新竹縣',
+          10015: '花蓮縣',
+          64000: '高雄市',
+          10017: '基隆市',
+          '09020': '金門縣',
+          '09007': '連江縣',
+          10005: '苗栗縣',
+          10008: '南投縣',
+          65000: '新北市',
+          10016: '澎湖縣',
+          10013: '屏東縣',
+          66000: '臺中市',
+          67000: '臺南市',
+          63000: '臺北市',
+          10014: '臺東縣',
+          68000: '桃園市',
+          10002: '宜蘭縣',
+          10009: '雲林縣',
+        },
+      },
     },
   },
   {
@@ -310,6 +344,7 @@ export const useElectionData = (showLoading) => {
     ...defaultElectionMapData,
   })
   const [evcData, setEvcData] = useState({ ...defaultEvcData })
+  const [seatData, setSeatData] = useState()
   const [infoboxData, setInfoboxData] = useState({})
 
   const [mapObject, setMapObject] = useState(defaultMapObject)
@@ -351,9 +386,10 @@ export const useElectionData = (showLoading) => {
   }, [])
 
   const prepareElectionData = useCallback(
-    async (election, mapObject, mapData, evcData, year) => {
+    async (election, mapObject, mapData, evcData, seatData, year) => {
       let newMapData = mapData
       let newEvcData = evcData
+      let newSeatData = seatData
       const { level, townId, countyId } = mapObject
       const { electionType } = election
       const newInfoboxData = {
@@ -576,6 +612,20 @@ export const useElectionData = (showLoading) => {
                 }
               }
 
+              if (!newSeatData || !newSeatData[countyId]) {
+                try {
+                  const data = await fetchSeatData({
+                    electionType,
+                    year,
+                    folderName: 'county',
+                    fileName: countyId,
+                  })
+                  newSeatData = { ...newSeatData, [countyId]: data }
+                } catch (error) {
+                  console.error(error)
+                }
+              }
+
               if (!newMapData[1] || !newMapData[1][countyId]) {
                 console.log('fetching county data')
                 try {
@@ -733,7 +783,7 @@ export const useElectionData = (showLoading) => {
       }
 
       showLoading(false)
-      return { newInfoboxData, newMapData, newEvcData }
+      return { newInfoboxData, newMapData, newEvcData, newSeatData }
     },
     [showLoading]
   )
@@ -747,18 +797,21 @@ export const useElectionData = (showLoading) => {
     setMapObject(defaultMapObject)
     setInfoboxData({})
     setEvcData({ ...defaultEvcData })
+    setSeatData()
     showLoading(true)
   }
 
   const onMapObjectChange = async (newMapObject = defaultMapObject) => {
     // fetch data before map scales, useEffect will called prepareData again,
     // make sure to avoid fetch duplicate data
-    const { newInfoboxData, newMapData, newEvcData } =
+    showLoading(true)
+    const { newInfoboxData, newMapData, newEvcData, newSeatData } =
       await prepareElectionData(
         election,
         newMapObject,
         electionMapData[election.electionType],
         evcData,
+        seatData,
         year
       )
     setInfoboxData(newInfoboxData)
@@ -767,23 +820,34 @@ export const useElectionData = (showLoading) => {
       [election.electionType]: newMapData,
     }))
     setEvcData(newEvcData)
+    setSeatData(newSeatData)
     setMapObject(newMapObject)
+    showLoading(false)
   }
 
   useEffect(() => {
     showLoading(true)
     Promise.allSettled([
-      prepareElectionData(election, mapObject, mapData, evcData, year),
+      prepareElectionData(
+        election,
+        mapObject,
+        mapData,
+        evcData,
+        seatData,
+        year
+      ),
       mapGeoJsons ? undefined : prepareGeojsons(),
     ]).then((results) => {
       if (results[0]?.value) {
-        const { newInfoboxData, newMapData, newEvcData } = results[0].value
+        const { newInfoboxData, newMapData, newEvcData, newSeatData } =
+          results[0].value
         setInfoboxData(newInfoboxData)
         setElectionMapData((oldData) => ({
           ...oldData,
           [election.electionType]: newMapData,
         }))
         setEvcData(newEvcData)
+        setSeatData(newSeatData)
       }
       if (results[1]?.value) {
         const newMapGeoJsons = results[1].value
@@ -801,6 +865,7 @@ export const useElectionData = (showLoading) => {
     prepareGeojsons,
     showLoading,
     year,
+    seatData,
   ])
 
   // create interval to periodically trigger refetch and let react lifecycle to handle the refetch
@@ -822,7 +887,8 @@ export const useElectionData = (showLoading) => {
       const { level: currentLevel, townId, countyId } = mapObject
       const newMapData = { ...defaultMapData }
       const { electionType } = election
-      let newEvcData = { ...defaultEvcData }
+      const newEvcData = { ...defaultEvcData }
+      let newSeatData
       for (let level = 0; level <= currentLevel; level++) {
         switch (electionType) {
           case 'mayor': {
@@ -904,6 +970,17 @@ export const useElectionData = (showLoading) => {
                   })
                   const countyEvcData = { [countyId]: data }
                   newEvcData[electionType] = countyEvcData
+                } catch (error) {
+                  console.error(error)
+                }
+                try {
+                  const data = await fetchSeatData({
+                    electionType,
+                    year,
+                    folderName: 'county',
+                    fileName: countyId,
+                  })
+                  newSeatData = { [countyId]: data }
                 } catch (error) {
                   console.error(error)
                 }
@@ -1013,6 +1090,7 @@ export const useElectionData = (showLoading) => {
         [election.electionType]: newMapData,
       }))
       setEvcData(newEvcData)
+      setSeatData(newSeatData)
       setShouldRefetch(false)
       showLoading(false)
     }
@@ -1045,9 +1123,13 @@ export const useElectionData = (showLoading) => {
   if (election.electionType === 'councilMember') {
     outputEvcData =
       evcData[election.electionType] &&
-      evcData[election.electionType][mapObject.activeId.slice(0, 5)]
+      evcData[election.electionType][mapObject.countyId]
   } else {
     outputEvcData = evcData[election.electionType]
+  }
+  let outputSeatData
+  if (election.electionType === 'councilMember') {
+    outputSeatData = seatData && seatData[mapObject.countyId]
   }
 
   return {
@@ -1060,8 +1142,10 @@ export const useElectionData = (showLoading) => {
     mapData,
     infoboxData,
     evcData: outputEvcData,
+    seatData: outputSeatData,
     mapObject,
     setMapObject: onMapObjectChange,
     mapGeoJsons,
+    year,
   }
 }

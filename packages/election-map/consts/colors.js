@@ -114,6 +114,13 @@ const rgbaToRgb = (rgbaObj, bg = { r: 255, g: 255, b: 255, a: 1 }) => {
   return `rgb(${r}, ${g}, ${b})`
 }
 
+export const getPartyColor = (party) => {
+  const color =
+    partiesColor.find((partyColor) => party.startsWith(partyColor.name))
+      ?.color || partiesColor[partiesColor.length - 1].color
+  return color
+}
+
 export const getGradiantPartyColor = (party, percent) => {
   const color =
     partiesColor.find((partyColor) => partyColor.name === party)?.color ||

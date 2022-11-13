@@ -9,12 +9,12 @@ const SeatsChartWrapper = styled(CollapsibleWrapper)`
   margin: 9px 0 0;
 `
 
-export const SeatsPanel = ({ seats }) => {
+export const SeatsPanel = ({ meta, data }) => {
   return (
     <>
-      {seats && (
-        <SeatsChartWrapper title={seats.title}>
-          <SeatsChart />
+      {data && (
+        <SeatsChartWrapper title={meta.wrapperTitle}>
+          <SeatsChart data={data} meta={meta} />
         </SeatsChartWrapper>
       )}
     </>

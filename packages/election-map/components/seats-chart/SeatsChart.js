@@ -1,6 +1,5 @@
-import { mockData as councilMemberSeats } from '../../mock-datas/seats-distribution/councilmen/2018_councilmen_county_63000'
 import styled from 'styled-components'
-import { partiesColor } from '../../consts/colors'
+import { getPartyColor } from '../../consts/colors'
 import { useState } from 'react'
 
 const SeatsChartWrapper = styled.div`
@@ -66,7 +65,7 @@ const SeatInfo = styled.div`
     `}
 `
 
-export const SeatsChart = () => {
+export const SeatsChart = ({ data, meta }) => {
   const [hoverParty, setHoverParty] = useState({
     show: false,
     party: '',
@@ -74,27 +73,21 @@ export const SeatsChart = () => {
   })
   return (
     <SeatsChartWrapper>
-      <SeatsChartYear>2018</SeatsChartYear>
-      <SeartsChartTitle>臺北市議員選舉</SeartsChartTitle>
+      <SeatsChartYear>{meta.year}</SeatsChartYear>
+      <SeartsChartTitle>{meta.location + meta.componentTitle}</SeartsChartTitle>
       <Wrapper>
         {hoverParty.show && (
           <SeatInfo coordinate={hoverParty.coordinate}>
             {hoverParty.party}
           </SeatInfo>
         )}
-        {councilMemberSeats.parties.reduce((total, party) => {
-          let color = '#d9d9d9'
-          const partyColor = partiesColor.find(
-            (partyColor) => partyColor.name === party.short
-          )
-          if (partyColor) {
-            color = partyColor.color
-          }
+        {data.parties.reduce((total, party) => {
+          const color = getPartyColor(party.label)
           return total.concat(
             [...Array(party.seats)].map((empty, i) => {
               return (
                 <SeatWrapper
-                  key={party.short + i}
+                  key={party.label + i}
                   onMouseOver={() => {
                     setHoverParty((value) => ({
                       ...value,
