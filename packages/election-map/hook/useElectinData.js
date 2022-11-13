@@ -409,41 +409,42 @@ export const useElectionData = (showLoading) => {
           }
           break
         case 'mayor':
-          switch (level) {
-            case 0: {
-              if (!newEvcData[electionType]) {
-                try {
-                  const data = await fetchEVCData({
-                    year,
-                    electionType,
-                    district: election.meta.evc.district,
-                  })
-                  newEvcData[electionType] = data
-                } catch (error) {
-                  console.error(error)
+          if (countyId === '10020') {
+            newInfoboxData.electionData = '10020'
+          } else {
+            switch (level) {
+              case 0:
+                if (!newEvcData[electionType]) {
+                  try {
+                    const data = await fetchEVCData({
+                      year,
+                      electionType,
+                      district: election.meta.evc.district,
+                    })
+                    newEvcData[electionType] = data
+                  } catch (error) {
+                    console.error(error)
+                  }
                 }
-              }
-              if (!newMapData[0]) {
-                console.log('fetching country data')
-                try {
-                  const data = await fetchMayorMapData({
-                    electionType,
-                    year,
-                    folderName: election.meta.map.folderNames[level],
-                    fileName: election.meta.map.fileNames[level],
-                  })
-                  newMapData = { ...newMapData, 0: data }
-                } catch (error) {
-                  console.error(error)
+                if (!newMapData[0]) {
+                  console.log('fetching country data')
+                  try {
+                    const data = await fetchMayorMapData({
+                      electionType,
+                      year,
+                      folderName: election.meta.map.folderNames[level],
+                      fileName: election.meta.map.fileNames[level],
+                    })
+                    newMapData = { ...newMapData, 0: data }
+                  } catch (error) {
+                    console.error(error)
+                  }
                 }
-              }
-              break
-            }
-            case 1: {
-              const { countyId } = mapObject
-              if (!newMapData[1] || !newMapData[1][countyId]) {
-                console.log('fetching county data')
-                if (countyId !== '10020') {
+                break
+              case 1:
+                if (!newMapData[1] || !newMapData[1][countyId]) {
+                  console.log('fetching county data')
+
                   try {
                     const data = await fetchMayorMapData({
                       electionType,
@@ -456,72 +457,54 @@ export const useElectionData = (showLoading) => {
                   } catch (error) {
                     console.error(error)
                   }
-                } else {
-                  console.log('pass 嘉義市選舉資料')
                 }
-              }
 
-              newInfoboxData.electionData = newMapData[0]?.districts.find(
-                (district) => district.county === mapObject.activeId
-              )
-              break
-            }
-            case 2: {
-              const { townId, countyId } = mapObject
-
-              if (!newMapData[2] || !newMapData[2][townId]) {
-                console.log('fetching town data')
-                // const countyId = townId.slice(0, 5)
-                if (countyId !== '10020') {
-                  try {
-                    const data = await fetchMayorMapData({
-                      electionType,
-                      year,
-                      folderName: election.meta.map.folderNames[level],
-                      fileName: townId,
-                    })
-                    const townData = { ...newMapData[2], [townId]: data }
-                    newMapData = { ...newMapData, 2: townData }
-                  } catch (error) {
-                    console.error(error)
+                newInfoboxData.electionData = newMapData[0]?.districts.find(
+                  (district) => district.county === mapObject.activeId
+                )
+                break
+              case 2:
+                if (!newMapData[2] || !newMapData[2][townId]) {
+                  console.log('fetching town data')
+                  // const countyId = townId.slice(0, 5)
+                  if (countyId !== '10020') {
+                    try {
+                      const data = await fetchMayorMapData({
+                        electionType,
+                        year,
+                        folderName: election.meta.map.folderNames[level],
+                        fileName: townId,
+                      })
+                      const townData = { ...newMapData[2], [townId]: data }
+                      newMapData = { ...newMapData, 2: townData }
+                    } catch (error) {
+                      console.error(error)
+                    }
+                  } else {
+                    console.log('pass 嘉義市選舉資料')
                   }
-                } else {
-                  console.log('pass 嘉義市選舉資料')
                 }
-              }
-              try {
-                newInfoboxData.electionData = newMapData[1][
-                  countyId
-                ]?.districts.find(
-                  (district) =>
-                    district.county + district.town === mapObject.activeId
-                )
-              } catch (error) {
-                console.log(
-                  `mayor no data for county: ${countyId}, error: `,
-                  error
-                )
-              }
-              break
-            }
-            case 3: {
-              const { townId } = mapObject
-              try {
-                newInfoboxData.electionData = newMapData[2][
-                  townId
-                ]?.districts.find(
-                  (district) =>
-                    district.county + district.town + district.vill ===
-                    mapObject.activeId
-                )
-              } catch (error) {
-                console.log(`mayor no data for town: ${townId}, error: `, error)
-              }
-              break
-            }
 
-            default:
-              break
+                newInfoboxData.electionData =
+                  newMapData[1] &&
+                  newMapData[1][countyId]?.districts.find(
+                    (district) =>
+                      district.county + district.town === mapObject.activeId
+                  )
+                break
+              case 3:
+                newInfoboxData.electionData =
+                  newMapData[2] &&
+                  newMapData[2][townId]?.districts.find(
+                    (district) =>
+                      district.county + district.town + district.vill ===
+                      mapObject.activeId
+                  )
+                break
+
+              default:
+                break
+            }
           }
           break
         case 'legislator':
@@ -568,7 +551,7 @@ export const useElectionData = (showLoading) => {
           switch (mapObject.level) {
             case 0:
               break
-            case 1: {
+            case 1:
               if (
                 !newEvcData[electionType] ||
                 !newEvcData[electionType][countyId]
@@ -588,12 +571,11 @@ export const useElectionData = (showLoading) => {
                     [countyId]: data,
                   }
                   newEvcData[electionType] = countyEvcData
-                } catch (error) {}
+                } catch (error) {
+                  console.error(error)
+                }
               }
-              try {
-              } catch (error) {
-                console.error(error)
-              }
+
               if (!newMapData[1] || !newMapData[1][countyId]) {
                 console.log('fetching county data')
                 try {
@@ -612,8 +594,7 @@ export const useElectionData = (showLoading) => {
               newInfoboxData.electionData =
                 newMapData[1] && newMapData[1][countyId]
               break
-            }
-            case 2: {
+            case 2:
               if (!newMapData[2] || !newMapData[2][townId]) {
                 console.log('fetching town data')
                 try {
@@ -631,12 +612,11 @@ export const useElectionData = (showLoading) => {
                 newMapData[1] &&
                 newMapData[1][countyId]?.districts.find(
                   (district) =>
-                    district.county + district.area + '0' === mapObject.activeId
+                    district.county + district.town === mapObject.activeId
                 )
 
               break
-            }
-            case 3: {
+            case 3:
               newInfoboxData.electionData =
                 newMapData[2] &&
                 newMapData[2][townId]?.districts.find(
@@ -645,7 +625,6 @@ export const useElectionData = (showLoading) => {
                     mapObject.activeId
                 )
               break
-            }
 
             default:
               break
@@ -654,7 +633,7 @@ export const useElectionData = (showLoading) => {
           break
         case 'referendum':
           switch (level) {
-            case 0: {
+            case 0:
               if (!newEvcData[electionType]) {
                 try {
                   const data = await fetchEVCData({
@@ -682,12 +661,10 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
               }
-              //dev
-              newInfoboxData.electionData = newMapData[0].summary
+
+              newInfoboxData.electionData = newMapData[0]?.summary
               break
-            }
-            case 1: {
-              const { countyId } = mapObject
+            case 1:
               if (!newMapData[1] || !newMapData[1][countyId]) {
                 console.log('fetching county data')
                 try {
@@ -700,20 +677,16 @@ export const useElectionData = (showLoading) => {
                   })
                   const countyData = { ...newMapData[1], [countyId]: data }
                   newMapData = { ...newMapData, 1: countyData }
-                  console.log(newMapData)
                 } catch (error) {
                   console.error(error)
                 }
               }
 
-              newInfoboxData.electionData = newMapData[0].districts.find(
+              newInfoboxData.electionData = newMapData[0]?.districts.find(
                 (district) => district.county === mapObject.activeId
               )
               break
-            }
-            case 2: {
-              const { townId, countyId } = mapObject
-
+            case 2:
               if (!newMapData[2] || !newMapData[2][townId]) {
                 console.log('fetching town data')
                 try {
@@ -732,40 +705,23 @@ export const useElectionData = (showLoading) => {
                 }
               }
 
-              try {
-                newInfoboxData.electionData = newMapData[1][
-                  countyId
-                ].districts.find(
+              newInfoboxData.electionData =
+                newMapData[1] &&
+                newMapData[1][countyId].districts.find(
                   (district) =>
                     district.county + district.town === mapObject.activeId
                 )
-              } catch (error) {
-                console.log(
-                  `referendum no data for town: ${countyId}, error: `,
-                  error
-                )
-              }
 
               break
-            }
-            case 3: {
-              const { townId } = mapObject
-              try {
-                newInfoboxData.electionData = newMapData[2][
-                  townId
-                ].districts.find(
+            case 3:
+              newInfoboxData.electionData =
+                newMapData[2] &&
+                newMapData[2][townId].districts.find(
                   (district) =>
                     district.county + district.town + district.vill ===
                     mapObject.activeId
                 )
-              } catch (error) {
-                console.log(
-                  `referendum no data for town: ${townId}, error: `,
-                  error
-                )
-              }
               break
-            }
 
             default:
               break
@@ -863,15 +819,15 @@ export const useElectionData = (showLoading) => {
     const refetch = async () => {
       console.log('refetch data..')
       showLoading(true)
-      const { level, activeId } = mapObject
+      const { level: currentLevel, townId, countyId } = mapObject
       const newMapData = { ...defaultMapData }
       const { electionType } = election
       let newEvcData = { ...defaultEvcData }
-      for (let currentLevel = 0; currentLevel <= level; currentLevel++) {
+      for (let level = 0; level <= currentLevel; level++) {
         switch (electionType) {
           case 'mayor': {
-            switch (currentLevel) {
-              case 0: {
+            switch (level) {
+              case 0:
                 try {
                   const data = await fetchEVCData({
                     year,
@@ -887,7 +843,7 @@ export const useElectionData = (showLoading) => {
                   const data = await fetchMayorMapData({
                     electionType,
                     year,
-                    folderName: election.meta.map.folderNames[currentLevel],
+                    folderName: election.meta.map.folderNames[level],
                     fileName: 'country',
                   })
                   newMapData[0] = data
@@ -895,14 +851,15 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
                 break
-              }
-              case 1: {
-                const countyId = activeId.slice(0, 5)
+              case 1:
+                if (countyId === '10020') {
+                  break
+                }
                 try {
                   const data = await fetchMayorMapData({
                     electionType,
                     year,
-                    folderName: election.meta.map.folderNames[currentLevel],
+                    folderName: election.meta.map.folderNames[level],
                     fileName: countyId,
                   })
                   const countyData = { [countyId]: data }
@@ -911,14 +868,15 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
                 break
-              }
-              case 2: {
-                const townId = activeId.slice(0, 8)
+              case 2:
+                if (countyId === '10020') {
+                  break
+                }
                 try {
                   const data = await fetchMayorMapData({
                     electionType,
                     year,
-                    folderName: election.meta.map.folderNames[currentLevel],
+                    folderName: election.meta.map.folderNames[level],
                     fileName: townId,
                   })
                   const townData = { [townId]: data }
@@ -926,9 +884,7 @@ export const useElectionData = (showLoading) => {
                 } catch (error) {
                   console.error(error)
                 }
-
                 break
-              }
 
               default:
                 break
@@ -936,12 +892,10 @@ export const useElectionData = (showLoading) => {
             break
           }
           case 'councilMember': {
-            switch (currentLevel) {
-              case 0: {
+            switch (level) {
+              case 0:
                 break
-              }
-              case 1: {
-                const countyId = activeId.slice(0, 5)
+              case 1:
                 try {
                   const data = await fetchEVCData({
                     year,
@@ -957,7 +911,7 @@ export const useElectionData = (showLoading) => {
                   const data = await fetchCouncilMemberMapData({
                     electionType,
                     year,
-                    folderName: election.meta.map.folderNames[currentLevel],
+                    folderName: election.meta.map.folderNames[level],
                     fileName: countyId,
                   })
                   const countyData = { ...newMapData[1], [countyId]: data }
@@ -966,14 +920,12 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
                 break
-              }
-              case 2: {
-                const townId = activeId.slice(0, 8)
+              case 2:
                 try {
                   const data = await fetchCouncilMemberMapData({
                     electionType,
                     year,
-                    folderName: election.meta.map.folderNames[currentLevel],
+                    folderName: election.meta.map.folderNames[level],
                     fileName: townId,
                   })
                   const townData = { ...newMapData[2], [townId]: data }
@@ -982,7 +934,6 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
                 break
-              }
 
               default:
                 break
@@ -990,8 +941,8 @@ export const useElectionData = (showLoading) => {
             break
           }
           case 'referendum': {
-            switch (currentLevel) {
-              case 0: {
+            switch (level) {
+              case 0:
                 try {
                   const data = await fetchEVCData({
                     year,
@@ -1007,8 +958,8 @@ export const useElectionData = (showLoading) => {
                   const data = await fetchReferendumMapData({
                     electionType,
                     year,
-                    folderName: election.meta.map.folderNames[currentLevel],
-                    fileName: election.meta.map.fileNames[currentLevel],
+                    folderName: election.meta.map.folderNames[level],
+                    fileName: election.meta.map.fileNames[level],
                     number: 'F1',
                   })
                   newMapData[0] = data
@@ -1016,14 +967,12 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
                 break
-              }
-              case 1: {
-                const countyId = activeId.slice(0, 5)
+              case 1:
                 try {
                   const data = await fetchReferendumMapData({
                     electionType,
                     year,
-                    folderName: election.meta.map.folderNames[currentLevel],
+                    folderName: election.meta.map.folderNames[level],
                     fileName: countyId,
                     number: 'F1',
                   })
@@ -1033,14 +982,12 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
                 break
-              }
-              case 2: {
-                const townId = activeId.slice(0, 8)
+              case 2:
                 try {
                   const data = await fetchReferendumMapData({
                     electionType,
                     year,
-                    folderName: election.meta.map.folderNames[currentLevel],
+                    folderName: election.meta.map.folderNames[level],
                     fileName: townId,
                     number: 'F1',
                   })
@@ -1050,7 +997,6 @@ export const useElectionData = (showLoading) => {
                   console.error(error)
                 }
                 break
-              }
 
               default:
                 break
@@ -1097,13 +1043,10 @@ export const useElectionData = (showLoading) => {
 
   let outputEvcData
   if (election.electionType === 'councilMember') {
-    console.log('evcData', evcData)
     outputEvcData =
       evcData[election.electionType] &&
       evcData[election.electionType][mapObject.activeId.slice(0, 5)]
   } else {
-    console.log('evcData', evcData)
-
     outputEvcData = evcData[election.electionType]
   }
 

@@ -95,33 +95,15 @@ const MayorCandidate = styled.p`
 `
 
 const MayorInfobox = ({ level, data }) => {
-  if (level === 0) {
+  if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
-        <InfoboxText>點擊地圖看更多資料</InfoboxText>
-      </InfoboxScrollWrapper>
-    )
-  }
-
-  if (!data) {
-    return (
-      <InfoboxScrollWrapper>
-        <InfoboxText>無資料</InfoboxText>
+        <InfoboxText>{data}</InfoboxText>
       </InfoboxScrollWrapper>
     )
   }
 
   const { profRate, candidates } = data
-
-  if (!profRate && profRate !== 0) {
-    return (
-      <InfoboxScrollWrapper>
-        <InfoboxText>
-          目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出
-        </InfoboxText>
-      </InfoboxScrollWrapper>
-    )
-  }
 
   return (
     <InfoboxScrollWrapper>
@@ -270,14 +252,6 @@ const CouncilMemberCandidate = styled.div`
 `
 
 const CouncilMemberInfobox = ({ level, data }) => {
-  // if (level === 0) {
-  //   return (
-  //     <InfoboxScrollWrapper>
-  //       <InfoboxText>點擊地圖看更多資料</InfoboxText>
-  //     </InfoboxScrollWrapper>
-  //   )
-  // }
-
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
@@ -354,25 +328,15 @@ const ReferendumPassWrapper = styled.span`
 const ReferendumCandidate = styled.div``
 
 const ReferendumInfobox = ({ data }) => {
-  if (!data) {
+  if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
-        <InfoboxText>無資料</InfoboxText>
+        <InfoboxText>{data}</InfoboxText>
       </InfoboxScrollWrapper>
     )
   }
 
   const { profRate, adptVictor, agreeRate, disagreeRate } = data
-  if (!profRate && profRate !== 0) {
-    return (
-      <InfoboxScrollWrapper>
-        <InfoboxText>
-          目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出
-        </InfoboxText>
-      </InfoboxScrollWrapper>
-    )
-  }
-
   const noResult = adptVictor !== 'Y' && adptVictor !== 'N'
   const pass = adptVictor === 'Y'
   return (
@@ -448,8 +412,54 @@ const ReferendumInfobox = ({ data }) => {
 //   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
 //   `,
 // }
+
+const referendumInfoboxData = (data, level) => {
+  if (!data) {
+    console.log(`no data for mayor infobox in level ${level}`, data)
+    return '無資料'
+  }
+
+  if (!data.profRate && level === 3) {
+    console.log(`no profRate for running mayor infobox in level ${level}`, data)
+    return '目前即時開票無村里資料'
+  }
+
+  if (!data.profRate) {
+    console.error(`data error for mayor infoboxData in level ${level}`, data)
+    return '資料錯誤，請確認'
+  }
+
+  return data
+}
+
+const mayorInfoboxData = (data, level) => {
+  if (level === 0) {
+    return '點擊地圖看更多資料'
+  }
+
+  if (!data) {
+    console.log(`no data for mayor infobox in level ${level}`, data)
+    return '無資料'
+  }
+
+  if (data === '10020') {
+    return '嘉義市長選舉改期至2022/12/18'
+  }
+
+  if (!data.profRate && level === 3) {
+    console.log(`no profRate for running mayor infobox in level ${level}`, data)
+    return '目前即時開票無村里資料'
+  }
+
+  if (!data.profRate) {
+    console.error(`data error for mayor infoboxData in level ${level}`, data)
+    return '資料錯誤，請確認'
+  }
+
+  return data
+}
+
 const councilMemberInfoboxData = (data, level) => {
-  console.log('typeof level', typeof level)
   if (level === 0) {
     return '點擊地圖看更多資料'
   }
@@ -463,7 +473,7 @@ const councilMemberInfoboxData = (data, level) => {
       `no profRate for running councilMember infobox in level ${level}`,
       data
     )
-    return '目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出'
+    return '目前即時開票無村里資料'
   }
 
   if (!data.profRate) {
@@ -486,7 +496,8 @@ export const Infobox = ({ data }) => {
       break
     }
     case 'mayor': {
-      infobox = <MayorInfobox level={level} data={electionData} />
+      const data = mayorInfoboxData(electionData, level)
+      infobox = <MayorInfobox level={level} data={data} />
       break
     }
     case 'legislator': {
@@ -499,7 +510,8 @@ export const Infobox = ({ data }) => {
       break
     }
     case 'referendum':
-      infobox = <ReferendumInfobox data={electionData} />
+      const data = referendumInfoboxData(electionData, level)
+      infobox = <ReferendumInfobox data={data} />
       break
     default:
       break
