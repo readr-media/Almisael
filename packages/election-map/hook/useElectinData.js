@@ -10,15 +10,12 @@ import { mockData as presidentCountry } from '../mock-datas/maps/presidents/2020
 import { mockData as presidentCounty } from '../mock-datas/maps/presidents/2020_president_county_63000'
 import { mockData as presidentTown } from '../mock-datas/maps/presidents/2020_president_town_63000010'
 
-import { mockData as councilmanCounty } from '../mock-datas/maps/councilmen/2018_councilmen_county_63000'
-import { mockData as CouncilmanConstituency } from '../mock-datas/maps/councilmen/2018_councilmen_constituency_6300001'
-
 import { mockData as legislatorCounty } from '../mock-datas/maps/legislators/2020_legislator_county_63000'
 import { mockData as legislatorConstituency } from '../mock-datas/maps/legislators/2020_legislator_constituency_6300001'
 
 const gcsBaseUrl = 'https://whoareyou-gcs.readr.tw/elections-dev'
 
-const fetchEVCData = async (year, electionType, district) => {
+const fetchEVCData = async ({ year, electionType, district }) => {
   const dataLoader = new DataLoader({
     apiUrl: gcsBaseUrl,
     year,
@@ -46,6 +43,18 @@ const fetchReferendumMapData = async ({
   number,
 }) => {
   const mapDataUrl = `${gcsBaseUrl}/${year}/${electionType}/map/${number}/${folderName}/${fileName}.json`
+  const { data } = await axios.get(mapDataUrl)
+  return data
+}
+
+const fetchCouncilMemberMapData = async ({
+  electionType,
+  year,
+  folderName,
+  fileName,
+}) => {
+  const gcsBaseUrl = 'https://whoareyou-gcs.readr.tw/elections'
+  const mapDataUrl = `${gcsBaseUrl}/${year}/${electionType}/map/${folderName}/${fileName}.json`
   const { data } = await axios.get(mapDataUrl)
   return data
 }
@@ -156,33 +165,51 @@ const elections = [
     ],
   },
   {
-    electionType: 'councilman',
+    electionType: 'councilMember',
     subType: ['區域', '原住民'],
     electionName: '縣市議員',
     years: [{ year: 2022 }, { year: 2018 }, { year: 2014 }, { year: 2010 }],
     seats: { wrapperTitle: '縣市議員席次圖', componentTitle: '議員選舉' },
-    levels: [
-      {
-        //level 0 country
-        mapJson: 'tw_country.topojson',
-        electionDatas: null,
+    meta: {
+      evc: {
+        districts: {
+          10007: 'changhuaCounty',
+          10020: 'chiayiCity',
+          10010: 'chiayiCounty',
+          10018: 'hsinchuCity',
+          10004: 'hsinchuCounty',
+          10015: 'hualienCounty',
+          64000: 'kaohsiungCity',
+          10017: 'keelungCity',
+          '09020': 'kinmenCounty',
+          '09007': 'lienchiangCounty',
+          10005: 'miaoliCounty',
+          10008: 'nantouCounty',
+          65000: 'newTaipeiCity',
+          10016: 'penghuCounty',
+          10013: 'pingtungCounty',
+          66000: 'taichungCity',
+          67000: 'tainanCity',
+          63000: 'taipeiCity',
+          10014: 'taitungCounty',
+          68000: 'taoyuanCity',
+          10002: 'yilanCounty',
+          10009: 'yunlinCounty',
+        },
       },
-      {
-        // level 1 county
-        mapJson: 'tw_county_63000.topojson',
-        electionDatas: 'councilmen_county_63000.json',
+      map: {
+        folderNames: {
+          0: null, // councilMember has no country level file
+          1: 'county',
+          2: 'town',
+        },
+        fileNames: {
+          0: null, // councilMember has no country level file
+          1: '',
+          2: '',
+        },
       },
-      {
-        // level 2 constituency
-        mapJson: 'tw_town_63000010.topojson',
-        electionDatas: 'councilmen_constituency_63000010.json',
-      },
-      {
-        // level 3 village
-        mapJson: 'tw_vill_63000010010.topojson',
-        electionDatas: null,
-      },
-    ],
+    },
   },
   {
     electionType: 'referendum',
@@ -261,6 +288,20 @@ const defaultElectionMapData = elections.reduce((obj, election) => {
   return obj
 }, {})
 
+const defaultEvcData = {
+  // there is only one mayor evcData for all counties
+  mayor: null,
+  // there are lots councilMember evcData for each county
+  councilMember: null,
+  /*
+  {
+    [63000]: data
+  }
+  */
+  // there is only one mayor evcData for the country
+  referendum: null,
+}
+
 export const useElectionData = (showLoading) => {
   const [election, setElection] = useState(elections[1])
   const [mapGeoJsons, setMapGeoJsons] = useState()
@@ -268,7 +309,7 @@ export const useElectionData = (showLoading) => {
   const [electionMapData, setElectionMapData] = useState({
     ...defaultElectionMapData,
   })
-  const [evcData, setEvcData] = useState()
+  const [evcData, setEvcData] = useState({ ...defaultEvcData })
   const [infoboxData, setInfoboxData] = useState({})
 
   const [mapObject, setMapObject] = useState(defaultMapObject)
@@ -313,7 +354,7 @@ export const useElectionData = (showLoading) => {
     async (election, mapObject, mapData, evcData, year) => {
       let newMapData = mapData
       let newEvcData = evcData
-      const { level } = mapObject
+      const { level, townId, countyId } = mapObject
       const { electionType } = election
       const newInfoboxData = {
         electionType,
@@ -370,14 +411,14 @@ export const useElectionData = (showLoading) => {
         case 'mayor':
           switch (level) {
             case 0: {
-              if (!newEvcData) {
+              if (!newEvcData[electionType]) {
                 try {
-                  const data = await fetchEVCData(
+                  const data = await fetchEVCData({
                     year,
                     electionType,
-                    election.meta.evc.district
-                  )
-                  newEvcData = data
+                    district: election.meta.evc.district,
+                  })
+                  newEvcData[electionType] = data
                 } catch (error) {
                   console.error(error)
                 }
@@ -430,7 +471,7 @@ export const useElectionData = (showLoading) => {
 
               if (!newMapData[2] || !newMapData[2][townId]) {
                 console.log('fetching town data')
-                const countyId = townId.slice(0, 5)
+                // const countyId = townId.slice(0, 5)
                 if (countyId !== '10020') {
                   try {
                     const data = await fetchMayorMapData({
@@ -468,7 +509,7 @@ export const useElectionData = (showLoading) => {
               try {
                 newInfoboxData.electionData = newMapData[2][
                   townId
-                ].districts.find(
+                ]?.districts.find(
                   (district) =>
                     district.county + district.town + district.vill ===
                     mapObject.activeId
@@ -523,40 +564,88 @@ export const useElectionData = (showLoading) => {
           }
 
           break
-        case 'councilman':
-          newMapData = {
-            0: null,
-            1: councilmanCounty,
-            2: CouncilmanConstituency,
-          }
-
+        case 'councilMember':
           switch (mapObject.level) {
             case 0:
               break
-            case 1:
-              newInfoboxData.electionData = newMapData[1]
-              break
-            case 2:
-              newInfoboxData.electionData = newMapData[1].districts.find(
-                (district) =>
-                  district.county + district.area + '0' === mapObject.activeId
-              )
-              // dev
-              if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = newMapData[1].districts[0]
+            case 1: {
+              if (
+                !newEvcData[electionType] ||
+                !newEvcData[electionType][countyId]
+              ) {
+                console.log(
+                  `load ${countyId} evcData`,
+                  newEvcData[electionType]
+                )
+                try {
+                  const data = await fetchEVCData({
+                    year,
+                    electionType,
+                    district: election.meta.evc.districts[countyId],
+                  })
+                  const countyEvcData = {
+                    ...newEvcData[electionType],
+                    [countyId]: data,
+                  }
+                  newEvcData[electionType] = countyEvcData
+                } catch (error) {}
               }
-              break
-            case 3:
-              newInfoboxData.electionData = newMapData[2].districts.find(
-                (district) =>
-                  district.county + district.area + '0' + district.vill ===
-                  mapObject.activeId
-              )
-              // dev
-              if (!newInfoboxData.electionData) {
-                newInfoboxData.electionData = newMapData[2].districts[0]
+              try {
+              } catch (error) {
+                console.error(error)
               }
+              if (!newMapData[1] || !newMapData[1][countyId]) {
+                console.log('fetching county data')
+                try {
+                  const data = await fetchCouncilMemberMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[level],
+                    fileName: countyId,
+                  })
+                  const countyData = { ...newMapData[1], [countyId]: data }
+                  newMapData = { ...newMapData, 1: countyData }
+                } catch (error) {
+                  console.error(error)
+                }
+              }
+              newInfoboxData.electionData =
+                newMapData[1] && newMapData[1][countyId]
               break
+            }
+            case 2: {
+              if (!newMapData[2] || !newMapData[2][townId]) {
+                console.log('fetching town data')
+                try {
+                  const data = await fetchCouncilMemberMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[level],
+                    fileName: townId,
+                  })
+                  const townData = { ...newMapData[2], [townId]: data }
+                  newMapData = { ...newMapData, 2: townData }
+                } catch (error) {}
+              }
+              newInfoboxData.electionData =
+                newMapData[1] &&
+                newMapData[1][countyId]?.districts.find(
+                  (district) =>
+                    district.county + district.area + '0' === mapObject.activeId
+                )
+
+              break
+            }
+            case 3: {
+              newInfoboxData.electionData =
+                newMapData[2] &&
+                newMapData[2][townId]?.districts.find(
+                  (district) =>
+                    district.county + district.town + district.vill ===
+                    mapObject.activeId
+                )
+              break
+            }
 
             default:
               break
@@ -566,14 +655,14 @@ export const useElectionData = (showLoading) => {
         case 'referendum':
           switch (level) {
             case 0: {
-              if (!newEvcData) {
+              if (!newEvcData[electionType]) {
                 try {
-                  const data = await fetchEVCData(
+                  const data = await fetchEVCData({
                     year,
                     electionType,
-                    election.meta.evc.district
-                  )
-                  newEvcData = data
+                    district: election.meta.evc.district,
+                  })
+                  newEvcData[electionType] = data
                 } catch (error) {
                   console.error(error)
                 }
@@ -701,7 +790,7 @@ export const useElectionData = (showLoading) => {
     setElectionMapData({ ...defaultElectionMapData })
     setMapObject(defaultMapObject)
     setInfoboxData({})
-    setEvcData()
+    setEvcData({ ...defaultEvcData })
     showLoading(true)
   }
 
@@ -777,19 +866,19 @@ export const useElectionData = (showLoading) => {
       const { level, activeId } = mapObject
       const newMapData = { ...defaultMapData }
       const { electionType } = election
-      let newEvcData
+      let newEvcData = { ...defaultEvcData }
       for (let currentLevel = 0; currentLevel <= level; currentLevel++) {
         switch (electionType) {
           case 'mayor': {
             switch (currentLevel) {
               case 0: {
                 try {
-                  const data = await fetchEVCData(
+                  const data = await fetchEVCData({
                     year,
                     electionType,
-                    election.meta.evc.district
-                  )
-                  newEvcData = data
+                    district: election.meta.evc.district,
+                  })
+                  newEvcData[electionType] = data
                 } catch (error) {
                   console.error(error)
                 }
@@ -846,12 +935,70 @@ export const useElectionData = (showLoading) => {
             }
             break
           }
+          case 'councilMember': {
+            switch (currentLevel) {
+              case 0: {
+                break
+              }
+              case 1: {
+                const countyId = activeId.slice(0, 5)
+                try {
+                  const data = await fetchEVCData({
+                    year,
+                    electionType,
+                    district: election.meta.evc.districts[countyId],
+                  })
+                  const countyEvcData = { [countyId]: data }
+                  newEvcData[electionType] = countyEvcData
+                } catch (error) {
+                  console.error(error)
+                }
+                try {
+                  const data = await fetchCouncilMemberMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[currentLevel],
+                    fileName: countyId,
+                  })
+                  const countyData = { ...newMapData[1], [countyId]: data }
+                  newMapData[1] = countyData
+                } catch (error) {
+                  console.error(error)
+                }
+                break
+              }
+              case 2: {
+                const townId = activeId.slice(0, 8)
+                try {
+                  const data = await fetchCouncilMemberMapData({
+                    electionType,
+                    year,
+                    folderName: election.meta.map.folderNames[currentLevel],
+                    fileName: townId,
+                  })
+                  const townData = { ...newMapData[2], [townId]: data }
+                  newMapData[2] = townData
+                } catch (error) {
+                  console.error(error)
+                }
+                break
+              }
+
+              default:
+                break
+            }
+            break
+          }
           case 'referendum': {
             switch (currentLevel) {
               case 0: {
                 try {
-                  const data = await fetchEVCData(year, electionType, 'all')
-                  newEvcData = data
+                  const data = await fetchEVCData({
+                    year,
+                    electionType,
+                    district: election.meta.evc.district,
+                  })
+                  newEvcData[electionType] = data
                 } catch (error) {
                   console.error(error)
                 }
@@ -948,6 +1095,18 @@ export const useElectionData = (showLoading) => {
   //   mapObject
   // )
 
+  let outputEvcData
+  if (election.electionType === 'councilMember') {
+    console.log('evcData', evcData)
+    outputEvcData =
+      evcData[election.electionType] &&
+      evcData[election.electionType][mapObject.activeId.slice(0, 5)]
+  } else {
+    console.log('evcData', evcData)
+
+    outputEvcData = evcData[election.electionType]
+  }
+
   return {
     electionNamePairs: elections.map(({ electionType, electionName }) => ({
       electionType,
@@ -957,7 +1116,7 @@ export const useElectionData = (showLoading) => {
     election,
     mapData,
     infoboxData,
-    evcData,
+    evcData: outputEvcData,
     mapObject,
     setMapObject: onMapObjectChange,
     mapGeoJsons,

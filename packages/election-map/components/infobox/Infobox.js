@@ -240,7 +240,7 @@ const LegislatorInfobox = ({ level, data }) => {
   )
 }
 
-const CouncilmanDistrict = styled.div`
+const CouncilMemberDistrict = styled.div`
   padding: 20px 0;
   border-top: 1px solid #000;
   &:first-of-type {
@@ -251,17 +251,17 @@ const CouncilmanDistrict = styled.div`
     padding-bottom: unset;
   }
 `
-const CouncilmanConstituency = styled.div`
+const CouncilMemberConstituency = styled.div`
   font-size: 17px;
   color: gray;
 `
 
-const CouncilmanTitle = styled.div`
+const CouncilMemberTitle = styled.div`
   margin-bottom: 20px;
   font-weight: 700;
 `
 
-const CouncilmanCandidate = styled.div`
+const CouncilMemberCandidate = styled.div`
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -269,51 +269,51 @@ const CouncilmanCandidate = styled.div`
   ${({ elected }) => elected && 'color: green;'}
 `
 
-const CouncilmanInfobox = ({ level, data }) => {
-  if (level === 0) {
+const CouncilMemberInfobox = ({ level, data }) => {
+  // if (level === 0) {
+  //   return (
+  //     <InfoboxScrollWrapper>
+  //       <InfoboxText>點擊地圖看更多資料</InfoboxText>
+  //     </InfoboxScrollWrapper>
+  //   )
+  // }
+
+  if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
-        <InfoboxText>點擊地圖看更多資料</InfoboxText>
+        <InfoboxText>{data}</InfoboxText>
       </InfoboxScrollWrapper>
-    )
-  }
-  if (!data) {
-    return (
-      <InfoboxWrapper>
-        <InfoboxScrollWrapper>
-          <InfoboxText>
-            目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出
-          </InfoboxText>
-        </InfoboxScrollWrapper>
-      </InfoboxWrapper>
     )
   }
 
   if (level === 1) {
     const { districts } = data
+    console.log('districts', data)
     return (
       <InfoboxScrollWrapper>
         {districts.map(({ county, area, range, candidates, profRate }) => {
-          const councilmandPrefix = county + area
+          const councilMemberdPrefix = county + area
           const constituency = range.split(' ')[1]
           const candidateComps = candidates.map((candidate) => {
             const elected = candidate.candVictor === '*'
             return (
-              <CouncilmanCandidate
+              <CouncilMemberCandidate
                 elected={elected}
-                key={councilmandPrefix + candidate.candNo}
+                key={councilMemberdPrefix + candidate.candNo}
               >
                 {candidate.name} {candidate.party} {candidate.tksRate}%
                 {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
-              </CouncilmanCandidate>
+              </CouncilMemberCandidate>
             )
           })
           return (
-            <CouncilmanDistrict key={councilmandPrefix}>
-              <CouncilmanConstituency>{constituency}</CouncilmanConstituency>
-              <CouncilmanTitle>投票率 {profRate}%</CouncilmanTitle>
+            <CouncilMemberDistrict key={councilMemberdPrefix}>
+              <CouncilMemberConstituency>
+                {constituency}
+              </CouncilMemberConstituency>
+              <CouncilMemberTitle>投票率 {profRate}%</CouncilMemberTitle>
               {candidateComps}
-            </CouncilmanDistrict>
+            </CouncilMemberDistrict>
           )
         })}
       </InfoboxScrollWrapper>
@@ -321,21 +321,21 @@ const CouncilmanInfobox = ({ level, data }) => {
   }
 
   const { profRate, candidates, county, area } = data
-  const councilmandPrefix = county + area
+  const councilMemberdPrefix = county + area
 
   return (
     <InfoboxScrollWrapper>
-      <CouncilmanTitle>投票率 {profRate}%</CouncilmanTitle>
+      <CouncilMemberTitle>投票率 {profRate}%</CouncilMemberTitle>
       {candidates.map((candidate) => {
         const elected = candidate.candVictor === '*'
         return (
-          <CouncilmanCandidate
+          <CouncilMemberCandidate
             elected={elected}
-            key={councilmandPrefix + candidate.candNo}
+            key={councilMemberdPrefix + candidate.candNo}
           >
             {candidate.name} {candidate.party} {candidate.tksRate}%
             {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
-          </CouncilmanCandidate>
+          </CouncilMemberCandidate>
         )
       })}
     </InfoboxScrollWrapper>
@@ -435,7 +435,7 @@ const ReferendumInfobox = ({ data }) => {
 //   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
 //   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
 //   `,
-//   councilman: `
+//   councilMember: `
 //   ${constituency}
 //   投票率 ${profRate}
 //   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
@@ -448,6 +448,34 @@ const ReferendumInfobox = ({ data }) => {
 //   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
 //   `,
 // }
+const councilMemberInfoboxData = (data, level) => {
+  console.log('typeof level', typeof level)
+  if (level === 0) {
+    return '點擊地圖看更多資料'
+  }
+
+  if (!data) {
+    console.log(`no data for councilMember infobox in level ${level}`, data)
+    return '無資料'
+  }
+  if (!data.profRate && level === 3) {
+    console.log(
+      `no profRate for running councilMember infobox in level ${level}`,
+      data
+    )
+    return '目前無資料，以投開票所為單位的資料中選會在選舉後才會釋出'
+  }
+
+  if (!data.profRate) {
+    console.error(
+      `data error for councilMember infoboxData in level ${level}`,
+      data
+    )
+    return '資料錯誤，請確認'
+  }
+
+  return data
+}
 
 export const Infobox = ({ data }) => {
   const { electionType, level, electionData } = data
@@ -465,9 +493,9 @@ export const Infobox = ({ data }) => {
       infobox = <LegislatorInfobox level={level} data={electionData} />
       break
     }
-    case 'councilman': {
-      console.log('infobox councilman')
-      infobox = <CouncilmanInfobox level={level} data={electionData} />
+    case 'councilMember': {
+      const data = councilMemberInfoboxData(electionData, level)
+      infobox = <CouncilMemberInfobox level={level} data={data} />
       break
     }
     case 'referendum':

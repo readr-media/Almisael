@@ -1,4 +1,4 @@
-import { mockData as councilmanSeats } from '../../mock-datas/seats-distribution/councilmen/2018_councilmen_county_63000'
+import { mockData as councilMemberSeats } from '../../mock-datas/seats-distribution/councilmen/2018_councilmen_county_63000'
 import styled from 'styled-components'
 import { partiesColor } from '../../consts/colors'
 import { useState } from 'react'
@@ -82,7 +82,7 @@ export const SeatsChart = () => {
             {hoverParty.party}
           </SeatInfo>
         )}
-        {councilmanSeats.parties.reduce((total, party) => {
+        {councilMemberSeats.parties.reduce((total, party) => {
           let color = '#d9d9d9'
           const partyColor = partiesColor.find(
             (partyColor) => partyColor.name === party.short

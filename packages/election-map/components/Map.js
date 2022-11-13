@@ -205,6 +205,10 @@ export const Map = ({
 
   // eslint-disable-next-line no-unused-vars
   const getCountyColor = (countyCode) => {
+    if (electionType === 'councilMember') {
+      return '#555'
+    }
+
     if (!electionData[0]) {
       return defaultColor
     }
@@ -224,9 +228,6 @@ export const Map = ({
       } else {
         return defaultColor
       }
-    }
-    if (electionType === 'councilman') {
-      return '#555'
     }
 
     const countyCandidates = electionData[0]?.districts?.find(
@@ -249,6 +250,10 @@ export const Map = ({
   const getTownColor = (townCode) => {
     const countyCode = townCode.slice(0, -3)
 
+    if (electionType === 'councilMember') {
+      return '#444'
+    }
+
     if (!electionData[1]) {
       return defaultColor
     }
@@ -268,10 +273,6 @@ export const Map = ({
       } else {
         return defaultColor
       }
-    }
-
-    if (electionType === 'councilman') {
-      return '#444'
     }
 
     if (electionType === 'legislator') {
@@ -312,6 +313,10 @@ export const Map = ({
   // eslint-disable-next-line no-unused-vars
   const getVillageColor = (villCode) => {
     const townCode = villCode.slice(0, -3)
+    if (electionType === 'councilMember') {
+      return '#333'
+    }
+
     if (!electionData[2]) {
       return defaultColor
     }
@@ -332,10 +337,6 @@ export const Map = ({
       } else {
         return defaultColor
       }
-    }
-
-    if (electionType === 'councilman') {
-      return '#333'
     }
 
     if (electionType === 'legislator') {
