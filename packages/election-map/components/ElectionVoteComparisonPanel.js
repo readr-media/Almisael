@@ -6,7 +6,7 @@ const ElectionVotesComparison = evc.ReactComponent.EVC
 
 const StyledEVC = styled(ElectionVotesComparison)`
   position: absolute;
-  width: 320px;
+  width: 320px !important;
   top: 76px;
   right: 20px;
   border: 1px solid #000;
