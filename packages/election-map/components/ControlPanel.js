@@ -1,15 +1,12 @@
 import styled from 'styled-components'
 import { electionMapColor } from '../consts/colors'
+import { ElectionSelect } from './ElectionSelect'
 
 const Wrapper = styled.div`
   width: 320px;
   & * {
     pointer-events: auto;
   }
-`
-
-const ElectionSelect = styled.select`
-  margin: 92px 0 0 12px;
 `
 
 const MapButtonWrapper = styled.div`
@@ -63,6 +60,10 @@ const Location = styled.span`
   }
 `
 
+const StyledElectionSelect = styled(ElectionSelect)`
+  margin: 92px 0 0 12px;
+`
+
 export const ControlPanel = ({
   electionNamePairs,
   onElectionChange,
@@ -79,22 +80,11 @@ export const ControlPanel = ({
   if (!locations.length) locations.push('全國')
   return (
     <Wrapper>
-      <ElectionSelect
-        value={election.electionType}
-        name="election-type"
-        onChange={(e) => {
-          onElectionChange(e.target.value)
-        }}
-      >
-        {electionNamePairs.map((electionNamePair) => (
-          <option
-            value={electionNamePair.electionType}
-            key={electionNamePair.electionType}
-          >
-            {electionNamePair.electionName}
-          </option>
-        ))}
-      </ElectionSelect>
+      <StyledElectionSelect
+        electionType={election.electionType}
+        electionNamePairs={electionNamePairs}
+        onElectionChange={onElectionChange}
+      />
       <MapButtonWrapper>
         <MapLevelBackButton
           disabled={mapObject.level === 0}
