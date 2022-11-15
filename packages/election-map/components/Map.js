@@ -4,6 +4,7 @@ import {
   getGradiantPartyColor,
   getGradiantReferendumColor,
   defaultColor,
+  electionMapColor,
 } from '../consts/colors'
 
 import styled from 'styled-components'
@@ -387,7 +388,7 @@ export const Map = ({
         id={`${id}-id-background`}
         width={width}
         height={height}
-        fill="#FFF1DB"
+        fill={electionMapColor}
         onClick={nonLandClicked}
       />
       <g id={`${id}-control`}>

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { electionMapColor } from '../consts/colors'
 
 export const GlobalStyles = createGlobalStyle`
   *, *:before, *:after {
@@ -8,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 16px;
     margin: 0;
+    background-color: ${electionMapColor};
   }
   a {
     color: inherit;

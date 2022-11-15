@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import { electionMapColor } from '../consts/colors'
 
 const Button = styled.button`
   display: block;
   margin: 20px 0 0;
   border: 1px solid #000;
   background-color: #686868;
-  color: #fff1db;
+  color: ${electionMapColor};
   border-radius: 8px;
   line-height: 23px;
   text-align: center;

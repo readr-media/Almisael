@@ -147,3 +147,5 @@ export const getGradiantReferendumColor = (agree, percent) => {
   const color = agree ? agreeColor.color : disagreeColor.color
   return rgbaToRgb(hexToRgba(color, getAlphaByPercent(percent)))
 }
+
+export const electionMapColor = '#fff1db'

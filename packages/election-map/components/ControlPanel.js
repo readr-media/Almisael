@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { electionMapColor } from '../consts/colors'
 
 const Wrapper = styled.div`
   width: 320px;
@@ -18,7 +19,7 @@ const MapButtonWrapper = styled.div`
 const MapLevelBackButton = styled.button`
   border: 1px solid #000;
   background-color: #686868;
-  color: #fff1db;
+  color: ${electionMapColor};
   border-radius: 8px;
   line-height: 23px;
   text-align: center;
@@ -35,7 +36,7 @@ const MapLevelResetButton = styled.button`
   margin-left: 4px;
   border: 1px solid #000;
   background-color: #686868;
-  color: #fff1db;
+  color: ${electionMapColor};
   border-radius: 8px;
   line-height: 23px;
   text-align: center;

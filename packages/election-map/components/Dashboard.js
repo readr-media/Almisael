@@ -8,10 +8,11 @@ import { MapCompareButton } from './MapCompareButton'
 import { useElectionData } from '../hook/useElectinData'
 import { SpinningModal } from './SpinningModal'
 import ElectionVoteComparisonPanel from './ElectionVoteComparisonPanel'
+import { electionMapColor } from '../consts/colors'
 
 const Wrapper = styled.div`
   position: relative;
-  background-color: #fff1db;
+  background-color: ${electionMapColor};
 `
 
 const PanelsWrapper = styled.div`
