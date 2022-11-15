@@ -99,6 +99,8 @@ const teamMembers = [
 export const LandingPage = () => {
   const [show, setShow] = useState(false)
 
+  // since the showing logic is binding to whether the tutorial has shown, so we check the localstorage again
+  // maybe in the future the condition will not be the same (to show landing page and to show tutorial)
   useEffect(() => {
     if (!localStorage.finishTutorial) {
       setShow(true)

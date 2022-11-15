@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
@@ -74,13 +74,7 @@ const TouchLayer = styled.div`
   z-index: 2;
 `
 
-export const Tutorial = ({ mapData, onClick }) => {
-  const [show, setShow] = useState(false)
-  useEffect(() => {
-    if (!localStorage.finishTutorial) {
-      setShow(true)
-    }
-  }, [])
+export const Tutorial = ({ mapData, onClick, show }) => {
   useEffect(() => {
     if (show && mapData) {
       setTimeout(() => {
@@ -92,8 +86,6 @@ export const Tutorial = ({ mapData, onClick }) => {
       }, 300)
     }
   }, [mapData, show])
-
-  if (!show) return <></>
 
   return (
     <>
@@ -116,7 +108,6 @@ export const Tutorial = ({ mapData, onClick }) => {
       <TouchLayer
         onClick={() => {
           localStorage.finishTutorial = true
-          setShow(false)
           onClick()
         }}
       />

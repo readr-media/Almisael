@@ -320,6 +320,7 @@ const elections = [
   },
 ]
 
+const defaultElectionType = 'mayor'
 const defaultMapObject = {
   level: 0,
   currentFeature: null,
@@ -355,9 +356,9 @@ const defaultEvcData = {
   referendum: null,
 }
 
-export const useElectionData = (showLoading) => {
+export const useElectionData = (showLoading, showTutorial) => {
   const [election, setElection] = useState(
-    elections.find((election) => election.electionType === 'councilMember')
+    elections.find((election) => election.electionType === defaultElectionType)
   )
   const [mapGeoJsons, setMapGeoJsons] = useState()
 
@@ -799,17 +800,20 @@ export const useElectionData = (showLoading) => {
     [showLoading]
   )
 
-  const onElectionChange = (electionType) => {
-    setElection(
-      elections.find((election) => election.electionType === electionType)
-    )
-    setElectionMapData({ ...defaultElectionMapData })
-    setMapObject(defaultMapObject)
-    setInfoboxData({})
-    setEvcData({ ...defaultEvcData })
-    setSeatData()
-    showLoading(true)
-  }
+  const onElectionChange = useCallback(
+    (electionType) => {
+      setElection(
+        elections.find((election) => election.electionType === electionType)
+      )
+      setElectionMapData({ ...defaultElectionMapData })
+      setMapObject(defaultMapObject)
+      setInfoboxData({})
+      setEvcData({ ...defaultEvcData })
+      setSeatData()
+      showLoading(true)
+    },
+    [showLoading]
+  )
 
   const onMapObjectChange = async (newMapObject = defaultMapObject) => {
     // fetch data before map scales, useEffect will called prepareData again,
@@ -1114,6 +1118,12 @@ export const useElectionData = (showLoading) => {
     election,
     year,
   ])
+
+  useEffect(() => {
+    if (showTutorial) {
+      onElectionChange('councilMember')
+    }
+  }, [showTutorial, onElectionChange])
 
   // console.log(
   //   'election\n',

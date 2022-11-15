@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { ControlPanel } from './ControlPanel'
 import { MapContainer } from './MapContainer'
@@ -31,6 +31,7 @@ const PanelsWrapper = styled.div`
 `
 
 export const Dashboard = () => {
+  const [showTutorial, setShowTutorial] = useState(false)
   const [compareMode, setCompareMode] = useState(false)
   const [loading, setLoading] = useState(false)
   const loadingTimout = useRef(null)
@@ -49,6 +50,12 @@ export const Dashboard = () => {
     }
   }, [])
 
+  useEffect(() => {
+    if (!localStorage.finishTutorial) {
+      setShowTutorial(true)
+    }
+  }, [])
+
   const {
     electionNamePairs,
     onElectionChange,
@@ -62,7 +69,7 @@ export const Dashboard = () => {
     mapGeoJsons,
     year,
     onTutorialEnd,
-  } = useElectionData(showLoading)
+  } = useElectionData(showLoading, showTutorial)
 
   return (
     <Wrapper>
@@ -100,7 +107,16 @@ export const Dashboard = () => {
         electionType={election.electionType}
         mapData={mapGeoJsons}
       />
-      <Tutorial mapData={mapGeoJsons} onClick={onTutorialEnd} />
+      {showTutorial && (
+        <Tutorial
+          show={showTutorial}
+          mapData={mapGeoJsons}
+          onClick={() => {
+            setShowTutorial(false)
+            onTutorialEnd()
+          }}
+        />
+      )}
     </Wrapper>
   )
 }
