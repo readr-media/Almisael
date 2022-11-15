@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     overflow: hidden;
     position: fixed;
+    width: 100vw;
   }
 `
 
@@ -99,20 +100,17 @@ export const LandingPage = () => {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
-    if (!localStorage.showed) {
+    if (!localStorage.finishTutorial) {
       setShow(true)
     }
   }, [])
 
   const onEnterClickedHandler = () => {
-    // localStorage.setItem('showed', true)
     setShow(false)
   }
 
-  console.log(show)
-  if (!show) {
-    return <></>
-  }
+  if (!show) return <></>
+
   return (
     <>
       <GlobalStyle />

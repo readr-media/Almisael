@@ -9,6 +9,7 @@ import { useElectionData } from '../hook/useElectinData'
 import { SpinningModal } from './SpinningModal'
 import ElectionVoteComparisonPanel from './ElectionVoteComparisonPanel'
 import { electionMapColor } from '../consts/colors'
+import { Tutorial } from './Tutorial'
 
 const Wrapper = styled.div`
   position: relative;
@@ -60,6 +61,7 @@ export const Dashboard = () => {
     setMapObject,
     mapGeoJsons,
     year,
+    onTutorialEnd,
   } = useElectionData(showLoading)
 
   return (
@@ -98,6 +100,7 @@ export const Dashboard = () => {
         electionType={election.electionType}
         mapData={mapGeoJsons}
       />
+      <Tutorial mapData={mapGeoJsons} onClick={onTutorialEnd} />
     </Wrapper>
   )
 }

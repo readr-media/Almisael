@@ -356,7 +356,9 @@ const defaultEvcData = {
 }
 
 export const useElectionData = (showLoading) => {
-  const [election, setElection] = useState(elections[1])
+  const [election, setElection] = useState(
+    elections.find((election) => election.electionType === 'councilMember')
+  )
   const [mapGeoJsons, setMapGeoJsons] = useState()
 
   const [electionMapData, setElectionMapData] = useState({
@@ -520,7 +522,6 @@ export const useElectionData = (showLoading) => {
               case 2:
                 if (!newMapData[2] || !newMapData[2][townId]) {
                   console.log('fetching town data')
-                  // const countyId = townId.slice(0, 5)
                   if (countyId !== '10020') {
                     try {
                       const data = await fetchMayorMapData({
@@ -610,10 +611,6 @@ export const useElectionData = (showLoading) => {
                 !newEvcData[electionType] ||
                 !newEvcData[electionType][countyId]
               ) {
-                console.log(
-                  `load ${countyId} evcData`,
-                  newEvcData[electionType]
-                )
                 try {
                   const data = await fetchCouncilMemberEvcData({
                     year,
@@ -762,7 +759,6 @@ export const useElectionData = (showLoading) => {
                     fileName: townId,
                     number: 'F1',
                   })
-                  console.log('data', data)
                   const townData = { ...newMapData[2], [townId]: data }
                   newMapData = { ...newMapData, 2: townData }
                 } catch (error) {
@@ -803,8 +799,7 @@ export const useElectionData = (showLoading) => {
     [showLoading]
   )
 
-  const onElectionChange = (e) => {
-    const electionType = e.target.value
+  const onElectionChange = (electionType) => {
     setElection(
       elections.find((election) => election.electionType === electionType)
     )
@@ -838,6 +833,10 @@ export const useElectionData = (showLoading) => {
     setSeatData(newSeatData)
     setMapObject(newMapObject)
     showLoading(false)
+  }
+
+  const onTutorialEnd = () => {
+    onElectionChange('mayor')
   }
 
   useEffect(() => {
@@ -1157,5 +1156,6 @@ export const useElectionData = (showLoading) => {
     setMapObject: onMapObjectChange,
     mapGeoJsons,
     year,
+    onTutorialEnd,
   }
 }

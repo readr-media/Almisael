@@ -82,7 +82,9 @@ export const ControlPanel = ({
       <ElectionSelect
         value={election.electionType}
         name="election-type"
-        onChange={onElectionChange}
+        onChange={(e) => {
+          onElectionChange(e.target.value)
+        }}
       >
         {electionNamePairs.map((electionNamePair) => (
           <option
