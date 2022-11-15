@@ -30,6 +30,16 @@ const CollapseButtonIcon = styled.div`
   justify-content: center;
 `
 
+const CollapseButtonSpecialTitle = styled.div`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
 const CollapseContent = styled.div`
   max-height: ${({ collapse, scrollHeight }) =>
     collapse ? `${scrollHeight}px` : '0'};
@@ -71,7 +81,13 @@ const upTriangle = (
   </svg>
 )
 
-export const CollapsibleWrapper = ({ children, title, className }) => {
+export const CollapsibleWrapper = ({
+  children,
+  title,
+  className,
+  preventCollapse,
+  centerTitle,
+}) => {
   const [collapse, setCollapse] = useState(true)
   const [scrollHeight, setScrollHeight] = useState(0)
   const buttonRef = useCallback((node) => {
@@ -90,20 +106,19 @@ export const CollapsibleWrapper = ({ children, title, className }) => {
   return (
     <Wrapper className={className} collapse={collapse}>
       <CollapseButton
+        className="collapseBtn"
         onClick={() => {
-          setCollapse((v) => !v)
+          !preventCollapse && setCollapse((v) => !v)
         }}
         ref={buttonRef}
       >
         <CollapseButtonTitle>{title}</CollapseButtonTitle>
-        <CollapseButtonIcon
-          src={
-            collapse ? '/images/down_triangle.svg' : '/images/up_triangle.svg'
-          }
-        />
         <CollapseButtonIcon>
-          {collapse ? downTriangle : upTriangle}
+          {preventCollapse ? null : collapse ? downTriangle : upTriangle}
         </CollapseButtonIcon>
+        {centerTitle && (
+          <CollapseButtonSpecialTitle>{centerTitle}</CollapseButtonSpecialTitle>
+        )}
       </CollapseButton>
       <CollapseContent collapse={collapse} scrollHeight={scrollHeight}>
         {children}

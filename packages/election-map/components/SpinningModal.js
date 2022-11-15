@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const SpinningWrapper = styled.div`
-  z-index: 1000;
+  z-index: 10;
   position: fixed;
   width: 100vw;
   height: 100vh;
