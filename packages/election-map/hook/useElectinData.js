@@ -21,14 +21,33 @@ const fetchSeatData = async ({ electionType, year, folderName, fileName }) => {
   return data
 }
 
-const fetchEVCData = async ({ year, electionType, district }) => {
-  const dataLoader = new DataLoader({
-    apiUrl: gcsBaseUrl,
+const fetchMayorEvcData = async ({ year }) => {
+  const loader = new DataLoader({ version: 'v2' })
+  const data = await loader.loadMayorData({
     year,
-    type: electionType,
-    district,
   })
-  return await dataLoader.loadData()
+  return data
+}
+
+const fetchReferendumEvcData = async ({ year }) => {
+  const loader = new DataLoader({ version: 'v2' })
+  const data = await loader.loadReferendumData({
+    year,
+  })
+  return data
+}
+
+const fetchCouncilMemberEvcData = async ({ year, district }) => {
+  console.warn('year', year)
+  const loader = new DataLoader({ version: 'v2' })
+  const data = await loader.loadCouncilMemberData({
+    year,
+    district,
+    includes: ['plainIndigenous', 'mountainIndigenous'],
+    // includes: ['indigenous', 'plainIndigenous', 'mountainIndigenous'],
+  })
+
+  return data
 }
 
 const fetchMayorMapData = async ({
@@ -355,11 +374,12 @@ export const useElectionData = (showLoading) => {
 
   const prepareGeojsons = useCallback(async () => {
     const twCountiesJson =
-      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan-map-counties.json'
+      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan_map_counties.json'
     const twTownsJson =
-      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan-map-towns.json'
+      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan_map_towns.json'
     const twVillagesJson =
-      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan-map-villages.json'
+      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan_map_villages_20220902.json'
+
     try {
       const responses = await Promise.allSettled([
         json(twCountiesJson),
@@ -452,10 +472,8 @@ export const useElectionData = (showLoading) => {
               case 0:
                 if (!newEvcData[electionType]) {
                   try {
-                    const data = await fetchEVCData({
+                    const data = await fetchMayorEvcData({
                       year,
-                      electionType,
-                      district: election.meta.evc.district,
                     })
                     newEvcData[electionType] = data
                   } catch (error) {
@@ -597,9 +615,8 @@ export const useElectionData = (showLoading) => {
                   newEvcData[electionType]
                 )
                 try {
-                  const data = await fetchEVCData({
+                  const data = await fetchCouncilMemberEvcData({
                     year,
-                    electionType,
                     district: election.meta.evc.districts[countyId],
                   })
                   const countyEvcData = {
@@ -686,10 +703,8 @@ export const useElectionData = (showLoading) => {
             case 0:
               if (!newEvcData[electionType]) {
                 try {
-                  const data = await fetchEVCData({
+                  const data = await fetchReferendumEvcData({
                     year,
-                    electionType,
-                    district: election.meta.evc.district,
                   })
                   newEvcData[electionType] = data
                 } catch (error) {
@@ -895,10 +910,8 @@ export const useElectionData = (showLoading) => {
             switch (level) {
               case 0:
                 try {
-                  const data = await fetchEVCData({
+                  const data = await fetchMayorEvcData({
                     year,
-                    electionType,
-                    district: election.meta.evc.district,
                   })
                   newEvcData[electionType] = data
                 } catch (error) {
@@ -963,9 +976,8 @@ export const useElectionData = (showLoading) => {
                 break
               case 1:
                 try {
-                  const data = await fetchEVCData({
+                  const data = await fetchCouncilMemberEvcData({
                     year,
-                    electionType,
                     district: election.meta.evc.districts[countyId],
                   })
                   const countyEvcData = { [countyId]: data }
@@ -1021,10 +1033,8 @@ export const useElectionData = (showLoading) => {
             switch (level) {
               case 0:
                 try {
-                  const data = await fetchEVCData({
+                  const data = await fetchReferendumEvcData({
                     year,
-                    electionType,
-                    district: election.meta.evc.district,
                   })
                   newEvcData[electionType] = data
                 } catch (error) {
