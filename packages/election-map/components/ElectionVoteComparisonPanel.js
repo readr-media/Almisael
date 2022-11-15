@@ -23,7 +23,17 @@ const StyledEVC = styled(ElectionVotesComparison)`
 `
 
 const ElectionVoteComparisonPanel = ({ data }) => {
-  return <StyledEVC election={data} device="mobile" theme="electionModule" />
+  return (
+    <StyledEVC
+      election={data}
+      device="mobile"
+      theme="electionModule"
+      ui={{ disableTabs: true }}
+      onChange={(type, value) => {
+        console.log('evc onChange', type, value)
+      }}
+    />
+  )
 }
 
 export default memo(ElectionVoteComparisonPanel)

@@ -40,11 +40,11 @@ const fetchReferendumEvcData = async ({ year }) => {
 const fetchCouncilMemberEvcData = async ({ year, district }) => {
   console.warn('year', year)
   const loader = new DataLoader({ version: 'v2' })
-  const data = await loader.loadCouncilMemberData({
+  const data = await loader.loadCouncilMemberDataForElectionMapProject({
     year,
     district,
-    includes: ['plainIndigenous', 'mountainIndigenous'],
-    // includes: ['indigenous', 'plainIndigenous', 'mountainIndigenous'],
+    // includes: ['plainIndigenous', 'mountainIndigenous'],
+    includes: ['normal'],
   })
 
   return data
