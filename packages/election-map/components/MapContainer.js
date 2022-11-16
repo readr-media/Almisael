@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   margin-left: 368px;
   width: calc(100vw - 368px - 340px);
   height: 100vh;
-  position: relative;
+  position: fixed;
 `
 
 const defaultTooltip = {

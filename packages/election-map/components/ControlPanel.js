@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { electionMapColor } from '../consts/colors'
+import { ElectionRadio } from './ElectionRadio'
 import { ElectionSelect } from './ElectionSelect'
 
 const Wrapper = styled.div`
@@ -64,11 +65,18 @@ const StyledElectionSelect = styled(ElectionSelect)`
   margin: 92px 0 0 12px;
 `
 
+const StyledELectionRadio = styled(ElectionRadio)`
+  position: absolute;
+  bottom: ${({ expandMode }) => (expandMode ? `173px` : `73px`)};
+  right: 121px;
+`
+
 export const ControlPanel = ({
   electionNamePairs,
   onElectionChange,
   mapObject,
   election,
+  expandMode,
 }) => {
   const { countyName, townName, constituencyName, villageName } = mapObject
   const locations = [
@@ -114,6 +122,7 @@ export const ControlPanel = ({
           <Location key={i}>{location}</Location>
         ))}
       </LocationsWrapper>
+      <StyledELectionRadio expandMode={expandMode} />
     </Wrapper>
   )
 }
