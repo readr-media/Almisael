@@ -953,8 +953,8 @@ export const useElectionData = (showLoading, showTutorial) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShouldRefetch(true)
-      // }, 3 * 60 * 1000)
-    }, 6 * 1000)
+    }, 1 * 60 * 1000)
+    // }, 6 * 1000)
 
     return () => {
       clearInterval(interval)
