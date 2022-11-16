@@ -7,11 +7,12 @@ const ElectionVotesComparison = evc.ReactComponent.EVC
 const StyledEVC = styled(ElectionVotesComparison)`
   position: absolute;
   width: 320px !important;
+  max-height: 666px;
+  overflow: auto;
   top: 76px;
   right: 20px;
   border: 1px solid #000;
   border-radius: 12px;
-  overflow: hidden;
 
   header {
     border-top: unset;
