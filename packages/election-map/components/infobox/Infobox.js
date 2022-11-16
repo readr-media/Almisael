@@ -262,7 +262,6 @@ const CouncilMemberInfobox = ({ level, data }) => {
 
   if (level === 1) {
     const { districts } = data
-    console.log('districts', districts)
     return (
       <InfoboxScrollWrapper>
         {districts.map(({ county, area, range, candidates, profRate }) => {
@@ -350,6 +349,10 @@ const ReferendumTitle = styled.p`
 `
 
 const ReferendumPassWrapper = styled.span`
+  color: #5673da;
+`
+
+const ReferendumFailWrapper = styled.span`
   color: #ff8585;
 `
 
@@ -370,8 +373,12 @@ const ReferendumInfobox = ({ data }) => {
   return (
     <InfoboxScrollWrapper>
       <ReferendumTitle>
-        此案是否通過{' '}
-        {pass ? <ReferendumPassWrapper>是</ReferendumPassWrapper> : '否'}
+        此案是否通過
+        {pass ? (
+          <ReferendumPassWrapper>是</ReferendumPassWrapper>
+        ) : (
+          <ReferendumFailWrapper>否</ReferendumFailWrapper>
+        )}
         <br />
         投票率 {profRate}%
       </ReferendumTitle>
@@ -391,9 +398,9 @@ const ReferendumInfobox = ({ data }) => {
         <>
           <ReferendumCandidate>同意 {agreeRate}%</ReferendumCandidate>
           <ReferendumCandidate>
-            <ReferendumPassWrapper>
+            <ReferendumFailWrapper>
               不同意 {disagreeRate}%
-            </ReferendumPassWrapper>
+            </ReferendumFailWrapper>
           </ReferendumCandidate>
         </>
       )}
@@ -452,7 +459,7 @@ const referendumInfoboxData = (data, level) => {
     return '目前即時開票無村里資料'
   }
 
-  if (!data.profRate) {
+  if (data.profRate === null) {
     console.error(`data error for mayor infoboxData in level ${level}`, data)
     return '資料錯誤，請確認'
   }
@@ -479,7 +486,7 @@ const mayorInfoboxData = (data, level) => {
     return '目前即時開票無村里資料'
   }
 
-  if (!data.profRate) {
+  if (data.profRate === null) {
     console.error(`data error for mayor infoboxData in level ${level}`, data)
     return '資料錯誤，請確認'
   }

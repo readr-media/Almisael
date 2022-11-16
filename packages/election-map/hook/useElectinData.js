@@ -494,7 +494,6 @@ export const useElectionData = (showLoading, showTutorial) => {
                   }
                 }
                 if (!newMapData[0]) {
-                  console.log('fetching country data')
                   try {
                     const data = await fetchMayorMapData({
                       electionType,
@@ -510,8 +509,6 @@ export const useElectionData = (showLoading, showTutorial) => {
                 break
               case 1:
                 if (!newMapData[1] || !newMapData[1][countyId]) {
-                  console.log('fetching county data')
-
                   try {
                     const data = await fetchMayorMapData({
                       electionType,
@@ -532,7 +529,6 @@ export const useElectionData = (showLoading, showTutorial) => {
                 break
               case 2:
                 if (!newMapData[2] || !newMapData[2][townId]) {
-                  console.log('fetching town data')
                   if (countyId !== '10020') {
                     try {
                       const data = await fetchMayorMapData({
@@ -546,8 +542,6 @@ export const useElectionData = (showLoading, showTutorial) => {
                     } catch (error) {
                       console.error(error)
                     }
-                  } else {
-                    console.log('pass 嘉義市選舉資料')
                   }
                 }
 
@@ -657,7 +651,6 @@ export const useElectionData = (showLoading, showTutorial) => {
                 !newMapData[1][subType.key] ||
                 !newMapData[1][subType.key][countyId]
               ) {
-                console.log('fetching county data')
                 try {
                   const data = await fetchCouncilMemberMapData({
                     electionType,
@@ -689,7 +682,6 @@ export const useElectionData = (showLoading, showTutorial) => {
                 !newMapData[2][subType.key] ||
                 !newMapData[2][subType.key][townId]
               ) {
-                console.log('fetching town data')
                 try {
                   const data = await fetchCouncilMemberMapData({
                     electionType,
@@ -746,7 +738,6 @@ export const useElectionData = (showLoading, showTutorial) => {
                 }
               }
               if (!newMapData[0]) {
-                console.log('fetching country data')
                 try {
                   const data = await fetchReferendumMapData({
                     electionType,
@@ -765,7 +756,6 @@ export const useElectionData = (showLoading, showTutorial) => {
               break
             case 1:
               if (!newMapData[1] || !newMapData[1][countyId]) {
-                console.log('fetching county data')
                 try {
                   const data = await fetchReferendumMapData({
                     electionType,
@@ -787,7 +777,6 @@ export const useElectionData = (showLoading, showTutorial) => {
               break
             case 2:
               if (!newMapData[2] || !newMapData[2][townId]) {
-                console.log('fetching town data')
                 try {
                   const data = await fetchReferendumMapData({
                     electionType,
@@ -1033,7 +1022,6 @@ export const useElectionData = (showLoading, showTutorial) => {
                     district: election.meta.evc.districts[countyId],
                     type: subType.key,
                   })
-                  console.log('refetch evcData', data)
                   const countyEvcData = { [countyId]: data }
                   newEvcData[electionType] = countyEvcData
                 } catch (error) {

@@ -116,7 +116,7 @@ export const Dashboard = () => {
             setCompareMode((v) => !v)
           }}
         />
-        {evcData?.districts?.length && (
+        {(evcData?.districts?.length || evcData?.propositions?.length) && (
           <ElectionVoteComparisonPanel data={evcData} />
         )}
       </PanelsWrapper>

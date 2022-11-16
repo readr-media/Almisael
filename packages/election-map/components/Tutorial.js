@@ -1,13 +1,5 @@
 import { useEffect } from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    overflow: hidden;
-    position: fixed;
-    width: 100vw;
-  }
-`
+import styled from 'styled-components'
 
 const DarkLayer = styled.div`
   position: absolute;
@@ -89,7 +81,6 @@ export const Tutorial = ({ mapData, onClick, show }) => {
 
   return (
     <>
-      <GlobalStyle />
       <DarkLayer></DarkLayer>
       <HintLayer>
         <InfoboxHint>
