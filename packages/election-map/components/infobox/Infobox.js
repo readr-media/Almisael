@@ -262,7 +262,7 @@ const CouncilMemberInfobox = ({ level, data }) => {
 
   if (level === 1) {
     const { districts } = data
-    console.log('districts', data)
+    console.log('districts', districts)
     return (
       <InfoboxScrollWrapper>
         {districts.map(({ county, area, range, candidates, profRate }) => {
@@ -294,26 +294,54 @@ const CouncilMemberInfobox = ({ level, data }) => {
     )
   }
 
-  const { profRate, candidates, county, area } = data
-  const councilMemberdPrefix = county + area
+  const councilMembers = data.map((district) => {
+    const { candidates, profRate, type, county, town, area } = district
+    const councilMemberdPrefix = county + town + area + type
 
-  return (
-    <InfoboxScrollWrapper>
-      <CouncilMemberTitle>投票率 {profRate}%</CouncilMemberTitle>
-      {candidates.map((candidate) => {
-        const elected = candidate.candVictor === '*'
-        return (
-          <CouncilMemberCandidate
-            elected={elected}
-            key={councilMemberdPrefix + candidate.candNo}
-          >
-            {candidate.name} {candidate.party} {candidate.tksRate}%
-            {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
-          </CouncilMemberCandidate>
-        )
-      })}
-    </InfoboxScrollWrapper>
-  )
+    if (type === 'normal') {
+      return (
+        <div key={councilMemberdPrefix}>
+          <CouncilMemberTitle>投票率 {profRate}%</CouncilMemberTitle>
+          {candidates.map((candidate) => {
+            const elected = candidate.candVictor === '*'
+            return (
+              <CouncilMemberCandidate
+                elected={elected}
+                id={councilMemberdPrefix + candidate.candNo}
+                key={councilMemberdPrefix + candidate.candNo}
+              >
+                {candidate.name} {candidate.party} {candidate.tksRate}%
+                {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
+              </CouncilMemberCandidate>
+            )
+          })}
+        </div>
+      )
+    } else {
+      return (
+        <div key={councilMemberdPrefix}>
+          <CouncilMemberConstituency>
+            {type === 'plainIndigenous' ? '平地原住民' : '山地原住民'}
+          </CouncilMemberConstituency>
+          <CouncilMemberTitle>投票率 {profRate}%</CouncilMemberTitle>
+          {candidates.map((candidate) => {
+            const elected = candidate.candVictor === '*'
+            return (
+              <CouncilMemberCandidate
+                elected={elected}
+                key={councilMemberdPrefix + candidate.candNo}
+              >
+                {candidate.name} {candidate.party} {candidate.tksRate}%
+                {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
+              </CouncilMemberCandidate>
+            )
+          })}
+        </div>
+      )
+    }
+  })
+
+  return <InfoboxScrollWrapper>{councilMembers}</InfoboxScrollWrapper>
 }
 
 const ReferendumTitle = styled.p`
@@ -459,24 +487,21 @@ const mayorInfoboxData = (data, level) => {
   return data
 }
 
-const councilMemberInfoboxData = (data, level) => {
+const councilMemberInfoboxData = (data, level, subType) => {
   if (level === 0) {
     return '點擊地圖看更多資料'
   }
 
   if (!data) {
     console.log(`no data for councilMember infobox in level ${level}`, data)
-    return '無資料'
-  }
-  if (!data.profRate && level === 3) {
-    console.log(
-      `no profRate for running councilMember infobox in level ${level}`,
-      data
-    )
-    return '目前即時開票無村里資料'
+    if (subType.key === 'normal') {
+      return '此區域為原住民選區，請點擊「原住民/區域」切換檢視內容'
+    } else {
+      return '此區域並非原住民區域選區，起點擊「區域/原住民」切換檢視內容'
+    }
   }
 
-  if (!data.profRate) {
+  if (level === 1 && !data.districts) {
     console.error(
       `data error for councilMember infoboxData in level ${level}`,
       data
@@ -484,10 +509,26 @@ const councilMemberInfoboxData = (data, level) => {
     return '資料錯誤，請確認'
   }
 
+  if (level > 1 && data.length === 0) {
+    if (subType.key === 'normal') {
+      return '此區域為原住民選區，請點擊「原住民/區域」切換檢視內容'
+    } else {
+      return '此區域並非原住民區域選區，起點擊「區域/原住民」切換檢視內容'
+    }
+  }
+
+  if (level === 3 && data[0].profRate === null) {
+    console.log(
+      `no profRate for running councilMember infobox in level ${level}`,
+      data
+    )
+    return '目前即時開票無村里資料'
+  }
+
   return data
 }
 
-export const Infobox = ({ data }) => {
+export const Infobox = ({ data, subType }) => {
   const { electionType, level, electionData } = data
   let infobox
   switch (electionType) {
@@ -505,7 +546,7 @@ export const Infobox = ({ data }) => {
       break
     }
     case 'councilMember': {
-      const data = councilMemberInfoboxData(electionData, level)
+      const data = councilMemberInfoboxData(electionData, level, subType)
       infobox = <CouncilMemberInfobox level={level} data={data} />
       break
     }

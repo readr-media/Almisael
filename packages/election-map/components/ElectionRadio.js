@@ -1,8 +1,4 @@
-import { useState } from 'react'
 import styled from 'styled-components'
-
-const mockSelectedType = '區域'
-const mockSubTypes = ['區域', '原住民']
 
 const Wrapper = styled.div`
   display: flex;
@@ -56,26 +52,28 @@ const Radio = styled.span`
   }
 `
 
-export const ElectionRadio = ({
-  className,
-  // selectedType = mockSelectedType,
-  // subTypes = mockSubTypes,
-}) => {
-  const [selectedType, setSelectedType] = useState(mockSelectedType)
-  const subTypes = mockSubTypes
+export const ElectionRadio = ({ className, subTypeInfo }) => {
+  const { subType: selectedType, subTypes, onSubTypeChange } = subTypeInfo
 
   return (
     <Wrapper className={className}>
       {subTypes.map((subType) => (
-        <Label
-          key={subType}
-          onClick={() => {
-            setSelectedType(subType)
-          }}
-        >
-          <Input type="radio" checked={subType === selectedType} />
+        <Label key={subType.key}>
+          <Input
+            type="radio"
+            checked={subType.key === selectedType.key}
+            onChange={(e) => {
+              const newKey = e.target.value
+              const newSubType = subTypes.find(
+                (subType) => subType.key === newKey
+              )
+              console.log(newSubType)
+              onSubTypeChange(newSubType)
+            }}
+            value={subType.key}
+          />
           <Radio />
-          {subType}
+          {subType.name}
         </Label>
       ))}
     </Wrapper>

@@ -84,6 +84,7 @@ export const Dashboard = () => {
     mapGeoJsons,
     year,
     onTutorialEnd,
+    subTypeInfo,
   } = useElectionData(showLoading, showTutorial)
 
   const expandMode = !!seatData
@@ -98,8 +99,9 @@ export const Dashboard = () => {
           mapObject={mapObject}
           election={election}
           expandMode={expandMode}
+          subTypeInfo={subTypeInfo}
         />
-        <InfoboxPanel data={infoboxData} />
+        <InfoboxPanel data={infoboxData} subType={subTypeInfo?.subType} />
         <SeatsPanel
           meta={{
             ...election.meta.seat,
@@ -114,7 +116,9 @@ export const Dashboard = () => {
             setCompareMode((v) => !v)
           }}
         />
-        <ElectionVoteComparisonPanel data={evcData} />
+        {evcData?.districts?.length && (
+          <ElectionVoteComparisonPanel data={evcData} />
+        )}
       </PanelsWrapper>
       <MapContainer
         showLoading={showLoading}

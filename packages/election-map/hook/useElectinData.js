@@ -37,14 +37,16 @@ const fetchReferendumEvcData = async ({ year }) => {
   return data
 }
 
-const fetchCouncilMemberEvcData = async ({ year, district }) => {
+const fetchCouncilMemberEvcData = async ({ year, district, type }) => {
   console.warn('year', year)
   const loader = new DataLoader({ version: 'v2' })
   const data = await loader.loadCouncilMemberDataForElectionMapProject({
     year,
     district,
-    // includes: ['plainIndigenous', 'mountainIndigenous'],
-    includes: ['normal'],
+    includes:
+      type === 'normal'
+        ? ['normal']
+        : ['plainIndigenous', 'mountainIndigenous'],
   })
 
   return data
@@ -75,11 +77,11 @@ const fetchReferendumMapData = async ({
 const fetchCouncilMemberMapData = async ({
   electionType,
   year,
+  subTypeKey,
   folderName,
   fileName,
 }) => {
-  const gcsBaseUrl = 'https://whoareyou-gcs.readr.tw/elections'
-  const mapDataUrl = `${gcsBaseUrl}/${year}/${electionType}/map/${folderName}/${fileName}.json`
+  const mapDataUrl = `${gcsBaseUrl}/${year}/${electionType}/map/${folderName}/${subTypeKey}/${fileName}.json`
   const { data } = await axios.get(mapDataUrl)
   return data
 }
@@ -191,7 +193,10 @@ const elections = [
   },
   {
     electionType: 'councilMember',
-    subType: ['區域', '原住民'],
+    subTypes: [
+      { name: '區域', key: 'normal' },
+      { name: '原住民', key: 'indigenous' },
+    ],
     electionName: '縣市議員',
     years: [{ year: 2022 }, { year: 2018 }, { year: 2014 }, { year: 2010 }],
     seats: { wrapperTitle: '縣市議員席次圖', componentTitle: '議員選舉' },
@@ -372,8 +377,13 @@ export const useElectionData = (showLoading, showTutorial) => {
   const [mapObject, setMapObject] = useState(defaultMapObject)
   const [shouldRefetch, setShouldRefetch] = useState(false)
 
+  const [subType, setSubType] = useState(
+    election.subTypes?.find((subType) => subType.key === 'normal')
+  )
+
   const mapData = electionMapData[election.electionType]
   const year = election.years[0].year
+  const subTypes = election.subTypes
 
   const prepareGeojsons = useCallback(async () => {
     const twCountiesJson =
@@ -409,7 +419,7 @@ export const useElectionData = (showLoading, showTutorial) => {
   }, [])
 
   const prepareElectionData = useCallback(
-    async (election, mapObject, mapData, evcData, seatData, year) => {
+    async (election, mapObject, mapData, evcData, seatData, year, subType) => {
       let newMapData = mapData
       let newEvcData = evcData
       let newSeatData = seatData
@@ -616,6 +626,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                   const data = await fetchCouncilMemberEvcData({
                     year,
                     district: election.meta.evc.districts[countyId],
+                    type: subType.key,
                   })
                   const countyEvcData = {
                     ...newEvcData[electionType],
@@ -641,41 +652,65 @@ export const useElectionData = (showLoading, showTutorial) => {
                 }
               }
 
-              if (!newMapData[1] || !newMapData[1][countyId]) {
+              if (
+                !newMapData[1] ||
+                !newMapData[1][subType.key] ||
+                !newMapData[1][subType.key][countyId]
+              ) {
                 console.log('fetching county data')
                 try {
                   const data = await fetchCouncilMemberMapData({
                     electionType,
                     year,
+                    subTypeKey: subType.key,
                     folderName: election.meta.map.folderNames[level],
                     fileName: countyId,
                   })
-                  const countyData = { ...newMapData[1], [countyId]: data }
-                  newMapData = { ...newMapData, 1: countyData }
+                  const oldCountyData =
+                    newMapData[1] && newMapData[1][subType.key]
+                  const countyData = { ...oldCountyData, [countyId]: data }
+                  newMapData = {
+                    ...newMapData,
+                    1: { ...newMapData[1], [subType.key]: countyData },
+                  }
                 } catch (error) {
                   console.error(error)
                 }
               }
+
               newInfoboxData.electionData =
-                newMapData[1] && newMapData[1][countyId]
+                newMapData[1] &&
+                newMapData[1][subType.key] &&
+                newMapData[1][subType.key][countyId]?.summary
               break
             case 2:
-              if (!newMapData[2] || !newMapData[2][townId]) {
+              if (
+                !newMapData[2] ||
+                !newMapData[2][subType.key] ||
+                !newMapData[2][subType.key][townId]
+              ) {
                 console.log('fetching town data')
                 try {
                   const data = await fetchCouncilMemberMapData({
                     electionType,
                     year,
+                    subTypeKey: subType.key,
                     folderName: election.meta.map.folderNames[level],
                     fileName: townId,
                   })
-                  const townData = { ...newMapData[2], [townId]: data }
-                  newMapData = { ...newMapData, 2: townData }
+                  const oldTownData =
+                    newMapData[2] && newMapData[2][subType.key]
+                  const townData = { ...oldTownData, [townId]: data }
+                  newMapData = {
+                    ...newMapData,
+                    2: { ...newMapData[2], [subType.key]: townData },
+                  }
                 } catch (error) {}
               }
               newInfoboxData.electionData =
                 newMapData[1] &&
-                newMapData[1][countyId]?.districts.find(
+                newMapData[1][subType.key] &&
+                newMapData[1][subType.key][countyId]?.districts.filter(
                   (district) =>
                     district.county + district.town === mapObject.activeId
                 )
@@ -684,7 +719,8 @@ export const useElectionData = (showLoading, showTutorial) => {
             case 3:
               newInfoboxData.electionData =
                 newMapData[2] &&
-                newMapData[2][townId]?.districts.find(
+                newMapData[2][subType.key] &&
+                newMapData[2][subType.key][townId]?.districts.filter(
                   (district) =>
                     district.county + district.town + district.vill ===
                     mapObject.activeId
@@ -800,10 +836,20 @@ export const useElectionData = (showLoading, showTutorial) => {
     [showLoading]
   )
 
+  const onSubTypeChange = (newSubType) => {
+    setSubType(newSubType)
+    setShouldRefetch(true)
+  }
+
   const onElectionChange = useCallback(
     (electionType) => {
-      setElection(
-        elections.find((election) => election.electionType === electionType)
+      const selectedElection = elections.find(
+        (election) => election.electionType === electionType
+      )
+
+      setElection(selectedElection)
+      setSubType(
+        selectedElection.subTypes?.find((subType) => subType.key === 'normal')
       )
       setElectionMapData({ ...defaultElectionMapData })
       setMapObject(defaultMapObject)
@@ -826,7 +872,8 @@ export const useElectionData = (showLoading, showTutorial) => {
         electionMapData[election.electionType],
         evcData,
         seatData,
-        year
+        year,
+        subType
       )
     setInfoboxData(newInfoboxData)
     setElectionMapData((oldData) => ({
@@ -852,7 +899,8 @@ export const useElectionData = (showLoading, showTutorial) => {
         mapData,
         evcData,
         seatData,
-        year
+        year,
+        subType
       ),
       mapGeoJsons ? undefined : prepareGeojsons(),
     ]).then((results) => {
@@ -884,6 +932,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     showLoading,
     year,
     seatData,
+    subType,
   ])
 
   // create interval to periodically trigger refetch and let react lifecycle to handle the refetch
@@ -903,7 +952,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       console.log('refetch data..')
       showLoading(true)
       const { level: currentLevel, townId, countyId } = mapObject
-      const newMapData = { ...defaultMapData }
+      let newMapData = { ...defaultMapData }
       const { electionType } = election
       const newEvcData = { ...defaultEvcData }
       let newSeatData
@@ -982,7 +1031,9 @@ export const useElectionData = (showLoading, showTutorial) => {
                   const data = await fetchCouncilMemberEvcData({
                     year,
                     district: election.meta.evc.districts[countyId],
+                    type: subType.key,
                   })
+                  console.log('refetch evcData', data)
                   const countyEvcData = { [countyId]: data }
                   newEvcData[electionType] = countyEvcData
                 } catch (error) {
@@ -1003,11 +1054,17 @@ export const useElectionData = (showLoading, showTutorial) => {
                   const data = await fetchCouncilMemberMapData({
                     electionType,
                     year,
+                    subTypeKey: subType.key,
                     folderName: election.meta.map.folderNames[level],
                     fileName: countyId,
                   })
-                  const countyData = { ...newMapData[1], [countyId]: data }
-                  newMapData[1] = countyData
+                  const oldCountyData =
+                    newMapData[1] && newMapData[1][subType.key]
+                  const countyData = { ...oldCountyData, [countyId]: data }
+                  newMapData = {
+                    ...newMapData,
+                    1: { ...newMapData[1], [subType.key]: countyData },
+                  }
                 } catch (error) {
                   console.error(error)
                 }
@@ -1017,11 +1074,17 @@ export const useElectionData = (showLoading, showTutorial) => {
                   const data = await fetchCouncilMemberMapData({
                     electionType,
                     year,
+                    subTypeKey: subType.key,
                     folderName: election.meta.map.folderNames[level],
                     fileName: townId,
                   })
-                  const townData = { ...newMapData[2], [townId]: data }
-                  newMapData[2] = townData
+                  const oldTownData =
+                    newMapData[2] && newMapData[2][subType.key]
+                  const townData = { ...oldTownData, [townId]: data }
+                  newMapData = {
+                    ...newMapData,
+                    2: { ...newMapData[2], [subType.key]: townData },
+                  }
                 } catch (error) {
                   console.error(error)
                 }
@@ -1117,6 +1180,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     showLoading,
     election,
     year,
+    subType,
   ])
 
   useEffect(() => {
@@ -1167,5 +1231,12 @@ export const useElectionData = (showLoading, showTutorial) => {
     mapGeoJsons,
     year,
     onTutorialEnd,
+    subTypeInfo: subType
+      ? {
+          subType,
+          subTypes,
+          onSubTypeChange,
+        }
+      : undefined,
   }
 }

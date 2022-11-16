@@ -77,6 +77,7 @@ export const ControlPanel = ({
   mapObject,
   election,
   expandMode,
+  subTypeInfo,
 }) => {
   const { countyName, townName, constituencyName, villageName } = mapObject
   const locations = [
@@ -122,7 +123,12 @@ export const ControlPanel = ({
           <Location key={i}>{location}</Location>
         ))}
       </LocationsWrapper>
-      <StyledELectionRadio expandMode={expandMode} />
+      {subTypeInfo && (
+        <StyledELectionRadio
+          expandMode={expandMode}
+          subTypeInfo={subTypeInfo}
+        />
+      )}
     </Wrapper>
   )
 }
