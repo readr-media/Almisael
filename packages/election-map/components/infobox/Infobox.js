@@ -94,7 +94,7 @@ const MayorCandidate = styled.p`
   ${({ elected }) => elected && 'color: green;'}
 `
 
-const MayorInfobox = ({ level, data }) => {
+const MayorInfobox = ({ level, data, isRunning }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
@@ -107,6 +107,7 @@ const MayorInfobox = ({ level, data }) => {
 
   return (
     <InfoboxScrollWrapper>
+      {isRunning && '開票中！！！'}
       <MayorTitle>
         {level === 1 && '總'}投票率 {profRate}%
       </MayorTitle>
@@ -251,7 +252,7 @@ const CouncilMemberCandidate = styled.div`
   ${({ elected }) => elected && 'color: green;'}
 `
 
-const CouncilMemberInfobox = ({ level, data }) => {
+const CouncilMemberInfobox = ({ level, data, isRunning }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
@@ -264,6 +265,7 @@ const CouncilMemberInfobox = ({ level, data }) => {
     const { districts } = data
     return (
       <InfoboxScrollWrapper>
+        {isRunning && '開票中！'}
         {districts.map(({ county, area, range, candidates, profRate }) => {
           const councilMemberdPrefix = county + area
           const constituency = range.split(' ')[1]
@@ -358,7 +360,7 @@ const ReferendumFailWrapper = styled.span`
 
 const ReferendumCandidate = styled.div``
 
-const ReferendumInfobox = ({ data }) => {
+const ReferendumInfobox = ({ data, isRunning }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
@@ -372,6 +374,7 @@ const ReferendumInfobox = ({ data }) => {
   const pass = adptVictor === 'Y'
   return (
     <InfoboxScrollWrapper>
+      {isRunning && '開票中！'}
       <ReferendumTitle>
         此案是否通過
         {pass ? (
@@ -535,7 +538,7 @@ const councilMemberInfoboxData = (data, level, subType) => {
   return data
 }
 
-export const Infobox = ({ data, subType }) => {
+export const Infobox = ({ data, subType, isRunning }) => {
   const { electionType, level, electionData } = data
   let infobox
   switch (electionType) {
@@ -545,7 +548,7 @@ export const Infobox = ({ data, subType }) => {
     }
     case 'mayor': {
       const data = mayorInfoboxData(electionData, level)
-      infobox = <MayorInfobox level={level} data={data} />
+      infobox = <MayorInfobox level={level} data={data} isRunning={isRunning} />
       break
     }
     case 'legislator': {
@@ -554,12 +557,14 @@ export const Infobox = ({ data, subType }) => {
     }
     case 'councilMember': {
       const data = councilMemberInfoboxData(electionData, level, subType)
-      infobox = <CouncilMemberInfobox level={level} data={data} />
+      infobox = (
+        <CouncilMemberInfobox level={level} data={data} isRunning={isRunning} />
+      )
       break
     }
     case 'referendum':
       const data = referendumInfoboxData(electionData, level)
-      infobox = <ReferendumInfobox data={data} />
+      infobox = <ReferendumInfobox data={data} isRunning={isRunning} />
       break
     default:
       break

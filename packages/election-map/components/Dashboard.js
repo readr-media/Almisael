@@ -85,6 +85,7 @@ export const Dashboard = () => {
     year,
     onTutorialEnd,
     subTypeInfo,
+    isRunning,
   } = useElectionData(showLoading, showTutorial)
 
   const expandMode = !!seatData
@@ -101,7 +102,11 @@ export const Dashboard = () => {
           expandMode={expandMode}
           subTypeInfo={subTypeInfo}
         />
-        <InfoboxPanel data={infoboxData} subType={subTypeInfo?.subType} />
+        <InfoboxPanel
+          data={infoboxData}
+          subType={subTypeInfo?.subType}
+          isRunning={isRunning}
+        />
         <SeatsPanel
           meta={{
             ...election.meta.seat,
