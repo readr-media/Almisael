@@ -852,7 +852,10 @@ export const useElectionData = (showLoading, showTutorial) => {
 
   const onSubTypeChange = (newSubType) => {
     setSubType(newSubType)
-    setShouldRefetch(true)
+    showLoading(true)
+    setTimeout(() => {
+      setShouldRefetch(true)
+    }, 100)
   }
 
   const onElectionChange = useCallback(
