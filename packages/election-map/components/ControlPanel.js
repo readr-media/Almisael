@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { electionMapColor } from '../consts/colors'
 import { ElectionRadio } from './ElectionRadio'
 import { ElectionSelect } from './ElectionSelect'
+import { YearSelect } from './YearSelect'
 
 const Wrapper = styled.div`
   width: 320px;
@@ -78,6 +79,12 @@ const LastUpdateTime = styled.div`
   font-weight: 500;
 `
 
+const StyledYearSelect = styled(YearSelect)`
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+`
+
 export const ControlPanel = ({
   electionNamePairs,
   onElectionChange,
@@ -86,6 +93,7 @@ export const ControlPanel = ({
   expandMode,
   subTypeInfo,
   lastUpdate,
+  yearInfo,
 }) => {
   const { countyName, townName, constituencyName, villageName } = mapObject
   const locations = [
@@ -142,6 +150,7 @@ export const ControlPanel = ({
           最後更新時間：{lastUpdate}資料來源：中央選舉委員會
         </LastUpdateTime>
       )}
+      <StyledYearSelect yearInfo={yearInfo} />
     </Wrapper>
   )
 }

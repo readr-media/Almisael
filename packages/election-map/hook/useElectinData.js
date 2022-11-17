@@ -495,9 +495,9 @@ export const useElectionData = (showLoading, showTutorial) => {
   const [isRunning, setIsRunning] = useState(false)
   const [evcScrollTo, setEvcScrollTo] = useState()
   const [lastUpdate, setLastUpdate] = useState()
+  const [year, setYear] = useState(election.years[0].year)
 
   const mapData = electionMapData[election.electionType]
-  const year = election.years[0].year
   const subTypes = election.subTypes
 
   const prepareGeojsons = useCallback(async () => {
@@ -1104,6 +1104,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       )
 
       setElection(selectedElection)
+      setYear(selectedElection.years[0].year)
       setSubType(
         selectedElection.subTypes?.find((subType) => subType.key === 'normal')
       )
@@ -1235,7 +1236,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       let newMapData = { ...defaultMapData }
       const { electionType } = election
       const newEvcData = { ...defaultEvcData }
-      const newLastUpdate = lastUpdate
+      let newLastUpdate = lastUpdate
       let newSeatData
       for (let level = 0; level <= currentLevel; level++) {
         switch (electionType) {
@@ -1523,6 +1524,11 @@ export const useElectionData = (showLoading, showTutorial) => {
     subTypes,
     onSubTypeChange,
   }
+  const yearInfo = {
+    year,
+    setYear,
+    years: election.years,
+  }
 
   return {
     electionNamePairs: elections.map(({ electionType, electionName }) => ({
@@ -1542,7 +1548,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     mapObject,
     setMapObject: onMapObjectChange,
     mapGeoJsons,
-    year,
+    yearInfo,
     onTutorialEnd,
     subTypeInfo,
     isRunning,

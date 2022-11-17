@@ -82,7 +82,7 @@ export const Dashboard = () => {
     mapObject,
     setMapObject,
     mapGeoJsons,
-    year,
+    yearInfo,
     onTutorialEnd,
     subTypeInfo,
     isRunning,
@@ -103,6 +103,7 @@ export const Dashboard = () => {
           expandMode={expandMode}
           subTypeInfo={subTypeInfo}
           lastUpdate={lastUpdate}
+          yearInfo={yearInfo}
         />
         <InfoboxPanel
           data={infoboxData}
@@ -112,7 +113,7 @@ export const Dashboard = () => {
         <SeatsPanel
           meta={{
             ...election.meta.seat,
-            year,
+            year: yearInfo.year,
             location: election.meta.seat?.mapping[mapObject.countyId],
           }}
           data={seatData}
