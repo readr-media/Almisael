@@ -327,10 +327,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@readr-media/react-election-votes-comparison@^2.0.0-beta.15":
-  version "2.0.0-beta.15"
-  resolved "https://registry.yarnpkg.com/@readr-media/react-election-votes-comparison/-/react-election-votes-comparison-2.0.0-beta.15.tgz#6784b0e273c18de7297285db91d88babdc0e4904"
-  integrity sha512-UKIA0VIg6YxbPy7DyYzd//vw2bzTcCTta1MR/7YcJ1EB50JA5ImUq2DRi5Vk6IWDrSbvu6AFUnCLKnMmczBJ6A==
+"@readr-media/react-election-votes-comparison@2.0.0-beta.25":
+  version "2.0.0-beta.25"
+  resolved "https://registry.yarnpkg.com/@readr-media/react-election-votes-comparison/-/react-election-votes-comparison-2.0.0-beta.25.tgz#0c8e1f63b4f7b5356ffa85f62a76cb854e351bce"
+  integrity sha512-fqI+YJI1Z/4DPB9T5+BE6+1Iy4VQrTU6PVriaIpriJmR2ECn9Y7Vi0GhoFZwYtBg+8qixh+oohZv4gGAmL8Rbw==
   dependencies:
     "@twreporter/errors" "^1.1.1"
     axios "0.27.2"

@@ -38,7 +38,6 @@ const fetchReferendumEvcData = async ({ year }) => {
 }
 
 const fetchCouncilMemberEvcData = async ({ year, district, type }) => {
-  console.warn('year', year)
   const loader = new DataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadCouncilMemberDataForElectionMapProject({
     year,
@@ -968,34 +967,52 @@ export const useElectionData = (showLoading, showTutorial) => {
     electionType,
     mapData,
     subType,
-    mapObject
+    mapObject,
+    year
   ) => {
+    let newScrollTo
     switch (electionType) {
       case 'mayor': {
         const countyCode = mapObject.countyId
-        if (!countyCode) {
-          console.log('wtf', countyCode)
-          return undefined
-        } else {
+        if (countyCode) {
           const countyData = countyMappingData.find(
             (countyData) => countyData.countyCode === countyCode
           )
-          console.log('scrollTo', countyData)
 
-          return countyData.countyName
+          if (!(year === 2022 && countyData.countyName === '嘉義市')) {
+            newScrollTo = countyData.countyName
+          }
         }
         break
       }
 
       case 'councilMember': {
+        // try to get scrollTo, but ignore any error
+        // ignore 原住民分類
+        if (subType.key === 'normal') {
+          try {
+            const countyMapData = mapData[1][subType.key][mapObject.countyId]
+            const targetDistrict = countyMapData.districts.find(
+              (district) => district.county + district.town === mapObject.townId
+            )
+            if (targetDistrict) {
+              newScrollTo = `第${targetDistrict.area}選區`
+            }
+          } catch (error) {
+            console.log(error)
+          }
+        }
         break
       }
       case 'referendum': {
+        // no need to handle
         break
       }
       default:
         break
     }
+
+    return newScrollTo
   }
 
   const onEvcSelected = useCallback(
@@ -1019,14 +1036,17 @@ export const useElectionData = (showLoading, showTutorial) => {
         case 'councilMember': {
           // evcSelectedValue format '第01選區'
           //find the fist town of the area from mapData
-          const countyMapData = mapData[1][subType.key][mapObject.countyId]
-          const targetDistrict = countyMapData.districts.find(
-            (district) => district.area === evcSelectedValue.slice(1, 3)
-          )
-          const townId = targetDistrict.county + targetDistrict.town
-          const target = document.querySelector(`#first-id-${townId}`)
-          let event = new MouseEvent('click', { bubbles: true })
-          target.dispatchEvent(event)
+          // ignore 原住民分類
+          if (subType.key === 'normal') {
+            const countyMapData = mapData[1][subType.key][mapObject.countyId]
+            const targetDistrict = countyMapData.districts.find(
+              (district) => district.area === evcSelectedValue.slice(1, 3)
+            )
+            const townId = targetDistrict.county + targetDistrict.town
+            const target = document.querySelector(`#first-id-${townId}`)
+            let event = new MouseEvent('click', { bubbles: true })
+            target.dispatchEvent(event)
+          }
 
           break
         }
@@ -1099,7 +1119,8 @@ export const useElectionData = (showLoading, showTutorial) => {
         election.electionType,
         newMapData,
         subType,
-        newMapObject
+        newMapObject,
+        year
       )
     )
     showLoading(false)
@@ -1384,6 +1405,15 @@ export const useElectionData = (showLoading, showTutorial) => {
         [election.electionType]: newMapData,
       }))
       setEvcData(newEvcData)
+      setEvcScrollTo(
+        scrollEvcFromMapObject(
+          election.electionType,
+          newMapData,
+          subType,
+          mapObject,
+          year
+        )
+      )
       setSeatData(newSeatData)
       setShouldRefetch(false)
       showLoading(false)
