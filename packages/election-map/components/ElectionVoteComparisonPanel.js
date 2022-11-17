@@ -1,4 +1,3 @@
-import { memo } from 'react'
 import styled from 'styled-components'
 import evc from '@readr-media/react-election-votes-comparison'
 
@@ -37,4 +36,4 @@ const ElectionVoteComparisonPanel = ({ data }) => {
   )
 }
 
-export default memo(ElectionVoteComparisonPanel)
+export default ElectionVoteComparisonPanel

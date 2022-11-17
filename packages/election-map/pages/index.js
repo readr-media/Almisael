@@ -22,7 +22,6 @@ export default function Home() {
       const { data } = await axios.get(
         'https://editools-gcs-dev.readr.tw/files/liveblogs/ukraine-war.json'
       )
-      console.log('liveblog', data)
       setInitialLiveblog(data)
     }
     fetchLiveblog()
