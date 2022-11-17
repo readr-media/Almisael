@@ -77,7 +77,7 @@ export const Dashboard = () => {
     election,
     mapData,
     infoboxData,
-    evcData,
+    evcInfo,
     seatData,
     mapObject,
     setMapObject,
@@ -121,8 +121,9 @@ export const Dashboard = () => {
             setCompareMode((v) => !v)
           }}
         />
-        {(evcData?.districts?.length || evcData?.propositions?.length) && (
-          <ElectionVoteComparisonPanel data={evcData} />
+        {(evcInfo.evcData?.districts?.length ||
+          evcInfo.evcData?.propositions?.length) && (
+          <ElectionVoteComparisonPanel evcInfo={evcInfo} />
         )}
       </PanelsWrapper>
       <MapContainer

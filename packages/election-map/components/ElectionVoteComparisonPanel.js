@@ -22,15 +22,25 @@ const StyledEVC = styled(ElectionVotesComparison)`
   }
 `
 
-const ElectionVoteComparisonPanel = ({ data }) => {
+const ElectionVoteComparisonPanel = ({ evcInfo }) => {
+  const { evcData, onEvcSelected, scrollTo } = evcInfo
+  console.log(
+    'ElectionVoteComparisonPanel',
+    scrollTo,
+    evcData,
+    evcData.districts.find((district) => district.districtName === scrollTo)
+  )
   return (
     <StyledEVC
-      election={data}
+      key={JSON.stringify(evcData)}
+      election={evcData}
       device="mobile"
       theme="electionModule"
       ui={{ disableTabs: true }}
-      onChange={(type, value) => {
-        console.log('evc onChange', type, value)
+      scrollTo={scrollTo}
+      // scrollTo="桃園市"
+      onChange={(selector, value) => {
+        onEvcSelected(value)
       }}
     />
   )

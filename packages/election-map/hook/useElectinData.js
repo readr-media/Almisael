@@ -86,6 +86,119 @@ const fetchCouncilMemberMapData = async ({
   return data
 }
 
+const countyMappingData = [
+  {
+    countyCode: '10007',
+    countyName: '彰化縣',
+    countyNameEng: 'changhuaCounty',
+  },
+  {
+    countyCode: '10020',
+    countyName: '嘉義市',
+    countyNameEng: 'chiayiCity',
+  },
+  {
+    countyCode: '10010',
+    countyName: '嘉義縣',
+    countyNameEng: 'chiayiCounty',
+  },
+  {
+    countyCode: '10018',
+    countyName: '新竹市',
+    countyNameEng: 'hsinchuCity',
+  },
+  {
+    countyCode: '10004',
+    countyName: '新竹縣',
+    countyNameEng: 'hsinchuCounty',
+  },
+  {
+    countyCode: '10015',
+    countyName: '花蓮縣',
+    countyNameEng: 'hualienCounty',
+  },
+  {
+    countyCode: '64000',
+    countyName: '高雄市',
+    countyNameEng: 'kaohsiungCity',
+  },
+  {
+    countyCode: '10017',
+    countyName: '基隆市',
+    countyNameEng: 'keelungCity',
+  },
+  {
+    countyCode: '09020',
+    countyName: '金門縣',
+    countyNameEng: 'kinmenCounty',
+  },
+  {
+    countyCode: '09007',
+    countyName: '連江縣',
+    countyNameEng: 'lienchiangCounty',
+  },
+  {
+    countyCode: '10005',
+    countyName: '苗栗縣',
+    countyNameEng: 'miaoliCounty',
+  },
+  {
+    countyCode: '10008',
+    countyName: '南投縣',
+    countyNameEng: 'nantouCounty',
+  },
+  {
+    countyCode: '65000',
+    countyName: '新北市',
+    countyNameEng: 'newTaipeiCity',
+  },
+  {
+    countyCode: '10016',
+    countyName: '澎湖縣',
+    countyNameEng: 'penghuCounty',
+  },
+  {
+    countyCode: '10013',
+    countyName: '屏東縣',
+    countyNameEng: 'pingtungCounty',
+  },
+  {
+    countyCode: '66000',
+    countyName: '臺中市',
+    countyNameEng: 'taichungCity',
+  },
+  {
+    countyCode: '67000',
+    countyName: '臺南市',
+    countyNameEng: 'tainanCity',
+  },
+  {
+    countyCode: '63000',
+    countyName: '臺北市',
+    countyNameEng: 'taipeiCity',
+  },
+  {
+    countyCode: '10014',
+    countyName: '臺東縣',
+    countyNameEng: 'taitungCounty',
+  },
+  {
+    countyCode: '68000',
+    countyName: '桃園市',
+    countyNameEng: 'taoyuanCity',
+  },
+  {
+    countyCode: '10002',
+    countyName: '宜蘭縣',
+    countyNameEng: 'yilanCounty',
+  },
+  {
+    countyCode: '10009',
+    countyName: '雲林縣',
+    countyNameEng: 'yunlinCounty',
+  },
+]
+
 const elections = [
   {
     electionType: 'president',
@@ -381,6 +494,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     election.subTypes?.find((subType) => subType.key === 'normal')
   )
   const [isRunning, setIsRunning] = useState(false)
+  const [evcScrollTo, setEvcScrollTo] = useState()
 
   const mapData = electionMapData[election.electionType]
   const year = election.years[0].year
@@ -850,6 +964,86 @@ export const useElectionData = (showLoading, showTutorial) => {
     [showLoading]
   )
 
+  const scrollEvcFromMapObject = (
+    electionType,
+    mapData,
+    subType,
+    mapObject
+  ) => {
+    switch (electionType) {
+      case 'mayor': {
+        const countyCode = mapObject.countyId
+        if (!countyCode) {
+          console.log('wtf', countyCode)
+          return undefined
+        } else {
+          const countyData = countyMappingData.find(
+            (countyData) => countyData.countyCode === countyCode
+          )
+          console.log('scrollTo', countyData)
+
+          return countyData.countyName
+        }
+        break
+      }
+
+      case 'councilMember': {
+        break
+      }
+      case 'referendum': {
+        break
+      }
+      default:
+        break
+    }
+  }
+
+  const onEvcSelected = useCallback(
+    (evcSelectedValue) => {
+      const electionType = election.electionType
+      switch (electionType) {
+        case 'mayor': {
+          // evcSelectedValue format '嘉義市'
+          const countyData = countyMappingData.find(
+            (countyData) => countyData.countyName === evcSelectedValue
+          )
+          const target = document.querySelector(
+            `#first-id-${countyData.countyCode}`
+          )
+          let event = new MouseEvent('click', { bubbles: true })
+          target.dispatchEvent(event)
+
+          break
+        }
+
+        case 'councilMember': {
+          // evcSelectedValue format '第01選區'
+          //find the fist town of the area from mapData
+          const countyMapData = mapData[1][subType.key][mapObject.countyId]
+          const targetDistrict = countyMapData.districts.find(
+            (district) => district.area === evcSelectedValue.slice(1, 3)
+          )
+          const townId = targetDistrict.county + targetDistrict.town
+          const target = document.querySelector(`#first-id-${townId}`)
+          let event = new MouseEvent('click', { bubbles: true })
+          target.dispatchEvent(event)
+
+          break
+        }
+        case 'referendum': {
+          // evcSelectedValue format '全國'
+          const target = document.querySelector(`#first-id-background`)
+          let event = new MouseEvent('click', { bubbles: true })
+          target.dispatchEvent(event)
+          break
+        }
+        default:
+          break
+      }
+    },
+    [election.electionType, mapData, subType, mapObject.countyId]
+  )
+
   const onSubTypeChange = (newSubType) => {
     setSubType(newSubType)
     showLoading(true)
@@ -900,6 +1094,14 @@ export const useElectionData = (showLoading, showTutorial) => {
     setEvcData(newEvcData)
     setSeatData(newSeatData)
     setMapObject(newMapObject)
+    setEvcScrollTo(
+      scrollEvcFromMapObject(
+        election.electionType,
+        newMapData,
+        subType,
+        newMapObject
+      )
+    )
     showLoading(false)
   }
 
@@ -1251,7 +1453,11 @@ export const useElectionData = (showLoading, showTutorial) => {
     election,
     mapData,
     infoboxData,
-    evcData: outputEvcData,
+    evcInfo: {
+      evcData: outputEvcData,
+      onEvcSelected,
+      scrollTo: evcScrollTo,
+    },
     seatData: outputSeatData,
     mapObject,
     setMapObject: onMapObjectChange,
