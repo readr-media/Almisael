@@ -22,7 +22,7 @@ const fetchSeatData = async ({ electionType, year, folderName, fileName }) => {
 }
 
 const fetchMayorEvcData = async ({ year }) => {
-  const loader = new DataLoader({ version: 'v2' })
+  const loader = new DataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadMayorData({
     year,
   })
@@ -30,7 +30,7 @@ const fetchMayorEvcData = async ({ year }) => {
 }
 
 const fetchReferendumEvcData = async ({ year }) => {
-  const loader = new DataLoader({ version: 'v2' })
+  const loader = new DataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadReferendumData({
     year,
   })
@@ -39,7 +39,7 @@ const fetchReferendumEvcData = async ({ year }) => {
 
 const fetchCouncilMemberEvcData = async ({ year, district, type }) => {
   console.warn('year', year)
-  const loader = new DataLoader({ version: 'v2' })
+  const loader = new DataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadCouncilMemberDataForElectionMapProject({
     year,
     district,
