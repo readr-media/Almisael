@@ -494,6 +494,7 @@ export const useElectionData = (showLoading, showTutorial) => {
   )
   const [isRunning, setIsRunning] = useState(false)
   const [evcScrollTo, setEvcScrollTo] = useState()
+  const [lastUpdate, setLastUpdate] = useState()
 
   const mapData = electionMapData[election.electionType]
   const year = election.years[0].year
@@ -533,10 +534,20 @@ export const useElectionData = (showLoading, showTutorial) => {
   }, [])
 
   const prepareElectionData = useCallback(
-    async (election, mapObject, mapData, evcData, seatData, year, subType) => {
+    async (
+      election,
+      mapObject,
+      mapData,
+      evcData,
+      seatData,
+      year,
+      subType,
+      lastUpdate
+    ) => {
       let newMapData = mapData
       let newEvcData = evcData
       let newSeatData = seatData
+      let newLastUpdate = lastUpdate
       const { level, townId, countyId } = mapObject
       const { electionType } = election
       const newInfoboxData = {
@@ -619,6 +630,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                       setIsRunning(data.is_running)
                     }
                     newMapData = { ...newMapData, 0: data }
+                    newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
                   }
@@ -638,6 +650,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     }
                     const countyData = { ...newMapData[1], [countyId]: data }
                     newMapData = { ...newMapData, 1: countyData }
+                    newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
                   }
@@ -662,6 +675,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                       }
                       const townData = { ...newMapData[2], [townId]: data }
                       newMapData = { ...newMapData, 2: townData }
+                      newLastUpdate = data.updatedAt
                     } catch (error) {
                       console.error(error)
                     }
@@ -792,6 +806,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     ...newMapData,
                     1: { ...newMapData[1], [subType.key]: countyData },
                   }
+                  newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
@@ -826,6 +841,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     ...newMapData,
                     2: { ...newMapData[2], [subType.key]: townData },
                   }
+                  newLastUpdate = data.updatedAt
                 } catch (error) {}
               }
               newInfoboxData.electionData =
@@ -879,6 +895,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     setIsRunning(data.is_running)
                   }
                   newMapData = { ...newMapData, 0: data }
+                  newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
@@ -901,6 +918,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                   }
                   const countyData = { ...newMapData[1], [countyId]: data }
                   newMapData = { ...newMapData, 1: countyData }
+                  newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
@@ -925,6 +943,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                   }
                   const townData = { ...newMapData[2], [townId]: data }
                   newMapData = { ...newMapData, 2: townData }
+                  newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
@@ -958,7 +977,13 @@ export const useElectionData = (showLoading, showTutorial) => {
       }
 
       showLoading(false)
-      return { newInfoboxData, newMapData, newEvcData, newSeatData }
+      return {
+        newInfoboxData,
+        newMapData,
+        newEvcData,
+        newSeatData,
+        newLastUpdate,
+      }
     },
     [showLoading]
   )
@@ -1096,16 +1121,22 @@ export const useElectionData = (showLoading, showTutorial) => {
     // fetch data before map scales, useEffect will called prepareData again,
     // make sure to avoid fetch duplicate data
     showLoading(true)
-    const { newInfoboxData, newMapData, newEvcData, newSeatData } =
-      await prepareElectionData(
-        election,
-        newMapObject,
-        electionMapData[election.electionType],
-        evcData,
-        seatData,
-        year,
-        subType
-      )
+    const {
+      newInfoboxData,
+      newMapData,
+      newEvcData,
+      newSeatData,
+      newLastUpdate,
+    } = await prepareElectionData(
+      election,
+      newMapObject,
+      electionMapData[election.electionType],
+      evcData,
+      seatData,
+      year,
+      subType,
+      lastUpdate
+    )
     setInfoboxData(newInfoboxData)
     setElectionMapData((oldData) => ({
       ...oldData,
@@ -1123,6 +1154,7 @@ export const useElectionData = (showLoading, showTutorial) => {
         year
       )
     )
+    setLastUpdate(newLastUpdate)
     showLoading(false)
   }
 
@@ -1140,13 +1172,19 @@ export const useElectionData = (showLoading, showTutorial) => {
         evcData,
         seatData,
         year,
-        subType
+        subType,
+        lastUpdate
       ),
       mapGeoJsons ? undefined : prepareGeojsons(),
     ]).then((results) => {
       if (results[0]?.value) {
-        const { newInfoboxData, newMapData, newEvcData, newSeatData } =
-          results[0].value
+        const {
+          newInfoboxData,
+          newMapData,
+          newEvcData,
+          newSeatData,
+          newLastUpdate,
+        } = results[0].value
         setInfoboxData(newInfoboxData)
         setElectionMapData((oldData) => ({
           ...oldData,
@@ -1154,6 +1192,7 @@ export const useElectionData = (showLoading, showTutorial) => {
         }))
         setEvcData(newEvcData)
         setSeatData(newSeatData)
+        setLastUpdate(newLastUpdate)
       }
       if (results[1]?.value) {
         const newMapGeoJsons = results[1].value
@@ -1173,6 +1212,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     year,
     seatData,
     subType,
+    lastUpdate,
   ])
 
   // create interval to periodically trigger refetch and let react lifecycle to handle the refetch
@@ -1195,6 +1235,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       let newMapData = { ...defaultMapData }
       const { electionType } = election
       const newEvcData = { ...defaultEvcData }
+      const newLastUpdate = lastUpdate
       let newSeatData
       for (let level = 0; level <= currentLevel; level++) {
         switch (electionType) {
@@ -1218,6 +1259,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     fileName: 'country',
                   })
                   newMapData[0] = data
+                  newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
@@ -1235,6 +1277,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                   })
                   const countyData = { [countyId]: data }
                   newMapData[1] = countyData
+                  newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
@@ -1252,6 +1295,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                   })
                   const townData = { [townId]: data }
                   newMapData[2] = townData
+                  newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
@@ -1304,6 +1348,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     ...newMapData,
                     1: { ...newMapData[1], [subType.key]: countyData },
                   }
+                  newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
@@ -1324,6 +1369,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     ...newMapData,
                     2: { ...newMapData[2], [subType.key]: townData },
                   }
+                  newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
@@ -1370,6 +1416,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                   })
                   const countyData = { [countyId]: data }
                   newMapData[1] = countyData
+                  newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
@@ -1385,6 +1432,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                   })
                   const townData = { [townId]: data }
                   newMapData[2] = townData
+                  newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
@@ -1416,15 +1464,16 @@ export const useElectionData = (showLoading, showTutorial) => {
       )
       setSeatData(newSeatData)
       setShouldRefetch(false)
+      setLastUpdate(newLastUpdate)
       showLoading(false)
     }
     if (shouldRefetch) {
-      if (isRunning) {
-        refetch()
-      } else {
-        console.log('no need to refetch final data')
-        setShouldRefetch(false)
-      }
+      // if (isRunning) {
+      refetch()
+      // } else {
+      //   console.log('no need to refetch final data')
+      //   setShouldRefetch(false)
+      // }
     }
   }, [
     shouldRefetch,
@@ -1435,6 +1484,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     year,
     subType,
     isRunning,
+    lastUpdate,
   ])
 
   useEffect(() => {
@@ -1496,5 +1546,6 @@ export const useElectionData = (showLoading, showTutorial) => {
     onTutorialEnd,
     subTypeInfo,
     isRunning,
+    lastUpdate,
   }
 }

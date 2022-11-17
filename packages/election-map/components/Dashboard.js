@@ -86,6 +86,7 @@ export const Dashboard = () => {
     onTutorialEnd,
     subTypeInfo,
     isRunning,
+    lastUpdate,
   } = useElectionData(showLoading, showTutorial)
 
   const expandMode = !!seatData
@@ -101,6 +102,7 @@ export const Dashboard = () => {
           election={election}
           expandMode={expandMode}
           subTypeInfo={subTypeInfo}
+          lastUpdate={lastUpdate}
         />
         <InfoboxPanel
           data={infoboxData}

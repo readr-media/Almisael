@@ -11,6 +11,7 @@ const Label = styled.label`
   position: relative;
   cursor: pointer;
   font-size: 24px;
+  font-weight: 900;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

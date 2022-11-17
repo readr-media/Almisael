@@ -67,8 +67,15 @@ const StyledElectionSelect = styled(ElectionSelect)`
 
 const StyledELectionRadio = styled(ElectionRadio)`
   position: absolute;
-  bottom: ${({ expandMode }) => (expandMode ? `173px` : `73px`)};
+  bottom: ${({ expandMode }) => (expandMode ? `193px` : `73px`)};
   right: 121px;
+`
+const LastUpdateTime = styled.div`
+  position: absolute;
+  bottom: ${({ expandMode }) => (expandMode ? `148px` : `28px`)};
+  right: 8px;
+  font-size: 14px;
+  font-weight: 500;
 `
 
 export const ControlPanel = ({
@@ -78,6 +85,7 @@ export const ControlPanel = ({
   election,
   expandMode,
   subTypeInfo,
+  lastUpdate,
 }) => {
   const { countyName, townName, constituencyName, villageName } = mapObject
   const locations = [
@@ -128,6 +136,11 @@ export const ControlPanel = ({
           expandMode={expandMode}
           subTypeInfo={subTypeInfo}
         />
+      )}
+      {lastUpdate && (
+        <LastUpdateTime expandMode={expandMode}>
+          最後更新時間：{lastUpdate}資料來源：中央選舉委員會
+        </LastUpdateTime>
       )}
     </Wrapper>
   )
