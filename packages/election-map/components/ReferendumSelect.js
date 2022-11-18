@@ -39,6 +39,8 @@ const SelectOptions = styled.ul`
   border: 1px solid #000;
   background-color: #fff;
   width: 254px;
+  max-height: 200px;
+  overflow: scroll;
 `
 
 const SelectOption = styled.li`

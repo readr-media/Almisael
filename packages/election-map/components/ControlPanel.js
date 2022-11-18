@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import { electionMapColor } from '../consts/colors'
 import { ElectionRadio } from './ElectionRadio'
@@ -96,6 +97,19 @@ const GoDownWrapper = styled.div`
   left: 48px;
 `
 
+const ActionButton = styled.button`
+  display: inline-block;
+  margin: 20px 0 0 12px;
+  border: 1px solid #000;
+  background-color: ${({ compare }) => (compare ? '#e0e0e0' : '#ffc7bb')};
+  color: #000;
+  border-radius: 8px;
+  line-height: 23px;
+  text-align: center;
+  width: 80px;
+  height: 32px;
+`
+
 export const ControlPanel = ({
   electionNamePairs,
   onElectionChange,
@@ -108,6 +122,14 @@ export const ControlPanel = ({
   number,
   numbers,
 }) => {
+  const [compare, setCompare] = useState(false)
+  const comapreNumber =
+    numbers?.length > 1 ? numbers.filter((n) => n.key !== number.key)[0] : null
+  const [compareCandidates, setCompareCandidates] = useState([
+    number,
+    comapreNumber,
+  ])
+
   const { countyName, townName, constituencyName, villageName } = mapObject
   const { electionType } = election
   const locations = [
@@ -126,7 +148,65 @@ export const ControlPanel = ({
           electionNamePairs={electionNamePairs}
           onElectionChange={onElectionChange}
         />
-        <StyledReferendumSelect selectedNumber={number} numbers={numbers} />
+        {compare ? (
+          <>
+            <StyledReferendumSelect
+              selectedNumber={compareCandidates[0]}
+              numbers={numbers}
+              onNumberChange={(number) => {
+                setCompareCandidates(([, cand2]) => {
+                  console.log(number)
+                  if (number === cand2) {
+                    return [
+                      number,
+                      numbers.filter((n) => n.key !== number.key)[0],
+                    ]
+                  } else {
+                    return [number, cand2]
+                  }
+                })
+              }}
+            />
+            <StyledReferendumSelect
+              selectedNumber={compareCandidates[1]}
+              numbers={numbers}
+              onNumberChange={(number) => {
+                console.log(number)
+                setCompareCandidates(([cand1]) => {
+                  if (number === cand1) {
+                    return [
+                      numbers.filter((n) => n.key !== number.key)[0],
+                      number,
+                    ]
+                  } else {
+                    return [cand1, number]
+                  }
+                })
+              }}
+            />
+          </>
+        ) : (
+          <StyledReferendumSelect selectedNumber={number} numbers={numbers} />
+        )}
+        {comapreNumber && (
+          <ActionButton
+            onClick={() => {
+              setCompare((compare) => !compare)
+            }}
+            compare={compare}
+          >
+            {compare ? '取消' : '比較'}
+          </ActionButton>
+        )}
+        {compare && (
+          <ActionButton
+            onClick={() => {
+              console.log('submit compareCandidates', compareCandidates)
+            }}
+          >
+            確定
+          </ActionButton>
+        )}
         <GoDownWrapper>
           <MapButtonWrapper>
             <MapLevelBackButton
