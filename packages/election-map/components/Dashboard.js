@@ -33,6 +33,16 @@ const PanelsWrapper = styled.div`
   z-index: 1;
 `
 
+const StyledInfoboxPanel = styled(InfoboxPanel)`
+  ${({ goDown }) =>
+    goDown &&
+    `
+    position: absolute;
+    bottom: 42px;
+    left: 48px;
+  `}
+`
+
 const MoreHint = styled.div`
   position: absolute;
   bottom: 0;
@@ -81,6 +91,8 @@ export const Dashboard = ({ showTutorial, setShowTutorial }) => {
     subtypeInfo,
     isRunning,
     lastUpdate,
+    number,
+    numbers,
   } = useElectionData(showLoading, showTutorial)
 
   const expandMode = !!seatData
@@ -98,11 +110,14 @@ export const Dashboard = ({ showTutorial, setShowTutorial }) => {
           subtypeInfo={subtypeInfo}
           lastUpdate={lastUpdate}
           yearInfo={yearInfo}
+          number={number}
+          numbers={numbers}
         />
-        <InfoboxPanel
+        <StyledInfoboxPanel
           data={infoboxData}
           subtype={subtypeInfo?.subtype}
           isRunning={isRunning}
+          goDown={!!number}
         />
         <SeatsPanel
           meta={{

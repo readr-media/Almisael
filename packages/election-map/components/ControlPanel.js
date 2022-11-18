@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { electionMapColor } from '../consts/colors'
 import { ElectionRadio } from './ElectionRadio'
 import { ElectionSelect } from './ElectionSelect'
+import { ReferendumSelect } from './ReferendumSelect'
 import { YearSelect } from './YearSelect'
 
 const Wrapper = styled.div`
@@ -66,6 +67,10 @@ const StyledElectionSelect = styled(ElectionSelect)`
   margin: 92px 0 0 12px;
 `
 
+const StyledReferendumSelect = styled(ReferendumSelect)`
+  margin: 17px 0 0 12px;
+`
+
 const StyledELectionRadio = styled(ElectionRadio)`
   position: absolute;
   bottom: ${({ expandMode }) => (expandMode ? `193px` : `73px`)};
@@ -85,6 +90,12 @@ const StyledYearSelect = styled(YearSelect)`
   left: 0;
 `
 
+const GoDownWrapper = styled.div`
+  position: absolute;
+  bottom: 240px;
+  left: 48px;
+`
+
 export const ControlPanel = ({
   electionNamePairs,
   onElectionChange,
@@ -94,8 +105,11 @@ export const ControlPanel = ({
   subtypeInfo,
   lastUpdate,
   yearInfo,
+  number,
+  numbers,
 }) => {
   const { countyName, townName, constituencyName, villageName } = mapObject
+  const { electionType } = election
   const locations = [
     countyName,
     townName,
@@ -103,54 +117,111 @@ export const ControlPanel = ({
     villageName,
   ].filter((name) => !!name)
   if (!locations.length) locations.push('全國')
-  return (
-    <Wrapper>
-      <StyledElectionSelect
-        electionType={election.electionType}
-        electionNamePairs={electionNamePairs}
-        onElectionChange={onElectionChange}
-      />
-      <MapButtonWrapper>
-        <MapLevelBackButton
-          disabled={mapObject.level === 0}
-          onClick={() => {
-            const target = document.querySelector(
-              `#first-id-${mapObject.upperLevelId}`
-            )
-            let event = new MouseEvent('click', { bubbles: true })
-            target.dispatchEvent(event)
-          }}
-        >
-          回上層
-        </MapLevelBackButton>
-        <MapLevelResetButton
-          disabled={mapObject.level === 0}
-          onClick={() => {
-            const target = document.querySelector(`#first-id-background`)
-            let event = new MouseEvent('click', { bubbles: true })
-            target.dispatchEvent(event)
-          }}
-        >
-          回全國
-        </MapLevelResetButton>
-      </MapButtonWrapper>
-      <LocationsWrapper>
-        {locations.map((location, i) => (
-          <Location key={i}>{location}</Location>
-        ))}
-      </LocationsWrapper>
-      {subtypeInfo && (
-        <StyledELectionRadio
-          expandMode={expandMode}
-          subtypeInfo={subtypeInfo}
+
+  if (number) {
+    return (
+      <Wrapper>
+        <StyledElectionSelect
+          electionType={electionType}
+          electionNamePairs={electionNamePairs}
+          onElectionChange={onElectionChange}
         />
-      )}
-      {lastUpdate && (
-        <LastUpdateTime expandMode={expandMode}>
-          最後更新時間：{lastUpdate}資料來源：中央選舉委員會
-        </LastUpdateTime>
-      )}
-      <StyledYearSelect yearInfo={yearInfo} />
-    </Wrapper>
-  )
+        <StyledReferendumSelect selectedNumber={number} numbers={numbers} />
+        <GoDownWrapper>
+          <MapButtonWrapper>
+            <MapLevelBackButton
+              disabled={mapObject.level === 0}
+              onClick={() => {
+                const target = document.querySelector(
+                  `#first-id-${mapObject.upperLevelId}`
+                )
+                let event = new MouseEvent('click', { bubbles: true })
+                target.dispatchEvent(event)
+              }}
+            >
+              回上層
+            </MapLevelBackButton>
+            <MapLevelResetButton
+              disabled={mapObject.level === 0}
+              onClick={() => {
+                const target = document.querySelector(`#first-id-background`)
+                let event = new MouseEvent('click', { bubbles: true })
+                target.dispatchEvent(event)
+              }}
+            >
+              回全國
+            </MapLevelResetButton>
+          </MapButtonWrapper>
+          <LocationsWrapper>
+            {locations.map((location, i) => (
+              <Location key={i}>{location}</Location>
+            ))}
+          </LocationsWrapper>
+        </GoDownWrapper>
+        {subtypeInfo && (
+          <StyledELectionRadio
+            expandMode={expandMode}
+            subtypeInfo={subtypeInfo}
+          />
+        )}
+        {lastUpdate && (
+          <LastUpdateTime expandMode={expandMode}>
+            最後更新時間：{lastUpdate}資料來源：中央選舉委員會
+          </LastUpdateTime>
+        )}
+      </Wrapper>
+    )
+  } else {
+    return (
+      <Wrapper>
+        <StyledElectionSelect
+          electionType={electionType}
+          electionNamePairs={electionNamePairs}
+          onElectionChange={onElectionChange}
+        />
+        <MapButtonWrapper>
+          <MapLevelBackButton
+            disabled={mapObject.level === 0}
+            onClick={() => {
+              const target = document.querySelector(
+                `#first-id-${mapObject.upperLevelId}`
+              )
+              let event = new MouseEvent('click', { bubbles: true })
+              target.dispatchEvent(event)
+            }}
+          >
+            回上層
+          </MapLevelBackButton>
+          <MapLevelResetButton
+            disabled={mapObject.level === 0}
+            onClick={() => {
+              const target = document.querySelector(`#first-id-background`)
+              let event = new MouseEvent('click', { bubbles: true })
+              target.dispatchEvent(event)
+            }}
+          >
+            回全國
+          </MapLevelResetButton>
+        </MapButtonWrapper>
+        <LocationsWrapper>
+          {locations.map((location, i) => (
+            <Location key={i}>{location}</Location>
+          ))}
+        </LocationsWrapper>
+        <div id="infobox" />
+        {subtypeInfo && (
+          <StyledELectionRadio
+            expandMode={expandMode}
+            subtypeInfo={subtypeInfo}
+          />
+        )}
+        {lastUpdate && (
+          <LastUpdateTime expandMode={expandMode}>
+            最後更新時間：{lastUpdate}資料來源：中央選舉委員會
+          </LastUpdateTime>
+        )}
+        <StyledYearSelect yearInfo={yearInfo} />
+      </Wrapper>
+    )
+  }
 }

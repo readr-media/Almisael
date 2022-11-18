@@ -8,9 +8,9 @@ const InfoboxWrapper = styled(CollapsibleWrapper)`
   margin: 22px 0 0;
 `
 
-export const InfoboxPanel = ({ data, subtype, isRunning }) => {
+export const InfoboxPanel = ({ className, data, subtype, isRunning }) => {
   return (
-    <InfoboxWrapper title={'詳細資訊'}>
+    <InfoboxWrapper className={className} title={'詳細資訊'}>
       <Infobox data={data} subtype={subtype} isRunning={isRunning} />
     </InfoboxWrapper>
   )

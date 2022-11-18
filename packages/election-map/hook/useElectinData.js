@@ -13,6 +13,7 @@ import {
   updateElectionMapData,
   currentYear,
   defaultMapData,
+  getReferendumNumbers,
 } from '../components/helper/electionHelper'
 
 const DataLoader = evc.DataLoader
@@ -163,6 +164,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     number?.key
   )
   const subtypes = election.subtypes
+  const numbers = getReferendumNumbers(election)
 
   const prepareGeojsons = useCallback(async () => {
     const twCountiesJson =
@@ -1307,5 +1309,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     subtypeInfo,
     isRunning,
     lastUpdate,
+    number,
+    numbers,
   }
 }

@@ -80,6 +80,7 @@ export const elections = [
         year: 2022,
         numbers: [
           {
+            year: 2022,
             key: 'F1',
             name: '憲法修正案第1案',
             detail:
@@ -91,23 +92,27 @@ export const elections = [
         year: 2021,
         numbers: [
           {
+            year: 2022,
             key: '17',
             name: '公投第17案',
             detail: '您是否同意核四啟封商轉發電？',
           },
           {
+            year: 2022,
             key: '18',
             name: '公投第18案',
             detail:
               '你是否同意政府應全面禁止進口含有萊克多巴胺之乙型受體素豬隻之肉品、內臟及其相關產製品？',
           },
           {
+            year: 2022,
             key: '19',
             name: '公投第19案',
             detail:
               '你是否同意公民投票案公告成立後半年內，若該期間內遇有全國性選舉時，在符合公民投票法規定之情形下，公民投票應與該選舉同日舉行？',
           },
           {
+            year: 2022,
             key: '20',
             name: '公投第20案',
             detail:
@@ -119,58 +124,68 @@ export const elections = [
         year: 2018,
         numbers: [
           {
+            year: 2018,
             key: '7',
             name: '公投第7案',
             detail:
               '你是否同意以「平均每年至少降低1%」之方式逐年降低火力發電廠發電量?',
           },
           {
+            year: 2018,
             key: '8',
             name: '公投第8案',
             detail:
               '您是否同意確立「停止新建、擴建任何燃煤發電廠或發電機組(包括深澳電廠擴建)」之能源政策?',
           },
           {
+            year: 2018,
             key: '9',
             name: '公投第9案',
             detail:
               '你是否同意政府維持禁止開放日本福島311核災相關地區，包括福島與周遭4縣市(茨城、櫪木、群馬、千葉)等地區農產品及食品進口?',
           },
           {
+            year: 2018,
             key: '10',
             name: '公投第10案',
             detail: '你是否同意民法婚姻規定應限定在一男一女的結合?',
           },
           {
+            year: 2018,
             key: '11',
             name: '公投第11案',
             detail:
               '你是否同意在國民教育階段內(國中及國小)，教育部及各級學校不應對學生實施性別平等教育法施行細則所定之同志教育?',
           },
           {
+            year: 2018,
             key: '12',
             name: '公投第12案',
             detail:
               '你是否同意以民法婚姻規定以外之其他形式來保障同性別二人經營永久共同生活的權益?',
           },
           {
+            year: 2018,
             key: '13',
             name: '公投第13案',
             detail:
               '你是否同意，以「台灣」(Taiwan)為全名申請參加所有國際運動賽事及2020年東京奧運?',
           },
           {
+            year: 2018,
             key: '14',
             name: '公投第14案',
             detail: '您是否同意，以民法婚姻章保障同性別二人建立婚姻關係?',
           },
           {
+            year: 2018,
             key: '15',
             name: '公投第15案',
             detail:
               '您是否同意，以「性別平等教育法」明定在國民教育各階段內實施性別平等教育，且內容應涵蓋情感教育、性教育、同志教育等課程?',
           },
           {
+            year: 2018,
             key: '16',
             name: '公投第16案',
             detail:
@@ -203,6 +218,7 @@ export const elections = [
         year: 2021,
         numbers: [
           {
+            year: 2021,
             key: 'hsinchu-1',
             name: '新竹市第1案',
             detail:
@@ -470,6 +486,16 @@ export const getMapData = (
       break
   }
   return mapData
+}
+
+export const getReferendumNumbers = (election) => {
+  if (!election.electionType.startsWith('referendum')) {
+    return
+  }
+  return election.years.reduce((numbers, year) => {
+    numbers = numbers.concat(year.numbers)
+    return numbers
+  }, [])
 }
 
 export const countyMappingData = [
