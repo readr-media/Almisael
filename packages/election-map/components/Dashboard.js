@@ -50,7 +50,6 @@ export const Dashboard = ({ showTutorial, setShowTutorial }) => {
   const [compareMode, setCompareMode] = useState(false)
   const [loading, setLoading] = useState(false)
   const loadingTimout = useRef(null)
-  console.log('Dashboard showTutorial', showTutorial)
 
   const showLoading = useCallback((show) => {
     if (show) {

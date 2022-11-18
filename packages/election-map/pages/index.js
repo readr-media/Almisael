@@ -17,7 +17,6 @@ const LiveBlogWrapper = styled.div`
 export default function Home() {
   const [initialLiveblog, setInitialLiveblog] = useState(false)
   const [showTutorial, setShowTutorial] = useState(false)
-  console.log('Home showTutorial', showTutorial)
 
   useEffect(() => {
     if (!localStorage.finishTutorial) {

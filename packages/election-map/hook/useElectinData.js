@@ -11,6 +11,8 @@ import {
   generateDefaultElectionMapData,
   getMapData,
   updateElectionMapData,
+  currentYear,
+  defaultMapData,
 } from '../components/helper/electionHelper'
 
 const DataLoader = evc.DataLoader
@@ -211,6 +213,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       let newEvcData = evcData
       let newSeatData = seatData
       let newLastUpdate = lastUpdate
+      let newIsRunning = mapData.isRunning
       const { level: currentLevel, townId, countyId } = mapObject
       const { electionType } = election
       const newInfoboxData = {
@@ -292,11 +295,13 @@ export const useElectionData = (showLoading, showTutorial) => {
                       folderName: election.meta.map.folderNames[level],
                       fileName: election.meta.map.fileNames[level],
                     })
-                    if ('is_running' in data) {
-                      setIsRunning(data.is_running)
+                    newMapData = {
+                      ...newMapData,
+                      0: data,
+                      isRunning: data.is_running,
                     }
-                    newMapData = { ...newMapData, 0: data }
                     newLastUpdate = data.updatedAt
+                    newIsRunning = data.is_running
                   } catch (error) {
                     console.error(error)
                   }
@@ -311,12 +316,13 @@ export const useElectionData = (showLoading, showTutorial) => {
                       folderName: election.meta.map.folderNames[level],
                       fileName: countyId,
                     })
-                    if ('is_running' in data) {
-                      setIsRunning(data.is_running)
+                    newMapData = {
+                      ...newMapData,
+                      1: { ...newMapData[1], [countyId]: data },
+                      isRunning: data.is_running,
                     }
-                    const countyData = { ...newMapData[1], [countyId]: data }
-                    newMapData = { ...newMapData, 1: countyData }
                     newLastUpdate = data.updatedAt
+                    newIsRunning = data.is_running
                   } catch (error) {
                     console.error(error)
                   }
@@ -335,12 +341,13 @@ export const useElectionData = (showLoading, showTutorial) => {
                       folderName: election.meta.map.folderNames[level],
                       fileName: townId,
                     })
-                    if ('is_running' in data) {
-                      setIsRunning(data.is_running)
+                    newMapData = {
+                      ...newMapData,
+                      2: { ...newMapData[2], [townId]: data },
+                      isRunning: data.is_running,
                     }
-                    const townData = { ...newMapData[2], [townId]: data }
-                    newMapData = { ...newMapData, 2: townData }
                     newLastUpdate = data.updatedAt
+                    newIsRunning = data.is_running
                   } catch (error) {
                     console.error(error)
                   }
@@ -458,12 +465,16 @@ export const useElectionData = (showLoading, showTutorial) => {
                       folderName: election.meta.map.folderNames[level],
                       fileName: countyId,
                     })
-                    if ('is_running' in data) {
-                      setIsRunning(data.is_running)
+                    if (!'is_running' in data) {
+                      console.error('CouncilMemberMapData without is_running')
                     }
-                    const countyData = { ...newMapData[1], [countyId]: data }
-                    newMapData = { ...newMapData, 1: countyData }
+                    newMapData = {
+                      ...newMapData,
+                      1: { ...newMapData[1], [countyId]: data },
+                      isRunning: data.is_running,
+                    }
                     newLastUpdate = data.updatedAt
+                    newIsRunning = data.is_running
                   } catch (error) {
                     console.error(error)
                   }
@@ -481,12 +492,17 @@ export const useElectionData = (showLoading, showTutorial) => {
                       folderName: election.meta.map.folderNames[level],
                       fileName: townId,
                     })
-                    if ('is_running' in data) {
-                      setIsRunning(data.is_running)
+                    if (!'is_running' in data) {
+                      console.error('CouncilMemberMapData without is_running')
                     }
                     const townData = { ...newMapData[2], [townId]: data }
-                    newMapData = { ...newMapData, 2: townData }
+                    newMapData = {
+                      ...newMapData,
+                      2: townData,
+                      isRunning: data.is_running,
+                    }
                     newLastUpdate = data.updatedAt
+                    newIsRunning = data.is_running
                   } catch (error) {}
                 }
                 newInfoboxData.electionData = newMapData[1][
@@ -533,12 +549,13 @@ export const useElectionData = (showLoading, showTutorial) => {
                       fileName: election.meta.map.fileNames[level],
                       number,
                     })
-                    console.warn(data, number)
-                    if ('is_running' in data) {
-                      setIsRunning(data.is_running)
+                    newMapData = {
+                      ...newMapData,
+                      0: data,
+                      isRunning: data.is_running,
                     }
-                    newMapData = { ...newMapData, 0: data }
                     newLastUpdate = data.updatedAt
+                    newIsRunning = data.is_running
                   } catch (error) {
                     console.error(error)
                   }
@@ -556,12 +573,14 @@ export const useElectionData = (showLoading, showTutorial) => {
                       fileName: countyId,
                       number,
                     })
-                    if ('is_running' in data) {
-                      setIsRunning(data.is_running)
-                    }
                     const countyData = { ...newMapData[1], [countyId]: data }
-                    newMapData = { ...newMapData, 1: countyData }
+                    newMapData = {
+                      ...newMapData,
+                      1: countyData,
+                      isRunning: data.is_running,
+                    }
                     newLastUpdate = data.updatedAt
+                    newIsRunning = data.is_running
                   } catch (error) {
                     console.error(error)
                   }
@@ -581,12 +600,14 @@ export const useElectionData = (showLoading, showTutorial) => {
                       fileName: townId,
                       number,
                     })
-                    if ('is_running' in data) {
-                      setIsRunning(data.is_running)
-                    }
                     const townData = { ...newMapData[2], [townId]: data }
-                    newMapData = { ...newMapData, 2: townData }
+                    newMapData = {
+                      ...newMapData,
+                      2: townData,
+                      isRunning: data.is_running,
+                    }
                     newLastUpdate = data.updatedAt
+                    newIsRunning = data.is_running
                   } catch (error) {
                     console.error(error)
                   }
@@ -627,6 +648,7 @@ export const useElectionData = (showLoading, showTutorial) => {
         newEvcData,
         newSeatData,
         newLastUpdate,
+        newIsRunning,
       }
     },
     [showLoading]
@@ -741,23 +763,45 @@ export const useElectionData = (showLoading, showTutorial) => {
 
   const onElectionChange = useCallback(
     (electionType) => {
-      const selectedElection = elections.find(
+      const newElection = elections.find(
         (election) => election.electionType === electionType
       )
+      const newYear = newElection.years[0].year
+      const newNumber =
+        newElection.years[0].numbers && newElection.years[0].numbers[0]
+      const newSubType = newElection.subTypes?.find(
+        (subType) => subType.key === 'normal'
+      )
 
-      setElection(selectedElection)
-      setYear(selectedElection.years[0].year)
-      setNumber(
-        selectedElection.years[0].numbers &&
-          selectedElection.years[0].numbers[0]
-      )
-      setSubType(
-        selectedElection.subTypes?.find((subType) => subType.key === 'normal')
-      )
-      setElectionMapData(deepCloneObj(defaultElectionMapData))
+      setElection(newElection)
+      setYear(newYear)
+      setNumber(newNumber)
+      setSubType(newSubType)
+      setElectionMapData((electionMapData) => {
+        const mapData = getMapData(
+          electionMapData,
+          electionType,
+          newYear,
+          newSubType?.key,
+          newNumber
+        )
+        if (mapData.isRunning) {
+          return updateElectionMapData(
+            electionMapData,
+            deepCloneObj(defaultMapData),
+            electionType,
+            newYear,
+            newSubType?.key,
+            newNumber
+          )
+        } else {
+          return electionMapData
+        }
+      })
       setMapObject(defaultMapObject)
       setInfoboxData({})
       setEvcData({ ...defaultEvcData })
+      setEvcScrollTo(undefined)
       setSeatData()
       showLoading(true)
     },
@@ -774,6 +818,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       newEvcData,
       newSeatData,
       newLastUpdate,
+      newIsRunning,
     } = await prepareElectionData(
       election,
       newMapObject,
@@ -808,7 +853,10 @@ export const useElectionData = (showLoading, showTutorial) => {
         year
       )
     )
-    setLastUpdate(newLastUpdate)
+    if (year === currentYear) {
+      setIsRunning(newIsRunning)
+      setLastUpdate(newLastUpdate)
+    }
     showLoading(false)
   }
 
@@ -839,6 +887,7 @@ export const useElectionData = (showLoading, showTutorial) => {
           newEvcData,
           newSeatData,
           newLastUpdate,
+          newIsRunning,
         } = results[0].value
         setInfoboxData(newInfoboxData)
         setElectionMapData((oldData) =>
@@ -853,7 +902,10 @@ export const useElectionData = (showLoading, showTutorial) => {
         )
         setEvcData(newEvcData)
         setSeatData(newSeatData)
-        setLastUpdate(newLastUpdate)
+        if (year === currentYear) {
+          setIsRunning(newIsRunning)
+          setLastUpdate(newLastUpdate)
+        }
       }
       if (results[1]?.value) {
         const newMapGeoJsons = results[1].value
@@ -883,7 +935,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       setShouldRefetch(true)
     }, 100 * 60 * 1000)
     // }, 1 * 60 * 1000)
-    // }, 10 * 1000)
+    // }, 5 * 1000)
 
     return () => {
       clearInterval(interval)
@@ -893,19 +945,14 @@ export const useElectionData = (showLoading, showTutorial) => {
   useEffect(() => {
     const refetch = async () => {
       console.log('refetch data..')
-      showLoading(true)
       const { level: currentLevel, townId, countyId } = mapObject
       const { electionType } = election
-      let newMapData = getMapData(
-        deepCloneObj(defaultElectionMapData),
-        electionType,
-        year,
-        subType?.key,
-        number
-      )
+      let newMapData = deepCloneObj(defaultMapData)
       const newEvcData = { ...defaultEvcData }
       let newLastUpdate = lastUpdate
       let newSeatData
+      let newIsRunning
+      showLoading(true)
       for (let level = 0; level <= currentLevel; level++) {
         switch (electionType) {
           case 'mayor': {
@@ -927,8 +974,13 @@ export const useElectionData = (showLoading, showTutorial) => {
                     folderName: election.meta.map.folderNames[level],
                     fileName: 'country',
                   })
-                  newMapData[0] = data
+                  newMapData = {
+                    ...newMapData,
+                    0: data,
+                    isRunning: data.is_running,
+                  }
                   newLastUpdate = data.updatedAt
+                  newIsRunning = data.is_running
                 } catch (error) {
                   console.error(error)
                 }
@@ -944,8 +996,14 @@ export const useElectionData = (showLoading, showTutorial) => {
                     folderName: election.meta.map.folderNames[level],
                     fileName: countyId,
                   })
-                  newMapData[1] = { [countyId]: data }
+                  newMapData = {
+                    ...newMapData,
+                    1: { [countyId]: data },
+                    isRunning: data.is_running,
+                  }
+
                   newLastUpdate = data.updatedAt
+                  newIsRunning = data.is_running
                 } catch (error) {
                   console.error(error)
                 }
@@ -961,8 +1019,14 @@ export const useElectionData = (showLoading, showTutorial) => {
                     folderName: election.meta.map.folderNames[level],
                     fileName: townId,
                   })
-                  newMapData[2] = { [townId]: data }
+                  newMapData = {
+                    ...newMapData,
+                    2: { [townId]: data },
+                    isRunning: data.is_running,
+                  }
+
                   newLastUpdate = data.updatedAt
+                  newIsRunning = data.is_running
                 } catch (error) {
                   console.error(error)
                 }
@@ -1010,8 +1074,17 @@ export const useElectionData = (showLoading, showTutorial) => {
                     folderName: election.meta.map.folderNames[level],
                     fileName: countyId,
                   })
-                  newMapData[1] = { [countyId]: data }
+                  if (!'is_running' in data) {
+                    console.error('CouncilMemberMapData without is_running')
+                  }
+                  newMapData = {
+                    ...newMapData,
+                    1: { [countyId]: data },
+                    isRunning: data.is_running,
+                  }
+
                   newLastUpdate = data.updatedAt
+                  newIsRunning = data.is_running
                 } catch (error) {
                   console.error(error)
                 }
@@ -1025,8 +1098,17 @@ export const useElectionData = (showLoading, showTutorial) => {
                     folderName: election.meta.map.folderNames[level],
                     fileName: townId,
                   })
-                  newMapData[2] = { [townId]: data }
+                  if (!'is_running' in data) {
+                    console.error('CouncilMemberMapData without is_running')
+                  }
+                  newMapData = {
+                    ...newMapData,
+                    2: { [townId]: data },
+                    isRunning: data.is_running,
+                  }
+
                   newLastUpdate = data.updatedAt
+                  newIsRunning = data.is_running
                 } catch (error) {
                   console.error(error)
                 }
@@ -1057,7 +1139,14 @@ export const useElectionData = (showLoading, showTutorial) => {
                     fileName: election.meta.map.fileNames[level],
                     number,
                   })
-                  newMapData[0] = data
+                  newMapData = {
+                    ...newMapData,
+                    0: data,
+                    isRunning: data.is_running,
+                  }
+
+                  newLastUpdate = data.updateAt
+                  newIsRunning = data.is_running
                 } catch (error) {
                   console.error(error)
                 }
@@ -1071,9 +1160,14 @@ export const useElectionData = (showLoading, showTutorial) => {
                     fileName: countyId,
                     number,
                   })
-                  const countyData = { [countyId]: data }
-                  newMapData[1] = countyData
+                  newMapData = {
+                    ...newMapData,
+                    1: { [countyId]: data },
+                    isRunning: data.is_running,
+                  }
+
                   newLastUpdate = data.updatedAt
+                  newIsRunning = data.is_running
                 } catch (error) {
                   console.error(error)
                 }
@@ -1085,11 +1179,16 @@ export const useElectionData = (showLoading, showTutorial) => {
                     year,
                     folderName: election.meta.map.folderNames[level],
                     fileName: townId,
-                    number: 'F1',
+                    number,
                   })
-                  const townData = { [townId]: data }
-                  newMapData[2] = townData
+                  newMapData = {
+                    ...newMapData,
+                    2: { [townId]: data },
+                    isRunning: data.is_running,
+                  }
+
                   newLastUpdate = data.updatedAt
+                  newIsRunning = data.is_running
                 } catch (error) {
                   console.error(error)
                 }
@@ -1107,7 +1206,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       }
       setElectionMapData(() =>
         updateElectionMapData(
-          defaultElectionMapData,
+          electionMapData,
           newMapData,
           election.electionType,
           year,
@@ -1127,28 +1226,33 @@ export const useElectionData = (showLoading, showTutorial) => {
       )
       setSeatData(newSeatData)
       setShouldRefetch(false)
-      setLastUpdate(newLastUpdate)
+      if (year === currentYear) {
+        setLastUpdate(newLastUpdate)
+        setIsRunning(newIsRunning)
+      }
       showLoading(false)
     }
+
     if (shouldRefetch) {
-      // if (isRunning) {
-      refetch()
-      // } else {
-      //   console.log('no need to refetch final data')
-      //   setShouldRefetch(false)
-      // }
+      if (!mapData.isRunning) {
+        console.log('no need to refetch final data')
+        setShouldRefetch(false)
+        return
+      } else {
+        refetch()
+      }
     }
   }, [
-    shouldRefetch,
-    mapObject,
-    election.electionType,
-    showLoading,
     election,
-    year,
-    subType,
-    isRunning,
+    electionMapData,
     lastUpdate,
+    mapData,
+    mapObject,
     number,
+    shouldRefetch,
+    showLoading,
+    subType,
+    year,
   ])
 
   useEffect(() => {
