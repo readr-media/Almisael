@@ -48,13 +48,13 @@ const fetchReferendumEvcData = async ({ year }) => {
   return data
 }
 
-const fetchCouncilMemberEvcData = async ({ year, district, type }) => {
+const fetchCouncilMemberEvcData = async ({ year, district, subtypeKey }) => {
   const loader = new DataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadCouncilMemberDataForElectionMapProject({
     year,
     district,
     includes:
-      type === 'normal'
+      subtypeKey === 'normal'
         ? ['normal']
         : ['plainIndigenous', 'mountainIndigenous'],
   })
@@ -77,9 +77,9 @@ const fetchReferendumMapData = async ({
   year,
   folderName,
   fileName,
-  number,
+  numberKey,
 }) => {
-  const mapDataUrl = `${gcsBaseUrl}/${year}/${electionType}/map/${number}/${folderName}/${fileName}.json`
+  const mapDataUrl = `${gcsBaseUrl}/${year}/${electionType}/map/${numberKey}/${folderName}/${fileName}.json`
   const { data } = await axios.get(mapDataUrl)
   return data
 }
@@ -87,11 +87,11 @@ const fetchReferendumMapData = async ({
 const fetchCouncilMemberMapData = async ({
   electionType,
   year,
-  subTypeKey,
+  subtypeKey,
   folderName,
   fileName,
 }) => {
-  const mapDataUrl = `${gcsBaseUrl}/${year}/${electionType}/map/${folderName}/${subTypeKey}/${fileName}.json`
+  const mapDataUrl = `${gcsBaseUrl}/${year}/${electionType}/map/${folderName}/${subtypeKey}/${fileName}.json`
   const { data } = await axios.get(mapDataUrl)
   return data
 }
@@ -143,8 +143,8 @@ export const useElectionData = (showLoading, showTutorial) => {
   const [mapObject, setMapObject] = useState(defaultMapObject)
   const [shouldRefetch, setShouldRefetch] = useState(false)
 
-  const [subType, setSubType] = useState(
-    election.subTypes?.find((subType) => subType.key === 'normal')
+  const [subtype, setSubtype] = useState(
+    election.subtypes?.find((subtype) => subtype.key === 'normal')
   )
   const [isRunning, setIsRunning] = useState(false)
   const [evcScrollTo, setEvcScrollTo] = useState()
@@ -159,10 +159,10 @@ export const useElectionData = (showLoading, showTutorial) => {
     electionMapData,
     election.electionType,
     year,
-    subType?.key,
-    number
+    subtype?.key,
+    number?.key
   )
-  const subTypes = election.subTypes
+  const subtypes = election.subtypes
 
   const prepareGeojsons = useCallback(async () => {
     const twCountiesJson =
@@ -205,8 +205,8 @@ export const useElectionData = (showLoading, showTutorial) => {
       evcData,
       seatData,
       year,
-      subType,
-      number,
+      subtypeKey,
+      numberKey,
       lastUpdate
     ) => {
       let newMapData = mapData
@@ -430,7 +430,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                       district: countyMappingData.find(
                         (countyData) => countyData.countyCode === countyId
                       ).countyNameEng,
-                      type: subType.key,
+                      subtypeKey,
                     })
                     const countyEvcData = {
                       ...newEvcData[electionType],
@@ -461,7 +461,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     const data = await fetchCouncilMemberMapData({
                       electionType,
                       year,
-                      subTypeKey: subType.key,
+                      subtypeKey,
                       folderName: election.meta.map.folderNames[level],
                       fileName: countyId,
                     })
@@ -488,7 +488,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     const data = await fetchCouncilMemberMapData({
                       electionType,
                       year,
-                      subTypeKey: subType.key,
+                      subtypeKey,
                       folderName: election.meta.map.folderNames[level],
                       fileName: townId,
                     })
@@ -547,7 +547,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                       year,
                       folderName: election.meta.map.folderNames[level],
                       fileName: election.meta.map.fileNames[level],
-                      number,
+                      numberKey,
                     })
                     newMapData = {
                       ...newMapData,
@@ -571,7 +571,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                       year,
                       folderName: election.meta.map.folderNames[level],
                       fileName: countyId,
-                      number,
+                      numberKey,
                     })
                     const countyData = { ...newMapData[1], [countyId]: data }
                     newMapData = {
@@ -598,7 +598,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                       year,
                       folderName: election.meta.map.folderNames[level],
                       fileName: townId,
-                      number,
+                      numberKey,
                     })
                     const townData = { ...newMapData[2], [townId]: data }
                     newMapData = {
@@ -657,7 +657,7 @@ export const useElectionData = (showLoading, showTutorial) => {
   const scrollEvcFromMapObject = (
     electionType,
     mapData,
-    subType,
+    subtype,
     mapObject,
     year
   ) => {
@@ -680,7 +680,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       case 'councilMember': {
         // try to get scrollTo, but ignore any error
         // ignore 原住民分類
-        if (subType.key === 'normal') {
+        if (subtype.key === 'normal') {
           try {
             const countyMapData = mapData[1][mapObject.countyId]
             const targetDistrict = countyMapData.districts.find(
@@ -727,7 +727,7 @@ export const useElectionData = (showLoading, showTutorial) => {
           // evcSelectedValue format '第01選區'
           //find the fist town of the area from mapData
           // ignore 原住民分類
-          if (subType.key === 'normal') {
+          if (subtype.key === 'normal') {
             const countyMapData = mapData[1][mapObject.countyId]
             const targetDistrict = countyMapData.districts.find(
               (district) => district.area === evcSelectedValue.slice(1, 3)
@@ -751,11 +751,11 @@ export const useElectionData = (showLoading, showTutorial) => {
           break
       }
     },
-    [election.electionType, mapData, subType, mapObject.countyId]
+    [election.electionType, mapData, subtype, mapObject.countyId]
   )
 
-  const onSubTypeChange = (newSubType) => {
-    setSubType(newSubType)
+  const onSubtypeChange = (newSubtype) => {
+    setSubtype(newSubtype)
     setEvcData({ ...defaultEvcData })
     setEvcScrollTo(undefined)
     showLoading(true)
@@ -769,21 +769,21 @@ export const useElectionData = (showLoading, showTutorial) => {
       const newYear = newElection.years[0].year
       const newNumber =
         newElection.years[0].numbers && newElection.years[0].numbers[0]
-      const newSubType = newElection.subTypes?.find(
-        (subType) => subType.key === 'normal'
+      const newSubtype = newElection.subtypes?.find(
+        (subtype) => subtype.key === 'normal'
       )
 
       setElection(newElection)
       setYear(newYear)
       setNumber(newNumber)
-      setSubType(newSubType)
+      setSubtype(newSubtype)
       setElectionMapData((electionMapData) => {
         const mapData = getMapData(
           electionMapData,
           electionType,
           newYear,
-          newSubType?.key,
-          newNumber
+          newSubtype?.key,
+          newNumber?.key
         )
         if (mapData.isRunning) {
           return updateElectionMapData(
@@ -791,8 +791,8 @@ export const useElectionData = (showLoading, showTutorial) => {
             deepCloneObj(defaultMapData),
             electionType,
             newYear,
-            newSubType?.key,
-            newNumber
+            newSubtype?.key,
+            newNumber?.key
           )
         } else {
           return electionMapData
@@ -826,8 +826,8 @@ export const useElectionData = (showLoading, showTutorial) => {
       evcData,
       seatData,
       year,
-      subType,
-      number,
+      subtype?.key,
+      number?.key,
       lastUpdate
     )
     setInfoboxData(newInfoboxData)
@@ -837,8 +837,8 @@ export const useElectionData = (showLoading, showTutorial) => {
         newMapData,
         election.electionType,
         year,
-        subType,
-        number
+        subtype?.key,
+        number?.key
       )
     )
     setEvcData(newEvcData)
@@ -848,7 +848,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       scrollEvcFromMapObject(
         election.electionType,
         newMapData,
-        subType,
+        subtype,
         newMapObject,
         year
       )
@@ -874,8 +874,8 @@ export const useElectionData = (showLoading, showTutorial) => {
         evcData,
         seatData,
         year,
-        subType,
-        number,
+        subtype?.key,
+        number?.key,
         lastUpdate
       ),
       mapGeoJsons ? undefined : prepareGeojsons(),
@@ -896,8 +896,8 @@ export const useElectionData = (showLoading, showTutorial) => {
             newMapData,
             election.electionType,
             year,
-            subType,
-            number
+            subtype?.key,
+            number?.key
           )
         )
         setEvcData(newEvcData)
@@ -924,7 +924,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     showLoading,
     year,
     seatData,
-    subType,
+    subtype,
     lastUpdate,
     number,
   ])
@@ -1048,7 +1048,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     district: countyMappingData.find(
                       (countyData) => countyData.countyCode === countyId
                     ).countyNameEng,
-                    type: subType.key,
+                    subtypeKey: subtype.key,
                   })
                   const countyEvcData = { [countyId]: data }
                   newEvcData[electionType] = countyEvcData
@@ -1070,7 +1070,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                   const data = await fetchCouncilMemberMapData({
                     electionType,
                     year,
-                    subTypeKey: subType.key,
+                    subtype,
                     folderName: election.meta.map.folderNames[level],
                     fileName: countyId,
                   })
@@ -1094,7 +1094,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                   const data = await fetchCouncilMemberMapData({
                     electionType,
                     year,
-                    subTypeKey: subType.key,
+                    subtype,
                     folderName: election.meta.map.folderNames[level],
                     fileName: townId,
                   })
@@ -1137,7 +1137,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     year,
                     folderName: election.meta.map.folderNames[level],
                     fileName: election.meta.map.fileNames[level],
-                    number,
+                    numberKey: number.key,
                   })
                   newMapData = {
                     ...newMapData,
@@ -1158,7 +1158,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     year,
                     folderName: election.meta.map.folderNames[level],
                     fileName: countyId,
-                    number,
+                    numberKey: number.key,
                   })
                   newMapData = {
                     ...newMapData,
@@ -1179,7 +1179,7 @@ export const useElectionData = (showLoading, showTutorial) => {
                     year,
                     folderName: election.meta.map.folderNames[level],
                     fileName: townId,
-                    number,
+                    numberKey: number.key,
                   })
                   newMapData = {
                     ...newMapData,
@@ -1210,8 +1210,8 @@ export const useElectionData = (showLoading, showTutorial) => {
           newMapData,
           election.electionType,
           year,
-          subType,
-          number
+          subtype?.key,
+          number?.key
         )
       )
       setEvcData(newEvcData)
@@ -1219,7 +1219,7 @@ export const useElectionData = (showLoading, showTutorial) => {
         scrollEvcFromMapObject(
           election.electionType,
           newMapData,
-          subType,
+          subtype,
           mapObject,
           year
         )
@@ -1251,7 +1251,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     number,
     shouldRefetch,
     showLoading,
-    subType,
+    subtype,
     year,
   ])
 
@@ -1273,10 +1273,10 @@ export const useElectionData = (showLoading, showTutorial) => {
   if (election.electionType === 'councilMember') {
     outputSeatData = seatData && seatData[mapObject.countyId]
   }
-  const subTypeInfo = subType && {
-    subType,
-    subTypes,
-    onSubTypeChange,
+  const subtypeInfo = subtype && {
+    subtype,
+    subtypes,
+    onSubtypeChange,
   }
   const yearInfo = {
     year,
@@ -1304,7 +1304,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     mapGeoJsons,
     yearInfo,
     onTutorialEnd,
-    subTypeInfo,
+    subtypeInfo,
     isRunning,
     lastUpdate,
   }

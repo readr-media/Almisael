@@ -53,28 +53,27 @@ const Radio = styled.span`
   }
 `
 
-export const ElectionRadio = ({ className, subTypeInfo }) => {
-  const { subType: selectedType, subTypes, onSubTypeChange } = subTypeInfo
+export const ElectionRadio = ({ className, subtypeInfo }) => {
+  const { subtype: selectedType, subtypes, onSubtypeChange } = subtypeInfo
 
   return (
     <Wrapper className={className}>
-      {subTypes.map((subType) => (
-        <Label key={subType.key}>
+      {subtypes.map((subtype) => (
+        <Label key={subtype.key}>
           <Input
             type="radio"
-            checked={subType.key === selectedType.key}
+            checked={subtype.key === selectedType.key}
             onChange={(e) => {
               const newKey = e.target.value
-              const newSubType = subTypes.find(
-                (subType) => subType.key === newKey
+              const newSubtype = subtypes.find(
+                (subtype) => subtype.key === newKey
               )
-              console.log(newSubType)
-              onSubTypeChange(newSubType)
+              onSubtypeChange(newSubtype)
             }}
-            value={subType.key}
+            value={subtype.key}
           />
           <Radio />
-          {subType.name}
+          {subtype.name}
         </Label>
       ))}
     </Wrapper>

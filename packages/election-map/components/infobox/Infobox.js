@@ -497,14 +497,14 @@ const mayorInfoboxData = (data, level) => {
   return data
 }
 
-const councilMemberInfoboxData = (data, level, subType) => {
+const councilMemberInfoboxData = (data, level, subtype) => {
   if (level === 0) {
     return '點擊地圖看更多資料'
   }
 
   if (!data) {
     console.log(`no data for councilMember infobox in level ${level}`, data)
-    if (subType.key === 'normal') {
+    if (subtype.key === 'normal') {
       return '此區域為原住民選區，請點擊「原住民/區域」切換檢視內容'
     } else {
       return '此區域並非原住民區域選區，起點擊「區域/原住民」切換檢視內容'
@@ -520,7 +520,7 @@ const councilMemberInfoboxData = (data, level, subType) => {
   }
 
   if (level > 1 && data.length === 0) {
-    if (subType.key === 'normal') {
+    if (subtype.key === 'normal') {
       return '此區域為原住民選區，請點擊「原住民/區域」切換檢視內容'
     } else {
       return '此區域並非原住民區域選區，起點擊「區域/原住民」切換檢視內容'
@@ -538,7 +538,7 @@ const councilMemberInfoboxData = (data, level, subType) => {
   return data
 }
 
-export const Infobox = ({ data, subType, isRunning }) => {
+export const Infobox = ({ data, subtype, isRunning }) => {
   const { electionType, level, electionData } = data
   let infobox
   switch (electionType) {
@@ -556,7 +556,7 @@ export const Infobox = ({ data, subType, isRunning }) => {
       break
     }
     case 'councilMember': {
-      const data = councilMemberInfoboxData(electionData, level, subType)
+      const data = councilMemberInfoboxData(electionData, level, subtype)
       infobox = (
         <CouncilMemberInfobox level={level} data={data} isRunning={isRunning} />
       )

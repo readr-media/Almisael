@@ -91,7 +91,7 @@ export const ControlPanel = ({
   mapObject,
   election,
   expandMode,
-  subTypeInfo,
+  subtypeInfo,
   lastUpdate,
   yearInfo,
 }) => {
@@ -139,10 +139,10 @@ export const ControlPanel = ({
           <Location key={i}>{location}</Location>
         ))}
       </LocationsWrapper>
-      {subTypeInfo && (
+      {subtypeInfo && (
         <StyledELectionRadio
           expandMode={expandMode}
-          subTypeInfo={subTypeInfo}
+          subtypeInfo={subtypeInfo}
         />
       )}
       {lastUpdate && (

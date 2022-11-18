@@ -78,7 +78,7 @@ export const Dashboard = ({ showTutorial, setShowTutorial }) => {
     mapGeoJsons,
     yearInfo,
     onTutorialEnd,
-    subTypeInfo,
+    subtypeInfo,
     isRunning,
     lastUpdate,
   } = useElectionData(showLoading, showTutorial)
@@ -95,13 +95,13 @@ export const Dashboard = ({ showTutorial, setShowTutorial }) => {
           mapObject={mapObject}
           election={election}
           expandMode={expandMode}
-          subTypeInfo={subTypeInfo}
+          subtypeInfo={subtypeInfo}
           lastUpdate={lastUpdate}
           yearInfo={yearInfo}
         />
         <InfoboxPanel
           data={infoboxData}
-          subType={subTypeInfo?.subType}
+          subtype={subtypeInfo?.subtype}
           isRunning={isRunning}
         />
         <SeatsPanel
