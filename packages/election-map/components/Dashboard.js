@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { ControlPanel } from './ControlPanel'
 import { MapContainer } from './MapContainer'
@@ -46,11 +46,11 @@ const MoreHint = styled.div`
   text-align: center;
 `
 
-export const Dashboard = () => {
-  const [showTutorial, setShowTutorial] = useState(false)
+export const Dashboard = ({ showTutorial, setShowTutorial }) => {
   const [compareMode, setCompareMode] = useState(false)
   const [loading, setLoading] = useState(false)
   const loadingTimout = useRef(null)
+  console.log('Dashboard showTutorial', showTutorial)
 
   const showLoading = useCallback((show) => {
     if (show) {
@@ -63,12 +63,6 @@ export const Dashboard = () => {
       setTimeout(() => {
         setLoading(false)
       }, 300)
-    }
-  }, [])
-
-  useEffect(() => {
-    if (!localStorage.finishTutorial) {
-      setShowTutorial(true)
     }
   }, [])
 
@@ -151,7 +145,7 @@ export const Dashboard = () => {
           }}
         />
       )}
-      <MoreHint>往下滑看最新選情</MoreHint>
+      {!showTutorial && <MoreHint>往下滑看最新選情</MoreHint>}
     </Wrapper>
   )
 }

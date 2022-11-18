@@ -16,6 +16,15 @@ const LiveBlogWrapper = styled.div`
 
 export default function Home() {
   const [initialLiveblog, setInitialLiveblog] = useState(false)
+  const [showTutorial, setShowTutorial] = useState(false)
+  console.log('Home showTutorial', showTutorial)
+
+  useEffect(() => {
+    if (!localStorage.finishTutorial) {
+      console.log('weiofjhweoiwiofjwoeij')
+      setShowTutorial(true)
+    }
+  }, [])
 
   useEffect(() => {
     const fetchLiveblog = async () => {
@@ -30,17 +39,22 @@ export default function Home() {
     <>
       <NavBar />
       <LandingPage />
-      <Dashboard />
-      <LiveBlogWrapper>
-        {initialLiveblog && (
-          <LiveBlog
-            initialLiveblog={initialLiveblog}
-            fetchLiveblogUrl="https://editools-gcs-dev.readr.tw/files/liveblogs/ukraine-war.json"
-            fetchImageBaseUrl="https://editools-gcs-dev.readr.tw"
-            toLoadPeriodically={true}
-          />
-        )}
-      </LiveBlogWrapper>
+      <Dashboard
+        showTutorial={showTutorial}
+        setShowTutorial={setShowTutorial}
+      />
+      {!showTutorial && (
+        <LiveBlogWrapper>
+          {initialLiveblog && (
+            <LiveBlog
+              initialLiveblog={initialLiveblog}
+              fetchLiveblogUrl="https://editools-gcs-dev.readr.tw/files/liveblogs/ukraine-war.json"
+              fetchImageBaseUrl="https://editools-gcs-dev.readr.tw"
+              toLoadPeriodically={true}
+            />
+          )}
+        </LiveBlogWrapper>
+      )}
     </>
   )
 }
