@@ -10,6 +10,7 @@ import { SpinningModal } from './SpinningModal'
 import ElectionVoteComparisonPanel from './ElectionVoteComparisonPanel'
 import { electionMapColor } from '../consts/colors'
 import { Tutorial } from './Tutorial'
+import { countyMappingData } from './helper/electionHelper'
 
 const Wrapper = styled.div`
   position: relative;
@@ -114,7 +115,9 @@ export const Dashboard = () => {
           meta={{
             ...election.meta.seat,
             year: yearInfo.year,
-            location: election.meta.seat?.mapping[mapObject.countyId],
+            location: countyMappingData.find(
+              (countyData) => countyData.countyCode === mapObject.countyId
+            )?.countyName,
           }}
           data={seatData}
         />
