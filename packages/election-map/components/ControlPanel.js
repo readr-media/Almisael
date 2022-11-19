@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { electionMapColor } from '../consts/colors'
 import { ElectionRadio } from './ElectionRadio'
@@ -139,6 +139,15 @@ export const ControlPanel = ({
     villageName,
   ].filter((name) => !!name)
   if (!locations.length) locations.push('全國')
+
+  useEffect(() => {
+    const comapreNumber =
+      numbers?.length > 1
+        ? numbers.filter((n) => n.key !== number.key)[0]
+        : null
+
+    setCompareCandidates([number, comapreNumber])
+  }, [number, numbers])
 
   if (number) {
     return (
