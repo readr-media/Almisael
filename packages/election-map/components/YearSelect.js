@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -18,6 +19,7 @@ const Slider = styled.input`
   background: #b9b9b9;
   border-radius: 5px;
   outline: none;
+  ${({ compare }) => compare && `visibility: hidden;`}
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -79,6 +81,43 @@ const Spot = styled.span`
     top: 23px;
     left: -18px;
   }
+
+  ${({ compare, cand1, cand2 }) => {
+    if (compare) {
+      return `
+        ${
+          !cand1 &&
+          `
+            border: 1px solid #cdcdcd;
+            &:after {
+              color: #cdcdcd;
+            }
+            &:hover {
+              border: 1px solid #000;
+              &:before {
+                background-color: #000;
+              }
+              &:after {
+                color: #000;
+              }  
+            }
+          `
+        }
+        ${
+          cand2 &&
+          `
+            border: 1px solid #000;
+            &:before {
+              background-color: #000;
+            }
+            &:after {
+              color: #000;
+            }
+          `
+        }
+      `
+    }
+  }}
 `
 
 const CompareButton = styled.button`
@@ -94,24 +133,56 @@ const CompareButton = styled.button`
 
 export const YearSelect = ({ className, yearInfo }) => {
   const { years, year, setYear } = yearInfo
+  const [compare, setCompare] = useState(false)
+  const [compareCandidates, setCompareCandidates] = useState([
+    years.find((y) => y.year === year),
+    null,
+  ])
   const selectedIndex = years.indexOf(years.find((y) => y.year === year))
-
+  console.log(years)
   return (
     <Wrapper className={className}>
       <SliderWrapper>
-        <SpotWrapper>
-          {years.map((y) => (
-            <Spot
-              key={y.year}
-              content={y.year}
-              value={y.year === year}
-              selected={y.year === year}
-              onClick={() => {
-                setYear(y.year)
-              }}
-            />
-          ))}
-        </SpotWrapper>
+        {compare ? (
+          <SpotWrapper>
+            {years.map((y) => (
+              <Spot
+                key={y.year}
+                content={y.year}
+                compare={compare}
+                selected={
+                  (compareCandidates[0] &&
+                    y.year === compareCandidates[0].year) ||
+                  (compareCandidates[1] && y.year === compareCandidates[1].year)
+                }
+                cand1={
+                  compareCandidates[0] && y.year === compareCandidates[0].year
+                }
+                cand2={
+                  compareCandidates[1] && y.year === compareCandidates[1].year
+                }
+                onClick={() => {
+                  if (y.year !== compareCandidates[0].year) {
+                    setCompareCandidates(([cand1]) => [cand1, y])
+                  }
+                }}
+              />
+            ))}
+          </SpotWrapper>
+        ) : (
+          <SpotWrapper>
+            {years.map((y) => (
+              <Spot
+                key={y.year}
+                content={y.year}
+                selected={y.year === year}
+                onClick={() => {
+                  setYear(y.year)
+                }}
+              />
+            ))}
+          </SpotWrapper>
+        )}
         <Slider
           type="range"
           min="0"
@@ -123,9 +194,16 @@ export const YearSelect = ({ className, yearInfo }) => {
             const year = years[index].year
             setYear(year)
           }}
+          compare={compare}
         />
       </SliderWrapper>
-      <CompareButton>比較</CompareButton>
+      <CompareButton
+        onClick={() => {
+          setCompare((compare) => !compare)
+        }}
+      >
+        比較
+      </CompareButton>
     </Wrapper>
   )
 }
