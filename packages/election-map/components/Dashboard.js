@@ -10,7 +10,7 @@ import { SpinningModal } from './SpinningModal'
 import ElectionVoteComparisonPanel from './ElectionVoteComparisonPanel'
 import { electionMapColor } from '../consts/colors'
 import { Tutorial } from './Tutorial'
-import { countyMappingData } from './helper/electionHelper'
+import { countyMappingData } from './helper/election'
 
 const Wrapper = styled.div`
   position: relative;
@@ -86,13 +86,12 @@ export const Dashboard = ({ showTutorial, setShowTutorial }) => {
     mapObject,
     setMapObject,
     mapGeoJsons,
-    yearInfo,
     onTutorialEnd,
+    yearInfo,
     subtypeInfo,
+    numberInfo,
     isRunning,
     lastUpdate,
-    number,
-    numbers,
   } = useElectionData(showLoading, showTutorial)
 
   const expandMode = !!seatData
@@ -110,14 +109,13 @@ export const Dashboard = ({ showTutorial, setShowTutorial }) => {
           subtypeInfo={subtypeInfo}
           lastUpdate={lastUpdate}
           yearInfo={yearInfo}
-          number={number}
-          numbers={numbers}
+          numberInfo={numberInfo}
         />
         <StyledInfoboxPanel
           data={infoboxData}
           subtype={subtypeInfo?.subtype}
           isRunning={isRunning}
-          goDown={!!number}
+          goDown={!!numberInfo.number}
         />
         <SeatsPanel
           meta={{

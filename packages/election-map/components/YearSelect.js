@@ -132,7 +132,7 @@ const CompareButton = styled.button`
 `
 
 export const YearSelect = ({ className, yearInfo }) => {
-  const { years, year, setYear } = yearInfo
+  const { years, year, onYearChange } = yearInfo
   const [compare, setCompare] = useState(false)
   const [compareCandidates, setCompareCandidates] = useState([
     years.find((y) => y === year),
@@ -172,7 +172,7 @@ export const YearSelect = ({ className, yearInfo }) => {
                 content={y.key}
                 selected={y === year}
                 onClick={() => {
-                  setYear(y)
+                  onYearChange(y)
                 }}
               />
             ))}
@@ -187,7 +187,7 @@ export const YearSelect = ({ className, yearInfo }) => {
           onChange={(e) => {
             const index = e.target.value
             const year = years[index].key
-            setYear(year)
+            onYearChange(year)
           }}
           compare={compare}
         />

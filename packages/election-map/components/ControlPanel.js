@@ -119,10 +119,10 @@ export const ControlPanel = ({
   subtypeInfo,
   lastUpdate,
   yearInfo,
-  number,
-  numbers,
+  numberInfo,
 }) => {
   const [compare, setCompare] = useState(false)
+  const { number, numbers, onNumberChange } = numberInfo
   const comapreNumber =
     numbers?.length > 1 ? numbers.filter((n) => n.key !== number.key)[0] : null
   const [compareCandidates, setCompareCandidates] = useState([
@@ -195,7 +195,11 @@ export const ControlPanel = ({
             />
           </>
         ) : (
-          <StyledReferendumSelect selectedNumber={number} numbers={numbers} />
+          <StyledReferendumSelect
+            selectedNumber={number}
+            numbers={numbers}
+            onNumberChange={onNumberChange}
+          />
         )}
         {comapreNumber && (
           <ActionButton
