@@ -5,12 +5,12 @@ export const elections = [
   {
     electionType: 'president',
     electionName: '總統',
-    years: [{ year: 2020 }, { year: 2016 }, { year: 2012 }],
+    years: [{ key: 2020 }, { key: 2016 }, { key: 2012 }],
   },
   {
     electionType: 'mayor',
     electionName: '縣市首長',
-    years: [{ year: 2022 }, { year: 2018 }, { year: 2014 }, { year: 2010 }],
+    years: [{ key: 2022 }, { key: 2018 }, { key: 2014 }, { key: 2010 }],
     meta: {
       evc: { district: 'all' },
       map: {
@@ -34,13 +34,13 @@ export const elections = [
       { name: '區域', key: 'normal' },
       { name: '原住民', key: 'indigenous' },
     ],
-    years: [{ year: 2020 }, { year: 2016 }, { year: 2012 }],
+    years: [{ key: 2020 }, { key: 2016 }, { key: 2012 }],
     seats: { wrapperTitle: '立法委員席次圖', componentTitle: '立法委員選舉' },
   },
   {
     electionType: 'legislatorParty',
     electionName: '立法委員（不分區）',
-    years: [{ year: 2020 }, { year: 2016 }, { year: 2012 }],
+    years: [{ key: 2020 }, { key: 2016 }, { key: 2012 }],
     seats: { wrapperTitle: '立法委員席次圖', componentTitle: '立法委員選舉' },
   },
   {
@@ -50,7 +50,7 @@ export const elections = [
       { name: '原住民', key: 'indigenous' },
     ],
     electionName: '縣市議員',
-    years: [{ year: 2022 }, { year: 2018 }, { year: 2014 }, { year: 2010 }],
+    years: [{ key: 2022 }, { key: 2018 }, { key: 2014 }, { key: 2010 }],
     seats: { wrapperTitle: '縣市議員席次圖', componentTitle: '議員選舉' },
     meta: {
       evc: {},
@@ -77,7 +77,7 @@ export const elections = [
     electionName: '全國性公民投票',
     years: [
       {
-        year: 2022,
+        key: 2022,
         numbers: [
           {
             year: 2022,
@@ -89,7 +89,7 @@ export const elections = [
         ],
       },
       {
-        year: 2021,
+        key: 2021,
         numbers: [
           {
             year: 2021,
@@ -121,7 +121,7 @@ export const elections = [
         ],
       },
       {
-        year: 2018,
+        key: 2018,
         numbers: [
           {
             year: 2018,
@@ -215,7 +215,7 @@ export const elections = [
     electionName: '地方性公民投票',
     years: [
       {
-        year: 2021,
+        key: 2021,
         numbers: [
           {
             year: 2021,
@@ -242,8 +242,8 @@ export const generateDefaultElectionMapData = () => {
       case 'president':
       case 'mayor':
       case 'legislatorParty': {
-        singleElectionMapData = years.reduce((obj, { year }) => {
-          obj[year] = deepCloneObj(defaultMapData)
+        singleElectionMapData = years.reduce((obj, { key }) => {
+          obj[key] = deepCloneObj(defaultMapData)
           return obj
         }, {})
         break
@@ -252,8 +252,8 @@ export const generateDefaultElectionMapData = () => {
       case 'legislator':
       case 'councilMember': {
         const { subtypes } = election
-        singleElectionMapData = years.reduce((obj, { year }) => {
-          obj[year] = subtypes.reduce((obj, { key }) => {
+        singleElectionMapData = years.reduce((obj, { key }) => {
+          obj[key] = subtypes.reduce((obj, { key }) => {
             obj[key] = deepCloneObj(defaultMapData)
             return obj
           }, {})
@@ -264,8 +264,8 @@ export const generateDefaultElectionMapData = () => {
 
       case 'referendum':
       case 'referendumLocal': {
-        singleElectionMapData = years.reduce((obj, { year, numbers }) => {
-          obj[year] = numbers.reduce((obj, { key }) => {
+        singleElectionMapData = years.reduce((obj, { key, numbers }) => {
+          obj[key] = numbers.reduce((obj, { key }) => {
             obj[key] = deepCloneObj(defaultMapData)
             return obj
           }, {})
@@ -425,7 +425,7 @@ export const updateElectionMapData = (
   electionMapData,
   newMapData,
   electionType,
-  year,
+  yearKey,
   subtypeKey,
   numberKey
 ) => {
@@ -434,19 +434,19 @@ export const updateElectionMapData = (
     case 'president':
     case 'mayor':
     case 'legislatorParty': {
-      newElectionMapData[electionType][year] = newMapData
+      newElectionMapData[electionType][yearKey] = newMapData
       break
     }
 
     case 'legislator':
     case 'councilMember': {
-      newElectionMapData[electionType][year][subtypeKey] = newMapData
+      newElectionMapData[electionType][yearKey][subtypeKey] = newMapData
       break
     }
 
     case 'referendum':
     case 'referendumLocal': {
-      newElectionMapData[electionType][year][numberKey] = newMapData
+      newElectionMapData[electionType][yearKey][numberKey] = newMapData
       break
     }
     default:
@@ -458,7 +458,7 @@ export const updateElectionMapData = (
 export const getMapData = (
   electionMapData,
   electionType,
-  year,
+  yearKey,
   subtypeKey,
   numberKey
 ) => {
@@ -467,19 +467,19 @@ export const getMapData = (
     case 'president':
     case 'mayor':
     case 'legislatorParty': {
-      mapData = electionMapData[electionType][year]
+      mapData = electionMapData[electionType][yearKey]
       break
     }
 
     case 'legislator':
     case 'councilMember': {
-      mapData = electionMapData[electionType][year][subtypeKey]
+      mapData = electionMapData[electionType][yearKey][subtypeKey]
       break
     }
 
     case 'referendum':
     case 'referendumLocal': {
-      mapData = electionMapData[electionType][year][numberKey]
+      mapData = electionMapData[electionType][yearKey][numberKey]
       break
     }
     default:

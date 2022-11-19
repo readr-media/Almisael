@@ -135,11 +135,11 @@ export const YearSelect = ({ className, yearInfo }) => {
   const { years, year, setYear } = yearInfo
   const [compare, setCompare] = useState(false)
   const [compareCandidates, setCompareCandidates] = useState([
-    years.find((y) => y.year === year),
+    years.find((y) => y === year),
     null,
   ])
-  const selectedIndex = years.indexOf(years.find((y) => y.year === year))
-  console.log(years)
+  const selectedIndex = years.indexOf(years.find((y) => y === year))
+
   return (
     <Wrapper className={className}>
       <SliderWrapper>
@@ -147,22 +147,17 @@ export const YearSelect = ({ className, yearInfo }) => {
           <SpotWrapper>
             {years.map((y) => (
               <Spot
-                key={y.year}
-                content={y.year}
+                key={y.key}
+                content={y.key}
                 compare={compare}
                 selected={
-                  (compareCandidates[0] &&
-                    y.year === compareCandidates[0].year) ||
-                  (compareCandidates[1] && y.year === compareCandidates[1].year)
+                  (compareCandidates[0] && y === compareCandidates[0]) ||
+                  (compareCandidates[1] && y === compareCandidates[1])
                 }
-                cand1={
-                  compareCandidates[0] && y.year === compareCandidates[0].year
-                }
-                cand2={
-                  compareCandidates[1] && y.year === compareCandidates[1].year
-                }
+                cand1={compareCandidates[0] && y === compareCandidates[0]}
+                cand2={compareCandidates[1] && y === compareCandidates[1]}
                 onClick={() => {
-                  if (y.year !== compareCandidates[0].year) {
+                  if (y !== compareCandidates[0]) {
                     setCompareCandidates(([cand1]) => [cand1, y])
                   }
                 }}
@@ -173,11 +168,11 @@ export const YearSelect = ({ className, yearInfo }) => {
           <SpotWrapper>
             {years.map((y) => (
               <Spot
-                key={y.year}
-                content={y.year}
-                selected={y.year === year}
+                key={y.key}
+                content={y.key}
+                selected={y === year}
                 onClick={() => {
-                  setYear(y.year)
+                  setYear(y)
                 }}
               />
             ))}
@@ -191,7 +186,7 @@ export const YearSelect = ({ className, yearInfo }) => {
           value={selectedIndex}
           onChange={(e) => {
             const index = e.target.value
-            const year = years[index].year
+            const year = years[index].key
             setYear(year)
           }}
           compare={compare}

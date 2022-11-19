@@ -122,7 +122,7 @@ export const Dashboard = ({ showTutorial, setShowTutorial }) => {
         <SeatsPanel
           meta={{
             ...election.meta.seat,
-            year: yearInfo.year,
+            year: yearInfo.year?.key,
             location: countyMappingData.find(
               (countyData) => countyData.countyCode === mapObject.countyId
             )?.countyName,
