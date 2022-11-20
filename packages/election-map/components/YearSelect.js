@@ -129,6 +129,9 @@ const ActionButton = styled.button`
   background-color: #ffc7bb;
   font-size: 18px;
   font-weight: 500;
+  &:disabled {
+    background-color: #e0e0e0;
+  }
 `
 
 export const YearSelect = ({ className, yearInfo, compareInfo }) => {
@@ -161,8 +164,19 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
     // submit again if compareCandidates changes
     if (compareMode) {
       submitCompareCandidates()
+    } else {
+      if (!compare) {
+        setCompareCandidates([years.find((y) => y === year), null])
+      }
     }
-  }, [compareCandidates, compareMode, submitCompareCandidates])
+  }, [
+    compare,
+    compareCandidates,
+    compareMode,
+    submitCompareCandidates,
+    year,
+    years,
+  ])
 
   return (
     <Wrapper className={className}>
@@ -216,8 +230,9 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
           compare={compare}
         />
       </SliderWrapper>
-      {compareYear && compare ? (
+      {compare ? (
         <ActionButton
+          disabled={!compareYear}
           onClick={() => {
             if (compareMode) {
               submitCompareEnd()
