@@ -3,7 +3,6 @@ import styled from 'styled-components'
 const InfoboxWrapper = styled.div`
   font-family: 'Noto Sans TC', sans-serif;
   padding: 16px 22px;
-  font-size: 18px;
   height: 130px;
   overflow: auto;
 `
@@ -29,10 +28,26 @@ const InfoboxText = styled.p`
 `
 
 const ElectedIcon = styled.div`
-  margin-left: 14px;
+  position: absolute;
+  top: 0;
+  right: -32px;
   display: flex;
   justify-contnet: center;
   align-items: center;
+`
+
+const RunningHint = styled.span`
+  color: #939393;
+  font-weight: 700;
+  &:before {
+    content: '';
+    display: inline-block;
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
+    background: #da6262;
+    border-radius: 50%;
+  }
 `
 
 const electedSvg = (
@@ -89,18 +104,25 @@ const PresidentInfobox = ({ level, data, isRunning }) => {
   )
 }
 
-const MayorTitle = styled.p`
-  margin: 0 0 20px;
+const MayorTitle = styled.div`
   font-weight: 700;
 `
 
-const MayorCandidate = styled.p`
-  display: flex;
+const MayorCandidate = styled.div`
+  position: relative;
+  display: table;
+  margin-top: 20px;
   align-items: center;
-  margin: 0;
-  font-weight: 700;
-  line-height: 26px;
+  line-height: 23px;
   ${({ elected }) => elected && 'color: green;'}
+`
+
+const MayorCandidateName = styled.div`
+  max-width: 160px;
+  font-weight: 700;
+`
+const MayorCandidateParty = styled.div`
+  font-weight: 350;
 `
 
 const MayorInfobox = ({ level, data, isRunning }) => {
@@ -116,9 +138,9 @@ const MayorInfobox = ({ level, data, isRunning }) => {
 
   return (
     <InfoboxScrollWrapper>
-      {isRunning && '開票中'}
       <MayorTitle>
         {level === 1 && '總'}投票率 {profRate}%
+        {isRunning && <RunningHint>開票中</RunningHint>}
       </MayorTitle>
       {candidates
         .sort((cand1, cand2) => {
@@ -131,7 +153,10 @@ const MayorInfobox = ({ level, data, isRunning }) => {
           const elected = candidate.candVictor === '*'
           return (
             <MayorCandidate elected={elected} key={candidate.candNo}>
-              {candidate.name} {candidate.party} {candidate.tksRate}%
+              <MayorCandidateName>{candidate.name}</MayorCandidateName>
+              <MayorCandidateParty>
+                {candidate.party} {candidate.tksRate}%
+              </MayorCandidateParty>
               {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
             </MayorCandidate>
           )
@@ -243,25 +268,41 @@ const CouncilMemberDistrict = styled.div`
     padding-bottom: unset;
   }
 `
+
+const CouncilMemberTypeWrapper = styled.div`
+  &:nth-of-type(2) {
+    margin-top: 20px;
+  }
+`
+
 const CouncilMemberConstituency = styled.div`
-  font-size: 17px;
+  font-weight: 700;
+  line-height: 23px;
   color: gray;
 `
 
 const CouncilMemberTitle = styled.div`
-  margin-bottom: 20px;
   font-weight: 700;
 `
 
 const CouncilMemberCandidate = styled.div`
-  display: flex;
+  position: relative;
+  display: table;
+  margin-top: 20px;
   align-items: center;
-  font-weight: 700;
-  line-height: 26px;
+  line-height: 23px;
   ${({ elected }) => elected && 'color: green;'}
 `
 
-const CouncilMemberInfobox = ({ level, data, isRunning }) => {
+const CouncilMemberCandidateName = styled.div`
+  max-width: 160px;
+  font-weight: 700;
+`
+const CouncilMemberCandidateParty = styled.div`
+  font-weight: 350;
+`
+
+const CouncilMemberInfobox = ({ level, data }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
@@ -274,22 +315,33 @@ const CouncilMemberInfobox = ({ level, data, isRunning }) => {
     const { districts } = data
     return (
       <InfoboxScrollWrapper>
-        {isRunning && '開票中'}
         {districts.map(({ county, area, range, candidates, profRate }) => {
           const councilMemberdPrefix = county + area
           const constituency = range.split(' ')[1]
-          const candidateComps = candidates.map((candidate) => {
-            const elected = candidate.candVictor === '*'
-            return (
-              <CouncilMemberCandidate
-                elected={elected}
-                key={councilMemberdPrefix + candidate.candNo}
-              >
-                {candidate.name} {candidate.party} {candidate.tksRate}%
-                {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
-              </CouncilMemberCandidate>
-            )
-          })
+          const candidateComps = candidates
+            .sort((cand1, cand2) => {
+              if (cand1.tksRate === cand2.tksRate) {
+                return 0
+              }
+              return cand1.tksRate < cand2.tksRate ? 1 : -1
+            })
+            .map((candidate) => {
+              const elected = candidate.candVictor === '*'
+              return (
+                <CouncilMemberCandidate
+                  elected={elected}
+                  key={councilMemberdPrefix + candidate.candNo}
+                >
+                  <CouncilMemberCandidateName>
+                    {candidate.name}
+                  </CouncilMemberCandidateName>
+                  <CouncilMemberCandidateParty>
+                    {candidate.party} {candidate.tksRate}%
+                  </CouncilMemberCandidateParty>
+                  {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
+                </CouncilMemberCandidate>
+              )
+            })
           return (
             <CouncilMemberDistrict key={councilMemberdPrefix}>
               <CouncilMemberConstituency>
@@ -310,54 +362,73 @@ const CouncilMemberInfobox = ({ level, data, isRunning }) => {
 
     if (type === 'normal') {
       return (
-        <div key={councilMemberdPrefix}>
+        <CouncilMemberTypeWrapper key={councilMemberdPrefix}>
           <CouncilMemberTitle>投票率 {profRate}%</CouncilMemberTitle>
-          {candidates.map((candidate) => {
-            const elected = candidate.candVictor === '*'
-            return (
-              <CouncilMemberCandidate
-                elected={elected}
-                id={councilMemberdPrefix + candidate.candNo}
-                key={councilMemberdPrefix + candidate.candNo}
-              >
-                {candidate.name} {candidate.party} {candidate.tksRate}%
-                {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
-              </CouncilMemberCandidate>
-            )
-          })}
-        </div>
+          {candidates
+            .sort((cand1, cand2) => {
+              if (cand1.tksRate === cand2.tksRate) {
+                return 0
+              }
+              return cand1.tksRate < cand2.tksRate ? 1 : -1
+            })
+            .map((candidate) => {
+              const elected = candidate.candVictor === '*'
+              return (
+                <CouncilMemberCandidate
+                  elected={elected}
+                  id={councilMemberdPrefix + candidate.candNo}
+                  key={councilMemberdPrefix + candidate.candNo}
+                >
+                  <CouncilMemberCandidateName>
+                    {candidate.name}
+                  </CouncilMemberCandidateName>
+                  <CouncilMemberCandidateParty>
+                    {candidate.party} {candidate.tksRate}%
+                  </CouncilMemberCandidateParty>
+                  {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
+                </CouncilMemberCandidate>
+              )
+            })}
+        </CouncilMemberTypeWrapper>
       )
     } else {
       return (
-        <div key={councilMemberdPrefix}>
+        <CouncilMemberTypeWrapper key={councilMemberdPrefix}>
           <CouncilMemberConstituency>
             {type === 'plainIndigenous' ? '平地原住民' : '山地原住民'}
           </CouncilMemberConstituency>
           <CouncilMemberTitle>投票率 {profRate}%</CouncilMemberTitle>
-          {candidates.map((candidate) => {
-            const elected = candidate.candVictor === '*'
-            return (
-              <CouncilMemberCandidate
-                elected={elected}
-                key={councilMemberdPrefix + candidate.candNo}
-              >
-                {candidate.name} {candidate.party} {candidate.tksRate}%
-                {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
-              </CouncilMemberCandidate>
-            )
-          })}
-        </div>
+          {candidates
+            .sort((cand1, cand2) => {
+              if (cand1.tksRate === cand2.tksRate) {
+                return 0
+              }
+              return cand1.tksRate < cand2.tksRate ? 1 : -1
+            })
+            .map((candidate) => {
+              const elected = candidate.candVictor === '*'
+              return (
+                <CouncilMemberCandidate
+                  elected={elected}
+                  key={councilMemberdPrefix + candidate.candNo}
+                >
+                  <CouncilMemberCandidateName>
+                    {candidate.name}
+                  </CouncilMemberCandidateName>
+                  <CouncilMemberCandidateParty>
+                    {candidate.party} {candidate.tksRate}%
+                  </CouncilMemberCandidateParty>
+                  {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
+                </CouncilMemberCandidate>
+              )
+            })}
+        </CouncilMemberTypeWrapper>
       )
     }
   })
 
   return <InfoboxScrollWrapper>{councilMembers}</InfoboxScrollWrapper>
 }
-
-const ReferendumTitle = styled.p`
-  margin: 0 0 20px;
-  font-weight: 700;
-`
 
 const ReferendumPassWrapper = styled.span`
   color: #5673da;
@@ -367,7 +438,20 @@ const ReferendumFailWrapper = styled.span`
   color: #ff8585;
 `
 
-const ReferendumCandidate = styled.div``
+const ReferendumTitle = styled.div`
+  font-weight: 700;
+  ${ReferendumPassWrapper}, ${ReferendumFailWrapper} {
+    margin-left: 18px;
+  }
+  line-height: 23px;
+  &:nth-of-type(2) {
+    margin-bottom: 12px;
+  }
+`
+
+const ReferendumCandidate = styled.div`
+  line-height: 23px;
+`
 
 const ReferendumInfobox = ({ data, isRunning }) => {
   if (typeof data === 'string') {
@@ -391,8 +475,9 @@ const ReferendumInfobox = ({ data, isRunning }) => {
         ) : (
           <ReferendumFailWrapper>否</ReferendumFailWrapper>
         )}
-        <br />
-        投票率 {profRate}%
+      </ReferendumTitle>
+      <ReferendumTitle>
+        投票率 {profRate}%{isRunning && <RunningHint>開票中</RunningHint>}
       </ReferendumTitle>
       {noResult ? (
         <>
