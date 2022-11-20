@@ -6,7 +6,8 @@ import { MapTooltip } from './MapTooltip'
 
 const Wrapper = styled.div`
   margin-left: 368px;
-  width: calc(100vw - 368px - 340px);
+  width: ${({ compareMode }) =>
+    compareMode ? 'calc(100vw - 368px)' : 'calc(100vw - 368px - 340px)'};
   height: 100vh;
   position: fixed;
 `
@@ -23,6 +24,7 @@ export const MapContainer = ({
   mapObject,
   setMapObject,
   electionData,
+  compareElectionData,
   electionType,
 }) => {
   const [tooltip, setTooltip] = useState(defaultTooltip)
@@ -39,7 +41,7 @@ export const MapContainer = ({
     }
 
     return (
-      <Wrapper ref={elementRef}>
+      <Wrapper ref={elementRef} compareMode={compareMode}>
         {dimension && (
           <>
             <Map
@@ -59,7 +61,7 @@ export const MapContainer = ({
               mapObject={mapObject}
               setMapObject={setMapObject}
               setTooltip={setTooltip}
-              electionData={electionData}
+              electionData={compareElectionData}
               electionType={electionType}
             />
           </>

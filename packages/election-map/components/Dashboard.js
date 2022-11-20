@@ -1,46 +1,17 @@
 import { useCallback, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { ControlPanel } from './ControlPanel'
 import { MapContainer } from './MapContainer'
-import { InfoboxPanel } from './InfoboxPanel'
-import { SeatsPanel } from './SeatsPanel'
-import { MapCompareButton } from './MapCompareButton'
 import { useElectionData } from '../hook/useElectinData'
 import { SpinningModal } from './SpinningModal'
-import ElectionVoteComparisonPanel from './ElectionVoteComparisonPanel'
 import { electionMapColor } from '../consts/colors'
 import { Tutorial } from './Tutorial'
-import { countyMappingData } from './helper/election'
+import { Panels } from './Panels'
 
 const Wrapper = styled.div`
   position: relative;
   width: 100vw;
   height: ${({ expandMode }) => (expandMode ? `1084px` : `100vh`)};
   background-color: ${electionMapColor};
-`
-
-const PanelsWrapper = styled.div`
-  position: absolute;
-  pointer-events: none;
-  & > * {
-    pointer-events: auto;
-  }
-  padding-left: 48px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-`
-
-const StyledInfoboxPanel = styled(InfoboxPanel)`
-  ${({ goDown }) =>
-    goDown &&
-    `
-    position: absolute;
-    bottom: 42px;
-    left: 48px;
-  `}
 `
 
 const MoreHint = styled.div`
@@ -57,7 +28,6 @@ const MoreHint = styled.div`
 `
 
 export const Dashboard = ({ showTutorial, setShowTutorial }) => {
-  const [compareMode, setCompareMode] = useState(false)
   const [loading, setLoading] = useState(false)
   const loadingTimout = useRef(null)
 
@@ -76,11 +46,12 @@ export const Dashboard = ({ showTutorial, setShowTutorial }) => {
   }, [])
 
   const {
-    electionNamePairs,
     onElectionChange,
     election,
     mapData,
+    compareMapData,
     infoboxData,
+    compareInfoboxData,
     evcInfo,
     seatData,
     mapObject,
@@ -90,59 +61,36 @@ export const Dashboard = ({ showTutorial, setShowTutorial }) => {
     yearInfo,
     subtypeInfo,
     numberInfo,
-    isRunning,
     lastUpdate,
+    compareInfo,
   } = useElectionData(showLoading, showTutorial)
 
-  const expandMode = !!seatData
+  const expandMode = !!seatData || compareInfo.compareMode
 
   return (
     <Wrapper expandMode={expandMode}>
       {loading && <SpinningModal />}
-      <PanelsWrapper>
-        <ControlPanel
-          electionNamePairs={electionNamePairs}
-          onElectionChange={onElectionChange}
-          mapObject={mapObject}
-          election={election}
-          expandMode={expandMode}
-          subtypeInfo={subtypeInfo}
-          lastUpdate={lastUpdate}
-          yearInfo={yearInfo}
-          numberInfo={numberInfo}
-        />
-        <StyledInfoboxPanel
-          data={infoboxData}
-          subtype={subtypeInfo?.subtype}
-          isRunning={isRunning}
-          goDown={!!numberInfo.number}
-        />
-        <SeatsPanel
-          meta={{
-            ...election.meta.seat,
-            year: yearInfo.year?.key,
-            location: countyMappingData.find(
-              (countyData) => countyData.countyCode === mapObject.countyId
-            )?.countyName,
-          }}
-          data={seatData}
-        />
-        <MapCompareButton
-          compareMode={compareMode}
-          onCompareModeChange={() => {
-            setCompareMode((v) => !v)
-          }}
-        />
-        {(evcInfo.evcData?.districts?.length ||
-          evcInfo.evcData?.propositions?.length) && (
-          <ElectionVoteComparisonPanel evcInfo={evcInfo} />
-        )}
-      </PanelsWrapper>
+      <Panels
+        onElectionChange={onElectionChange}
+        mapObject={mapObject}
+        election={election}
+        expandMode={expandMode}
+        seatData={seatData}
+        infoboxData={infoboxData}
+        compareInfoboxData={compareInfoboxData}
+        evcInfo={evcInfo}
+        subtypeInfo={subtypeInfo}
+        yearInfo={yearInfo}
+        numberInfo={numberInfo}
+        compareInfo={compareInfo}
+        lastUpdate={lastUpdate}
+      />
       <MapContainer
         showLoading={showLoading}
-        compareMode={compareMode}
+        compareMode={compareInfo.compareMode}
         mapObject={mapObject}
         electionData={mapData}
+        compareElectionData={compareMapData}
         setMapObject={setMapObject}
         electionType={election.electionType}
         mapData={mapGeoJsons}

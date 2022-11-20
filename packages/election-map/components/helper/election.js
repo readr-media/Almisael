@@ -1,4 +1,4 @@
-export const defaultElectionType = 'mayor'
+export const defaultElectionType = 'referendum'
 export const currentYear = 2022
 // election configs
 export const elections = [
@@ -229,6 +229,13 @@ export const elections = [
     ],
   },
 ]
+
+export const electionNamePairs = elections.map(
+  ({ electionType, electionName }) => ({
+    electionType,
+    electionName,
+  })
+)
 
 export const getReferendumNumbers = (election) => {
   if (!election.electionType.startsWith('referendum')) {

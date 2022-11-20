@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import styled from 'styled-components'
 import useClickOutside from '../hook/useClickOutside'
+import { electionNamePairs } from './helper/election'
 
 const SelectWrapper = styled.div`
   position: relative;
@@ -61,7 +62,6 @@ const downTriangleSvg = (
 export const ElectionSelect = ({
   className,
   electionType,
-  electionNamePairs,
   onElectionChange,
 }) => {
   const [showOptions, setShowOptions] = useState(false)

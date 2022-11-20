@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { electionMapColor } from '../consts/colors'
 import { ElectionRadio } from './ElectionRadio'
@@ -95,6 +95,8 @@ const GoDownWrapper = styled.div`
   position: absolute;
   bottom: 240px;
   left: 48px;
+
+  ${({ compare }) => compare && `bottom: 452px;`}
 `
 
 const ActionButton = styled.button`
@@ -111,7 +113,6 @@ const ActionButton = styled.button`
 `
 
 export const ControlPanel = ({
-  electionNamePairs,
   onElectionChange,
   mapObject,
   election,
@@ -120,15 +121,16 @@ export const ControlPanel = ({
   lastUpdate,
   yearInfo,
   numberInfo,
+  compareInfo,
 }) => {
+  const { compareMode, onCompareInfoChange } = compareInfo
   const [compare, setCompare] = useState(false)
   const { number, numbers, onNumberChange } = numberInfo
-  const comapreNumber =
-    numbers?.length > 1 ? numbers.filter((n) => n.key !== number.key)[0] : null
   const [compareCandidates, setCompareCandidates] = useState([
     number,
-    comapreNumber,
+    numbers?.length > 1 ? numbers.filter((n) => n.key !== number.key)[0] : null,
   ])
+  const compareNumber = compareCandidates[1]
 
   const { countyName, townName, constituencyName, villageName } = mapObject
   const { electionType } = election
@@ -140,21 +142,32 @@ export const ControlPanel = ({
   ].filter((name) => !!name)
   if (!locations.length) locations.push('全國')
 
-  useEffect(() => {
-    const comapreNumber =
-      numbers?.length > 1
-        ? numbers.filter((n) => n.key !== number.key)[0]
-        : null
+  const submitCompareCandidates = useCallback(() => {
+    console.log('submit compareCandidates', compareCandidates)
+    const [number, compareNumber] = compareCandidates
+    onNumberChange(number)
+    onCompareInfoChange({
+      compareMode: true,
+      compareYearKey: compareNumber.year,
+      compareNumber: compareNumber,
+    })
+  }, [compareCandidates, onCompareInfoChange, onNumberChange])
 
-    setCompareCandidates([number, comapreNumber])
-  }, [number, numbers])
+  const submitCompareEnd = () => {
+    onCompareInfoChange({ compareMode: false })
+  }
+
+  useEffect(() => {
+    if (compareMode) {
+      submitCompareCandidates()
+    }
+  }, [compareCandidates, compareMode, submitCompareCandidates])
 
   if (number) {
     return (
       <Wrapper>
         <StyledElectionSelect
           electionType={electionType}
-          electionNamePairs={electionNamePairs}
           onElectionChange={onElectionChange}
         />
         {compare ? (
@@ -180,7 +193,6 @@ export const ControlPanel = ({
               selectedNumber={compareCandidates[1]}
               numbers={numbers}
               onNumberChange={(number) => {
-                console.log(number)
                 setCompareCandidates(([cand1]) => {
                   if (number === cand1) {
                     return [
@@ -193,34 +205,48 @@ export const ControlPanel = ({
                 })
               }}
             />
+            {!compareMode && (
+              <ActionButton
+                onClick={() => {
+                  setCompare(false)
+                }}
+                compare={compare}
+              >
+                取消
+              </ActionButton>
+            )}
+            <ActionButton
+              onClick={() => {
+                if (compareMode) {
+                  submitCompareEnd()
+                } else {
+                  submitCompareCandidates()
+                }
+              }}
+            >
+              {compareMode ? '返回' : '確定'}
+            </ActionButton>
           </>
         ) : (
-          <StyledReferendumSelect
-            selectedNumber={number}
-            numbers={numbers}
-            onNumberChange={onNumberChange}
-          />
+          <>
+            <StyledReferendumSelect
+              selectedNumber={number}
+              numbers={numbers}
+              onNumberChange={onNumberChange}
+            />
+            {compareNumber && (
+              <ActionButton
+                onClick={() => {
+                  setCompare(true)
+                }}
+                compare={compare}
+              >
+                比較
+              </ActionButton>
+            )}
+          </>
         )}
-        {comapreNumber && (
-          <ActionButton
-            onClick={() => {
-              setCompare((compare) => !compare)
-            }}
-            compare={compare}
-          >
-            {compare ? '取消' : '比較'}
-          </ActionButton>
-        )}
-        {compare && (
-          <ActionButton
-            onClick={() => {
-              console.log('submit compareCandidates', compareCandidates)
-            }}
-          >
-            確定
-          </ActionButton>
-        )}
-        <GoDownWrapper>
+        <GoDownWrapper compare={compareMode}>
           <MapButtonWrapper>
             <MapLevelBackButton
               disabled={mapObject.level === 0}
@@ -269,7 +295,6 @@ export const ControlPanel = ({
       <Wrapper>
         <StyledElectionSelect
           electionType={electionType}
-          electionNamePairs={electionNamePairs}
           onElectionChange={onElectionChange}
         />
         <MapButtonWrapper>
@@ -301,7 +326,6 @@ export const ControlPanel = ({
             <Location key={i}>{location}</Location>
           ))}
         </LocationsWrapper>
-        <div id="infobox" />
         {subtypeInfo && (
           <StyledELectionRadio
             expandMode={expandMode}

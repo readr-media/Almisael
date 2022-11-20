@@ -319,30 +319,29 @@ export const updateElectionsData = (
   subtypeKey,
   numberKey
 ) => {
-  const newElectionsData = deepCloneObj(electionsData)
   switch (electionType) {
     case 'president':
     case 'mayor':
     case 'legislatorParty': {
-      newElectionsData[electionType][yearKey] = newElectionData
+      electionsData[electionType][yearKey] = newElectionData
       break
     }
 
     case 'legislator':
     case 'councilMember': {
-      newElectionsData[electionType][yearKey][subtypeKey] = newElectionData
+      electionsData[electionType][yearKey][subtypeKey] = newElectionData
       break
     }
 
     case 'referendum':
     case 'referendumLocal': {
-      newElectionsData[electionType][yearKey][numberKey] = newElectionData
+      electionsData[electionType][yearKey][numberKey] = newElectionData
       break
     }
     default:
       break
   }
-  return newElectionsData
+  return electionsData
 }
 
 export const getElectionData = (
