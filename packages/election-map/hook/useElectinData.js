@@ -157,6 +157,7 @@ export const useElectionData = (showLoading, showTutorial) => {
 
   const [compareInfoboxData, setCompareInfoboxData] = useState({})
   const [compareInfo, setCompareInfo] = useState(defaultCompareInfo)
+  console.log('getElectionData')
   const electionData = getElectionData(
     electionsData,
     election.electionType,
@@ -1043,6 +1044,10 @@ export const useElectionData = (showLoading, showTutorial) => {
 
   const onElectionChange = useCallback(
     (electionType) => {
+      // if (electionType === election.electionType) {
+      //   console.log('same type wtf?')
+      //   return
+      // }
       const newElection = elections.find(
         (election) => election.electionType === electionType
       )
@@ -1057,6 +1062,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       setYear(newYear)
       setNumber(newNumber)
       setSubtype(newSubtype)
+      console.log('getElectionData')
       setElectionsData((electionsData) => {
         const electionData = getElectionData(
           electionsData,
@@ -1082,7 +1088,6 @@ export const useElectionData = (showLoading, showTutorial) => {
       setInfoboxData({})
       setEvcScrollTo(undefined)
       setCompareInfo(defaultCompareInfo)
-      showLoading(true)
     },
     [showLoading]
   )

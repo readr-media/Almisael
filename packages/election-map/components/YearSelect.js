@@ -156,22 +156,18 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
     })
   }, [compareCandidates, onCompareInfoChange, onYearChange])
 
-  const submitCompareEnd = () => {
+  const submitCompareEnd = useCallback(() => {
     onCompareInfoChange({ compareMode: false })
-  }
+  }, [onCompareInfoChange])
 
   useEffect(() => {
     // submit again if compareCandidates changes
     if (compareMode) {
       submitCompareCandidates()
-    } else {
-      if (!compare) {
-        setCompareCandidates([years.find((y) => y === year), null])
-      }
     }
   }, [
     compare,
-    compareCandidates,
+    // compareCandidates,
     compareMode,
     submitCompareCandidates,
     year,
@@ -237,6 +233,7 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
             if (compareMode) {
               submitCompareEnd()
               setCompare(false)
+              setCompareCandidates([years.find((y) => y === year), null])
             } else {
               submitCompareCandidates()
             }

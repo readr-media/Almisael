@@ -128,7 +128,7 @@ export const Panels = ({
         )}
         {!numberInfo?.number && (
           <StyledYearSelect
-            // key={election.electionType}
+            key={election.electionType + yearInfo.year.key}
             yearInfo={yearInfo}
             compareInfo={compareInfo}
           />
