@@ -20,13 +20,19 @@ const PanelsWrapper = styled.div`
 `
 
 const StyledInfoboxPanel = styled(InfoboxPanel)`
-  ${({ goDown, compare }) =>
-    goDown &&
-    `
-    position: absolute;
-    bottom: ${compare ? '42px' : '234px'};
-    left: 48px;
-  `}
+  ${({ goDown, compare }) => {
+    if (goDown) {
+      return `
+        position: absolute;
+        bottom: ${compare ? '42px' : '234px'};
+        left: 48px;
+      `
+    } else {
+      return `
+      ${compare && 'margin-top: 40px;'}
+      `
+    }
+  }}
 `
 
 export const Panels = ({
@@ -65,7 +71,7 @@ export const Panels = ({
         compareInfo={compareInfo}
         election={election}
         number={numberInfo?.number}
-        yearInfo={yearInfo}
+        year={yearInfo?.year}
       />
       {compareMode && (
         <StyledInfoboxPanel
@@ -76,7 +82,7 @@ export const Panels = ({
           compareInfo={compareInfo}
           election={election}
           number={compareInfo.filter?.number}
-          yearInfo={yearInfo}
+          year={compareInfo.filter?.year}
         />
       )}
       {!compareMode && (

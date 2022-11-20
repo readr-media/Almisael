@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -120,7 +120,7 @@ const Spot = styled.span`
   }}
 `
 
-const CompareButton = styled.button`
+const ActionButton = styled.button`
   margin-top: 11px;
   width: 72px;
   height 39px;
@@ -131,14 +131,38 @@ const CompareButton = styled.button`
   font-weight: 500;
 `
 
-export const YearSelect = ({ className, yearInfo }) => {
+export const YearSelect = ({ className, yearInfo, compareInfo }) => {
+  const { compareMode, onCompareInfoChange } = compareInfo
+
   const { years, year, onYearChange } = yearInfo
   const [compare, setCompare] = useState(false)
   const [compareCandidates, setCompareCandidates] = useState([
     years.find((y) => y === year),
     null,
   ])
+  const compareYear = compareCandidates[1]
   const selectedIndex = years.indexOf(years.find((y) => y === year))
+
+  const submitCompareCandidates = useCallback(() => {
+    console.log('submit compareCandidates', compareCandidates)
+    const [year, compareYear] = compareCandidates
+    onYearChange(year)
+    onCompareInfoChange({
+      compareMode: true,
+      compareYearKey: compareYear.key,
+    })
+  }, [compareCandidates, onCompareInfoChange, onYearChange])
+
+  const submitCompareEnd = () => {
+    onCompareInfoChange({ compareMode: false })
+  }
+
+  useEffect(() => {
+    // submit again if compareCandidates changes
+    if (compareMode) {
+      submitCompareCandidates()
+    }
+  }, [compareCandidates, compareMode, submitCompareCandidates])
 
   return (
     <Wrapper className={className}>
@@ -192,13 +216,28 @@ export const YearSelect = ({ className, yearInfo }) => {
           compare={compare}
         />
       </SliderWrapper>
-      <CompareButton
-        onClick={() => {
-          setCompare((compare) => !compare)
-        }}
-      >
-        比較
-      </CompareButton>
+      {compareYear && compare ? (
+        <ActionButton
+          onClick={() => {
+            if (compareMode) {
+              submitCompareEnd()
+              setCompare(false)
+            } else {
+              submitCompareCandidates()
+            }
+          }}
+        >
+          {compareMode ? '返回' : '確定'}
+        </ActionButton>
+      ) : (
+        <ActionButton
+          onClick={() => {
+            setCompare(true)
+          }}
+        >
+          比較
+        </ActionButton>
+      )}
     </Wrapper>
   )
 }

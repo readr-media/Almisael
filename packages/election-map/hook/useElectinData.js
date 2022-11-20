@@ -1001,6 +1001,13 @@ export const useElectionData = (showLoading, showTutorial) => {
       if (compareMode) {
         setCompareInfo(defaultCompareInfo)
       }
+      console.log(
+        'onCompareInfoChange',
+        compareMode,
+        compareYearKey,
+        compareNumber,
+        number
+      )
       setCompareInfo({
         compareMode,
         filter: {
@@ -1064,6 +1071,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       setMapObject(defaultMapObject)
       setInfoboxData({})
       setEvcScrollTo(undefined)
+      setCompareInfo(defaultCompareInfo)
       showLoading(true)
     },
     [showLoading]
