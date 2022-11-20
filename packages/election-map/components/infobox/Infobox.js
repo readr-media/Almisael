@@ -60,10 +60,19 @@ const electedSvg = (
   </svg>
 )
 
-const PresidentInfobox = ({ level, data }) => {
+const PresidentInfobox = ({ level, data, isRunning }) => {
+  if (typeof data === 'string') {
+    return (
+      <InfoboxScrollWrapper>
+        <InfoboxText>{data}</InfoboxText>
+      </InfoboxScrollWrapper>
+    )
+  }
+
   const { profRate, candidates } = data
   return (
     <InfoboxScrollWrapper>
+      {isRunning && '開票中'}
       <PresidentTitle>
         {level === 0 && '總'}投票率 {profRate}%
       </PresidentTitle>
@@ -107,7 +116,7 @@ const MayorInfobox = ({ level, data, isRunning }) => {
 
   return (
     <InfoboxScrollWrapper>
-      {isRunning && '開票中！！！'}
+      {isRunning && '開票中'}
       <MayorTitle>
         {level === 1 && '總'}投票率 {profRate}%
       </MayorTitle>
@@ -265,7 +274,7 @@ const CouncilMemberInfobox = ({ level, data, isRunning }) => {
     const { districts } = data
     return (
       <InfoboxScrollWrapper>
-        {isRunning && '開票中！'}
+        {isRunning && '開票中'}
         {districts.map(({ county, area, range, candidates, profRate }) => {
           const councilMemberdPrefix = county + area
           const constituency = range.split(' ')[1]
@@ -374,7 +383,7 @@ const ReferendumInfobox = ({ data, isRunning }) => {
   const pass = adptVictor === 'Y'
   return (
     <InfoboxScrollWrapper>
-      {isRunning && '開票中！'}
+      {isRunning && '開票中'}
       <ReferendumTitle>
         此案是否通過
         {pass ? (
@@ -470,6 +479,23 @@ const referendumInfoboxData = (data, level) => {
   return data
 }
 
+const presidentInfoboxData = (data, level) => {
+  if (!data) {
+    return '無資料'
+  }
+
+  if (!data.profRate && level === 3) {
+    console.log(`no profRate for running mayor infobox in level ${level}`, data)
+    return '目前即時開票無村里資料'
+  }
+  if (data.profRate === null) {
+    console.error(`data error for mayor infoboxData in level ${level}`, data)
+    return '資料錯誤，請確認'
+  }
+
+  return data
+}
+
 const mayorInfoboxData = (data, level) => {
   if (level === 0) {
     return '點擊地圖看更多資料'
@@ -543,7 +569,10 @@ export const Infobox = ({ data, subtype, isRunning }) => {
   let infobox
   switch (electionType) {
     case 'president': {
-      infobox = <PresidentInfobox level={level} data={electionData} />
+      const data = presidentInfoboxData(electionData, level)
+      infobox = (
+        <PresidentInfobox level={level} data={data} isRunning={isRunning} />
+      )
       break
     }
     case 'mayor': {

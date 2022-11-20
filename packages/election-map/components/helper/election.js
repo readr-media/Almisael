@@ -6,6 +6,21 @@ export const elections = [
     electionType: 'president',
     electionName: '總統',
     years: [{ key: 2020 }, { key: 2016 }, { key: 2012 }],
+    meta: {
+      evc: { district: 'all' },
+      map: {
+        folderNames: {
+          0: '',
+          1: 'county',
+          2: 'town',
+        },
+        fileNames: {
+          0: 'country',
+          1: '',
+          2: '',
+        },
+      },
+    },
   },
   {
     electionType: 'mayor',
@@ -35,13 +50,49 @@ export const elections = [
       { name: '原住民', key: 'indigenous' },
     ],
     years: [{ key: 2020 }, { key: 2016 }, { key: 2012 }],
-    seats: { wrapperTitle: '立法委員席次圖', componentTitle: '立法委員選舉' },
+    meta: {
+      evc: {},
+      map: {
+        folderNames: {
+          0: null, // councilMember has no country level file
+          1: 'county',
+          2: 'town',
+        },
+        fileNames: {
+          0: null, // councilMember has no country level file
+          1: '',
+          2: '',
+        },
+      },
+      seat: {
+        wrapperTitle: '立法委員席次圖',
+        componentTitle: '立法委員選舉',
+      },
+    },
   },
   {
     electionType: 'legislatorParty',
     electionName: '立法委員（不分區）',
     years: [{ key: 2020 }, { key: 2016 }, { key: 2012 }],
-    seats: { wrapperTitle: '立法委員席次圖', componentTitle: '立法委員選舉' },
+    meta: {
+      evc: { district: 'all' },
+      map: {
+        folderNames: {
+          0: '',
+          1: 'county',
+          2: 'town',
+        },
+        fileNames: {
+          0: 'country',
+          1: '',
+          2: '',
+        },
+      },
+      seat: {
+        wrapperTitle: '立法委員席次圖',
+        componentTitle: '立法委員選舉',
+      },
+    },
   },
   {
     electionType: 'councilMember',
@@ -51,7 +102,6 @@ export const elections = [
     ],
     electionName: '縣市議員',
     years: [{ key: 2022 }, { key: 2018 }, { key: 2014 }, { key: 2010 }],
-    seats: { wrapperTitle: '縣市議員席次圖', componentTitle: '議員選舉' },
     meta: {
       evc: {},
       map: {
@@ -227,6 +277,21 @@ export const elections = [
         ],
       },
     ],
+    meta: {
+      evc: { district: 'all' },
+      map: {
+        folderNames: {
+          0: '',
+          1: 'county',
+          2: 'town',
+        },
+        fileNames: {
+          0: 'country',
+          1: '',
+          2: '',
+        },
+      },
+    },
   },
 ]
 
