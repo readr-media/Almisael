@@ -4,6 +4,8 @@ import ElectionVoteComparisonPanel from './ElectionVoteComparisonPanel'
 import { countyMappingData } from './helper/election'
 import { InfoboxPanel } from './InfoboxPanel'
 import { SeatsPanel } from './SeatsPanel'
+import { MapNavigateButton } from './MapNavigateButton'
+import { MapLocations } from './MapLocations'
 
 const PanelsWrapper = styled.div`
   position: absolute;
@@ -19,20 +21,23 @@ const PanelsWrapper = styled.div`
   z-index: 1;
 `
 
+const InfoboxPaneWrapper = styled.div`
+  width: 320px;
+  ${({ goDown }) =>
+    goDown &&
+    `
+    position: absolute;
+    bottom: 42px;
+    left: 48px;
+  `}
+`
+
 const StyledInfoboxPanel = styled(InfoboxPanel)`
-  ${({ goDown, compare }) => {
-    if (goDown) {
-      return `
-        position: absolute;
-        bottom: ${compare ? '42px' : '234px'};
-        left: 48px;
-      `
-    } else {
-      return `
-      ${compare && 'margin-top: 40px;'}
-      `
-    }
-  }}
+  ${({ compare }) =>
+    compare &&
+    `
+    margin-top: 40px;
+  `}}
 `
 
 export const Panels = ({
@@ -51,6 +56,15 @@ export const Panels = ({
   lastUpdate,
 }) => {
   const { compareMode } = compareInfo
+  const { countyName, townName, constituencyName, villageName } = mapObject
+  const locations = [
+    countyName,
+    townName,
+    constituencyName,
+    villageName,
+  ].filter((name) => !!name)
+  if (!locations.length) locations.push('全國')
+
   return (
     <PanelsWrapper>
       <ControlPanel
@@ -63,28 +77,35 @@ export const Panels = ({
         yearInfo={yearInfo}
         numberInfo={numberInfo}
         compareInfo={compareInfo}
+        locations={locations}
       />
-      <StyledInfoboxPanel
-        goDown={!!numberInfo.number}
-        data={infoboxData}
-        subtype={subtypeInfo?.subtype}
-        compareInfo={compareInfo}
-        election={election}
-        number={numberInfo?.number}
-        year={yearInfo?.year}
-      />
-      {compareMode && (
+      <InfoboxPaneWrapper goDown={!!numberInfo.number}>
+        {numberInfo?.number && (
+          <>
+            <MapNavigateButton mapObject={mapObject} />
+            <MapLocations locations={locations} />
+          </>
+        )}
         <StyledInfoboxPanel
-          goDown={!!compareInfo.filter?.number}
-          compare={!!compareInfoboxData}
-          data={compareInfoboxData}
-          subtype={compareInfo.filter?.subtype}
+          data={infoboxData}
+          subtype={subtypeInfo?.subtype}
           compareInfo={compareInfo}
           election={election}
-          number={compareInfo.filter?.number}
-          year={compareInfo.filter?.year}
+          number={numberInfo?.number}
+          year={yearInfo?.year}
         />
-      )}
+        {compareMode && (
+          <StyledInfoboxPanel
+            compare={!!compareInfoboxData}
+            data={compareInfoboxData}
+            subtype={compareInfo.filter?.subtype}
+            compareInfo={compareInfo}
+            election={election}
+            number={compareInfo.filter?.number}
+            year={compareInfo.filter?.year}
+          />
+        )}
+      </InfoboxPaneWrapper>
       {!compareMode && (
         <>
           <SeatsPanel
