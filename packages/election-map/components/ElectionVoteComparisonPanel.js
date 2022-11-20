@@ -1,18 +1,20 @@
 import styled from 'styled-components'
 import evc from '@readr-media/react-election-votes-comparison'
+import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 
 const ElectionVotesComparison = evc.ReactComponent.EVC
 
-const StyledEVC = styled(ElectionVotesComparison)`
+const ElectionVotesComparisonWrapper = styled(CollapsibleWrapper)`
   position: absolute;
+  top: 76px;
+  right: 20px;
+`
+
+const StyledEVC = styled(ElectionVotesComparison)`
   width: 320px !important;
   padding-bottom: 0 !important;
   max-height: 568px;
   overflow: auto;
-  top: 76px;
-  right: 20px;
-  border: 1px solid #000;
-  border-radius: 12px;
 
   header {
     border-top: unset;
@@ -30,15 +32,19 @@ const ElectionVoteComparisonPanel = ({ evcInfo }) => {
   const { evcData, onEvcSelected, scrollTo } = evcInfo
 
   return (
-    <StyledEVC
-      election={evcData}
-      device="mobile"
-      theme="electionMap"
-      scrollTo={scrollTo}
-      onChange={(selector, value) => {
-        onEvcSelected(value)
-      }}
-    />
+    evcData && (
+      <ElectionVotesComparisonWrapper title={'縣市議員候選人'}>
+        <StyledEVC
+          election={evcData}
+          device="mobile"
+          theme="electionMap"
+          scrollTo={scrollTo}
+          onChange={(selector, value) => {
+            onEvcSelected(value)
+          }}
+        />
+      </ElectionVotesComparisonWrapper>
+    )
   )
 }
 

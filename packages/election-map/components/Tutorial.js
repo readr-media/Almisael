@@ -54,7 +54,7 @@ const EvcHint = styled(Hint)`
 `
 
 const CompareHint = styled(Hint)`
-  top: 820px;
+  top: 930px;
   left: 800px;
 `
 
