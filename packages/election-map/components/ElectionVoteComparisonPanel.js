@@ -6,7 +6,8 @@ const ElectionVotesComparison = evc.ReactComponent.EVC
 const StyledEVC = styled(ElectionVotesComparison)`
   position: absolute;
   width: 320px !important;
-  max-height: 666px;
+  padding-bottom: 0 !important;
+  max-height: 568px;
   overflow: auto;
   top: 76px;
   right: 20px;
@@ -19,6 +20,9 @@ const StyledEVC = styled(ElectionVotesComparison)`
   }
   h3:nth-of-type(2) {
     border-top: 1px solid #000;
+  }
+  > div:nth-of-type(2) {
+    border-bottom: unset;
   }
 `
 

@@ -229,7 +229,8 @@ export const useElectionData = (showLoading, showTutorial) => {
       yearKey,
       subtypeKey,
       numberKey,
-      lastUpdate
+      lastUpdate,
+      compareMode
     ) => {
       let newElectionData = electionData
       let {
@@ -301,7 +302,7 @@ export const useElectionData = (showLoading, showTutorial) => {
             }
             switch (level) {
               case 0:
-                if (!newEvcData[level]) {
+                if (!newEvcData[level] && !compareMode) {
                   try {
                     const data = await fetchMayorEvcData({
                       yearKey,
@@ -435,7 +436,7 @@ export const useElectionData = (showLoading, showTutorial) => {
               case 0:
                 break
               case 1:
-                if (!newEvcData[level][countyId]) {
+                if (!newEvcData[level][countyId] && !compareMode) {
                   try {
                     const data = await fetchCouncilMemberEvcData({
                       yearKey,
@@ -450,8 +451,9 @@ export const useElectionData = (showLoading, showTutorial) => {
                   }
                 }
 
-                if (!newSeatData[level][countyId]) {
+                if (!newSeatData[level][countyId] && !compareMode) {
                   try {
+                    console.log('prepare... fetchSeatData', compareMode)
                     const data = await fetchSeatData({
                       electionType,
                       yearKey,
@@ -526,7 +528,7 @@ export const useElectionData = (showLoading, showTutorial) => {
           case 'referendum':
             switch (level) {
               case 0:
-                if (!newEvcData[level]) {
+                if (!newEvcData[level] && !compareMode) {
                   try {
                     const data = await fetchReferendumEvcData({
                       yearKey,
@@ -645,7 +647,8 @@ export const useElectionData = (showLoading, showTutorial) => {
       yearKey,
       subtypeKey,
       numberKey,
-      newLastUpdate
+      newLastUpdate,
+      compareMode
     ) => {
       console.log('refetch data..')
       const { level: currentLevel, townId, countyId } = mapObject
@@ -660,13 +663,15 @@ export const useElectionData = (showLoading, showTutorial) => {
           case 'mayor': {
             switch (level) {
               case 0:
-                try {
-                  const data = await fetchMayorEvcData({
-                    yearKey,
-                  })
-                  newEvcData[level] = data
-                } catch (error) {
-                  console.error(error)
+                if (!compareMode) {
+                  try {
+                    const data = await fetchMayorEvcData({
+                      yearKey,
+                    })
+                    newEvcData[level] = data
+                  } catch (error) {
+                    console.error(error)
+                  }
                 }
 
                 try {
@@ -730,28 +735,31 @@ export const useElectionData = (showLoading, showTutorial) => {
               case 0:
                 break
               case 1:
-                try {
-                  const data = await fetchCouncilMemberEvcData({
-                    yearKey,
-                    district: countyMappingData.find(
-                      (countyData) => countyData.countyCode === countyId
-                    ).countyNameEng,
-                    subtypeKey,
-                  })
-                  newEvcData[level][countyId] = data
-                } catch (error) {
-                  console.error(error)
-                }
-                try {
-                  const data = await fetchSeatData({
-                    electionType,
-                    yearKey,
-                    folderName: 'county',
-                    fileName: countyId,
-                  })
-                  newSeatData[level][countyId] = data
-                } catch (error) {
-                  console.error(error)
+                if (!compareMode) {
+                  try {
+                    const data = await fetchCouncilMemberEvcData({
+                      yearKey,
+                      district: countyMappingData.find(
+                        (countyData) => countyData.countyCode === countyId
+                      ).countyNameEng,
+                      subtypeKey,
+                    })
+                    newEvcData[level][countyId] = data
+                  } catch (error) {
+                    console.error(error)
+                  }
+                  try {
+                    console.log('refetch fetchSeatData', compareMode)
+                    const data = await fetchSeatData({
+                      electionType,
+                      yearKey,
+                      folderName: 'county',
+                      fileName: countyId,
+                    })
+                    newSeatData[level][countyId] = data
+                  } catch (error) {
+                    console.error(error)
+                  }
                 }
                 try {
                   const data = await fetchCouncilMemberMapData({
@@ -793,13 +801,15 @@ export const useElectionData = (showLoading, showTutorial) => {
           case 'referendum': {
             switch (level) {
               case 0:
-                try {
-                  const data = await fetchReferendumEvcData({
-                    yearKey,
-                  })
-                  newEvcData[level] = data
-                } catch (error) {
-                  console.error(error)
+                if (!compareMode) {
+                  try {
+                    const data = await fetchReferendumEvcData({
+                      yearKey,
+                    })
+                    newEvcData[level] = data
+                  } catch (error) {
+                    console.error(error)
+                  }
                 }
 
                 try {
@@ -1103,7 +1113,8 @@ export const useElectionData = (showLoading, showTutorial) => {
         year?.key,
         subtype?.key,
         number?.key,
-        lastUpdate
+        lastUpdate,
+        compareInfo?.compareMode
       ),
       compareInfo.compareMode
         ? prepareElectionData(
@@ -1113,7 +1124,8 @@ export const useElectionData = (showLoading, showTutorial) => {
             filter?.year?.key,
             filter?.subtype?.key,
             filter?.number?.key,
-            lastUpdate
+            lastUpdate,
+            compareInfo?.compareMode
           )
         : Promise.resolve({}),
     ])
@@ -1191,7 +1203,8 @@ export const useElectionData = (showLoading, showTutorial) => {
           year?.key,
           subtype?.key,
           number?.key,
-          lastUpdate
+          lastUpdate,
+          compareInfo?.compareMode
         ),
         compareInfo.compareMode
           ? prepareElectionData(
@@ -1201,7 +1214,8 @@ export const useElectionData = (showLoading, showTutorial) => {
               filter?.year?.key,
               filter?.subtype?.key,
               filter?.number?.key,
-              lastUpdate
+              lastUpdate,
+              compareInfo?.compareMode
             )
           : Promise.resolve({}),
       ])
@@ -1303,7 +1317,8 @@ export const useElectionData = (showLoading, showTutorial) => {
         year?.key,
         subtype?.key,
         number?.key,
-        lastUpdate
+        lastUpdate,
+        compareInfo?.compareMode
       )
       const compareRefetch = compareInfo.compareMode
         ? refetch(
@@ -1313,7 +1328,8 @@ export const useElectionData = (showLoading, showTutorial) => {
             filter.year?.key,
             filter.subtype?.key,
             filter.number?.key,
-            lastUpdate
+            lastUpdate,
+            compareInfo?.compareMode
           )
         : Promise.resolve({})
       const [{ value: normalResult }, { value: compareResult }] =

@@ -4,12 +4,21 @@ import { useElementDimension } from '../hook/useElementDimension'
 import { Map } from './Map'
 import { MapTooltip } from './MapTooltip'
 
+// margin-left: 368px;
+// width: ${({ compareMode }) =>
+//   compareMode ? 'calc(100vw - 368px)' : 'calc(100vw - 368px - 340px)'};
+
 const Wrapper = styled.div`
-  margin-left: 368px;
-  width: ${({ compareMode }) =>
-    compareMode ? 'calc(100vw - 368px)' : 'calc(100vw - 368px - 340px)'};
+  width: 100vw;
   height: 100vh;
   position: fixed;
+  top: 0;
+  ${({ compareMode }) =>
+    compareMode &&
+    `
+    width: calc(100vw - 368px);
+    margin-left: 368px;
+  `};
 `
 
 const defaultTooltip = {

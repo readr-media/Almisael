@@ -10,7 +10,6 @@ import { Panels } from './Panels'
 const Wrapper = styled.div`
   position: relative;
   width: 100vw;
-  height: ${({ expandMode }) => (expandMode ? `1084px` : `100vh`)};
   background-color: ${electionMapColor};
 `
 
@@ -65,16 +64,13 @@ export const Dashboard = ({ showTutorial, setShowTutorial }) => {
     compareInfo,
   } = useElectionData(showLoading, showTutorial)
 
-  const expandMode = !!seatData || compareInfo.compareMode
-
   return (
-    <Wrapper expandMode={expandMode}>
+    <Wrapper>
       {loading && <SpinningModal />}
       <Panels
         onElectionChange={onElectionChange}
         mapObject={mapObject}
         election={election}
-        expandMode={expandMode}
         seatData={seatData}
         infoboxData={infoboxData}
         compareInfoboxData={compareInfoboxData}

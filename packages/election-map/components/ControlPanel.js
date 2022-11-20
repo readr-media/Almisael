@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { ElectionRadio } from './ElectionRadio'
 import { ElectionSelect } from './ElectionSelect'
-import { YearSelect } from './YearSelect'
 import { ReferendumControl } from './ReferendumControl'
 import { MapNavigateButton } from './MapNavigateButton'
 import { MapLocations } from './MapLocations'
@@ -19,31 +18,23 @@ const StyledElectionSelect = styled(ElectionSelect)`
 
 const StyledELectionRadio = styled(ElectionRadio)`
   position: absolute;
-  bottom: ${({ expandMode }) => (expandMode ? `193px` : `73px`)};
+  bottom: 73px;
   right: 121px;
 `
 const LastUpdateTime = styled.div`
   position: absolute;
-  bottom: ${({ expandMode }) => (expandMode ? `148px` : `28px`)};
+  bottom: 28px;
   right: 8px;
   font-size: 14px;
   font-weight: 500;
-`
-
-const StyledYearSelect = styled(YearSelect)`
-  position: absolute;
-  bottom: 40px;
-  left: 0;
 `
 
 export const ControlPanel = ({
   onElectionChange,
   mapObject,
   election,
-  expandMode,
   subtypeInfo,
   lastUpdate,
-  yearInfo,
   numberInfo,
   compareInfo,
   locations,
@@ -62,14 +53,9 @@ export const ControlPanel = ({
           numberInfo={numberInfo}
           compareInfo={compareInfo}
         />
-        {subtypeInfo && (
-          <StyledELectionRadio
-            expandMode={expandMode}
-            subtypeInfo={subtypeInfo}
-          />
-        )}
+        {subtypeInfo && <StyledELectionRadio subtypeInfo={subtypeInfo} />}
         {lastUpdate && (
-          <LastUpdateTime expandMode={expandMode}>
+          <LastUpdateTime>
             最後更新時間：{lastUpdate}資料來源：中央選舉委員會
           </LastUpdateTime>
         )}
@@ -84,22 +70,12 @@ export const ControlPanel = ({
         />
         <MapNavigateButton mapObject={mapObject} />
         <MapLocations locations={locations} />
-        {subtypeInfo && (
-          <StyledELectionRadio
-            expandMode={expandMode}
-            subtypeInfo={subtypeInfo}
-          />
-        )}
+        {subtypeInfo && <StyledELectionRadio subtypeInfo={subtypeInfo} />}
         {lastUpdate && (
-          <LastUpdateTime expandMode={expandMode}>
+          <LastUpdateTime>
             最後更新時間：{lastUpdate}資料來源：中央選舉委員會
           </LastUpdateTime>
         )}
-        <StyledYearSelect
-          key={election.electionType}
-          yearInfo={yearInfo}
-          compareInfo={compareInfo}
-        />
       </Wrapper>
     )
   }

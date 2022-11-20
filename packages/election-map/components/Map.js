@@ -65,7 +65,7 @@ export const Map = ({
     }
   }
 
-  const zoom = (duration) => {
+  const zoom = (duration, currentFeature) => {
     const xyz = getXYZ(currentFeature)
     const g = d3.select(`#${id}-control`)
     g.transition()
@@ -91,12 +91,14 @@ export const Map = ({
   }
 
   useEffect(() => {
-    zoom(750)
-  }, [currentFeature])
+    zoom(750, currentFeature)
+    console.log('zoom here')
+  }, [currentFeature, width, height])
 
-  useEffect(() => {
-    zoom(0)
-  }, [width, height])
+  // useEffect(() => {
+  //   zoom(0)
+  //   console.log('zoom here')
+  // }, [width, height])
 
   const nonLandClicked = () => {
     setMapObject()

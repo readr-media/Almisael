@@ -1,50 +1,67 @@
 import styled from 'styled-components'
-import { ControlPanel } from './ControlPanel'
 import ElectionVoteComparisonPanel from './ElectionVoteComparisonPanel'
 import { countyMappingData } from './helper/election'
-import { InfoboxPanel } from './InfoboxPanel'
 import { SeatsPanel } from './SeatsPanel'
 import { MapNavigateButton } from './MapNavigateButton'
 import { MapLocations } from './MapLocations'
+import { YearSelect } from './YearSelect'
+import { ElectionSelect } from './ElectionSelect'
+import { ElectionRadio } from './ElectionRadio'
+import { ReferendumControl } from './ReferendumControl'
+import { InfoboxPanels } from './InfoboxPanels'
 
-const PanelsWrapper = styled.div`
-  position: absolute;
+const Wrapper = styled.div`
+  position: relative;
   pointer-events: none;
   & > * {
     pointer-events: auto;
   }
-  padding-left: 48px;
-  top: 0;
-  left: 0;
+  padding: 92px 0 20px 48px;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  ${({ expandMode }) => expandMode && 'height: 1084px;'}
   z-index: 1;
 `
 
-const InfoboxPaneWrapper = styled.div`
+const LeftPanelWrapper = styled.div`
   width: 320px;
-  ${({ goDown }) =>
-    goDown &&
-    `
-    position: absolute;
-    bottom: 42px;
-    left: 48px;
-  `}
 `
 
-const StyledInfoboxPanel = styled(InfoboxPanel)`
-  ${({ compare }) =>
-    compare &&
-    `
-    margin-top: 40px;
-  `}}
+const BottomPanelWrapper = styled.div`
+  position: absolute;
+  bottom: 47px;
+`
+
+const StyledElectionSelect = styled(ElectionSelect)`
+  margin-left: 12px;
+`
+
+const StyledELectionRadio = styled(ElectionRadio)`
+  position: absolute;
+  bottom: 73px;
+  right: 121px;
+`
+const LastUpdateTime = styled.div`
+  position: absolute;
+  bottom: 28px;
+  right: 8px;
+  font-size: 14px;
+  font-weight: 500;
+`
+
+const StyledYearSelect = styled(YearSelect)`
+  position: absolute;
+  bottom: 40px;
+`
+
+const PlaceHolder = styled.div`
+  height: 350px;
 `
 
 export const Panels = ({
   onElectionChange,
   mapObject,
   election,
-  expandMode,
   infoboxData,
   compareInfoboxData,
   seatData,
@@ -55,6 +72,7 @@ export const Panels = ({
   numberInfo,
   lastUpdate,
 }) => {
+  const { electionType } = election
   const { compareMode } = compareInfo
   const { countyName, townName, constituencyName, villageName } = mapObject
   const locations = [
@@ -65,49 +83,38 @@ export const Panels = ({
   ].filter((name) => !!name)
   if (!locations.length) locations.push('全國')
 
+  const expandMode = !!seatData || compareInfo.compareMode
+
   return (
-    <PanelsWrapper>
-      <ControlPanel
-        onElectionChange={onElectionChange}
-        mapObject={mapObject}
-        election={election}
-        expandMode={expandMode}
-        subtypeInfo={subtypeInfo}
-        lastUpdate={lastUpdate}
-        yearInfo={yearInfo}
-        numberInfo={numberInfo}
-        compareInfo={compareInfo}
-        locations={locations}
-      />
-      <InfoboxPaneWrapper goDown={!!numberInfo.number}>
+    <Wrapper expandMode={expandMode}>
+      <LeftPanelWrapper>
+        <StyledElectionSelect
+          electionType={electionType}
+          onElectionChange={onElectionChange}
+        />
         {numberInfo?.number && (
+          <ReferendumControl
+            key={election.electionType}
+            numberInfo={numberInfo}
+            compareInfo={compareInfo}
+          />
+        )}
+        {!numberInfo?.number && (
           <>
             <MapNavigateButton mapObject={mapObject} />
             <MapLocations locations={locations} />
+            <InfoboxPanels
+              infoboxData={infoboxData}
+              subtypeInfo={subtypeInfo}
+              compareInfo={compareInfo}
+              election={election}
+              numberInfo={numberInfo}
+              yearInfo={yearInfo}
+              compareInfoboxData={compareInfoboxData}
+            />
           </>
         )}
-        <StyledInfoboxPanel
-          data={infoboxData}
-          subtype={subtypeInfo?.subtype}
-          compareInfo={compareInfo}
-          election={election}
-          number={numberInfo?.number}
-          year={yearInfo?.year}
-        />
-        {compareMode && (
-          <StyledInfoboxPanel
-            compare={!!compareInfoboxData}
-            data={compareInfoboxData}
-            subtype={compareInfo.filter?.subtype}
-            compareInfo={compareInfo}
-            election={election}
-            number={compareInfo.filter?.number}
-            year={compareInfo.filter?.year}
-          />
-        )}
-      </InfoboxPaneWrapper>
-      {!compareMode && (
-        <>
+        {!compareMode && (
           <SeatsPanel
             meta={{
               ...election.meta.seat,
@@ -118,12 +125,41 @@ export const Panels = ({
             }}
             data={seatData}
           />
-          {(evcInfo.evcData?.districts?.length ||
-            evcInfo.evcData?.propositions?.length) && (
-            <ElectionVoteComparisonPanel evcInfo={evcInfo} />
-          )}
-        </>
+        )}
+        {!numberInfo?.number && (
+          <StyledYearSelect
+            key={election.electionType}
+            yearInfo={yearInfo}
+            compareInfo={compareInfo}
+          />
+        )}
+        {numberInfo?.number && (
+          <>
+            <PlaceHolder />
+            <BottomPanelWrapper>
+              <MapNavigateButton mapObject={mapObject} />
+              <MapLocations locations={locations} />
+              <InfoboxPanels
+                infoboxData={infoboxData}
+                subtypeInfo={subtypeInfo}
+                compareInfo={compareInfo}
+                election={election}
+                numberInfo={numberInfo}
+                yearInfo={yearInfo}
+                compareInfoboxData={compareInfoboxData}
+              />
+            </BottomPanelWrapper>
+          </>
+        )}
+      </LeftPanelWrapper>
+
+      {!compareMode && <ElectionVoteComparisonPanel evcInfo={evcInfo} />}
+      {subtypeInfo && <StyledELectionRadio subtypeInfo={subtypeInfo} />}
+      {lastUpdate && (
+        <LastUpdateTime>
+          最後更新時間：{lastUpdate}資料來源：中央選舉委員會
+        </LastUpdateTime>
       )}
-    </PanelsWrapper>
+    </Wrapper>
   )
 }
