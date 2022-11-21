@@ -173,7 +173,6 @@ export const useElectionData = (showLoading, showTutorial) => {
 
   const [compareInfoboxData, setCompareInfoboxData] = useState({})
   const [compareInfo, setCompareInfo] = useState(defaultCompareInfo)
-  console.log('getElectionData')
   const electionData = getElectionData(
     electionsData,
     election.electionType,
@@ -191,13 +190,6 @@ export const useElectionData = (showLoading, showTutorial) => {
       compareInfo.filter.subtype?.key,
       compareInfo.filter.number?.key
     )
-
-  console.log(
-    'compareInfo',
-    compareInfo,
-    'compareElectionData',
-    compareElectionData
-  )
 
   const { mapData, evcData, seatData } = electionData
   const { mapData: compareMapData } = compareElectionData || {}
@@ -517,7 +509,6 @@ export const useElectionData = (showLoading, showTutorial) => {
 
                 if (!newSeatData[level][countyId] && !compareMode) {
                   try {
-                    console.log('prepare... fetchSeatData', compareMode)
                     const data = await fetchSeatData({
                       electionType,
                       yearKey,
@@ -877,7 +868,6 @@ export const useElectionData = (showLoading, showTutorial) => {
                     console.error(error)
                   }
                   try {
-                    console.log('refetch fetchSeatData', compareMode)
                     const data = await fetchSeatData({
                       electionType,
                       yearKey,
@@ -1123,14 +1113,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       newSubtype?.key,
       number?.key
     )
-    updateElectionsData(
-      electionsData,
-      (newElectionData.seatData = seatData),
-      election.electionType,
-      year?.key,
-      subtype?.key,
-      number?.key
-    )
+    newElectionData.seatData = seatData
     setSubtype(newSubtype)
   }
 
@@ -1139,13 +1122,6 @@ export const useElectionData = (showLoading, showTutorial) => {
       if (compareMode) {
         setCompareInfo(defaultCompareInfo)
       }
-      console.log(
-        'onCompareInfoChange',
-        compareMode,
-        compareYearKey,
-        compareNumber,
-        number
-      )
       setCompareInfo({
         compareMode,
         filter: {
@@ -1190,7 +1166,6 @@ export const useElectionData = (showLoading, showTutorial) => {
       setYear(newYear)
       setNumber(newNumber)
       setSubtype(newSubtype)
-      console.log('getElectionData')
       setElectionsData((electionsData) => {
         const electionData = getElectionData(
           electionsData,
@@ -1225,16 +1200,6 @@ export const useElectionData = (showLoading, showTutorial) => {
     // make sure to avoid fetch duplicate data
     showLoading(true)
     const { filter } = compareInfo
-    console.log(
-      'onMapObjectChange',
-      compareElectionData,
-      election,
-      mapObject,
-      filter?.year?.key,
-      filter?.subtype?.key,
-      filter?.number?.key,
-      lastUpdate
-    )
     const [
       { value: electionDataResult },
       { value: compareElectionDataResult },
@@ -1386,7 +1351,6 @@ export const useElectionData = (showLoading, showTutorial) => {
         }
       }
       if (compareElectionDataResult.newElectionData) {
-        console.log('wtf', compareElectionDataResult)
         const { newElectionData, newInfoboxData, newLastUpdate } =
           compareElectionDataResult
         setCompareInfoboxData(newInfoboxData)
@@ -1442,7 +1406,6 @@ export const useElectionData = (showLoading, showTutorial) => {
       showLoading(true)
 
       const { filter } = compareInfo
-      console.log('refetchHandler')
       const normalRefetch = refetch(
         deepCloneObj(defaultElectionData),
         election,
@@ -1518,7 +1481,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     election,
     electionsData,
     lastUpdate,
-    mapData.isRunning,
+    mapData?.isRunning,
     mapObject,
     number?.key,
     refetch,
