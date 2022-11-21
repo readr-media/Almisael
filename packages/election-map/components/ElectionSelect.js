@@ -89,7 +89,9 @@ export const ElectionSelect = ({
             key={electionNamePair.electionType}
             selected={electionNamePair.electionType === electionType}
             onClick={() => {
-              onElectionChange(electionNamePair.electionType)
+              if (electionNamePair.electionType !== electionType) {
+                onElectionChange(electionNamePair.electionType)
+              }
               setShowOptions(false)
             }}
           >

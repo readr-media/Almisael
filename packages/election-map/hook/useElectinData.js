@@ -1145,55 +1145,48 @@ export const useElectionData = (showLoading, showTutorial) => {
     [election.years]
   )
 
-  const onElectionChange = useCallback(
-    (electionType) => {
-      // if (electionType === election.electionType) {
-      //   console.log('same type wtf?')
-      //   return
-      // }
-      const newElection = elections.find(
-        (election) => election.electionType === electionType
-      )
-      const newYear = newElection.years[newElection.years.length - 1]
-      const newNumber =
-        newElection.years[newElection.years.length - 1].numbers &&
-        newElection.years[newElection.years.length - 1].numbers[0]
-      const newSubtype = newElection.subtypes?.find(
-        (subtype) => subtype.key === 'normal'
-      )
+  const onElectionChange = useCallback((electionType) => {
+    const newElection = elections.find(
+      (election) => election.electionType === electionType
+    )
+    const newYear = newElection.years[newElection.years.length - 1]
+    const newNumber =
+      newElection.years[newElection.years.length - 1].numbers &&
+      newElection.years[newElection.years.length - 1].numbers[0]
+    const newSubtype = newElection.subtypes?.find(
+      (subtype) => subtype.key === 'normal'
+    )
 
-      setElection(newElection)
-      setYear(newYear)
-      setNumber(newNumber)
-      setSubtype(newSubtype)
-      setElectionsData((electionsData) => {
-        const electionData = getElectionData(
+    setElection(newElection)
+    setYear(newYear)
+    setNumber(newNumber)
+    setSubtype(newSubtype)
+    setElectionsData((electionsData) => {
+      const electionData = getElectionData(
+        electionsData,
+        electionType,
+        newYear?.key,
+        newSubtype?.key,
+        newNumber?.key
+      )
+      if (electionData.mapData.isRunning) {
+        return updateElectionsData(
           electionsData,
+          deepCloneObj(defaultElectionData),
           electionType,
           newYear?.key,
           newSubtype?.key,
           newNumber?.key
         )
-        if (electionData.mapData.isRunning) {
-          updateElectionsData(
-            electionsData,
-            deepCloneObj(defaultElectionData),
-            electionType,
-            newYear?.key,
-            newSubtype?.key,
-            newNumber?.key
-          )
-        } else {
-          return electionsData
-        }
-      })
-      setMapObject(defaultMapObject)
-      setInfoboxData({})
-      setEvcScrollTo(undefined)
-      setCompareInfo(defaultCompareInfo)
-    },
-    [showLoading]
-  )
+      } else {
+        return electionsData
+      }
+    })
+    setMapObject(defaultMapObject)
+    setInfoboxData({})
+    setEvcScrollTo(undefined)
+    setCompareInfo(defaultCompareInfo)
+  }, [])
 
   const onMapObjectChange = async (newMapObject = defaultMapObject) => {
     // fetch data before map scales, useEffect will call prepareData again,
