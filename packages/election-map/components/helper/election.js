@@ -1,27 +1,27 @@
-export const defaultElectionType = 'councilMember'
+export const defaultElectionType = 'mayor'
 export const currentYear = 2022
 // election configs
 export const elections = [
-  {
-    electionType: 'president',
-    electionName: '總統',
-    years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }],
-    meta: {
-      evc: { district: 'all' },
-      map: {
-        folderNames: {
-          0: '',
-          1: 'county',
-          2: 'town',
-        },
-        fileNames: {
-          0: 'country',
-          1: '',
-          2: '',
-        },
-      },
-    },
-  },
+  // {
+  //   electionType: 'president',
+  //   electionName: '總統',
+  //   years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }],
+  //   meta: {
+  //     evc: { district: 'all' },
+  //     map: {
+  //       folderNames: {
+  //         0: '',
+  //         1: 'county',
+  //         2: 'town',
+  //       },
+  //       fileNames: {
+  //         0: 'country',
+  //         1: '',
+  //         2: '',
+  //       },
+  //     },
+  //   },
+  // },
   {
     electionType: 'mayor',
     electionName: '縣市首長',
@@ -42,58 +42,58 @@ export const elections = [
       },
     },
   },
-  {
-    electionType: 'legislator',
-    electionName: '立法委員',
-    subtypes: [
-      { name: '區域', key: 'normal' },
-      { name: '原住民', key: 'indigenous' },
-    ],
-    years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }],
-    meta: {
-      evc: {},
-      map: {
-        folderNames: {
-          0: null, // councilMember has no country level file
-          1: 'county',
-          2: 'town',
-        },
-        fileNames: {
-          0: null, // councilMember has no country level file
-          1: '',
-          2: '',
-        },
-      },
-      seat: {
-        wrapperTitle: '立法委員席次圖',
-        componentTitle: '立法委員選舉',
-      },
-    },
-  },
-  {
-    electionType: 'legislatorParty',
-    electionName: '立法委員（不分區）',
-    years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }],
-    meta: {
-      evc: { district: 'all' },
-      map: {
-        folderNames: {
-          0: '',
-          1: 'county',
-          2: 'town',
-        },
-        fileNames: {
-          0: 'country',
-          1: '',
-          2: '',
-        },
-      },
-      seat: {
-        wrapperTitle: '立法委員席次圖',
-        componentTitle: '立法委員選舉',
-      },
-    },
-  },
+  // {
+  //   electionType: 'legislator',
+  //   electionName: '立法委員',
+  //   subtypes: [
+  //     { name: '區域', key: 'normal' },
+  //     { name: '原住民', key: 'indigenous' },
+  //   ],
+  //   years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }],
+  //   meta: {
+  //     evc: {},
+  //     map: {
+  //       folderNames: {
+  //         0: null, // councilMember has no country level file
+  //         1: 'county',
+  //         2: 'town',
+  //       },
+  //       fileNames: {
+  //         0: null, // councilMember has no country level file
+  //         1: '',
+  //         2: '',
+  //       },
+  //     },
+  //     seat: {
+  //       wrapperTitle: '立法委員席次圖',
+  //       componentTitle: '立法委員選舉',
+  //     },
+  //   },
+  // },
+  // {
+  //   electionType: 'legislatorParty',
+  //   electionName: '立法委員（不分區）',
+  //   years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }],
+  //   meta: {
+  //     evc: { district: 'all' },
+  //     map: {
+  //       folderNames: {
+  //         0: '',
+  //         1: 'county',
+  //         2: 'town',
+  //       },
+  //       fileNames: {
+  //         0: 'country',
+  //         1: '',
+  //         2: '',
+  //       },
+  //     },
+  //     seat: {
+  //       wrapperTitle: '立法委員席次圖',
+  //       componentTitle: '立法委員選舉',
+  //     },
+  //   },
+  // },
   {
     electionType: 'councilMember',
     subtypes: [
@@ -260,39 +260,39 @@ export const elections = [
       },
     },
   },
-  {
-    electionType: 'referendumLocal',
-    electionName: '地方性公民投票',
-    years: [
-      {
-        key: 2021,
-        numbers: [
-          {
-            year: 2021,
-            key: 'hsinchu-1',
-            name: '新竹市第1案',
-            detail:
-              '您是否同意，新竹市應訂定，廢污水管理自治條例，明定工業廢水、醫療廢水及其他事業廢水和污水，應以專管回收，不可排入飲用水取水口或灌溉水取水口上游？',
-          },
-        ],
-      },
-    ],
-    meta: {
-      evc: { district: 'all' },
-      map: {
-        folderNames: {
-          0: '',
-          1: 'county',
-          2: 'town',
-        },
-        fileNames: {
-          0: 'country',
-          1: '',
-          2: '',
-        },
-      },
-    },
-  },
+  // {
+  //   electionType: 'referendumLocal',
+  //   electionName: '地方性公民投票',
+  //   years: [
+  //     {
+  //       key: 2021,
+  //       numbers: [
+  //         {
+  //           year: 2021,
+  //           key: 'hsinchu-1',
+  //           name: '新竹市第1案',
+  //           detail:
+  //             '您是否同意，新竹市應訂定，廢污水管理自治條例，明定工業廢水、醫療廢水及其他事業廢水和污水，應以專管回收，不可排入飲用水取水口或灌溉水取水口上游？',
+  //         },
+  //       ],
+  //     },
+  //   ],
+  //   meta: {
+  //     evc: { district: 'all' },
+  //     map: {
+  //       folderNames: {
+  //         0: '',
+  //         1: 'county',
+  //         2: 'town',
+  //       },
+  //       fileNames: {
+  //         0: 'country',
+  //         1: '',
+  //         2: '',
+  //       },
+  //     },
+  //   },
+  // },
 ]
 
 export const electionNamePairs = elections.map(
