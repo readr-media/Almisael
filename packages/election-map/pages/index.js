@@ -20,7 +20,6 @@ export default function Home() {
 
   useEffect(() => {
     if (!localStorage.finishTutorial) {
-      console.log('weiofjhweoiwiofjwoeij')
       setShowTutorial(true)
     }
   }, [])

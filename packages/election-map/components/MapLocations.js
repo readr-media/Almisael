@@ -9,7 +9,7 @@ const Location = styled.span`
   font-size: 24px;
   line-height: 34.75px;
   &:last-of-type {
-    font-weight: 900;
+    font-weight: 700;
     margin-right: unset;
   }
 `

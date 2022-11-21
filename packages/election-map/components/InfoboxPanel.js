@@ -15,7 +15,7 @@ const InfoboxWrapper = styled(CollapsibleWrapper)`
 
 const InfoboxYear = styled.div`
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 35px;
 `
 

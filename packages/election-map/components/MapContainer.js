@@ -10,9 +10,9 @@ import { MapTooltip } from './MapTooltip'
 
 const Wrapper = styled.div`
   width: 100vw;
+  top: 0;
   height: 100vh;
   position: fixed;
-  top: 0;
   ${({ compareMode }) =>
     compareMode &&
     `

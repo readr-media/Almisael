@@ -18,13 +18,17 @@ const Wrapper = styled.div`
   }
   padding: 92px 0 20px 48px;
   width: 100%;
-  min-height: 100vh;
-  ${({ expandMode }) => expandMode && 'height: 1084px;'}
+  min-height: ${({ expandMode }) => (expandMode ? '1084px' : '100vh')};
+
   z-index: 1;
 `
 
 const LeftPanelWrapper = styled.div`
   width: 320px;
+  pointer-events: none;
+  & > * {
+    pointer-events: auto;
+  }
 `
 
 const BottomPanelWrapper = styled.div`
@@ -56,6 +60,7 @@ const StyledYearSelect = styled(YearSelect)`
 
 const PlaceHolder = styled.div`
   height: 350px;
+  pointer-events: none;
 `
 
 export const Panels = ({
@@ -133,9 +138,9 @@ export const Panels = ({
             compareInfo={compareInfo}
           />
         )}
+        <PlaceHolder />
         {numberInfo?.number && (
           <>
-            <PlaceHolder />
             <BottomPanelWrapper>
               <MapNavigateButton mapObject={mapObject} />
               <MapLocations locations={locations} />

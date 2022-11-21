@@ -71,6 +71,11 @@ export const partiesColor = [
     name: '其他政黨',
     color: '#958090',
   },
+  {
+    index: 1001,
+    name: '開票中',
+    color: '#fff',
+  },
 ]
 
 const hexToRgba = (hex, alpha) => {

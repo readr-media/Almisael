@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { electionMapColor } from '../consts/colors'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
+import taiwanMap from '../public/images/taiwan_map.png'
+import Image from 'next/image'
+import { imageLoader } from '../loader'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -38,7 +41,7 @@ const Intro = styled.div`
     margin: unset;
     font-size: 36px;
     line-height: 52.13px;
-    font-weight: 900;
+    font-weight: 700;
   }
   p {
     margin: 23px 0 0;
@@ -90,6 +93,17 @@ const Note = styled.div`
   color: #7d7d7d;
 `
 
+const StyledImage = styled(Image)`
+  position: relative;
+  left: 420px;
+  right: 8.3%;
+  width: calc(100vw - 420px - 8.3%);
+  top: 7%;
+  bottom: 5%;
+  height: calc(100vh - 12%);
+  object-fit: contain;
+`
+
 const teamMembers = [
   '監製：簡信昌',
   '製作人：李又如、王薏晴',
@@ -101,12 +115,8 @@ const teamMembers = [
 export const LandingPage = () => {
   const [show, setShow] = useState(false)
 
-  // since the showing logic is binding to whether the tutorial has shown, so we check the localstorage again
-  // maybe in the future the condition will not be the same (to show landing page and to show tutorial)
   useEffect(() => {
-    if (!localStorage.finishTutorial) {
-      setShow(true)
-    }
+    setShow(true)
   }, [])
 
   const onEnterClickedHandler = () => {
@@ -143,6 +153,7 @@ export const LandingPage = () => {
             </Note>
           </TeamWrapper>
         </InfoWrapper>
+        <StyledImage src={taiwanMap} loader={imageLoader} alt="line logo" />
       </Wrapper>
     </>
   )

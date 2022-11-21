@@ -17,6 +17,7 @@ const ActionButton = styled.button`
   text-align: center;
   width: 80px;
   height: 32px;
+  ${({ cancel }) => cancel && 'background-color: #e0e0e0;'}
 `
 
 export const ReferendumControl = ({ numberInfo, compareInfo }) => {
@@ -89,11 +90,33 @@ export const ReferendumControl = ({ numberInfo, compareInfo }) => {
               })
             }}
           />
+          {!compareMode && (
+            <ActionButton
+              cancel="true"
+              onClick={() => {
+                setCompare(false)
+                setCompareCandidates([
+                  number,
+                  numbers?.length > 1
+                    ? numbers.filter((n) => n.key !== number.key)[0]
+                    : null,
+                ])
+              }}
+            >
+              取消
+            </ActionButton>
+          )}
           <ActionButton
             onClick={() => {
               if (compareMode) {
                 submitCompareEnd()
                 setCompare(false)
+                setCompareCandidates([
+                  number,
+                  numbers?.length > 1
+                    ? numbers.filter((n) => n.key !== number.key)[0]
+                    : null,
+                ])
               } else {
                 submitCompareCandidates()
               }

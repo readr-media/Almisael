@@ -19,6 +19,10 @@ const StyledEVC = styled(ElectionVotesComparison)`
   header {
     border-top: unset;
     border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+    & + div {
+      margin-top: 20px;
+    }
   }
   h3:nth-of-type(2) {
     border-top: 1px solid #000;

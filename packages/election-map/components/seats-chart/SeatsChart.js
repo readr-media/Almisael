@@ -8,14 +8,23 @@ const SeatsChartWrapper = styled.div`
 `
 
 const SeatsChartYear = styled.div`
-  padding: 18px 0 6px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  line-height: 120%;
+  padding: 12px 0;
 `
 
 const SeartsChartTitle = styled.div`
   padding: 20px 0;
   text-align: center;
   background-color: #afafaf;
+  font-weight: 700;
+  line-height: 120%;
+  padding: 12px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 `
 
 const Wrapper = styled.div`

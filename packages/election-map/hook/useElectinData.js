@@ -158,14 +158,15 @@ export const useElectionData = (showLoading, showTutorial) => {
   const [mapObject, setMapObject] = useState(defaultMapObject)
   const [shouldRefetch, setShouldRefetch] = useState(false)
 
-  const [year, setYear] = useState(election.years[0])
+  const [year, setYear] = useState(election.years[election.years.length - 1])
   //for councilMember, legislator
   const [subtype, setSubtype] = useState(
     election.subtypes?.find((subtype) => subtype.key === 'normal')
   )
   //for referendum, referendumLocal
   const [number, setNumber] = useState(
-    election.years[0].numbers && election.years[0].numbers[0]
+    election.years[election.years.length - 1].numbers &&
+      election.years[election.years.length - 1].numbers[0]
   )
   const [evcScrollTo, setEvcScrollTo] = useState()
   const [lastUpdate, setLastUpdate] = useState()
@@ -1177,9 +1178,10 @@ export const useElectionData = (showLoading, showTutorial) => {
       const newElection = elections.find(
         (election) => election.electionType === electionType
       )
-      const newYear = newElection.years[0]
+      const newYear = newElection.years[newElection.years.length - 1]
       const newNumber =
-        newElection.years[0].numbers && newElection.years[0].numbers[0]
+        newElection.years[newElection.years.length - 1].numbers &&
+        newElection.years[newElection.years.length - 1].numbers[0]
       const newSubtype = newElection.subtypes?.find(
         (subtype) => subtype.key === 'normal'
       )

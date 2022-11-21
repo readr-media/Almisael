@@ -2,13 +2,12 @@ import { useState, useCallback, useEffect } from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  width: 627px;
   display: flex;
+  align-items: center;
 `
 
 const SliderWrapper = styled.div`
-  width: 555px;
-  margin: 0 28px 0 40px;
+  width: 307px;
 `
 
 const Slider = styled.input`
@@ -24,8 +23,8 @@ const Slider = styled.input`
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 22px;
-    height: 22px;
+    width: 16px;
+    height: 16px;
     background-color: #ffc7bb;
     cursor: pointer;
     border: 1px solid #000000;
@@ -33,8 +32,8 @@ const Slider = styled.input`
   }
 
   &::-moz-range-thumb {
-    width: 22px;
-    height: 22px;
+    width: 16px;
+    height: 16px;
     background-color: #ffc7bb;
     cursor: pointer;
     border: 1px solid #000;
@@ -50,8 +49,8 @@ const SpotWrapper = styled.div`
 
 const Spot = styled.span`
   position: relative;
-  width: 22px;
-  height: 22px;
+  width: 16px;
+  height: 16px;
   background-color: #fff;
   cursor: pointer;
   border: 1px solid #000;
@@ -63,8 +62,8 @@ const Spot = styled.span`
   &:before {
     display: ${({ selected }) => (selected ? 'block' : 'none')};
     content: '';
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     border: 1px solid #000;
     border-radius: 50%;
     background-color: #ffc7bb;
@@ -74,12 +73,11 @@ const Spot = styled.span`
     content: '${({ content }) => content}';
     display: block;
     position: absolute;
-    width: 59px;
-    font-size: 24px;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 700;
     line-height: 35px;
     top: 23px;
-    left: -18px;
+    left: -9px;
   }
 
   ${({ compare, cand1, cand2 }) => {
@@ -120,18 +118,23 @@ const Spot = styled.span`
   }}
 `
 
+const ButtonWrapper = styled.div`
+  margin-left: 47px;
+`
 const ActionButton = styled.button`
-  margin-top: 11px;
-  width: 72px;
-  height 39px;
+  width: 80px;
+  height 32px;
   border-radius: 12px;
   border: 1px solid #000;
   background-color: #ffc7bb;
-  font-size: 18px;
   font-weight: 500;
   &:disabled {
     background-color: #e0e0e0;
   }
+  &:nth-of-type(2) {
+    margin-left: 12px;
+  }
+  ${({ cancel }) => cancel && 'background-color: #e0e0e0;'}
 `
 
 export const YearSelect = ({ className, yearInfo, compareInfo }) => {
@@ -226,30 +229,45 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
           compare={compare}
         />
       </SliderWrapper>
-      {compare ? (
-        <ActionButton
-          disabled={!compareYear}
-          onClick={() => {
-            if (compareMode) {
-              submitCompareEnd()
-              setCompare(false)
-              setCompareCandidates([years.find((y) => y === year), null])
-            } else {
-              submitCompareCandidates()
-            }
-          }}
-        >
-          {compareMode ? '返回' : '確定'}
-        </ActionButton>
-      ) : (
-        <ActionButton
-          onClick={() => {
-            setCompare(true)
-          }}
-        >
-          比較
-        </ActionButton>
-      )}
+      <ButtonWrapper>
+        {compare ? (
+          <>
+            {!compareMode && (
+              <ActionButton
+                cancel="true"
+                onClick={() => {
+                  setCompare(false)
+                  setCompareCandidates([years.find((y) => y === year), null])
+                }}
+              >
+                取消
+              </ActionButton>
+            )}
+            <ActionButton
+              disabled={!compareYear}
+              onClick={() => {
+                if (compareMode) {
+                  submitCompareEnd()
+                  setCompare(false)
+                  setCompareCandidates([years.find((y) => y === year), null])
+                } else {
+                  submitCompareCandidates()
+                }
+              }}
+            >
+              {compareMode ? '返回' : '確定'}
+            </ActionButton>
+          </>
+        ) : (
+          <ActionButton
+            onClick={() => {
+              setCompare(true)
+            }}
+          >
+            比較
+          </ActionButton>
+        )}
+      </ButtonWrapper>
     </Wrapper>
   )
 }
