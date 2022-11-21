@@ -67,7 +67,10 @@ const TeamWrapper = styled(CollapsibleWrapper)`
 `
 
 const Team = styled.div`
-  padding: 9px 87px 0;
+  padding: 9px 0 0;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 20px;
   background-color: white;
 `
 
@@ -79,7 +82,7 @@ const TeamMember = styled.p`
 `
 
 const Note = styled.div`
-  padding: 18px 45px 20px;
+  padding: 12px 45px 13px;
   background-color: white;
   font-size: 12px;
   line-height: 16px;
@@ -88,12 +91,11 @@ const Note = styled.div`
 `
 
 const teamMembers = [
-  '監製｜簡信昌',
-  '製作人｜李又如 王薏晴',
-  '工程｜李文瀚 李法賢',
-  '記者｜劉怡馨',
-  '社群｜徐湘芸',
-  '設計｜曾立宇 吳曼努',
+  '監製：簡信昌',
+  '製作人：李又如、王薏晴',
+  '工程：李文瀚、李法賢、蘇庭葳',
+  '設計：曾立宇、吳曼努',
+  '社群：徐湘芸',
 ]
 
 export const LandingPage = () => {
@@ -122,11 +124,14 @@ export const LandingPage = () => {
             <Intro>
               <h1>標題標題標題標題 標題標題標題標題</h1>
               <p>
-                照片好嗎動畫有或是要開面寫，大不，定圖神是中國啥上有難受要很字出來，真是到底工作⋯這有想他即使心想什麼啦喜歡他，就這麼。可舒喜歡們都苦欸我感覺也多，月還。
+                2022 年縣市長、議員、公投開票結果看
+                READr！提供最詳盡的選舉票數地圖、歷年比較等功能。
               </p>
             </Intro>
           </IntroWrapper>
-          <ActionButton onClick={onEnterClickedHandler}>Enter</ActionButton>
+          <ActionButton onClick={onEnterClickedHandler}>
+            看最新選情
+          </ActionButton>
           <TeamWrapper centerTitle={'製作團隊'}>
             <Team>
               {teamMembers.map((teamMember) => (

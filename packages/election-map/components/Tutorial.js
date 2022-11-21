@@ -35,27 +35,30 @@ const Hint = styled.div`
 `
 
 const InfoboxHint = styled(Hint)`
-  top: 275px;
+  top: 292px;
   left: 475px;
 `
 
 const SeatHint = styled(Hint)`
-  top: 575px;
+  top: 588px;
   left: 475px;
 `
 
 const EvcHint = styled(Hint)`
-  top: 100px;
+  top: 137px;
   right: 430px;
   &::before {
     left: unset;
-    right: -125px;
+    right: -111px;
   }
 `
 
 const CompareHint = styled(Hint)`
-  top: 930px;
+  top: 912px;
   left: 800px;
+  &::before {
+    top: 77px;
+  }
 `
 
 const TouchLayer = styled.div`
@@ -84,16 +87,17 @@ export const Tutorial = ({ mapData, onClick, show }) => {
       <DarkLayer></DarkLayer>
       <HintLayer>
         <InfoboxHint>
-          照片好嗎動畫有或是要開面寫，大不，定圖神是中國啥上有難受要很字出來，真是到底工作⋯這有想他即使心。
+          點選地圖，會出現對應行政區的相關投票資訊（由於中選會資料提供的限制，當屆選舉開票時無法顯示村里層級的票數，待開票完成才可查詢。）
         </InfoboxHint>
         <SeatHint>
-          照片好嗎動畫有或是要開面寫，大不，定圖神是中國啥上有難受要很字出來，真是到底工作⋯這有想他即使心。
+          點選地圖，會出現該次選舉政黨席次分佈（僅立法委員、縣市議員有此功能）。滑鼠移至（手機為點選）席次圓點會顯示政黨名稱。
         </SeatHint>
         <EvcHint>
-          照片好嗎動畫有或是要開面寫，大不，定圖神是中國啥上有難受要很字出來，真是到底工作⋯這有想他即使心。
+          點選地圖，會出現該次選舉中，該選區的選舉結果。可橫幅移動看更多候選人。
         </EvcHint>
         <CompareHint>
-          照片好嗎動畫有或是要開面寫，大不，定圖神是中國啥上有難受要很字出來，真是到底工作⋯這有想他即使心。
+          可選取年份看不同年份的選舉結果。也可選取多個年份（最多 2
+          個），點選「比較」鍵同時呈現 2 次選舉結果作為對照。
         </CompareHint>
       </HintLayer>
       <TouchLayer
