@@ -250,6 +250,8 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
                   submitCompareEnd()
                   setCompare(false)
                   setCompareCandidates([years.find((y) => y === year), null])
+                  document.body.scrollTop = 0 // For Safari
+                  document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
                 } else {
                   submitCompareCandidates()
                 }

@@ -59,8 +59,9 @@ const StyledYearSelect = styled(YearSelect)`
 `
 
 const PlaceHolder = styled.div`
-  height: 350px;
   pointer-events: none;
+  height: ${({ electionType }) =>
+    electionType === 'referendum' ? '350px' : '300px'};
 `
 
 export const Panels = ({
@@ -138,7 +139,7 @@ export const Panels = ({
             compareInfo={compareInfo}
           />
         )}
-        <PlaceHolder />
+        <PlaceHolder electionType={election.electionType} />
         {numberInfo?.number && (
           <>
             <BottomPanelWrapper>

@@ -117,6 +117,8 @@ export const ReferendumControl = ({ numberInfo, compareInfo }) => {
                     ? numbers.filter((n) => n.key !== number.key)[0]
                     : null,
                 ])
+                document.body.scrollTop = 0 // For Safari
+                document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
               } else {
                 submitCompareCandidates()
               }
