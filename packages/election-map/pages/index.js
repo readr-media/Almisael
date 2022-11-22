@@ -1,4 +1,4 @@
-import { Dashboard } from '../components/Dashboard'
+import { DashboardContainer } from '../components/DashboardContainer'
 import { LandingPage } from '../components/LandingPage'
 import { NavBar } from '../components/NavBar'
 import lb from '@readr-media/react-live-blog'
@@ -37,7 +37,7 @@ export default function Home() {
     <>
       <NavBar />
       <LandingPage />
-      <Dashboard
+      <DashboardContainer
         showTutorial={showTutorial}
         setShowTutorial={setShowTutorial}
       />

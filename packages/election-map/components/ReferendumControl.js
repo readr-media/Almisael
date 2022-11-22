@@ -15,6 +15,7 @@ const ActionButton = styled.button`
   border-radius: 8px;
   line-height: 23px;
   text-align: center;
+  font-weight: 500;
   width: 80px;
   height: 32px;
   ${({ cancel }) => cancel && 'background-color: #e0e0e0;'}
@@ -32,7 +33,6 @@ export const ReferendumControl = ({ numberInfo, compareInfo }) => {
   const compareNumber = compareCandidates[1]
 
   const submitCompareCandidates = useCallback(() => {
-    console.log('submit compareCandidates', compareCandidates)
     const [number, compareNumber] = compareCandidates
     onNumberChange(number)
     onCompareInfoChange({
@@ -62,7 +62,6 @@ export const ReferendumControl = ({ numberInfo, compareInfo }) => {
             numbers={numbers}
             onNumberChange={(number) => {
               setCompareCandidates(([, cand2]) => {
-                console.log(number)
                 if (number === cand2) {
                   return [
                     number,

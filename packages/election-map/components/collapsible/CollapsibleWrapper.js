@@ -1,10 +1,14 @@
-import { useCallback, useState } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
+import { MapLocations } from '../MapLocations'
 
 const Wrapper = styled.div`
   overflow: hidden;
   border: 1px solid #000;
   border-radius: ${({ collapse }) => (collapse ? `0 0 16px 16px;` : `unset`)};
+  @media (max-width: 1024px) {
+    border-radius: unset;
+  }
 `
 const CollapseButton = styled.div`
   position: relative;
@@ -16,6 +20,10 @@ const CollapseButton = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    padding-left: 36px;
+  }
 `
 const CollapseButtonTitle = styled.p`
   font-size: 16px;
@@ -38,20 +46,22 @@ const CollapseButtonSpecialTitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+`
+
+const CollapseButtonSubTitle = styled.div`
+  position: absolute;
+  top: 0;
+  right: 52px;
+  height: 40px;
+  display: flex;
+  align-items: center;
 `
 
 const CollapseContent = styled.div`
-  max-height: ${({ collapse, scrollHeight }) =>
-    collapse ? `${scrollHeight}px` : '0'};
-
-  ${({ collapse, scrollHeight }) =>
-    collapse
-      ? `
-        max-height: ${scrollHeight}px;
-      `
-      : `
-        max-height: 0;
-      `}
+  ${({ collapse }) => !collapse && 'height: 0'};
 `
 
 const downTriangle = (
@@ -87,21 +97,10 @@ export const CollapsibleWrapper = ({
   className,
   preventCollapse,
   centerTitle,
+  compareMode,
+  locations,
 }) => {
   const [collapse, setCollapse] = useState(true)
-  const [scrollHeight, setScrollHeight] = useState(0)
-  const buttonRef = useCallback((node) => {
-    if (node && node.nextElementSibling) {
-      const contentNode = node.nextElementSibling
-      const resizeObserver = new ResizeObserver(() => {
-        if (scrollHeight !== contentNode.scrollHeight) {
-          setScrollHeight(contentNode.scrollHeight)
-        }
-      })
-
-      resizeObserver.observe(node)
-    }
-  }, [])
 
   return (
     <Wrapper className={className} collapse={collapse}>
@@ -110,7 +109,6 @@ export const CollapsibleWrapper = ({
         onClick={() => {
           !preventCollapse && setCollapse((v) => !v)
         }}
-        ref={buttonRef}
       >
         <CollapseButtonTitle>{title}</CollapseButtonTitle>
         <CollapseButtonIcon>
@@ -119,10 +117,13 @@ export const CollapsibleWrapper = ({
         {centerTitle && (
           <CollapseButtonSpecialTitle>{centerTitle}</CollapseButtonSpecialTitle>
         )}
+        {compareMode && (
+          <CollapseButtonSubTitle>
+            <MapLocations locations={locations} compareMode={compareMode} />
+          </CollapseButtonSubTitle>
+        )}
       </CollapseButton>
-      <CollapseContent collapse={collapse} scrollHeight={scrollHeight}>
-        {children}
-      </CollapseContent>
+      <CollapseContent collapse={collapse}>{children}</CollapseContent>
     </Wrapper>
   )
 }

@@ -5,6 +5,10 @@ const InfoboxWrapper = styled.div`
   padding: 16px 22px;
   height: 130px;
   overflow: auto;
+
+  @media (max-width: 1024px) {
+    padding: 0;
+  }
 `
 
 const InfoboxScrollWrapper = styled.div``
@@ -120,12 +124,14 @@ const MayorCandidate = styled.div`
 const MayorCandidateName = styled.div`
   max-width: 160px;
   font-weight: 700;
+  ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 const MayorCandidateParty = styled.div`
   font-weight: 350;
+  ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 
-const MayorInfobox = ({ level, data, isRunning }) => {
+const MayorInfobox = ({ level, data, isRunning, compareMode }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
@@ -153,8 +159,10 @@ const MayorInfobox = ({ level, data, isRunning }) => {
           const elected = candidate.candVictor === '*'
           return (
             <MayorCandidate elected={elected} key={candidate.candNo}>
-              <MayorCandidateName>{candidate.name}</MayorCandidateName>
-              <MayorCandidateParty>
+              <MayorCandidateName compareMode={compareMode}>
+                {candidate.name}
+              </MayorCandidateName>
+              <MayorCandidateParty compareMode={compareMode}>
                 {candidate.party} {candidate.tksRate}%
               </MayorCandidateParty>
               {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
@@ -297,12 +305,14 @@ const CouncilMemberCandidate = styled.div`
 const CouncilMemberCandidateName = styled.div`
   max-width: 160px;
   font-weight: 700;
+  ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 const CouncilMemberCandidateParty = styled.div`
   font-weight: 350;
+  ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 
-const CouncilMemberInfobox = ({ level, data }) => {
+const CouncilMemberInfobox = ({ level, data, compareMode }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
@@ -332,10 +342,10 @@ const CouncilMemberInfobox = ({ level, data }) => {
                   elected={elected}
                   key={councilMemberdPrefix + candidate.candNo}
                 >
-                  <CouncilMemberCandidateName>
+                  <CouncilMemberCandidateName compareMode={compareMode}>
                     {candidate.name}
                   </CouncilMemberCandidateName>
-                  <CouncilMemberCandidateParty>
+                  <CouncilMemberCandidateParty compareMode={compareMode}>
                     {candidate.party} {candidate.tksRate}%
                   </CouncilMemberCandidateParty>
                   {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
@@ -649,7 +659,7 @@ const councilMemberInfoboxData = (data, level, subtype) => {
   return data
 }
 
-export const Infobox = ({ data, subtype, isRunning }) => {
+export const Infobox = ({ data, subtype, isRunning, compareMode }) => {
   const { electionType, level, electionData } = data
   let infobox
   switch (electionType) {
@@ -662,7 +672,14 @@ export const Infobox = ({ data, subtype, isRunning }) => {
     }
     case 'mayor': {
       const data = mayorInfoboxData(electionData, level)
-      infobox = <MayorInfobox level={level} data={data} isRunning={isRunning} />
+      infobox = (
+        <MayorInfobox
+          level={level}
+          data={data}
+          isRunning={isRunning}
+          compareMode={compareMode}
+        />
+      )
       break
     }
     case 'legislator': {
@@ -672,7 +689,12 @@ export const Infobox = ({ data, subtype, isRunning }) => {
     case 'councilMember': {
       const data = councilMemberInfoboxData(electionData, level, subtype)
       infobox = (
-        <CouncilMemberInfobox level={level} data={data} isRunning={isRunning} />
+        <CouncilMemberInfobox
+          level={level}
+          data={data}
+          isRunning={isRunning}
+          compareMode={compareMode}
+        />
       )
       break
     }

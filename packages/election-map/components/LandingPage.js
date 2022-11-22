@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
+import useWindowDimension from '../hook/useWindowDimensions'
 import { electionMapColor } from '../consts/colors'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 import taiwanMap from '../public/images/taiwan_map.png'
+import taiwanMapMobile from '../public/images/taiwan_map_m.png'
 import Image from 'next/image'
 import { imageLoader } from '../loader'
 
@@ -27,6 +29,14 @@ const InfoWrapper = styled.div`
   top: calc((100vh - 614px) * 0.4);
   left: 100px;
   width: 320px;
+
+  @media (max-width: 1024px) {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 28px;
+    top: unset;
+  }
 `
 
 const IntroWrapper = styled(CollapsibleWrapper)`
@@ -58,7 +68,6 @@ const ActionButton = styled.button`
   border-radius: 8px;
   border: 1px solid #000000;
   font-size: 18px;
-  line-height: 40px;
   font-weight: 700;
   &:hover {
     background-color: rgba(255, 79, 79, 0.6);
@@ -105,6 +114,16 @@ const StyledImage = styled(Image)`
   bottom: 5%;
   height: calc(100vh - 12%);
   object-fit: contain;
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
 `
 
 const teamMembers = [
@@ -117,6 +136,9 @@ const teamMembers = [
 
 export const LandingPage = () => {
   const [show, setShow] = useState(false)
+
+  const { width } = useWindowDimension()
+  const imgSrc = width > 1024 ? taiwanMap : taiwanMapMobile
 
   useEffect(() => {
     setShow(true)
@@ -156,7 +178,7 @@ export const LandingPage = () => {
             </Note>
           </TeamWrapper>
         </InfoWrapper>
-        <StyledImage src={taiwanMap} loader={imageLoader} alt="line logo" />
+        <StyledImage src={imgSrc} loader={imageLoader} alt="line logo" />
       </Wrapper>
     </>
   )

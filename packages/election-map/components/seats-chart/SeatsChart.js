@@ -5,6 +5,7 @@ import { useState } from 'react'
 const SeatsChartWrapper = styled.div`
   font-size: 24px;
   line-height: 29px;
+  background: #fff;
 `
 
 const SeatsChartYear = styled.div`
@@ -32,6 +33,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 40px 39px 74px;
+  @media (max-width: 1024px) {
+    padding-bottom: 40px;
+  }
 `
 
 const SeatWrapper = styled.div`
@@ -74,14 +78,14 @@ const SeatInfo = styled.div`
     `}
 `
 
-export const SeatsChart = ({ data, meta }) => {
+export const SeatsChart = ({ className, data, meta }) => {
   const [hoverParty, setHoverParty] = useState({
     show: false,
     party: '',
     coordinate: [],
   })
   return (
-    <SeatsChartWrapper>
+    <SeatsChartWrapper className={className}>
       <SeatsChartYear>{meta.year}</SeatsChartYear>
       <SeartsChartTitle>{meta.location + meta.componentTitle}</SeartsChartTitle>
       <Wrapper>

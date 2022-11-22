@@ -3,24 +3,12 @@ import { electionMapColor } from '../consts/colors'
 
 const MapButtonWrapper = styled.div`
   margin-top: 20px;
-`
-const MapLevelBackButton = styled.button`
-  border: 1px solid #000;
-  background-color: #686868;
-  color: ${electionMapColor};
-  border-radius: 8px;
-  line-height: 23px;
-  text-align: center;
-  width: 80px;
-  height: 32px;
-
-  &:hover,
-  &:active {
-    background-color: #000;
+  @media (max-width: 1024px) {
+    margin: 0;
   }
 `
 
-const MapLevelResetButton = styled.button`
+const MapLevelControlButton = styled.button`
   margin-left: 4px;
   border: 1px solid #000;
   background-color: #686868;
@@ -28,18 +16,23 @@ const MapLevelResetButton = styled.button`
   border-radius: 8px;
   line-height: 23px;
   text-align: center;
-  width: 80px;
-  height: 32px;
+  font-weight: 500;
+  padding: 3px 15px 4px;
 
-  &:hover,
+  s &:hover,
   &:active {
     background-color: #000;
   }
+  @media (max-width: 1024px) {
+    font-size: 14px;
+    padding: 3px 8px;
+  }
 `
+
 export const MapNavigateButton = ({ mapObject }) => {
   return (
     <MapButtonWrapper>
-      <MapLevelBackButton
+      <MapLevelControlButton
         disabled={mapObject.level === 0}
         onClick={() => {
           const target = document.querySelector(
@@ -50,8 +43,8 @@ export const MapNavigateButton = ({ mapObject }) => {
         }}
       >
         回上層
-      </MapLevelBackButton>
-      <MapLevelResetButton
+      </MapLevelControlButton>
+      <MapLevelControlButton
         disabled={mapObject.level === 0}
         onClick={() => {
           const target = document.querySelector(`#first-id-background`)
@@ -60,7 +53,7 @@ export const MapNavigateButton = ({ mapObject }) => {
         }}
       >
         回全國
-      </MapLevelResetButton>
+      </MapLevelControlButton>
     </MapButtonWrapper>
   )
 }

@@ -77,7 +77,6 @@ const Spot = styled.span`
     font-weight: 700;
     line-height: 35px;
     top: 23px;
-    left: -9px;
   }
 
   ${({ compare, cand1, cand2 }) => {
@@ -150,7 +149,6 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
   const selectedIndex = years.indexOf(years.find((y) => y === year))
 
   const submitCompareCandidates = useCallback(() => {
-    console.log('submit compareCandidates', compareCandidates)
     const [year, compareYear] = compareCandidates
     onYearChange(year)
     onCompareInfoChange({

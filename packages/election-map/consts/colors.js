@@ -62,6 +62,11 @@ export const partiesColor = [
     color: '#B43F93',
   },
   {
+    index: 998,
+    name: '開票中',
+    color: '#fff',
+  },
+  {
     index: 999,
     name: '無黨籍',
     color: '#333333',
@@ -71,16 +76,11 @@ export const partiesColor = [
     name: '其他政黨',
     color: '#958090',
   },
-  {
-    index: 1001,
-    name: '開票中',
-    color: '#fff',
-  },
 ]
 
 const hexToRgba = (hex, alpha) => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
-  if (!result) console.error('hexToRgba not accept non hex color')
+  if (!result) console.error('hexToRgba not accept non hex color', hex)
 
   return {
     r: parseInt(result[1], 16),

@@ -92,7 +92,6 @@ export const Map = ({
 
   useEffect(() => {
     zoom(750, currentFeature)
-    console.log('zoom here')
   }, [currentFeature, width, height])
 
   // useEffect(() => {

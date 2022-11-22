@@ -1,30 +1,11 @@
 import styled from 'styled-components'
-import { electionMapColor } from '../consts/colors'
 import { MapContainer } from './MapContainer'
-import { Panels } from './Panels'
+import { MobilePanels } from './MobilePanels'
 import { Tutorial } from './Tutorial'
 
-const Wrapper = styled.div`
-  position: relative;
-  width: 100vw;
-  background-color: ${electionMapColor};
-  ${({ isMobile }) => isMobile && 'height: 100vh;'}
-`
+const Wrapper = styled.div``
 
-const MoreHint = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background-color: #000;
-  color: #fff;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-`
-
-export const Dashboard = ({
+export const MobileDashboard = ({
   onElectionChange,
   mapObject,
   election,
@@ -33,7 +14,6 @@ export const Dashboard = ({
   seatData,
   infoboxData,
   compareInfoboxData,
-  evcInfo,
   subtypeInfo,
   yearInfo,
   numberInfo,
@@ -48,20 +28,6 @@ export const Dashboard = ({
 }) => {
   return (
     <Wrapper>
-      <Panels
-        onElectionChange={onElectionChange}
-        mapObject={mapObject}
-        election={election}
-        seatData={seatData}
-        infoboxData={infoboxData}
-        compareInfoboxData={compareInfoboxData}
-        evcInfo={evcInfo}
-        subtypeInfo={subtypeInfo}
-        yearInfo={yearInfo}
-        numberInfo={numberInfo}
-        compareInfo={compareInfo}
-        lastUpdate={lastUpdate}
-      />
       <MapContainer
         showLoading={showLoading}
         compareMode={compareInfo.compareMode}
@@ -71,6 +37,20 @@ export const Dashboard = ({
         setMapObject={setMapObject}
         electionType={election.electionType}
         mapData={mapGeoJsons}
+      />
+      <MobilePanels
+        seatData={seatData}
+        infoboxData={infoboxData}
+        compareInfoboxData={compareInfoboxData}
+        election={election}
+        yearInfo={yearInfo}
+        mapObject={mapObject}
+        subtypeInfo={subtypeInfo}
+        compareInfo={compareInfo}
+        numberInfo={numberInfo}
+        lastUpdate={lastUpdate}
+        showTutorial={showTutorial}
+        onElectionChange={onElectionChange}
       />
       {showTutorial && (
         <Tutorial
@@ -82,7 +62,6 @@ export const Dashboard = ({
           }}
         />
       )}
-      {!showTutorial && <MoreHint>往下滑看最新選情</MoreHint>}
     </Wrapper>
   )
 }

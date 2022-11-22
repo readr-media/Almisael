@@ -1,4 +1,4 @@
-export const defaultElectionType = 'mayor'
+export const defaultElectionType = 'referendum'
 export const currentYear = 2022
 // election configs
 export const elections = [

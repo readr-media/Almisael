@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { useElementDimension } from '../hook/useElementDimension'
+import useWindowDimensions from '../hook/useWindowDimensions'
 import { Map } from './Map'
 import { MapTooltip } from './MapTooltip'
 
@@ -13,12 +14,17 @@ const Wrapper = styled.div`
   top: 0;
   height: 100vh;
   position: fixed;
-  ${({ compareMode }) =>
-    compareMode &&
-    `
-    width: calc(100vw - 368px);
-    margin-left: 368px;
-  `};
+
+  @media (max-width: 1024px) {
+    position: absolute;
+    ${({ compareMode }) =>
+      compareMode &&
+      `
+        svg:first-of-type {
+          border-bottom: 1px solid #000;
+        } 
+    `}
+  }
 `
 
 const defaultTooltip = {
@@ -38,16 +44,23 @@ export const MapContainer = ({
 }) => {
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
+  const { width } = useWindowDimensions()
 
   if (!mapData) {
     return <div></div>
   }
 
   if (compareMode) {
-    const splitDimension = {
-      width: dimension.width / 2,
-      height: dimension.height,
-    }
+    const splitDimension =
+      width > 1024
+        ? {
+            width: dimension.width / 2,
+            height: dimension.height,
+          }
+        : {
+            width: dimension.width,
+            height: dimension.height / 2 - 20,
+          }
 
     return (
       <Wrapper ref={elementRef} compareMode={compareMode}>
