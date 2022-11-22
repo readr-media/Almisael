@@ -18,8 +18,8 @@ const StyledElectionSelect = styled(ElectionSelect)`
 
 const StyledELectionRadio = styled(ElectionRadio)`
   position: absolute;
-  bottom: 73px;
-  right: 121px;
+  bottom: 83px;
+  right: 118px;
 `
 const LastUpdateTime = styled.div`
   position: absolute;

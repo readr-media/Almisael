@@ -10,7 +10,7 @@ const Label = styled.label`
   align-items: center;
   position: relative;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -20,8 +20,8 @@ const Label = styled.label`
     margin-right: 5px;
   }
   & span:after {
-    width: 16px;
-    height: 16px;
+    width: 13.3px;
+    height: 13.3px;
     border-radius: 50%;
     background: #000;
   }
@@ -38,8 +38,8 @@ const Input = styled.input`
 `
 
 const Radio = styled.span`
-  height: 24px;
-  width: 24px;
+  height: 20px;
+  width: 20px;
   margin-right: 5px;
   background-color: #fff;
   border: 1px solid #000;

@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 
 const InfoWrapper = styled.div`
   position: absolute;
-  top: calc((100vh - 647px) * 0.7);
+  top: calc((100vh - 614px) * 0.4);
   left: 100px;
   width: 320px;
 `
@@ -60,6 +60,9 @@ const ActionButton = styled.button`
   font-size: 18px;
   line-height: 40px;
   font-weight: 700;
+  &:hover {
+    background-color: rgba(255, 79, 79, 0.6);
+  }
 `
 
 const TeamWrapper = styled(CollapsibleWrapper)`
