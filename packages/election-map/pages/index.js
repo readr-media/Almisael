@@ -6,12 +6,14 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 import { electionMapColor } from '../consts/colors'
+import { RelatedPost } from '../components/related-post/RelatedPost'
 
 const LiveBlog = lb.ReactComponent.LiveBlog
 const LiveBlogWrapper = styled.div`
   position: relative;
   background-color: ${electionMapColor};
   z-index: 1;
+  padding: 100px;
 `
 
 export default function Home() {
@@ -27,7 +29,7 @@ export default function Home() {
   useEffect(() => {
     const fetchLiveblog = async () => {
       const { data } = await axios.get(
-        'https://editools-gcs-dev.readr.tw/files/liveblogs/ukraine-war.json'
+        'https://editools-gcs.readr.tw/files/liveblogs/election2022.json'
       )
       setInitialLiveblog(data)
     }
@@ -46,13 +48,14 @@ export default function Home() {
           {initialLiveblog && (
             <LiveBlog
               initialLiveblog={initialLiveblog}
-              fetchLiveblogUrl="https://editools-gcs-dev.readr.tw/files/liveblogs/ukraine-war.json"
-              fetchImageBaseUrl="https://editools-gcs-dev.readr.tw"
+              fetchLiveblogUrl="https://editools-gcs.readr.tw/files/liveblogs/election2022.json"
+              fetchImageBaseUrl="https://editools-gcs.readr.tw"
               toLoadPeriodically={true}
             />
           )}
         </LiveBlogWrapper>
       )}
+      {!showTutorial && <RelatedPost />}
     </>
   )
 }
