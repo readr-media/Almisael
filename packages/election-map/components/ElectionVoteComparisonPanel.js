@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import evc from '@readr-media/react-election-votes-comparison'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
-
-const ElectionVotesComparison = evc.ReactComponent.EVC
+import widgets from '@readr-media/react-election-widgets'
+const ElectionVotesComparison = widgets.VotesComparison.ReactComponent
 
 const ElectionVotesComparisonWrapper = styled(CollapsibleWrapper)`
   position: absolute;

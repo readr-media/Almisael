@@ -4,7 +4,8 @@ import { countyMappingData } from './helper/election'
 import { MapLocations } from './MapLocations'
 import { MapNavigateButton } from './MapNavigateButton'
 import { MobileInfoboxPanels } from './MobileInfoboxPanels'
-import { SeatsChart } from './seats-chart/SeatsChart'
+import widgets from '@readr-media/react-election-widgets'
+const SeatsChart = widgets.SeatChart.ReactComponent
 
 const StyledCollapsibleWrapper = styled(CollapsibleWrapper)`
   position: relative;

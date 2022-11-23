@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import axios from 'axios'
-import evc from '@readr-media/react-election-votes-comparison'
+import widgets from '@readr-media/react-election-widgets'
 import { json } from 'd3'
 import { feature } from 'topojson'
 import {
@@ -18,7 +18,7 @@ import {
 } from '../components/helper/election'
 import { deepCloneObj } from '../components/helper/helper'
 
-const DataLoader = evc.DataLoader
+const DataLoader = widgets.VotesComparison.DataLoader
 
 import { mockData as legislatorCounty } from '../mock-datas/maps/legislators/2020_legislator_county_63000'
 import { mockData as legislatorConstituency } from '../mock-datas/maps/legislators/2020_legislator_constituency_6300001'
