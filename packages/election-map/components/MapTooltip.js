@@ -15,8 +15,7 @@ const Tooltip = styled.div`
         left: ${coordinate[0] - 30}px;
       `
       : `
-        top: 0;
-        left: 0;
+        display: none;
       `};
 `
 

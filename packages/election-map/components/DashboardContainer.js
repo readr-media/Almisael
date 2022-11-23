@@ -1,11 +1,14 @@
-import { useCallback, useRef, useState } from 'react'
+import { forwardRef, useCallback, useRef, useState } from 'react'
 import { useElectionData } from '../hook/useElectinData'
 import { SpinningModal } from './SpinningModal'
 import useWindowDimensions from '../hook/useWindowDimensions'
 import { MobileDashboard } from './MobileDashboard'
 import { Dashboard } from './Dashboard'
 
-export const DashboardContainer = ({ showTutorial, setShowTutorial }) => {
+export const DashboardContainer = forwardRef(function DashboardContainer(
+  { showTutorial, setShowTutorial, dashboardInView },
+  ref
+) {
   const [loading, setLoading] = useState(false)
   const loadingTimout = useRef(null)
   const { width } = useWindowDimensions() || []
@@ -47,7 +50,7 @@ export const DashboardContainer = ({ showTutorial, setShowTutorial }) => {
 
   if (!isMobile) {
     return (
-      <>
+      <div ref={ref}>
         {loading && <SpinningModal />}
         <Dashboard
           onElectionChange={onElectionChange}
@@ -70,12 +73,13 @@ export const DashboardContainer = ({ showTutorial, setShowTutorial }) => {
           showTutorial={showTutorial}
           setShowTutorial={setShowTutorial}
           onTutorialEnd={onTutorialEnd}
+          dashboardInView={dashboardInView}
         />
-      </>
+      </div>
     )
   } else {
     return (
-      <>
+      <div ref={ref}>
         {loading && <SpinningModal />}
         <MobileDashboard
           onElectionChange={onElectionChange}
@@ -98,7 +102,7 @@ export const DashboardContainer = ({ showTutorial, setShowTutorial }) => {
           setShowTutorial={setShowTutorial}
           onTutorialEnd={onTutorialEnd}
         />
-      </>
+      </div>
     )
   }
-}
+})

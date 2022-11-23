@@ -57,13 +57,11 @@ export const RelatedPost = () => {
   const displayPosts = posts.slice(0, nextShowingIndex)
 
   const loadMore = useCallback(() => {
-    console.log('loadmore')
     setNextShowingIndex((nextShowingIndex) => nextShowingIndex + 12)
   }, [])
 
   const lastArticleRef = useCallback(
     (node) => {
-      console.log('something happend?', node)
       if (observer.current) observer.current.disconnect()
       observer.current = new IntersectionObserver(
         (entries) => {

@@ -50,14 +50,15 @@ const ElectionHint = styled(Hint)`
 
 const CompareHint = styled(Hint)`
   bottom: unset;
-  top: 18%;
-  height: 18%;
-  right: 18px;
+  top: 18.4%;
+  height: 18.4%;
+  right: 19px;
   flex-direction: column;
   &::before {
     top: unset;
-    bottom: calc(100% + 16px);
-    height: 40%;
+    bottom: calc(100% + 13px);
+    left: 66%;
+    height: 42%;
   }
 `
 

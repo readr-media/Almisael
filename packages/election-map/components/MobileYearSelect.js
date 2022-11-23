@@ -175,8 +175,6 @@ export const MobileYearSelect = ({
     setSelectedYear(year)
   }, [year])
 
-  console.log('compareYear', compareYear)
-
   return (
     <Wrapper>
       <GlobalStyle />

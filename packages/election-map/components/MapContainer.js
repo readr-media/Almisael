@@ -15,6 +15,10 @@ const Wrapper = styled.div`
   height: 100vh;
   position: fixed;
 
+  @media (min-width: 1025px) {
+    ${({ dashboardInView }) => !dashboardInView && `display: none;`}
+  }
+
   @media (max-width: 1024px) {
     position: absolute;
     ${({ compareMode }) =>
@@ -41,6 +45,7 @@ export const MapContainer = ({
   electionData,
   compareElectionData,
   electionType,
+  dashboardInView,
 }) => {
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
@@ -61,9 +66,12 @@ export const MapContainer = ({
             width: dimension.width,
             height: dimension.height / 2 - 20,
           }
-
     return (
-      <Wrapper ref={elementRef} compareMode={compareMode}>
+      <Wrapper
+        ref={elementRef}
+        compareMode={compareMode}
+        dashboardInView={dashboardInView}
+      >
         {dimension && (
           <>
             <Map
@@ -93,7 +101,7 @@ export const MapContainer = ({
     )
   } else {
     return (
-      <Wrapper ref={elementRef}>
+      <Wrapper ref={elementRef} dashboardInView={dashboardInView}>
         {dimension && (
           <Map
             dimension={dimension}

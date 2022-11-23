@@ -45,6 +45,7 @@ export const Dashboard = ({
   showTutorial,
   setShowTutorial,
   onTutorialEnd,
+  dashboardInView,
 }) => {
   return (
     <Wrapper>
@@ -71,6 +72,7 @@ export const Dashboard = ({
         setMapObject={setMapObject}
         electionType={election.electionType}
         mapData={mapGeoJsons}
+        dashboardInView={dashboardInView}
       />
       {showTutorial && (
         <Tutorial

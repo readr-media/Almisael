@@ -26,16 +26,23 @@ const Wrapper = styled.div`
 
 const InfoWrapper = styled.div`
   position: absolute;
-  top: calc((100vh - 614px) * 0.4);
-  left: 100px;
-  width: 320px;
+  left: 0;
+  right: 0;
+  bottom: 20.5%;
+  z-index: 1;
 
   @media (max-width: 1024px) {
+    width: 320px;
     margin: 0 auto;
     left: 0;
     right: 0;
     bottom: 28px;
     top: unset;
+  }
+  @media (min-width: 1025px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `
 
@@ -44,25 +51,37 @@ const IntroWrapper = styled(CollapsibleWrapper)`
 `
 
 const Intro = styled.div`
-  padding: 8px 15px 0;
-  background-color: white;
-  height: 291px;
-  h1 {
-    margin: unset;
-    font-size: 36px;
-    line-height: 52.13px;
-    font-weight: 700;
+  @media (max-width: 1024px) {
+    padding: 8px 15px 0;
+    background-color: white;
+    height: 291px;
+    h1 {
+      margin: unset;
+      font-size: 36px;
+      line-height: 52.13px;
+      font-weight: 700;
+    }
+    p {
+      margin: 23px 0 0;
+      line-height: 23.17px;
+    }
   }
-  p {
-    margin: 23px 0 0;
-    line-height: 23.17px;
+  @media (min-width: 1025px) {
+    width: 71vw;
+    h1 {
+      font-size: 64px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 20px;
+    }
   }
 `
 
 const ActionButton = styled.button`
   margin: 36px 0 12px;
-  width: 100%;
-  height: 40px;
+  width: 320px;
+  height: 45px;
   background-color: #ff4f4f;
   color: ${electionMapColor};
   border-radius: 8px;
@@ -72,10 +91,14 @@ const ActionButton = styled.button`
   &:hover {
     background-color: rgba(255, 79, 79, 0.6);
   }
+  @media (min-width: 1025px) {
+    height: 45px;
+    margin-top: 75px;
+  }
 `
 
 const TeamWrapper = styled(CollapsibleWrapper)`
-  width: 100%;
+  width: 320px;
   .collapseBtn {
     height: 25px;
   }
@@ -106,13 +129,13 @@ const Note = styled.div`
 `
 
 const StyledImage = styled(Image)`
-  position: relative;
-  left: 420px;
-  right: 8.3%;
-  width: calc(100vw - 420px - 8.3%);
-  top: 7%;
-  bottom: 5%;
-  height: calc(100vh - 12%);
+  position: absolute;
+  left: 0;
+  top: 10.5%;
+  bottom: 3%;
+  width: 100%;
+  height: 86.5%;
+
   object-fit: contain;
   @media (max-width: 1024px) {
     width: 100%;
@@ -138,7 +161,8 @@ export const LandingPage = () => {
   const [show, setShow] = useState(false)
 
   const { width } = useWindowDimension()
-  const imgSrc = width > 1024 ? taiwanMap : taiwanMapMobile
+  const isMobile = width <= 1024
+  const imgSrc = isMobile ? taiwanMapMobile : taiwanMap
 
   useEffect(() => {
     setShow(true)
@@ -155,15 +179,27 @@ export const LandingPage = () => {
       <GlobalStyle />
       <Wrapper>
         <InfoWrapper>
-          <IntroWrapper preventCollapse={true}>
+          {!isMobile ? (
             <Intro>
-              <h1>標題標題標題標題 標題標題標題標題</h1>
+              <h1>
+                標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題
+              </h1>
               <p>
                 2022 年縣市長、議員、公投開票結果看
                 READr！提供最詳盡的選舉票數地圖、歷年比較等功能。
               </p>
             </Intro>
-          </IntroWrapper>
+          ) : (
+            <IntroWrapper preventCollapse={true}>
+              <Intro>
+                <h1>標題標題標題標題 標題標題標題標題</h1>
+                <p>
+                  2022 年縣市長、議員、公投開票結果看
+                  READr！提供最詳盡的選舉票數地圖、歷年比較等功能。
+                </p>
+              </Intro>
+            </IntroWrapper>
+          )}
           <ActionButton onClick={onEnterClickedHandler}>
             看最新選情
           </ActionButton>

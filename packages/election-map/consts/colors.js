@@ -1,3 +1,5 @@
+import { organization } from './config'
+
 export const defaultColor = '#AFAFAF'
 
 export const partiesColor = [
@@ -153,4 +155,5 @@ export const getGradiantReferendumColor = (agree, percent) => {
   return rgbaToRgb(hexToRgba(color, getAlphaByPercent(percent)))
 }
 
-export const electionMapColor = '#fff1db'
+export const electionMapColor =
+  organization === 'readr-media' ? '#fff1db' : '#fff'
