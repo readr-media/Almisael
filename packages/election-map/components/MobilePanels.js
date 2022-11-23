@@ -21,7 +21,8 @@ const Wrapper = styled.div`
 
 const ActionButton = styled.button`
   height: 28px;
-  padding: 4px 8px;
+  padding: 3px 7px;
+  line-height: 20px;
   border: 1px solid #000;
   border-radius: 8px;
   z-index: 1;
