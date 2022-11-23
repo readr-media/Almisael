@@ -24,4 +24,7 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     outline: inherit;  
   }
+  p {
+    margin: 0;
+  }
 `

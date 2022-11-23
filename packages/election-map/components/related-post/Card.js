@@ -1,4 +1,5 @@
 import dayjs from 'dayjs'
+import React from 'react'
 import styled from 'styled-components'
 
 export const CardWrapper = styled.div`
@@ -95,6 +96,9 @@ export const TitleWrapper = styled.div`
   width: 100%;
   height: 70px;
   overflow: hidden;
+  > p {
+    line-height: 1.5;
+  }
 
   @media (min-width: 1200px) {
     height: 90px;
@@ -112,13 +116,13 @@ export const TitleWrapper = styled.div`
     }
   }
 `
-
-export const Card = ({ item, onClick }) => {
+export const Card = React.forwardRef(function Card({ item, onClick }, ref) {
   return (
     <Link
       href={`https://www.mirrormedia.mg/story/${item?.slug}`}
       target="_blank"
       rel="noreferrer"
+      ref={ref}
       key={item._id}
       onClick={() => onClick()}
     >
@@ -140,4 +144,4 @@ export const Card = ({ item, onClick }) => {
       </CardWrapper>
     </Link>
   )
-}
+})
