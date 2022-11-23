@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { MapContainer } from './MapContainer'
 import { MobilePanels } from './MobilePanels'
-import { Tutorial } from './Tutorial'
+import { MobileTutorial } from './MobileTutorial'
 
 const Wrapper = styled.div``
 
@@ -53,7 +53,7 @@ export const MobileDashboard = ({
         onElectionChange={onElectionChange}
       />
       {showTutorial && (
-        <Tutorial
+        <MobileTutorial
           show={showTutorial}
           mapData={mapGeoJsons}
           onClick={() => {

@@ -24,6 +24,8 @@ const ActionButton = styled.button`
   padding: 4px 8px;
   border: 1px solid #000;
   border-radius: 8px;
+  z-index: 1;
+
   ${({ type }) => {
     switch (type) {
       case 'normal':
@@ -52,6 +54,7 @@ const TopButtons = styled.div`
   right: 16px;
   display: flex;
   align-items: center;
+  z-index: 1;
   justify-content: space-between;
   ${ActionButton}:first-of-type {
     margin-right: 8px;
@@ -64,6 +67,7 @@ const BottomButtons = styled.div`
   display: flex;
   justify-content: space-between;
   pointer-events: none;
+  z-index: 1;
   * {
     pointer-events: auto;
   }

@@ -1275,6 +1275,7 @@ export const useElectionData = (showLoading, showTutorial) => {
 
   const onTutorialEnd = () => {
     onElectionChange('mayor')
+    setYear(election.years[election.years.length - 1])
   }
 
   useEffect(() => {
@@ -1487,8 +1488,9 @@ export const useElectionData = (showLoading, showTutorial) => {
   useEffect(() => {
     if (showTutorial) {
       onElectionChange('councilMember')
+      setYear(election.years[election.years.length - 2])
     }
-  }, [showTutorial, onElectionChange])
+  }, [showTutorial, onElectionChange, election.years])
 
   let outputEvcData
   if (election.electionType === 'councilMember') {
