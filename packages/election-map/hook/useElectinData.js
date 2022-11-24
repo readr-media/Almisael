@@ -1129,6 +1129,14 @@ export const useElectionData = (showLoading, showTutorial, width) => {
       newSubtype?.key,
       number?.key
     )
+    if (compareInfo.compareMode) {
+      onCompareInfoChange({
+        compareMode: compareInfo.compareMode,
+        compareYearKey: compareInfo.filter.year.key,
+        compareNumber: compareInfo.filter.number,
+        compareSubtype: newSubtype,
+      })
+    }
     newElectionData.seatData = seatData
     setSubtype(newSubtype)
     const device = width > 1024 ? '桌機' : '手機平板'
@@ -1140,7 +1148,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
   }
 
   const onCompareInfoChange = useCallback(
-    ({ compareMode, compareYearKey, compareNumber }) => {
+    ({ compareMode, compareYearKey, compareNumber, compareSubtype }) => {
       if (compareMode) {
         setCompareInfo(defaultCompareInfo)
       }
@@ -1150,7 +1158,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
           year: compareYearKey
             ? election.years.find((year) => year.key === compareYearKey)
             : year,
-          subtype,
+          subtype: compareSubtype || subtype,
           number: compareNumber || number,
         },
       })
