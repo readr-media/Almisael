@@ -29,7 +29,6 @@ const InfoWrapper = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 20.5%;
   z-index: 1;
 
   @media (max-width: 1024px) {
@@ -44,6 +43,10 @@ const InfoWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: 558px;
   }
 `
 
@@ -68,13 +71,15 @@ const Intro = styled.div`
     }
   }
   @media (min-width: 1025px) {
-    width: 71vw;
+    width: 70vw;
     h1 {
       font-size: 64px;
       font-weight: 700;
+      margin: unset;
     }
     p {
       font-size: 20px;
+      margin-top: 20px;
     }
   }
 `
@@ -192,9 +197,7 @@ export const LandingPage = () => {
         <InfoWrapper>
           {!isMobile ? (
             <Intro>
-              <h1>
-                標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題
-              </h1>
+              <h1>2022 縣市長、議員選舉暨公投開票即時資訊</h1>
               <p>
                 2022 年縣市長、議員、公投開票結果看
                 READr！提供最詳盡的選舉票數地圖、歷年比較等功能。
@@ -203,7 +206,7 @@ export const LandingPage = () => {
           ) : (
             <IntroWrapper preventCollapse={true}>
               <Intro>
-                <h1>標題標題標題標題 標題標題標題標題</h1>
+                <h1>2022 縣市長、議員選舉暨公投開票即時資訊</h1>
                 <p>
                   2022 年縣市長、議員、公投開票結果看
                   READr！提供最詳盡的選舉票數地圖、歷年比較等功能。
