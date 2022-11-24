@@ -88,13 +88,13 @@ export const MobileTutorial = ({ mapData, onClick, show }) => {
       <DarkLayer />
       <HintLayer>
         <InformationHint>
-          點選地圖，會出現對應行政區的相關投票資訊（由於中選會資料提供的限制，當屆選舉開票時無法顯示村里層級的票數，待開票完成才可查詢。）
+          查看縣市議員資料時，點擊「得票分布」會出現該選區候選人投票資訊，點擊「席次分佈」會出現該縣市席次表。
         </InformationHint>
-        <ElectionHint>
-          照片好嗎動畫有或是要開面寫，大不，定圖神是中國啥上有難受要很字出來，真是到底工作⋯這有想他即使心。
-        </ElectionHint>
+        <ElectionHint>點選「看其他選舉」按鈕，切換不同選舉類型。</ElectionHint>
         <CompareHint>
-          可選取年份看不同年份的選舉結果。也可選取多個年份（最多 2
+          點選左側「年份」按鈕，切換各年度選舉資料。
+          <br />
+          點選右側「比較」按鈕，可選取多個年份（最多 2
           個），點選「比較」鍵同時呈現 2 次選舉結果作為對照。
         </CompareHint>
       </HintLayer>

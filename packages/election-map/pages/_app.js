@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
       <GlobalStyles />
       <Component {...pageProps} />
       <Head>
-        <title></title>
+        <title>2022 縣市長、議員選舉暨公投開票即時資訊</title>
       </Head>
     </>
   )
