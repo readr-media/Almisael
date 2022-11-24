@@ -52,6 +52,12 @@ const RunningHint = styled.span`
     background: #da6262;
     border-radius: 50%;
   }
+  @media (max-width: 768px) {
+    display: block;
+    &:before {
+      margin-left: 0;
+    }
+  }
 `
 
 const FinalHint = styled.span`
@@ -64,6 +70,12 @@ const FinalHint = styled.span`
     width: 12px;
     height: 12px;
     background: #939393;
+  }
+  @media (max-width: 768px) {
+    display: block;
+    &:before {
+      margin-left: 0;
+    }
   }
 `
 
@@ -453,10 +465,10 @@ const CouncilMemberInfobox = ({
                   id={councilMemberdPrefix + candidate.candNo}
                   key={councilMemberdPrefix + candidate.candNo}
                 >
-                  <CouncilMemberCandidateName>
+                  <CouncilMemberCandidateName compareMode={compareMode}>
                     {candidate.name}
                   </CouncilMemberCandidateName>
-                  <CouncilMemberCandidateParty>
+                  <CouncilMemberCandidateParty compareMode={compareMode}>
                     {candidate.party} {candidate.tksRate}%
                   </CouncilMemberCandidateParty>
                   {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
@@ -497,10 +509,10 @@ const CouncilMemberInfobox = ({
                   elected={elected}
                   key={councilMemberdPrefix + candidate.candNo}
                 >
-                  <CouncilMemberCandidateName>
+                  <CouncilMemberCandidateName compareMode={compareMode}>
                     {candidate.name}
                   </CouncilMemberCandidateName>
-                  <CouncilMemberCandidateParty>
+                  <CouncilMemberCandidateParty compareMode={compareMode}>
                     {candidate.party} {candidate.tksRate}%
                   </CouncilMemberCandidateParty>
                   {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}

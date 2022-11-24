@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { currentYear } from './helper/election'
 import { Infobox } from './infobox/Infobox'
 
 const Wrapper = styled.div`
@@ -23,6 +24,7 @@ export const MobileInfoboxPanels = ({
   subtype,
   compareData,
   compareInfo,
+  year,
 }) => {
   const isRunning = data.isRunning
 

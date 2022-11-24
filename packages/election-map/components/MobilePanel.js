@@ -80,6 +80,7 @@ export const MobilePanel = ({
             subtypeInfo={subtypeInfo}
             compareInfo={compareInfo}
             compareData={compareInfoboxData}
+            year={yearInfo.year}
           ></MobileInfoboxPanels>
         )}
       </InformationWrapper>
