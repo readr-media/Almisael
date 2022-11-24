@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { ReferendumSelect } from './ReferendumSelect'
+import ReactGA from 'react-ga'
 
 const StyledReferendumSelect = styled(ReferendumSelect)`
   margin: 17px 0 0 12px;
@@ -100,6 +101,11 @@ export const ReferendumControl = ({ numberInfo, compareInfo }) => {
                     ? numbers.filter((n) => n.key !== number.key)[0]
                     : null,
                 ])
+                ReactGA.event({
+                  category: 'Projects',
+                  action: 'Click',
+                  label: `比較取消：公投 / 桌機`,
+                })
               }}
             >
               取消
@@ -120,6 +126,11 @@ export const ReferendumControl = ({ numberInfo, compareInfo }) => {
                 document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
               } else {
                 submitCompareCandidates()
+                ReactGA.event({
+                  category: 'Projects',
+                  action: 'Click',
+                  label: `比較確定：公投 / 桌機`,
+                })
               }
             }}
           >
@@ -137,6 +148,11 @@ export const ReferendumControl = ({ numberInfo, compareInfo }) => {
             <ActionButton
               onClick={() => {
                 setCompare(true)
+                ReactGA.event({
+                  category: 'Projects',
+                  action: 'Click',
+                  label: `比較：公投 / 桌機`,
+                })
               }}
               compare={compare}
             >

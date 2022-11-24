@@ -46,7 +46,7 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
     numberInfo,
     lastUpdate,
     compareInfo,
-  } = useElectionData(showLoading, showTutorial)
+  } = useElectionData(showLoading, showTutorial, width)
 
   if (!isMobile) {
     return (

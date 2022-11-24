@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from 'react'
 import styled from 'styled-components'
+import ReactGA from 'react-ga'
 
 const Wrapper = styled.div`
   display: flex;
@@ -236,6 +237,11 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
                 onClick={() => {
                   setCompare(false)
                   setCompareCandidates([years.find((y) => y === year), null])
+                  ReactGA.event({
+                    category: 'Projects',
+                    action: 'Click',
+                    label: `比較取消：年份 / 桌機`,
+                  })
                 }}
               >
                 取消
@@ -252,6 +258,11 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
                   document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
                 } else {
                   submitCompareCandidates()
+                  ReactGA.event({
+                    category: 'Projects',
+                    action: 'Click',
+                    label: `比較確定：年份 / 桌機`,
+                  })
                 }
               }}
             >
@@ -262,6 +273,11 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
           <ActionButton
             onClick={() => {
               setCompare(true)
+              ReactGA.event({
+                category: 'Projects',
+                action: 'Click',
+                label: `比較：年份 / 桌機`,
+              })
             }}
           >
             比較

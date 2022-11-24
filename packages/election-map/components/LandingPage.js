@@ -8,6 +8,7 @@ import taiwanMapMobile from '../public/images/taiwan_map_m.png'
 import Image from 'next/image'
 import { imageLoader } from '../loader'
 import { organization } from '../consts/config'
+import ReactGA from 'react-ga'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -178,6 +179,7 @@ export const LandingPage = () => {
     setShow(false)
     if (
       organization === 'readr-media' &&
+      document.location.hash &&
       document.querySelector(document.location.hash)
     ) {
       setTimeout(() => {
@@ -186,6 +188,11 @@ export const LandingPage = () => {
           .scrollIntoView({ block: 'center' })
       })
     }
+    ReactGA.event({
+      category: 'Projects',
+      action: 'Click',
+      label: 'landing page enter',
+    })
   }
 
   if (!show) return <></>

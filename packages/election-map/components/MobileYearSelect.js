@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
+import ReactGA from 'react-ga'
 
 const closeSvg = (
   <svg
@@ -244,6 +245,11 @@ export const MobileYearSelect = ({
             <ActionButton
               onClick={() => {
                 hideYearSelect()
+                ReactGA.event({
+                  category: 'Projects',
+                  action: 'Click',
+                  label: `比較取消：年份 / 手機平板`,
+                })
               }}
               cancel="true"
             >
@@ -254,6 +260,11 @@ export const MobileYearSelect = ({
               onClick={() => {
                 submitCompareCandidates()
                 hideYearSelect()
+                ReactGA.event({
+                  category: 'Projects',
+                  action: 'Click',
+                  label: `比較確定：年份 / 手機平板`,
+                })
               }}
             >
               確定

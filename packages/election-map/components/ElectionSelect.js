@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import styled from 'styled-components'
 import useClickOutside from '../hook/useClickOutside'
 import { electionNamePairs } from './helper/election'
+import ReactGA from 'react-ga'
 
 const SelectWrapper = styled.div`
   position: relative;
@@ -90,6 +91,12 @@ export const ElectionSelect = ({
             selected={electionNamePair.electionType === electionType}
             onClick={() => {
               if (electionNamePair.electionType !== electionType) {
+                ReactGA.event({
+                  category: 'Projects',
+                  action: 'Click',
+                  label: `選舉類別：${electionNamePair.electionName} / 桌機`,
+                })
+
                 onElectionChange(electionNamePair.electionType)
               }
               setShowOptions(false)

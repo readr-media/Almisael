@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { electionMapColor } from '../consts/colors'
+import ReactGA from 'react-ga'
+import useWindowDimensions from '../hook/useWindowDimensions'
 
 const MapButtonWrapper = styled.div`
   margin-top: 20px;
@@ -30,6 +32,7 @@ const MapLevelControlButton = styled.button`
 `
 
 export const MapNavigateButton = ({ mapObject }) => {
+  const { width } = useWindowDimensions()
   return (
     <MapButtonWrapper>
       <MapLevelControlButton
@@ -40,6 +43,11 @@ export const MapNavigateButton = ({ mapObject }) => {
           )
           let event = new MouseEvent('click', { bubbles: true })
           target.dispatchEvent(event)
+          ReactGA.event({
+            category: 'Projects',
+            action: 'Click',
+            label: `回上層：${width > 1024 ? '桌機' : '手機平板'}`,
+          })
         }}
       >
         回上層
@@ -50,6 +58,11 @@ export const MapNavigateButton = ({ mapObject }) => {
           const target = document.querySelector(`#first-id-background`)
           let event = new MouseEvent('click', { bubbles: true })
           target.dispatchEvent(event)
+          ReactGA.event({
+            category: 'Projects',
+            action: 'Click',
+            label: `回全國：${width > 1024 ? '桌機' : '手機平板'}`,
+          })
         }}
       >
         回全國

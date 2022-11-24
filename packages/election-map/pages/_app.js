@@ -1,7 +1,15 @@
 import Head from 'next/head'
 import { GlobalStyles } from '../styles/global-styles'
+import ReactGA from 'react-ga'
+import { environment } from '../consts/config'
+import { useEffect } from 'react'
+
+ReactGA.initialize(environment === 'dev' ? 'UA-83609754-2' : 'UA-83609754-1')
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
   return (
     <>
       <GlobalStyles />

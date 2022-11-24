@@ -17,6 +17,7 @@ import {
   countyMappingData,
 } from '../components/helper/election'
 import { deepCloneObj } from '../components/helper/helper'
+import ReactGA from 'react-ga'
 
 const DataLoader = widgets.VotesComparison.DataLoader
 
@@ -145,7 +146,7 @@ const defaultCompareInfo = {
   },
 }
 
-export const useElectionData = (showLoading, showTutorial) => {
+export const useElectionData = (showLoading, showTutorial, width) => {
   const [election, setElection] = useState(
     elections.find((election) => election.electionType === defaultElectionType)
   )
@@ -1059,6 +1060,12 @@ export const useElectionData = (showLoading, showTutorial) => {
           let event = new MouseEvent('click', { bubbles: true })
           target.dispatchEvent(event)
 
+          ReactGA.event({
+            category: 'Projects',
+            action: 'Click',
+            label: `票數比較篩選器：縣市長 / ${evcSelectedValue}`,
+          })
+
           break
         }
 
@@ -1078,6 +1085,15 @@ export const useElectionData = (showLoading, showTutorial) => {
               target.dispatchEvent(event)
             }
           }
+
+          const countyName = countyMappingData.find(
+            (countyData) => countyData.countyCode === mapObject.countyId
+          ).countyName
+          ReactGA.event({
+            category: 'Projects',
+            action: 'Click',
+            label: `票數比較篩選器：縣市議員 / ${subtype.name} / ${countyName} / ${evcSelectedValue}`,
+          })
 
           break
         }
@@ -1115,6 +1131,12 @@ export const useElectionData = (showLoading, showTutorial) => {
     )
     newElectionData.seatData = seatData
     setSubtype(newSubtype)
+    const device = width > 1024 ? '桌機' : '手機平板'
+    ReactGA.event({
+      category: 'Projects',
+      action: 'Click',
+      label: `縣市議員切換： ${newSubtype.name} / ${device}`,
+    })
   }
 
   const onCompareInfoChange = useCallback(
@@ -1270,6 +1292,16 @@ export const useElectionData = (showLoading, showTutorial) => {
 
     setElectionsData(newElectionsData)
     setMapObject(newMapObject)
+    if (newMapObject?.level === 1) {
+      const countyName = countyMappingData.find(
+        (countyData) => countyData.countyCode === newMapObject.countyId
+      ).countyName
+      ReactGA.event({
+        category: 'Projects',
+        action: 'Click',
+        label: `地圖點擊 / ${election.electionName} / ${countyName}`,
+      })
+    }
     showLoading(false)
   }
 

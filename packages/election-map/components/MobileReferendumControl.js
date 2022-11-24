@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { ReferendumSelect } from './ReferendumSelect'
+import ReactGA from 'react-ga'
 
 const closeSvg = (
   <svg
@@ -208,6 +209,11 @@ export const MobileReferendumControl = ({
             <ActionButton
               onClick={() => {
                 hideReferendumSelect()
+                ReactGA.event({
+                  category: 'Projects',
+                  action: 'Click',
+                  label: `比較取消：公投 / 手機平板`,
+                })
               }}
               cancel="true"
             >
@@ -217,6 +223,11 @@ export const MobileReferendumControl = ({
               onClick={() => {
                 submitCompareCandidates()
                 hideReferendumSelect()
+                ReactGA.event({
+                  category: 'Projects',
+                  action: 'Click',
+                  label: `比較確定：公投 / 手機平板`,
+                })
               }}
             >
               確定

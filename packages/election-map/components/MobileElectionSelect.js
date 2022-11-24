@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import styled from 'styled-components'
 import useClickOutside from '../hook/useClickOutside'
 import { electionNamePairs } from './helper/election'
+import ReactGA from 'react-ga'
 
 const closeSvg = (
   <svg
@@ -77,6 +78,12 @@ export const MobileElectionSelect = ({
             selected={electionNamePair.electionType === electionType}
             onClick={() => {
               if (electionNamePair.electionType !== electionType) {
+                ReactGA.event({
+                  category: 'Projects',
+                  action: 'Click',
+                  label: `選舉類別：${electionNamePair.electionName} / 手機平板`,
+                })
+
                 onElectionChange(electionNamePair.electionType)
               }
               hideElectionSelect()

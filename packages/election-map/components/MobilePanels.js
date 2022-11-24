@@ -6,6 +6,7 @@ import { MobileElectionSelect } from './MobileElectionSelect'
 import { MobilePanel } from './MobilePanel'
 import { electionMapColor } from '../consts/colors'
 import { ElectionRadio } from './ElectionRadio'
+import ReactGA from 'react-ga'
 
 const Wrapper = styled.div`
   position: relative;
@@ -163,8 +164,18 @@ export const MobilePanels = ({
                   setCompare(true)
                   if (!numberInfo?.number) {
                     setShowYearSelect(true)
+                    ReactGA.event({
+                      category: 'Projects',
+                      action: 'Click',
+                      label: `比較：年份 / 手機平板`,
+                    })
                   } else {
                     setShowReferendumSelect(true)
+                    ReactGA.event({
+                      category: 'Projects',
+                      action: 'Click',
+                      label: `比較：公投 / 手機平板`,
+                    })
                   }
                 }}
               >
@@ -194,7 +205,14 @@ export const MobilePanels = ({
         <BottomButtons>
           <ActionButton
             type="election"
-            onClick={() => setShowElectoinSelect(true)}
+            onClick={() => {
+              setShowElectoinSelect(true)
+              ReactGA.event({
+                category: 'Projects',
+                action: 'Click',
+                label: `席次分佈：手機平板`,
+              })
+            }}
           >
             看其他選舉
           </ActionButton>
@@ -202,7 +220,14 @@ export const MobilePanels = ({
             <ActionButton
               type={showInfobox ? 'active' : 'normal'}
               onClick={() => {
-                setShowInfobox(true)
+                if (!showInfobox) {
+                  setShowInfobox(true)
+                  ReactGA.event({
+                    category: 'Projects',
+                    action: 'Click',
+                    label: `得票分佈：手機平板`,
+                  })
+                }
               }}
             >
               得票分佈
@@ -211,7 +236,14 @@ export const MobilePanels = ({
               <ActionButton
                 type={showInfobox ? 'normal' : 'active'}
                 onClick={() => {
-                  setShowInfobox(false)
+                  if (showInfobox) {
+                    setShowInfobox(false)
+                    ReactGA.event({
+                      category: 'Projects',
+                      action: 'Click',
+                      label: `席次分佈：手機平板`,
+                    })
+                  }
                 }}
               >
                 席次分佈

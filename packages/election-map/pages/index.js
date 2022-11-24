@@ -7,6 +7,7 @@ import { RelatedPost } from '../components/related-post/RelatedPost'
 import { LiveblogContainer } from '../components/LiveblogContainer'
 import { electionMapColor } from '../consts/colors'
 import { organization } from '../consts/config'
+import ReactGA from 'react-ga'
 
 const upTriangle = (
   <svg
@@ -51,7 +52,8 @@ const StickyHeader = styled.div`
 export default function Home() {
   const [showTutorial, setShowTutorial] = useState(false)
   const [dashboardInView, setDashboardInView] = useState(true)
-  const observer = useRef()
+  const dashboardObserver = useRef()
+  const endDivObserver = useRef()
 
   useEffect(() => {
     if (!localStorage.finishTutorial) {
@@ -60,11 +62,39 @@ export default function Home() {
   }, [])
 
   const dashboardRef = useCallback((node) => {
-    if (observer.current) observer.current.disconnect()
-    observer.current = new IntersectionObserver((entries) => {
-      setDashboardInView(entries[0].isIntersecting)
+    if (dashboardObserver.current) dashboardObserver.current.disconnect()
+    dashboardObserver.current = new IntersectionObserver((entries) => {
+      const isIntersecting = entries[0].isIntersecting
+      setDashboardInView(isIntersecting)
+      if (!isIntersecting && organization === 'readr-media') {
+        ReactGA.event({
+          category: 'Projects',
+          action: 'Scroll',
+          label: `Scroll To Liveblog`,
+        })
+      }
     })
-    if (node) observer.current.observe(node)
+    if (node) dashboardObserver.current.observe(node)
+  }, [])
+
+  const EndRef = useCallback((node) => {
+    if (endDivObserver.current) endDivObserver.current.disconnect()
+    endDivObserver.current = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          ReactGA.event({
+            category: 'Projects',
+            action: 'Scroll',
+            label: `Scroll To Bottom`,
+          })
+        }
+      },
+      {
+        rootMargin: '20px',
+        threshold: 0,
+      }
+    )
+    if (node) endDivObserver.current.observe(node)
   }, [])
 
   return (
@@ -92,6 +122,8 @@ export default function Home() {
           {organization === 'mirror-media' && <RelatedPost />}
         </NewsWrapper>
       )}
+      {!dashboardInView && <div ref={EndRef} />}
+      {/* <div ref={EndRef} /> */}
     </>
   )
 }
