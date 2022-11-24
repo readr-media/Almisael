@@ -460,7 +460,15 @@ export const NavBar = ({ dashboardInView }) => {
 
   return (
     <Nav dashboardInView={dashboardInView}>
-      <LinkButton href="https://www.readr.tw/" target="_blank" rel="noreferrer">
+      <LinkButton
+        href={
+          organization === 'readr-media'
+            ? 'https://www.readr.tw/'
+            : 'https://www.mirrormedia.mg/'
+        }
+        target="_blank"
+        rel="noreferrer"
+      >
         {Logo}
       </LinkButton>
       <ShareWrapper ref={shareIconRef} isReadr={isReadr}>
