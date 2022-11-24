@@ -71,7 +71,7 @@ export const partiesColor = [
   {
     index: 999,
     name: '無黨籍',
-    color: '#333333',
+    color: '#5C5C5C',
   },
   {
     index: 1000,
