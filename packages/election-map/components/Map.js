@@ -23,6 +23,7 @@ export const Map = ({
   setTooltip,
   electionData,
   electionType,
+  mapColor,
 }) => {
   // eslint-disable-next-line no-unused-vars
   const { currentFeature, countyId, townId, villageId, activeId } = mapObject
@@ -207,7 +208,7 @@ export const Map = ({
 
   // eslint-disable-next-line no-unused-vars
   const getCountyColor = (countyCode) => {
-    if (electionType === 'councilMember' || !electionData[0]) {
+    if (!mapColor || !electionData[0]) {
       return defaultColor
     }
 
@@ -252,7 +253,7 @@ export const Map = ({
   const getTownColor = (townCode) => {
     const countyCode = townCode.slice(0, -3)
 
-    if (electionType === 'councilMember' || !electionData[1]) {
+    if (!mapColor || !electionData[1]) {
       return defaultColor
     }
 
@@ -315,7 +316,7 @@ export const Map = ({
   // eslint-disable-next-line no-unused-vars
   const getVillageColor = (villCode) => {
     const townCode = villCode.slice(0, -3)
-    if (electionType === 'councilMember' || !electionData[2]) {
+    if (!mapColor || !electionData[2]) {
       return defaultColor
     }
 

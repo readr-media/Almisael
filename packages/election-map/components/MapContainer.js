@@ -46,6 +46,7 @@ export const MapContainer = ({
   compareElectionData,
   electionType,
   dashboardInView,
+  mapColor,
 }) => {
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
@@ -55,7 +56,7 @@ export const MapContainer = ({
     return <div></div>
   }
 
-  if (compareMode) {
+  if (compareMode && mapColor) {
     const splitDimension =
       width > 1024
         ? {
@@ -83,6 +84,7 @@ export const MapContainer = ({
               setTooltip={setTooltip}
               electionData={electionData}
               electionType={electionType}
+              mapColor={mapColor}
             />
             <Map
               dimension={splitDimension}
@@ -93,6 +95,7 @@ export const MapContainer = ({
               setTooltip={setTooltip}
               electionData={compareElectionData}
               electionType={electionType}
+              mapColor={mapColor}
             />
           </>
         )}
@@ -112,6 +115,7 @@ export const MapContainer = ({
             setTooltip={setTooltip}
             electionData={electionData}
             electionType={electionType}
+            mapColor={mapColor}
           />
         )}
         <MapTooltip tooltip={tooltip} />

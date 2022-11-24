@@ -37,6 +37,7 @@ export const MobileDashboard = ({
         setMapObject={setMapObject}
         electionType={election.electionType}
         mapData={mapGeoJsons}
+        mapColor={election.meta?.map?.mapColor}
       />
       <MobilePanels
         seatData={seatData}

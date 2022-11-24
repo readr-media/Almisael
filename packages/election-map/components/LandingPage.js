@@ -7,6 +7,7 @@ import taiwanMap from '../public/images/taiwan_map.png'
 import taiwanMapMobile from '../public/images/taiwan_map_m.png'
 import Image from 'next/image'
 import { imageLoader } from '../loader'
+import { organization } from '../consts/config'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -170,6 +171,16 @@ export const LandingPage = () => {
 
   const onEnterClickedHandler = () => {
     setShow(false)
+    if (
+      organization === 'readr-media' &&
+      document.querySelector(document.location.hash)
+    ) {
+      setTimeout(() => {
+        document
+          .querySelector(document.location.hash)
+          .scrollIntoView({ block: 'center' })
+      })
+    }
   }
 
   if (!show) return <></>

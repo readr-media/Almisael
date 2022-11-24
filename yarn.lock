@@ -346,18 +346,18 @@
     serialize-javascript "^6.0.0"
     uuid "^8.3.2"
 
-"@readr-media/react-election-widgets@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@readr-media/react-election-widgets/-/react-election-widgets-1.0.4.tgz#f1a269de94d2a46f247947a7b559cb158e20bb38"
-  integrity sha512-NZRN3cjOSQE9z/m/U7Fq6g+C0xW1PTc7XTuBEbUp/zUczqNVlvBpGM1hkqcTeWmTh2Pqed24SGx00zM+b4dNdQ==
+"@readr-media/react-election-widgets@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@readr-media/react-election-widgets/-/react-election-widgets-1.0.5.tgz#74bc85fa7286d0904e8a5f0986154414efcdb3a7"
+  integrity sha512-BHFs1ajYhyxdqjTCwucvjxpkONMhVRvpkSuRiYVzkzlTBnN0yej49zkD3Rr/jn6jTM3iwwWI5YeoRHUQAJOB8w==
   dependencies:
     "@twreporter/errors" "^1.1.1"
     axios "^0.27.2"
 
-"@readr-media/react-live-blog@^1.0.0-beta.4":
-  version "1.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@readr-media/react-live-blog/-/react-live-blog-1.0.0-beta.4.tgz#8eaa7756fdbc26140eb8e1a484cf013027334d16"
-  integrity sha512-lOnKroYLHK/oYZBHDlGyL19PmGxfmRbuOOh+NaKQYRQ8ToqLo5e8s9JqyLlt3ABNTaRV5HQsKufhAkCCYF8SIg==
+"@readr-media/react-live-blog@^1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@readr-media/react-live-blog/-/react-live-blog-1.0.0-beta.6.tgz#e5ce1b8c61425de825cd71e9dc2a5fe29bab726f"
+  integrity sha512-BOayXpT7JUNxtIgYfAg92m2w9kpi9h3nA0y66DpLavPhEAn4TH7N9iPbPq1eoPr9Na4stQqGaVx9bYxE3XsefQ==
   dependencies:
     axios "^0.27.2"
     draft-js "^0.11.7"

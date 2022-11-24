@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { GlobalStyles } from '../styles/global-styles'
 
 function MyApp({ Component, pageProps }) {
@@ -5,6 +6,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <GlobalStyles />
       <Component {...pageProps} />
+      <Head>
+        <title></title>
+      </Head>
     </>
   )
 }

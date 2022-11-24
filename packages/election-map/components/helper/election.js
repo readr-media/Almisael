@@ -29,6 +29,7 @@ export const elections = [
     meta: {
       evc: { district: 'all' },
       map: {
+        mapColor: true,
         folderNames: {
           0: '',
           1: 'county',
@@ -105,6 +106,7 @@ export const elections = [
     meta: {
       evc: {},
       map: {
+        mapColor: false,
         folderNames: {
           0: null, // councilMember has no country level file
           1: 'county',
@@ -247,6 +249,7 @@ export const elections = [
     meta: {
       evc: { district: 'all' },
       map: {
+        mapColor: true,
         folderNames: {
           0: '',
           1: 'county',

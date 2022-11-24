@@ -73,6 +73,7 @@ export const Dashboard = ({
         electionType={election.electionType}
         mapData={mapGeoJsons}
         dashboardInView={dashboardInView}
+        mapColor={election.meta?.map?.mapColor}
       />
       {showTutorial && (
         <Tutorial

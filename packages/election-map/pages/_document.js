@@ -25,7 +25,6 @@ function CustomDocument() {
           name="description"
           content="2022 年縣市長、議員、公投開票結果看 READr！提供最詳盡的選舉票數地圖、歷年比較等功能。"
         />
-        <title></title>
       </Head>
       <body>
         <Main />
