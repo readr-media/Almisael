@@ -86,6 +86,13 @@ const HintWrapper = styled.p`
   }
 `
 
+const MobileCompareName = styled.p`
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 7px;
+`
+
 const electedSvg = (
   <svg
     width="20"
@@ -169,19 +176,22 @@ const MayorInfobox = ({
   isRunning,
   compareMode,
   isCurrentYear,
+  compareName,
 }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
+        {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
         <InfoboxText>{data}</InfoboxText>
       </InfoboxScrollWrapper>
     )
   }
 
   const { profRate, candidates } = data
-
+  console.log('isCurrentYear', isCurrentYear, isRunning)
   return (
     <InfoboxScrollWrapper>
+      {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
       <MayorTitle>
         {level === 1 && '總'}投票率 {profRate}%
         {isCurrentYear ? (
@@ -364,10 +374,12 @@ const CouncilMemberInfobox = ({
   compareMode,
   isRunning,
   isCurrentYear,
+  compareName,
 }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
+        {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
         <InfoboxText>{data}</InfoboxText>
       </InfoboxScrollWrapper>
     )
@@ -377,6 +389,7 @@ const CouncilMemberInfobox = ({
     const { districts } = data
     return (
       <InfoboxScrollWrapper>
+        {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
         {isCurrentYear ? (
           isRunning ? (
             <HintWrapper>
@@ -524,7 +537,12 @@ const CouncilMemberInfobox = ({
     }
   })
 
-  return <InfoboxScrollWrapper>{councilMembers}</InfoboxScrollWrapper>
+  return (
+    <InfoboxScrollWrapper>
+      {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
+      {councilMembers}
+    </InfoboxScrollWrapper>
+  )
 }
 
 const ReferendumPassWrapper = styled.span`
@@ -555,10 +573,11 @@ const ReferendumCandidate = styled.div`
   line-height: 23px;
 `
 
-const ReferendumInfobox = ({ data, isRunning, isCurrentYear }) => {
+const ReferendumInfobox = ({ data, isRunning, isCurrentYear, compareName }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
+        {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
         <InfoboxText>{data}</InfoboxText>
       </InfoboxScrollWrapper>
     )
@@ -569,6 +588,7 @@ const ReferendumInfobox = ({ data, isRunning, isCurrentYear }) => {
   const pass = adptVictor === 'Y'
   return (
     <InfoboxScrollWrapper>
+      {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
       {isCurrentYear ? (
         isRunning ? (
           <HintWrapper>
@@ -771,9 +791,11 @@ export const Infobox = ({
   isRunning,
   compareMode,
   isCurrentYear,
+  compareName,
 }) => {
   const { electionType, level, electionData } = data
   let infobox
+
   switch (electionType) {
     case 'president': {
       const data = presidentInfoboxData(electionData, level)
@@ -796,6 +818,7 @@ export const Infobox = ({
           isRunning={isRunning}
           compareMode={compareMode}
           isCurrentYear={isCurrentYear}
+          compareName={compareName}
         />
       )
       break
@@ -813,6 +836,7 @@ export const Infobox = ({
           isRunning={isRunning}
           compareMode={compareMode}
           isCurrentYear={isCurrentYear}
+          compareName={compareName}
         />
       )
       break
@@ -824,6 +848,7 @@ export const Infobox = ({
           data={data}
           isRunning={isRunning}
           isCurrentYear={isCurrentYear}
+          compareName={compareName}
         />
       )
       break

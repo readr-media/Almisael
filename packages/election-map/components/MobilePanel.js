@@ -43,6 +43,7 @@ export const MobilePanel = ({
   compareInfo,
   subtypeInfo,
   mapObject,
+  numberInfo,
 }) => {
   const { countyName, townName, constituencyName, villageName } = mapObject
   const locations = [
@@ -81,6 +82,7 @@ export const MobilePanel = ({
             compareInfo={compareInfo}
             compareData={compareInfoboxData}
             year={yearInfo.year}
+            numberInfo={numberInfo}
           ></MobileInfoboxPanels>
         )}
       </InformationWrapper>

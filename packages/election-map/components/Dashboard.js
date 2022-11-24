@@ -65,7 +65,7 @@ export const Dashboard = ({
       />
       <MapContainer
         showLoading={showLoading}
-        compareMode={compareInfo.compareMode}
+        compareInfo={compareInfo}
         mapObject={mapObject}
         electionData={mapData}
         compareElectionData={compareMapData}
@@ -74,6 +74,8 @@ export const Dashboard = ({
         mapData={mapGeoJsons}
         dashboardInView={dashboardInView}
         mapColor={election.meta?.map?.mapColor}
+        yearInfo={yearInfo}
+        numberInfo={numberInfo}
       />
       {showTutorial && (
         <Tutorial

@@ -30,7 +30,7 @@ export const MobileDashboard = ({
     <Wrapper>
       <MapContainer
         showLoading={showLoading}
-        compareMode={compareInfo.compareMode}
+        compareInfo={compareInfo}
         mapObject={mapObject}
         electionData={mapData}
         compareElectionData={compareMapData}
@@ -38,6 +38,8 @@ export const MobileDashboard = ({
         electionType={election.electionType}
         mapData={mapGeoJsons}
         mapColor={election.meta?.map?.mapColor}
+        yearInfo={yearInfo}
+        numberInfo={numberInfo}
       />
       <MobilePanels
         seatData={seatData}
