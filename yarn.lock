@@ -354,10 +354,10 @@
     "@twreporter/errors" "^1.1.1"
     axios "^0.27.2"
 
-"@readr-media/react-live-blog@^1.0.0-beta.6":
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@readr-media/react-live-blog/-/react-live-blog-1.0.0-beta.6.tgz#e5ce1b8c61425de825cd71e9dc2a5fe29bab726f"
-  integrity sha512-BOayXpT7JUNxtIgYfAg92m2w9kpi9h3nA0y66DpLavPhEAn4TH7N9iPbPq1eoPr9Na4stQqGaVx9bYxE3XsefQ==
+"@readr-media/react-live-blog@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@readr-media/react-live-blog/-/react-live-blog-1.1.0.tgz#725f6f205797c994aed1df5573070a5e050f2067"
+  integrity sha512-UJK1IaQi1ALq+M02cQO/oouAzYrJtq5SmNYQjPTs5Toc1T1y2ZMVNF0Q93BvLkyMImKvze8gNufj4ORwWiNp1w==
   dependencies:
     axios "^0.27.2"
     draft-js "^0.11.7"
