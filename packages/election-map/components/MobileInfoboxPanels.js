@@ -42,6 +42,7 @@ export const MobileInfoboxPanels = ({
           subtype={filter.subtype}
           isRunning={compareData.isRunning}
           compareMode={compareMode}
+          isCurrentYear={year.key === currentYear}
         />
       )}
     </Wrapper>

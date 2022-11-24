@@ -24,7 +24,7 @@ const PresidentCandidate = styled.p`
   margin: 0;
   font-weight: 700;
   line-height: 26px;
-  ${({ elected }) => elected && 'color: green;'}
+  ${({ elected }) => elected && 'color: #DB4C65;'}
 `
 
 const InfoboxText = styled.p`
@@ -51,6 +51,26 @@ const RunningHint = styled.span`
     height: 12px;
     background: #da6262;
     border-radius: 50%;
+  }
+`
+
+const FinalHint = styled.span`
+  color: #939393;
+  font-weight: 700;
+  &:before {
+    content: '';
+    display: inline-block;
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
+    background: #939393;
+  }
+`
+
+const HintWrapper = styled.p`
+  margin: 0 0 20px 0;
+  > span:before {
+    margin-left: 1px;
   }
 `
 
@@ -118,7 +138,7 @@ const MayorCandidate = styled.div`
   margin-top: 20px;
   align-items: center;
   line-height: 23px;
-  ${({ elected }) => elected && 'color: green;'}
+  ${({ elected }) => elected && 'color: #DB4C65;'}
 `
 
 const MayorCandidateName = styled.div`
@@ -131,7 +151,13 @@ const MayorCandidateParty = styled.div`
   ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 
-const MayorInfobox = ({ level, data, isRunning, compareMode }) => {
+const MayorInfobox = ({
+  level,
+  data,
+  isRunning,
+  compareMode,
+  isCurrentYear,
+}) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
@@ -146,7 +172,15 @@ const MayorInfobox = ({ level, data, isRunning, compareMode }) => {
     <InfoboxScrollWrapper>
       <MayorTitle>
         {level === 1 && '總'}投票率 {profRate}%
-        {isRunning && <RunningHint>開票中</RunningHint>}
+        {isCurrentYear ? (
+          isRunning ? (
+            <RunningHint>開票中</RunningHint>
+          ) : (
+            <FinalHint>開票結束</FinalHint>
+          )
+        ) : (
+          <></>
+        )}
       </MayorTitle>
       {candidates
         .sort((cand1, cand2) => {
@@ -199,7 +233,7 @@ const LegislatorCandidate = styled.div`
   align-items: center;
   font-weight: 700;
   line-height: 26px;
-  ${({ elected }) => elected && 'color: green;'}
+  ${({ elected }) => elected && 'color: #DB4C65;'}
 `
 
 const LegislatorInfobox = ({ level, data }) => {
@@ -299,7 +333,7 @@ const CouncilMemberCandidate = styled.div`
   margin-top: 20px;
   align-items: center;
   line-height: 23px;
-  ${({ elected }) => elected && 'color: green;'}
+  ${({ elected }) => elected && 'color: #DB4C65;'}
 `
 
 const CouncilMemberCandidateName = styled.div`
@@ -312,7 +346,13 @@ const CouncilMemberCandidateParty = styled.div`
   ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 
-const CouncilMemberInfobox = ({ level, data, compareMode }) => {
+const CouncilMemberInfobox = ({
+  level,
+  data,
+  compareMode,
+  isRunning,
+  isCurrentYear,
+}) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
@@ -325,6 +365,19 @@ const CouncilMemberInfobox = ({ level, data, compareMode }) => {
     const { districts } = data
     return (
       <InfoboxScrollWrapper>
+        {isCurrentYear ? (
+          isRunning ? (
+            <HintWrapper>
+              <RunningHint>開票中</RunningHint>
+            </HintWrapper>
+          ) : (
+            <HintWrapper>
+              <FinalHint>開票結束</FinalHint>
+            </HintWrapper>
+          )
+        ) : (
+          <></>
+        )}
         {districts.map(({ county, area, range, candidates, profRate }) => {
           const councilMemberdPrefix = county + area
           const constituency = range.split(' ')[1]
@@ -373,7 +426,18 @@ const CouncilMemberInfobox = ({ level, data, compareMode }) => {
     if (type === 'normal') {
       return (
         <CouncilMemberTypeWrapper key={councilMemberdPrefix}>
-          <CouncilMemberTitle>投票率 {profRate}%</CouncilMemberTitle>
+          <CouncilMemberTitle>
+            投票率 {profRate}%
+            {isCurrentYear ? (
+              isRunning ? (
+                <RunningHint>開票中</RunningHint>
+              ) : (
+                <FinalHint>開票結束</FinalHint>
+              )
+            ) : (
+              <></>
+            )}
+          </CouncilMemberTitle>
           {candidates
             .sort((cand1, cand2) => {
               if (cand1.tksRate === cand2.tksRate) {
@@ -407,7 +471,18 @@ const CouncilMemberInfobox = ({ level, data, compareMode }) => {
           <CouncilMemberConstituency>
             {type === 'plainIndigenous' ? '平地原住民' : '山地原住民'}
           </CouncilMemberConstituency>
-          <CouncilMemberTitle>投票率 {profRate}%</CouncilMemberTitle>
+          <CouncilMemberTitle>
+            投票率 {profRate}%
+            {isCurrentYear ? (
+              isRunning ? (
+                <RunningHint>開票中</RunningHint>
+              ) : (
+                <FinalHint>開票結束</FinalHint>
+              )
+            ) : (
+              <></>
+            )}
+          </CouncilMemberTitle>
           {candidates
             .sort((cand1, cand2) => {
               if (cand1.tksRate === cand2.tksRate) {
@@ -459,11 +534,16 @@ const ReferendumTitle = styled.div`
   }
 `
 
+const NoResult = styled.span`
+  font-weight: 700;
+  color: #da6262;
+`
+
 const ReferendumCandidate = styled.div`
   line-height: 23px;
 `
 
-const ReferendumInfobox = ({ data, isRunning }) => {
+const ReferendumInfobox = ({ data, isRunning, isCurrentYear }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
@@ -477,10 +557,24 @@ const ReferendumInfobox = ({ data, isRunning }) => {
   const pass = adptVictor === 'Y'
   return (
     <InfoboxScrollWrapper>
-      {isRunning && '開票中'}
+      {isCurrentYear ? (
+        isRunning ? (
+          <HintWrapper>
+            <RunningHint>開票中</RunningHint>
+          </HintWrapper>
+        ) : (
+          <HintWrapper>
+            <FinalHint>開票結束</FinalHint>
+          </HintWrapper>
+        )
+      ) : (
+        <></>
+      )}
       <ReferendumTitle>
         此案是否通過
-        {pass ? (
+        {noResult ? (
+          <NoResult>結果尚未公布</NoResult>
+        ) : pass ? (
           <ReferendumPassWrapper>是</ReferendumPassWrapper>
         ) : (
           <ReferendumFailWrapper>否</ReferendumFailWrapper>
@@ -659,14 +753,25 @@ const councilMemberInfoboxData = (data, level, subtype) => {
   return data
 }
 
-export const Infobox = ({ data, subtype, isRunning, compareMode }) => {
+export const Infobox = ({
+  data,
+  subtype,
+  isRunning,
+  compareMode,
+  isCurrentYear,
+}) => {
   const { electionType, level, electionData } = data
   let infobox
   switch (electionType) {
     case 'president': {
       const data = presidentInfoboxData(electionData, level)
       infobox = (
-        <PresidentInfobox level={level} data={data} isRunning={isRunning} />
+        <PresidentInfobox
+          level={level}
+          data={data}
+          isRunning={isRunning}
+          isCurrentYear={isCurrentYear}
+        />
       )
       break
     }
@@ -678,6 +783,7 @@ export const Infobox = ({ data, subtype, isRunning, compareMode }) => {
           data={data}
           isRunning={isRunning}
           compareMode={compareMode}
+          isCurrentYear={isCurrentYear}
         />
       )
       break
@@ -694,13 +800,20 @@ export const Infobox = ({ data, subtype, isRunning, compareMode }) => {
           data={data}
           isRunning={isRunning}
           compareMode={compareMode}
+          isCurrentYear={isCurrentYear}
         />
       )
       break
     }
     case 'referendum':
       const data = referendumInfoboxData(electionData, level)
-      infobox = <ReferendumInfobox data={data} isRunning={isRunning} />
+      infobox = (
+        <ReferendumInfobox
+          data={data}
+          isRunning={isRunning}
+          isCurrentYear={isCurrentYear}
+        />
+      )
       break
     default:
       break

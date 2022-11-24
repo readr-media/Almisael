@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
-import { electionNamePairs } from './helper/election'
+import { currentYear, electionNamePairs } from './helper/election'
 import { Infobox } from './infobox/Infobox'
 
 const Wrppaer = styled.div`
@@ -43,7 +43,12 @@ export const InfoboxPanel = ({
     <Wrppaer className={className}>
       {compareMode && !number && <InfoboxYear>{year.key}</InfoboxYear>}
       <InfoboxWrapper title={title}>
-        <Infobox data={data} subtype={subtype} isRunning={isRunning} />
+        <Infobox
+          data={data}
+          subtype={subtype}
+          isRunning={isRunning}
+          isCurrentYear={year.key === currentYear}
+        />
       </InfoboxWrapper>
     </Wrppaer>
   )
