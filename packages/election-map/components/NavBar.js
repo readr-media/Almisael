@@ -321,7 +321,7 @@ const Nav = styled.nav`
   position: fixed;
   z-index: 200;
   display: flex;
-  padding: 8px 8px 0 8px;
+  padding: 8px 20px 0;
   top: 0;
   width: 100vw;
   height: 60px;
