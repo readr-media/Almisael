@@ -91,6 +91,16 @@ const MoreHint = styled.div`
   text-align: center;
 `
 
+const LastUpdateTime = styled.div`
+  position: relative;
+  right: 8px;
+  bottom: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: right;
+  pointer-events: none;
+`
+
 export const MobilePanels = ({
   seatData,
   election,
@@ -103,6 +113,7 @@ export const MobilePanels = ({
   numberInfo,
   showTutorial,
   onElectionChange,
+  lastUpdate,
 }) => {
   const [showElectionSelect, setShowElectoinSelect] = useState(false)
   const [showYearSelect, setShowYearSelect] = useState(false)
@@ -252,6 +263,11 @@ export const MobilePanels = ({
           </PanelButtons>
         </BottomButtons>
       )}
+      <LastUpdateTime>
+        最後更新時間：{lastUpdate}
+        <br />
+        資料來源：中央選舉委員會
+      </LastUpdateTime>
       {showElectionSelect && (
         <MobileElectionSelect
           electionType={election.electionType}
