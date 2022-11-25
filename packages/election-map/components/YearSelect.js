@@ -222,7 +222,7 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
           value={selectedIndex}
           onChange={(e) => {
             const index = e.target.value
-            const year = years[index].key
+            const year = years[index]
             onYearChange(year)
           }}
           compare={compare}

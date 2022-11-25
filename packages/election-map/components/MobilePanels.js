@@ -131,6 +131,12 @@ export const MobilePanels = ({
     }
   }, [seatData])
 
+  useEffect(() => {
+    if (compareInfo.compareMode) {
+      setShowInfobox(true)
+    }
+  }, [compareInfo.compareMode])
+
   return (
     <Wrapper>
       {!showTutorial && !compareInfo.compareMode && (

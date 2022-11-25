@@ -397,18 +397,6 @@ export const getElectionData = (
       break
   }
 
-  // console.log(
-  //   'electionData',
-  //   electionData,
-  //   'electionsData',
-  //   electionsData,
-  //   'yearKey',
-  //   yearKey,
-  //   'subtypeKey',
-  //   subtypeKey,
-  //   'numberKey',
-  //   numberKey
-  // )
   return electionData
 }
 

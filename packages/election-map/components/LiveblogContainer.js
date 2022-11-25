@@ -5,6 +5,7 @@ import ReactGA from 'react-ga'
 
 import { electionMapColor } from '../consts/colors'
 import lb from '@readr-media/react-live-blog'
+import { environment } from '../consts/config'
 
 const LiveBlog = lb.ReactComponent.LiveBlog
 const LiveBlogWrapper = styled.div`
@@ -17,7 +18,6 @@ export const LiveblogContainer = () => {
 
   const handleLiveblogEvent = (event) => {
     const { eventName, eventTarget, eventValue, metadata } = event
-    console.log(event)
     if (eventTarget === '繼續閱讀按鈕') {
       ReactGA.event({
         category: 'Projects',
@@ -38,12 +38,13 @@ export const LiveblogContainer = () => {
       })
     }
   }
-
+  const liveblogUrl =
+    environment === 'dev'
+      ? 'https://editools-gcs.readr.tw/files/liveblogs/election2022-test.json'
+      : 'https://editools-gcs.readr.tw/files/liveblogs/election2022.json'
   useEffect(() => {
     const fetchLiveblog = async () => {
-      const { data } = await axios.get(
-        'https://editools-gcs.readr.tw/files/liveblogs/election2022.json'
-      )
+      const { data } = await axios.get(liveblogUrl)
       setInitialLiveblog(data)
     }
     fetchLiveblog()
@@ -54,7 +55,7 @@ export const LiveblogContainer = () => {
       {initialLiveblog && (
         <LiveBlog
           initialLiveblog={initialLiveblog}
-          fetchLiveblogUrl="https://editools-gcs.readr.tw/files/liveblogs/election2022.json"
+          fetchLiveblogUrl={liveblogUrl}
           fetchImageBaseUrl="https://editools-gcs.readr.tw"
           toLoadPeriodically={true}
           onChange={handleLiveblogEvent}

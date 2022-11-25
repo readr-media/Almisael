@@ -23,8 +23,12 @@ const DataLoader = widgets.VotesComparison.DataLoader
 
 import { mockData as legislatorCounty } from '../mock-datas/maps/legislators/2020_legislator_county_63000'
 import { mockData as legislatorConstituency } from '../mock-datas/maps/legislators/2020_legislator_constituency_6300001'
+import { environment } from '../consts/config'
 
-const gcsBaseUrl = 'https://whoareyou-gcs.readr.tw/elections-dev'
+const gcsBaseUrl =
+  environment === 'dev'
+    ? 'https://whoareyou-gcs.readr.tw/elections-dev'
+    : 'https://whoareyou-gcs.readr.tw/elections'
 
 const fetchSeatData = async ({
   electionType,

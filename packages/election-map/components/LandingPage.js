@@ -53,19 +53,19 @@ const InfoWrapper = styled.div`
 
 const IntroWrapper = styled(CollapsibleWrapper)`
   width: 100%;
+  border-radius: 0 0 16px 16px;
 `
 
 const Intro = styled.div`
   text-align: center;
 
   @media (max-width: 1024px) {
-    padding: 8px 15px 0;
+    padding: 8px 15px 16px;
     background-color: white;
-    height: 291px;
     h1 {
       margin: unset;
-      font-size: 36px;
-      line-height: 52.13px;
+      font-size: 24px;
+      line-height: 34.75px;
       font-weight: 700;
     }
     p {
@@ -111,6 +111,7 @@ const TeamWrapper = styled(CollapsibleWrapper)`
   .collapseBtn {
     height: 25px;
   }
+  border-radius: 0 0 16px 16px;
 `
 
 const Team = styled.div`
@@ -212,17 +213,27 @@ export const LandingPage = () => {
                 公投開票即時資訊
               </h1>
               <p>
-                2022 年縣市長、議員、公投開票結果看
-                READr！提供最詳盡的選舉票數地圖、歷年比較等功能。
+                {organization === 'readr-media'
+                  ? `2022 年縣市長、議員、公投開票結果看
+                READr！提供最詳盡的選舉票數地圖、歷年比較等功能。`
+                  : `鏡週刊即時關注 2022 年縣市長、議員、公投開票結果！並且提供最詳盡的選舉票數地圖、歷年比較功能。`}
               </p>
             </Intro>
           ) : (
             <IntroWrapper preventCollapse={true}>
               <Intro>
-                <h1>2022 縣市長、議員選舉暨公投開票即時資訊</h1>
+                <h1>
+                  2022
+                  <br />
+                  縣市長、議員選舉暨
+                  <br />
+                  公投開票即時資訊
+                </h1>
                 <p>
-                  2022 年縣市長、議員、公投開票結果看
-                  READr！提供最詳盡的選舉票數地圖、歷年比較等功能。
+                  {organization === 'readr-media'
+                    ? `2022 年縣市長、議員、公投開票結果看
+                READr！提供最詳盡的選舉票數地圖、歷年比較等功能。`
+                    : `鏡週刊即時關注 2022 年縣市長、議員、公投開票結果！並且提供最詳盡的選舉票數地圖、歷年比較功能。`}
                 </p>
               </Intro>
             </IntroWrapper>

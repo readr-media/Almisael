@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
-import widgets from '@readr-media/react-election-widgets'
-const SeatsChart = widgets.SeatChart.ReactComponent
+// import widgets from '@readr-media/react-election-widgets'
+// const SeatsChart = widgets.SeatChart.ReactComponent
+import SeatsChart from './seat-chart/SearChart'
 
 const SeatsChartWrapper = styled(CollapsibleWrapper)`
   width: 320px;

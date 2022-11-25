@@ -189,7 +189,6 @@ const MayorInfobox = ({
   }
 
   const { profRate, candidates } = data
-  console.log('isCurrentYear', isCurrentYear, isRunning)
   return (
     <InfoboxScrollWrapper>
       {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
@@ -689,11 +688,9 @@ const presidentInfoboxData = (data, level) => {
   }
 
   if (!data.profRate && level === 3) {
-    console.log(`no profRate for running mayor infobox in level ${level}`, data)
     return '目前即時開票無村里資料'
   }
   if (data.profRate === null) {
-    console.error(`data error for mayor infoboxData in level ${level}`, data)
     return '資料錯誤，請確認'
   }
 
@@ -721,12 +718,10 @@ const mayorInfoboxData = ({ data, level, year, isStarted }) => {
   }
 
   if (year === currentYear && !data.profRate && level === 3) {
-    console.log(`no profRate for running mayor infobox in level ${level}`, data)
     return '目前即時開票無村里資料'
   }
 
   if (data.profRate === null) {
-    console.error(`data error for mayor infoboxData in level ${level}`, data)
     return '資料錯誤，請確認'
   }
 
@@ -734,8 +729,6 @@ const mayorInfoboxData = ({ data, level, year, isStarted }) => {
 }
 
 const councilMemberInfoboxData = ({ data, level, year, isStarted }) => {
-  console.log('data', data)
-
   if (level === 0) {
     return '點擊地圖看更多資料'
   }
@@ -764,8 +757,6 @@ const councilMemberInfoboxData = ({ data, level, year, isStarted }) => {
 }
 
 const referendumInfoboxData = ({ data, level, year, isStarted }) => {
-  console.log('data', data)
-
   if (!isStarted) {
     return '目前無票數資料'
   }

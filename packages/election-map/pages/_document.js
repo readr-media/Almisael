@@ -10,7 +10,7 @@ function CustomDocument() {
   const ogDescription =
     organization === 'readr-media'
       ? '2022 年縣市長、議員、公投開票結果看 READr！提供最詳盡的選舉票數地圖、歷年比較等功能。'
-      : '2022 年縣市長、議員、公投開票結果看鏡週刊！提供最詳盡的選舉票數地圖、歷年比較等功能。'
+      : '鏡週刊即時關注 2022 年縣市長、議員、公投開票結果！並且提供最詳盡的選舉票數地圖、歷年比較功能。'
   const ogUrl =
     organization === 'readr-media'
       ? 'https://www.mirrormedia.mg/projects/election2022/index.html'
