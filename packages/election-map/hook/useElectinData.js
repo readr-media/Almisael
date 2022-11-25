@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import widgets from '@readr-media/react-election-widgets'
 import { json } from 'd3'
@@ -182,6 +182,8 @@ export const useElectionData = (showLoading, showTutorial, width) => {
     number?.key
   )
 
+  const isLoadingGeojsonRef = useRef(false)
+
   const compareElectionData =
     compareInfo.compareMode &&
     getElectionData(
@@ -206,6 +208,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
     const twVillagesJson =
       'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan_map_villages_20220902.json'
 
+    isLoadingGeojsonRef.current = true
     try {
       const responses = await Promise.allSettled([
         json(twCountiesJson),
@@ -1320,6 +1323,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
 
   useEffect(() => {
     const prepareDataHandler = async () => {
+      console.log('prepareDataHandler', isLoadingGeojsonRef.current)
       showLoading(true)
       const { filter } = compareInfo
       const [
@@ -1327,7 +1331,9 @@ export const useElectionData = (showLoading, showTutorial, width) => {
         { value: electionDataResult },
         { value: compareElectionDataResult },
       ] = await Promise.allSettled([
-        mapGeoJsons ? Promise.resolve(false) : prepareGeojsons(),
+        mapGeoJsons || isLoadingGeojsonRef.current
+          ? Promise.resolve(false)
+          : prepareGeojsons(),
         prepareElectionData(
           electionData,
           election,
@@ -1353,6 +1359,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
       ])
       if (mapGeoJsonsResult) {
         const newMapGeoJsons = mapGeoJsonsResult
+        isLoadingGeojsonRef.current = false
         setMapGeoJsons(newMapGeoJsons)
       }
 
