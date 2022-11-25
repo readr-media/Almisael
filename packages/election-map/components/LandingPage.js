@@ -21,8 +21,8 @@ const GlobalStyle = createGlobalStyle`
 const Wrapper = styled.div`
   z-index: 100;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: ${electionMapColor};
 `
 

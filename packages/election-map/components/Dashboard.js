@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   position: relative;
   width: 100vw;
   background-color: ${electionMapColor};
-  ${({ isMobile }) => isMobile && 'height: 100vh;'}
 `
 
 const MoreHint = styled.div`

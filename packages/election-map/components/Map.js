@@ -409,9 +409,9 @@ export const Map = ({
               stroke={
                 feature['properties']['COUNTYCODE'] === activeId
                   ? undefined
-                  : 'gray'
+                  : 'black'
               }
-              strokeWidth="0.3"
+              strokeWidth="1"
               strokeLinejoin="round"
               onClick={countyClicked.bind(null, feature)}
               onMouseOver={() =>
@@ -460,9 +460,9 @@ export const Map = ({
               stroke={
                 feature['properties']['TOWNCODE'] === activeId
                   ? undefined
-                  : 'gray'
+                  : '#666666'
               }
-              strokeWidth="0.3"
+              strokeWidth="0.5"
               onClick={townClicked.bind(null, feature)}
               onMouseOver={() =>
                 setTooltip((tooltip) => ({
@@ -515,9 +515,9 @@ export const Map = ({
               stroke={
                 feature['properties']['VILLCODE'] === activeId
                   ? undefined
-                  : 'gray'
+                  : '#666666'
               }
-              strokeWidth="0.1"
+              strokeWidth="0.5"
               onClick={villageClicked.bind(null, feature)}
               onMouseOver={() => {
                 setTooltip((tooltip) => ({
