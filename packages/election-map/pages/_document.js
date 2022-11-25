@@ -6,7 +6,7 @@ function CustomDocument() {
   const ogImage =
     organization === 'readr-media'
       ? 'https://www.readr.tw/assets/images/claumyvb5000s10wm9k682m6i.png'
-      : 'https://storage.googleapis.com/mirrormedia-files/assets/images/20221124132936-268e1e0827a55ca619b4477ffa13deea.png'
+      : 'https://www.mirrormedia.mg/assets/images/20221124132936-268e1e0827a55ca619b4477ffa13deea-tablet.png'
   return (
     <Html>
       <Head>
