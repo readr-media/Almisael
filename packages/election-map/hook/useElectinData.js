@@ -284,6 +284,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     })
                     newMapData[level] = data
                     newMapData.isRunning = data.is_running
+                    newMapData.isStarted = data.is_started
                     newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
@@ -291,6 +292,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                 }
                 newInfoboxData.electionData = newMapData[level]?.summary
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
                 break
               case 1:
                 if (!newMapData[level][countyId]) {
@@ -303,6 +305,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     })
                     newMapData[level][countyId] = data
                     newMapData.isRunning = data.is_running
+                    newMapData.isStarted = data.is_started
                     newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
@@ -313,6 +316,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   (district) => district.county === mapObject.activeId
                 )
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
                 break
               case 2:
                 if (!newMapData[level][townId]) {
@@ -325,6 +329,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     })
                     newMapData[level][townId] = data
                     newMapData.isRunning = data.is_running
+                    newMapData.isStarted = data.is_started
                     newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
@@ -338,6 +343,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     district.county + district.town === mapObject.activeId
                 )
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
                 break
               case 3:
                 newInfoboxData.electionData = newMapData[2][
@@ -348,6 +354,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     mapObject.activeId
                 )
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
                 break
 
               default:
@@ -355,11 +362,6 @@ export const useElectionData = (showLoading, showTutorial, width) => {
             }
             break
           case 'mayor':
-            if (yearKey === 2022 && countyId === '10020') {
-              // 2022 chiayi city postpond the mayor election
-              newInfoboxData.electionData = '10020'
-              break
-            }
             switch (level) {
               case 0:
                 if (!newEvcData[level] && !compareMode) {
@@ -382,6 +384,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     })
                     newMapData[level] = data
                     newMapData.isRunning = data.is_running
+                    newMapData.isStarted = data.is_started
                     newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
@@ -399,6 +402,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     })
                     newMapData[level][countyId] = data
                     newMapData.isRunning = data.is_running
+                    newMapData.isStarted = data.is_started
                     newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
@@ -408,7 +412,17 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                 newInfoboxData.electionData = newMapData[0]?.districts.find(
                   (district) => district.county === mapObject.activeId
                 )
+                if (
+                  !newInfoboxData.electionData &&
+                  yearKey === 2022 &&
+                  countyId === '10020'
+                ) {
+                  // 2022 chiayi city postpond the mayor election
+                  newInfoboxData.electionData = '10020'
+                }
+
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
                 break
               case 2:
                 if (!newMapData[level][townId]) {
@@ -421,6 +435,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     })
                     newMapData[level][townId] = data
                     newMapData.isRunning = data.is_running
+                    newMapData.isStarted = data.is_started
                     newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
@@ -433,7 +448,19 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   (district) =>
                     district.county + district.town === mapObject.activeId
                 )
+                if (
+                  !newInfoboxData.electionData &&
+                  yearKey === 2022 &&
+                  countyId === '10020'
+                ) {
+                  // 2022 chiayi city postpond the mayor election
+                  newInfoboxData.electionData = '10020'
+                  break
+                }
+
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
+
                 break
               case 3:
                 newInfoboxData.electionData = newMapData[2][
@@ -443,7 +470,19 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     district.county + district.town + district.vill ===
                     mapObject.activeId
                 )
+                if (
+                  !newInfoboxData.electionData &&
+                  yearKey === 2022 &&
+                  countyId === '10020'
+                ) {
+                  // 2022 chiayi city postpond the mayor election
+                  newInfoboxData.electionData = '10020'
+                  break
+                }
+
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
+
                 break
 
               default:
@@ -536,6 +575,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     })
                     newMapData[level][countyId] = data
                     newMapData.isRunning = data.is_running
+                    newMapData.isStarted = data.is_started
                     newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
@@ -544,6 +584,8 @@ export const useElectionData = (showLoading, showTutorial, width) => {
 
                 newInfoboxData.electionData = newMapData[1][countyId]?.summary
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
+
                 break
               case 2:
                 if (!newMapData[2][townId]) {
@@ -557,6 +599,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     })
                     newMapData[level][townId] = data
                     newMapData.isRunning = data.is_running
+                    newMapData.isStarted = data.is_started
                     newLastUpdate = data.updatedAt
                   } catch (error) {}
                 }
@@ -567,6 +610,8 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     district.county + district.town === mapObject.activeId
                 )
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
+
                 break
               case 3:
                 newInfoboxData.electionData = newMapData[2][
@@ -577,6 +622,8 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     mapObject.activeId
                 )
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
+
                 break
 
               default:
@@ -608,6 +655,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     })
                     newMapData[level] = data
                     newMapData.isRunning = data.is_running
+                    newMapData.isStarted = data.is_started
                     newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
@@ -616,6 +664,8 @@ export const useElectionData = (showLoading, showTutorial, width) => {
 
                 newInfoboxData.electionData = newMapData[0]?.summary
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
+
                 break
               case 1:
                 if (!newMapData[level][countyId]) {
@@ -629,6 +679,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     })
                     newMapData[level][countyId] = data
                     newMapData.isRunning = data.is_running
+                    newMapData.isStarted = data.is_started
                     newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
@@ -639,6 +690,8 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   (district) => district.county === mapObject.activeId
                 )
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
+
                 break
               case 2:
                 if (!newMapData[level][townId]) {
@@ -652,6 +705,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     })
                     newMapData[level][townId] = data
                     newMapData.isRunning = data.is_running
+                    newMapData.isStarted = data.is_started
                     newLastUpdate = data.updatedAt
                   } catch (error) {
                     console.error(error)
@@ -665,6 +719,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     district.county + district.town === mapObject.activeId
                 )
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
 
                 break
               case 3:
@@ -676,6 +731,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                     mapObject.activeId
                 )
                 newInfoboxData.isRunning = newMapData.isRunning
+                newInfoboxData.isStarted = newMapData.isStarted
 
                 break
 
@@ -742,6 +798,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   })
                   newMapData[level] = data
                   newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
@@ -757,6 +814,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   })
                   newMapData[level][countyId] = data
                   newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
@@ -772,6 +830,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   })
                   newMapData[level][townId] = data
                   newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
@@ -806,15 +865,13 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   })
                   newMapData[level] = data
                   newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
                 break
               case 1:
-                if (countyId === '10020') {
-                  break
-                }
                 try {
                   const data = await fetchMayorMapData({
                     electionType,
@@ -824,15 +881,13 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   })
                   newMapData[level][countyId] = data
                   newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
                 }
                 break
               case 2:
-                if (countyId === '10020') {
-                  break
-                }
                 try {
                   const data = await fetchMayorMapData({
                     electionType,
@@ -842,6 +897,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   })
                   newMapData[level][townId] = data
                   newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
@@ -893,6 +949,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   })
                   newMapData[level][countyId] = data
                   newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
@@ -909,6 +966,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   })
                   newMapData[level][townId] = data
                   newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
@@ -944,6 +1002,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   })
                   newMapData[level] = data
                   newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
                   newLastUpdate = data.updateAt
                 } catch (error) {
                   console.error(error)
@@ -960,6 +1019,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   })
                   newMapData[level][countyId] = data
                   newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
@@ -976,6 +1036,7 @@ export const useElectionData = (showLoading, showTutorial, width) => {
                   })
                   newMapData[level][townId] = data
                   newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt
                 } catch (error) {
                   console.error(error)
@@ -1323,7 +1384,6 @@ export const useElectionData = (showLoading, showTutorial, width) => {
 
   useEffect(() => {
     const prepareDataHandler = async () => {
-      console.log('prepareDataHandler', isLoadingGeojsonRef.current)
       showLoading(true)
       const { filter } = compareInfo
       const [
@@ -1433,8 +1493,8 @@ export const useElectionData = (showLoading, showTutorial, width) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShouldRefetch(true)
-    }, 100 * 60 * 1000)
-    // }, 1 * 60 * 1000)
+      // }, 100 * 60 * 1000)
+    }, 1 * 60 * 1000)
     // }, 10 * 1000)
 
     return () => {
@@ -1471,10 +1531,8 @@ export const useElectionData = (showLoading, showTutorial, width) => {
         : Promise.resolve({})
       const [{ value: normalResult }, { value: compareResult }] =
         await Promise.allSettled([
-          // mapData.isRunning ? normalRefetch : Promise.resolve({}),
-          normalRefetch,
-          // compareMapData.isRunning ? compareRefetch : Promise.resolve({}),
-          compareRefetch,
+          mapData.isRunning ? normalRefetch : Promise.resolve({}),
+          compareMapData?.isRunning ? compareRefetch : Promise.resolve({}),
         ])
       let newElectionsData = electionsData
       if (normalResult.newElectionData) {

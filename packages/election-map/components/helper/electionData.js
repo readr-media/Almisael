@@ -1,9 +1,21 @@
 import { elections } from './election'
 import { deepCloneObj } from './helper'
 
-export const defaultMapData = { isRunning: false, 0: null, 1: {}, 2: {} }
+export const defaultMapData = {
+  isRunning: false,
+  isStarted: true,
+  0: null,
+  1: {},
+  2: {},
+}
 
-export const defaultData = { isRunning: false, 0: null, 1: {}, 2: {} }
+export const defaultData = {
+  isRunning: false,
+  isStarted: true,
+  0: null,
+  1: {},
+  2: {},
+}
 export const defaultElectionData = {
   mapData: defaultData,
   evcData: defaultData,
@@ -16,6 +28,7 @@ export const defaultElectionData = {
       2020: {
         mapData: {
           isRunning: false,
+          isStarted: false,
           0: countryMapData,
           1: {
             [countyId]: countyMapData
@@ -42,6 +55,7 @@ export const defaultElectionData = {
       2022: {
         mapData: {
           isRunning: false,
+          isStarted: false,
           0: countryMapData,
           1: {
             [countyId]: countyMapData
@@ -69,6 +83,7 @@ export const defaultElectionData = {
         normal: {
           mapData: {
             isRunning: false,
+            isStarted: false,
             0: countryMapData,
             1: {
               [countyId]: countyMapData
@@ -95,6 +110,7 @@ export const defaultElectionData = {
         indigenous: {
           mapData: {
             isRunning: false,
+            isStarted: false,
             0: countryMapData,
             1: {
               [countyId]: countyMapData
@@ -105,6 +121,7 @@ export const defaultElectionData = {
           }
           evcData {
             isRunning: false,
+            isStarted: false,
             0: null,
             1: {
               [countyId]: countyEvcData
@@ -124,6 +141,7 @@ export const defaultElectionData = {
       2020: {
         mapData: {
           isRunning: false,
+          isStarted: false,
           0: countryMapData,
           1: {
             [countyId]: countyMapData
@@ -151,6 +169,7 @@ export const defaultElectionData = {
         normal: {
           mapData: {
             isRunning: false,
+            isStarted: false,
             0: countryMapData,
             1: {
               [countyId]: countyMapData
@@ -179,6 +198,7 @@ export const defaultElectionData = {
         indigenous: {
           mapData: {
             isRunning: false,
+            isStarted: false,
             0: countryMapData,
             1: {
               [countyId]: countyMapData
@@ -211,6 +231,7 @@ export const defaultElectionData = {
         F1: {
           mapData: {
             isRunning: false,
+            isStarted: false,
             0: countryMapData,
             1: {
               [countyId]: countyMapData
@@ -239,6 +260,7 @@ export const defaultElectionData = {
         hsinchu: {
           mapData: {
             isRunning: false,
+            isStarted: false,
             0: countryMapData,
             1: {
               [countyId]: countyMapData

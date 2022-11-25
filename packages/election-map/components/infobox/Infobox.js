@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { currentYear } from '../helper/election'
 
 const InfoboxWrapper = styled.div`
   font-family: 'Noto Sans TC', sans-serif;
@@ -565,6 +566,7 @@ const ReferendumTitle = styled.div`
 `
 
 const NoResult = styled.span`
+  margin-left: 16px;
   font-weight: 700;
   color: #da6262;
 `
@@ -681,25 +683,6 @@ const ReferendumInfobox = ({ data, isRunning, isCurrentYear, compareName }) => {
 //   `,
 // }
 
-const referendumInfoboxData = (data, level) => {
-  if (!data) {
-    console.log(`no data for mayor infobox in level ${level}`, data)
-    return '無資料'
-  }
-
-  if (!data.profRate && level === 3) {
-    console.log(`no profRate for running mayor infobox in level ${level}`, data)
-    return '目前即時開票無村里資料'
-  }
-
-  if (data.profRate === null) {
-    console.error(`data error for mayor infoboxData in level ${level}`, data)
-    return '資料錯誤，請確認'
-  }
-
-  return data
-}
-
 const presidentInfoboxData = (data, level) => {
   if (!data) {
     return '無資料'
@@ -717,21 +700,27 @@ const presidentInfoboxData = (data, level) => {
   return data
 }
 
-const mayorInfoboxData = (data, level) => {
+const mayorInfoboxData = ({ data, level, year, isStarted }) => {
   if (level === 0) {
     return '點擊地圖看更多資料'
   }
 
-  if (!data) {
-    console.log(`no data for mayor infobox in level ${level}`, data)
-    return '無資料'
-  }
-
-  if (data === '10020') {
+  if (year === 2022 && data === '10020') {
     return '嘉義市長選舉改期至2022/12/18'
   }
 
-  if (!data.profRate && level === 3) {
+  if (!isStarted) {
+    return '目前無票數資料'
+  }
+
+  if (!data) {
+    if (year === 2010) {
+      return '2010為直轄市長及直轄市議員選舉，此區無資料'
+    }
+    return '此區無資料'
+  }
+
+  if (year === currentYear && !data.profRate && level === 3) {
     console.log(`no profRate for running mayor infobox in level ${level}`, data)
     return '目前即時開票無村里資料'
   }
@@ -744,42 +733,53 @@ const mayorInfoboxData = (data, level) => {
   return data
 }
 
-const councilMemberInfoboxData = (data, level, subtype) => {
+const councilMemberInfoboxData = ({ data, level, year, isStarted }) => {
+  console.log('data', data)
+
   if (level === 0) {
     return '點擊地圖看更多資料'
   }
 
-  if (!data) {
-    console.log(`no data for councilMember infobox in level ${level}`, data)
-    if (subtype.key === 'normal') {
-      return '此區域為原住民選區，請點擊「原住民/區域」切換檢視內容'
-    } else {
-      return '此區域並非原住民區域選區，起點擊「區域/原住民」切換檢視內容'
-    }
+  if (!isStarted) {
+    return '目前無票數資料'
   }
 
-  if (level === 1 && !data.districts) {
-    console.error(
-      `data error for councilMember infoboxData in level ${level}`,
-      data
-    )
+  if (!data) {
+    if (year === 2010) {
+      return '2010為直轄市長及直轄市議員選舉，此區無資料'
+    }
+    return '此區無資料'
+  }
+
+  if (year === currentYear && level === 3 && data[0].profRate === null) {
+    return '目前即時開票無村里資料'
+  }
+
+  if (data.profRate === null) {
+    console.error(`data error for mayor infoboxData in level ${level}`, data)
     return '資料錯誤，請確認'
   }
 
-  if (level > 1 && data.length === 0) {
-    if (subtype.key === 'normal') {
-      return '此區域為原住民選區，請點擊「原住民/區域」切換檢視內容'
-    } else {
-      return '此區域並非原住民區域選區，起點擊「區域/原住民」切換檢視內容'
-    }
+  return data
+}
+
+const referendumInfoboxData = ({ data, level, year, isStarted }) => {
+  console.log('data', data)
+
+  if (!isStarted) {
+    return '目前無票數資料'
   }
 
-  if (level === 3 && data[0].profRate === null) {
-    console.log(
-      `no profRate for running councilMember infobox in level ${level}`,
-      data
-    )
+  if (!data) {
+    return '此區無資料'
+  }
+
+  if (year === currentYear && !data.profRate && level === 3) {
     return '目前即時開票無村里資料'
+  }
+
+  if (data.profRate === null) {
+    return '資料錯誤，請確認'
   }
 
   return data
@@ -788,17 +788,17 @@ const councilMemberInfoboxData = (data, level, subtype) => {
 export const Infobox = ({
   data,
   subtype,
-  isRunning,
   compareMode,
   isCurrentYear,
   compareName,
+  year,
 }) => {
-  const { electionType, level, electionData } = data
+  const { electionType, level, electionData, isRunning, isStarted } = data
   let infobox
 
   switch (electionType) {
     case 'president': {
-      const data = presidentInfoboxData(electionData, level)
+      const data = presidentInfoboxData(electionData, level, year)
       infobox = (
         <PresidentInfobox
           level={level}
@@ -810,7 +810,13 @@ export const Infobox = ({
       break
     }
     case 'mayor': {
-      const data = mayorInfoboxData(electionData, level)
+      const data = mayorInfoboxData({
+        data: electionData,
+        level,
+        year,
+        isRunning,
+        isStarted,
+      })
       infobox = (
         <MayorInfobox
           level={level}
@@ -828,7 +834,14 @@ export const Infobox = ({
       break
     }
     case 'councilMember': {
-      const data = councilMemberInfoboxData(electionData, level, subtype)
+      const data = councilMemberInfoboxData({
+        data: electionData,
+        level,
+        year,
+        subtype,
+        isRunning,
+        isStarted,
+      })
       infobox = (
         <CouncilMemberInfobox
           level={level}
@@ -842,7 +855,13 @@ export const Infobox = ({
       break
     }
     case 'referendum':
-      const data = referendumInfoboxData(electionData, level)
+      const data = referendumInfoboxData({
+        data: electionData,
+        level,
+        year,
+        isRunning,
+        isStarted,
+      })
       infobox = (
         <ReferendumInfobox
           data={data}

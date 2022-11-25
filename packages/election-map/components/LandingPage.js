@@ -56,6 +56,8 @@ const IntroWrapper = styled(CollapsibleWrapper)`
 `
 
 const Intro = styled.div`
+  text-align: center;
+
   @media (max-width: 1024px) {
     padding: 8px 15px 0;
     background-color: white;
@@ -204,7 +206,11 @@ export const LandingPage = () => {
         <InfoWrapper>
           {!isMobile ? (
             <Intro>
-              <h1>2022 縣市長、議員選舉暨公投開票即時資訊</h1>
+              <h1>
+                2022 縣市長、議員選舉暨
+                <br />
+                公投開票即時資訊
+              </h1>
               <p>
                 2022 年縣市長、議員、公投開票結果看
                 READr！提供最詳盡的選舉票數地圖、歷年比較等功能。

@@ -29,7 +29,6 @@ export const InfoboxPanel = ({
   number,
 }) => {
   const { compareMode } = compareInfo
-  const isRunning = data.isRunning
   const electionName = electionNamePairs.find(
     (electionNamePair) =>
       electionNamePair.electionType === election.electionType
@@ -46,8 +45,8 @@ export const InfoboxPanel = ({
         <Infobox
           data={data}
           subtype={subtype}
-          isRunning={isRunning}
           isCurrentYear={year.key === currentYear}
+          year={year.key}
         />
       </InfoboxWrapper>
     </Wrppaer>

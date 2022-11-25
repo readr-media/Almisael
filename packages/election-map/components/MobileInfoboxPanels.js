@@ -27,8 +27,6 @@ export const MobileInfoboxPanels = ({
   year,
   numberInfo,
 }) => {
-  const isRunning = data.isRunning
-
   const { compareMode, filter } = compareInfo
   let compareNames
   if (compareMode) {
@@ -47,19 +45,19 @@ export const MobileInfoboxPanels = ({
       <Infobox
         data={data}
         subtype={subtype}
-        isRunning={isRunning}
         isCurrentYear={year.key === currentYear}
         compareMode={compareMode}
         compareName={compareNames && compareNames[0]}
+        year={year.key}
       />
       {compareMode && (
         <Infobox
           data={compareData}
           subtype={filter.subtype}
-          isRunning={compareData.isRunning}
           isCurrentYear={filter.year.key === currentYear}
           compareMode={compareMode}
           compareName={compareNames && compareNames[1]}
+          year={year.key}
         />
       )}
     </Wrapper>

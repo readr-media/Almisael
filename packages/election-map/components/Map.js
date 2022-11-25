@@ -411,7 +411,7 @@ export const Map = ({
                   ? undefined
                   : 'black'
               }
-              strokeWidth="1"
+              strokeWidth="0.5"
               strokeLinejoin="round"
               onClick={countyClicked.bind(null, feature)}
               onMouseOver={() =>
@@ -462,7 +462,7 @@ export const Map = ({
                   ? undefined
                   : '#666666'
               }
-              strokeWidth="0.5"
+              strokeWidth="0.3"
               onClick={townClicked.bind(null, feature)}
               onMouseOver={() =>
                 setTooltip((tooltip) => ({
@@ -517,7 +517,7 @@ export const Map = ({
                   ? undefined
                   : '#666666'
               }
-              strokeWidth="0.5"
+              strokeWidth="0.1"
               onClick={villageClicked.bind(null, feature)}
               onMouseOver={() => {
                 setTooltip((tooltip) => ({

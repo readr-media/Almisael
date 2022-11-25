@@ -33,9 +33,9 @@ const StyledEVC = styled(ElectionVotesComparison)`
 
 const ElectionVoteComparisonPanel = ({ evcInfo }) => {
   const { evcData, onEvcSelected, scrollTo } = evcInfo
-
   return (
-    evcData && (
+    evcData &&
+    (evcData.districts?.length || evcData.propositions?.length) && (
       <ElectionVotesComparisonWrapper title={'縣市議員候選人'}>
         <StyledEVC
           election={evcData}

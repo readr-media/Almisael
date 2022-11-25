@@ -5,8 +5,16 @@ import { organization } from '../consts/config'
 function CustomDocument() {
   const ogImage =
     organization === 'readr-media'
-      ? 'https://www.readr.tw/assets/images/claumyvb5000s10wm9k682m6i.png'
-      : 'https://www.mirrormedia.mg/assets/images/20221124132936-268e1e0827a55ca619b4477ffa13deea-tablet.png'
+      ? 'https://www.readr.tw/assets/images/claw5sez9000t10wm6qhp59t3-tablet.png'
+      : 'https://www.mirrormedia.mg/assets/images/20221125150423-5e1b78e027fcab670d8b0eeb5723be8d-tablet.png'
+  const ogDescription =
+    organization === 'readr-media'
+      ? '2022 年縣市長、議員、公投開票結果看 READr！提供最詳盡的選舉票數地圖、歷年比較等功能。'
+      : '2022 年縣市長、議員、公投開票結果看鏡週刊！提供最詳盡的選舉票數地圖、歷年比較等功能。'
+  const ogUrl =
+    organization === 'readr-media'
+      ? 'https://www.mirrormedia.mg/projects/election2022/index.html'
+      : 'https://www.readr.tw/project/3/election2022/index.html'
   return (
     <Html>
       <Head>
@@ -27,16 +35,10 @@ function CustomDocument() {
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:secure_url" content={ogImage} />
         <meta property="og:image:type" content="image/png" />
-        <meta
-          property="og:description"
-          content="2022 年縣市長、議員、公投開票結果看 READr！提供最詳盡的選舉票數地圖、歷年比較等功能。"
-        />
-        <meta property="og:url" content="" />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:url" content={ogUrl} />
         <meta property="fb:app_id" content="175313259598308" />
-        <meta
-          name="description"
-          content="2022 年縣市長、議員、公投開票結果看 READr！提供最詳盡的選舉票數地圖、歷年比較等功能。"
-        />
+        <meta name="description" content={ogDescription} />
       </Head>
       <body>
         <Main />
