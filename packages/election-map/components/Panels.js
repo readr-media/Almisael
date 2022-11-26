@@ -159,7 +159,12 @@ export const Panels = ({
         )}
       </LeftPanelWrapper>
 
-      {!compareMode && <ElectionVoteComparisonPanel evcInfo={evcInfo} />}
+      {!compareMode && (
+        <ElectionVoteComparisonPanel
+          electionType={election.electionType}
+          evcInfo={evcInfo}
+        />
+      )}
       {subtypeInfo && <StyledELectionRadio subtypeInfo={subtypeInfo} />}
       {lastUpdate && (
         <LastUpdateTime>

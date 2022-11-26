@@ -29,15 +29,21 @@ const StyledEVC = styled(ElectionVotesComparison)`
   > div:nth-of-type(2) {
     border-bottom: unset;
   }
+
+  @media (max-height: 750px) {
+    ${({ electionType }) =>
+      electionType === 'referendum' && `max-height: 500px;`}
+  }
 `
 
-const ElectionVoteComparisonPanel = ({ evcInfo }) => {
+const ElectionVoteComparisonPanel = ({ evcInfo, electionType }) => {
   const { evcData, onEvcSelected, scrollTo } = evcInfo
   return (
     evcData &&
     (evcData.districts?.length || evcData.propositions?.length) && (
       <ElectionVotesComparisonWrapper title={'縣市議員候選人'}>
         <StyledEVC
+          electionType={electionType}
           election={evcData}
           device="mobile"
           theme="electionMap"
