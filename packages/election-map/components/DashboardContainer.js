@@ -6,7 +6,7 @@ import { MobileDashboard } from './MobileDashboard'
 import { Dashboard } from './Dashboard'
 
 export const DashboardContainer = forwardRef(function DashboardContainer(
-  { showTutorial, setShowTutorial, dashboardInView },
+  { showTutorial, hasAnchor, setShowTutorial, dashboardInView },
   ref
 ) {
   const [loading, setLoading] = useState(false)
@@ -74,6 +74,7 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
           setShowTutorial={setShowTutorial}
           onTutorialEnd={onTutorialEnd}
           dashboardInView={dashboardInView}
+          hasAnchor={hasAnchor}
         />
       </div>
     )
@@ -101,6 +102,7 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
           showTutorial={showTutorial}
           setShowTutorial={setShowTutorial}
           onTutorialEnd={onTutorialEnd}
+          hasAnchor={hasAnchor}
         />
       </div>
     )

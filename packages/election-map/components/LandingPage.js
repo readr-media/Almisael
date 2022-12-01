@@ -180,17 +180,6 @@ export const LandingPage = () => {
 
   const onEnterClickedHandler = () => {
     setShow(false)
-    if (
-      organization === 'readr-media' &&
-      document.location.hash &&
-      document.querySelector(document.location.hash)
-    ) {
-      setTimeout(() => {
-        document
-          .querySelector(document.location.hash)
-          .scrollIntoView({ block: 'center' })
-      })
-    }
     ReactGA.event({
       category: 'Projects',
       action: 'Click',

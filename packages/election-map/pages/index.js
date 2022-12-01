@@ -52,12 +52,19 @@ const StickyHeader = styled.div`
 export default function Home() {
   const [showTutorial, setShowTutorial] = useState(false)
   const [dashboardInView, setDashboardInView] = useState(true)
+  const [hasAnchor, setHasAnchor] = useState(false)
   const dashboardObserver = useRef()
   const endDivObserver = useRef()
 
   useEffect(() => {
     if (!localStorage.finishTutorial) {
       setShowTutorial(true)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (organization === 'readr-media' && document.location.hash) {
+      setHasAnchor(true)
     }
   }, [])
 
@@ -100,14 +107,15 @@ export default function Home() {
   return (
     <>
       <NavBar dashboardInView={dashboardInView} />
-      <LandingPage />
+      {!hasAnchor && <LandingPage />}
       <DashboardContainer
         showTutorial={showTutorial}
+        hasAnchor={hasAnchor}
         setShowTutorial={setShowTutorial}
         ref={dashboardRef}
         dashboardInView={dashboardInView}
       />
-      {!showTutorial && (
+      {(!showTutorial || hasAnchor) && (
         <NewsWrapper>
           <StickyHeader
             dashboardInView={dashboardInView}

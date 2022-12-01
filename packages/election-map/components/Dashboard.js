@@ -45,6 +45,7 @@ export const Dashboard = ({
   setShowTutorial,
   onTutorialEnd,
   dashboardInView,
+  hasAnchor,
 }) => {
   return (
     <Wrapper>
@@ -76,7 +77,7 @@ export const Dashboard = ({
         yearInfo={yearInfo}
         numberInfo={numberInfo}
       />
-      {showTutorial && (
+      {!hasAnchor && showTutorial && (
         <Tutorial
           show={showTutorial}
           mapData={mapGeoJsons}

@@ -25,6 +25,7 @@ export const MobileDashboard = ({
   showTutorial,
   setShowTutorial,
   onTutorialEnd,
+  hasAnchor,
 }) => {
   return (
     <Wrapper>
@@ -55,7 +56,7 @@ export const MobileDashboard = ({
         showTutorial={showTutorial}
         onElectionChange={onElectionChange}
       />
-      {showTutorial && (
+      {!hasAnchor && showTutorial && (
         <MobileTutorial
           show={showTutorial}
           mapData={mapGeoJsons}

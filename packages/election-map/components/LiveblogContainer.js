@@ -48,7 +48,7 @@ export const LiveblogContainer = () => {
       setInitialLiveblog(data)
     }
     fetchLiveblog()
-  }, [])
+  }, [liveblogUrl])
 
   return (
     <LiveBlogWrapper>
