@@ -19,7 +19,7 @@ const Header = styled.div`
 root.render(
   <>
     <Header>
-      <Logo className="test" />
+      <Logo />
     </Header>
 
     <DonateButton />

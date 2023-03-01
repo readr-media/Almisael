@@ -8,6 +8,7 @@ export const reportsData = [
     alt: 'report01',
     date: '2023-02-08T07:00:00.000Z',
     time: 15,
+    link: `https://www.readr.tw/post/2928`,
   },
   {
     id: 2,
@@ -16,7 +17,7 @@ export const reportsData = [
     imageUrl:
       'https://www.mirrormedia.com.tw/assets/images/20221017214008-027f6c46502e220dd63521d758ef95e6.jpg',
     alt: 'report02',
-    link: '',
+    link: 'https://www.readr.tw/post/2931',
     date: '2022-02-08T07:00:00.000Z',
     time: 10,
   },
@@ -26,5 +27,6 @@ export const reportsData = [
     alt: 'report03',
     date: '2021-02-08T07:00:00.000Z',
     time: 5,
+    link: 'https://www.readr.tw/post/2903',
   },
 ]
