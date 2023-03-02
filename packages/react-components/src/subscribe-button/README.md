@@ -45,7 +45,7 @@ export default function ComponentName() {
       <SubscribeButton
        title="設定新的訂閱電子報文字"
        href="/"
-       openNewTab="false"
+       openNewTab={false}
        className="custom-name"
        onClick={ClickFunction}
       />

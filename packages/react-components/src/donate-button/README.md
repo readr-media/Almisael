@@ -45,7 +45,7 @@ export default function ComponentName() {
       <DonateButton
        title="設定新的贊助按鈕文字"
        href="/"
-       openNewTab="false"
+       openNewTab={false}
        className="custom-name"
        onClick={ClickFunction}
       />
