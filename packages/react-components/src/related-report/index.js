@@ -66,7 +66,7 @@ const TitleBlock = styled.div`
       /**
        *  @param {Object} props
        *  @param {string} props.highlightColor
-       */ (props) => (props.highlightColor ? props.highlightColor : '#ffffff')
+       */ (props) => props.highlightColor
     };
     z-index: -1;
   }
@@ -102,7 +102,7 @@ export default function RelatedReport({
   title = '最新報導',
   titleClassName = 'readr-report-title',
   captionClassName = 'readr-report-caption',
-  highlightColor = '',
+  highlightColor = '#ffffff',
   defaultImage = '',
 }) {
   const checkCaptionValid = (data) => {
