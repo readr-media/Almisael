@@ -85,14 +85,12 @@ const TitleBlock = styled.div`
  *
  * @param {Object}  props
  * @param {Post[]}  props.relatedData
- * @param {number}  props.ariaLevel
+ * @param {number}  [props.ariaLevel=undefined]
  * @param {string}  [props.title='最新報導']
- * @param {boolean} [props.openNewTab=true]
- * @param {string}  [props.titleClassName='related-post-title']
- * @param {string}  [props.captionClassName='related-post-caption']
+ * @param {string}  [props.titleClassName='related-report-title']
+ * @param {string}  [props.captionClassName='related-report-caption']
  * @param {string}  [props.highlightColor='#ffffff']
  * @param {string}  [props.defaultImage='']
- * @param {import("react").MouseEventHandler} [props.onClick]
  * @return {JSX.Element}
  */
 
