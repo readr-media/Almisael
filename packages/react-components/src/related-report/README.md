@@ -59,11 +59,12 @@ export default function ComponentName() {
 | 名稱             | 資料型別 | 必須 | 預設值                   | 說明                                                                                                                                                                             |
 | ---------------- | -------- | ---- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | relatedData      | Array    | `V`  | `[]`                     | 報導資訊。範例：`[ { id: 1, caption: '報導01', date: '2023-02-08T07:00:00.000Z', time: 100 ,imageUrl: 'https://www.readr.tw', alt: '報導01',link: 'https://www.readr.tw' } ]` 。 |
-| title            | String   |      | `"最新報導"`             | 標題。                                                                                                                                                                           |
-| titleClassName   | String   |      | `"readr-report-title"`   | 指定標題 className，可用於變更標題樣式。                                                                                                                                         |
-| captionClassName | String   |      | `"readr-report-caption"` | 指定文章標題 className，可用於變更文章標題樣式。                                                                                                                                 |
-| defaultImage     | String   |      | `""`                     | 文章預設圖片。當 `relatedData` 的 `imageUrl` 載入失敗時，則載入預設圖片。                                                                                                        |
-| ariaLevel        | number   |      |                          | 設定標題（role="heading"）的 aria-level，                                                                                                                                                          |
+| title            | string   |      | `"最新報導"`             | 標題。                                                                                                                                                                           |
+| highlightColor   | string   |      | `""`                     | 標題 highlight 顏色。                                                                                                                                                            |
+| titleClassName   | string   |      | `"readr-report-title"`   | 指定標題 className，可用於變更標題樣式。                                                                                                                                         |
+| captionClassName | string   |      | `"readr-report-caption"` | 指定文章標題 className，可用於變更文章標題樣式。                                                                                                                                 |
+| defaultImage     | string   |      | `""`                     | 文章預設圖片。當 `relatedData` 的 `imageUrl` 載入失敗時，則載入預設圖片。                                                                                                        |
+| ariaLevel        | number   |      | `""`                     | 設定標題（role="heading"）的 aria-level，                                                                                                                                        |
 
 ## Props Detail : relatedData
 
