@@ -90,15 +90,15 @@ const TitleBlock = styled.div`
  * @param {boolean} [props.openNewTab=true]
  * @param {string}  [props.titleClassName='related-post-title']
  * @param {string}  [props.captionClassName='related-post-caption']
- * @param {string}  [props.highlightColor]
- * @param {string}  [props.defaultImage]
+ * @param {string}  [props.highlightColor='#ffffff']
+ * @param {string}  [props.defaultImage='']
  * @param {import("react").MouseEventHandler} [props.onClick]
  * @return {JSX.Element}
  */
 
 export default function RelatedReport({
   relatedData = [],
-  ariaLevel = '',
+  ariaLevel = undefined,
   title = '最新報導',
   titleClassName = 'readr-report-title',
   captionClassName = 'readr-report-caption',
@@ -140,15 +140,14 @@ export default function RelatedReport({
               {title}
             </div>
           </TitleBlock>
-          {relatedData?.length !== 0 && (
-            <ul className="readr-report-wrapper">
-              <RelatedList
-                relatedData={relatedData}
-                captionClassName={captionClassName}
-                defaultImage={defaultImage}
-              />
-            </ul>
-          )}
+
+          <ul className="readr-report-wrapper">
+            <RelatedList
+              relatedData={relatedData}
+              captionClassName={captionClassName}
+              defaultImage={defaultImage}
+            />
+          </ul>
         </Container>
       )}
     </>
