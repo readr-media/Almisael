@@ -48,10 +48,10 @@ const Info = styled.div`
 
   .time {
     position: relative;
-    padding: 0 0 0 14px;
+    padding: ${(props) => (props.date ? '0 0 0 14px;' : '0px')};
 
     &:before {
-      ${DotStyle}
+      ${(props) => (props.date ? DotStyle : '')}
     }
   }
 
@@ -64,7 +64,7 @@ export default function ReportInfo({ caption, captionClassName, date, time }) {
   return (
     <div className="readr-report-info">
       {caption && <Caption className={captionClassName}>{caption}</Caption>}
-      <Info>
+      <Info date={date}>
         {date && <span className="date">{formattedDate(date)}</span>}
         {time && (
           <span className="time">閱讀時間&thinsp;{time}&thinsp;分鐘</span>

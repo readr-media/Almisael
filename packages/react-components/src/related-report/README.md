@@ -61,7 +61,7 @@ export default function ComponentName() {
 | relatedData      | Array    | `V`  | `[]`                     | 報導資訊。範例：`[ { id: 1, caption: '報導01', date: '2023-02-08T07:00:00.000Z', time: 100 ,imageUrl: 'https://www.readr.tw', alt: '報導01',link: 'https://www.readr.tw' } ]` 。 |
 | title            | string   |      | `"最新報導"`             | 標題。                                                                                                                                                                           |
 | ariaLevel        | number   |      | `undefined`              | 設定標題（role="heading"）的 aria-level，                                                                                                                                        |
-| highlightColor   | string   |      | `"#ffffff"`               | 標題 highlight 顏色。                                                                                                                                                            |
+| highlightColor   | string   |      | `"#ffffff"`              | 標題 highlight 顏色。                                                                                                                                                            |
 | titleClassName   | string   |      | `"readr-report-title"`   | 指定標題 className，可用於變更標題樣式。                                                                                                                                         |
 | captionClassName | string   |      | `"readr-report-caption"` | 指定報導標題 className，可用於變更報導標題樣式。                                                                                                                                 |
 | defaultImage     | string   |      | `""`                     | 報導的預設圖片路徑。當 `relatedData` 的 `imageUrl` 載入失敗時，則載入預設圖片。                                                                                                  |
@@ -70,13 +70,13 @@ export default function ComponentName() {
 
 ### required
 
+- `id`: 報導 id。
 - `caption`: 報導標題。
-- `date`: 報導日期。
-- `time`: 報導閱讀時間。
 
 ### optional
 
-- `id`: 報導 id。
+- `date`: 報導日期。
+- `time`: 報導閱讀時間。
 - `imageUrl`: 報導圖片 URL。
 - `alt`: 報導圖片替代文字。
 - `link`: 報導連結。
