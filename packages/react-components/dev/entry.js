@@ -15,6 +15,11 @@ const Header = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
+
+  .default-logo {
+    outline: 1px solid red;
+    background: black;
+  }
 `
 
 root.render(
@@ -22,7 +27,7 @@ root.render(
     <Header>
       <Logo
         className="default-logo"
-        pathColor="black"
+        iconStyle="black"
         href="/"
         openNewTab={false}
       />
