@@ -56,13 +56,13 @@ export default function ComponentName() {
 
 ## Props
 
-| 名稱       | 資料型別          | 必須 | 預設值                     | 說明                                                                                      |
-| ---------- | ----------------- | ---- | -------------------------- | ----------------------------------------------------------------------------------------- |
-| className  | String            |      | `readr-subscribe-button`   | 自訂 className。如無傳入自訂 className，仍可透過 `.readr-subscribe-button` 更改按鈕樣式。 |
-| onClick    | MouseEventHandler |      | ' '                        | 點擊按鈕後觸發之函式。                                                                    |
-| href       | String            |      | "http://eepurl.com/gk-FF1" | 設定按鈕點擊後連結頁面網址。                                                              |
-| openNewTab | Boolean           |      | true                       | 設定點擊後是否另開分頁。true='target: "\_blank"', false='target: "\_self"',               |
-| title      | String            |      | "訂閱電子報"               | 設定按鈕文字。                                                                            |
+| 名稱       | 資料型別          | 必須 | 預設值                       | 說明                                                                                      |
+| ---------- | ----------------- | ---- | ---------------------------- | ----------------------------------------------------------------------------------------- |
+| className  | String            |      | `"readr-subscribe-button"`   | 自訂 className。如無傳入自訂 className，仍可透過 `.readr-subscribe-button` 更改按鈕樣式。 |
+| onClick    | MouseEventHandler |      |                              | 點擊按鈕後觸發之函式。                                                                    |
+| href       | String            |      | `"http://eepurl.com/gk-FF1"` | 設定按鈕點擊後連結頁面網址。                                                              |
+| openNewTab | Boolean           |      | true                         | 設定點擊後是否另開分頁。true='target: "\_blank"', false='target: "\_self"',               |
+| title      | String            |      | `"訂閱電子報"`               | 設定按鈕文字。                                                                            |
 
 ## TODOs
 
