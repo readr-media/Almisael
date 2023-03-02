@@ -21,9 +21,6 @@ const Caption = styled.div`
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.03em;
-  -webkit-letter-spacing: 0.03em;
-  -moz-letter-spacing: 0.03em;
-  -ms-letter-spacing: 0.03em;
   color: #000928;
 
   &:hover {

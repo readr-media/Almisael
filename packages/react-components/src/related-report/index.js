@@ -85,7 +85,7 @@ const TitleBlock = styled.div`
  *
  * @param {Object}  props
  * @param {Post[]}  props.relatedData
- * @param {number}  [props.ariaLevel=undefined]
+ * @param {number}  [props.ariaLevel]
  * @param {string}  [props.title='最新報導']
  * @param {string}  [props.titleClassName='related-report-title']
  * @param {string}  [props.captionClassName='related-report-caption']
@@ -96,7 +96,7 @@ const TitleBlock = styled.div`
 
 export default function RelatedReport({
   relatedData = [],
-  ariaLevel = undefined,
+  ariaLevel,
   title = '最新報導',
   titleClassName = 'readr-report-title',
   captionClassName = 'readr-report-caption',

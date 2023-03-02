@@ -27,7 +27,7 @@ const ReadrLogo = styled.a`
 
 /**
  * @param {Object} props
- * @param {React.ReactNode} children
+ * @param {React.ReactNode} [props.children]
  * @param {string} [props.href='https://www.readr.tw/']
  * @param {string} [props.iconStyle='original']
  * @param {boolean} [props.openNewTab=true]

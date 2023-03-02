@@ -12,7 +12,6 @@ const Button = styled.a`
   padding: 12px 10px 12px;
   border-radius: 2px;
   text-align: center;
-  -o-transition: 0.3s;
   transition: 0.3s;
   box-shadow: 3px 3px 0px 0px #04295e;
   border: 1px solid #f5ebff;
