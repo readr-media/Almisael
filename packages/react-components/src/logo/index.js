@@ -4,11 +4,16 @@ import styled from 'styled-components'
 import { ReadrIcon } from './react-components/icon'
 
 const ReadrLogo = styled.a`
-  display: inline-block;
   margin: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   width: 42px;
+  height: auto;
 
-  svg {
+  > svg,
+  img {
     width: 100%;
     height: 100%;
     display: block;
@@ -22,8 +27,9 @@ const ReadrLogo = styled.a`
 
 /**
  * @param {Object} props
- * @param {string} [props.pathColor='']
+ * @param {React.ReactNode} children
  * @param {string} [props.href='https://www.readr.tw/']
+ * @param {string} [props.iconStyle='original']
  * @param {boolean} [props.openNewTab=true]
  * @param {string} [props.className='readr-logo']
  * @param {import("react").MouseEventHandler} [props.onClick]
@@ -31,12 +37,28 @@ const ReadrLogo = styled.a`
  */
 
 export default function Logo({
+  children,
   href = 'https://www.readr.tw/',
-  pathColor = '',
+  iconStyle = 'original',
   openNewTab = true,
   className = 'readr-logo',
   onClick,
 }) {
+  let iconColor
+
+  switch (iconStyle) {
+    case 'original':
+      break
+    case 'black':
+      iconColor = '#000000'
+      break
+    case 'white':
+      iconColor = '#ffffff'
+      break
+    default:
+      break
+  }
+
   return (
     <ReadrLogo
       className={className}
@@ -46,7 +68,7 @@ export default function Logo({
       onClick={onClick}
       aria-label="前往 READr 首頁"
     >
-      <ReadrIcon pathColor={pathColor} />
+      {children ?? <ReadrIcon iconColor={iconColor} />}
     </ReadrLogo>
   )
 }
