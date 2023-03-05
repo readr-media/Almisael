@@ -4,6 +4,7 @@
 
 - `@readr-media/react-component` 整理了 [Readr](https://www.readr.tw/) 網站/靜態專題所需之共用元件。
 - 詳細使用方式可參閱各元件的 README.md。
+- 注意：此套件僅支援 `ES modules`，需注意使用環境須為 Node.js 12 / Next.js 12 以上。
 
 ### Components
 
