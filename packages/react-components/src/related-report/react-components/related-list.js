@@ -1,7 +1,7 @@
 import React, { useState } from 'react' // eslint-disable-line
 import styled from 'styled-components'
-import DefaultImage from './image/default-image'
-import ReportInfo from './report-info'
+import DefaultImage from './image/default-image.js'
+import ReportInfo from './report-info.js'
 
 const RelatedItem = styled.li`
   list-style: none;

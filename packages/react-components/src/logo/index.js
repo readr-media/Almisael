@@ -1,7 +1,7 @@
 import React from 'react' // eslint-disable-line
 import styled from 'styled-components'
 
-import { ReadrIcon } from './react-components/icon'
+import { ReadrIcon } from './react-components/icon.js'
 
 const ReadrLogo = styled.a`
   margin: 12px 20px;

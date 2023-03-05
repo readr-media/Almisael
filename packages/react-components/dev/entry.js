@@ -1,9 +1,14 @@
 import React from 'react' // eslint-disable-line
 import styled from 'styled-components'
 import { createRoot } from 'react-dom/client'
-import { Logo, DonateButton, SubscribeButton, RelatedReport } from '../src'
-import { reportsData } from './mock-reports'
-import { Test } from './icons/test'
+import {
+  Logo,
+  DonateButton,
+  SubscribeButton,
+  RelatedReport,
+} from '../src/index.js'
+import { reportsData } from './mock-reports.js'
+import { Test } from './icons/test.js'
 
 const reactRootId = 'root'
 const container = document.getElementById(reactRootId)
@@ -38,6 +43,6 @@ root.render(
 
     <DonateButton />
     <SubscribeButton />
-    <RelatedReport relatedData={reportsData} ariaLevel={3} />
+    <RelatedReport relatedData={reportsData} />
   </>
 )

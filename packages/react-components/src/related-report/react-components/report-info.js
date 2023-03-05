@@ -1,6 +1,6 @@
 import React from 'react' // eslint-disable-line
 import styled from 'styled-components'
-import { formattedDate } from './utils'
+import { formattedDate } from './utils.js'
 
 const DotStyle = `
     content: "";
