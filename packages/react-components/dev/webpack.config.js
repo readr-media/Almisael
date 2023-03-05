@@ -1,7 +1,9 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const path = require('path')
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import path from 'path'
 
-module.exports = {
+const __dirname = path.dirname(new URL(import.meta.url).pathname)
+
+const webpackConfig = {
   mode: 'development',
   entry: {
     main: path.resolve(__dirname, './entry.js'),
@@ -35,3 +37,5 @@ module.exports = {
   ],
   devtool: 'eval-source-map',
 }
+
+export default webpackConfig
