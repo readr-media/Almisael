@@ -1,6 +1,6 @@
 const isProduction = process.env.NODE_ENV === 'production'
 
-module.exports = {
+export default {
   presets: [
     [
       '@babel/preset-env',

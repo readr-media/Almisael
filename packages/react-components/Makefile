@@ -10,7 +10,8 @@ dev:
 
 build-lib:
 	@echo "$(P) Transpile es6, jsx and (typescript) to es5"
-	NODE_ENV=production yarn babel src --out-dir lib --copy-files --root-mode upward
+	NODE_ENV=production yarn babel src --out-dir lib --copy-files
+
 
 build: clean build-lib
 
