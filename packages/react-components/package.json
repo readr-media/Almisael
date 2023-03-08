@@ -23,6 +23,7 @@
     "donate",
     "subscribe"
   ],
+  "author": "xuanchang",
   "license": "MIT",
   "peerDependencies": {
     "react": "^18.1.0",
