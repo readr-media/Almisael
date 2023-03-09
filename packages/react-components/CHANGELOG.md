@@ -1,5 +1,15 @@
 # @readr-media/react-component Changelog
 
+## Version 1.0.1 @ChangRongXuan
+
+### Notable Changes
+
+- fix(react-components): 'withConfig' error handle (Xuan)
+
+### commits
+
+- \[[`68764ff56f`](https://github.com/readr-media/react-component/commit/68764ff56f)] - fix(react-components): 'withConfig' error handle (Xuan)
+
 ## Version 1.0.0
 
 ### Notable Changes

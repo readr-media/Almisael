@@ -1,6 +1,6 @@
 {
   "name": "@readr-media/react-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "lib/index.js",
   "type": "module",
@@ -25,6 +25,9 @@
   ],
   "author": "xuanchang",
   "license": "MIT",
+  "dependencies": {
+    "styled-components": "^5.3.5"
+  },
   "peerDependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
