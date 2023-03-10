@@ -1,9 +1,14 @@
 {
   "name": "@readr-media/react-component",
-  "version": "1.0.1",
+  "version": "1.0.2-beta.23",
   "description": "",
-  "main": "lib/index.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
   "type": "module",
+  "exports": {
+    "import": "./lib/esm/index.js",
+    "require": "./lib/cjs/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "make dev",
