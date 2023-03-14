@@ -8,17 +8,14 @@ const RelatedItem = styled.li`
   width: 100%;
   margin: 0 0 16px;
   cursor: pointer;
-
   > a {
     text-decoration: none;
     color: #000928;
     display: flex;
   }
-
   @media (min-width: 576px) {
     margin: 0 0 32px;
     width: calc(50% - 12px);
-
     > a {
       display: block;
     }
@@ -26,7 +23,6 @@ const RelatedItem = styled.li`
   @media (min-width: 960px) {
     margin: 0 0 60px;
   }
-
   @media (min-width: 1200px) {
     width: calc(25% - 18px);
   }
@@ -41,7 +37,6 @@ const ImgBlock = styled.figure`
   margin: 0 16px 0 0;
   overflow: hidden;
   background: #f4ebfe;
-
   img,
   svg {
     width: 100%;
@@ -50,12 +45,10 @@ const ImgBlock = styled.figure`
     object-position: center;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-
     &:hover {
       transform: scale(1.1);
     }
   }
-
   @media (min-width: 576px) {
     width: 100%;
     aspect-ratio: 1.9 / 1;
@@ -65,12 +58,19 @@ const ImgBlock = styled.figure`
   }
 `
 
-function ReportImage({ imgSrc, postAmount, alt }) {
-  const [errored, setErrored] = useState(false)
+function ReportImage({ imgSrc, postAmount, alt, defaultImage }) {
+  const [imgErrored, setImgErrored] = useState(false)
+  const [defaultImgErrored, setDefaultImgErrored] = useState(false)
+
   return (
     <ImgBlock amount={postAmount}>
-      {imgSrc && !errored ? (
-        <img src={imgSrc} onError={() => setErrored(true)} alt={alt} />
+      {imgSrc && !imgErrored ? (
+        <img src={imgSrc} onError={() => setImgErrored(true)} alt={alt} />
+      ) : defaultImage && !defaultImgErrored ? (
+        <img
+          src={defaultImage}
+          onError={() => setDefaultImgErrored(true)}
+        ></img>
       ) : (
         <DefaultImage />
       )}
@@ -95,14 +95,15 @@ export default function RelatedList({
             <a href={item.link} target="_blank" rel="noopener noreferrer">
               <ReportImage
                 postAmount={relatedData.length}
-                imgSrc={item.imageUrl ? item.imageUrl : defaultImage}
-                alt={item.alt}
+                imgSrc={item.heroImage?.resized?.original}
+                alt={item.alt || item.heroImage?.name}
+                defaultImage={defaultImage}
               />
               <ReportInfo
-                caption={item.caption}
+                caption={item.name}
                 captionClassName={captionClassName}
-                date={item.date}
-                time={item.time}
+                date={item.publishTime}
+                time={item.readingTime}
               />
             </a>
           </RelatedItem>
