@@ -1,32 +1,70 @@
 export const reportsData = [
   {
     id: 1,
-    caption:
-      '【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」',
-    imageUrl:
-      'https://www.mirrormedia.com.tw/assets/images/20221017214008-027f6c46502e220dd63521d758ef95e6.jpg',
-    alt: 'report01',
-    date: '2023-02-08T07:00:00.000Z',
-    time: 15,
-    link: `https://www.readr.tw/post/2928`,
+    name: '【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」',
+    heroImage: {
+      id: '6',
+      name: '看板追追追 2.0',
+      resized: {
+        original:
+          'https://www.readr.tw/assets/images/cld2ymzdw000p10ykb7pshoop-mobile.png',
+        w480: '',
+        w800: 'https://www.readr.tw/assets/images/cld2ymzdw000p10ykb7pshoop-mobile.png',
+        w1200:
+          'https://www.readr.tw/assets/images/cld2ymzdw000p10ykb7pshoop-mobile.png',
+        w1600:
+          'https://www.readr.tw/assets/images/cld2ymzdw000p10ykb7pshoop-mobile.png',
+        w2400:
+          'https://www.readr.tw/assets/images/cld2ymzdw000p10ykb7pshoop-mobile.png',
+      },
+    },
+
+    readingTime: 5,
   },
   {
     id: 2,
-    caption:
-      '【寵粉速報】5元就能訂閱「鏡週刊會員制」　年費會員加碼抽Sony旗艦手機',
-    imageUrl:
-      'https://www.mirrormedia.com.tw/assets/images/20221017214008-027f6c46502e220dd63521d758ef95e6.jpg',
-    alt: 'report02',
-    link: 'https://www.readr.tw/post/2931',
-    date: '2022-02-08T07:00:00.000Z',
-    time: 10,
+    name: '【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」',
+    heroImage: {
+      id: '6',
+      name: '看板追追追 2.0',
+      resized: {
+        original:
+          'https://www.readr.tw/assets/images/clckhy1qz001310xb2u888w1d-mobile.png',
+        w480: '',
+        w800: 'https://www.readr.tw/assets/images/clckhy1qz001310xb2u888w1d-mobile.png',
+        w1200:
+          'https://www.readr.tw/assets/images/clckhy1qz001310xb2u888w1d-mobile.png',
+        w1600:
+          'https://www.readr.tw/assets/images/clckhy1qz001310xb2u888w1d-mobile.png',
+        w2400:
+          'https://www.readr.tw/assets/images/clckhy1qz001310xb2u888w1d-mobile.png',
+      },
+    },
+
+    readingTime: 15,
+    publishTime: '2023-02-08T07:00:00.000Z',
   },
   {
     id: 3,
-    caption: '【寵粉速報】5元就能訂閱「鏡週刊會員制」　年費會員加碼',
-    alt: 'report03',
-    date: '2021-02-08T07:00:00.000Z',
-    time: 5,
-    link: 'https://www.readr.tw/post/2903',
+    name: '【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」',
+    heroImage: {
+      id: '6',
+      name: '看板追追追 2.0',
+      resized: {
+        original:
+          'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
+        w480: 'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
+        w800: 'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
+        w1200:
+          'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
+        w1600:
+          'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
+        w2400:
+          'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
+      },
+    },
+
+    readingTime: 0,
+    publishTime: '2023-02-08T07:00:00.000Z',
   },
 ]
