@@ -1,5 +1,5 @@
 import React from 'react' // eslint-disable-line
-import styled from 'styled-components'
+import styled from '../styled-components.js'
 import RelatedList from './react-components/related-list.js'
 
 const Container = styled.section`
