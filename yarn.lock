@@ -1355,6 +1355,11 @@
     "@twreporter/errors" "^1.1.1"
     axios "^0.27.2"
 
+"@readr-media/react-image@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@readr-media/react-image/-/react-image-1.5.1.tgz#d04b809416be6a1432a0a3154f2641292d7b6b8d"
+  integrity sha512-BExGQWO158vtfox2mkwjT8khZp00KOwAObnZsQVzO4JNO4RlTog/5u7ccw7WuBd1OR07rlh/jKm4ts+qt78saw==
+
 "@readr-media/react-live-blog@1.1.7":
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/@readr-media/react-live-blog/-/react-live-blog-1.1.7.tgz#f08fb40bba034cf200d72ee4187649ef482c9c15"

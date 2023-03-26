@@ -1,6 +1,6 @@
 {
   "name": "@readr-media/react-component",
-  "version": "1.0.2-beta.32",
+  "version": "2.0.0-alpha.1",
   "description": "",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -16,11 +16,7 @@
     "clean": "make clean",
     "build-lib": "make build-lib"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/readr-media/Almisael.git",
-    "directory": "packages/react-component"
-  },
+  "repository": "https://github.com/readr-media/Almisael.git",
   "keywords": [
     "react",
     "logo",
@@ -33,7 +29,13 @@
   "peerDependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "@readr-media/react-image": "^1.5.1",
+    "dayjs": "^1.11.7"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "@readr-media/react-image": "^1.5.1"
   },
   "files": [
     "lib",
