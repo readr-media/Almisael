@@ -1,6 +1,6 @@
 import React from 'react' // eslint-disable-line
 import styled from '../../styled-components.js'
-import { formattedDate } from './utils.js'
+import dayjs from 'dayjs'
 
 const DotStyle = `
     content: "";
@@ -13,7 +13,7 @@ const DotStyle = `
     background-color: rgba(0,9,40,.2);
 `
 
-const Caption = styled.div`
+const Title = styled.div`
   word-wrap: break-word;
   text-align: left;
   display: inline;
@@ -57,15 +57,26 @@ const Info = styled.div`
   }
 `
 
-export default function ReportInfo({ caption, captionClassName, date, time }) {
+export default function ReportInfo({ title, titleClassName, date, time }) {
+  function formatPostDate(datetime) {
+    const formatStr = dayjs().isSame(dayjs(datetime), 'year')
+      ? 'MM/DD'
+      : 'YYYY/MM/DD'
+    return dayjs(datetime).format(formatStr)
+  }
+
+  function formatReadTime(readingTime = 0) {
+    return readingTime
+      ? `閱讀時間 ${Number(readingTime)} 分鐘`
+      : `閱讀時間 10 分鐘`
+  }
+
   return (
-    <div className="readr-report-info">
-      {caption && <Caption className={captionClassName}>{caption}</Caption>}
+    <div className="report-info">
+      {title && <Title className={titleClassName}>{title}</Title>}
       <Info date={date}>
-        {date && <span className="date">{formattedDate(date)}</span>}
-        {time > 0 && (
-          <span className="time">閱讀時間&thinsp;{time}&thinsp;分鐘</span>
-        )}
+        {date && <span className="date">{formatPostDate(date)}</span>}
+        {time > 0 && <span className="time">{formatReadTime(time)}</span>}
       </Info>
     </div>
   )
