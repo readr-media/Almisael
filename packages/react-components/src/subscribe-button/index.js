@@ -1,5 +1,5 @@
 import React from 'react' // eslint-disable-line
-import styled from 'styled-components'
+import styled from '../styled-components.js'
 
 const Button = styled.a`
   font-family: 'Source Han Sans Traditional', sans-serif;

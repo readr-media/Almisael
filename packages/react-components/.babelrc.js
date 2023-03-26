@@ -1,4 +1,5 @@
 const isProduction = process.env.NODE_ENV === 'production'
+const buildTarget = process.env.BUILD_TARGET || 'esmodule' // another value could be 'commonjs'
 
 export default {
   presets: [
@@ -7,7 +8,7 @@ export default {
       // Compile to npm packages run on Node 14+
       // We can overwrite this option at each package level
       {
-        modules: false,
+        modules: buildTarget === 'esmodule' ? false : 'commonjs',
         targets: {
           node: '14',
         },

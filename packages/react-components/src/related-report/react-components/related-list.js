@@ -1,5 +1,5 @@
 import React, { useState } from 'react' // eslint-disable-line
-import styled from 'styled-components'
+import styled from '../../styled-components.js'
 import DefaultImage from './image/default-image.js'
 import ReportInfo from './report-info.js'
 
