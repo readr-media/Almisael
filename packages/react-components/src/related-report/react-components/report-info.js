@@ -63,7 +63,7 @@ export default function ReportInfo({ caption, captionClassName, date, time }) {
       {caption && <Caption className={captionClassName}>{caption}</Caption>}
       <Info date={date}>
         {date && <span className="date">{formattedDate(date)}</span>}
-        {time && (
+        {time > 0 && (
           <span className="time">閱讀時間&thinsp;{time}&thinsp;分鐘</span>
         )}
       </Info>

@@ -95,7 +95,7 @@ const TitleBlock = styled.div`
  */
 
 export default function RelatedReport({
-  relatedData = [],
+  relatedData,
   ariaLevel,
   title = '最新報導',
   titleClassName = 'readr-report-title',
@@ -103,18 +103,19 @@ export default function RelatedReport({
   highlightColor = '#ffffff',
   defaultImage = '',
 }) {
-  const checkCaptionValid = (data) => {
-    return data.every(
-      (obj) => obj.hasOwnProperty('caption') && obj['caption'] !== ''
-    )
+
+  const checkNameValid = (data) => {
+    return data.every((obj) => obj.hasOwnProperty('name') && obj['name'] !== '')
   }
   const checkDataValid = (data) => {
     try {
+      //check：if `relatedData` is an array
       if (!Array.isArray(data)) {
         return false
-      } else if (!checkCaptionValid(data)) {
+      } else if (!checkNameValid(data)) {
+        //check：each object in `relatedData` contains `name` key
         console.log(
-          `Error: Not all objects in 'relatedData' have the key 'caption'`
+          `Error: Not all objects in 'relatedData' have the key 'name'`
         )
         return false
       } else {
@@ -125,6 +126,7 @@ export default function RelatedReport({
       return false
     }
   }
+
 
   return (
     <>
