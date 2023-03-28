@@ -54,8 +54,10 @@ const ImgBlock = styled.picture`
 `
 
 /**
+ * @typedef {import('../index').Post} Post
+ *
  * @param {Object} props
- * @param {Post[]}  props.postData
+ * @param {Post[]} props.postData
  * @param {string} titleClassName
  * @param {string} defaultImage
  * @return {JSX.Element}
@@ -78,7 +80,7 @@ export default function RelatedList({
             <a href={post.link} target="_blank" rel="noopener noreferrer">
               <ImgBlock>
                 <ShareImage.default
-                  images={post.heroImage?.resized || {}}
+                  images={post.images || {}}
                   defaultImage={defaultImage}
                   alt={post.name || post.title}
                   priority={false}

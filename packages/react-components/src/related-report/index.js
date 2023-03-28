@@ -82,8 +82,27 @@ const TitleBlock = styled.div`
 `
 
 /**
- * @typedef {import('../typedef').Post} Post
- *
+ *  @typedef  {Object}             ResizedImages
+ *  @property {string}             [original]
+ *  @property {string}             [w480]
+ *  @property {string}             [w800]
+ *  @property {string}             [w1200]
+ *  @property {string}             [w1600]
+ *  @property {string}             [w2400]
+ */
+
+/**
+ *  @typedef  {Object}              Post
+ *  @property {number|string}       id
+ *  @property {string}              [name]
+ *  @property {string}              [title]
+ *  @property {number}              [readingTime]
+ *  @property {string}              [publishTime]
+ *  @property {ResizedImages|null}  [images]
+ *  @property {string}              [link]
+ */
+
+/**
  * @param {Object}  props
  * @param {Post[]}  props.postData
  * @param {number}  [props.ariaLevel]
