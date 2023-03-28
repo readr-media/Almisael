@@ -8,7 +8,7 @@
 - fix(react-components): formate data/time by `dayjs` (Xuan)
 - style(react-components): update SVG & mock-data (Xuan)
 
-### commits
+### Commits
 
 - \[[`4dc8920a94`](https://github.com/readr-media/Almisael/commit/4dc8920a94)] - feat(react-components): use `react-image` & update types (Xuan)
 - \[[`4c05d03e73`](https://github.com/readr-media/Almisael/commit/4c05d03e73)] - style(react-components): update mock-data (Xuan)
@@ -26,7 +26,7 @@
 - chore(react-components): change `modules` based on env (Xuan)
 - fix(react-components): remove `dependencies`: "styled-components" (Xuan)
 
-### commits
+### Commits
 
 - \[[`b95b50a0d9`](https://github.com/readr-media/Almisael/commit/b95b50a0d9)] - Merge pull request #6 from ChangRongXuan/main (Xuan)
 - \[[`4c148657cf`](https://github.com/readr-media/Almisael/commit/4c148657cf)] - Merge pull request #7 from ChangRongXuan/react-component (Xuan)
@@ -49,7 +49,7 @@
 
 - fix(react-components): 'withConfig' error handle (Xuan)
 
-### commits
+### Commits
 
 - \[[`6f012c2c86`](https://github.com/readr-media/Almisael/commit/6f012c2c86)] - chore(react-components): bump version to `1.0.1` (Xuan)
 - \[[`87ec09a290`](https://github.com/readr-media/Almisael/commit/87ec09a290)] - Merge pull request #2 from readr-media/main (Xuan)
@@ -66,7 +66,7 @@
 - feat(react-components): add `donate-button`
 - feat(react-components): add `related-report`
 
-### commits
+### Commits
 
 - \[[`54ac45f061`](https://github.com/readr-media/Almisael/commit/54ac45f061)] - fix(react-components): change `babel.config.js` to `.babelrc.js` (Xuan)
 - \[[`2ef7a17db9`](https://github.com/readr-media/Almisael/commit/2ef7a17db9)] - fix(react-components): update `peerDependencies` version (Xuan)
