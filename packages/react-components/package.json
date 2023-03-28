@@ -16,7 +16,11 @@
     "clean": "make clean",
     "build-lib": "make build-lib"
   },
-  "repository": "https://github.com/readr-media/Almisael.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/readr-media/Almisael.git",
+    "directory": "packages/react-component"
+  },
   "keywords": [
     "react",
     "logo",
@@ -29,16 +33,16 @@
   "peerDependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "styled-components": "^5.3.5",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^2.0.1"
+  },
+  "dependencies": {
     "@readr-media/react-image": "^1.5.1",
     "dayjs": "^1.11.7"
   },
-  "devDependencies": {
-    "babel-plugin-inline-react-svg": "^2.0.1",
-    "@readr-media/react-image": "^1.5.1"
-  },
   "files": [
-    "lib",
-    "CHANGELOG.md"
+    "lib"
   ]
 }
