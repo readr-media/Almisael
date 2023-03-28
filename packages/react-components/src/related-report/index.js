@@ -1,7 +1,6 @@
 import React from 'react' // eslint-disable-line
 import styled from '../styled-components.js'
 import RelatedList from './react-components/related-list.js'
-import { Breakpoint, Rwd } from '@readr-media/react-image/dist/react-components'
 
 const Container = styled.section`
   width: 100%;
@@ -82,6 +81,22 @@ const TitleBlock = styled.div`
   }
 `
 
+// Rwd/Breakpoint：same as `readr-media/react-image` JSDoc
+/**
+ * @typedef {Object} Rwd
+ * @property {string} [mobile]
+ * @property {string} [tablet]
+ * @property {string} [laptop]
+ * @property {string} [desktop]
+ * @property {string} [default]
+ */
+/**
+ * @typedef {Object} Breakpoint
+ * @property {string} [mobile]
+ * @property {string} [tablet]
+ * @property {string} [laptop]
+ * @property {string} [desktop]
+ */
 /**
  *  @typedef  {Object}             ResizedImages
  *  @property {string}             [original]
@@ -91,7 +106,6 @@ const TitleBlock = styled.div`
  *  @property {string}             [w1600]
  *  @property {string}             [w2400]
  */
-
 /**
  *  @typedef  {Object}              Post
  *  @property {number|string}       id
@@ -102,7 +116,6 @@ const TitleBlock = styled.div`
  *  @property {ResizedImages|null}  [images]
  *  @property {string}              [link]
  */
-
 /**
  * @param {Object}      props
  * @param {Post[]}      props.postData

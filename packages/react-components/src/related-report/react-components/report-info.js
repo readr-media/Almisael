@@ -26,8 +26,12 @@ const Title = styled.div`
   -webkit-line-clamp: 4;
   overflow: hidden;
 
-  &:hover {
-    border-bottom: 1.5px solid #000928;
+  p {
+    display: inline;
+
+    &:hover {
+      border-bottom: 1.5px solid #000928;
+    }
   }
 
   @media (min-width: 768px) {
@@ -84,7 +88,11 @@ export default function ReportInfo({ title, titleClassName, date, time }) {
 
   return (
     <div className="report-info">
-      {title && <Title className={titleClassName}>{title}</Title>}
+      {title && (
+        <Title className={titleClassName}>
+          <p>{title}</p>
+        </Title>
+      )}
       <Info date={date}>
         {date && <span className="date">{formatPostDate(date)}</span>}
         <span className="time">{formatReadTime(time)}</span>

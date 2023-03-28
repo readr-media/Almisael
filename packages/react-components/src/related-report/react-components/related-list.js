@@ -1,7 +1,7 @@
 import React from 'react' // eslint-disable-line
 import styled from '../../styled-components.js'
 import ReportInfo from './report-info.js'
-import ShareImage from '@readr-media/react-image'
+import SharedImage from '@readr-media/react-image'
 
 const RelatedItem = styled.li`
   list-style: none;
@@ -72,7 +72,6 @@ export default function RelatedList({
   rwd,
   breakpoint,
 }) {
-  
   //breakpoint applicable to READr 3.0
   const READr_DEFAULT_BREAKPOINT = {
     mobile: '320px',
