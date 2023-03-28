@@ -23,7 +23,7 @@ export const reportsData = [
   },
   {
     id: 2,
-    title: '標題測試標題測試標題測試標題測試標題測試標題測試標題測試標題測試',
+    name: '標題測試標題測試標題測試標題測試標題測試標題測試標題測試標題測試',
     heroImage: {
       id: '6',
       name: '看板追追追 2.0',
@@ -42,7 +42,7 @@ export const reportsData = [
     },
 
     readingTime: 15,
-    publishTime: '2023-02-08T07:00:00.000Z',
+    publishTime: '2022-02-08T07:00:00.000Z',
   },
   {
     id: 3,
