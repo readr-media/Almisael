@@ -69,15 +69,15 @@ export default function ComponentName() {
 
 ## Props
 
-| 名稱            | 資料型別 | 必須 | 預設值             | 說明                                                                                                                                                            |
-| --------------- | -------- | ---- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| postData        | Array    | `V`  | `[]`               | 報導資訊。範例：`[ { id: '1', title: '報導標題', publishTime: '2023-02-08T07:00:00.000Z', readingTime: 100 ,link: 'https://www.readr.tw', heroImage: {} } ]` 。 |
-| header          | string   |      | `"最新報導"`       | 大標。                                                                                                                                                          |
-| ariaLevel       | number   |      | `undefined`        | 設定大標（role="heading"）的 aria-level，                                                                                                                       |
-| highlightColor  | string   |      | `"#ffffff"`        | 標題 highlight 顏色。                                                                                                                                           |
-| headerClassName | string   |      | `"report-header"`  | 指定大標 className，可用於變更大標樣式。                                                                                                                        |
-| titleClassName  | string   |      | `"report-title"` | 指定報導標題 className，可用於變更報導標題樣式。                                                                                                                |
-| defaultImage    | string   |      | `""`               | 報導的預設圖片路徑。當 `postData` 的 `heroImage` 載入失敗時，則載入預設圖片。                                                                                   |
+| 名稱            | 資料型別 | 必須 | 預設值            | 說明                                                                          |
+| --------------- | -------- | ---- | ----------------- | ----------------------------------------------------------------------------- |
+| postData        | Array    | `V`  | `[]`              | 報導資訊。[範例](#props-detail--postdata)                                     |
+| header          | string   |      | `"最新報導"`      | 大標。                                                                        |
+| ariaLevel       | number   |      | `undefined`       | 設定大標（role="heading"）的 aria-level，                                     |
+| highlightColor  | string   |      | `"#ffffff"`       | 標題 highlight 顏色。                                                         |
+| headerClassName | string   |      | `"report-header"` | 指定大標 className，可用於變更大標樣式。                                      |
+| titleClassName  | string   |      | `"report-title"`  | 指定報導標題 className，可用於變更報導標題樣式。                              |
+| defaultImage    | string   |      | `""`              | 報導的預設圖片路徑。當 `postData` 的 `heroImage` 載入失敗時，則載入預設圖片。 |
 
 ## Props Detail : postData
 
