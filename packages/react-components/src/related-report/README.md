@@ -77,7 +77,7 @@ export default function ComponentName() {
 | highlightColor  | string   |      | `"#ffffff"`       | 標題 highlight 顏色。                                                         |
 | headerClassName | string   |      | `"report-header"` | 指定大標 className，可用於變更大標樣式。                                      |
 | titleClassName  | string   |      | `"report-title"`  | 指定報導標題 className，可用於變更報導標題樣式。                              |
-| defaultImage    | string   |      | `""`              | 報導的預設圖片路徑。當 `postData` 的 `heroImage` 載入失敗時，則載入預設圖片。 |
+| defaultImage    | string   |      | `""`              | 報導的預設圖片路徑。當 `postData` 的 `images` 載入失敗時，則載入預設圖片。 |
 
 ## Props Detail : postData
 
@@ -91,7 +91,7 @@ export default function ComponentName() {
 - `title`: 報導標題。 // alias to `name`
 - `publishTime`: 報導發布日期。
 - `readingTime`: 報導閱讀時間。
-- `heroImage`: 報導圖片。
+- `images`: 報導圖片。
 - `link`: 報導連結。
 
 ## TODOs
