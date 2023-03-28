@@ -53,6 +53,14 @@ const ImgBlock = styled.picture`
   }
 `
 
+/**
+ * @param {Object} props
+ * @param {Post[]}  props.postData
+ * @param {string} titleClassName
+ * @param {string} defaultImage
+ * @return {JSX.Element}
+ */
+
 export default function RelatedList({
   postData,
   titleClassName,
@@ -77,7 +85,7 @@ export default function RelatedList({
                 />
               </ImgBlock>
               <ReportInfo
-                title={post.name || post.title}
+                title={post.name}
                 titleClassName={titleClassName}
                 date={post.publishTime}
                 time={post.readingTime}

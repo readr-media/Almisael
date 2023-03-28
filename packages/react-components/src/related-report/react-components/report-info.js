@@ -16,12 +16,15 @@ const DotStyle = `
 const Title = styled.div`
   word-wrap: break-word;
   text-align: left;
-  display: inline;
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: #000928;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 
   &:hover {
     border-bottom: 1.5px solid #000928;
@@ -29,7 +32,6 @@ const Title = styled.div`
 
   @media (min-width: 768px) {
     font-size: 18px;
-    line-height: 27px;
   }
 `
 
@@ -57,6 +59,15 @@ const Info = styled.div`
   }
 `
 
+/**
+ * @param {Object} props
+ * @param {string} title
+ * @param {string} titleClassName
+ * @param {string} date
+ * @param {number} time
+ * @return {JSX.Element}
+ */
+
 export default function ReportInfo({ title, titleClassName, date, time }) {
   function formatPostDate(datetime) {
     const formatStr = dayjs().isSame(dayjs(datetime), 'year')
@@ -76,7 +87,7 @@ export default function ReportInfo({ title, titleClassName, date, time }) {
       {title && <Title className={titleClassName}>{title}</Title>}
       <Info date={date}>
         {date && <span className="date">{formatPostDate(date)}</span>}
-        {time > 0 && <span className="time">{formatReadTime(time)}</span>}
+        <span className="time">{formatReadTime(time)}</span>
       </Info>
     </div>
   )
