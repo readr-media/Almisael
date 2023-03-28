@@ -1,6 +1,7 @@
 import React from 'react' // eslint-disable-line
 import styled from '../styled-components.js'
 import RelatedList from './react-components/related-list.js'
+import { Breakpoint, Rwd } from '@readr-media/react-image/dist/react-components'
 
 const Container = styled.section`
   width: 100%;
@@ -103,14 +104,16 @@ const TitleBlock = styled.div`
  */
 
 /**
- * @param {Object}  props
- * @param {Post[]}  props.postData
- * @param {number}  [props.ariaLevel]
- * @param {string}  [props.header='最新報導']
- * @param {string}  [props.headerClassName='report-header']
- * @param {string}  [props.titleClassName='report-title']
- * @param {string}  [props.highlightColor='#ffffff']
- * @param {string}  [props.defaultImage='']
+ * @param {Object}      props
+ * @param {Post[]}      props.postData
+ * @param {number}      [props.ariaLevel]
+ * @param {string}      [props.header='最新報導']
+ * @param {string}      [props.headerClassName='report-header']
+ * @param {string}      [props.titleClassName='report-title']
+ * @param {string}      [props.highlightColor='#ffffff']
+ * @param {string}      [props.defaultImage='']
+ * @param {Rwd}         [props.rwd]
+ * @param {Breakpoint}  [props.breakpoint]
  * @return {JSX.Element}
  */
 
@@ -122,6 +125,8 @@ export default function RelatedReport({
   titleClassName = 'report-title',
   highlightColor = '#ffffff',
   defaultImage = '',
+  rwd,
+  breakpoint,
 }) {
   const checkDataValid = (data) => {
     try {
@@ -155,6 +160,8 @@ export default function RelatedReport({
               postData={postData}
               titleClassName={titleClassName}
               defaultImage={defaultImage}
+              rwd={rwd}
+              breakpoint={breakpoint}
             />
           </ul>
         </Container>

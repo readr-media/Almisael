@@ -56,10 +56,12 @@ const ImgBlock = styled.picture`
 /**
  * @typedef {import('../index').Post} Post
  *
- * @param {Object} props
- * @param {Post[]} props.postData
- * @param {string} titleClassName
- * @param {string} defaultImage
+ * @param {Object}      props
+ * @param {Post[]}      props.postData
+ * @param {string}      titleClassName
+ * @param {string}      defaultImage
+ * @param {Rwd}         [props.rwd]
+ * @param {Breakpoint}  [props.breakpoint]
  * @return {JSX.Element}
  */
 
@@ -67,7 +69,18 @@ export default function RelatedList({
   postData,
   titleClassName,
   defaultImage,
+  rwd,
+  breakpoint,
 }) {
+  
+  //breakpoint applicable to READr 3.0
+  const READr_DEFAULT_BREAKPOINT = {
+    mobile: '320px',
+    tablet: '768px',
+    laptop: '1200px',
+    desktop: '1440px',
+  }
+
   return (
     <>
       {postData.map((post, index) => {
@@ -79,11 +92,13 @@ export default function RelatedList({
           >
             <a href={post.link} target="_blank" rel="noopener noreferrer">
               <ImgBlock>
-                <ShareImage.default
+                <SharedImage.default
                   images={post.images || {}}
                   defaultImage={defaultImage}
-                  alt={post.name || post.title}
+                  alt={post.name}
                   priority={false}
+                  rwd={rwd}
+                  breakpoint={breakpoint || READr_DEFAULT_BREAKPOINT}
                 />
               </ImgBlock>
               <ReportInfo

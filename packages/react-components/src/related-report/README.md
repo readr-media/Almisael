@@ -15,6 +15,7 @@
   - 使用者可傳入 `highlightColor`，指定大標 highlight 顏色 。
   - 使用者可傳入 `defaultImage`。當文章圖片無法正常顯示時，會改為顯示此 `defaultImage`。
   - 使用預設的 className : `.report-header`, `.report-title` 調整大標/報導標題樣式，或傳入自訂 className，並以該 className 進行調整。
+  - 傳入 `rwd`, `breakpoint`，設定報導圖片的螢幕斷點與相應的圖片尺寸。（細節可參考 `@readr-media/react-image` 套件設定)。
 
 ![Related report](./imgs/related-report.svg)
 
@@ -34,20 +35,14 @@ const data = [
     link: "https://www.readr.tw/post/2932",
     publishTime: "2023-02-08T07:00:00.000Z",
     readingTime: 100,
-    heroImage: {
-        id: "3",
-        name: "記者來當外送員：開箱美食外送秘辛！",
-        imageFile: null,
-        urlOriginal: "",
-        resized: {
-          "original": "https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdbfe2f0f930023f79aab.記者來當外送員：開箱美食外送秘辛！.jpg",
-          "w480": "https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdbfe2f0f930023f79aab-w480.記者來當外送員：開箱美食外送秘辛！.jpg",
-          "w800": "https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdbfe2f0f930023f79aab-w800.記者來當外送員：開箱美食外送秘辛！.jpg",
-          "w1200": "",
-          "w1600": "https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdbfe2f0f930023f79aab-w1600.記者來當外送員：開箱美食外送秘辛！.jpg",
-          "w2400": "https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdbfe2f0f930023f79aab-w2400.記者來當外送員：開箱美食外送秘辛！.jpg"
-        }
-      },
+    images: {
+      "original": "https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdbfe2f0f930023f79aab.記者來當外送員：開箱美食外送秘辛！.jpg",
+      "w480": "https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdbfe2f0f930023f79aab-w480.記者來當外送員：開箱美食外送秘辛！.jpg",
+      "w800": "https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdbfe2f0f930023f79aab-w800.記者來當外送員：開箱美食外送秘辛！.jpg",
+      "w1200": "",
+      "w1600": "https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdbfe2f0f930023f79aab-w1600.記者來當外送員：開箱美食外送秘辛！.jpg",
+      "w2400": "https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdbfe2f0f930023f79aab-w2400.記者來當外送員：開箱美食外送秘辛！.jpg"
+    }
   }
 
 ]
@@ -69,15 +64,17 @@ export default function ComponentName() {
 
 ## Props
 
-| 名稱            | 資料型別 | 必須 | 預設值            | 說明                                                                          |
-| --------------- | -------- | ---- | ----------------- | ----------------------------------------------------------------------------- |
-| postData        | Array    | `V`  | `[]`              | 報導資訊。[範例](#props-detail--postdata)                                     |
-| header          | string   |      | `"最新報導"`      | 大標。                                                                        |
-| ariaLevel       | number   |      | `undefined`       | 設定大標（role="heading"）的 aria-level，                                     |
-| highlightColor  | string   |      | `"#ffffff"`       | 標題 highlight 顏色。                                                         |
-| headerClassName | string   |      | `"report-header"` | 指定大標 className，可用於變更大標樣式。                                      |
-| titleClassName  | string   |      | `"report-title"`  | 指定報導標題 className，可用於變更報導標題樣式。                              |
-| defaultImage    | string   |      | `""`              | 報導的預設圖片路徑。當 `postData` 的 `images` 載入失敗時，則載入預設圖片。 |
+| 名稱            | 資料型別 | 必須 | 預設值                     | 說明                                                                                                                                                                                       |
+| --------------- | -------- | ---- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| postData        | Array    | `V`  | `[]`                       | 報導資訊。細節見 [postData](#props-detail--postdata)                                                                                                                                       |
+| header          | string   |      | `"最新報導"`               | 大標。                                                                                                                                                                                     |
+| ariaLevel       | number   |      | `undefined`                | 設定大標（role="heading"）的 aria-level，                                                                                                                                                  |
+| highlightColor  | string   |      | `"#ffffff"`                | 標題 highlight 顏色。                                                                                                                                                                      |
+| headerClassName | string   |      | `"report-header"`          | 指定大標 className，可用於變更大標樣式。                                                                                                                                                   |
+| titleClassName  | string   |      | `"report-title"`           | 指定報導標題 className，可用於變更報導標題樣式。                                                                                                                                           |
+| defaultImage    | string   |      | `""`                       | 報導的預設圖片路徑。當 `postData` 的 `images` 載入失敗時，則載入預設圖片。                                                                                                                 |
+| rwd             | Object   |      |                            | [`@readr-media/react-image`](https://www.npmjs.com/package/@readr-media/react-image) 套件參數，設定不同斷點下要載入的圖片大小。 預設同套件。                                               |
+| breakpoint      | Object   |      | `READr_DEFAULT_BREAKPOINT` | 設定螢幕斷點，[`@readr-media/react-image`](https://www.npmjs.com/package/@readr-media/react-image) 套件的參數。如未填入，設定同 [READr](#readr3.0-breakpoint--readr_default_breakpoint) 。 |
 
 ## Props Detail : postData
 
@@ -88,11 +85,21 @@ export default function ComponentName() {
 ### optional
 
 - `name`: 報導標題。
-- `title`: 報導標題。 // alias to `name`
 - `publishTime`: 報導發布日期。
 - `readingTime`: 報導閱讀時間。
 - `images`: 報導圖片。
 - `link`: 報導連結。
+
+## READr3.0 Breakpoint : READr_DEFAULT_BREAKPOINT
+
+```
+READr_DEFAULT_BREAKPOINT = {
+    mobile: '320px',
+    tablet: '768px',
+    laptop: '1200px',
+    desktop: '1440px',
+}
+```
 
 ## TODOs
 
