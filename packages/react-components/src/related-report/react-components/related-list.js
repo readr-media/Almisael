@@ -58,10 +58,10 @@ const ImgBlock = styled.picture`
  *
  * @param {Object}      props
  * @param {Post[]}      props.postData
- * @param {string}      titleClassName
- * @param {string}      defaultImage
- * @param {Rwd}         [props.rwd]
- * @param {Breakpoint}  [props.breakpoint]
+ * @param {string}      props.titleClassName
+ * @param {string}      props.defaultImage
+ * @param {import('@readr-media/react-image/dist/react-components').Rwd}         [props.rwd]
+ * @param {import('@readr-media/react-image/dist/react-components').Breakpoint}  [props.breakpoint]
  * @return {JSX.Element}
  */
 

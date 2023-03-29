@@ -65,10 +65,10 @@ const Info = styled.div`
 
 /**
  * @param {Object} props
- * @param {string} title
- * @param {string} titleClassName
- * @param {string} date
- * @param {number} time
+ * @param {string} props.title
+ * @param {string} props.titleClassName
+ * @param {string} props.date
+ * @param {number} props.time
  * @return {JSX.Element}
  */
 

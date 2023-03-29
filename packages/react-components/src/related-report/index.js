@@ -80,23 +80,6 @@ const TitleBlock = styled.div`
     max-width: 1096px;
   }
 `
-
-// Rwd/Breakpoint：same as `readr-media/react-image` JSDoc
-/**
- * @typedef {Object} Rwd
- * @property {string} [mobile]
- * @property {string} [tablet]
- * @property {string} [laptop]
- * @property {string} [desktop]
- * @property {string} [default]
- */
-/**
- * @typedef {Object} Breakpoint
- * @property {string} [mobile]
- * @property {string} [tablet]
- * @property {string} [laptop]
- * @property {string} [desktop]
- */
 /**
  *  @typedef  {Object}             ResizedImages
  *  @property {string}             [original]
@@ -125,8 +108,8 @@ const TitleBlock = styled.div`
  * @param {string}      [props.titleClassName='report-title']
  * @param {string}      [props.highlightColor='#ffffff']
  * @param {string}      [props.defaultImage='']
- * @param {Rwd}         [props.rwd]
- * @param {Breakpoint}  [props.breakpoint]
+ * @param {import('@readr-media/react-image/dist/react-components').Rwd}         [props.rwd]
+ * @param {import('@readr-media/react-image/dist/react-components').Breakpoint}  [props.breakpoint]
  * @return {JSX.Element}
  */
 
