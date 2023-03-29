@@ -11,22 +11,31 @@
 
 ### Commits
 
-- \[[`470033c41d`](https://github.com/readr-media/Almisael/commit/470033c41d)] - feat(react-components): add `rwd`, `breakpoint` to props (Xuan)
-- \[[`c18f4badfe`](https://github.com/readr-media/Almisael/commit/c18f4badfe)] - docs(react-components): change `heroImage` to `images` (Xuan)
-- \[[`edbad823ce`](https://github.com/readr-media/Almisael/commit/edbad823ce)] - fix(react-components): change `heroImage` to `images` & adjust relevant type (Xuan)
-- \[[`600ed6d310`](https://github.com/readr-media/Almisael/commit/600ed6d310)] - docs(react-components): update README.md (Xuan)
-- \[[`d3facfaba1`](https://github.com/readr-media/Almisael/commit/d3facfaba1)] - feat(react-components): update mock-data (Xuan)
-- \[[`61cd1a463b`](https://github.com/readr-media/Almisael/commit/61cd1a463b)] - docs(react-components): add props jsDoc (Xuan)
-- \[[`f97130ca50`](https://github.com/readr-media/Almisael/commit/f97130ca50)] - docs(react-components): update CHANGELOG style (Xuan)
-- \[[`986960bded`](https://github.com/readr-media/Almisael/commit/986960bded)] - chore(react-components): update `dependencies` package (Xuan)
-- \[[`67c25b05f0`](https://github.com/readr-media/Almisael/commit/67c25b05f0)] - docs(react-components): update CHANGELOG & README (Xuan)
+- \[[`a4ba2bd394`](https://github.com/readr-media/Almisael/commit/a4ba2bd394)] - Merge branch 'main' of <https://github.com/ChangRongXuan/Almisael> (Xuan)
+- \[[`65c434276e`](https://github.com/readr-media/Almisael/commit/65c434276e)] - fix(react-components): update `rwd`、`breakpoint` & relevant docs (Xuan)
+- \[[`375b1b5640`](https://github.com/readr-media/Almisael/commit/375b1b5640)] - chore(react-components): update version to `2.0.0-alpha.5` (Xuan)
+- \[[`7f17081110`](https://github.com/readr-media/Almisael/commit/7f17081110)] - fix(react-components): adjust `READr_DEFAULT_BREAKPOINT` (Xuan)
+- \[[`6531c53b3e`](https://github.com/readr-media/Almisael/commit/6531c53b3e)] - docs(react-components): change `title`、`date`、`time` to optional (Xuan)
+- \[[`f2e68db600`](https://github.com/readr-media/Almisael/commit/f2e68db600)] - chore(react-components): add CHANGELOG to files (Xuan)
+- \[[`056b2a1af6`](https://github.com/readr-media/Almisael/commit/056b2a1af6)] - docs(react-components): update JSDoc (Xuan)
+- \[[`fc7d81ea0d`](https://github.com/readr-media/Almisael/commit/fc7d81ea0d)] - chore(react-components): bump up version (Xuan)
 
-* \[[`4dc8920a94`](https://github.com/readr-media/Almisael/commit/4dc8920a94)] - feat(react-components): use `react-image` & update types (Xuan)
-* \[[`4c05d03e73`](https://github.com/readr-media/Almisael/commit/4c05d03e73)] - style(react-components): update mock-data (Xuan)
-* \[[`448536ac2f`](https://github.com/readr-media/Almisael/commit/448536ac2f)] - chore(react-components): install `@readr-media/react-image` & bump up version (Xuan)
-* \[[`0da3963d5c`](https://github.com/readr-media/Almisael/commit/0da3963d5c)] - fix(react-components): formate data/time by `dayjs` (Xuan)
-* \[[`b97c76c731`](https://github.com/readr-media/Almisael/commit/b97c76c731)] - style(react-components): update SVG & mock-data (Xuan)
-* \[[`d601f33d05`](https://github.com/readr-media/Almisael/commit/d601f33d05)] - Merge pull request #4 from readr-media/main (Xuan)
+* \[[`470033c41d`](https://github.com/readr-media/Almisael/commit/470033c41d)] - feat(react-components): add `rwd`, `breakpoint` to props (Xuan)
+* \[[`c18f4badfe`](https://github.com/readr-media/Almisael/commit/c18f4badfe)] - docs(react-components): change `heroImage` to `images` (Xuan)
+* \[[`edbad823ce`](https://github.com/readr-media/Almisael/commit/edbad823ce)] - fix(react-components): change `heroImage` to `images` & adjust relevant type (Xuan)
+* \[[`600ed6d310`](https://github.com/readr-media/Almisael/commit/600ed6d310)] - docs(react-components): update README.md (Xuan)
+* \[[`d3facfaba1`](https://github.com/readr-media/Almisael/commit/d3facfaba1)] - feat(react-components): update mock-data (Xuan)
+* \[[`61cd1a463b`](https://github.com/readr-media/Almisael/commit/61cd1a463b)] - docs(react-components): add props jsDoc (Xuan)
+* \[[`f97130ca50`](https://github.com/readr-media/Almisael/commit/f97130ca50)] - docs(react-components): update CHANGELOG style (Xuan)
+* \[[`986960bded`](https://github.com/readr-media/Almisael/commit/986960bded)] - chore(react-components): update `dependencies` package (Xuan)
+* \[[`67c25b05f0`](https://github.com/readr-media/Almisael/commit/67c25b05f0)] - docs(react-components): update CHANGELOG & README (Xuan)
+
+- \[[`4dc8920a94`](https://github.com/readr-media/Almisael/commit/4dc8920a94)] - feat(react-components): use `react-image` & update types (Xuan)
+- \[[`4c05d03e73`](https://github.com/readr-media/Almisael/commit/4c05d03e73)] - style(react-components): update mock-data (Xuan)
+- \[[`448536ac2f`](https://github.com/readr-media/Almisael/commit/448536ac2f)] - chore(react-components): install `@readr-media/react-image` & bump up version (Xuan)
+- \[[`0da3963d5c`](https://github.com/readr-media/Almisael/commit/0da3963d5c)] - fix(react-components): formate data/time by `dayjs` (Xuan)
+- \[[`b97c76c731`](https://github.com/readr-media/Almisael/commit/b97c76c731)] - style(react-components): update SVG & mock-data (Xuan)
+- \[[`d601f33d05`](https://github.com/readr-media/Almisael/commit/d601f33d05)] - Merge pull request #4 from readr-media/main (Xuan)
 
 ## Version 1.0.2 @ChangRongXuan
 
