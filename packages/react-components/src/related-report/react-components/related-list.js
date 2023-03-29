@@ -72,11 +72,19 @@ export default function RelatedList({
   rwd,
   breakpoint,
 }) {
-  //breakpoint applicable to READr 3.0
+
+  //READr 3.0 breakpoint for `@readr-media/react-image`
   const READr_DEFAULT_BREAKPOINT = {
-    tablet: '768px',
-    laptop: '1200px',
-    desktop: '1440px',
+    mobile: '767px',
+    tablet: '1199px',
+    laptop: '1399px',
+  }
+
+  //READr 3.0 rwd for `@readr-media/react-image`
+  const READr_DEFAULT_RWD = {
+    mobile: '30vw',
+    tablet: '50vw',
+    default: '25vw',
   }
 
   return (
@@ -95,7 +103,7 @@ export default function RelatedList({
                   defaultImage={defaultImage}
                   alt={post.name}
                   priority={false}
-                  rwd={rwd}
+                  rwd={rwd || READr_DEFAULT_RWD}
                   breakpoint={breakpoint || READr_DEFAULT_BREAKPOINT}
                 />
               </ImgBlock>
