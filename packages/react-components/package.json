@@ -1,6 +1,6 @@
 {
   "name": "@readr-media/react-component",
-  "version": "1.0.2-beta.32",
+  "version": "2.0.0-alpha.5",
   "description": "",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -34,6 +34,13 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^2.0.1"
+  },
+  "dependencies": {
+    "@readr-media/react-image": "^1.5.1",
+    "dayjs": "^1.11.7"
   },
   "files": [
     "lib",

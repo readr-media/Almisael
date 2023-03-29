@@ -1,7 +1,7 @@
-import React, { useState } from 'react' // eslint-disable-line
+import React from 'react' // eslint-disable-line
 import styled from '../../styled-components.js'
-import DefaultImage from './image/default-image.js'
 import ReportInfo from './report-info.js'
+import SharedImage from '@readr-media/react-image'
 
 const RelatedItem = styled.li`
   list-style: none;
@@ -28,7 +28,7 @@ const RelatedItem = styled.li`
   }
 `
 
-const ImgBlock = styled.figure`
+const ImgBlock = styled.picture`
   display: block;
   align-self: flex-start;
   min-width: calc(27.27% - 4.3632px);
@@ -36,19 +36,14 @@ const ImgBlock = styled.figure`
   aspect-ratio: 1 / 1;
   margin: 0 16px 0 0;
   overflow: hidden;
-  background: #f4ebfe;
-  img,
-  svg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    -o-transition: all 0.3s ease;
+
+  img {
     transition: all 0.3s ease;
     &:hover {
       transform: scale(1.1);
     }
   }
+
   @media (min-width: 576px) {
     width: 100%;
     aspect-ratio: 1.9 / 1;
@@ -58,52 +53,65 @@ const ImgBlock = styled.figure`
   }
 `
 
-function ReportImage({ imgSrc, postAmount, alt, defaultImage }) {
-  const [imgErrored, setImgErrored] = useState(false)
-  const [defaultImgErrored, setDefaultImgErrored] = useState(false)
-
-  return (
-    <ImgBlock amount={postAmount}>
-      {imgSrc && !imgErrored ? (
-        <img src={imgSrc} onError={() => setImgErrored(true)} alt={alt} />
-      ) : defaultImage && !defaultImgErrored ? (
-        <img
-          src={defaultImage}
-          onError={() => setDefaultImgErrored(true)}
-        ></img>
-      ) : (
-        <DefaultImage />
-      )}
-    </ImgBlock>
-  )
-}
+/**
+ * @typedef {import('../index').Post} Post
+ *
+ * @param {Object}      props
+ * @param {Post[]}      props.postData
+ * @param {string}      props.titleClassName
+ * @param {string}      props.defaultImage
+ * @param {import('@readr-media/react-image/dist/react-components').Rwd}         [props.rwd]
+ * @param {import('@readr-media/react-image/dist/react-components').Breakpoint}  [props.breakpoint]
+ * @return {JSX.Element}
+ */
 
 export default function RelatedList({
-  relatedData,
-  captionClassName,
+  postData,
+  titleClassName,
   defaultImage,
+  rwd,
+  breakpoint,
 }) {
+
+  //READr 3.0 breakpoint for `@readr-media/react-image`
+  const READr_DEFAULT_BREAKPOINT = {
+    mobile: '767px',
+    tablet: '1199px',
+    laptop: '1399px',
+  }
+
+  //READr 3.0 rwd for `@readr-media/react-image`
+  const READr_DEFAULT_RWD = {
+    mobile: '30vw',
+    tablet: '50vw',
+    default: '25vw',
+  }
+
   return (
     <>
-      {relatedData.map((item, index) => {
+      {postData.map((post, index) => {
         return (
           <RelatedItem
-            key={item.id ? item.id : index}
-            className="readr-report-list"
-            postAmount={relatedData.length}
+            key={post.id ? post.id : index}
+            className="report-list"
+            postAmount={postData.length}
           >
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
-              <ReportImage
-                postAmount={relatedData.length}
-                imgSrc={item.heroImage?.resized?.original}
-                alt={item.alt || item.heroImage?.name}
-                defaultImage={defaultImage}
-              />
+            <a href={post.link} target="_blank" rel="noopener noreferrer">
+              <ImgBlock>
+                <SharedImage.default
+                  images={post.images || {}}
+                  defaultImage={defaultImage}
+                  alt={post.name}
+                  priority={false}
+                  rwd={rwd || READr_DEFAULT_RWD}
+                  breakpoint={breakpoint || READr_DEFAULT_BREAKPOINT}
+                />
+              </ImgBlock>
               <ReportInfo
-                caption={item.name}
-                captionClassName={captionClassName}
-                date={item.publishTime}
-                time={item.readingTime}
+                title={post.name}
+                titleClassName={titleClassName}
+                date={post.publishTime}
+                time={post.readingTime}
               />
             </a>
           </RelatedItem>

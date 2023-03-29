@@ -8,7 +8,7 @@ import {
   RelatedReport,
 } from '../src/index.js'
 import { reportsData } from './mock-reports.js'
-import { Test } from './icons/test.js'
+import LogoTest from './icons/logo.js'
 
 const reactRootId = 'root'
 const container = document.getElementById(reactRootId)
@@ -33,16 +33,24 @@ root.render(
       />
 
       <Logo className="logo-with-img">
-        <img src="./imgs/test.png" />
+        <img src="./imgs/logo.png" />
       </Logo>
 
       <Logo className="logo-with-svg-component">
-        <Test />
+        <LogoTest />
       </Logo>
     </Header>
 
     <DonateButton />
     <SubscribeButton />
-    <RelatedReport relatedData={reportsData} />
+    <RelatedReport
+      postData={reportsData}
+      defaultImage="./imgs/default-post.svg"
+      header="自訂大標"
+      ariaLevel={2}
+      headerClassName="自訂headerClassName"
+      titleClassName="自訂titleClassName"
+      highlightColor="red"
+    />
   </>
 )

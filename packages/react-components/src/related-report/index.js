@@ -62,14 +62,15 @@ const TitleBlock = styled.div`
     height: 42%;
     left: 0;
     right: 0;
+    z-index: -1;
     background: ${
       /**
        *  @param {Object} props
        *  @param {string} props.highlightColor
        */ (props) => props.highlightColor
     };
-    z-index: -1;
   }
+
   @media (min-width: 768px) {
     margin: 0 auto 40px;
     max-width: 672px;
@@ -79,44 +80,54 @@ const TitleBlock = styled.div`
     max-width: 1096px;
   }
 `
-
 /**
- * @typedef {import('../typedef').Post} Post
- *
- * @param {Object}  props
- * @param {Post[]}  props.relatedData
- * @param {number}  [props.ariaLevel]
- * @param {string}  [props.title='最新報導']
- * @param {string}  [props.titleClassName='related-report-title']
- * @param {string}  [props.captionClassName='related-report-caption']
- * @param {string}  [props.highlightColor='#ffffff']
- * @param {string}  [props.defaultImage='']
+ *  @typedef  {Object}             ResizedImages
+ *  @property {string}             [original]
+ *  @property {string}             [w480]
+ *  @property {string}             [w800]
+ *  @property {string}             [w1200]
+ *  @property {string}             [w1600]
+ *  @property {string}             [w2400]
+ */
+/**
+ *  @typedef  {Object}              Post
+ *  @property {number|string}       id
+ *  @property {string}              [name]
+ *  @property {string}              [title]
+ *  @property {number}              [readingTime]
+ *  @property {string}              [publishTime]
+ *  @property {ResizedImages|null}  [images]
+ *  @property {string}              [link]
+ */
+/**
+ * @param {Object}      props
+ * @param {Post[]}      props.postData
+ * @param {number}      [props.ariaLevel]
+ * @param {string}      [props.header='最新報導']
+ * @param {string}      [props.headerClassName='report-header']
+ * @param {string}      [props.titleClassName='report-title']
+ * @param {string}      [props.highlightColor='#ffffff']
+ * @param {string}      [props.defaultImage='']
+ * @param {import('@readr-media/react-image/dist/react-components').Rwd}         [props.rwd]
+ * @param {import('@readr-media/react-image/dist/react-components').Breakpoint}  [props.breakpoint]
  * @return {JSX.Element}
  */
 
 export default function RelatedReport({
-  relatedData,
+  postData,
   ariaLevel,
-  title = '最新報導',
-  titleClassName = 'readr-report-title',
-  captionClassName = 'readr-report-caption',
+  header = '最新報導',
+  headerClassName = 'report-header',
+  titleClassName = 'report-title',
   highlightColor = '#ffffff',
   defaultImage = '',
+  rwd,
+  breakpoint,
 }) {
-
-  const checkNameValid = (data) => {
-    return data.every((obj) => obj.hasOwnProperty('name') && obj['name'] !== '')
-  }
   const checkDataValid = (data) => {
     try {
-      //check：if `relatedData` is an array
+      //check `postData` is an array
       if (!Array.isArray(data)) {
-        return false
-      } else if (!checkNameValid(data)) {
-        //check：each object in `relatedData` contains `name` key
-        console.log(
-          `Error: Not all objects in 'relatedData' have the key 'name'`
-        )
         return false
       } else {
         return true
@@ -127,25 +138,26 @@ export default function RelatedReport({
     }
   }
 
-
   return (
     <>
-      {checkDataValid(relatedData) && (
+      {checkDataValid(postData) && (
         <Container>
           <TitleBlock
-            className={titleClassName}
+            className={headerClassName}
             highlightColor={highlightColor}
           >
             <div role="heading" aria-level={ariaLevel}>
-              {title}
+              {header}
             </div>
           </TitleBlock>
 
-          <ul className="readr-report-wrapper">
+          <ul className="report-wrapper">
             <RelatedList
-              relatedData={relatedData}
-              captionClassName={captionClassName}
+              postData={postData}
+              titleClassName={titleClassName}
               defaultImage={defaultImage}
+              rwd={rwd}
+              breakpoint={breakpoint}
             />
           </ul>
         </Container>

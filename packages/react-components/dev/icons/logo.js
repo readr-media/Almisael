@@ -1,6 +1,6 @@
 import React from 'react' // eslint-disable-line
 
-export function Test() {
+export default function Logo() {
   return (
     <svg
       width="100"
