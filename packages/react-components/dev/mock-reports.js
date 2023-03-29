@@ -4,16 +4,12 @@ export const reportsData = [
     name: '【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」',
 
     images: {
-      original:
-        'https://www.readr.tw/assets/images/cld2ymzdw000p10ykb7pshoop-mobile.png',
-      w480: '',
-      w800: 'https://www.readr.tw/assets/images/cld2ymzdw000p10ykb7pshoop-mobile.png',
-      w1200:
-        'https://www.readr.tw/assets/images/cld2ymzdw000p10ykb7pshoop-mobile.png',
-      w1600:
-        'https://www.readr.tw/assets/images/cld2ymzdw000p10ykb7pshoop-mobile.png',
-      w2400:
-        'https://www.readr.tw/assets/images/cld2ymzdw000p10ykb7pshoop-mobile.png',
+      original: 'https://loremflickr.com/2400/1800/cat',
+      w480: 'https://loremflickr.com/480/338/cat',
+      w800: 'https://loremflickr.com/800/600/cat',
+      w1200: 'https://loremflickr.com/1200/900/cat',
+      w1600: 'https://loremflickr.com/1600/1200/cat',
+      w2400: 'https://loremflickr.com/2400/1800/cat',
     },
     readingTime: 5,
   },
@@ -21,16 +17,12 @@ export const reportsData = [
     id: 2,
     name: '標題測試標題測試標題測試標題測試標題測試標題測試標題測試標題測試',
     images: {
-      original:
-        'https://www.readr.tw/assets/images/clckhy1qz001310xb2u888w1d-mobile.png',
-      w480: '',
-      w800: 'https://www.readr.tw/assets/images/clckhy1qz001310xb2u888w1d-mobile.png',
-      w1200:
-        'https://www.readr.tw/assets/images/clckhy1qz001310xb2u888w1d-mobile.png',
-      w1600:
-        'https://www.readr.tw/assets/images/clckhy1qz001310xb2u888w1d-mobile.png',
-      w2400:
-        'https://www.readr.tw/assets/images/clckhy1qz001310xb2u888w1d-mobile.png',
+      original: 'https://loremflickr.com/2400/1800/dog',
+      w480: 'https://loremflickr.com/480/338/dog',
+      w800: 'https://loremflickr.com/800/600/dog',
+      w1200: 'https://loremflickr.com/1200/900/dog',
+      w1600: 'https://loremflickr.com/1600/1200/dog',
+      w2400: 'https://loremflickr.com/2400/1800/dog',
     },
 
     readingTime: 15,
@@ -39,18 +31,6 @@ export const reportsData = [
   {
     id: 3,
     name: '【寵粉速報】5元就能訂閱「鏡週刊會員制」【寵粉速報】5元就能訂閱「鏡週刊會員制」',
-    images: {
-      original:
-        'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
-      w480: 'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
-      w800: 'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
-      w1200:
-        'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
-      w1600:
-        'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
-      w2400:
-        'https://storage.googleapis.com/statics-readr-tw-dev/images/5f4cdc4f2f0f930023f79aae-w2400.看板追追追2.0.jpeg',
-    },
     readingTime: 0,
     publishTime: '2023-02-08T07:00:00.000Z',
   },
