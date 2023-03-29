@@ -74,7 +74,6 @@ export default function RelatedList({
 }) {
   //breakpoint applicable to READr 3.0
   const READr_DEFAULT_BREAKPOINT = {
-    mobile: '320px',
     tablet: '768px',
     laptop: '1200px',
     desktop: '1440px',
