@@ -43,6 +43,7 @@
     "dayjs": "^1.11.7"
   },
   "files": [
-    "lib"
+    "lib",
+    "CHANGELOG.md"
   ]
 }
