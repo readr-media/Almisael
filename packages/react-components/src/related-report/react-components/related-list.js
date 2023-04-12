@@ -62,6 +62,7 @@ const ImgBlock = styled.picture`
  * @param {string}      props.defaultImage
  * @param {import('@readr-media/react-image/dist/react-components').Rwd}         [props.rwd]
  * @param {import('@readr-media/react-image/dist/react-components').Breakpoint}  [props.breakpoint]
+ * @param {import("react").MouseEventHandler} props.postClickHandler
  * @return {JSX.Element}
  */
 
@@ -71,8 +72,8 @@ export default function RelatedList({
   defaultImage,
   rwd,
   breakpoint,
+  postClickHandler,
 }) {
-
   //READr 3.0 breakpoint for `@readr-media/react-image`
   const READr_DEFAULT_BREAKPOINT = {
     mobile: '767px',
@@ -87,6 +88,10 @@ export default function RelatedList({
     default: '25vw',
   }
 
+  const handleClick = (post) => {
+    postClickHandler(post)
+  }
+
   return (
     <>
       {postData.map((post, index) => {
@@ -95,6 +100,9 @@ export default function RelatedList({
             key={post.id ? post.id : index}
             className="report-list"
             postAmount={postData.length}
+            onClick={() => {
+              handleClick(post)
+            }}
           >
             <a href={post.link} target="_blank" rel="noopener noreferrer">
               <ImgBlock>
