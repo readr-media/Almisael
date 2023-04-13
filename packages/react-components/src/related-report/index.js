@@ -110,6 +110,7 @@ const TitleBlock = styled.div`
  * @param {string}      [props.defaultImage='']
  * @param {import('@readr-media/react-image/dist/react-components').Rwd}         [props.rwd]
  * @param {import('@readr-media/react-image/dist/react-components').Breakpoint}  [props.breakpoint]
+ * @param {import("react").MouseEventHandler} [props.postClickHandler]
  * @return {JSX.Element}
  */
 
@@ -123,6 +124,7 @@ export default function RelatedReport({
   defaultImage = '',
   rwd,
   breakpoint,
+  postClickHandler = () => {},
 }) {
   const checkDataValid = (data) => {
     try {
@@ -158,6 +160,7 @@ export default function RelatedReport({
               defaultImage={defaultImage}
               rwd={rwd}
               breakpoint={breakpoint}
+              postClickHandler={postClickHandler}
             />
           </ul>
         </Container>

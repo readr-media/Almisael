@@ -22,6 +22,10 @@ const Header = styled.div`
   margin-bottom: 50px;
 `
 
+const PostClick = (post) => {
+  console.log(post.name)
+}
+
 root.render(
   <>
     <Header>
@@ -51,6 +55,7 @@ root.render(
       headerClassName="自訂headerClassName"
       titleClassName="自訂titleClassName"
       highlightColor="red"
+      postClickHandler={PostClick}
     />
   </>
 )
