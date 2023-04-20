@@ -12,6 +12,7 @@ export const reportsData = [
       w2400: 'https://loremflickr.com/2400/1800/cat',
     },
     readingTime: 5,
+    publishTime: '2022-02-08T07:00:00.000Z',
   },
   {
     id: 2,

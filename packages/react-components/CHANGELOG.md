@@ -1,5 +1,20 @@
 # @readr-media/react-component Changelog
 
+## Version 2.1.0 @ChangRongXuan
+
+### Notable Changes
+
+- style(related-report): fix dot style (Xuan)
+- feat(react-components): add props `postClickHandler` (Xuan)
+
+### Commits
+
+- \[[`e5c98d18ec`](https://github.com/readr-media/react-component/commit/e5c98d18ec)] - style(related-report): fix dot style (Xuan)
+- \[[`44cdecaff5`](https://github.com/readr-media/react-component/commit/44cdecaff5)] - chore(react-components): bump up version to `2.1.0-alpha.1` (Xuan)
+- \[[`aaa5dd145e`](https://github.com/readr-media/react-component/commit/aaa5dd145e)] - docs(react-components): update README (Xuan)
+- \[[`717bf07633`](https://github.com/readr-media/react-component/commit/717bf07633)] - feat(react-components): add props `postClickHandler` (Xuan)
+- \[[`053b126373`](https://github.com/readr-media/react-component/commit/053b126373)] - fix(react-components): change mock-img to loremflickr-random-image (Xuan)
+
 ## Version 2.0.0 @ChangRongXuan
 
 ### Notable Changes
