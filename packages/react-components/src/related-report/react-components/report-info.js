@@ -5,7 +5,7 @@ import dayjs from 'dayjs'
 const DotStyle = `
     content: "";
     position: absolute;
-    top: calc( 50% - 2px);
+    top: 8px;
     left: 4px;
     width: 4px;
     height: 4px;
@@ -53,7 +53,7 @@ const Info = styled.div`
     position: relative;
     padding: ${(props) => (props.date ? '0 0 0 14px;' : '0px')};
 
-    &:before {
+    &::before {
       ${(props) => (props.date ? DotStyle : '')}
     }
   }
