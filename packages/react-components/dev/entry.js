@@ -1,14 +1,15 @@
 import React from 'react' // eslint-disable-line
-import styled from 'styled-components'
 import { createRoot } from 'react-dom/client'
+import styled from 'styled-components'
 import {
-  Logo,
+  DonateBtnRect,
   DonateButton,
-  SubscribeButton,
+  Logo,
   RelatedReport,
+  SubscribeButton,
 } from '../src/index.js'
-import { reportsData } from './mock-reports.js'
 import LogoTest from './icons/logo.js'
+import { reportsData } from './mock-reports.js'
 
 const reactRootId = 'root'
 const container = document.getElementById(reactRootId)
@@ -20,6 +21,10 @@ const Header = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
+
+  .donate-btn {
+    width: 102px;
+  }
 `
 
 const PostClick = (post) => {
@@ -43,6 +48,7 @@ root.render(
       <Logo className="logo-with-svg-component">
         <LogoTest />
       </Logo>
+      <DonateBtnRect href="/donate" openNewTab={false} className="donate-btn" />
     </Header>
 
     <DonateButton />

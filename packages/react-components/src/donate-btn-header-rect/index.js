@@ -1,8 +1,9 @@
-import NextLink from 'next/link'
+import React from 'react'
 import styled from 'styled-components'
 
-const DonateLink = styled(NextLink)`
+const DonateLink = styled.a`
   font-family: 'Noto Sans TC', sans-serif;
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,6 +16,7 @@ const DonateLink = styled(NextLink)`
   border-radius: 2px;
   height: 40px;
   width: 104px;
+  transition: background-color 0.2s ease-in-out;
 
   &:hover,
   &:active,
