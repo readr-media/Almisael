@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react' // eslint-disable-line
+import styled from '../styled-components.js'
 
 const DonateLink = styled.a`
   font-family: 'Noto Sans TC', sans-serif;
