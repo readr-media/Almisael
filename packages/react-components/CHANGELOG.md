@@ -1,5 +1,20 @@
 # @readr-media/react-component Changelog
 
+## Version 2.1.3 @bibibobobi
+
+### Notable Changes
+
+- feat(react-components/donate-btn-header-rect): add donate-btn-header-rect component (bibibobobi)
+
+### Commits
+
+* \[[`06580ec6eb`](https://github.com/readr-media/react-component/commit/06580ec6eb)] - chore(react-components):bump version to 2.1.1 (bibibobobi)
+* \[[`a391d92d83`](https://github.com/readr-media/react-component/commit/a391d92d83)] - feat(react-components/donate-btn-header-rect): replace next/link to a tag (bibibobobi)
+* \[[`1c42defc35`](https://github.com/readr-media/react-component/commit/1c42defc35)] - feat(react-components/donate-btn-header-rect): export DonateBtnRect (bibibobobi)
+* \[[`7fee781caf`](https://github.com/readr-media/react-component/commit/7fee781caf)] - add README.md (bibibobobi)
+* \[[`75b8a14837`](https://github.com/readr-media/react-component/commit/75b8a14837)] - add donate-btn-header-rect component (bibibobobi)
+
+
 ## Version 2.1.0 @ChangRongXuan
 
 ### Notable Changes
