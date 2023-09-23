@@ -9,9 +9,10 @@
 ### Components
 
 - [Readr LOGO](./src/logo): see [src/logo](./src/logo)
-- [贊助按鈕](./src/donate-button): see [src/donate-button](./src/donate-button)
+- [頁尾贊助按鈕](./src/donate-button): see [src/donate-button](./src/donate-button)
 - [訂閱電子報按鈕](./src/subscribe-button): see [src/subscribe-button](./src/subscribe-button)
 - [相關報導](./src/related-report): see [src/related-report](./src/related-report)
+- [Header贊助按鈕](./src/donate-btn-header-rect): see [src/donate-btn-header-rect](./src/donate-btn-header-rect)
 
 ## How to Use This Pkg?
 
