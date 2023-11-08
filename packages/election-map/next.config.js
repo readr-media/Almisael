@@ -7,6 +7,11 @@ const nextConfig = {
     loader: 'custom',
     unoptimized: true,
   },
+  compiler: {
+    styledComponents: {
+      displayName: true,
+    },
+  },
 }
 
 module.exports = nextConfig
