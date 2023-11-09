@@ -459,7 +459,7 @@ export const NavBar = ({ dashboardInView }) => {
     : mmLogoSvg
 
   return (
-    <Nav dashboardInView={dashboardInView}>
+    <Nav dashboardInView={dashboardInView} isReadr={isReadr}>
       <LinkButton
         href={
           organization === 'readr-media'
