@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest --watch",
     "lint": "next lint",
     "export": "next build && next export"
   },
@@ -22,5 +23,11 @@
     "react-ga": "^3.3.1",
     "styled-components": "^5.3.6",
     "topojson": "^3.0.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
   }
 }
