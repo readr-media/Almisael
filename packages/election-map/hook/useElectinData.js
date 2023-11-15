@@ -21,8 +21,8 @@ import ReactGA from 'react-ga'
 
 const DataLoader = widgets.VotesComparison.DataLoader
 
-import { mockData as legislatorCounty } from '../mock-datas/maps/legislators/2020_legislator_county_63000'
-import { mockData as legislatorConstituency } from '../mock-datas/maps/legislators/2020_legislator_constituency_6300001'
+import { data as legislatorCounty } from '../mock-datas/maps/legislators/normal/county/63000'
+import { data as legislatorConstituency } from '../mock-datas/maps/legislators/normal/constituency/63000010'
 import { environment } from '../consts/config'
 
 const gcsBaseUrl =
