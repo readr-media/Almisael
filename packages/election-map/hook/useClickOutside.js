@@ -1,9 +1,16 @@
 import { useEffect } from 'react'
 
+/**
+ *
+ * @param {React.MutableRefObject<null | HTMLElement>} ref
+ * @param {Function} callback
+ */
 export default function useClickOutside(ref, callback) {
   useEffect(() => {
+    /** @type {EventListener}*/
     const handleClickOutside = (event) => {
-      if (ref.current && !ref.current.contains(event.target)) {
+      const targetNode = /** @type {Node} */ (event.target)
+      if (ref.current && !ref.current.contains(targetNode)) {
         callback()
       }
     }

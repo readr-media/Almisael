@@ -1,11 +1,13 @@
 import Image from 'next/image'
-import { useState, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 import { organization } from '../consts/config'
 import useClickOutside from '../hook/useClickOutside'
 import useWindowDimensions from '../hook/useWindowDimensions'
 import { imageLoader } from '../loader'
+// @ts-ignore
 import fbLogo from '../public/images/fb.png'
+// @ts-ignore
 import lineLogo from '../public/images/line.png'
 
 const isReadr = organization === 'readr-media'
@@ -317,7 +319,17 @@ const shareIconMobileSvg = isReadr ? (
   </svg>
 )
 
-const Nav = styled.nav`
+/**
+ * Styled navigation component.
+ *
+ * @typedef {object} NavProps
+ * @property {boolean} [dashboardInView] - Indicates whether the dashboard is in view.
+ * @property {boolean} [isReadr] - Indicates whether the component is for "Readr" organization.
+ */
+
+const Nav = /** @type {import('styled-components').ThemedStyledFunction<'nav', any, NavProps>} */ (
+  styled.nav
+)`
   position: fixed;
   z-index: 200;
   display: flex;
@@ -358,12 +370,30 @@ const LinkButton = styled.a`
   display: flex;
 `
 
-const ShareWrapper = styled.div`
+/**
+ * Styled div component.
+ *
+ * @typedef {object} DivProps
+ * @property {boolean} [isReadr] - Indicates whether the component is for "Readr" organization.
+ */
+
+const ShareWrapper = /** @type {import('styled-components').ThemedStyledFunction<'div', any, DivProps>} */ (
+  styled.div
+)`
   position: relative;
   ${({ isReadr }) => !isReadr && 'margin-left: 4px;'}
 `
 
-const StyledImage = styled(Image)`
+/**
+ * Styled image component.
+ *
+ * @typedef {object} ImageProps
+ * @property {boolean} [isReadr] - Indicates whether the component is for "Readr" organization.
+ * @property {boolean} [show] - Indicates whether the image should show or not.
+ */
+const StyledImage = /** @type {import('styled-components').ThemedStyledFunction<Image, any, ImageProps>} */ (
+  styled(Image)
+)`
   position: absolute;
   top: 30px;
   left: 0;
@@ -411,15 +441,23 @@ const StyledImage = styled(Image)`
     `}
 `
 
+/**
+ *
+ * @param {Object} props
+ * @param {boolean} props.dashboardInView
+ * @returns {React.ReactElement}
+ */
 export const NavBar = ({ dashboardInView }) => {
-  const [showShareIcon, setShowShareIcon] = useState()
+  const [showShareIcon, setShowShareIcon] = useState(false)
+  /** @type {React.MutableRefObject<null | HTMLDivElement>} */
   const shareIconRef = useRef(null)
   const { width } = useWindowDimensions()
   const isMobile = width <= 1024
   useClickOutside(shareIconRef, () => {
-    setShowShareIcon()
+    setShowShareIcon(false)
   })
 
+  /** @type {React.MouseEventHandler} */
   const onShareFB = (e) => {
     e.stopPropagation()
     window.open(
@@ -434,6 +472,7 @@ export const NavBar = ({ dashboardInView }) => {
     )
   }
 
+  /** @type {React.MouseEventHandler} */
   const onShareLine = (e) => {
     e.stopPropagation()
     window.open(
@@ -458,6 +497,7 @@ export const NavBar = ({ dashboardInView }) => {
     ? mmLogoMobileSvg
     : mmLogoSvg
 
+  console.log('fbLogo', fbLogo)
   return (
     <Nav dashboardInView={dashboardInView} isReadr={isReadr}>
       <LinkButton
@@ -474,7 +514,7 @@ export const NavBar = ({ dashboardInView }) => {
       <ShareWrapper ref={shareIconRef} isReadr={isReadr}>
         <LinkButton
           onClick={() => {
-            setShowShareIcon((value) => (value ? undefined : 'show'))
+            setShowShareIcon((value) => !value)
           }}
         >
           {isMobile ? shareIconMobileSvg : shareIconSvg}

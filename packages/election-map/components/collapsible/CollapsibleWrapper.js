@@ -2,7 +2,15 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { MapLocations } from '../MapLocations'
 
-const Wrapper = styled.div`
+/**
+ * Styled image component.
+ *
+ * @typedef {object} WrapperProps
+ * @property {boolean} [collapse] - Indicates whether the component is collapse.
+ */
+const Wrapper = /** @type {import('styled-components').ThemedStyledFunction<'div', any, WrapperProps>} */ (
+  styled.div
+)`
   overflow: hidden;
   border: 1px solid #000;
   border-radius: ${({ collapse }) => (collapse ? `0 0 16px 16px;` : `unset`)};
@@ -60,7 +68,16 @@ const CollapseButtonSubTitle = styled.div`
   align-items: center;
 `
 
-const CollapseContent = styled.div`
+/**
+ * Styled image component.
+ *
+ * @typedef {object} CollapseContentProps
+ * @property {boolean} [collapse] - Indicates whether the component is collapse.
+ */
+
+const CollapseContent = /** @type {import('styled-components').ThemedStyledFunction<'div', any, CollapseContentProps>} */ (
+  styled.div
+)`
   ${({ collapse }) => !collapse && 'height: 0'};
 `
 
@@ -91,6 +108,12 @@ const upTriangle = (
   </svg>
 )
 
+/**
+ *
+ * @param {Object} props
+ *
+ * @returns {React.ReactElement}
+ */
 export const CollapsibleWrapper = ({
   children,
   title,

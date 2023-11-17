@@ -1,6 +1,60 @@
 export const defaultElectionType = 'mayor'
 export const currentYear = 2022
-// election configs
+
+/**
+ * Representing the type of the election.
+ * @typedef {'president' | 'mayor' | 'legislator' | 'councilMember' | 'referendum'} ElectionType
+ *
+ * Representing a subtype of a election
+ * @typedef {Object} ElectionSubtype
+ * @property {string} name - The name of the subtype of election.
+ * @property {string} key - The key of the subtype of election.
+ *
+ * Representing a referendum in number.
+ * @typedef {Object} ReferendumNumber
+ * @property {number} year - The year of the referendum.
+ * @property {string} key - The index of the referendum.
+ * @property {string} name - The name of the referendum.
+ * @property {string} detail - The detail of the referendum.
+ *
+ * Representing a year and other units (optional) in a year
+ * @typedef {Object} Year
+ * @property {number} key - The number of the year.
+ * @property {Array<ReferendumNumber>} [numbers] - The numbers of referendum.
+ *
+ * Representing the default param that evc dataLoader will use
+ * @typedef {Object} ElectionMetaEvc
+ * @property {'all'} [district]  - The default district that evc dataLoader will use. For election cross whole country it will be 'all'. For election only stays in county there will be no default district.
+ *
+ * Representing the meta that map data fetching and rendering will use.
+ * @typedef {Object} ElectionMetaMap
+ * @property {boolean} mapColor - The flag indicating whether the map will show colors.
+ * @property {{0: string, 1: string, 2: string}} folderNames - The folder name mapping to different levels. Empty string means there is no folder for the level.
+ * @property {{0: string, 1: string, 2: string}} fileNames - The file name mapping to different levels. Empty string will be replaced by the level code.
+ *
+ * Representing the meta that seat chart will use.
+ * @typedef {Object} ElectionMetaSeat
+ * @property {string} wrapperTitle - The title of the wrapper of the seat chart.
+ * @property {string} componentTitle - The title of the seat chart.
+ *
+ * Representing the how an election's data stored logic for each module.
+ * @typedef {Object} ElectionMeta
+ * @property {ElectionMetaEvc} evc - The default param that evc dataLoader will use.
+ * @property {ElectionMetaMap} map - The meta that map data fetching and rendering will use.
+ * @property {ElectionMetaSeat} seat - The meta that seat will use in rendering.
+ *
+ * Election configs directly control how many elections rendering, how many years each election contains.
+ * The meta properties have the metadata for each module (evc, map, seat)
+ * @typedef {Object} Election
+ * @property {ElectionType} electionType - The type of election.
+ * @property {Array<ElectionSubtype>} [subtypes] - The subtypes of a type of election.
+ * @property {string} electionName - The name of election for user to know which election they are checking.
+ * @property {Array<Year>} years - The years and their subunit of an election.
+ * @property {Object} meta - The metadata for each module (evc, map, seat). Pretty mess since it's the combination of gcs structure, evc package and map logic.
+ */
+
+// Check Election type for more detail
+/** @type {Array<Election>} */
 export const elections = [
   // {
   //   electionType: 'president',
@@ -305,9 +359,14 @@ export const electionNamePairs = elections.map(
   })
 )
 
+/**
+ * Merge all referendum number in all years.
+ * @param {Election} election
+ * @returns {Array<ReferendumNumber>}
+ */
 export const getReferendumNumbers = (election) => {
   if (!election.electionType.startsWith('referendum')) {
-    return
+    return []
   }
   return election.years.reduce((numbers, year) => {
     numbers = numbers.concat(year.numbers)
@@ -315,6 +374,7 @@ export const getReferendumNumbers = (election) => {
   }, [])
 }
 
+// County mapping data to help convertion between code, name and endName.
 export const countyMappingData = [
   {
     countyCode: '10007',
