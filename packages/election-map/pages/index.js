@@ -26,7 +26,17 @@ const NewsWrapper = styled.div`
   padding: 50px 0;
   background: ${electionMapColor};
 `
-const StickyHeader = styled.div`
+
+/**
+ * Styled navigation component.
+ *
+ * @typedef {object} StickyHeaderProps
+ * @property {boolean} [dashboardInView] - Indicates whether the dashboard is in view.
+ */
+
+const StickyHeader = /** @type {import('styled-components').ThemedStyledFunction<'div', any, StickyHeaderProps>} */ (
+  styled.div
+)`
   position: fixed;
   display: flex;
   width: 100%;
@@ -53,7 +63,9 @@ export default function Home() {
   const [showTutorial, setShowTutorial] = useState(false)
   const [dashboardInView, setDashboardInView] = useState(true)
   const [hasAnchor, setHasAnchor] = useState(false)
-  const dashboardObserver = useRef()
+  /** @type {{current: IntersectionObserver} | null} */
+  const dashboardObserver = useRef(null)
+  /** @type {{current: IntersectionObserver} | null} */
   const endDivObserver = useRef()
 
   useEffect(() => {
@@ -68,6 +80,19 @@ export default function Home() {
     }
   }, [])
 
+  /**
+   * Callback function for creating an IntersectionObserver for the html element.
+   *
+   * @callback RefCallback
+   * @param {HTMLElement | null} node - The DOM node to observe or null.
+   * @returns {void}
+   */
+
+  /**
+   * A ref callback for the dashboard element.
+   *
+   * @type {RefCallback}
+   */
   const dashboardRef = useCallback((node) => {
     if (dashboardObserver.current) dashboardObserver.current.disconnect()
     dashboardObserver.current = new IntersectionObserver((entries) => {
@@ -84,6 +109,11 @@ export default function Home() {
     if (node) dashboardObserver.current.observe(node)
   }, [])
 
+  /**
+   * A ref callback for the end div.
+   *
+   * @type {RefCallback}
+   */
   const EndRef = useCallback((node) => {
     if (endDivObserver.current) endDivObserver.current.disconnect()
     endDivObserver.current = new IntersectionObserver(
@@ -131,7 +161,6 @@ export default function Home() {
         </NewsWrapper>
       )}
       {!dashboardInView && <div ref={EndRef} />}
-      {/* <div ref={EndRef} /> */}
     </>
   )
 }

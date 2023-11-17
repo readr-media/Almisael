@@ -11,7 +11,7 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
 ) {
   const [loading, setLoading] = useState(false)
   const loadingTimout = useRef(null)
-  const { width } = useWindowDimensions() || []
+  const { width } = useWindowDimensions()
   const isMobile = width <= 1024
 
   const showLoading = useCallback((show) => {

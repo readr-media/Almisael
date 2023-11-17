@@ -29,6 +29,7 @@ export const Map = ({
   const { currentFeature, countyId, townId, villageId, activeId } = mapObject
   const { width, height } = dimension
   const { counties, towns, villages } = mapData
+  console.log('counties', counties)
   const projection = d3.geoMercator().fitExtent(
     [
       [0, 0],

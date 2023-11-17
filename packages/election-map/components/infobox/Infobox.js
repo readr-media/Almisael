@@ -449,6 +449,7 @@ const CouncilMemberInfobox = ({
     const councilMemberdPrefix = county + town + area + type
 
     if (type === 'normal') {
+      console.log('here')
       return (
         <CouncilMemberTypeWrapper key={councilMemberdPrefix}>
           <CouncilMemberTitle>

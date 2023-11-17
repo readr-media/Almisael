@@ -1,14 +1,49 @@
 import { elections } from './election'
 import { deepCloneObj } from './helper'
 
-export const defaultMapData = {
-  isRunning: false,
-  isStarted: true,
-  0: null,
-  1: {},
-  2: {},
-}
+/**
+ * @typedef {{isRunning: boolean, isStarted: boolean, [key: number]: null | Object}} ModuleData
+ *
+ * Representing the data for an election in a year. For referendum it represents the data in one number(案號).
+ * @typedef {Object} ElectionData
+ * @property {ModuleData} mapData
+ * @property {ModuleData} evcData
+ * @property {ModuleData} seatData
+ *
+ * @typedef {{[key: number]: {
+ * normal: ElectionData
+ * mountainIndigenous : ElectionData
+ * plainIndigenous : ElectionData
+ * party: ElectionData}}} YearlyLegislatorElectionData
+ *
+ * @typedef {Object} YearlyCouncilMemberSubtypeElectionData
+ * @property {ModuleData} mapData
+ * @property {ModuleData} evcData
+ * @property {ModuleData} seatData
+ *
+ * @typedef {{[key: number]: {
+ * normal: ElectionData
+ * indigenous : ElectionData}}} YearlyCouncilMemberElectionData
+ *
+ *
+ * @typedef {{[key: number]: {[key: string]: ElectionData}}} YearlyReferendumElectionData
+ *
+ * @typedef {{[key: number]: ElectionData}} PresidentElectionData
+ * @typedef {{[key: number]: ElectionData}} MayorElectionData
+ * @typedef {{[key: number]: YearlyLegislatorElectionData}} LegislatorElectionData
+ * @typedef {{[key: number]: YearlyCouncilMemberElectionData}} CouncilMemberElectionData
+ * @typedef {{[key: number]: YearlyReferendumElectionData}} ReferendumElectionData
+ *
+ * @typedef {Object} ElectionsData
+ * @property {PresidentElectionData} president - President election data.
+ * @property {MayorElectionData} mayor - Mayor election data.
+ * @property {LegislatorElectionData} legislator - Legislator election data.
+ * @property {CouncilMemberElectionData} councilMember - Council Member election data.
+ * @property {ReferendumElectionData} referendum - Referendum election data.
+ *
+ * */
 
+/** @type {ModuleData} */
 export const defaultData = {
   isRunning: false,
   isStarted: true,
@@ -16,13 +51,14 @@ export const defaultData = {
   1: {},
   2: {},
 }
+
 export const defaultElectionData = {
   mapData: defaultData,
   evcData: defaultData,
   seatData: defaultData,
 }
 
-/* electionMapData
+/* electionsData
   {
     president: {
       2020: {
@@ -286,14 +322,19 @@ export const defaultElectionData = {
     }
   }
  */
+/**
+ * Generate the default electionsData to store all election-related data later.
+ * Check the comment above to see the sample of data structure.
+ * @returns {ElectionsData}
+ */
 export const generateDefaultElectionsData = () => {
+  // @ts-ignore
   return elections.reduce((electionsData, election) => {
     const { electionType, years } = election
     let singleElectionData
     switch (electionType) {
       case 'president':
-      case 'mayor':
-      case 'legislatorParty': {
+      case 'mayor': {
         singleElectionData = years.reduce((obj, { key }) => {
           obj[key] = deepCloneObj(defaultElectionData)
           return obj
@@ -314,8 +355,7 @@ export const generateDefaultElectionsData = () => {
         break
       }
 
-      case 'referendum':
-      case 'referendumLocal': {
+      case 'referendum': {
         singleElectionData = years.reduce((obj, { key, numbers }) => {
           obj[key] = numbers.reduce((obj, { key }) => {
             obj[key] = deepCloneObj(defaultElectionData)
@@ -333,6 +373,16 @@ export const generateDefaultElectionsData = () => {
   }, {})
 }
 
+/**
+ * Add the electionData to the big electionsData by it's year, subtype and number depending on the election.
+ * @param {ElectionsData} electionsData
+ * @param {ElectionData} newElectionData
+ * @param {import('./election').ElectionType} electionType
+ * @param {number} yearKey - The year of the newElectionData
+ * @param {string} [subtypeKey] - The key of subtype of the election
+ * @param {string} [numberKey] - The key of referendum number
+ * @returns
+ */
 export const updateElectionsData = (
   electionsData,
   newElectionData,
@@ -343,8 +393,7 @@ export const updateElectionsData = (
 ) => {
   switch (electionType) {
     case 'president':
-    case 'mayor':
-    case 'legislatorParty': {
+    case 'mayor': {
       electionsData[electionType][yearKey] = newElectionData
       break
     }
@@ -355,8 +404,7 @@ export const updateElectionsData = (
       break
     }
 
-    case 'referendum':
-    case 'referendumLocal': {
+    case 'referendum': {
       electionsData[electionType][yearKey][numberKey] = newElectionData
       break
     }
@@ -366,6 +414,15 @@ export const updateElectionsData = (
   return electionsData
 }
 
+/**
+ * Retrieve an electionData from the given year, subtype and number.
+ * @param {ElectionsData} electionsData
+ * @param {import('./election').ElectionType} electionType
+ * @param {number} yearKey - The year of the newElectionData
+ * @param {string} [subtypeKey] - The key of subtype of the election
+ * @param {string} [numberKey] - The key of referendum number
+ * @returns {ElectionData}
+ */
 export const getElectionData = (
   electionsData,
   electionType,
@@ -376,8 +433,7 @@ export const getElectionData = (
   let electionData
   switch (electionType) {
     case 'president':
-    case 'mayor':
-    case 'legislatorParty': {
+    case 'mayor': {
       electionData = electionsData[electionType][yearKey]
       break
     }
@@ -388,8 +444,7 @@ export const getElectionData = (
       break
     }
 
-    case 'referendum':
-    case 'referendumLocal': {
+    case 'referendum': {
       electionData = electionsData[electionType][yearKey][numberKey]
       break
     }
@@ -398,118 +453,4 @@ export const getElectionData = (
   }
 
   return electionData
-}
-
-export const generateDefaultElectionMapData = () => {
-  return elections.reduce((electionMapData, election) => {
-    const { electionType, years } = election
-    let singleElectionMapData
-    switch (electionType) {
-      case 'president':
-      case 'mayor':
-      case 'legislatorParty': {
-        singleElectionMapData = years.reduce((obj, { key }) => {
-          obj[key] = deepCloneObj(defaultMapData)
-          return obj
-        }, {})
-        break
-      }
-
-      case 'legislator':
-      case 'councilMember': {
-        const { subtypes } = election
-        singleElectionMapData = years.reduce((obj, { key }) => {
-          obj[key] = subtypes.reduce((obj, { key }) => {
-            obj[key] = deepCloneObj(defaultMapData)
-            return obj
-          }, {})
-          return obj
-        }, {})
-        break
-      }
-
-      case 'referendum':
-      case 'referendumLocal': {
-        singleElectionMapData = years.reduce((obj, { key, numbers }) => {
-          obj[key] = numbers.reduce((obj, { key }) => {
-            obj[key] = deepCloneObj(defaultMapData)
-            return obj
-          }, {})
-          return obj
-        }, {})
-        break
-      }
-      default:
-        break
-    }
-    electionMapData[electionType] = singleElectionMapData
-    return electionMapData
-  }, {})
-}
-
-export const updateElectionMapData = (
-  electionMapData,
-  newMapData,
-  electionType,
-  yearKey,
-  subtypeKey,
-  numberKey
-) => {
-  const newElectionMapData = deepCloneObj(electionMapData)
-  switch (electionType) {
-    case 'president':
-    case 'mayor':
-    case 'legislatorParty': {
-      newElectionMapData[electionType][yearKey] = newMapData
-      break
-    }
-
-    case 'legislator':
-    case 'councilMember': {
-      newElectionMapData[electionType][yearKey][subtypeKey] = newMapData
-      break
-    }
-
-    case 'referendum':
-    case 'referendumLocal': {
-      newElectionMapData[electionType][yearKey][numberKey] = newMapData
-      break
-    }
-    default:
-      break
-  }
-  return newElectionMapData
-}
-
-export const getMapData = (
-  electionMapData,
-  electionType,
-  yearKey,
-  subtypeKey,
-  numberKey
-) => {
-  let mapData
-  switch (electionType) {
-    case 'president':
-    case 'mayor':
-    case 'legislatorParty': {
-      mapData = electionMapData[electionType][yearKey]
-      break
-    }
-
-    case 'legislator':
-    case 'councilMember': {
-      mapData = electionMapData[electionType][yearKey][subtypeKey]
-      break
-    }
-
-    case 'referendum':
-    case 'referendumLocal': {
-      mapData = electionMapData[electionType][yearKey][numberKey]
-      break
-    }
-    default:
-      break
-  }
-  return mapData
 }

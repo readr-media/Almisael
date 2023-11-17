@@ -2,16 +2,32 @@
 export const mockData = {
   parties: [
     {
-      id: 1,
       label: '中國國民黨',
-      short: '國民黨',
-      seats: 27,
+      seats: 30,
     },
     {
-      id: 2,
       label: '民主進步黨',
-      short: '民進黨',
-      seats: 19,
+      seats: 21,
+    },
+    {
+      label: '台灣民眾黨',
+      seats: 4,
+    },
+    {
+      label: '無黨籍及未經政黨推薦',
+      seats: 4,
+    },
+    {
+      label: '新黨',
+      seats: 1,
+    },
+    {
+      label: '社會民主黨',
+      seats: 1,
+    },
+    {
+      label: '開票中 席次尚未確認',
+      seats: 0,
     },
   ],
 }

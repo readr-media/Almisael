@@ -178,6 +178,7 @@ export const LandingPage = () => {
     setShow(true)
   }, [])
 
+  /** @type {React.MouseEventHandler} */
   const onEnterClickedHandler = () => {
     setShow(false)
     ReactGA.event({
