@@ -2,7 +2,8 @@ import { forwardRef, useCallback, useRef, useState } from 'react'
 import { useElectionData } from '../hook/useElectinData'
 import { SpinningModal } from './SpinningModal'
 import useWindowDimensions from '../hook/useWindowDimensions'
-import { MobileDashboard } from './MobileDashboard'
+// import { MobileDashboard } from './MobileDashboard'
+import { MobileDashboardNew } from './MobileDashboardNew'
 import { Dashboard } from './Dashboard'
 
 export const DashboardContainer = forwardRef(function DashboardContainer(
@@ -82,28 +83,7 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
     return (
       <div ref={ref}>
         {loading && <SpinningModal />}
-        <MobileDashboard
-          onElectionChange={onElectionChange}
-          mapObject={mapObject}
-          election={election}
-          mapData={mapData}
-          compareMapData={compareMapData}
-          seatData={seatData}
-          infoboxData={infoboxData}
-          compareInfoboxData={compareInfoboxData}
-          subtypeInfo={subtypeInfo}
-          yearInfo={yearInfo}
-          numberInfo={numberInfo}
-          compareInfo={compareInfo}
-          lastUpdate={lastUpdate}
-          showLoading={showLoading}
-          setMapObject={setMapObject}
-          mapGeoJsons={mapGeoJsons}
-          showTutorial={showTutorial}
-          setShowTutorial={setShowTutorial}
-          onTutorialEnd={onTutorialEnd}
-          hasAnchor={hasAnchor}
-        />
+        <MobileDashboardNew />
       </div>
     )
   }
