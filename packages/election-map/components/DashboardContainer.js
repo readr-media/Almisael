@@ -3,7 +3,7 @@ import { useElectionData } from '../hook/useElectinData'
 import { SpinningModal } from './SpinningModal'
 import useWindowDimensions from '../hook/useWindowDimensions'
 // import { MobileDashboard } from './MobileDashboard'
-import { MobileDashboardNew } from './MobileDashboardNew'
+import { MobileDashboardNew } from './mobile/MobileDashboardNew'
 import { Dashboard } from './Dashboard'
 
 export const DashboardContainer = forwardRef(function DashboardContainer(
