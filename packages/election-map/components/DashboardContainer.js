@@ -40,7 +40,6 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
     seatData,
     mapObject,
     setMapObject,
-    mapGeoJsons,
     onTutorialEnd,
     yearInfo,
     subtypeInfo,
@@ -70,7 +69,6 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
           lastUpdate={lastUpdate}
           showLoading={showLoading}
           setMapObject={setMapObject}
-          mapGeoJsons={mapGeoJsons}
           showTutorial={showTutorial}
           setShowTutorial={setShowTutorial}
           onTutorialEnd={onTutorialEnd}

@@ -3,6 +3,7 @@ import { electionMapColor } from '../consts/colors'
 import { MapContainer } from './MapContainer'
 import { Panels } from './Panels'
 import { Tutorial } from './Tutorial'
+import { useGeoJsons } from '../hook/useGeoJsons'
 
 const Wrapper = styled.div`
   position: relative;
@@ -40,13 +41,14 @@ export const Dashboard = ({
   lastUpdate,
   showLoading,
   setMapObject,
-  mapGeoJsons,
   showTutorial,
   setShowTutorial,
   onTutorialEnd,
   dashboardInView,
   hasAnchor,
 }) => {
+  const geoJsonsData = useGeoJsons()
+
   return (
     <Wrapper>
       <Panels
@@ -71,7 +73,7 @@ export const Dashboard = ({
         compareElectionData={compareMapData}
         setMapObject={setMapObject}
         electionType={election.electionType}
-        mapData={mapGeoJsons}
+        geoJsonsData={geoJsonsData}
         dashboardInView={dashboardInView}
         mapColor={election.meta?.map?.mapColor}
         yearInfo={yearInfo}
@@ -80,7 +82,7 @@ export const Dashboard = ({
       {!hasAnchor && showTutorial && (
         <Tutorial
           show={showTutorial}
-          mapData={mapGeoJsons}
+          isMapReady={geoJsonsData.hasGeoJsons}
           onClick={() => {
             setShowTutorial(false)
             onTutorialEnd()

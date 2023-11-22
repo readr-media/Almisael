@@ -70,9 +70,9 @@ const TouchLayer = styled.div`
   z-index: 2;
 `
 
-export const MobileTutorial = ({ mapData, onClick, show }) => {
+export const MobileTutorial = ({ onClick, show, isMapReady }) => {
   useEffect(() => {
-    if (show && mapData) {
+    if (show && isMapReady) {
       setTimeout(() => {
         const target = document.querySelector(`#first-id-63000`)
         if (target) {
@@ -81,7 +81,7 @@ export const MobileTutorial = ({ mapData, onClick, show }) => {
         }
       }, 300)
     }
-  }, [mapData, show])
+  }, [isMapReady, show])
 
   return (
     <>

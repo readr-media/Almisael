@@ -16,7 +16,7 @@ const SVG = styled.svg`
 `
 export const Map = ({
   dimension,
-  mapData,
+  geoJsons,
   id,
   mapObject,
   setMapObject,
@@ -28,8 +28,7 @@ export const Map = ({
   // eslint-disable-next-line no-unused-vars
   const { currentFeature, countyId, townId, villageId, activeId } = mapObject
   const { width, height } = dimension
-  const { counties, towns, villages } = mapData
-  console.log('counties', counties)
+  const { counties, towns, villages } = geoJsons
   const projection = d3.geoMercator().fitExtent(
     [
       [0, 0],

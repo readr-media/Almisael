@@ -1,8 +1,6 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import axios from 'axios'
 import widgets from '@readr-media/react-election-widgets'
-import { json } from 'd3'
-import { feature } from 'topojson'
 import {
   generateDefaultElectionsData,
   getElectionData,
@@ -423,7 +421,6 @@ export const useElectionData = (showLoading, showTutorial, width) => {
   const [electionsData, setElectionsData] = useState(
     deepCloneObj(defaultElectionsData)
   )
-  const [mapGeoJsons, setMapGeoJsons] = useState()
   const [infoboxData, setInfoboxData] = useState({})
 
   const [mapObject, setMapObject] = useState(defaultMapObject)
@@ -452,7 +449,6 @@ export const useElectionData = (showLoading, showTutorial, width) => {
     number?.key
   )
 
-  const isLoadingGeojsonRef = useRef(false)
   const compareElectionData =
     compareInfo.compareMode &&
     getElectionData(
@@ -468,78 +464,6 @@ export const useElectionData = (showLoading, showTutorial, width) => {
 
   const subtypes = election.subtypes
   const numbers = getReferendumNumbers(election)
-
-  /**
-   * @typedef {number[][][]} TopoJsonArcs
-   * @typedef {{scale: [number, number], translate: [number, number] }} TopoJsonTransform
-   *
-   * Representing the properties for a geomettry. Like COUNTYCODE: "09007"
-   * @typedef {{[key: string]: string}} TopoJsonObjectGeometryProperties
-   *
-   * @typedef {Object} TopoJsonObjectGeometry
-   * @property {TopoJsonArcs} arcs
-   * @property {string} type - The type of geometry. Like multi polygon.
-   * @property {TopoJsonObjectGeometryProperties} properties
-   *
-   * @typedef {Object} TopoJsonObject
-   * @property {string} type
-   * @property {Array<TopoJsonObjectGeometry>} geometries
-   *
-   * @typedef {{[key: string]: TopoJsonObject}} TopoJsonObjects
-   *
-   * @typedef {Object} TopoJson
-   * @property {string} type - The type of topojson.
-   * @property {TopoJsonArcs} arcs - Three dimension array stored arcs.
-   * @property {TopoJsonTransform} tranasform - The transform of the topojson.
-   * @property {TopoJsonObjects} objects - The objects of the topojson.
-   *
-   */
-
-  /**
-   * Download the topoJson and use topojson.feature to transform topoJson back to geoJson.
-   * @returns {{counties: Feature<Point, {[name: string]: any;}>, towns: Feature<Point, {[name: string]: any;}>, villages: Feature<Point, {[name: string]: any;}>}}
-   */
-  const prepareGeoJsons = useCallback(async () => {
-    const twCountiesJson =
-      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan_map_counties.json'
-    const twTownsJson =
-      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan_map_towns.json'
-    const twVillagesJson =
-      'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan_map_villages_20220902.json'
-
-    isLoadingGeojsonRef.current = true
-    try {
-      const responses = await Promise.allSettled([
-        json(twCountiesJson),
-        json(twTownsJson),
-        json(twVillagesJson),
-      ])
-
-      /** @type {Array<TopoJson>} */
-      // @ts-ignore
-      const mapJsons = responses.map((response) =>
-        response.status === 'fulfilled' ? response.value : {}
-      )
-
-      const [countiesTopoJson, townsTopoJson, villagesTopoJson] = mapJsons
-
-      const counties = feature(
-        // @ts-ignore
-        countiesTopoJson,
-        countiesTopoJson.objects.counties
-      )
-      // @ts-ignore
-      const towns = feature(townsTopoJson, townsTopoJson.objects.towns)
-      const villages = feature(
-        // @ts-ignore
-        villagesTopoJson,
-        villagesTopoJson.objects.villages
-      )
-      return { counties, towns, villages }
-    } catch (error) {
-      console.error('fetch map error', error)
-    }
-  }, [])
 
   /**
    * @typedef {Object} InfoboxData
@@ -1742,15 +1666,10 @@ export const useElectionData = (showLoading, showTutorial, width) => {
       const { filter } = compareInfo
       const [
         // @ts-ignore
-        { value: mapGeoJsonsResult },
-        // @ts-ignore
         { value: electionDataResult },
         // @ts-ignore
         { value: compareElectionDataResult },
       ] = await Promise.allSettled([
-        mapGeoJsons || isLoadingGeojsonRef.current
-          ? Promise.resolve(false)
-          : prepareGeoJsons(),
         prepareElectionData(
           electionData,
           election,
@@ -1774,11 +1693,6 @@ export const useElectionData = (showLoading, showTutorial, width) => {
             )
           : Promise.resolve({}),
       ])
-      if (mapGeoJsonsResult) {
-        const newMapGeoJsons = mapGeoJsonsResult
-        isLoadingGeojsonRef.current = false
-        setMapGeoJsons(newMapGeoJsons)
-      }
 
       let newElectionsData = electionsData
       if (electionDataResult.newElectionData) {
@@ -1836,11 +1750,9 @@ export const useElectionData = (showLoading, showTutorial, width) => {
     electionData,
     electionsData,
     lastUpdate,
-    mapGeoJsons,
     mapObject,
     number?.key,
     prepareElectionData,
-    prepareGeoJsons,
     showLoading,
     subtype?.key,
     year?.key,
@@ -2001,7 +1913,6 @@ export const useElectionData = (showLoading, showTutorial, width) => {
       scrollTo: evcScrollTo,
     },
     seatData: outputSeatData,
-    mapGeoJsons,
     onTutorialEnd,
     yearInfo,
     subtypeInfo,

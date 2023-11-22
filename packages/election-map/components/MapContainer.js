@@ -57,7 +57,6 @@ const defaultTooltip = {
 }
 
 export const MapContainer = ({
-  mapData,
   compareInfo,
   mapObject,
   setMapObject,
@@ -68,12 +67,15 @@ export const MapContainer = ({
   mapColor,
   yearInfo,
   numberInfo,
+  geoJsonsData,
 }) => {
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
   const { width } = useWindowDimensions()
+  const { geoJsons, hasGeoJsons } = geoJsonsData
   const { compareMode } = compareInfo
-  if (!mapData) {
+  // if any level of map not exist
+  if (!hasGeoJsons) {
     return <div></div>
   }
 
@@ -98,7 +100,7 @@ export const MapContainer = ({
           <>
             <Map
               dimension={splitDimension}
-              mapData={mapData}
+              geoJsons={geoJsons}
               id="first"
               mapObject={mapObject}
               setMapObject={setMapObject}
@@ -115,7 +117,7 @@ export const MapContainer = ({
             </CompareInfo>
             <Map
               dimension={splitDimension}
-              mapData={mapData}
+              geoJsons={geoJsons}
               id="second"
               mapObject={mapObject}
               setMapObject={setMapObject}
@@ -142,7 +144,7 @@ export const MapContainer = ({
         {dimension && (
           <Map
             dimension={dimension}
-            mapData={mapData}
+            geoJsons={geoJsons}
             id="first"
             mapObject={mapObject}
             setMapObject={setMapObject}
