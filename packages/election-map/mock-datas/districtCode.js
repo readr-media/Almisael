@@ -37,7 +37,7 @@
  */
 const districtCode = {
   code: '0',
-  name: '台灣',
+  name: '全國',
   type: 'nation',
   sub: [
     {
@@ -97,13 +97,13 @@ const districtCode = {
           sub: [
             {
               code: '211',
-              name: '汐止區第一里',
+              name: '第一里',
               type: 'village',
               sub: null,
             },
             {
               code: '222',
-              name: '汐止區第二里',
+              name: '第二里',
               type: 'village',
               sub: null,
             },
@@ -116,13 +116,13 @@ const districtCode = {
           sub: [
             {
               code: '221',
-              name: '板橋區第一里',
+              name: '[欍]埔村',
               type: 'village',
               sub: null,
             },
             {
               code: '222',
-              name: '板橋區第二里',
+              name: '第二里',
               type: 'village',
               sub: null,
             },
