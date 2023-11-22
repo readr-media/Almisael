@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { MapContainer } from './MapContainer'
 import { MobilePanels } from './MobilePanels'
 import { MobileTutorial } from './MobileTutorial'
+import { useGeoJsons } from '../hook/useGeoJsons'
 
 const Wrapper = styled.div``
 
@@ -21,12 +22,13 @@ export const MobileDashboard = ({
   lastUpdate,
   showLoading,
   setMapObject,
-  mapGeoJsons,
   showTutorial,
   setShowTutorial,
   onTutorialEnd,
   hasAnchor,
 }) => {
+  const geoJsonsData = useGeoJsons()
+
   return (
     <Wrapper>
       <MapContainer
@@ -37,7 +39,7 @@ export const MobileDashboard = ({
         compareElectionData={compareMapData}
         setMapObject={setMapObject}
         electionType={election.electionType}
-        mapData={mapGeoJsons}
+        geoJsonsData={geoJsonsData}
         mapColor={election.meta?.map?.mapColor}
         yearInfo={yearInfo}
         numberInfo={numberInfo}
@@ -59,7 +61,7 @@ export const MobileDashboard = ({
       {!hasAnchor && showTutorial && (
         <MobileTutorial
           show={showTutorial}
-          mapData={mapGeoJsons}
+          isMapReady={geoJsonsData.hasGeoJsons}
           onClick={() => {
             setShowTutorial(false)
             onTutorialEnd()
