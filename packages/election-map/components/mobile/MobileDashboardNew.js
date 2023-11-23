@@ -3,7 +3,7 @@ import { districtCode } from '../../mock-datas/districtCode'
 import Selector from './Selector'
 import ElectionSelector from './ElectionSelector'
 import styled from 'styled-components'
-
+import InfoBox from './infobox'
 const ELECTION_TYPE = [
   {
     electionType: 'president',
@@ -413,6 +413,7 @@ export const MobileDashboardNew = () => {
             placeholderValue="村里"
           ></Selector>
         </DistrictSelectorWrapper>
+        <InfoBox></InfoBox>
       </SelectorWrapper>
       {/* <div>currentElection: {JSON.stringify(currentElection)}</div>
       <div>
