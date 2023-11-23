@@ -1,7 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import { districtCode } from '../../mock-datas/districtCode'
 import Selector from './Selector'
+import ElectionSelector from './ElectionSelector'
 import styled from 'styled-components'
+
+const ELECTION_TYPE = [
+  { electionType: 'president', electionName: '正副總統' },
+  { electionType: 'mayor', electionName: '縣市首長' },
+  { electionType: 'legislator', electionName: '立法委員' },
+  {
+    electionType: 'councilMember',
+    electionName: '縣市議員',
+    subtypes: [
+      { electionName: '區域', electionType: 'normal' },
+      { electionName: '原住民', electionType: 'indigenous' },
+    ],
+  },
+  { electionType: 'referendum', electionName: '全國性公民投票' },
+]
 
 /**
  * @typedef {Object} NationData
@@ -41,24 +57,33 @@ const Wrapper = styled.div`
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding: 12px 28px;
+  padding: 12px 44px;
   height: calc(100vh - 40px);
 `
 
 const SelectorWrapper = styled.div`
   display: flex;
-  margin: 116px auto 0;
+  margin: 8px auto 0;
   width: 100%;
 
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  justify-content: left;
+  gap: 12px;
 `
-
+const ElectionSelectorWrapper = styled(SelectorWrapper)`
+  justify-content: left;
+  gap: 12px;
+`
 /**
  * Dashboard for new election map, created in 2023.11.20
  */
 export const MobileDashboardNew = () => {
+  const [currentElection, setCurrentElection] = useState(ELECTION_TYPE[0])
+  const [currentElectionSubType, setCurrentElectionSubType] = useState(
+    ELECTION_TYPE[3]?.subtypes[0]
+  )
   const [currentDistrictType, setCurrentDistrictType] = useState('nation')
   const [currentCountyCode, setCurrentCountyCode] = useState(null)
   const [currentTownCode, setCurrentTownCode] = useState(null)
@@ -159,9 +184,46 @@ export const MobileDashboardNew = () => {
         break
     }
   }
-
+  const handleSetCurrentElection = (option) => {
+    setCurrentElection(option)
+    //initialize when election change
+    setCurrentDistrictType('nation')
+    setCurrentCountyCode(null)
+    setCurrentTownCode(null)
+    setCurrentVillageCode(null)
+    setCurrentOpenSelector(null)
+  }
+  const handleSetCurrentElectionSubType = (option) => {
+    setCurrentElectionSubType(option)
+    //initialize when election change
+    setCurrentDistrictType('nation')
+    setCurrentCountyCode(null)
+    setCurrentTownCode(null)
+    setCurrentVillageCode(null)
+    setCurrentOpenSelector(null)
+  }
   return (
     <Wrapper>
+      <ElectionSelectorWrapper>
+        <ElectionSelector
+          options={ELECTION_TYPE}
+          currentElection={currentElection}
+          setCurrentElection={handleSetCurrentElection}
+          placeholderValue="選制"
+          currentOpenSelector={currentOpenSelector}
+          handleOpenSelector={setCurrentOpenSelector}
+        />
+        {currentElection?.subtypes && (
+          <ElectionSelector
+            options={currentElection?.subtypes}
+            currentElection={currentElectionSubType}
+            setCurrentElection={handleSetCurrentElectionSubType}
+            placeholderValue="子選制"
+            currentOpenSelector={currentOpenSelector}
+            handleOpenSelector={setCurrentOpenSelector}
+          />
+        )}
+      </ElectionSelectorWrapper>
       <SelectorWrapper>
         <Selector
           options={nationAndAllCounty}
@@ -191,6 +253,10 @@ export const MobileDashboardNew = () => {
         ></Selector>
       </SelectorWrapper>
 
+      <div>currentElection: {JSON.stringify(currentElection)}</div>
+      <div>
+        currentElectionSubType: {JSON.stringify(currentElectionSubType)}
+      </div>
       <div>currentDistrictType: {currentDistrictType}</div>
       <div>currentDistrictCode: {currentDistrictCode}</div>
       <div>currentCountyCode: {currentCountyCode}</div>
