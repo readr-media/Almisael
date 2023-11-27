@@ -3,7 +3,7 @@ import { districtCode } from '../../mock-datas/districtCode'
 import Selector from './Selector'
 import ElectionSelector from './ElectionSelector'
 import styled from 'styled-components'
-import InfoBox from './infobox'
+import InfoBox from './InfoBox'
 const ELECTION_TYPE = [
   {
     electionType: 'president',
@@ -368,6 +368,7 @@ export const MobileDashboardNew = () => {
         <ElectionSelectorWrapper>
           <ElectionSelector
             options={ELECTION_TYPE}
+            selectorType="electionType"
             currentElection={currentElection}
             setCurrentElection={handleSetCurrentElection}
             placeholderValue="選制"
@@ -376,6 +377,7 @@ export const MobileDashboardNew = () => {
           />
           {currentElection?.subtypes && (
             <ElectionSelector
+              selectorType="electionSubType"
               options={currentElection?.subtypes}
               currentElection={currentElectionSubType}
               setCurrentElection={handleSetCurrentElectionSubType}
@@ -387,6 +389,7 @@ export const MobileDashboardNew = () => {
         </ElectionSelectorWrapper>
         <DistrictSelectorWrapper>
           <Selector
+            selectorType="districtNationAndCounty"
             options={nationAndAllCounty}
             districtCode={currentCountyCode}
             onSelected={handleOnClick}
@@ -396,29 +399,31 @@ export const MobileDashboardNew = () => {
           ></Selector>
 
           <Selector
+            selectorType="districtTown"
             options={allTown}
             districtCode={currentTownCode}
             onSelected={handleOnClick}
             currentOpenSelector={currentOpenSelector}
             handleOpenSelector={setCurrentOpenSelector}
-            placeholderValue="鄉鎮市區"
+            placeholderValue="-"
           ></Selector>
 
           <Selector
+            selectorType="districtVillage"
             options={allVillage}
             districtCode={currentVillageCode}
             onSelected={handleOnClick}
             currentOpenSelector={currentOpenSelector}
             handleOpenSelector={setCurrentOpenSelector}
-            placeholderValue="村里"
+            placeholderValue="-"
           ></Selector>
         </DistrictSelectorWrapper>
         <InfoBox></InfoBox>
       </SelectorWrapper>
-      {/* <div>currentElection: {JSON.stringify(currentElection)}</div>
+      <div>currentElectionType: {currentElection.electionType}</div>
       <div>
         currentElectionSubType: {JSON.stringify(currentElectionSubType)}
-      </div> */}
+      </div>
       <div>currentDistrictType: {currentDistrictType}</div>
       <div>currentDistrictCode: {currentDistrictCode}</div>
       <div>currentCountyCode: {currentCountyCode}</div>
