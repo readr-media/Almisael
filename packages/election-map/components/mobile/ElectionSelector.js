@@ -94,6 +94,7 @@ export default function ElectionSelector({
   options = [],
   currentElection,
   setCurrentElection,
+  selectorType = '',
   handleOpenSelector,
   currentOpenSelector,
   placeholderValue,
@@ -104,7 +105,7 @@ export default function ElectionSelector({
     setShouldShowOptions((pre) => !pre)
     shouldShowOptions
       ? handleOpenSelector(null)
-      : handleOpenSelector(placeholderValue)
+      : handleOpenSelector(selectorType)
   }
   const handleOptionOnSelected = (option) => {
     setCurrentElection(option)
@@ -113,10 +114,10 @@ export default function ElectionSelector({
   }
 
   useEffect(() => {
-    if (currentOpenSelector !== placeholderValue) {
+    if (currentOpenSelector !== selectorType) {
       setShouldShowOptions(false)
     }
-  }, [currentOpenSelector, placeholderValue])
+  }, [currentOpenSelector, selectorType])
 
   return (
     <>

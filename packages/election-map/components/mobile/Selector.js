@@ -95,6 +95,7 @@ export default function Selector({
   options = [],
   onSelected,
   districtCode,
+  selectorType = '',
   placeholderValue = '',
   handleOpenSelector,
   currentOpenSelector,
@@ -107,7 +108,7 @@ export default function Selector({
     setShouldShowOptions((pre) => !pre)
     shouldShowOptions
       ? handleOpenSelector(null)
-      : handleOpenSelector(placeholderValue)
+      : handleOpenSelector(selectorType)
   }
   const handleOptionOnSelected = (option) => {
     onSelected(option.type, option.code)
@@ -119,10 +120,10 @@ export default function Selector({
       placeholderValue
     : null
   useEffect(() => {
-    if (currentOpenSelector !== placeholderValue) {
+    if (currentOpenSelector !== selectorType) {
       setShouldShowOptions(false)
     }
-  }, [currentOpenSelector, placeholderValue])
+  }, [currentOpenSelector, selectorType])
   return (
     <>
       <Wrapper>
