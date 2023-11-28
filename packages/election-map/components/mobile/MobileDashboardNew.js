@@ -4,6 +4,7 @@ import Selector from './Selector'
 import ElectionSelector from './ElectionSelector'
 import styled from 'styled-components'
 import InfoBox from './InfoBox'
+import YearComparisonMenuBar from './YearComparisonMenuBar'
 const ELECTION_TYPE = [
   {
     electionType: 'president',
@@ -200,7 +201,14 @@ const TopButton = styled.button`
   border-radius: 8px;
   border: 1px solid black;
   padding: 4px 7px;
-  background-color: #fff;
+  background-color: ${
+    /**
+     *
+     * @param {Object} props
+     * @param {boolean} [props.isSelected]
+     */
+    ({ isSelected }) => (isSelected ? '#ffc7bb' : '#fff')
+  };
   font-size: 14px;
   line-height: 20.27px;
   font-weight: 500;
@@ -237,6 +245,15 @@ export const MobileDashboardNew = () => {
   const [currentElectionSubType, setCurrentElectionSubType] = useState(
     ELECTION_TYPE[3]?.subtypes[0]
   )
+
+  const electionTypeYears = currentElection.years
+  const defaultYears = currentElection.years[currentElection.years.length - 1]
+  const [selectedYears, setSelectedYears] = useState([{ key: 2024 }])
+  console.log(defaultYears)
+
+  const [shouldOpenYearComparisonMenuBar, setShouldOpenYearComparisonMenuBar] =
+    useState(false)
+
   const [currentDistrictType, setCurrentDistrictType] = useState('nation')
   const [currentCountyCode, setCurrentCountyCode] = useState(null)
   const [currentTownCode, setCurrentTownCode] = useState(null)
@@ -339,6 +356,9 @@ export const MobileDashboardNew = () => {
   }
   const handleSetCurrentElection = (option) => {
     setCurrentElection(option)
+
+    const currentYears = option.years[option.years.length - 1]
+    setSelectedYears([currentYears])
     //initialize when election change
     setCurrentDistrictType('nation')
     setCurrentCountyCode(null)
@@ -355,80 +375,102 @@ export const MobileDashboardNew = () => {
     setCurrentVillageCode(null)
     setCurrentOpenSelector(null)
   }
-  const electionTypeYears = currentElection.years
   return (
-    <Wrapper>
-      <TopButtonsWrapper>
-        {electionTypeYears.map((year) => (
-          <TopButton key={year.key}>{year.key}</TopButton>
-        ))}
-        <TopButton>比較</TopButton>
-      </TopButtonsWrapper>
-      <SelectorWrapper>
-        <ElectionSelectorWrapper>
-          <ElectionSelector
-            options={ELECTION_TYPE}
-            selectorType="electionType"
-            currentElection={currentElection}
-            setCurrentElection={handleSetCurrentElection}
-            placeholderValue="選制"
-            currentOpenSelector={currentOpenSelector}
-            handleOpenSelector={setCurrentOpenSelector}
-          />
-          {currentElection?.subtypes && (
+    <>
+      {shouldOpenYearComparisonMenuBar && (
+        <YearComparisonMenuBar
+          setShouldOpenYearComparisonMenuBar={
+            setShouldOpenYearComparisonMenuBar
+          }
+          years={electionTypeYears}
+          selectedYears={selectedYears}
+          setSelectedYears={setSelectedYears}
+        />
+      )}
+      <Wrapper>
+        <TopButtonsWrapper>
+          {electionTypeYears.map((year) => (
+            <TopButton
+              isSelected={selectedYears
+                .map((year) => year.key)
+                .includes(year.key)}
+              onClick={() => setSelectedYears([year])}
+              key={year.key}
+            >
+              {year.key}
+            </TopButton>
+          ))}
+          <TopButton onClick={() => setShouldOpenYearComparisonMenuBar(true)}>
+            比較
+          </TopButton>
+        </TopButtonsWrapper>
+        <SelectorWrapper>
+          <ElectionSelectorWrapper>
             <ElectionSelector
-              selectorType="electionSubType"
-              options={currentElection?.subtypes}
-              currentElection={currentElectionSubType}
-              setCurrentElection={handleSetCurrentElectionSubType}
-              placeholderValue="子選制"
+              options={ELECTION_TYPE}
+              selectorType="electionType"
+              currentElection={currentElection}
+              setCurrentElection={handleSetCurrentElection}
+              placeholderValue="選制"
               currentOpenSelector={currentOpenSelector}
               handleOpenSelector={setCurrentOpenSelector}
             />
-          )}
-        </ElectionSelectorWrapper>
-        <DistrictSelectorWrapper>
-          <Selector
-            selectorType="districtNationAndCounty"
-            options={nationAndAllCounty}
-            districtCode={currentCountyCode}
-            onSelected={handleOnClick}
-            currentOpenSelector={currentOpenSelector}
-            handleOpenSelector={setCurrentOpenSelector}
-            placeholderValue="全國"
-          ></Selector>
+            {currentElection?.subtypes && (
+              <ElectionSelector
+                selectorType="electionSubType"
+                options={currentElection?.subtypes}
+                currentElection={currentElectionSubType}
+                setCurrentElection={handleSetCurrentElectionSubType}
+                placeholderValue="子選制"
+                currentOpenSelector={currentOpenSelector}
+                handleOpenSelector={setCurrentOpenSelector}
+              />
+            )}
+          </ElectionSelectorWrapper>
+          <DistrictSelectorWrapper>
+            <Selector
+              selectorType="districtNationAndCounty"
+              options={nationAndAllCounty}
+              districtCode={currentCountyCode}
+              onSelected={handleOnClick}
+              currentOpenSelector={currentOpenSelector}
+              handleOpenSelector={setCurrentOpenSelector}
+              placeholderValue="全國"
+            ></Selector>
 
-          <Selector
-            selectorType="districtTown"
-            options={allTown}
-            districtCode={currentTownCode}
-            onSelected={handleOnClick}
-            currentOpenSelector={currentOpenSelector}
-            handleOpenSelector={setCurrentOpenSelector}
-            placeholderValue="-"
-          ></Selector>
+            <Selector
+              selectorType="districtTown"
+              options={allTown}
+              districtCode={currentTownCode}
+              onSelected={handleOnClick}
+              currentOpenSelector={currentOpenSelector}
+              handleOpenSelector={setCurrentOpenSelector}
+              placeholderValue="-"
+            ></Selector>
 
-          <Selector
-            selectorType="districtVillage"
-            options={allVillage}
-            districtCode={currentVillageCode}
-            onSelected={handleOnClick}
-            currentOpenSelector={currentOpenSelector}
-            handleOpenSelector={setCurrentOpenSelector}
-            placeholderValue="-"
-          ></Selector>
-        </DistrictSelectorWrapper>
-        <InfoBox></InfoBox>
-      </SelectorWrapper>
-      <div>currentElectionType: {currentElection.electionType}</div>
-      <div>
-        currentElectionSubType: {JSON.stringify(currentElectionSubType)}
-      </div>
-      <div>currentDistrictType: {currentDistrictType}</div>
-      <div>currentDistrictCode: {currentDistrictCode}</div>
-      <div>currentCountyCode: {currentCountyCode}</div>
-      <div>currentTownCode: {currentTownCode}</div>
-      <div>currentVillageCode: {currentVillageCode}</div>
-    </Wrapper>
+            <Selector
+              selectorType="districtVillage"
+              options={allVillage}
+              districtCode={currentVillageCode}
+              onSelected={handleOnClick}
+              currentOpenSelector={currentOpenSelector}
+              handleOpenSelector={setCurrentOpenSelector}
+              placeholderValue="-"
+            ></Selector>
+          </DistrictSelectorWrapper>
+          <InfoBox></InfoBox>
+        </SelectorWrapper>
+        <div>electionTypeYears: {JSON.stringify(electionTypeYears)}</div>
+        <div>currentElectionType: {currentElection.electionType}</div>
+        <div>
+          currentElectionSubType: {JSON.stringify(currentElectionSubType)}
+        </div>
+        <div>currentDistrictType: {currentDistrictType}</div>
+        <div>currentDistrictCode: {currentDistrictCode}</div>
+        <div>currentCountyCode: {currentCountyCode}</div>
+        <div>currentTownCode: {currentTownCode}</div>
+        <div>currentVillageCode: {currentVillageCode}</div>
+      </Wrapper>
+    </>
   )
 }
