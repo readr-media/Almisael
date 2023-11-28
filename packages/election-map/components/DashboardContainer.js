@@ -38,8 +38,8 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
     compareInfoboxData,
     evcInfo,
     seatData,
-    mapObject,
-    setMapObject,
+    levelControl,
+    setLevelControl,
     onTutorialEnd,
     yearInfo,
     subtypeInfo,
@@ -54,7 +54,7 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
         {loading && <SpinningModal />}
         <Dashboard
           onElectionChange={onElectionChange}
-          mapObject={mapObject}
+          levelControl={levelControl}
           election={election}
           mapData={mapData}
           compareMapData={compareMapData}
@@ -68,7 +68,7 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
           compareInfo={compareInfo}
           lastUpdate={lastUpdate}
           showLoading={showLoading}
-          setMapObject={setMapObject}
+          setLevelControl={setLevelControl}
           showTutorial={showTutorial}
           setShowTutorial={setShowTutorial}
           onTutorialEnd={onTutorialEnd}

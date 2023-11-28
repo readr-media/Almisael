@@ -66,7 +66,7 @@ const PlaceHolder = styled.div`
 
 export const Panels = ({
   onElectionChange,
-  mapObject,
+  levelControl,
   election,
   infoboxData,
   compareInfoboxData,
@@ -77,10 +77,13 @@ export const Panels = ({
   yearInfo,
   numberInfo,
   lastUpdate,
+  mapUpperLevelId,
+  renderingDistrictNames,
 }) => {
   const { electionType } = election
   const { compareMode } = compareInfo
-  const { countyName, townName, constituencyName, villageName } = mapObject
+  const { countyName, townName, constituencyName, villageName } =
+    renderingDistrictNames
   const locations = [
     countyName,
     townName,
@@ -107,7 +110,10 @@ export const Panels = ({
         )}
         {!numberInfo?.number && (
           <>
-            <MapNavigateButton mapObject={mapObject} />
+            <MapNavigateButton
+              levelControl={levelControl}
+              mapUpperLevelId={mapUpperLevelId}
+            />
             <MapLocations locations={locations} />
             <InfoboxPanels
               infoboxData={infoboxData}
@@ -126,7 +132,8 @@ export const Panels = ({
               ...election.meta.seat,
               year: yearInfo.year?.key,
               location: countyMappingData.find(
-                (countyData) => countyData.countyCode === mapObject.countyId
+                (countyData) =>
+                  countyData.countyCode === levelControl.countyCode
               )?.countyName,
             }}
             data={seatData}
@@ -143,7 +150,10 @@ export const Panels = ({
         {numberInfo?.number && (
           <>
             <BottomPanelWrapper>
-              <MapNavigateButton mapObject={mapObject} />
+              <MapNavigateButton
+                levelControl={levelControl}
+                mapUpperLevelId={mapUpperLevelId}
+              />
               <MapLocations locations={locations} />
               <InfoboxPanels
                 infoboxData={infoboxData}

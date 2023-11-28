@@ -31,16 +31,14 @@ const MapLevelControlButton = styled.button`
   }
 `
 
-export const MapNavigateButton = ({ mapObject }) => {
+export const MapNavigateButton = ({ levelControl, mapUpperLevelId }) => {
   const { width } = useWindowDimensions()
   return (
     <MapButtonWrapper>
       <MapLevelControlButton
-        disabled={mapObject.level === 0}
+        disabled={levelControl.level === 0}
         onClick={() => {
-          const target = document.querySelector(
-            `#first-id-${mapObject.upperLevelId}`
-          )
+          const target = document.querySelector(`#first-id-${mapUpperLevelId}`)
           let event = new MouseEvent('click', { bubbles: true })
           target.dispatchEvent(event)
           ReactGA.event({
@@ -53,7 +51,7 @@ export const MapNavigateButton = ({ mapObject }) => {
         回上層
       </MapLevelControlButton>
       <MapLevelControlButton
-        disabled={mapObject.level === 0}
+        disabled={levelControl.level === 0}
         onClick={() => {
           const target = document.querySelector(`#first-id-background`)
           let event = new MouseEvent('click', { bubbles: true })

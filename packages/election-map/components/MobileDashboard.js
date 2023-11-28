@@ -21,7 +21,7 @@ export const MobileDashboard = ({
   compareInfo,
   lastUpdate,
   showLoading,
-  setMapObject,
+  setLevelControl,
   showTutorial,
   setShowTutorial,
   onTutorialEnd,
@@ -37,7 +37,7 @@ export const MobileDashboard = ({
         mapObject={mapObject}
         electionData={mapData}
         compareElectionData={compareMapData}
-        setMapObject={setMapObject}
+        setLevelControl={setLevelControl}
         electionType={election.electionType}
         geoJsonsData={geoJsonsData}
         mapColor={election.meta?.map?.mapColor}
