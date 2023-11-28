@@ -58,8 +58,8 @@ const defaultTooltip = {
 
 export const MapContainer = ({
   compareInfo,
-  mapObject,
-  setMapObject,
+  levelControl,
+  setLevelControl,
   electionData,
   compareElectionData,
   electionType,
@@ -68,6 +68,8 @@ export const MapContainer = ({
   yearInfo,
   numberInfo,
   geoJsonsData,
+  setMapUpperLevelId,
+  setRenderingDistrictNames,
 }) => {
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
@@ -102,13 +104,15 @@ export const MapContainer = ({
               dimension={splitDimension}
               geoJsons={geoJsons}
               id="first"
-              mapObject={mapObject}
-              setMapObject={setMapObject}
+              levelControl={levelControl}
+              setLevelControl={setLevelControl}
               setTooltip={setTooltip}
               electionData={electionData}
               electionType={electionType}
               mapColor={mapColor}
               yearInfo={yearInfo}
+              setMapUpperLevelId={setMapUpperLevelId}
+              setRenderingDistrictNames={setRenderingDistrictNames}
             />
             <CompareInfo left={true}>
               {numberInfo?.number
@@ -119,13 +123,15 @@ export const MapContainer = ({
               dimension={splitDimension}
               geoJsons={geoJsons}
               id="second"
-              mapObject={mapObject}
-              setMapObject={setMapObject}
+              levelControl={levelControl}
+              setLevelControl={setLevelControl}
               setTooltip={setTooltip}
               electionData={compareElectionData}
               electionType={electionType}
               mapColor={mapColor}
               yearInfo={yearInfo}
+              setMapUpperLevelId={setMapUpperLevelId}
+              setRenderingDistrictNames={setRenderingDistrictNames}
             />
             <CompareInfo left={false}>
               {compareInfo?.filter?.number
@@ -146,12 +152,14 @@ export const MapContainer = ({
             dimension={dimension}
             geoJsons={geoJsons}
             id="first"
-            mapObject={mapObject}
-            setMapObject={setMapObject}
+            levelControl={levelControl}
+            setLevelControl={setLevelControl}
             setTooltip={setTooltip}
             electionData={electionData}
             electionType={electionType}
             mapColor={mapColor}
+            setMapUpperLevelId={setMapUpperLevelId}
+            setRenderingDistrictNames={setRenderingDistrictNames}
           />
         )}
         <MapTooltip tooltip={tooltip} />

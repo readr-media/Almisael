@@ -4,6 +4,11 @@ import { MapContainer } from './MapContainer'
 import { Panels } from './Panels'
 import { Tutorial } from './Tutorial'
 import { useGeoJsons } from '../hook/useGeoJsons'
+import { useState } from 'react'
+import {
+  defaultMapUpperLevelId,
+  defaultRenderingDistrictNames,
+} from '../consts/election-module-pc'
 
 const Wrapper = styled.div`
   position: relative;
@@ -26,7 +31,7 @@ const MoreHint = styled.div`
 
 export const Dashboard = ({
   onElectionChange,
-  mapObject,
+  levelControl,
   election,
   mapData,
   compareMapData,
@@ -40,7 +45,7 @@ export const Dashboard = ({
   compareInfo,
   lastUpdate,
   showLoading,
-  setMapObject,
+  setLevelControl,
   showTutorial,
   setShowTutorial,
   onTutorialEnd,
@@ -48,12 +53,16 @@ export const Dashboard = ({
   hasAnchor,
 }) => {
   const geoJsonsData = useGeoJsons()
+  const [renderingDistrictNames, setRenderingDistrictNames] = useState(
+    defaultRenderingDistrictNames
+  )
+  const [mapUpperLevelId, setMapUpperLevelId] = useState(defaultMapUpperLevelId)
 
   return (
     <Wrapper>
       <Panels
         onElectionChange={onElectionChange}
-        mapObject={mapObject}
+        levelControl={levelControl}
         election={election}
         seatData={seatData}
         infoboxData={infoboxData}
@@ -64,20 +73,24 @@ export const Dashboard = ({
         numberInfo={numberInfo}
         compareInfo={compareInfo}
         lastUpdate={lastUpdate}
+        mapUpperLevelId={mapUpperLevelId}
+        renderingDistrictNames={renderingDistrictNames}
       />
       <MapContainer
         showLoading={showLoading}
         compareInfo={compareInfo}
-        mapObject={mapObject}
+        levelControl={levelControl}
         electionData={mapData}
         compareElectionData={compareMapData}
-        setMapObject={setMapObject}
+        setLevelControl={setLevelControl}
         electionType={election.electionType}
         geoJsonsData={geoJsonsData}
         dashboardInView={dashboardInView}
         mapColor={election.meta?.map?.mapColor}
         yearInfo={yearInfo}
         numberInfo={numberInfo}
+        setMapUpperLevelId={setMapUpperLevelId}
+        setRenderingDistrictNames={setRenderingDistrictNames}
       />
       {!hasAnchor && showTutorial && (
         <Tutorial

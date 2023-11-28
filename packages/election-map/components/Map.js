@@ -8,6 +8,11 @@ import {
 } from '../consts/colors'
 
 import styled from 'styled-components'
+import { useState } from 'react'
+import {
+  defaultMapUpperLevelId,
+  defaultRenderingDistrictNames,
+} from '../consts/election-module-pc'
 
 const SVG = styled.svg`
   use {
@@ -18,15 +23,17 @@ export const Map = ({
   dimension,
   geoJsons,
   id,
-  mapObject,
-  setMapObject,
+  levelControl,
+  setLevelControl,
   setTooltip,
   electionData,
   electionType,
   mapColor,
+  setMapUpperLevelId,
+  setRenderingDistrictNames,
 }) => {
-  // eslint-disable-next-line no-unused-vars
-  const { currentFeature, countyId, townId, villageId, activeId } = mapObject
+  const [currentFeature, setCurrentFeature] = useState(null)
+  const { countyCode, townCode, activeCode } = levelControl
   const { width, height } = dimension
   const { counties, towns, villages } = geoJsons
   const projection = d3.geoMercator().fitExtent(
@@ -40,13 +47,13 @@ export const Map = ({
 
   const displayingTowns = { ...towns }
   displayingTowns.features = displayingTowns.features.filter((feature) => {
-    return feature.properties.COUNTYCODE === countyId
+    return feature.properties.COUNTYCODE === countyCode
   })
 
   const displayingVillages = { ...villages }
   displayingVillages.features = displayingVillages.features.filter(
     (feature) => {
-      return feature.properties.TOWNCODE === townId
+      return feature.properties.TOWNCODE === townCode
     }
   )
 
@@ -101,11 +108,15 @@ export const Map = ({
   // }, [width, height])
 
   const nonLandClicked = () => {
-    setMapObject()
+    setLevelControl()
+    setCurrentFeature(null)
+    setMapUpperLevelId(defaultMapUpperLevelId)
+    setRenderingDistrictNames(defaultRenderingDistrictNames)
   }
 
   const countyClicked = (feature) => {
-    const { COUNTYCODE: countyId, COUNTYNAME: countyName } = feature.properties
+    const { COUNTYCODE: countyCode, COUNTYNAME: countyName } =
+      feature.properties
     // console.log('---')
     // console.log(`county:${countyName} clicked`)
     // console.log(`countyId = ${countyId}`)
@@ -113,26 +124,28 @@ export const Map = ({
     // console.log('d is:', feature)
     // console.log('---')
 
-    setMapObject({
+    setLevelControl({
       level: 1,
-      currentFeature: feature,
-      countyId,
+      countyCode,
+      townCode: '',
+      villageCode: '',
+      constituencyCode: '',
+      activeCode: countyCode,
+    })
+    setCurrentFeature(feature)
+    setMapUpperLevelId(defaultMapUpperLevelId)
+    setRenderingDistrictNames({
       countyName,
-      townId: '',
-      villageId: '',
-      villageId: '',
+      townName: '',
       villageName: '',
-      constituencyId: '',
       constituencyName: '',
-      activeId: countyId,
-      upperLevelId: 'background',
     })
   }
   const townClicked = (feature) => {
     const {
-      COUNTYCODE: countyId,
+      COUNTYCODE: countyCode,
       COUNTYNAME: countyName,
-      TOWNCODE: townId,
+      TOWNCODE: townCode,
       TOWNNAME: townName,
     } = feature.properties
 
@@ -143,28 +156,30 @@ export const Map = ({
     // console.log('d is:', feature)
     // console.log('---')
 
-    setMapObject({
+    setLevelControl({
       level: 2,
-      currentFeature: feature,
-      countyId,
+      countyCode,
+      townCode,
+      villageCode: '',
+      constituencyCode: '',
+      activeCode: townCode,
+    })
+    setCurrentFeature(feature)
+    setMapUpperLevelId(countyCode)
+    setRenderingDistrictNames({
       countyName,
-      townId,
       townName,
-      villageId: '',
       villageName: '',
-      constituencyId: '',
       constituencyName: '',
-      activeId: townId,
-      upperLevelId: countyId,
     })
   }
   const villageClicked = (feature) => {
     const {
-      COUNTYCODE: countyId,
+      COUNTYCODE: countyCode,
       COUNTYNAME: countyName,
-      TOWNCODE: townId,
+      TOWNCODE: townCode,
       TOWNNAME: townName,
-      VILLCODE: villageId,
+      VILLCODE: villageCode,
       VILLNAME: villageName,
     } = feature.properties
 
@@ -180,19 +195,20 @@ export const Map = ({
     // console.log('d is:', feature)
     // console.log('---')
 
-    setMapObject({
-      ...mapObject,
+    setLevelControl({
       level: 3,
-      countyId,
+      countyCode,
+      townCode,
+      villageCode,
+      constituencyCode: '',
+      activeCode: villageCode,
+    })
+    setMapUpperLevelId(townCode)
+    setRenderingDistrictNames({
       countyName,
-      townId,
       townName,
-      villageId,
       villageName,
-      constituencyId: '',
       constituencyName: '',
-      activeId: villageId,
-      upperLevelId: townId,
     })
   }
 
@@ -212,7 +228,7 @@ export const Map = ({
       return defaultColor
     }
 
-    if (activeId && activeId !== countyCode) {
+    if (activeCode && activeCode !== countyCode) {
       return defaultColor
     }
 
@@ -257,7 +273,7 @@ export const Map = ({
       return defaultColor
     }
 
-    if (activeId && activeId !== countyCode) {
+    if (activeCode && activeCode !== countyCode) {
       return defaultColor
     }
 
@@ -320,7 +336,7 @@ export const Map = ({
       return defaultColor
     }
 
-    if (activeId && activeId !== townCode && activeId !== villCode) {
+    if (activeCode && activeCode !== townCode && activeCode !== villCode) {
       return defaultColor
     }
 
@@ -402,12 +418,12 @@ export const Map = ({
               id={`${id}-id-${feature['properties']['COUNTYCODE']}`}
               data-county-code={feature['properties']['COUNTYCODE']}
               fill={
-                feature['properties']['COUNTYCODE'] === activeId
+                feature['properties']['COUNTYCODE'] === activeCode
                   ? undefined
                   : getCountyColor(feature['properties']['COUNTYCODE'])
               }
               stroke={
-                feature['properties']['COUNTYCODE'] === activeId
+                feature['properties']['COUNTYCODE'] === activeCode
                   ? undefined
                   : 'black'
               }
@@ -436,9 +452,6 @@ export const Map = ({
               }
             />
           ))}
-          {/* {mapObject.level === 1 && (
-            <use href={`#${id}-id-${activeId}`} x="0" />
-          )} */}
         </g>
         <g id={`${id}-towns`}>
           {displayingTowns?.features?.map((feature) => (
@@ -453,12 +466,12 @@ export const Map = ({
               })()}
               // fill={!townId && countyId === activeId ? 'lightcoral' : defaultColor}
               fill={
-                feature['properties']['TOWNCODE'] === activeId
+                feature['properties']['TOWNCODE'] === activeCode
                   ? 'transparent'
                   : getTownColor(feature['properties']['TOWNCODE'])
               }
               stroke={
-                feature['properties']['TOWNCODE'] === activeId
+                feature['properties']['TOWNCODE'] === activeCode
                   ? undefined
                   : '#666666'
               }
@@ -513,7 +526,7 @@ export const Map = ({
               // }
               fill={getVillageColor(feature['properties']['VILLCODE'])}
               stroke={
-                feature['properties']['VILLCODE'] === activeId
+                feature['properties']['VILLCODE'] === activeCode
                   ? undefined
                   : '#666666'
               }
@@ -542,10 +555,10 @@ export const Map = ({
             />
           ))}
 
-          {activeId && (
+          {activeCode && (
             // duplicate active map on above
             <use
-              href={`#${id}-id-${activeId}`}
+              href={`#${id}-id-${activeCode}`}
               fill="transparent"
               stroke="white"
             />
