@@ -248,8 +248,7 @@ export const MobileDashboardNew = () => {
 
   const electionTypeYears = currentElection.years
   const defaultYears = currentElection.years[currentElection.years.length - 1]
-  const [selectedYears, setSelectedYears] = useState([{ key: 2024 }])
-  console.log(defaultYears)
+  const [selectedYears, setSelectedYears] = useState([defaultYears])
 
   const [shouldOpenYearComparisonMenuBar, setShouldOpenYearComparisonMenuBar] =
     useState(false)
