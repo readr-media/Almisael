@@ -55,7 +55,14 @@ const SelectedButton = styled.button`
   border-radius: 8px;
   background-color: #000;
   border: 1px solid;
-  cursor: pointer;
+  cursor: ${
+    /**
+     *
+     * @param {Object} props
+     * @param {boolean} props.shouldDisable
+     */
+    ({ shouldDisable }) => (shouldDisable ? 'not-allowed' : 'pointer')
+  };
   span {
     color: #fff;
 
@@ -64,22 +71,6 @@ const SelectedButton = styled.button`
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-
-  /* &:after {
-      position: absolute;
-      content: '';
-      top: 14px;
-      right: 1em;
-      width: 0;
-      height: 0;
-      color: white;
-      border: 5px solid transparent;
-      border-color: #fff transparent transparent transparent;
-    } */
-  /* &.open {
-      border: none;
-      border-radius: 15px 15px 0px 0px;
-    } */
 
   .triangle {
     width: 0px;
@@ -97,7 +88,7 @@ export default function ElectionSelector({
   selectorType = '',
   handleOpenSelector,
   currentOpenSelector,
-  placeholderValue,
+  shouldDisable,
 }) {
   const [shouldShowOptions, setShouldShowOptions] = useState(false)
   const hasOptions = options && Array.isArray(options) && options.length
@@ -122,7 +113,11 @@ export default function ElectionSelector({
   return (
     <>
       <Wrapper>
-        <SelectedButton onClick={handleSelectedButtonOnClick}>
+        <SelectedButton
+          disabled={shouldDisable}
+          shouldDisable={shouldDisable}
+          onClick={handleSelectedButtonOnClick}
+        >
           <span>{currentElection?.electionName || currentElection?.name}</span>
           <i className="triangle"></i>
         </SelectedButton>

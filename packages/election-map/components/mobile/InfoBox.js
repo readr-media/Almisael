@@ -6,6 +6,7 @@ import styled from 'styled-components'
  */
 
 const Wrapper = styled.section`
+  border-top: 1px solid #000;
   .prof-rate {
     font-size: 16px;
     line-height: 23.17px;

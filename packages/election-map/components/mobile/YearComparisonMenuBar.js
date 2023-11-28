@@ -13,6 +13,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  .hint {
+    margin-bottom: 12px;
+  }
 `
 
 const Spot = styled.span`
@@ -21,36 +24,17 @@ const Spot = styled.span`
   height: 22px;
   background-color: #fff;
   cursor: pointer;
-  border: 1px solid #000;
+  border: 1px solid #cdcdcd;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 45px;
 
-  &.selected,
-  &.selected2 {
-    &:before {
-      content: '';
-      width: 16px;
-      height: 16px;
-      border: 1px solid #000;
-      border-radius: 50%;
-    }
-  }
-  &.selected {
-    &:before {
-      background-color: #000;
-    }
-  }
-  &.selected2 {
-    &:before {
-      background-color: #ffc7bb;
-    }
-  }
   &:after {
     display: block;
     position: absolute;
+    color: #cdcdcd;
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
@@ -64,6 +48,31 @@ const Spot = styled.span`
        */
       ({ yearName }) => yearName && `${yearName}`
     }';
+  }
+
+  &.selected,
+  &.selected2 {
+    border: 1px solid #000;
+    &:before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border: 1px solid #000;
+      border-radius: 50%;
+    }
+    &:after {
+      color: #000;
+    }
+  }
+  &.selected {
+    &:before {
+      background-color: #ffc7bb;
+    }
+  }
+  &.selected2 {
+    &:before {
+      background-color: #000;
+    }
   }
 `
 const CloseBtn = styled.button`
@@ -84,6 +93,10 @@ const DecideBtn = styled.button`
   font-weight: 500;
   line-height: 20px;
 `
+const CancelBtn = styled(DecideBtn)`
+  background-color: #e0e0e0;
+  margin-bottom: 24px;
+`
 /**
  * Note: 有公投ui（比較案件）跟選舉ui（比較年份）
  * @returns
@@ -93,6 +106,7 @@ export default function YearComparisonMenuBar({
   selectedYears = [{ key: 2024 }],
   setSelectedYears,
   setShouldOpenYearComparisonMenuBar,
+  setIsCompareMode,
 }) {
   const [selectedYearsNew, setSelectedYearsNew] = useState(selectedYears)
   const [firstYear, secondYear] = selectedYearsNew
@@ -110,6 +124,7 @@ export default function YearComparisonMenuBar({
       return
     }
     setShouldOpenYearComparisonMenuBar(false)
+    setIsCompareMode(true)
     setSelectedYears([...selectedYearsNew])
   }
   const itemJsx = years.map((year) => {
@@ -135,7 +150,10 @@ export default function YearComparisonMenuBar({
         X
       </CloseBtn>
       {itemJsx}
-
+      <span className="hint">選擇兩個年份</span>
+      <CancelBtn onClick={() => setShouldOpenYearComparisonMenuBar(false)}>
+        取消
+      </CancelBtn>
       <DecideBtn disabled={!secondYear?.key} onClick={handleOnDecide}>
         決定
       </DecideBtn>
