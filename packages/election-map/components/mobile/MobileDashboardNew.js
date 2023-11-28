@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { districtCode } from '../../mock-datas/districtCode'
 import Selector from './Selector'
 import ElectionSelector from './ElectionSelector'
@@ -218,7 +218,14 @@ const Wrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   padding: 12px 16px;
-  height: calc(100vh - 40px);
+  height: 100vh;
+  background-color: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} props.isCompareMode
+     */
+    ({ isCompareMode }) => (isCompareMode ? '#E9E9E9' : 'transparent')
+  };
 `
 const SelectorWrapper = styled.div`
   padding: 0 16px;
@@ -237,6 +244,11 @@ const ElectionSelectorWrapper = styled(DistrictSelectorWrapper)`
   justify-content: left;
   gap: 12px;
 `
+const YearWrapper = styled(TopButton)`
+  width: fit-content;
+  margin: 17px 0 6px;
+`
+
 /**
  * Dashboard for new election map, created in 2023.11.20
  */
@@ -246,6 +258,7 @@ export const MobileDashboardNew = () => {
     ELECTION_TYPE[3]?.subtypes[0]
   )
 
+  const [isCompareMode, setIsCompareMode] = useState(false)
   const electionTypeYears = currentElection.years
   const defaultYears = currentElection.years[currentElection.years.length - 1]
   const [selectedYears, setSelectedYears] = useState([defaultYears])
@@ -374,6 +387,28 @@ export const MobileDashboardNew = () => {
     setCurrentVillageCode(null)
     setCurrentOpenSelector(null)
   }
+  const handleCloseCompareMode = () => {
+    setIsCompareMode(false)
+    setSelectedYears((pre) => [pre[0]])
+  }
+  const topButtonJsx = isCompareMode ? (
+    <TopButton onClick={handleCloseCompareMode}>離開</TopButton>
+  ) : (
+    <>
+      {electionTypeYears.map((year) => (
+        <TopButton
+          isSelected={selectedYears.map((year) => year.key).includes(year.key)}
+          onClick={() => setSelectedYears([year])}
+          key={year.key}
+        >
+          {year.key}
+        </TopButton>
+      ))}
+      <TopButton onClick={() => setShouldOpenYearComparisonMenuBar(true)}>
+        比較
+      </TopButton>
+    </>
+  )
   return (
     <>
       {shouldOpenYearComparisonMenuBar && (
@@ -381,28 +416,14 @@ export const MobileDashboardNew = () => {
           setShouldOpenYearComparisonMenuBar={
             setShouldOpenYearComparisonMenuBar
           }
+          setIsCompareMode={setIsCompareMode}
           years={electionTypeYears}
           selectedYears={selectedYears}
           setSelectedYears={setSelectedYears}
         />
       )}
-      <Wrapper>
-        <TopButtonsWrapper>
-          {electionTypeYears.map((year) => (
-            <TopButton
-              isSelected={selectedYears
-                .map((year) => year.key)
-                .includes(year.key)}
-              onClick={() => setSelectedYears([year])}
-              key={year.key}
-            >
-              {year.key}
-            </TopButton>
-          ))}
-          <TopButton onClick={() => setShouldOpenYearComparisonMenuBar(true)}>
-            比較
-          </TopButton>
-        </TopButtonsWrapper>
+      <Wrapper isCompareMode={isCompareMode}>
+        <TopButtonsWrapper>{topButtonJsx}</TopButtonsWrapper>
         <SelectorWrapper>
           <ElectionSelectorWrapper>
             <ElectionSelector
@@ -410,9 +431,9 @@ export const MobileDashboardNew = () => {
               selectorType="electionType"
               currentElection={currentElection}
               setCurrentElection={handleSetCurrentElection}
-              placeholderValue="選制"
               currentOpenSelector={currentOpenSelector}
               handleOpenSelector={setCurrentOpenSelector}
+              shouldDisable={isCompareMode}
             />
             {currentElection?.subtypes && (
               <ElectionSelector
@@ -420,9 +441,9 @@ export const MobileDashboardNew = () => {
                 options={currentElection?.subtypes}
                 currentElection={currentElectionSubType}
                 setCurrentElection={handleSetCurrentElectionSubType}
-                placeholderValue="子選制"
                 currentOpenSelector={currentOpenSelector}
                 handleOpenSelector={setCurrentOpenSelector}
+                shouldDisable={isCompareMode}
               />
             )}
           </ElectionSelectorWrapper>
@@ -457,9 +478,18 @@ export const MobileDashboardNew = () => {
               placeholderValue="-"
             ></Selector>
           </DistrictSelectorWrapper>
-          <InfoBox></InfoBox>
+          {currentDistrictType !== 'referendum' &&
+            selectedYears.map((year) => (
+              <Fragment key={year.key}>
+                {isCompareMode && (
+                  <YearWrapper as="div">{year.key}</YearWrapper>
+                )}
+                <InfoBox></InfoBox>
+              </Fragment>
+            ))}
         </SelectorWrapper>
         <div>electionTypeYears: {JSON.stringify(electionTypeYears)}</div>
+        <div>selectedYears: {JSON.stringify(selectedYears)}</div>
         <div>currentElectionType: {currentElection.electionType}</div>
         <div>
           currentElectionSubType: {JSON.stringify(currentElectionSubType)}
