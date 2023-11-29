@@ -398,10 +398,9 @@ const defaultCompareInfo = {
  * A fat hook handle all election related data (votes, mapGeoJson) fetching, refetching.
  * @param {BooleanCallback} showLoading - A callback to show loading spinner.
  * @param {boolean} showTutorial - A flag to indicate whether the tutorial is showing.
- * @param {number} width - Representing window width.
  * @returns
  */
-export const useElectionData = (showLoading, showTutorial, width) => {
+export const useElectionData = (showLoading, showTutorial) => {
   const [election, setElection] = useState(
     elections.find((election) => election.electionType === defaultElectionType)
   )
@@ -1458,12 +1457,6 @@ export const useElectionData = (showLoading, showTutorial, width) => {
     }
     newElectionData.seatData = seatData
     setSubtype(newSubtype)
-    const device = width > 1024 ? '桌機' : '手機平板'
-    ReactGA.event({
-      category: 'Projects',
-      action: 'Click',
-      label: `縣市議員切換： ${newSubtype.name} / ${device}`,
-    })
   }
 
   const onCompareInfoChange = useCallback(

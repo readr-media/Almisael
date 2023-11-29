@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import ReactGA from 'react-ga'
 
 const Wrapper = styled.div`
   display: flex;
@@ -68,6 +69,13 @@ export const ElectionRadio = ({ className, subtypeInfo }) => {
               const newSubtype = subtypes.find(
                 (subtype) => subtype.key === newKey
               )
+              const device = window.innerWidth > 1024 ? '桌機' : '手機平板'
+              ReactGA.event({
+                category: 'Projects',
+                action: 'Click',
+                label: `縣市議員切換： ${newSubtype.name} / ${device}`,
+              })
+
               onSubtypeChange(newSubtype)
             }}
             value={subtype.key}
