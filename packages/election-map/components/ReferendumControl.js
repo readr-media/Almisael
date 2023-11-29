@@ -5,7 +5,7 @@ import ReactGA from 'react-ga'
 import { useDispatch } from 'react-redux'
 import { electionActions } from '../store/election-slice'
 import { useSelector } from 'react-redux'
-import { getReferendumNumbers } from './helper/election'
+import { getReferendumNumbers } from '../utils/election'
 
 const StyledReferendumSelect = styled(ReferendumSelect)`
   margin: 17px 0 0 12px;

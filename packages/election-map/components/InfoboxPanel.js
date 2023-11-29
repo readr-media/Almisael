@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
-import { currentYear, electionNamePairs } from './helper/election'
+import { currentYear } from '../consts/electionsConifg'
+import { electionNamePairs } from '../utils/election'
 import { Infobox } from './infobox/Infobox'
 import { useSelector } from 'react-redux'
 

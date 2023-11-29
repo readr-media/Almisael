@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import ElectionVoteComparisonPanel from './ElectionVoteComparisonPanel'
-import { countyMappingData } from './helper/election'
+import { countyMappingData } from '../consts/electionsConifg'
 import { SeatsPanel } from './SeatsPanel'
 import { MapNavigateButton } from './MapNavigateButton'
 import { MapLocations } from './MapLocations'

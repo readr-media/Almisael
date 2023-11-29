@@ -1,10 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
-import {
-  getElectionData,
-  defaultElectionData,
-} from '../components/helper/electionData'
-import { currentYear, countyMappingData } from '../components/helper/election'
-import { deepCloneObj } from '../components/helper/helper'
+import { getElectionData, defaultElectionData } from '../utils/electionsData'
+import { currentYear } from '../consts/electionsConifg'
+import { countyMappingData } from '../consts/electionsConifg'
+import { deepCloneObj } from '../utils/deepClone'
 import ReactGA from 'react-ga'
 import { prepareElectionData } from '../utils/electionsData'
 import { useSelector } from 'react-redux'

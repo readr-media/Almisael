@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react'
 import styled from 'styled-components'
 import useClickOutside from '../hook/useClickOutside'
-import { electionNamePairs } from './helper/election'
+import { electionNamePairs } from '../utils/election'
+
 import ReactGA from 'react-ga'
 import { useDispatch } from 'react-redux'
 import { electionActions } from '../store/election-slice'
