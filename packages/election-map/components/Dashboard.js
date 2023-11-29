@@ -9,6 +9,7 @@ import {
   defaultMapUpperLevelId,
   defaultRenderingDistrictNames,
 } from '../consts/election-module-pc'
+import { useSelector } from 'react-redux'
 
 const Wrapper = styled.div`
   position: relative;
@@ -30,22 +31,8 @@ const MoreHint = styled.div`
 `
 
 export const Dashboard = ({
-  onElectionChange,
-  levelControl,
-  election,
-  mapData,
-  compareMapData,
-  seatData,
-  infoboxData,
-  compareInfoboxData,
-  evcInfo,
-  subtypeInfo,
-  yearInfo,
-  numberInfo,
-  compareInfo,
-  lastUpdate,
+  onEvcSelected,
   showLoading,
-  setLevelControl,
   showTutorial,
   setShowTutorial,
   onTutorialEnd,
@@ -57,38 +44,20 @@ export const Dashboard = ({
     defaultRenderingDistrictNames
   )
   const [mapUpperLevelId, setMapUpperLevelId] = useState(defaultMapUpperLevelId)
+  const electionConfig = useSelector((state) => state.election.config)
 
   return (
     <Wrapper>
       <Panels
-        onElectionChange={onElectionChange}
-        levelControl={levelControl}
-        election={election}
-        seatData={seatData}
-        infoboxData={infoboxData}
-        compareInfoboxData={compareInfoboxData}
-        evcInfo={evcInfo}
-        subtypeInfo={subtypeInfo}
-        yearInfo={yearInfo}
-        numberInfo={numberInfo}
-        compareInfo={compareInfo}
-        lastUpdate={lastUpdate}
+        onEvcSelected={onEvcSelected}
         mapUpperLevelId={mapUpperLevelId}
         renderingDistrictNames={renderingDistrictNames}
       />
       <MapContainer
         showLoading={showLoading}
-        compareInfo={compareInfo}
-        levelControl={levelControl}
-        electionData={mapData}
-        compareElectionData={compareMapData}
-        setLevelControl={setLevelControl}
-        electionType={election.electionType}
         geoJsonsData={geoJsonsData}
         dashboardInView={dashboardInView}
-        mapColor={election.meta?.map?.mapColor}
-        yearInfo={yearInfo}
-        numberInfo={numberInfo}
+        mapColor={electionConfig.meta?.map?.mapColor}
         setMapUpperLevelId={setMapUpperLevelId}
         setRenderingDistrictNames={setRenderingDistrictNames}
       />

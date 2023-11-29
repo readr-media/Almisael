@@ -2,6 +2,10 @@ import { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { ReferendumSelect } from './ReferendumSelect'
 import ReactGA from 'react-ga'
+import { useDispatch } from 'react-redux'
+import { electionActions } from '../store/election-slice'
+import { useSelector } from 'react-redux'
+import { getReferendumNumbers } from './helper/election'
 
 const StyledReferendumSelect = styled(ReferendumSelect)`
   margin: 17px 0 0 12px;
@@ -22,10 +26,15 @@ const ActionButton = styled.button`
   ${({ cancel }) => cancel && 'background-color: #e0e0e0;'}
 `
 
-export const ReferendumControl = ({ numberInfo, compareInfo }) => {
-  const { compareMode, onCompareInfoChange } = compareInfo
+export const ReferendumControl = () => {
+  const compareMode = useSelector(
+    (state) => state.election.compare.info.compareMode
+  )
+  const number = useSelector((state) => state.election.control.number)
+  const electionConfig = useSelector((state) => state.election.config)
+  const numbers = getReferendumNumbers(electionConfig)
   const [compare, setCompare] = useState(false)
-  const { number, numbers, onNumberChange } = numberInfo
+  const dispatch = useDispatch()
 
   const [compareCandidates, setCompareCandidates] = useState([
     number,
@@ -35,16 +44,17 @@ export const ReferendumControl = ({ numberInfo, compareInfo }) => {
 
   const submitCompareCandidates = useCallback(() => {
     const [number, compareNumber] = compareCandidates
-    onNumberChange(number)
-    onCompareInfoChange({
-      compareMode: true,
-      compareYearKey: compareNumber.year,
-      compareNumber: compareNumber,
-    })
-  }, [compareCandidates, onCompareInfoChange, onNumberChange])
+    dispatch(electionActions.changeNumber(number))
+    dispatch(
+      electionActions.startCompare({
+        compareYearKey: compareNumber.year,
+        compareNumber: compareNumber,
+      })
+    )
+  }, [compareCandidates, dispatch])
 
   const submitCompareEnd = () => {
-    onCompareInfoChange({ compareMode: false })
+    dispatch(electionActions.stopCompare())
   }
 
   useEffect(() => {
@@ -142,7 +152,9 @@ export const ReferendumControl = ({ numberInfo, compareInfo }) => {
           <StyledReferendumSelect
             selectedNumber={number}
             numbers={numbers}
-            onNumberChange={onNumberChange}
+            onNumberChange={(number) => {
+              dispatch(electionActions.changeNumber(number))
+            }}
           />
           {compareNumber && (
             <ActionButton

@@ -53,7 +53,6 @@ const Location = styled.span`
 `
 
 export const MapLocations = ({ locations, compareMode }) => {
-  console.log(locations)
   const words = locations.reduce((words, location) => words + location, '')
   const expand = words.length > 9
   const shrink = words.length > 10

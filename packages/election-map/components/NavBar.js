@@ -497,7 +497,6 @@ export const NavBar = ({ dashboardInView }) => {
     ? mmLogoMobileSvg
     : mmLogoSvg
 
-  console.log('fbLogo', fbLogo)
   return (
     <Nav dashboardInView={dashboardInView} isReadr={isReadr}>
       <LinkButton

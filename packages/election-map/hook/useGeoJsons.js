@@ -89,7 +89,6 @@ export const useGeoJsons = () => {
         villagesTopoJson,
         villagesTopoJson.objects.villages
       )
-      console.log('counties, towns, villages', counties, towns, villages)
       setGeoJsons({ counties, towns, villages })
     }
     prepareGeoJsons()

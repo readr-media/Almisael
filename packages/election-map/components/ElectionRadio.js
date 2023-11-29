@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 import ReactGA from 'react-ga'
+import { useDispatch } from 'react-redux'
+import { electionActions } from '../store/election-slice'
+import { useSelector } from 'react-redux'
 
 const Wrapper = styled.div`
   display: flex;
@@ -54,8 +57,11 @@ const Radio = styled.span`
   }
 `
 
-export const ElectionRadio = ({ className, subtypeInfo }) => {
-  const { subtype: selectedType, subtypes, onSubtypeChange } = subtypeInfo
+export const ElectionRadio = ({ className }) => {
+  const dispatch = useDispatch()
+  const selectedType = useSelector((state) => state.election.control.subtype)
+  const electionConfig = useSelector((state) => state.election.config)
+  const subtypes = electionConfig.subtypes
 
   return (
     <Wrapper className={className}>
@@ -76,7 +82,7 @@ export const ElectionRadio = ({ className, subtypeInfo }) => {
                 label: `縣市議員切換： ${newSubtype.name} / ${device}`,
               })
 
-              onSubtypeChange(newSubtype)
+              dispatch(electionActions.changeSubtype(newSubtype))
             }}
             value={subtype.key}
           />

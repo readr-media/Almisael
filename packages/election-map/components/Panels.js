@@ -9,6 +9,7 @@ import { ElectionSelect } from './ElectionSelect'
 import { ElectionRadio } from './ElectionRadio'
 import { ReferendumControl } from './ReferendumControl'
 import { InfoboxPanels } from './InfoboxPanels'
+import { useSelector } from 'react-redux'
 
 const Wrapper = styled.div`
   position: relative;
@@ -65,23 +66,26 @@ const PlaceHolder = styled.div`
 `
 
 export const Panels = ({
-  onElectionChange,
-  levelControl,
-  election,
-  infoboxData,
-  compareInfoboxData,
-  seatData,
-  evcInfo,
-  compareInfo,
-  subtypeInfo,
-  yearInfo,
-  numberInfo,
-  lastUpdate,
+  onEvcSelected,
   mapUpperLevelId,
   renderingDistrictNames,
 }) => {
-  const { electionType } = election
-  const { compareMode } = compareInfo
+  const lastUpdate = useSelector((state) => state.election.data.lastUpdate)
+  const compareMode = useSelector(
+    (state) => state.election.compare.info.compareMode
+  )
+  const electionConfig = useSelector((state) => state.election.config)
+  const levelControl = useSelector((state) => state.election.control.level)
+  const year = useSelector((state) => state.election.control.year)
+  const number = useSelector((state) => state.election.control.number)
+  const subtype = useSelector((state) => state.election.control.subtype)
+  const seatData = useSelector((state) => state.election.data.seatData)
+  let seats
+  if (electionConfig.electionType === 'councilMember') {
+    seats = seatData[1][levelControl.countyCode]
+  }
+
+  const electionType = electionConfig.electionType
   const { countyName, townName, constituencyName, villageName } =
     renderingDistrictNames
   const locations = [
@@ -92,90 +96,50 @@ export const Panels = ({
   ].filter((name) => !!name)
   if (!locations.length) locations.push('全國')
 
-  const expandMode = !!seatData || compareInfo.compareMode
+  const expandMode = !!seats || compareMode
 
   return (
     <Wrapper expandMode={expandMode}>
       <LeftPanelWrapper>
-        <StyledElectionSelect
-          electionType={electionType}
-          onElectionChange={onElectionChange}
-        />
-        {numberInfo?.number && (
-          <ReferendumControl
-            key={election.electionType}
-            numberInfo={numberInfo}
-            compareInfo={compareInfo}
-          />
-        )}
-        {!numberInfo?.number && (
+        <StyledElectionSelect />
+        {number && <ReferendumControl key={electionType} />}
+        {!number && (
           <>
-            <MapNavigateButton
-              levelControl={levelControl}
-              mapUpperLevelId={mapUpperLevelId}
-            />
+            <MapNavigateButton mapUpperLevelId={mapUpperLevelId} />
             <MapLocations locations={locations} />
-            <InfoboxPanels
-              infoboxData={infoboxData}
-              subtypeInfo={subtypeInfo}
-              compareInfo={compareInfo}
-              election={election}
-              numberInfo={numberInfo}
-              yearInfo={yearInfo}
-              compareInfoboxData={compareInfoboxData}
-            />
+            <InfoboxPanels />
           </>
         )}
         {!compareMode && (
           <SeatsPanel
             meta={{
-              ...election.meta.seat,
-              year: yearInfo.year?.key,
+              ...electionConfig.meta.seat,
+              year: year?.key,
               location: countyMappingData.find(
                 (countyData) =>
                   countyData.countyCode === levelControl.countyCode
               )?.countyName,
             }}
-            data={seatData}
+            data={seats}
           />
         )}
-        {!numberInfo?.number && (
-          <StyledYearSelect
-            key={election.electionType + yearInfo.year.key}
-            yearInfo={yearInfo}
-            compareInfo={compareInfo}
-          />
-        )}
-        <PlaceHolder electionType={election.electionType} />
-        {numberInfo?.number && (
+        {!number && <StyledYearSelect key={electionType + year.key} />}
+        <PlaceHolder electionType={electionType} />
+        {number && (
           <>
             <BottomPanelWrapper>
-              <MapNavigateButton
-                levelControl={levelControl}
-                mapUpperLevelId={mapUpperLevelId}
-              />
+              <MapNavigateButton mapUpperLevelId={mapUpperLevelId} />
               <MapLocations locations={locations} />
-              <InfoboxPanels
-                infoboxData={infoboxData}
-                subtypeInfo={subtypeInfo}
-                compareInfo={compareInfo}
-                election={election}
-                numberInfo={numberInfo}
-                yearInfo={yearInfo}
-                compareInfoboxData={compareInfoboxData}
-              />
+              <InfoboxPanels />
             </BottomPanelWrapper>
           </>
         )}
       </LeftPanelWrapper>
 
       {!compareMode && (
-        <ElectionVoteComparisonPanel
-          electionType={election.electionType}
-          evcInfo={evcInfo}
-        />
+        <ElectionVoteComparisonPanel onEvcSelected={onEvcSelected} />
       )}
-      {subtypeInfo && <StyledELectionRadio subtypeInfo={subtypeInfo} />}
+      {subtype && <StyledELectionRadio />}
       {lastUpdate && (
         <LastUpdateTime>
           最後更新時間：{lastUpdate}資料來源：中央選舉委員會

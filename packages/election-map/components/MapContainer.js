@@ -4,6 +4,7 @@ import { useElementDimension } from '../hook/useElementDimension'
 import useWindowDimensions from '../hook/useWindowDimensions'
 import { Map } from './Map'
 import { MapTooltip } from './MapTooltip'
+import { useSelector } from 'react-redux'
 
 // margin-left: 368px;
 // width: ${({ compareMode }) =>
@@ -57,16 +58,8 @@ const defaultTooltip = {
 }
 
 export const MapContainer = ({
-  compareInfo,
-  levelControl,
-  setLevelControl,
-  electionData,
-  compareElectionData,
-  electionType,
   dashboardInView,
   mapColor,
-  yearInfo,
-  numberInfo,
   geoJsonsData,
   setMapUpperLevelId,
   setRenderingDistrictNames,
@@ -75,6 +68,13 @@ export const MapContainer = ({
   const { elementRef, dimension } = useElementDimension()
   const { width } = useWindowDimensions()
   const { geoJsons, hasGeoJsons } = geoJsonsData
+  const compareInfo = useSelector((state) => state.election.compare.info)
+  const year = useSelector((state) => state.election.control.year)
+  const number = useSelector((state) => state.election.control.number)
+  const electionData = useSelector((state) => state.election.data.mapData)
+  const compareElectionData = useSelector(
+    (state) => state.election.compare.mapData
+  )
   const { compareMode } = compareInfo
   // if any level of map not exist
   if (!hasGeoJsons) {
@@ -104,32 +104,22 @@ export const MapContainer = ({
               dimension={splitDimension}
               geoJsons={geoJsons}
               id="first"
-              levelControl={levelControl}
-              setLevelControl={setLevelControl}
               setTooltip={setTooltip}
               electionData={electionData}
-              electionType={electionType}
               mapColor={mapColor}
-              yearInfo={yearInfo}
               setMapUpperLevelId={setMapUpperLevelId}
               setRenderingDistrictNames={setRenderingDistrictNames}
             />
             <CompareInfo left={true}>
-              {numberInfo?.number
-                ? numberInfo.number.year + numberInfo.number.name
-                : yearInfo.year.key}
+              {number ? number.year + number.name : year.key}
             </CompareInfo>
             <Map
               dimension={splitDimension}
               geoJsons={geoJsons}
               id="second"
-              levelControl={levelControl}
-              setLevelControl={setLevelControl}
               setTooltip={setTooltip}
               electionData={compareElectionData}
-              electionType={electionType}
               mapColor={mapColor}
-              yearInfo={yearInfo}
               setMapUpperLevelId={setMapUpperLevelId}
               setRenderingDistrictNames={setRenderingDistrictNames}
             />
@@ -152,11 +142,8 @@ export const MapContainer = ({
             dimension={dimension}
             geoJsons={geoJsons}
             id="first"
-            levelControl={levelControl}
-            setLevelControl={setLevelControl}
             setTooltip={setTooltip}
             electionData={electionData}
-            electionType={electionType}
             mapColor={mapColor}
             setMapUpperLevelId={setMapUpperLevelId}
             setRenderingDistrictNames={setRenderingDistrictNames}

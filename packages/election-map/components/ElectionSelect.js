@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import useClickOutside from '../hook/useClickOutside'
 import { electionNamePairs } from './helper/election'
 import ReactGA from 'react-ga'
+import { useDispatch } from 'react-redux'
+import { electionActions } from '../store/election-slice'
+import { useSelector } from 'react-redux'
 
 const SelectWrapper = styled.div`
   position: relative;
@@ -60,13 +63,13 @@ const downTriangleSvg = (
   </svg>
 )
 
-export const ElectionSelect = ({
-  className,
-  electionType,
-  onElectionChange,
-}) => {
+export const ElectionSelect = ({ className }) => {
   const [showOptions, setShowOptions] = useState(false)
   const selectRef = useRef(null)
+  const dispatch = useDispatch()
+  const electionType = useSelector(
+    (state) => state.election.config.electionType
+  )
   useClickOutside(selectRef, () => {
     setShowOptions(false)
   })
@@ -97,7 +100,9 @@ export const ElectionSelect = ({
                   label: `選舉類別：${electionNamePair.electionName} / 桌機`,
                 })
 
-                onElectionChange(electionNamePair.electionType)
+                dispatch(
+                  electionActions.changeElection(electionNamePair.electionType)
+                )
               }
               setShowOptions(false)
             }}

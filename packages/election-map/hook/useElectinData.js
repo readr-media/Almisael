@@ -1,54 +1,19 @@
 import { useCallback, useEffect, useState } from 'react'
 import {
-  generateDefaultElectionsData,
   getElectionData,
-  updateElectionsData,
   defaultElectionData,
 } from '../components/helper/electionData'
-import {
-  defaultElectionType,
-  currentYear,
-  elections,
-  getReferendumNumbers,
-  countyMappingData,
-} from '../components/helper/election'
+import { currentYear, countyMappingData } from '../components/helper/election'
 import { deepCloneObj } from '../components/helper/helper'
 import ReactGA from 'react-ga'
 import { prepareElectionData } from '../utils/electionsData'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { electionActions } from '../store/election-slice'
 
 /**
  * @typedef {import('../consts/electionsConifg').ElectionType} ElectionType
  */
-
-/**
- * @typedef {Object} LevelControl
- * @property {0 | 1 | 2 | 3} level - The level of the map.
- * @property {string} countyCode - The id of the county.
- * @property {string} townCode - The id of the town.
- * @property {string} villageCode - The id of the village.
- * @property {string} constituencyCode - The id of the constituency.
- * @property {string} activeCode - The district id with lowest level use to decide which infobox data will be used.
- */
-/** @type {LevelControl} */
-const defaultLevelControl = {
-  level: 0,
-  countyCode: '',
-  townCode: '',
-  villageCode: '',
-  constituencyCode: '',
-  activeCode: '',
-}
-
-const defaultElectionsData = generateDefaultElectionsData()
-
-const defaultCompareInfo = {
-  compareMode: false,
-  filter: {
-    year: null,
-    subtype: null,
-    number: null,
-  },
-}
 
 /**
  * @typedef {function(boolean): void} BooleanCallback
@@ -59,36 +24,25 @@ const defaultCompareInfo = {
  * @returns
  */
 export const useElectionData = (showLoading, showTutorial) => {
-  const [election, setElection] = useState(
-    elections.find((election) => election.electionType === defaultElectionType)
-  )
+  const dispatch = useDispatch()
+  const electionConfig = useSelector((state) => state.election.config)
   // Object to store all data for infobox, map, evc and seat chart, store by election, year, subtype and referendum number. Check type ElectionsData for more detail.
-  const [electionsData, setElectionsData] = useState(
-    deepCloneObj(defaultElectionsData)
+  const electionsData = useSelector(
+    (state) => state.election.data.electionsData
   )
-  const [infoboxData, setInfoboxData] = useState({})
-
-  const [levelControl, setLevelControl] = useState(defaultLevelControl)
-  const [shouldRefetch, setShouldRefetch] = useState(false)
-
-  const [year, setYear] = useState(election.years[election.years.length - 1])
+  const year = useSelector((state) => state.election.control.year)
   //for councilMember, legislator
-  const [subtype, setSubtype] = useState(
-    election.subtypes?.find((subtype) => subtype.key === 'normal')
-  )
+  const subtype = useSelector((state) => state.election.control.subtype)
   //for referendum, referendumLocal
-  const [number, setNumber] = useState(
-    election.years[election.years.length - 1].numbers &&
-      election.years[election.years.length - 1].numbers[0]
-  )
-  const [evcScrollTo, setEvcScrollTo] = useState('')
-  const [lastUpdate, setLastUpdate] = useState()
+  const number = useSelector((state) => state.election.control.number)
+  const levelControl = useSelector((state) => state.election.control.level)
+  const [shouldRefetch, setShouldRefetch] = useState(false)
+  const lastUpdate = useSelector((state) => state.election.data.lastUpdate)
+  const compareInfo = useSelector((state) => state.election.compare.info)
 
-  const [compareInfoboxData, setCompareInfoboxData] = useState({})
-  const [compareInfo, setCompareInfo] = useState(defaultCompareInfo)
   const electionData = getElectionData(
     electionsData,
-    election.electionType,
+    electionConfig.electionType,
     year?.key,
     subtype?.key,
     number?.key
@@ -98,33 +52,29 @@ export const useElectionData = (showLoading, showTutorial) => {
     compareInfo.compareMode &&
     getElectionData(
       electionsData,
-      election.electionType,
+      electionConfig.electionType,
       compareInfo.filter.year?.key,
       compareInfo.filter.subtype?.key,
       compareInfo.filter.number?.key
     )
 
   const { mapData, evcData, seatData } = electionData
+  dispatch(electionActions.changeMapData(mapData))
+  dispatch(electionActions.changeEvcData(evcData))
+  dispatch(electionActions.changeSeatData(seatData))
+
   const { mapData: compareMapData } = compareElectionData || {}
 
-  const subtypes = election.subtypes
-  const numbers = getReferendumNumbers(election)
-
-  /**
-   * @typedef {Object} InfoboxData
-   * @property {ElectionType} electionType
-   * @property {0 | 1 | 2 | 3} level
-   * @property {Object} electionData
-   * @property {boolean} isRunning
-   * @property {boolean} isStarted
-   */
+  if (compareInfo.compareMode) {
+    dispatch(electionActions.changeCompareMapData(compareMapData))
+  }
 
   /**
    * Control the evc to scroll to the specific position.
    * @param {ElectionType} electionType
    * @param {import('../components/helper/electionData').ModuleData} mapData
    * @param {string} subtypeKey
-   * @param {LevelControl} levelControl
+   * @param {import('../store/election-slice').LevelControl} levelControl
    * @param {number} yearKey
    * @returns
    */
@@ -165,7 +115,7 @@ export const useElectionData = (showLoading, showTutorial) => {
               newScrollTo = `第${targetDistrict.area}選區`
             }
           } catch (error) {
-            console.log(error)
+            console.error(error)
           }
         }
         break
@@ -183,7 +133,7 @@ export const useElectionData = (showLoading, showTutorial) => {
   // Programmatically move the map to the corresponding level and district by the evc selected value.
   const onEvcSelected = useCallback(
     (/** @type {string} */ evcSelectedValue) => {
-      const electionType = election.electionType
+      const electionType = electionConfig.electionType
       switch (electionType) {
         case 'mayor': {
           // evcSelectedValue format '嘉義市'
@@ -247,229 +197,24 @@ export const useElectionData = (showLoading, showTutorial) => {
           break
       }
     },
-    [election.electionType, mapData, subtype, levelControl.countyCode]
+    [electionConfig.electionType, mapData, subtype, levelControl.countyCode]
   )
-
-  /**
-   * Handle states when subtype changes.
-   * @param {import('../components/helper/election').ElectionSubtype} newSubtype
-   */
-  const onSubtypeChange = (newSubtype) => {
-    const { seatData } = getElectionData(
-      electionsData,
-      election.electionType,
-      year?.key,
-      subtype?.key,
-      number?.key
-    )
-    const newElectionData = getElectionData(
-      electionsData,
-      election.electionType,
-      year?.key,
-      newSubtype?.key,
-      number?.key
-    )
-    if (compareInfo.compareMode) {
-      onCompareInfoChange({
-        compareMode: compareInfo.compareMode,
-        compareYearKey: compareInfo.filter.year.key,
-        compareNumber: compareInfo.filter.number,
-        compareSubtype: newSubtype,
-      })
-    }
-    newElectionData.seatData = seatData
-    setSubtype(newSubtype)
-  }
-
-  const onCompareInfoChange = useCallback(
-    ({ compareMode, compareYearKey, compareNumber, compareSubtype }) => {
-      if (compareMode) {
-        setCompareInfo(defaultCompareInfo)
-      }
-      setCompareInfo({
-        compareMode,
-        filter: {
-          year: compareYearKey
-            ? election.years.find((year) => year.key === compareYearKey)
-            : year,
-          subtype: compareSubtype || subtype,
-          number: compareNumber || number,
-        },
-      })
-    },
-    [election.years, number, subtype, year]
-  )
-
-  // Handle states when referendum number changes.
-  const onNumberChange = useCallback(
-    (
-      /** @type {import('../components/helper/election').ReferendumNumber} */ newNumber
-    ) => {
-      const year = election.years.find((year) => year.key === newNumber.year)
-      setYear(year)
-      setNumber(newNumber)
-    },
-    [election.years]
-  )
-
-  // Handle state change when election type is changed.
-  const onElectionChange = useCallback(
-    (/** @type {ElectionType} */ electionType) => {
-      const newElection = elections.find(
-        (election) => election.electionType === electionType
-      )
-      const newYear = newElection.years[newElection.years.length - 1]
-      const newNumber =
-        newElection.years[newElection.years.length - 1].numbers &&
-        newElection.years[newElection.years.length - 1].numbers[0]
-      const newSubtype = newElection.subtypes?.find(
-        (subtype) => subtype.key === 'normal'
-      )
-
-      setElection(newElection)
-      setYear(newYear)
-      setNumber(newNumber)
-      setSubtype(newSubtype)
-      setElectionsData((electionsData) => {
-        const electionData = getElectionData(
-          electionsData,
-          electionType,
-          newYear?.key,
-          newSubtype?.key,
-          newNumber?.key
-        )
-        if (electionData.mapData.isRunning) {
-          return updateElectionsData(
-            electionsData,
-            deepCloneObj(defaultElectionData),
-            electionType,
-            newYear?.key,
-            newSubtype?.key,
-            newNumber?.key
-          )
-        } else {
-          return electionsData
-        }
-      })
-      setLevelControl(defaultLevelControl)
-      setInfoboxData({})
-      setEvcScrollTo('')
-      setCompareInfo(defaultCompareInfo)
-    },
-    []
-  )
-
-  /**
-   * Handle states change when map change level or district.
-   * @param {LevelControl} newLevelControl
-   */
-  const onLevelControlChange = async (
-    newLevelControl = defaultLevelControl
-  ) => {
-    // fetch data before map scales, useEffect will call prepareData again,
-    // make sure to avoid fetch duplicate data
-    showLoading(true)
-    const { filter } = compareInfo
-    const [
-      { value: electionDataResult },
-      { value: compareElectionDataResult },
-    ] = await Promise.allSettled([
-      prepareElectionData(
-        electionData,
-        election,
-        newLevelControl,
-        year?.key,
-        subtype?.key,
-        number?.key,
-        lastUpdate,
-        compareInfo?.compareMode
-      ),
-      compareInfo.compareMode
-        ? prepareElectionData(
-            compareElectionData,
-            election,
-            newLevelControl,
-            filter?.year?.key,
-            filter?.subtype?.key,
-            filter?.number?.key,
-            lastUpdate,
-            compareInfo?.compareMode
-          )
-        : Promise.resolve({}),
-    ])
-
-    let newElectionsData = electionsData
-    if (electionDataResult.newElectionData) {
-      const { newElectionData, newInfoboxData, newLastUpdate } =
-        electionDataResult
-      setInfoboxData(newInfoboxData)
-      newElectionsData = updateElectionsData(
-        newElectionsData,
-        newElectionData,
-        election.electionType,
-        year?.key,
-        subtype?.key,
-        number?.key
-      )
-
-      if (!compareInfo.compareMode) {
-        setEvcScrollTo(
-          scrollEvcFromLevelControl(
-            election.electionType,
-            newElectionData.mapData,
-            subtype?.key,
-            newLevelControl,
-            year?.key
-          )
-        )
-      }
-      if (year?.key === currentYear) {
-        setLastUpdate(newLastUpdate)
-      }
-    }
-
-    if (compareElectionDataResult.newElectionData) {
-      const { newElectionData, newInfoboxData, newLastUpdate } =
-        compareElectionDataResult
-      setCompareInfoboxData(newInfoboxData)
-      newElectionsData = updateElectionsData(
-        newElectionsData,
-        newElectionData,
-        election.electionType,
-        filter?.year?.key,
-        filter?.subtype?.key,
-        filter?.number?.key
-      )
-      if (filter?.key === currentYear) {
-        setLastUpdate(newLastUpdate)
-      }
-    }
-
-    setElectionsData(newElectionsData)
-    setLevelControl(newLevelControl)
-    if (newLevelControl?.level === 1) {
-      const countyName = countyMappingData.find(
-        (countyData) => countyData.countyCode === newLevelControl.countyCode
-      ).countyName
-      ReactGA.event({
-        category: 'Projects',
-        action: 'Click',
-        label: `地圖點擊 / ${election.electionName} / ${countyName}`,
-      })
-    }
-    showLoading(false)
-  }
 
   // Show the default election and the year after tutorial is finished.
   const onTutorialEnd = () => {
-    onElectionChange('mayor')
-    setYear(election.years[election.years.length - 1])
+    dispatch(electionActions.changeElection('mayor'))
+    dispatch(
+      electionActions.changeYear(
+        electionConfig.years[electionConfig.years.length - 1]
+      )
+    )
   }
 
   // Handle all fetching data logic for the first time.
   useEffect(() => {
     const prepareDataHandler = async () => {
       showLoading(true)
+      console.warn('prepareDataHandler', number?.key)
       const { filter } = compareInfo
       const [
         { value: electionDataResult },
@@ -477,7 +222,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       ] = await Promise.allSettled([
         prepareElectionData(
           electionData,
-          election,
+          electionConfig,
           levelControl,
           year?.key,
           subtype?.key,
@@ -488,7 +233,7 @@ export const useElectionData = (showLoading, showTutorial) => {
         compareInfo.compareMode
           ? prepareElectionData(
               compareElectionData,
-              election,
+              electionConfig,
               levelControl,
               filter?.year?.key,
               filter?.subtype?.key,
@@ -499,67 +244,74 @@ export const useElectionData = (showLoading, showTutorial) => {
           : Promise.resolve({}),
       ])
 
-      let newElectionsData = electionsData
       if (electionDataResult.newElectionData) {
         const { newElectionData, newInfoboxData, newLastUpdate } =
           electionDataResult
-        setInfoboxData(newInfoboxData)
-        newElectionsData = updateElectionsData(
-          newElectionsData,
-          newElectionData,
-          election.electionType,
-          year?.key,
-          subtype?.key,
-          number?.key
+
+        dispatch(electionActions.changeInfoboxData(newInfoboxData))
+        dispatch(
+          electionActions.changeElectionsData({
+            newElectionData,
+            electionType: electionConfig.electionType,
+            yearKey: year?.key,
+            subtypeKey: subtype?.key,
+            numberKey: number?.key,
+          })
         )
+
         if (!compareInfo.compareMode) {
-          setEvcScrollTo(
-            scrollEvcFromLevelControl(
-              election.electionType,
-              newElectionData.mapData,
-              subtype?.key,
-              levelControl,
-              year?.key
+          dispatch(
+            electionActions.changeEvcScrollTo(
+              scrollEvcFromLevelControl(
+                electionConfig.electionType,
+                newElectionData.mapData,
+                subtype?.key,
+                levelControl,
+                year?.key
+              )
             )
           )
         }
         if (year?.key === currentYear) {
-          setLastUpdate(newLastUpdate)
+          dispatch(electionActions.changeLastUpdate(newLastUpdate))
         }
       }
+
       if (compareElectionDataResult.newElectionData) {
         const { newElectionData, newInfoboxData, newLastUpdate } =
           compareElectionDataResult
-        setCompareInfoboxData(newInfoboxData)
-        newElectionsData = updateElectionsData(
-          newElectionsData,
-          newElectionData,
-          election.electionType,
-          filter?.year?.key,
-          filter?.subtype?.key,
-          filter?.number?.key
+        dispatch(electionActions.changeCompareInfoboxData(newInfoboxData))
+
+        dispatch(
+          electionActions.changeElectionsData({
+            newElectionData,
+            electionType: electionConfig.electionType,
+            yearKey: filter?.year?.key,
+            subtypeKey: filter?.subtype?.key,
+            numberKey: filter?.number?.key,
+          })
         )
+
         if (filter?.key === currentYear) {
-          setLastUpdate(newLastUpdate)
+          dispatch(electionActions.changeLastUpdate(newLastUpdate))
         }
       }
-      setElectionsData(newElectionsData)
       showLoading(false)
     }
 
     prepareDataHandler()
   }, [
-    compareElectionData,
+    // compareElectionData,
     compareInfo,
-    election,
-    electionData,
-    electionsData,
+    electionConfig,
+    // electionData,
     lastUpdate,
     levelControl,
     number?.key,
     showLoading,
     subtype?.key,
     year?.key,
+    dispatch,
   ])
 
   // create interval to periodically trigger refetch and let react lifecycle to handle the refetch
@@ -583,7 +335,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       const { filter } = compareInfo
       const normalRefetch = prepareElectionData(
         deepCloneObj(defaultElectionData),
-        election,
+        electionConfig,
         levelControl,
         year?.key,
         subtype?.key,
@@ -595,7 +347,7 @@ export const useElectionData = (showLoading, showTutorial) => {
       const compareRefetch = compareInfo.compareMode
         ? prepareElectionData(
             deepCloneObj(defaultElectionData),
-            election,
+            electionConfig,
             levelControl,
             filter.year?.key,
             filter.subtype?.key,
@@ -610,39 +362,41 @@ export const useElectionData = (showLoading, showTutorial) => {
           mapData.isRunning ? normalRefetch : Promise.resolve({}),
           compareMapData?.isRunning ? compareRefetch : Promise.resolve({}),
         ])
-      let newElectionsData = electionsData
+
       if (normalResult.newElectionData) {
         const { newElectionData, newLastUpdate } = normalResult
 
-        newElectionsData = updateElectionsData(
-          newElectionsData,
-          newElectionData,
-          election.electionType,
-          year?.key,
-          subtype?.key,
-          number?.key
+        dispatch(
+          electionActions.changeElectionsData({
+            newElectionData,
+            electionType: electionConfig.electionType,
+            yearKey: year?.key,
+            subtypeKey: subtype?.key,
+            numberKey: number?.key,
+          })
         )
+
         if (year?.key === currentYear && newElectionData) {
-          setLastUpdate(newLastUpdate)
+          dispatch(electionActions.changeLastUpdate(newLastUpdate))
         }
       }
       if (compareResult.newElectionData) {
         const { newElectionData, newLastUpdate } = compareResult
 
-        newElectionsData = updateElectionsData(
-          newElectionsData,
-          newElectionData,
-          election.electionType,
-          filter?.year?.key,
-          filter?.subtype?.key,
-          filter?.number?.key
+        dispatch(
+          electionActions.changeElectionsData({
+            newElectionData,
+            electionType: electionConfig.electionType,
+            yearKey: filter?.year?.key,
+            subtypeKey: filter?.subtype?.key,
+            numberKey: filter?.number?.key,
+          })
         )
+
         if (filter.year?.key === currentYear && newElectionData) {
-          setLastUpdate(newLastUpdate)
+          dispatch(electionActions.changeLastUpdate(newLastUpdate))
         }
       }
-
-      setElectionsData(newElectionsData)
 
       setShouldRefetch(false)
       showLoading(false)
@@ -653,8 +407,7 @@ export const useElectionData = (showLoading, showTutorial) => {
   }, [
     compareInfo,
     compareMapData?.isRunning,
-    election,
-    electionsData,
+    electionConfig,
     lastUpdate,
     mapData?.isRunning,
     levelControl,
@@ -663,66 +416,23 @@ export const useElectionData = (showLoading, showTutorial) => {
     showLoading,
     subtype?.key,
     year?.key,
+    dispatch,
   ])
 
   // Handle default election and year for tutorial state.
   useEffect(() => {
     if (showTutorial) {
-      onElectionChange('councilMember')
-      setYear(election.years[election.years.length - 2])
+      dispatch(electionActions.changeElection('councilMember'))
+      dispatch(
+        electionActions.changeYear(
+          electionConfig.years[electionConfig.years.length - 2]
+        )
+      )
     }
-  }, [showTutorial, onElectionChange, election.years])
-
-  let outputEvcData
-  if (election.electionType === 'councilMember') {
-    outputEvcData = evcData[1][levelControl.countyCode]
-  } else {
-    outputEvcData = evcData[0]
-  }
-  let outputSeatData
-  if (election.electionType === 'councilMember') {
-    outputSeatData = seatData[1][levelControl.countyCode]
-  }
-  const subtypeInfo = subtype && {
-    subtype,
-    subtypes,
-    onSubtypeChange,
-  }
-  const yearInfo = {
-    year,
-    years: election.years,
-    onYearChange: setYear,
-  }
-  const numberInfo = {
-    number,
-    numbers,
-    onNumberChange,
-  }
-  const outputCompareInfo = {
-    ...compareInfo,
-    onCompareInfoChange,
-  }
+  }, [showTutorial, electionConfig.years, dispatch])
 
   return {
-    onElectionChange,
-    election,
-    mapData,
-    compareMapData,
-    levelControl,
-    setLevelControl: onLevelControlChange,
-    infoboxData,
-    compareInfoboxData,
-    evcInfo: {
-      evcData: outputEvcData,
-      onEvcSelected,
-      scrollTo: evcScrollTo,
-    },
-    seatData: outputSeatData,
+    onEvcSelected,
     onTutorialEnd,
-    yearInfo,
-    subtypeInfo,
-    numberInfo,
-    compareInfo: outputCompareInfo,
-    lastUpdate,
   }
 }

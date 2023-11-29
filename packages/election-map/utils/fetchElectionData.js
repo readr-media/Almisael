@@ -167,7 +167,6 @@ export const fetchSeatData = async ({
   folderName,
   fileName,
 }) => {
-  console.log(typeof yearKey, yearKey)
   const seatDataUrl = `${gcsBaseUrl}/${yearKey}/${electionType}/seat/${folderName}/${fileName}.json`
   const { data } = await axios.get(seatDataUrl)
   return data

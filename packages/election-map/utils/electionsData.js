@@ -485,7 +485,7 @@ export const prepareElectionData = async (
   /** @type {boolean} */ compareMode,
   /** @type {boolean} */ isRefetching = false
 ) => {
-  const newElectionData = electionData
+  const newElectionData = deepCloneObj(electionData)
   let {
     mapData: newMapData,
     evcData: newEvcData,
@@ -916,14 +916,16 @@ export const prepareElectionData = async (
           case 0:
             // handle evc data
             // evc will not show in compare mode
-            if (compareMode) {
+            if (!compareMode) {
               // fetch evcData if in refetch mode or no specific evc data
+              console.warn('teststet?')
               if (isRefetching || (!isRefetching && !newEvcData[level])) {
                 try {
                   const data = await fetchReferendumEvcData({
                     yearKey,
                   })
                   newEvcData[level] = data
+                  console.warn('log referen evc success', data)
                 } catch (error) {
                   console.error(error)
                 }
