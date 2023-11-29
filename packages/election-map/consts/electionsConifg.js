@@ -45,7 +45,7 @@ export const currentYear = 2022
  *
  * Election configs directly control how many elections rendering, how many years each election contains.
  * The meta properties have the metadata for each module (evc, map, seat)
- * @typedef {Object} Election
+ * @typedef {Object} ElectionConfig
  * @property {ElectionType} electionType - The type of election.
  * @property {Array<ElectionSubtype>} [subtypes] - The subtypes of a type of election.
  * @property {string} electionName - The name of election for user to know which election they are checking.
@@ -54,8 +54,8 @@ export const currentYear = 2022
  */
 
 // Check Election type for more detail
-/** @type {Array<Election>} */
-export const elections = [
+/** @type {Array<ElectionConfig>} */
+export const electionsConfig = [
   // {
   //   electionType: 'president',
   //   electionName: '總統',
@@ -352,27 +352,9 @@ export const elections = [
   // },
 ]
 
-export const electionNamePairs = elections.map(
-  ({ electionType, electionName }) => ({
-    electionType,
-    electionName,
-  })
+export const defaultElectionConfig = electionsConfig.find(
+  (electionConfig) => electionConfig.electionType === defaultElectionType
 )
-
-/**
- * Merge all referendum number in all years.
- * @param {Election} election
- * @returns {Array<ReferendumNumber>}
- */
-export const getReferendumNumbers = (election) => {
-  if (!election.electionType.startsWith('referendum')) {
-    return []
-  }
-  return election.years.reduce((numbers, year) => {
-    numbers = numbers.concat(year.numbers)
-    return numbers
-  }, [])
-}
 
 // County mapping data to help convertion between code, name and endName.
 export const countyMappingData = [

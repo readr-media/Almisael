@@ -7,7 +7,6 @@ import { useGeoJsons } from '../hook/useGeoJsons'
 const Wrapper = styled.div``
 
 export const MobileDashboard = ({
-  onElectionChange,
   mapObject,
   election,
   mapData,
@@ -56,7 +55,6 @@ export const MobileDashboard = ({
         numberInfo={numberInfo}
         lastUpdate={lastUpdate}
         showTutorial={showTutorial}
-        onElectionChange={onElectionChange}
       />
       {!hasAnchor && showTutorial && (
         <MobileTutorial

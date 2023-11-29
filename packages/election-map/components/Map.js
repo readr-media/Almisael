@@ -13,6 +13,9 @@ import {
   defaultMapUpperLevelId,
   defaultRenderingDistrictNames,
 } from '../consts/election-module-pc'
+import { useDispatch } from 'react-redux'
+import { electionActions } from '../store/election-slice'
+import { useSelector } from 'react-redux'
 
 const SVG = styled.svg`
   use {
@@ -23,16 +26,18 @@ export const Map = ({
   dimension,
   geoJsons,
   id,
-  levelControl,
-  setLevelControl,
   setTooltip,
   electionData,
-  electionType,
   mapColor,
   setMapUpperLevelId,
   setRenderingDistrictNames,
 }) => {
   const [currentFeature, setCurrentFeature] = useState(null)
+  const dispatch = useDispatch()
+  const electionType = useSelector(
+    (state) => state.election.config.electionType
+  )
+  const levelControl = useSelector((state) => state.election.control.level)
   const { countyCode, townCode, activeCode } = levelControl
   const { width, height } = dimension
   const { counties, towns, villages } = geoJsons
@@ -108,7 +113,7 @@ export const Map = ({
   // }, [width, height])
 
   const nonLandClicked = () => {
-    setLevelControl()
+    dispatch(electionActions.resetLevelControl())
     setCurrentFeature(null)
     setMapUpperLevelId(defaultMapUpperLevelId)
     setRenderingDistrictNames(defaultRenderingDistrictNames)
@@ -123,15 +128,16 @@ export const Map = ({
     // console.log('path id is:', `#id-${countyId}`)
     // console.log('d is:', feature)
     // console.log('---')
-
-    setLevelControl({
-      level: 1,
-      countyCode,
-      townCode: '',
-      villageCode: '',
-      constituencyCode: '',
-      activeCode: countyCode,
-    })
+    dispatch(
+      electionActions.changeLevelControl({
+        level: 1,
+        countyCode,
+        townCode: '',
+        villageCode: '',
+        constituencyCode: '',
+        activeCode: countyCode,
+      })
+    )
     setCurrentFeature(feature)
     setMapUpperLevelId(defaultMapUpperLevelId)
     setRenderingDistrictNames({
@@ -155,15 +161,16 @@ export const Map = ({
     // console.log('path id is:', `#id-${townId}`)
     // console.log('d is:', feature)
     // console.log('---')
-
-    setLevelControl({
-      level: 2,
-      countyCode,
-      townCode,
-      villageCode: '',
-      constituencyCode: '',
-      activeCode: townCode,
-    })
+    dispatch(
+      electionActions.changeLevelControl({
+        level: 2,
+        countyCode,
+        townCode,
+        villageCode: '',
+        constituencyCode: '',
+        activeCode: townCode,
+      })
+    )
     setCurrentFeature(feature)
     setMapUpperLevelId(countyCode)
     setRenderingDistrictNames({
@@ -195,14 +202,16 @@ export const Map = ({
     // console.log('d is:', feature)
     // console.log('---')
 
-    setLevelControl({
-      level: 3,
-      countyCode,
-      townCode,
-      villageCode,
-      constituencyCode: '',
-      activeCode: villageCode,
-    })
+    dispatch(
+      electionActions.changeLevelControl({
+        level: 3,
+        countyCode,
+        townCode,
+        villageCode,
+        constituencyCode: '',
+        activeCode: villageCode,
+      })
+    )
     setMapUpperLevelId(townCode)
     setRenderingDistrictNames({
       countyName,

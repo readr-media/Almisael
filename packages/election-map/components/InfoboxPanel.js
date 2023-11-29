@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
-import { currentYear, electionNamePairs } from './helper/election'
+import { currentYear } from '../consts/electionsConifg'
+import { electionNamePairs } from '../utils/election'
 import { Infobox } from './infobox/Infobox'
+import { useSelector } from 'react-redux'
 
 const Wrppaer = styled.div`
   width: 320px;
@@ -24,17 +26,18 @@ export const InfoboxPanel = ({
   data,
   subtype,
   compareInfo,
-  election,
   year,
   number,
 }) => {
+  const electionType = useSelector(
+    (state) => state.election.config.electionType
+  )
   const { compareMode } = compareInfo
   const electionName = electionNamePairs.find(
-    (electionNamePair) =>
-      electionNamePair.electionType === election.electionType
+    (electionNamePair) => electionNamePair.electionType === electionType
   )?.electionName
   const title = compareMode
-    ? election.electionType === 'referendum'
+    ? electionType === 'referendum'
       ? `${number?.year} ${number?.name}`
       : electionName
     : '詳細資訊'

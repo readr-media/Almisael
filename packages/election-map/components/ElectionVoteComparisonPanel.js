@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 import widgets from '@readr-media/react-election-widgets'
+import { useSelector } from 'react-redux'
 const ElectionVotesComparison = widgets.VotesComparison.ReactComponent
 
 const ElectionVotesComparisonWrapper = styled(CollapsibleWrapper)`
@@ -36,18 +37,34 @@ const StyledEVC = styled(ElectionVotesComparison)`
   }
 `
 
-const ElectionVoteComparisonPanel = ({ evcInfo, electionType }) => {
-  const { evcData, onEvcSelected, scrollTo } = evcInfo
+const ElectionVoteComparisonPanel = ({ onEvcSelected }) => {
+  const evcScrollTo = useSelector((state) => state.election.control.evcScrollTo)
+  const electionType = useSelector(
+    (state) => state.election.config.electionType
+  )
+  const countyCode = useSelector(
+    (state) => state.election.control.level.countyCode
+  )
+  const evcData = useSelector((state) => state.election.data.evcData)
+
+  let election
+  if (electionType === 'councilMember') {
+    election = evcData[1][countyCode]
+  } else {
+    election = evcData[0]
+  }
+  console.log('election', evcData)
+
   return (
-    evcData &&
-    (evcData.districts?.length || evcData.propositions?.length) && (
+    election &&
+    (election.districts?.length || election.propositions?.length) && (
       <ElectionVotesComparisonWrapper title={'縣市議員候選人'}>
         <StyledEVC
           electionType={electionType}
-          election={evcData}
+          election={election}
           device="mobile"
           theme="electionMap"
-          scrollTo={scrollTo}
+          scrollTo={evcScrollTo}
           onChange={(selector, value) => {
             onEvcSelected(value)
           }}

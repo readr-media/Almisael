@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import useClickOutside from '../hook/useClickOutside'
 import { electionNamePairs } from './helper/election'
 import ReactGA from 'react-ga'
+import { useDispatch } from 'react-redux'
+import { electionActions } from '../store/election-slice'
 
 const closeSvg = (
   <svg
@@ -53,12 +55,9 @@ const Election = styled.div`
   ${({ selected }) => selected && `font-weight: 700;`}
 `
 
-export const MobileElectionSelect = ({
-  electionType,
-  onElectionChange,
-  hideElectionSelect,
-}) => {
+export const MobileElectionSelect = ({ electionType, hideElectionSelect }) => {
   const wrapperRef = useRef(null)
+  const dispatch = useDispatch()
   useClickOutside(wrapperRef, () => {
     hideElectionSelect()
   })
@@ -84,7 +83,9 @@ export const MobileElectionSelect = ({
                   label: `選舉類別：${electionNamePair.electionName} / 手機平板`,
                 })
 
-                onElectionChange(electionNamePair.electionType)
+                dispatch(
+                  electionActions.changeElection(electionNamePair.electionType)
+                )
               }
               hideElectionSelect()
             }}

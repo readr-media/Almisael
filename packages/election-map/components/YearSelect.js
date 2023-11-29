@@ -1,6 +1,9 @@
 import { useState, useCallback, useEffect } from 'react'
 import styled from 'styled-components'
 import ReactGA from 'react-ga'
+import { useDispatch } from 'react-redux'
+import { electionActions } from '../store/election-slice'
+import { useSelector } from 'react-redux'
 
 const Wrapper = styled.div`
   display: flex;
@@ -137,10 +140,13 @@ const ActionButton = styled.button`
   ${({ cancel }) => cancel && 'background-color: #e0e0e0;'}
 `
 
-export const YearSelect = ({ className, yearInfo, compareInfo }) => {
-  const { compareMode, onCompareInfoChange } = compareInfo
-
-  const { years, year, onYearChange } = yearInfo
+export const YearSelect = ({ className }) => {
+  const compareMode = useSelector(
+    (state) => state.election.compare.info.compareMode
+  )
+  const year = useSelector((state) => state.election.control.year)
+  const years = useSelector((state) => state.election.config.years)
+  const dispatch = useDispatch()
   const [compare, setCompare] = useState(false)
   const [compareCandidates, setCompareCandidates] = useState([
     years.find((y) => y === year),
@@ -151,16 +157,17 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
 
   const submitCompareCandidates = useCallback(() => {
     const [year, compareYear] = compareCandidates
-    onYearChange(year)
-    onCompareInfoChange({
-      compareMode: true,
-      compareYearKey: compareYear.key,
-    })
-  }, [compareCandidates, onCompareInfoChange, onYearChange])
+    dispatch(electionActions.changeYear(year))
+    dispatch(
+      electionActions.startCompare({
+        compareYearKey: compareYear.key,
+      })
+    )
+  }, [compareCandidates, dispatch])
 
-  const submitCompareEnd = useCallback(() => {
-    onCompareInfoChange({ compareMode: false })
-  }, [onCompareInfoChange])
+  const submitCompareEnd = () => {
+    dispatch(electionActions.stopCompare())
+  }
 
   useEffect(() => {
     // submit again if compareCandidates changes
@@ -208,7 +215,7 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
                 content={y.key}
                 selected={y === year}
                 onClick={() => {
-                  onYearChange(y)
+                  dispatch(electionActions.changeYear(y))
                 }}
               />
             ))}
@@ -223,7 +230,7 @@ export const YearSelect = ({ className, yearInfo, compareInfo }) => {
           onChange={(e) => {
             const index = e.target.value
             const year = years[index]
-            onYearChange(year)
+            dispatch(electionActions.changeYear(year))
           }}
           compare={compare}
         />

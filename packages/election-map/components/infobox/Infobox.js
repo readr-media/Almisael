@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { currentYear } from '../helper/election'
+import { currentYear } from '../../consts/electionsConifg'
 
 const InfoboxWrapper = styled.div`
   font-family: 'Noto Sans TC', sans-serif;
@@ -204,7 +204,7 @@ const MayorInfobox = ({
           <></>
         )}
       </MayorTitle>
-      {candidates
+      {[...candidates]
         .sort((cand1, cand2) => {
           if (cand1.tksRate === cand2.tksRate) {
             return 0
@@ -406,7 +406,7 @@ const CouncilMemberInfobox = ({
         {districts.map(({ county, area, range, candidates, profRate }) => {
           const councilMemberdPrefix = county + area
           const constituency = range.split(' ')[1]
-          const candidateComps = candidates
+          const candidateComps = [...candidates]
             .sort((cand1, cand2) => {
               if (cand1.tksRate === cand2.tksRate) {
                 return 0
@@ -449,7 +449,6 @@ const CouncilMemberInfobox = ({
     const councilMemberdPrefix = county + town + area + type
 
     if (type === 'normal') {
-      console.log('here')
       return (
         <CouncilMemberTypeWrapper key={councilMemberdPrefix}>
           <CouncilMemberTitle>
@@ -464,7 +463,7 @@ const CouncilMemberInfobox = ({
               <></>
             )}
           </CouncilMemberTitle>
-          {candidates
+          {[...candidates]
             .sort((cand1, cand2) => {
               if (cand1.tksRate === cand2.tksRate) {
                 return 0
@@ -509,7 +508,7 @@ const CouncilMemberInfobox = ({
               <></>
             )}
           </CouncilMemberTitle>
-          {candidates
+          {[...candidates]
             .sort((cand1, cand2) => {
               if (cand1.tksRate === cand2.tksRate) {
                 return 0
