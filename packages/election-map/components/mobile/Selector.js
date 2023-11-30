@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
 const Options = styled.ul`
   z-index: 0;
-  background-color: #fff;
+  background-color: #f2f2f2;
   position: absolute;
   color: #fff;
   border-radius: 0px 0px 8px 8px;
