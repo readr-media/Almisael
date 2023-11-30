@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
 
+import { electionActions } from '../../store/election-slice'
+import { useAppDispatch } from '../../hook/useRedux'
+import { useAppSelector } from '../../hook/useRedux'
+
 import styled from 'styled-components'
 
 const WIDTH = '100px'
@@ -83,15 +87,18 @@ const SelectedButton = styled.button`
 `
 export default function ElectionSelector({
   options = [],
-  currentElection,
-  setCurrentElection,
+
   selectorType = '',
   handleOpenSelector,
   currentOpenSelector,
   shouldDisable,
 }) {
+  const electionType = useAppSelector(
+    (state) => state.election.config.electionType
+  )
+  const dispatch = useAppDispatch()
+
   const [shouldShowOptions, setShouldShowOptions] = useState(false)
-  const hasOptions = options && Array.isArray(options) && options.length
   const handleSelectedButtonOnClick = () => {
     setShouldShowOptions((pre) => !pre)
     shouldShowOptions
@@ -99,7 +106,7 @@ export default function ElectionSelector({
       : handleOpenSelector(selectorType)
   }
   const handleOptionOnSelected = (option) => {
-    setCurrentElection(option)
+    dispatch(electionActions.changeElection(option.electionType))
     setShouldShowOptions(false)
     handleOpenSelector(null)
   }
@@ -118,10 +125,17 @@ export default function ElectionSelector({
           shouldDisable={shouldDisable}
           onClick={handleSelectedButtonOnClick}
         >
-          <span>{currentElection?.electionName || currentElection?.name}</span>
+          <span>
+            {
+              options.find(
+                (electionNamePair) =>
+                  electionNamePair.electionType === electionType
+              )?.electionName
+            }
+          </span>
           <i className="triangle"></i>
         </SelectedButton>
-        {shouldShowOptions && hasOptions && (
+        {shouldShowOptions && (
           <Options>
             {options.map((option) => (
               <OptionItem
