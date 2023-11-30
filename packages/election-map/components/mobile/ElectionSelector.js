@@ -85,17 +85,36 @@ const SelectedButton = styled.button`
     transform: rotate(0deg);
   }
 `
+/**
+ *
+ * @param {Object} props
+ * @param {Object[]} props.options
+ * @param {'electionType' | 'electionSubType'} props.selectorType
+ * @param {function} props.handleOpenSelector
+ * @param {'electionType' | 'electionSubType' | 'districtNationAndCounty' | 'districtTown' | 'districtVillage'} props.currentOpenSelector
+ * @returns
+ */
 export default function ElectionSelector({
   options = [],
-
-  selectorType = '',
+  selectorType,
   handleOpenSelector,
   currentOpenSelector,
-  shouldDisable,
 }) {
   const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
+
+  const compareMode = useAppSelector(
+    (state) => state.election.compare.info.compareMode
+  )
+  const currentSubType = useAppSelector(
+    (state) => state.election.control.subtype
+  )
+  const currentSelectedOptionName =
+    selectorType === 'electionSubType'
+      ? options.find((options) => options.key === currentSubType?.key)?.name
+      : options.find((options) => options.electionType === electionType)
+          ?.electionName
   const dispatch = useAppDispatch()
 
   const [shouldShowOptions, setShouldShowOptions] = useState(false)
@@ -106,7 +125,13 @@ export default function ElectionSelector({
       : handleOpenSelector(selectorType)
   }
   const handleOptionOnSelected = (option) => {
-    dispatch(electionActions.changeElection(option.electionType))
+    if (selectorType === 'electionType') {
+      dispatch(electionActions.changeElection(option.electionType))
+    } else if (selectorType === 'electionSubType') {
+      console.log(option)
+      dispatch(electionActions.changeSubtype(option))
+    }
+
     setShouldShowOptions(false)
     handleOpenSelector(null)
   }
@@ -121,18 +146,11 @@ export default function ElectionSelector({
     <>
       <Wrapper>
         <SelectedButton
-          disabled={shouldDisable}
-          shouldDisable={shouldDisable}
+          disabled={compareMode}
+          shouldDisable={compareMode}
           onClick={handleSelectedButtonOnClick}
         >
-          <span>
-            {
-              options.find(
-                (electionNamePair) =>
-                  electionNamePair.electionType === electionType
-              )?.electionName
-            }
-          </span>
+          <span>{currentSelectedOptionName}</span>
           <i className="triangle"></i>
         </SelectedButton>
         {shouldShowOptions && (

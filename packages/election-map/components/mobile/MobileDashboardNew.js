@@ -401,6 +401,10 @@ export const MobileDashboardNew = () => {
     dispatch(electionActions.stopCompare())
   }
 
+  const electionSubTypes = useAppSelector(
+    (state) => state.election.config.subtypes
+  )
+
   const compareMode = useAppSelector(
     (state) => state.election.compare.info.compareMode
   )
@@ -445,17 +449,15 @@ export const MobileDashboardNew = () => {
               selectorType="electionType"
               currentOpenSelector={currentOpenSelector}
               handleOpenSelector={setCurrentOpenSelector}
-              shouldDisable={compareMode}
             />
-            {/* {currentElection?.subtypes && (
+            {electionSubTypes && (
               <ElectionSelector
                 selectorType="electionSubType"
-                options={currentElection?.subtypes}
+                options={electionSubTypes}
                 currentOpenSelector={currentOpenSelector}
                 handleOpenSelector={setCurrentOpenSelector}
-                shouldDisable={compareMode}
               />
-            )} */}
+            )}
           </ElectionSelectorWrapper>
           <DistrictSelectorWrapper>
             <Selector
