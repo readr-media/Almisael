@@ -21,7 +21,6 @@ const fetchDistrictJson = async () => {
         )
       }
     })
-    console.log(responseJson)
     return responseJson
   } catch (error) {
     console.error('fetch map error', error)
