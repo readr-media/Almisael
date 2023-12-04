@@ -83,6 +83,22 @@ const checkHasElectionData = (electionsType, electionData) => {
 
 /**
  *
+ * @param {Array} candidates
+ */
+const sortCandidatesByTksRate = (candidates) => {
+  if (!candidates || !Array.isArray(candidates) || !candidates.length) {
+    return []
+  }
+  return [...candidates].sort((cand1, cand2) => {
+    if (cand1.tksRate === cand2.tksRate) {
+      return 0
+    }
+    return cand1.tksRate < cand2.tksRate ? 1 : -1
+  })
+}
+
+/**
+ *
  * @param {Object} props
  * @param {InfoboxData | Object} props.infoboxData
  * @returns
@@ -115,29 +131,34 @@ export default function InfoBox({ infoboxData }) {
       //地方選舉
       case 'mayor':
         const candidates = electionData.candidates
+        const orderedCandidates = sortCandidatesByTksRate(candidates)
         return (
           <Wrapper>
             <div className="prof-rate">投票率 {electionData?.profRate}%</div>
             <CandidatesInfoWrapper>
-              {candidates.map((candidate) => getInfoboxItemJsx(candidate))}
+              {orderedCandidates.map((candidate) =>
+                getInfoboxItemJsx(candidate)
+              )}
             </CandidatesInfoWrapper>
           </Wrapper>
         )
       case 'councilMember':
-        return electionData.map((election, index) => (
-          <>
-            {election ? (
-              <Wrapper key={index}>
-                <div className="prof-rate">投票率: {election?.profRate}%</div>
-                <CandidatesInfoWrapper>
-                  {election.candidates.map((candidate) =>
-                    getInfoboxItemJsx(candidate)
-                  )}
-                </CandidatesInfoWrapper>
-              </Wrapper>
-            ) : null}
-          </>
-        ))
+        return electionData.map((election, index) => {
+          if (!election) {
+            return null
+          }
+          const orderedCandidates = sortCandidatesByTksRate(election.candidates)
+          return (
+            <Wrapper key={index}>
+              <div className="prof-rate">投票率: {election?.profRate}%</div>
+              <CandidatesInfoWrapper>
+                {orderedCandidates.map((candidate) =>
+                  getInfoboxItemJsx(candidate)
+                )}
+              </CandidatesInfoWrapper>
+            </Wrapper>
+          )
+        })
       //TODO: 公投
       case 'referendum':
         return null

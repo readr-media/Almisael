@@ -176,11 +176,9 @@ export const MobileDashboardNew = () => {
         break
       case 'town':
         level = 2
-        console.log(currentCountyCode)
-        console.log(currentTownCode)
         dispatch(
           changeLevelControl({
-            level: 2,
+            level,
             countyCode: currentCountyCode,
             townCode: currentTownCode,
             villageCode: '',
