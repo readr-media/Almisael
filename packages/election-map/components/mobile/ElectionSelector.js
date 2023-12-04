@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
 
+import { electionActions } from '../../store/election-slice'
+import { useAppDispatch } from '../../hook/useRedux'
+import { useAppSelector } from '../../hook/useRedux'
+
 import styled from 'styled-components'
 
 const WIDTH = '100px'
@@ -40,9 +44,11 @@ const OptionItem = styled.li`
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
-  /* &:hover {
-    color: black;
-  } */
+  &:hover {
+    span {
+      border-bottom: 1px solid #fff;
+    }
+  }
 `
 const SelectedButton = styled.button`
   display: flex;
@@ -81,17 +87,39 @@ const SelectedButton = styled.button`
     transform: rotate(0deg);
   }
 `
+/**
+ *
+ * @param {Object} props
+ * @param {Object[]} props.options
+ * @param {'electionType' | 'electionSubType'} props.selectorType
+ * @param {function} props.handleOpenSelector
+ * @param {string} props.currentOpenSelector
+ * @returns
+ */
 export default function ElectionSelector({
   options = [],
-  currentElection,
-  setCurrentElection,
-  selectorType = '',
+  selectorType,
   handleOpenSelector,
   currentOpenSelector,
-  shouldDisable,
 }) {
+  const electionType = useAppSelector(
+    (state) => state.election.config.electionType
+  )
+
+  const compareMode = useAppSelector(
+    (state) => state.election.compare.info.compareMode
+  )
+  const currentSubType = useAppSelector(
+    (state) => state.election.control.subtype
+  )
+  const currentSelectedOptionName =
+    selectorType === 'electionSubType'
+      ? options.find((options) => options.key === currentSubType?.key)?.name
+      : options.find((options) => options.electionType === electionType)
+          ?.electionName
+  const dispatch = useAppDispatch()
+
   const [shouldShowOptions, setShouldShowOptions] = useState(false)
-  const hasOptions = options && Array.isArray(options) && options.length
   const handleSelectedButtonOnClick = () => {
     setShouldShowOptions((pre) => !pre)
     shouldShowOptions
@@ -99,7 +127,13 @@ export default function ElectionSelector({
       : handleOpenSelector(selectorType)
   }
   const handleOptionOnSelected = (option) => {
-    setCurrentElection(option)
+    if (selectorType === 'electionType') {
+      dispatch(electionActions.changeElection(option.electionType))
+    } else if (selectorType === 'electionSubType') {
+      console.log(option)
+      dispatch(electionActions.changeSubtype(option))
+    }
+
     setShouldShowOptions(false)
     handleOpenSelector(null)
   }
@@ -114,21 +148,21 @@ export default function ElectionSelector({
     <>
       <Wrapper>
         <SelectedButton
-          disabled={shouldDisable}
-          shouldDisable={shouldDisable}
+          disabled={compareMode}
+          shouldDisable={compareMode}
           onClick={handleSelectedButtonOnClick}
         >
-          <span>{currentElection?.electionName || currentElection?.name}</span>
+          <span>{currentSelectedOptionName}</span>
           <i className="triangle"></i>
         </SelectedButton>
-        {shouldShowOptions && hasOptions && (
+        {shouldShowOptions && (
           <Options>
             {options.map((option) => (
               <OptionItem
                 key={option.electionType || option.key}
                 onClick={() => handleOptionOnSelected(option)}
               >
-                {option.electionName || option.name}
+                <span>{option.electionName || option.name}</span>
               </OptionItem>
             ))}
           </Options>

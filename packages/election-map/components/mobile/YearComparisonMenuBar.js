@@ -1,5 +1,8 @@
 import { useState } from 'react'
-
+// import { useCallback } from 'react'
+import { useAppDispatch } from '../../hook/useRedux'
+import { useAppSelector } from '../../hook/useRedux'
+import { electionActions } from '../../store/election-slice'
 import styled from 'styled-components'
 const Wrapper = styled.div`
   position: fixed;
@@ -102,14 +105,35 @@ const CancelBtn = styled(DecideBtn)`
  * @returns
  */
 export default function YearComparisonMenuBar({
-  years = [{ key: 2024 }],
-  selectedYears = [{ key: 2024 }],
-  setSelectedYears,
   setShouldOpenYearComparisonMenuBar,
-  setIsCompareMode,
 }) {
-  const [selectedYearsNew, setSelectedYearsNew] = useState(selectedYears)
-  const [firstYear, secondYear] = selectedYearsNew
+  const dispatch = useAppDispatch()
+  const years = useAppSelector((state) => state.election.config.years)
+  const year = useAppSelector((state) => state.election.control.year)
+
+  const [compareCandidates, setCompareCandidates] = useState([
+    years.find((y) => y === year),
+    null,
+  ])
+
+  const [firstYear, compareYear] = compareCandidates
+
+  // const selectedIndex = years.indexOf(years.find((y) => y === year))
+
+  // const submitCompareCandidates = useCallback(() => {
+  //   const [year, compareYear] = compareCandidates
+  //   dispatch(electionActions.changeYear(year))
+  //   dispatch(
+  //     electionActions.startCompare({
+  //       compareYearKey: compareYear.key,
+  //     })
+  //   )
+  // }, [compareCandidates, dispatch])
+
+  // const submitCompareEnd = () => {
+  //   setShouldOpenYearComparisonMenuBar(false)
+  //   dispatch(electionActions.stopCompare())
+  // }
 
   const handleOnChooseYears = (year) => {
     if (firstYear.key === year.key) {
@@ -117,21 +141,27 @@ export default function YearComparisonMenuBar({
     }
     const result = [firstYear, year]
 
-    setSelectedYearsNew(result)
+    setCompareCandidates(result)
   }
   const handleOnDecide = () => {
-    if (!secondYear?.key) {
+    const [year, compareYear] = compareCandidates
+    if (!compareYear?.key) {
       return
     }
     setShouldOpenYearComparisonMenuBar(false)
-    setIsCompareMode(true)
-    setSelectedYears([...selectedYearsNew])
+
+    dispatch(electionActions.changeYear(year))
+    dispatch(
+      electionActions.startCompare({
+        compareYearKey: compareYear.key,
+      })
+    )
   }
   const itemJsx = years.map((year) => {
     let itemClassName = 'radio-button'
     if (firstYear.key === year.key) {
       itemClassName = 'radio-button selected'
-    } else if (secondYear?.key === year.key) {
+    } else if (compareYear?.key === year.key) {
       itemClassName = `radio-button selected2`
     }
 
@@ -154,7 +184,7 @@ export default function YearComparisonMenuBar({
       <CancelBtn onClick={() => setShouldOpenYearComparisonMenuBar(false)}>
         取消
       </CancelBtn>
-      <DecideBtn disabled={!secondYear?.key} onClick={handleOnDecide}>
+      <DecideBtn disabled={!compareYear?.key} onClick={handleOnDecide}>
         決定
       </DecideBtn>
     </Wrapper>

@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
 const Options = styled.ul`
   z-index: 0;
-  background-color: #fff;
+  background-color: #f2f2f2;
   position: absolute;
   color: #fff;
   border-radius: 0px 0px 8px 8px;
@@ -27,12 +27,7 @@ const Options = styled.ul`
 const OptionItem = styled.li`
   list-style: none;
   text-align: left;
-  color: ${
-    /**
-     * @param {{isSelected:boolean}} props
-     */
-    ({ isSelected }) => (isSelected ? 'black' : 'gray')
-  };
+  color: #000;
   width: 100%;
   padding: 4px 10px;
   max-height: 28.4px;
@@ -41,8 +36,18 @@ const OptionItem = styled.li`
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
+  span {
+    border-bottom: ${
+      /**
+       * @param {{isSelected:boolean}} props
+       */
+      ({ isSelected }) => (isSelected ? '1px solid #000' : 'none')
+    };
+  }
   &:hover {
-    color: black;
+    span {
+      border-bottom: 1px solid #000;
+    }
   }
 `
 const SelectedButton = styled.button`
@@ -141,7 +146,7 @@ export default function Selector({
                 key={index}
                 onClick={() => handleOptionOnSelected(option)}
               >
-                {option.name}
+                <span>{option.name}</span>
               </OptionItem>
             ))}
           </Options>

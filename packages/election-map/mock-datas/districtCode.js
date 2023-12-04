@@ -41,43 +41,43 @@ const districtCode = {
   type: 'nation',
   sub: [
     {
-      code: '1',
+      code: '63000',
       name: '台北市',
       type: 'county',
       sub: [
         {
-          code: '11',
-          name: '大安區',
+          code: '63000080',
+          name: '文山區',
           type: 'town',
           sub: [
             {
-              code: '111',
-              name: '大安區第一里',
+              code: '63000080037',
+              name: '老泉里',
               type: 'village',
               sub: null,
             },
             {
-              code: '112',
-              name: '大安區第二里',
+              code: '63000080032',
+              name: '樟腳里',
               type: 'village',
               sub: null,
             },
           ],
         },
         {
-          code: '12',
-          name: '內湖區',
+          code: '63000030',
+          name: '大安區',
           type: 'town',
           sub: [
             {
-              code: '121',
-              name: '內湖區第一里',
+              code: '63000030043',
+              name: '大學里',
               type: 'village',
               sub: null,
             },
             {
-              code: '122',
-              name: '內湖區第二里',
+              code: '63000030057',
+              name: '學府里',
               type: 'village',
               sub: null,
             },
@@ -86,43 +86,43 @@ const districtCode = {
       ],
     },
     {
-      code: '2',
+      code: '65000',
       name: '新北市',
       type: 'county',
       sub: [
         {
-          code: '21',
+          code: '65000110',
           name: '汐止區',
           type: 'town',
           sub: [
             {
-              code: '211',
-              name: '第一里',
+              code: '65000110025',
+              name: '宜興里',
               type: 'village',
               sub: null,
             },
             {
-              code: '222',
-              name: '第二里',
+              code: '65000110039',
+              name: '東勢里',
               type: 'village',
               sub: null,
             },
           ],
         },
         {
-          code: '22',
+          code: '65000010',
           name: '板橋區',
           type: 'town',
           sub: [
             {
-              code: '221',
-              name: '[欍]埔村',
+              code: '65000010099',
+              name: '溪洲里',
               type: 'village',
               sub: null,
             },
             {
-              code: '222',
-              name: '第二里',
+              code: '65000010083',
+              name: '廣福里',
               type: 'village',
               sub: null,
             },

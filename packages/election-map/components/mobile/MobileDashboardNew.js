@@ -1,159 +1,168 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import { districtCode } from '../../mock-datas/districtCode'
+import { electionNamePairs } from '../../utils/election'
 import Selector from './Selector'
 import ElectionSelector from './ElectionSelector'
 import styled from 'styled-components'
 import InfoBox from './InfoBox'
 import YearComparisonMenuBar from './YearComparisonMenuBar'
-const ELECTION_TYPE = [
-  {
-    electionType: 'president',
-    electionName: '正副總統',
-    years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }, { key: 2024 }],
-  },
-  {
-    electionType: 'mayor',
-    electionName: '縣市首長',
-    years: [{ key: 2010 }, { key: 2014 }, { key: 2018 }, { key: 2022 }],
-  },
-  {
-    electionType: 'legislator',
-    electionName: '立法委員',
-    years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }, { key: 2024 }],
-  },
-  {
-    electionType: 'councilMember',
-    electionName: '縣市議員',
-    years: [{ key: 2010 }, { key: 2014 }, { key: 2018 }, { key: 2022 }],
-    subtypes: [
-      { electionName: '區域', electionType: 'normal' },
-      { electionName: '原住民', electionType: 'indigenous' },
-    ],
-  },
-  {
-    electionType: 'referendum',
-    electionName: '全國性公民投票',
-    years: [
-      {
-        key: 2018,
-        numbers: [
-          {
-            year: 2018,
-            key: '7',
-            name: '公投第7案',
-            detail:
-              '你是否同意以「平均每年至少降低1%」之方式逐年降低火力發電廠發電量?',
-          },
-          {
-            year: 2018,
-            key: '8',
-            name: '公投第8案',
-            detail:
-              '您是否同意確立「停止新建、擴建任何燃煤發電廠或發電機組(包括深澳電廠擴建)」之能源政策?',
-          },
-          {
-            year: 2018,
-            key: '9',
-            name: '公投第9案',
-            detail:
-              '你是否同意政府維持禁止開放日本福島311核災相關地區，包括福島與周遭4縣市(茨城、櫪木、群馬、千葉)等地區農產品及食品進口?',
-          },
-          {
-            year: 2018,
-            key: '10',
-            name: '公投第10案',
-            detail: '你是否同意民法婚姻規定應限定在一男一女的結合?',
-          },
-          {
-            year: 2018,
-            key: '11',
-            name: '公投第11案',
-            detail:
-              '你是否同意在國民教育階段內(國中及國小)，教育部及各級學校不應對學生實施性別平等教育法施行細則所定之同志教育?',
-          },
-          {
-            year: 2018,
-            key: '12',
-            name: '公投第12案',
-            detail:
-              '你是否同意以民法婚姻規定以外之其他形式來保障同性別二人經營永久共同生活的權益?',
-          },
-          {
-            year: 2018,
-            key: '13',
-            name: '公投第13案',
-            detail:
-              '你是否同意，以「台灣」(Taiwan)為全名申請參加所有國際運動賽事及2020年東京奧運?',
-          },
-          {
-            year: 2018,
-            key: '14',
-            name: '公投第14案',
-            detail: '您是否同意，以民法婚姻章保障同性別二人建立婚姻關係?',
-          },
-          {
-            year: 2018,
-            key: '15',
-            name: '公投第15案',
-            detail:
-              '您是否同意，以「性別平等教育法」明定在國民教育各階段內實施性別平等教育，且內容應涵蓋情感教育、性教育、同志教育等課程?',
-          },
-          {
-            year: 2018,
-            key: '16',
-            name: '公投第16案',
-            detail:
-              '廢除電業法第95條第1項，即廢除「核能發電設備應於中華民國一百十四年以前，全部停止運轉」之條文?',
-          },
-        ],
-      },
-      {
-        key: 2021,
-        numbers: [
-          {
-            year: 2021,
-            key: '17',
-            name: '公投第17案',
-            detail: '您是否同意核四啟封商轉發電？',
-          },
-          {
-            year: 2021,
-            key: '18',
-            name: '公投第18案',
-            detail:
-              '你是否同意政府應全面禁止進口含有萊克多巴胺之乙型受體素豬隻之肉品、內臟及其相關產製品？',
-          },
-          {
-            year: 2021,
-            key: '19',
-            name: '公投第19案',
-            detail:
-              '你是否同意公民投票案公告成立後半年內，若該期間內遇有全國性選舉時，在符合公民投票法規定之情形下，公民投票應與該選舉同日舉行？',
-          },
-          {
-            year: 2021,
-            key: '20',
-            name: '公投第20案',
-            detail:
-              '您是否同意中油第三天然氣接收站遷離桃園大潭藻礁海岸及海域？（即北起觀音溪出海口，南至新屋溪出海口之海岸，及由上述海岸最低潮線往外平行延伸五公里之海域）',
-          },
-        ],
-      },
-      {
-        key: 2022,
-        numbers: [
-          {
-            year: 2022,
-            key: 'F1',
-            name: '憲法修正案第1案',
-            detail:
-              '中華民國國民年滿十八歲者，有依法選舉、罷免、創制、複決及參加公民投票之權。',
-          },
-        ],
-      },
-    ],
-  },
-]
+/**
+ * @typedef {import('../../store/index').RootState}RootState
+ */
+
+import { useAppSelector } from '../../hook/useRedux'
+import { useAppDispatch } from '../../hook/useRedux'
+import { electionActions } from '../../store/election-slice'
+
+// const ELECTION_TYPE = [
+//   {
+//     electionType: 'president',
+//     electionName: '正副總統',
+//     years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }, { key: 2024 }],
+//   },
+//   {
+//     electionType: 'mayor',
+//     electionName: '縣市首長',
+//     years: [{ key: 2010 }, { key: 2014 }, { key: 2018 }, { key: 2022 }],
+//   },
+//   {
+//     electionType: 'legislator',
+//     electionName: '立法委員',
+//     years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }, { key: 2024 }],
+//   },
+//   {
+//     electionType: 'councilMember',
+//     electionName: '縣市議員',
+//     years: [{ key: 2010 }, { key: 2014 }, { key: 2018 }, { key: 2022 }],
+//     subtypes: [
+//       { electionName: '區域', electionType: 'normal' },
+//       { electionName: '原住民', electionType: 'indigenous' },
+//     ],
+//   },
+//   {
+//     electionType: 'referendum',
+//     electionName: '全國性公民投票',
+//     years: [
+//       {
+//         key: 2018,
+//         numbers: [
+//           {
+//             year: 2018,
+//             key: '7',
+//             name: '公投第7案',
+//             detail:
+//               '你是否同意以「平均每年至少降低1%」之方式逐年降低火力發電廠發電量?',
+//           },
+//           {
+//             year: 2018,
+//             key: '8',
+//             name: '公投第8案',
+//             detail:
+//               '您是否同意確立「停止新建、擴建任何燃煤發電廠或發電機組(包括深澳電廠擴建)」之能源政策?',
+//           },
+//           {
+//             year: 2018,
+//             key: '9',
+//             name: '公投第9案',
+//             detail:
+//               '你是否同意政府維持禁止開放日本福島311核災相關地區，包括福島與周遭4縣市(茨城、櫪木、群馬、千葉)等地區農產品及食品進口?',
+//           },
+//           {
+//             year: 2018,
+//             key: '10',
+//             name: '公投第10案',
+//             detail: '你是否同意民法婚姻規定應限定在一男一女的結合?',
+//           },
+//           {
+//             year: 2018,
+//             key: '11',
+//             name: '公投第11案',
+//             detail:
+//               '你是否同意在國民教育階段內(國中及國小)，教育部及各級學校不應對學生實施性別平等教育法施行細則所定之同志教育?',
+//           },
+//           {
+//             year: 2018,
+//             key: '12',
+//             name: '公投第12案',
+//             detail:
+//               '你是否同意以民法婚姻規定以外之其他形式來保障同性別二人經營永久共同生活的權益?',
+//           },
+//           {
+//             year: 2018,
+//             key: '13',
+//             name: '公投第13案',
+//             detail:
+//               '你是否同意，以「台灣」(Taiwan)為全名申請參加所有國際運動賽事及2020年東京奧運?',
+//           },
+//           {
+//             year: 2018,
+//             key: '14',
+//             name: '公投第14案',
+//             detail: '您是否同意，以民法婚姻章保障同性別二人建立婚姻關係?',
+//           },
+//           {
+//             year: 2018,
+//             key: '15',
+//             name: '公投第15案',
+//             detail:
+//               '您是否同意，以「性別平等教育法」明定在國民教育各階段內實施性別平等教育，且內容應涵蓋情感教育、性教育、同志教育等課程?',
+//           },
+//           {
+//             year: 2018,
+//             key: '16',
+//             name: '公投第16案',
+//             detail:
+//               '廢除電業法第95條第1項，即廢除「核能發電設備應於中華民國一百十四年以前，全部停止運轉」之條文?',
+//           },
+//         ],
+//       },
+//       {
+//         key: 2021,
+//         numbers: [
+//           {
+//             year: 2021,
+//             key: '17',
+//             name: '公投第17案',
+//             detail: '您是否同意核四啟封商轉發電？',
+//           },
+//           {
+//             year: 2021,
+//             key: '18',
+//             name: '公投第18案',
+//             detail:
+//               '你是否同意政府應全面禁止進口含有萊克多巴胺之乙型受體素豬隻之肉品、內臟及其相關產製品？',
+//           },
+//           {
+//             year: 2021,
+//             key: '19',
+//             name: '公投第19案',
+//             detail:
+//               '你是否同意公民投票案公告成立後半年內，若該期間內遇有全國性選舉時，在符合公民投票法規定之情形下，公民投票應與該選舉同日舉行？',
+//           },
+//           {
+//             year: 2021,
+//             key: '20',
+//             name: '公投第20案',
+//             detail:
+//               '您是否同意中油第三天然氣接收站遷離桃園大潭藻礁海岸及海域？（即北起觀音溪出海口，南至新屋溪出海口之海岸，及由上述海岸最低潮線往外平行延伸五公里之海域）',
+//           },
+//         ],
+//       },
+//       {
+//         key: 2022,
+//         numbers: [
+//           {
+//             year: 2022,
+//             key: 'F1',
+//             name: '憲法修正案第1案',
+//             detail:
+//               '中華民國國民年滿十八歲者，有依法選舉、罷免、創制、複決及參加公民投票之權。',
+//           },
+//         ],
+//       },
+//     ],
+//   },
+// ]
 
 /**
  * @typedef {Object} NationData
@@ -207,7 +216,7 @@ const TopButton = styled.button`
      * @param {Object} props
      * @param {boolean} [props.isSelected]
      */
-    ({ isSelected }) => (isSelected ? '#ffc7bb' : '#fff')
+    ({ isSelected }) => (isSelected ? '#ff8585' : '#fff')
   };
   font-size: 14px;
   line-height: 20.27px;
@@ -218,7 +227,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   padding: 12px 16px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: ${
     /**
      * @param {Object} props
@@ -253,24 +262,26 @@ const YearWrapper = styled(TopButton)`
  * Dashboard for new election map, created in 2023.11.20
  */
 export const MobileDashboardNew = () => {
-  const [currentElection, setCurrentElection] = useState(ELECTION_TYPE[0])
-  const [currentElectionSubType, setCurrentElectionSubType] = useState(
-    ELECTION_TYPE[3]?.subtypes[0]
-  )
+  // const [currentElection, setCurrentElection] = useState(ELECTION_TYPE[0])
+  const dispatch = useAppDispatch()
+  const { stopCompare, changeLevelControl, changeYear, resetLevelControl } =
+    electionActions
+  // const [currentElectionSubType, setCurrentElectionSubType] = useState(
+  //   ELECTION_TYPE[3]?.subtypes[0]
+  // )
 
-  const [isCompareMode, setIsCompareMode] = useState(false)
-  const electionTypeYears = currentElection.years
-  const defaultYears = currentElection.years[currentElection.years.length - 1]
-  const [selectedYears, setSelectedYears] = useState([defaultYears])
+  // const electionTypeYears = currentElection.years
+  // const defaultYears = currentElection.years[currentElection.years.length - 1]
+  // const [selectedYears, setSelectedYears] = useState([defaultYears])
 
   const [shouldOpenYearComparisonMenuBar, setShouldOpenYearComparisonMenuBar] =
     useState(false)
 
   const [currentDistrictType, setCurrentDistrictType] = useState('nation')
-  const [currentCountyCode, setCurrentCountyCode] = useState(null)
-  const [currentTownCode, setCurrentTownCode] = useState(null)
-  const [currentVillageCode, setCurrentVillageCode] = useState(null)
-  const [currentOpenSelector, setCurrentOpenSelector] = useState(null)
+  const [currentCountyCode, setCurrentCountyCode] = useState('')
+  const [currentTownCode, setCurrentTownCode] = useState('')
+  const [currentVillageCode, setCurrentVillageCode] = useState('')
+  const [currentOpenSelector, setCurrentOpenSelector] = useState('')
 
   /** @type {CountyData[]} */
   const allCounty = districtCode.sub
@@ -283,20 +294,79 @@ export const MobileDashboardNew = () => {
 
   const currentDistrictCode = getCurrentDistrictCode()
 
-  //clean up
+  // //clean up
   useEffect(() => {
     if (currentDistrictType === 'nation') {
-      setCurrentCountyCode(null)
-      setCurrentTownCode(null)
-      setCurrentVillageCode(null)
+      setCurrentCountyCode('')
+      setCurrentTownCode('')
+      setCurrentVillageCode('')
     } else if (currentDistrictType === 'county') {
-      setCurrentTownCode(null)
-      setCurrentVillageCode(null)
+      setCurrentTownCode('')
+      setCurrentVillageCode('')
     } else if (currentDistrictType === 'town') {
-      setCurrentVillageCode(null)
+      setCurrentVillageCode('')
     }
   }, [currentDistrictType])
+  useEffect(() => {
+    let level = 0
+    switch (currentDistrictType) {
+      case 'nation':
+        dispatch(resetLevelControl())
+        return
+      case 'county':
+        level = 1
+        dispatch(
+          changeLevelControl({
+            level,
+            countyCode: currentCountyCode,
+            townCode: '',
+            villageCode: '',
+            constituencyCode: '',
+            activeCode: currentCountyCode,
+          })
+        )
+        break
+      case 'town':
+        level = 2
+        console.log(currentCountyCode)
+        console.log(currentTownCode)
+        dispatch(
+          changeLevelControl({
+            level: 2,
+            countyCode: currentCountyCode,
+            townCode: currentTownCode,
+            villageCode: '',
+            constituencyCode: '',
+            activeCode: currentTownCode,
+          })
+        )
+        break
+      case 'village':
+        level = 3
+        dispatch(
+          changeLevelControl({
+            level,
+            countyCode: currentCountyCode,
+            townCode: currentTownCode,
+            villageCode: currentVillageCode,
+            constituencyCode: '',
+            activeCode: currentVillageCode,
+          })
+        )
+        break
 
+      default:
+        break
+    }
+  }, [
+    dispatch,
+    resetLevelControl,
+    currentDistrictType,
+    changeLevelControl,
+    currentCountyCode,
+    currentTownCode,
+    currentVillageCode,
+  ])
   function getCurrentDistrictCode() {
     switch (currentDistrictType) {
       case 'nation':
@@ -366,44 +436,59 @@ export const MobileDashboardNew = () => {
         break
     }
   }
-  const handleSetCurrentElection = (option) => {
-    setCurrentElection(option)
+  // const handleSetCurrentElection = (option) => {
+  //   setCurrentElection(option)
 
-    const currentYears = option.years[option.years.length - 1]
-    setSelectedYears([currentYears])
-    //initialize when election change
-    setCurrentDistrictType('nation')
-    setCurrentCountyCode(null)
-    setCurrentTownCode(null)
-    setCurrentVillageCode(null)
-    setCurrentOpenSelector(null)
-  }
-  const handleSetCurrentElectionSubType = (option) => {
-    setCurrentElectionSubType(option)
-    //initialize when election change
-    setCurrentDistrictType('nation')
-    setCurrentCountyCode(null)
-    setCurrentTownCode(null)
-    setCurrentVillageCode(null)
-    setCurrentOpenSelector(null)
-  }
+  //   const currentYears = option.years[option.years.length - 1]
+  //   setSelectedYears([currentYears])
+  //   //initialize when election change
+  //   setCurrentDistrictType('nation')
+  //   setCurrentCountyCode(null)
+  //   setCurrentTownCode(null)
+  //   setCurrentVillageCode(null)
+  //   setCurrentOpenSelector(null)
+  // }
+  // const handleSetCurrentElectionSubType = (option) => {
+  //   setCurrentElectionSubType(option)
+  //   //initialize when election change
+  //   setCurrentDistrictType('nation')
+  //   setCurrentCountyCode(null)
+  //   setCurrentTownCode(null)
+  //   setCurrentVillageCode(null)
+  //   setCurrentOpenSelector(null)
+  // }
   const handleCloseCompareMode = () => {
-    setIsCompareMode(false)
-    setSelectedYears((pre) => [pre[0]])
+    setShouldOpenYearComparisonMenuBar(false)
+    dispatch(stopCompare())
   }
-  const topButtonJsx = isCompareMode ? (
+  const electionsType = useAppSelector(
+    (state) => state.election.config.electionType
+  )
+  const electionSubTypes = useAppSelector(
+    (state) => state.election.config.subtypes
+  )
+
+  const year = useAppSelector((state) => state.election.control.year)
+  const years = useAppSelector((state) => state.election.config.years)
+  const infoboxData = useAppSelector((state) => state.election.data.infoboxData)
+  const compareInfo = useAppSelector((state) => state.election.compare.info)
+  const { compareMode } = compareInfo
+  const topButtonJsx = compareMode ? (
     <TopButton onClick={handleCloseCompareMode}>離開</TopButton>
   ) : (
     <>
-      {electionTypeYears.map((year) => (
-        <TopButton
-          isSelected={selectedYears.map((year) => year.key).includes(year.key)}
-          onClick={() => setSelectedYears([year])}
-          key={year.key}
-        >
-          {year.key}
-        </TopButton>
-      ))}
+      {electionsType !== 'referendum' &&
+        years.map((y) => (
+          <TopButton
+            isSelected={year.key === y.key}
+            key={y.key}
+            onClick={() => {
+              dispatch(changeYear(y))
+            }}
+          >
+            {y.key}
+          </TopButton>
+        ))}
       <TopButton onClick={() => setShouldOpenYearComparisonMenuBar(true)}>
         比較
       </TopButton>
@@ -416,34 +501,24 @@ export const MobileDashboardNew = () => {
           setShouldOpenYearComparisonMenuBar={
             setShouldOpenYearComparisonMenuBar
           }
-          setIsCompareMode={setIsCompareMode}
-          years={electionTypeYears}
-          selectedYears={selectedYears}
-          setSelectedYears={setSelectedYears}
         />
       )}
-      <Wrapper isCompareMode={isCompareMode}>
+      <Wrapper isCompareMode={compareMode}>
         <TopButtonsWrapper>{topButtonJsx}</TopButtonsWrapper>
         <SelectorWrapper>
           <ElectionSelectorWrapper>
             <ElectionSelector
-              options={ELECTION_TYPE}
+              options={electionNamePairs}
               selectorType="electionType"
-              currentElection={currentElection}
-              setCurrentElection={handleSetCurrentElection}
-              currentOpenSelector={currentOpenSelector}
               handleOpenSelector={setCurrentOpenSelector}
-              shouldDisable={isCompareMode}
+              currentOpenSelector={currentOpenSelector}
             />
-            {currentElection?.subtypes && (
+            {electionSubTypes && (
               <ElectionSelector
                 selectorType="electionSubType"
-                options={currentElection?.subtypes}
-                currentElection={currentElectionSubType}
-                setCurrentElection={handleSetCurrentElectionSubType}
-                currentOpenSelector={currentOpenSelector}
+                options={electionSubTypes}
                 handleOpenSelector={setCurrentOpenSelector}
-                shouldDisable={isCompareMode}
+                currentOpenSelector={currentOpenSelector}
               />
             )}
           </ElectionSelectorWrapper>
@@ -478,27 +553,43 @@ export const MobileDashboardNew = () => {
               placeholderValue="-"
             ></Selector>
           </DistrictSelectorWrapper>
-          {currentDistrictType !== 'referendum' &&
-            selectedYears.map((year) => (
-              <Fragment key={year.key}>
-                {isCompareMode && (
-                  <YearWrapper as="div">{year.key}</YearWrapper>
-                )}
-                <InfoBox></InfoBox>
-              </Fragment>
-            ))}
+          {/* todo: add select mode */}
+          {currentDistrictType !== 'referendum' && (
+            <Fragment key={year.key}>
+              {compareMode && <YearWrapper as="div">{year.key}</YearWrapper>}
+              <InfoBox infoboxData={infoboxData}></InfoBox>
+            </Fragment>
+          )}
         </SelectorWrapper>
-        <div>electionTypeYears: {JSON.stringify(electionTypeYears)}</div>
-        <div>selectedYears: {JSON.stringify(selectedYears)}</div>
-        <div>currentElectionType: {currentElection.electionType}</div>
-        <div>
+        {/* <div>electionTypeYears: {JSON.stringify(electionTypeYears)}</div> */}
+        {/* <div>selectedYears: {JSON.stringify(selectedYears)}</div> */}
+        {/* <div>currentElectionType: {currentElection.electionType}</div> */}
+        {/* <div>
           currentElectionSubType: {JSON.stringify(currentElectionSubType)}
-        </div>
+        </div> */}
+        <button
+          onClick={() => {
+            dispatch(
+              changeLevelControl({
+                level: 2,
+                countyCode: currentCountyCode,
+                townCode: currentTownCode,
+                villageCode: currentVillageCode,
+                constituencyCode: '',
+                activeCode: currentTownCode,
+              })
+            )
+          }}
+        >
+          測試
+        </button>
         <div>currentDistrictType: {currentDistrictType}</div>
-        <div>currentDistrictCode: {currentDistrictCode}</div>
         <div>currentCountyCode: {currentCountyCode}</div>
         <div>currentTownCode: {currentTownCode}</div>
         <div>currentVillageCode: {currentVillageCode}</div>
+        <div>currentDistrictCode: {currentDistrictCode}</div>
+        <div>infobox result: </div>
+        {/* <div>{JSON.stringify(infoboxData)}</div> */}
       </Wrapper>
     </>
   )
