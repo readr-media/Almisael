@@ -44,9 +44,11 @@ const OptionItem = styled.li`
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
-  /* &:hover {
-    color: black;
-  } */
+  &:hover {
+    span {
+      border-bottom: 1px solid #fff;
+    }
+  }
 `
 const SelectedButton = styled.button`
   display: flex;
@@ -91,7 +93,7 @@ const SelectedButton = styled.button`
  * @param {Object[]} props.options
  * @param {'electionType' | 'electionSubType'} props.selectorType
  * @param {function} props.handleOpenSelector
- * @param {'electionType' | 'electionSubType' | 'districtNationAndCounty' | 'districtTown' | 'districtVillage'} props.currentOpenSelector
+ * @param {string} props.currentOpenSelector
  * @returns
  */
 export default function ElectionSelector({
@@ -160,7 +162,7 @@ export default function ElectionSelector({
                 key={option.electionType || option.key}
                 onClick={() => handleOptionOnSelected(option)}
               >
-                {option.electionName || option.name}
+                <span>{option.electionName || option.name}</span>
               </OptionItem>
             ))}
           </Options>
