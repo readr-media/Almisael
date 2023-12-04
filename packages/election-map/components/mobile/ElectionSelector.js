@@ -130,7 +130,6 @@ export default function ElectionSelector({
     if (selectorType === 'electionType') {
       dispatch(electionActions.changeElection(option.electionType))
     } else if (selectorType === 'electionSubType') {
-      console.log(option)
       dispatch(electionActions.changeSubtype(option))
     }
 
