@@ -1,7 +1,7 @@
 export const data = {
   updatedAt: '2022-11-24 13:11:22',
   year: '2016',
-  type: 'president', //決定套件內哪個 component
+  type: 'president',
   version: 'v2',
   title: '正副總統選舉',
   candidates: [
