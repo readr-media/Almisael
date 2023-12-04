@@ -216,7 +216,7 @@ const TopButton = styled.button`
      * @param {Object} props
      * @param {boolean} [props.isSelected]
      */
-    ({ isSelected }) => (isSelected ? '#ffc7bb' : '#fff')
+    ({ isSelected }) => (isSelected ? '#ff8585' : '#fff')
   };
   font-size: 14px;
   line-height: 20.27px;
@@ -227,7 +227,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   padding: 12px 16px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: ${
     /**
      * @param {Object} props
@@ -264,6 +264,8 @@ const YearWrapper = styled(TopButton)`
 export const MobileDashboardNew = () => {
   // const [currentElection, setCurrentElection] = useState(ELECTION_TYPE[0])
   const dispatch = useAppDispatch()
+  const { stopCompare, changeLevelControl, changeYear, resetLevelControl } =
+    electionActions
   // const [currentElectionSubType, setCurrentElectionSubType] = useState(
   //   ELECTION_TYPE[3]?.subtypes[0]
   // )
@@ -276,10 +278,10 @@ export const MobileDashboardNew = () => {
     useState(false)
 
   const [currentDistrictType, setCurrentDistrictType] = useState('nation')
-  const [currentCountyCode, setCurrentCountyCode] = useState(null)
-  const [currentTownCode, setCurrentTownCode] = useState(null)
-  const [currentVillageCode, setCurrentVillageCode] = useState(null)
-  const [currentOpenSelector, setCurrentOpenSelector] = useState(null)
+  const [currentCountyCode, setCurrentCountyCode] = useState('')
+  const [currentTownCode, setCurrentTownCode] = useState('')
+  const [currentVillageCode, setCurrentVillageCode] = useState('')
+  const [currentOpenSelector, setCurrentOpenSelector] = useState('')
 
   /** @type {CountyData[]} */
   const allCounty = districtCode.sub
@@ -290,37 +292,96 @@ export const MobileDashboardNew = () => {
   /** @type {VillageData[]} */
   const allVillage = getAllVillage(currentTownCode)
 
-  // const currentDistrictCode = getCurrentDistrictCode()
+  const currentDistrictCode = getCurrentDistrictCode()
 
-  //clean up
+  // //clean up
   useEffect(() => {
     if (currentDistrictType === 'nation') {
-      setCurrentCountyCode(null)
-      setCurrentTownCode(null)
-      setCurrentVillageCode(null)
+      setCurrentCountyCode('')
+      setCurrentTownCode('')
+      setCurrentVillageCode('')
     } else if (currentDistrictType === 'county') {
-      setCurrentTownCode(null)
-      setCurrentVillageCode(null)
+      setCurrentTownCode('')
+      setCurrentVillageCode('')
     } else if (currentDistrictType === 'town') {
-      setCurrentVillageCode(null)
+      setCurrentVillageCode('')
     }
   }, [currentDistrictType])
+  useEffect(() => {
+    let level = 0
+    switch (currentDistrictType) {
+      case 'nation':
+        dispatch(resetLevelControl())
+        return
+      case 'county':
+        level = 1
+        dispatch(
+          changeLevelControl({
+            level,
+            countyCode: currentCountyCode,
+            townCode: '',
+            villageCode: '',
+            constituencyCode: '',
+            activeCode: currentCountyCode,
+          })
+        )
+        break
+      case 'town':
+        level = 2
+        console.log(currentCountyCode)
+        console.log(currentTownCode)
+        dispatch(
+          changeLevelControl({
+            level: 2,
+            countyCode: currentCountyCode,
+            townCode: currentTownCode,
+            villageCode: '',
+            constituencyCode: '',
+            activeCode: currentTownCode,
+          })
+        )
+        break
+      case 'village':
+        level = 3
+        dispatch(
+          changeLevelControl({
+            level,
+            countyCode: currentCountyCode,
+            townCode: currentTownCode,
+            villageCode: currentVillageCode,
+            constituencyCode: '',
+            activeCode: currentVillageCode,
+          })
+        )
+        break
 
-  // function getCurrentDistrictCode() {
-  //   switch (currentDistrictType) {
-  //     case 'nation':
-  //       return districtCode.code
-  //     case 'county':
-  //       return currentCountyCode
-  //     case 'town':
-  //       return currentTownCode
-  //     case 'village':
-  //       return currentVillageCode
+      default:
+        break
+    }
+  }, [
+    dispatch,
+    resetLevelControl,
+    currentDistrictType,
+    changeLevelControl,
+    currentCountyCode,
+    currentTownCode,
+    currentVillageCode,
+  ])
+  function getCurrentDistrictCode() {
+    switch (currentDistrictType) {
+      case 'nation':
+        return districtCode.code
+      case 'county':
+        return currentCountyCode
+      case 'town':
+        return currentTownCode
+      case 'village':
+        return currentVillageCode
 
-  //     default:
-  //       return districtCode.code
-  //   }
-  // }
+      default:
+        return districtCode.code
+    }
+  }
 
   function getAllTown(code) {
     if (currentDistrictType === 'nation') {
@@ -398,34 +459,36 @@ export const MobileDashboardNew = () => {
   // }
   const handleCloseCompareMode = () => {
     setShouldOpenYearComparisonMenuBar(false)
-    dispatch(electionActions.stopCompare())
+    dispatch(stopCompare())
   }
-
+  const electionsType = useAppSelector(
+    (state) => state.election.config.electionType
+  )
   const electionSubTypes = useAppSelector(
     (state) => state.election.config.subtypes
   )
 
-  const compareMode = useAppSelector(
-    (state) => state.election.compare.info.compareMode
-  )
   const year = useAppSelector((state) => state.election.control.year)
   const years = useAppSelector((state) => state.election.config.years)
-
+  const infoboxData = useAppSelector((state) => state.election.data.infoboxData)
+  const compareInfo = useAppSelector((state) => state.election.compare.info)
+  const { compareMode } = compareInfo
   const topButtonJsx = compareMode ? (
     <TopButton onClick={handleCloseCompareMode}>離開</TopButton>
   ) : (
     <>
-      {years.map((y) => (
-        <TopButton
-          isSelected={year.key === y.key}
-          key={y.key}
-          onClick={() => {
-            dispatch(electionActions.changeYear(y))
-          }}
-        >
-          {y.key}
-        </TopButton>
-      ))}
+      {electionsType !== 'referendum' &&
+        years.map((y) => (
+          <TopButton
+            isSelected={year.key === y.key}
+            key={y.key}
+            onClick={() => {
+              dispatch(changeYear(y))
+            }}
+          >
+            {y.key}
+          </TopButton>
+        ))}
       <TopButton onClick={() => setShouldOpenYearComparisonMenuBar(true)}>
         比較
       </TopButton>
@@ -447,15 +510,15 @@ export const MobileDashboardNew = () => {
             <ElectionSelector
               options={electionNamePairs}
               selectorType="electionType"
-              currentOpenSelector={currentOpenSelector}
               handleOpenSelector={setCurrentOpenSelector}
+              currentOpenSelector={currentOpenSelector}
             />
             {electionSubTypes && (
               <ElectionSelector
                 selectorType="electionSubType"
                 options={electionSubTypes}
-                currentOpenSelector={currentOpenSelector}
                 handleOpenSelector={setCurrentOpenSelector}
+                currentOpenSelector={currentOpenSelector}
               />
             )}
           </ElectionSelectorWrapper>
@@ -494,7 +557,7 @@ export const MobileDashboardNew = () => {
           {currentDistrictType !== 'referendum' && (
             <Fragment key={year.key}>
               {compareMode && <YearWrapper as="div">{year.key}</YearWrapper>}
-              <InfoBox></InfoBox>
+              <InfoBox infoboxData={infoboxData}></InfoBox>
             </Fragment>
           )}
         </SelectorWrapper>
@@ -504,11 +567,29 @@ export const MobileDashboardNew = () => {
         {/* <div>
           currentElectionSubType: {JSON.stringify(currentElectionSubType)}
         </div> */}
-        {/* <div>currentDistrictType: {currentDistrictType}</div>
-        <div>currentDistrictCode: {currentDistrictCode}</div>
+        <button
+          onClick={() => {
+            dispatch(
+              changeLevelControl({
+                level: 2,
+                countyCode: currentCountyCode,
+                townCode: currentTownCode,
+                villageCode: currentVillageCode,
+                constituencyCode: '',
+                activeCode: currentTownCode,
+              })
+            )
+          }}
+        >
+          測試
+        </button>
+        <div>currentDistrictType: {currentDistrictType}</div>
         <div>currentCountyCode: {currentCountyCode}</div>
         <div>currentTownCode: {currentTownCode}</div>
-        <div>currentVillageCode: {currentVillageCode}</div> */}
+        <div>currentVillageCode: {currentVillageCode}</div>
+        <div>currentDistrictCode: {currentDistrictCode}</div>
+        <div>infobox result: </div>
+        {/* <div>{JSON.stringify(infoboxData)}</div> */}
       </Wrapper>
     </>
   )

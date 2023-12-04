@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 // import { data as mockData } from '../../mock-datas/maps/legislators/normal/county/63000.js'
+import { useAppSelector } from '../../hook/useRedux'
+/**
+ * @typedef {import('../../utils/electionsData').InfoboxData} InfoboxData
+ * @typedef {import('../../consts/electionsConifg').ElectionType} ElectionType
+ * @typedef {import('../../consts/electionsConifg').ElectionSubtype} ElectionSubtype
+ */
 
 /**
  * currently use mock data 63000.js
@@ -17,36 +23,7 @@ const Wrapper = styled.section`
     border-bottom: 1px solid black;
   }
 `
-const MOCK_CANDIDATES_INFO = [
-  {
-    canNo: '1',
-    name: '蔡英文',
-    party: '貓貓黨',
-    tksRate: 57.13,
-    candVictor: '*',
-  },
-  {
-    canNo: '2',
-    name: '高潞．以用．巴魕剌 Kawlo．Iyun．Pacidal',
-    party: '這是一個名稱很長很長很長很長很長很長的黨',
-    tksRate: 57.13,
-    candVictor: '',
-  },
-  {
-    canNo: '3',
-    name: '黃宏成台灣阿成世界偉人財神總統',
-    party: '哭哭黨',
-    tksRate: 57.13,
-    candVictor: '',
-  },
-  {
-    canNo: '4',
-    name: '顏色不分藍綠支持性專區顏色田慎節',
-    party: '檔檔檔黨',
-    tksRate: 57.13,
-    candVictor: '',
-  },
-]
+
 const CandidatesInfoWrapper = styled.ul`
   list-style-type: none;
   margin: 4px auto 0;
@@ -75,21 +52,106 @@ const CandidateInfo = styled.li`
     margin-left: 4px;
   }
 `
-export default function InfoBox() {
-  return (
-    <Wrapper>
-      <div className="prof-rate">投票率: 00%</div>
-      <CandidatesInfoWrapper>
-        {MOCK_CANDIDATES_INFO.map((candidate) => (
-          <CandidateInfo key={candidate.canNo}>
-            <div className="name">{candidate.name}</div>
-            <div className="party-and-tks-rate">
-              <span>{candidate.party}</span>
-              <span className="tks-rate">{candidate.tksRate}%</span>
-            </div>
-          </CandidateInfo>
-        ))}
-      </CandidatesInfoWrapper>
-    </Wrapper>
+
+/**
+ *
+ * @param {ElectionType} electionsType
+ * @param {InfoboxData['electionData']} electionData
+ */
+const checkHasElectionData = (electionsType, electionData) => {
+  if (!electionData) {
+    return false
+  }
+  switch (electionsType) {
+    //地方選舉
+    case 'mayor':
+      return Boolean(electionData?.candidates)
+    case 'councilMember':
+      return Array.isArray(electionData) && electionData.length
+
+    //中央選舉
+    case 'legislator':
+      return false
+    case 'president':
+      return false
+    case 'referendum':
+      return false
+    default:
+      return false
+  }
+}
+
+/**
+ *
+ * @param {Object} props
+ * @param {InfoboxData | Object} props.infoboxData
+ * @returns
+ */
+export default function InfoBox({ infoboxData }) {
+  const { electionData } = infoboxData
+
+  const electionsType = useAppSelector(
+    (state) => state.election.config.electionType
   )
+
+  const hasElectionData = checkHasElectionData(electionsType, electionData)
+  const getInfoboxItemJsx = (candidate) => {
+    if (!candidate) {
+      return null
+    }
+    return (
+      <CandidateInfo key={candidate.canNo}>
+        <div className="name">{candidate.name}</div>
+        <div className="party-and-tks-rate">
+          <span>{candidate.party}</span>
+          <span className="tks-rate">{candidate.tksRate}%</span>
+        </div>
+      </CandidateInfo>
+    )
+  }
+  // const profRate = formatProfRate()
+  const getInfoboxJsx = () => {
+    switch (electionsType) {
+      //地方選舉
+      case 'mayor':
+        const candidates = electionData.candidates
+        return (
+          <Wrapper>
+            <div className="prof-rate">投票率 {electionData?.profRate}%</div>
+            <CandidatesInfoWrapper>
+              {candidates.map((candidate) => getInfoboxItemJsx(candidate))}
+            </CandidatesInfoWrapper>
+          </Wrapper>
+        )
+      case 'councilMember':
+        return electionData.map((election, index) => (
+          <>
+            {election ? (
+              <Wrapper key={index}>
+                <div className="prof-rate">投票率: {election?.profRate}%</div>
+                <CandidatesInfoWrapper>
+                  {election.candidates.map((candidate) =>
+                    getInfoboxItemJsx(candidate)
+                  )}
+                </CandidatesInfoWrapper>
+              </Wrapper>
+            ) : null}
+          </>
+        ))
+      //TODO: 公投
+      case 'referendum':
+        return null
+      //TODO: 中央選舉
+      case 'legislator':
+        return null
+      case 'president':
+        return null
+
+      default:
+        return null
+    }
+  }
+  const infoboxJsx = hasElectionData ? getInfoboxJsx() : null
+
+  return <>{infoboxJsx}</>
 }
