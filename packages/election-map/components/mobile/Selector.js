@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `
 
 const Options = styled.ul`
-  z-index: 2;
+  z-index: ${({ shouldShowOptions }) => (shouldShowOptions ? '5' : '2')};
   background-color: #f2f2f2;
   position: absolute;
   color: #fff;
@@ -57,7 +57,7 @@ const SelectedButton = styled.button`
   position: absolute;
   padding: 4px 10px;
   width: 100%;
-  z-index: 3;
+  z-index: ${({ shouldShowOptions }) => (shouldShowOptions ? '6' : '3')};
   border-radius: 8px;
   background-color: #fff;
   border: 1px solid;
@@ -132,14 +132,17 @@ export default function Selector({
   return (
     <>
       <Wrapper>
-        <SelectedButton onClick={handleSelectedButtonOnClick}>
+        <SelectedButton
+          shouldShowOptions={shouldShowOptions}
+          onClick={handleSelectedButtonOnClick}
+        >
           <span>
             {hasOptions ? currentSelectDistrictName : placeholderValue}
           </span>
           <i className="triangle"></i>
         </SelectedButton>
         {shouldShowOptions && hasOptions && (
-          <Options>
+          <Options shouldShowOptions={shouldShowOptions}>
             {options.map((option, index) => (
               <OptionItem
                 isSelected={option.name === currentSelectDistrictName}
