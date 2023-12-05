@@ -59,7 +59,6 @@ const SelectedButton = styled.button`
   width: 100%;
   z-index: 5;
   border-radius: 8px;
-  background-color: #000;
   border: 1px solid;
   cursor: ${
     /**
@@ -68,6 +67,14 @@ const SelectedButton = styled.button`
      * @param {boolean} props.shouldDisable
      */
     ({ shouldDisable }) => (shouldDisable ? 'not-allowed' : 'pointer')
+  };
+  background-color: ${
+    /**
+     *
+     * @param {Object} props
+     * @param {boolean} props.shouldDisable
+     */
+    ({ shouldDisable }) => (shouldDisable ? '#747474' : '#000')
   };
   span {
     color: #fff;
