@@ -3,10 +3,10 @@ import { electionNamePairs } from '../../utils/election'
 import Selector from './Selector'
 import ElectionSelector from './ElectionSelector'
 import styled from 'styled-components'
-import InfoBox from './InfoBox'
+
 import YearComparisonMenuBar from './YearComparisonMenuBar'
 import { useDistrictMapping } from '../../hook/useDistrictMapping'
-
+import InfoboxContainer from './InfoboxContainer'
 import { useAppSelector } from '../../hook/useRedux'
 import { useAppDispatch } from '../../hook/useRedux'
 import { electionActions } from '../../store/election-slice'
@@ -99,10 +99,6 @@ const DistrictSelectorWrapper = styled.div`
 const ElectionSelectorWrapper = styled(DistrictSelectorWrapper)`
   justify-content: left;
   gap: 12px;
-`
-const YearWrapper = styled(TopButton)`
-  width: fit-content;
-  margin: 17px 0 6px;
 `
 
 /**
@@ -225,7 +221,6 @@ export const MobileDashboardNew = () => {
 
   const year = useAppSelector((state) => state.election.control.year)
   const years = useAppSelector((state) => state.election.config.years)
-  const infoboxData = useAppSelector((state) => state.election.data.infoboxData)
 
   const compareInfo = useAppSelector((state) => state.election.compare.info)
   const { compareMode } = compareInfo
@@ -393,13 +388,7 @@ export const MobileDashboardNew = () => {
               placeholderValue="-"
             ></Selector>
           </DistrictSelectorWrapper>
-          {/* todo: add select mode */}
-          {currentDistrictType !== 'referendum' && (
-            <Fragment key={year.key}>
-              {compareMode && <YearWrapper as="div">{year.key}</YearWrapper>}
-              <InfoBox infoboxData={infoboxData}></InfoBox>
-            </Fragment>
-          )}
+          <InfoboxContainer />
         </ContentWrapper>
 
         {/* <div>electionTypeYears: {JSON.stringify(electionTypeYears)}</div> */}
