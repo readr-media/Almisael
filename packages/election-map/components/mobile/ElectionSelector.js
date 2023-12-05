@@ -128,7 +128,9 @@ export default function ElectionSelector({
   }
   const handleOptionOnSelected = (option) => {
     if (selectorType === 'electionType') {
-      dispatch(electionActions.changeElection(option.electionType))
+      if (option.electionType !== electionType) {
+        dispatch(electionActions.changeElection(option.electionType))
+      }
     } else if (selectorType === 'electionSubType') {
       dispatch(electionActions.changeSubtype(option))
     }
