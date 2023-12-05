@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 // import { data as mockData } from '../../mock-datas/maps/legislators/normal/county/63000.js'
 import { useAppSelector } from '../../hook/useRedux'
+import { useState } from 'react'
 /**
  * @typedef {import('../../utils/electionsData').InfoboxData} InfoboxData
  * @typedef {import('../../consts/electionsConifg').ElectionType} ElectionType
@@ -10,6 +11,22 @@ import { useAppSelector } from '../../hook/useRedux'
 /**
  * currently use mock data 63000.js
  */
+
+const INFO_BOX_CANDIDATE_HEIGHT = '46.44px'
+const calculateMaxHeightOfInfoBox = (
+  candidatesAmount,
+  shouldShowExpandButton,
+  shouldInfoBoxExpand
+) => {
+  if (!shouldShowExpandButton) {
+    return `calc(${INFO_BOX_CANDIDATE_HEIGHT} * ${candidatesAmount})`
+  }
+  if (shouldInfoBoxExpand) {
+    return `calc(${INFO_BOX_CANDIDATE_HEIGHT} * ${candidatesAmount})`
+  } else {
+    return '210px'
+  }
+}
 
 const electedSvg = (
   <svg
@@ -61,9 +78,23 @@ const CandidatesInfoWrapper = styled.ul`
   list-style-type: none;
   margin: 4px auto 0;
   padding: 0;
+  max-height: ${
+    /**
+     * @param {Object} props
+     * @param {string} props.maxHeight
+     */
+    ({ maxHeight }) => maxHeight && maxHeight
+  };
+
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 `
 const CandidateInfo = styled.li`
   list-style: none;
+  height: ${INFO_BOX_CANDIDATE_HEIGHT};
+  overflow: hidden;
+  width: 100%;
+
   font-size: 15px;
   line-height: 21.72px;
   font-weight: 400;
@@ -81,12 +112,20 @@ const CandidateInfo = styled.li`
   .name {
     font-weight: 700;
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .party-and-tks-rate {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     text-align: left;
+  }
+  .party {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .tks-rate {
     font-weight: 700;
@@ -101,7 +140,35 @@ const CandidateInfo = styled.li`
     height: 16px;
   }
 `
-
+const ExpendButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 4px;
+  gap: 6px;
+  .triangle {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 8px 4px 0 4px;
+    border-color: #000 transparent transparent transparent;
+    transform: ${
+      /**
+       * @param {Object} props
+       * @param {boolean} props.shouldInfoBoxExpand
+       */
+      ({ shouldInfoBoxExpand }) =>
+        shouldInfoBoxExpand ? 'rotate(180deg)' : 'rotate(0deg)'
+    };
+    transition: transform 0.1s ease-in-out;
+  }
+`
+const Divider = styled.div`
+  height: 3px;
+  margin-top: 5px;
+  background-color: #000;
+`
 /**
  *
  * @param {ElectionType} electionsType
@@ -154,11 +221,13 @@ const sortCandidatesByTksRate = (candidates) => {
  */
 export default function InfoBox({ infoboxData }) {
   const { electionData } = infoboxData
-
+  const [shouldInfoBoxExpand, setShouldInfoBoxExpand] = useState(false)
   const electionsType = useAppSelector(
     (state) => state.election.config.electionType
   )
-
+  const handleExpand = () => {
+    setShouldInfoBoxExpand((pre) => !pre)
+  }
   const hasElectionData = checkHasElectionData(electionsType, electionData)
   const getInfoboxItemJsx = (candidate) => {
     if (!candidate) {
@@ -170,28 +239,55 @@ export default function InfoBox({ infoboxData }) {
         {electedSvg}
         <div className="name">{candidate.name}</div>
         <div className="party-and-tks-rate">
-          <span>{candidate.party}</span>
+          <span className="party">{candidate.party}</span>
           <span className="tks-rate">{candidate.tksRate}%</span>
         </div>
       </CandidateInfo>
     )
   }
-  // const profRate = formatProfRate()
+  /**
+   * @param {boolean} shouldShowExpandButton
+   */
+  const getExpendButtonJsx = (shouldShowExpandButton) => {
+    if (!shouldShowExpandButton) {
+      return null
+    }
+    return (
+      <ExpendButton
+        shouldInfoBoxExpand={shouldInfoBoxExpand}
+        onClick={handleExpand}
+      >
+        {shouldInfoBoxExpand ? '收合' : '展開'}
+        <i className="triangle" />
+      </ExpendButton>
+    )
+  }
   const getInfoboxJsx = () => {
     switch (electionsType) {
       //地方選舉
       case 'mayor':
         const candidates = electionData.candidates
         const orderedCandidates = sortCandidatesByTksRate(candidates)
+        const candidatesAmount = orderedCandidates.length
+        const shouldShowExpandButton = candidatesAmount > 5
+        const maxHeight = calculateMaxHeightOfInfoBox(
+          candidatesAmount,
+          shouldShowExpandButton,
+          shouldInfoBoxExpand
+        )
+        const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
         return (
           <Wrapper>
+            {expendButtonJsx}
+            {shouldShowExpandButton && <Divider />}
             <div className="prof-rate">投票率 {electionData?.profRate}%</div>
 
-            <CandidatesInfoWrapper>
+            <CandidatesInfoWrapper maxHeight={maxHeight}>
               {orderedCandidates.map((candidate) =>
                 getInfoboxItemJsx(candidate)
               )}
             </CandidatesInfoWrapper>
+            {shouldShowExpandButton && <Divider />}
           </Wrapper>
         )
       case 'councilMember':
@@ -199,15 +295,30 @@ export default function InfoBox({ infoboxData }) {
           if (!election) {
             return null
           }
+
           const orderedCandidates = sortCandidatesByTksRate(election.candidates)
+
+          const candidatesAmount = orderedCandidates.length
+          const shouldShowExpandButton = candidatesAmount > 5
+          const maxHeight = calculateMaxHeightOfInfoBox(
+            candidatesAmount,
+            shouldShowExpandButton,
+            shouldInfoBoxExpand
+          )
+          const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
+
           return (
             <Wrapper key={index}>
+              {expendButtonJsx}
+              {shouldShowExpandButton && <Divider />}
+
               <div className="prof-rate">投票率: {election?.profRate}%</div>
-              <CandidatesInfoWrapper>
+              <CandidatesInfoWrapper maxHeight={maxHeight}>
                 {orderedCandidates.map((candidate) =>
                   getInfoboxItemJsx(candidate)
                 )}
               </CandidatesInfoWrapper>
+              {shouldShowExpandButton && <Divider />}
             </Wrapper>
           )
         })

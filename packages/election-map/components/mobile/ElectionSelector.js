@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   font-size: 14px;
   line-height: 20.27px;
   font-weight: 500;
-  margin-top: 80px;
+  margin-top: 40px;
 `
 
 const Options = styled.ul`
