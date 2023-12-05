@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import InfoBox from './InfoBox'
-import { Fragment } from 'react'
 import { useAppSelector } from '../../hook/useRedux'
 
 const YearWrapper = styled.div`
