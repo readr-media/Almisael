@@ -112,14 +112,8 @@ export const MobileDashboardNew = () => {
   const { districtMapping, hasDistrictMapping } = useDistrictMapping()
   // const [currentElection, setCurrentElection] = useState(ELECTION_TYPE[0])
   const dispatch = useAppDispatch()
-  const {
-    stopCompare,
-    changeLevelControl,
-    changeYear,
-    resetLevelControl,
-    changeElection,
-    changeSubtype,
-  } = electionActions
+  const { stopCompare, changeLevelControl, changeYear, resetLevelControl } =
+    electionActions
   // const [currentElectionSubType, setCurrentElectionSubType] = useState(
   //   ELECTION_TYPE[3]?.subtypes[0]
   // )
@@ -232,9 +226,7 @@ export const MobileDashboardNew = () => {
   const year = useAppSelector((state) => state.election.control.year)
   const years = useAppSelector((state) => state.election.config.years)
   const infoboxData = useAppSelector((state) => state.election.data.infoboxData)
-  const currentElectionSubType = useAppSelector(
-    (state) => state.election.control.subtype
-  )
+
   const compareInfo = useAppSelector((state) => state.election.compare.info)
   const { compareMode } = compareInfo
 
@@ -252,10 +244,9 @@ export const MobileDashboardNew = () => {
     }
   }, [currentDistrictType])
   useEffect(() => {
-    dispatch(changeElection(electionsType))
-    if (currentElectionSubType) {
-      dispatch(changeSubtype(currentElectionSubType))
-    }
+    // 為什麼需要將不相關的state `year`與 `electionType` 加入dependency?
+    // 因為會希望當年份或選制改變時，也能夠觸發dispatch `changeLevelControl`，避免infobox無法出現。
+    // 這個workaround違反了useEffect對dependency的設計原則，日後有時間需要調整。
     let level = 0
     switch (currentDistrictType) {
       case 'nation':
@@ -307,9 +298,8 @@ export const MobileDashboardNew = () => {
     }
   }, [
     dispatch,
-    changeElection,
-    changeSubtype,
-    currentElectionSubType,
+
+    year,
     electionsType,
     resetLevelControl,
     currentDistrictType,
