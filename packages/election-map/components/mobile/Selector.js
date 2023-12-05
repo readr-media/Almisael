@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `
 
 const Options = styled.ul`
-  z-index: 0;
+  z-index: 2;
   background-color: #f2f2f2;
   position: absolute;
   color: #fff;
@@ -57,7 +57,7 @@ const SelectedButton = styled.button`
   position: absolute;
   padding: 4px 10px;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   border-radius: 8px;
   background-color: #fff;
   border: 1px solid;

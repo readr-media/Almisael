@@ -83,8 +83,8 @@ const Wrapper = styled.div`
     ({ isCompareMode }) => (isCompareMode ? '#E9E9E9' : 'transparent')
   };
 `
-const SelectorWrapper = styled.div`
-  padding: 0 16px;
+const ContentWrapper = styled.div`
+  padding: 0 24px;
 `
 const DistrictSelectorWrapper = styled.div`
   display: flex;
@@ -355,7 +355,7 @@ export const MobileDashboardNew = () => {
       )}
       <Wrapper isCompareMode={compareMode}>
         <TopButtonsWrapper>{topButtonJsx}</TopButtonsWrapper>
-        <SelectorWrapper>
+        <ContentWrapper>
           <ElectionSelectorWrapper>
             <ElectionSelector
               options={electionNamePairs}
@@ -410,7 +410,8 @@ export const MobileDashboardNew = () => {
               <InfoBox infoboxData={infoboxData}></InfoBox>
             </Fragment>
           )}
-        </SelectorWrapper>
+        </ContentWrapper>
+
         {/* <div>electionTypeYears: {JSON.stringify(electionTypeYears)}</div> */}
         {/* <div>selectedYears: {JSON.stringify(selectedYears)}</div> */}
         {/* <div>currentElectionType: {currentElection.electionType}</div> */}
