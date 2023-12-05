@@ -4,7 +4,7 @@ const Wrapper = styled.div`
   position: relative;
   text-align: left;
   height: 30px;
-  width: 89px;
+  width: 88px;
   font-size: 14px;
   line-height: 20.27px;
   font-weight: 500;
@@ -20,7 +20,7 @@ const Options = styled.ul`
   padding: 14px 0 0 0;
   margin: 14px 0 0 0;
   border-top: none;
-  width: 89px;
+  width: 88px;
   list-style-type: none;
   border: 1px solid black;
 `
