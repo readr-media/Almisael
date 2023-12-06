@@ -2,7 +2,7 @@ export const data = {
   updatedAt: '2024-10-26 23:53:49',
   year: '2024',
   type: 'legislator-district',
-  title: '立法委員選舉(台北市)',
+  title: '立法委員選舉（台北市）',
   version: 'v2',
   districts: [
     {

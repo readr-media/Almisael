@@ -2,7 +2,7 @@ export const data = {
   updatedAt: '2024-10-26 23:53:49',
   year: '2024',
   type: 'legislator-plainIndigenous',
-  title: '立法委員選舉(原住民)',
+  title: '立法委員選舉（原住民）',
   version: 'v2',
   candidates: [
     {
