@@ -10,12 +10,11 @@ const WIDTH = '100px'
 const Wrapper = styled.div`
   position: relative;
   text-align: left;
-  height: 30px;
+  height: 26.09px;
   width: ${WIDTH};
   font-size: 14px;
   line-height: 20.27px;
   font-weight: 500;
-  margin-top: 40px;
 `
 
 const Options = styled.ul`

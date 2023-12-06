@@ -2,6 +2,7 @@ import { useState, useEffect, Fragment } from 'react'
 import { electionNamePairs } from '../../utils/election'
 import Selector from './Selector'
 import ElectionSelector from './ElectionSelector'
+import ReferendumSelector from '../ReferendumSelector'
 import styled from 'styled-components'
 
 import YearComparisonMenuBar from './YearComparisonMenuBar'
@@ -10,7 +11,6 @@ import InfoboxContainer from './InfoboxContainer'
 import { useAppSelector } from '../../hook/useRedux'
 import { useAppDispatch } from '../../hook/useRedux'
 import { electionActions } from '../../store/election-slice'
-
 /**
  * @typedef {Object} NationData
  * @property {string} name
@@ -99,6 +99,7 @@ const DistrictSelectorWrapper = styled.div`
 const ElectionSelectorWrapper = styled(DistrictSelectorWrapper)`
   justify-content: left;
   gap: 12px;
+  margin-top: 40px;
 `
 
 /**
@@ -355,6 +356,9 @@ export const MobileDashboardNew = () => {
                 handleOpenSelector={setCurrentOpenSelector}
                 currentOpenSelector={currentOpenSelector}
               />
+            )}
+            {electionsType === 'referendum' && (
+              <ReferendumSelector></ReferendumSelector>
             )}
           </ElectionSelectorWrapper>
           <DistrictSelectorWrapper>
