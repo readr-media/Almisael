@@ -12,17 +12,16 @@ import { useState } from 'react'
  * currently use mock data 63000.js
  */
 
-const INFO_BOX_CANDIDATE_HEIGHT = '46.44px'
 const calculateMaxHeightOfInfoBox = (
   candidatesAmount,
   shouldShowExpandButton,
   shouldInfoBoxExpand
 ) => {
   if (!shouldShowExpandButton) {
-    return `calc(${INFO_BOX_CANDIDATE_HEIGHT} * ${candidatesAmount})`
+    return '100%'
   }
   if (shouldInfoBoxExpand) {
-    return `calc(${INFO_BOX_CANDIDATE_HEIGHT} * ${candidatesAmount})`
+    return '500vh'
   } else {
     return '210px'
   }
@@ -85,13 +84,13 @@ const CandidatesInfoWrapper = styled.ul`
      */
     ({ maxHeight }) => maxHeight && maxHeight
   };
-
+  min-height: 100%;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
 `
 const CandidateInfo = styled.li`
   list-style: none;
-  height: ${INFO_BOX_CANDIDATE_HEIGHT};
+
   overflow: hidden;
   width: 100%;
 
@@ -112,9 +111,6 @@ const CandidateInfo = styled.li`
   .name {
     font-weight: 700;
     text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
   .party-and-tks-rate {
     display: flex;
@@ -122,11 +118,7 @@ const CandidateInfo = styled.li`
     align-items: start;
     text-align: left;
   }
-  .party {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+
   .tks-rate {
     font-weight: 700;
     margin-left: 4px;
