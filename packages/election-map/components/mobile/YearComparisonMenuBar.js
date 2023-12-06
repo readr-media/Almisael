@@ -6,7 +6,7 @@ import { electionActions } from '../../store/election-slice'
 import styled from 'styled-components'
 const Wrapper = styled.div`
   position: fixed;
-  z-index: 10;
+  z-index: 999;
   width: 100%;
   background-color: #fff;
   height: 100dvh;
