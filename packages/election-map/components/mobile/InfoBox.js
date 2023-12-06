@@ -12,17 +12,16 @@ import { useState } from 'react'
  * currently use mock data 63000.js
  */
 
-const INFO_BOX_CANDIDATE_HEIGHT = '46.44px'
 const calculateMaxHeightOfInfoBox = (
   candidatesAmount,
   shouldShowExpandButton,
   shouldInfoBoxExpand
 ) => {
   if (!shouldShowExpandButton) {
-    return `calc(${INFO_BOX_CANDIDATE_HEIGHT} * ${candidatesAmount})`
+    return '100%'
   }
   if (shouldInfoBoxExpand) {
-    return `calc(${INFO_BOX_CANDIDATE_HEIGHT} * ${candidatesAmount})`
+    return '500vh'
   } else {
     return '210px'
   }
@@ -85,13 +84,13 @@ const CandidatesInfoWrapper = styled.ul`
      */
     ({ maxHeight }) => maxHeight && maxHeight
   };
-
+  min-height: 100%;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
 `
 const CandidateInfo = styled.li`
   list-style: none;
-  height: ${INFO_BOX_CANDIDATE_HEIGHT};
+
   overflow: hidden;
   width: 100%;
 
@@ -112,32 +111,25 @@ const CandidateInfo = styled.li`
   .name {
     font-weight: 700;
     text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
   .party-and-tks-rate {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     text-align: left;
   }
-  .party {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+
   .tks-rate {
     font-weight: 700;
     margin-left: 4px;
+    width: 56px;
+    text-align: end;
   }
   .elected {
     display: ${({ isVictor }) => (isVictor ? 'block' : 'none')};
-    position: absolute;
-    left: -20px;
-    top: 4px;
-    width: 16px;
-    height: 16px;
+    margin-left: auto;
+    min-width: 16px;
+    min-height: 16px;
   }
 `
 const ExpendButton = styled.button`
@@ -236,10 +228,10 @@ export default function InfoBox({ infoboxData }) {
     const isVictor = candidate.candVictor === '*'
     return (
       <CandidateInfo isVictor={isVictor} key={candidate.canNo}>
-        {electedSvg}
         <div className="name">{candidate.name}</div>
         <div className="party-and-tks-rate">
           <span className="party">{candidate.party}</span>
+          {electedSvg}
           <span className="tks-rate">{candidate.tksRate}%</span>
         </div>
       </CandidateInfo>
