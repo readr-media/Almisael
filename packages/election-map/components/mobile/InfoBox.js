@@ -115,21 +115,21 @@ const CandidateInfo = styled.li`
   .party-and-tks-rate {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     text-align: left;
   }
 
   .tks-rate {
     font-weight: 700;
     margin-left: 4px;
+    width: 56px;
+    text-align: end;
   }
   .elected {
     display: ${({ isVictor }) => (isVictor ? 'block' : 'none')};
-    position: absolute;
-    left: -20px;
-    top: 4px;
-    width: 16px;
-    height: 16px;
+    margin-left: auto;
+    min-width: 16px;
+    min-height: 16px;
   }
 `
 const ExpendButton = styled.button`
@@ -228,10 +228,10 @@ export default function InfoBox({ infoboxData }) {
     const isVictor = candidate.candVictor === '*'
     return (
       <CandidateInfo isVictor={isVictor} key={candidate.canNo}>
-        {electedSvg}
         <div className="name">{candidate.name}</div>
         <div className="party-and-tks-rate">
           <span className="party">{candidate.party}</span>
+          {electedSvg}
           <span className="tks-rate">{candidate.tksRate}%</span>
         </div>
       </CandidateInfo>
