@@ -3,7 +3,6 @@ import { electionMapColor } from '../consts/colors'
 import { MapContainer } from './MapContainer'
 import { Panels } from './Panels'
 import { Tutorial } from './Tutorial'
-import { useGeoJsons } from '../hook/useGeoJsons'
 import { useState } from 'react'
 import {
   defaultMapUpperLevelId,
@@ -39,7 +38,6 @@ export const Dashboard = ({
   dashboardInView,
   hasAnchor,
 }) => {
-  const geoJsonsData = useGeoJsons()
   const [renderingDistrictNames, setRenderingDistrictNames] = useState(
     defaultRenderingDistrictNames
   )
@@ -55,7 +53,6 @@ export const Dashboard = ({
       />
       <MapContainer
         showLoading={showLoading}
-        geoJsonsData={geoJsonsData}
         dashboardInView={dashboardInView}
         mapColor={electionConfig.meta?.map?.mapColor}
         setMapUpperLevelId={setMapUpperLevelId}
@@ -64,7 +61,6 @@ export const Dashboard = ({
       {!hasAnchor && showTutorial && (
         <Tutorial
           show={showTutorial}
-          isMapReady={geoJsonsData.hasGeoJsons}
           onClick={() => {
             setShowTutorial(false)
             onTutorialEnd()

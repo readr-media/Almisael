@@ -5,6 +5,8 @@ import useWindowDimensions from '../hook/useWindowDimensions'
 import { Map } from './Map'
 import { MapTooltip } from './MapTooltip'
 import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hook/useRedux'
+import { useGeoJsons } from '../hook/useGeoJsons'
 
 // margin-left: 368px;
 // width: ${({ compareMode }) =>
@@ -60,21 +62,24 @@ const defaultTooltip = {
 export const MapContainer = ({
   dashboardInView,
   mapColor,
-  geoJsonsData,
   setMapUpperLevelId,
   setRenderingDistrictNames,
 }) => {
+  useGeoJsons()
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
   const { width } = useWindowDimensions()
-  const { geoJsons, hasGeoJsons } = geoJsonsData
   const compareInfo = useSelector((state) => state.election.compare.info)
   const year = useSelector((state) => state.election.control.year)
   const number = useSelector((state) => state.election.control.number)
   const electionData = useSelector((state) => state.election.data.mapData)
+  const geoJsons = useAppSelector((state) => state.map.geoJsons)
+
   const compareElectionData = useSelector(
     (state) => state.election.compare.mapData
   )
+  const hasGeoJsons = !!geoJsons.villages
+
   const { compareMode } = compareInfo
   // if any level of map not exist
   if (!hasGeoJsons) {

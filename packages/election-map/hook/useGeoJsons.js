@@ -1,8 +1,8 @@
 import { json } from 'd3'
-import { useMemo } from 'react'
 import { useEffect } from 'react'
-import { useState } from 'react'
 import { feature } from 'topojson'
+import { useAppDispatch } from './useRedux'
+import { mapActions } from '../store/map-slice'
 
 /**
  * @typedef {import('topojson-specification').Topology} Topology
@@ -49,29 +49,10 @@ const fetchTopoJsons = async () => {
 }
 
 /**
- * @typedef {Object} GeoJsons
- * @property {Object} counties - Geojson in county level.
- * @property {Object} towns - Geojson in town level.
- * @property {Object} villages - Geojson in village level.
- */
-
-/** @type {GeoJsons} */
-const initialGeoJsons = {
-  counties: null,
-  towns: null,
-  villages: null,
-}
-
-/**
- * Achieve geojsons from topojsons.
- * @returns {{geoJsons: GeoJsons, hasGeoJsons: boolean}}
+ * Achieve geojsons from topojsons and store in mapSlice.
  */
 export const useGeoJsons = () => {
-  const [geoJsons, setGeoJsons] = useState(initialGeoJsons)
-
-  const hasGeoJsons = useMemo(() => {
-    return !Object.values(geoJsons).includes(null)
-  }, [geoJsons])
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
     // Download the topoJson and use topojson.feature to transform topoJson back to geoJson.
@@ -89,10 +70,10 @@ export const useGeoJsons = () => {
         villagesTopoJson,
         villagesTopoJson.objects.villages
       )
-      setGeoJsons({ counties, towns, villages })
+      dispatch(
+        mapActions.changeGeoJsons({ counties, towns, villages, areas: null })
+      )
     }
     prepareGeoJsons()
-  }, [])
-
-  return { geoJsons, hasGeoJsons }
+  }, [dispatch])
 }

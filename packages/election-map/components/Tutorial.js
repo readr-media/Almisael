@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import styled from 'styled-components'
+import { useAppSelector } from '../hook/useRedux'
 
 const DarkLayer = styled.div`
   position: absolute;
@@ -69,7 +70,9 @@ const TouchLayer = styled.div`
   z-index: 2;
 `
 
-export const Tutorial = ({ onClick, show, isMapReady }) => {
+export const Tutorial = ({ onClick, show }) => {
+  const geoJsons = useAppSelector((state) => state.map.geoJsons)
+  const isMapReady = !!geoJsons.villages
   useEffect(() => {
     if (show && isMapReady) {
       setTimeout(() => {
