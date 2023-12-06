@@ -26,11 +26,6 @@ export const data = {
           href: '',
           imgSrc: '',
         },
-        {
-          label: '中國國民黨',
-          href: '',
-          imgSrc: '',
-        },
       ],
       tks: 3813365,
       tksRate: 31.04,
@@ -57,11 +52,6 @@ export const data = {
           href: '',
           imgSrc: '',
         },
-        {
-          label: '民主進步黨',
-          href: '',
-          imgSrc: '',
-        },
       ],
       tks: 6894744,
       tksRate: 56.12,
@@ -83,11 +73,6 @@ export const data = {
         },
       ],
       parties: [
-        {
-          label: '親民黨',
-          href: '',
-          imgSrc: '',
-        },
         {
           label: '親民黨',
           href: '',
