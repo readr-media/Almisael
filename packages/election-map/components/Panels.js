@@ -9,7 +9,7 @@ import { ElectionSelect } from './ElectionSelect'
 import { ElectionRadio } from './ElectionRadio'
 import { ReferendumControl } from './ReferendumControl'
 import { InfoboxPanels } from './InfoboxPanels'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hook/useRedux'
 
 const Wrapper = styled.div`
   position: relative;
@@ -70,16 +70,16 @@ export const Panels = ({
   mapUpperLevelId,
   renderingDistrictNames,
 }) => {
-  const lastUpdate = useSelector((state) => state.election.data.lastUpdate)
-  const compareMode = useSelector(
+  const lastUpdate = useAppSelector((state) => state.election.data.lastUpdate)
+  const compareMode = useAppSelector(
     (state) => state.election.compare.info.compareMode
   )
-  const electionConfig = useSelector((state) => state.election.config)
-  const levelControl = useSelector((state) => state.election.control.level)
-  const year = useSelector((state) => state.election.control.year)
-  const number = useSelector((state) => state.election.control.number)
-  const subtype = useSelector((state) => state.election.control.subtype)
-  const seatData = useSelector((state) => state.election.data.seatData)
+  const electionConfig = useAppSelector((state) => state.election.config)
+  const levelControl = useAppSelector((state) => state.election.control.level)
+  const year = useAppSelector((state) => state.election.control.year)
+  const number = useAppSelector((state) => state.election.control.number)
+  const subtype = useAppSelector((state) => state.election.control.subtype)
+  const seatData = useAppSelector((state) => state.election.data.seatData)
   let seats
   if (electionConfig.electionType === 'councilMember') {
     seats = seatData[1][levelControl.countyCode]

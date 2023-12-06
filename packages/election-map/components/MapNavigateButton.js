@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { electionMapColor } from '../consts/colors'
 import ReactGA from 'react-ga'
 import useWindowDimensions from '../hook/useWindowDimensions'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hook/useRedux'
 
 const MapButtonWrapper = styled.div`
   margin-top: 20px;
@@ -34,7 +34,7 @@ const MapLevelControlButton = styled.button`
 
 export const MapNavigateButton = ({ mapUpperLevelId }) => {
   const { width } = useWindowDimensions()
-  const levelControl = useSelector((state) => state.election.control.level)
+  const levelControl = useAppSelector((state) => state.election.control.level)
 
   return (
     <MapButtonWrapper>

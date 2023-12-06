@@ -4,9 +4,8 @@ import useClickOutside from '../hook/useClickOutside'
 import { electionNamePairs } from '../utils/election'
 
 import ReactGA from 'react-ga'
-import { useDispatch } from 'react-redux'
 import { electionActions } from '../store/election-slice'
-import { useSelector } from 'react-redux'
+import { useAppSelector, useAppDispatch } from '../hook/useRedux'
 
 const SelectWrapper = styled.div`
   position: relative;
@@ -67,8 +66,8 @@ const downTriangleSvg = (
 export const ElectionSelect = ({ className }) => {
   const [showOptions, setShowOptions] = useState(false)
   const selectRef = useRef(null)
-  const dispatch = useDispatch()
-  const electionType = useSelector(
+  const dispatch = useAppDispatch()
+  const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
   useClickOutside(selectRef, () => {

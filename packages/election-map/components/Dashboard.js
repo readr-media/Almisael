@@ -8,7 +8,7 @@ import {
   defaultMapUpperLevelId,
   defaultRenderingDistrictNames,
 } from '../consts/election-module-pc'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hook/useRedux'
 
 const Wrapper = styled.div`
   position: relative;
@@ -42,7 +42,7 @@ export const Dashboard = ({
     defaultRenderingDistrictNames
   )
   const [mapUpperLevelId, setMapUpperLevelId] = useState(defaultMapUpperLevelId)
-  const electionConfig = useSelector((state) => state.election.config)
+  const electionConfig = useAppSelector((state) => state.election.config)
 
   return (
     <Wrapper>

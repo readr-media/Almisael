@@ -13,9 +13,8 @@ import {
   defaultMapUpperLevelId,
   defaultRenderingDistrictNames,
 } from '../consts/election-module-pc'
-import { useDispatch } from 'react-redux'
 import { electionActions } from '../store/election-slice'
-import { useSelector } from 'react-redux'
+import { useAppDispatch, useAppSelector } from '../hook/useRedux'
 
 const SVG = styled.svg`
   use {
@@ -33,11 +32,11 @@ export const Map = ({
   setRenderingDistrictNames,
 }) => {
   const [currentFeature, setCurrentFeature] = useState(null)
-  const dispatch = useDispatch()
-  const electionType = useSelector(
+  const dispatch = useAppDispatch()
+  const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
-  const levelControl = useSelector((state) => state.election.control.level)
+  const levelControl = useAppSelector((state) => state.election.control.level)
   const { countyCode, townCode, activeCode } = levelControl
   const { width, height } = dimension
   const { counties, towns, villages } = geoJsons

@@ -4,7 +4,6 @@ import { useElementDimension } from '../hook/useElementDimension'
 import useWindowDimensions from '../hook/useWindowDimensions'
 import { Map } from './Map'
 import { MapTooltip } from './MapTooltip'
-import { useSelector } from 'react-redux'
 import { useAppSelector } from '../hook/useRedux'
 import { useGeoJsons } from '../hook/useGeoJsons'
 
@@ -69,13 +68,13 @@ export const MapContainer = ({
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
   const { width } = useWindowDimensions()
-  const compareInfo = useSelector((state) => state.election.compare.info)
-  const year = useSelector((state) => state.election.control.year)
-  const number = useSelector((state) => state.election.control.number)
-  const electionData = useSelector((state) => state.election.data.mapData)
+  const compareInfo = useAppSelector((state) => state.election.compare.info)
+  const year = useAppSelector((state) => state.election.control.year)
+  const number = useAppSelector((state) => state.election.control.number)
+  const electionData = useAppSelector((state) => state.election.data.mapData)
   const geoJsons = useAppSelector((state) => state.map.geoJsons)
 
-  const compareElectionData = useSelector(
+  const compareElectionData = useAppSelector(
     (state) => state.election.compare.mapData
   )
   const hasGeoJsons = !!geoJsons.villages
