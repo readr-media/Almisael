@@ -21,7 +21,7 @@ import {
  * @property {string} countyCode - The id of the county.
  * @property {string} townCode - The id of the town.
  * @property {string} villageCode - The id of the village.
- * @property {string} constituencyCode - The id of the constituency.
+ * @property {string} areaCode - The id of the area.
  * @property {string} activeCode - The district id with lowest level use to decide which infobox data will be used.
  *
  * @typedef {Object} Control
@@ -40,7 +40,7 @@ const defaultLevelControl = {
   countyCode: '',
   townCode: '',
   villageCode: '',
-  constituencyCode: '',
+  areaCode: '',
   activeCode: '',
 }
 
@@ -77,6 +77,10 @@ const initialElectionState = {
     seatData: {},
     evcData: {},
     lastUpdate: '',
+    districtMapping: {
+      district: null,
+      districtWithArea: {},
+    },
   },
   compare: {
     info: defaultCompareInfo,
@@ -253,6 +257,13 @@ const electionsSlice = createSlice({
     },
     changeSeatData(state, action) {
       state.data.seatData = action.payload
+    },
+    changeDistrictMappingData(state, action) {
+      state.data.districtMapping.district = action.payload
+    },
+    changeDistrictWithAreaMappingData(state, action) {
+      const { year, data } = action.payload
+      state.data.districtMapping.districtWithArea[year] = data
     },
   },
 })

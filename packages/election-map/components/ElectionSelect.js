@@ -6,6 +6,7 @@ import { electionNamePairs } from '../utils/election'
 import ReactGA from 'react-ga'
 import { electionActions } from '../store/election-slice'
 import { useAppSelector, useAppDispatch } from '../hook/useRedux'
+import { mapActions } from '../store/map-slice'
 
 const SelectWrapper = styled.div`
   position: relative;
@@ -103,6 +104,7 @@ export const ElectionSelect = ({ className }) => {
                 dispatch(
                   electionActions.changeElection(electionNamePair.electionType)
                 )
+                dispatch(mapActions.resetMapFeature())
               }
               setShowOptions(false)
             }}

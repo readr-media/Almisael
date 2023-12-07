@@ -1,10 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
+import {
+  defaultMapUpperLevelId,
+  defaultRenderingDistrictNames,
+} from '../consts/election-module-pc'
 
 /**
  * @typedef {Object} GeoJsons
  * @property {Object} counties - Geojson in county level.
  * @property {Object} towns - Geojson in town level.
- * @property {Object} areas - Geojson in area level.
  * @property {Object} villages - Geojson in village level.
  */
 
@@ -12,20 +15,50 @@ import { createSlice } from '@reduxjs/toolkit'
 const defaultGeoJsons = {
   counties: null,
   towns: null,
-  areas: null,
   villages: null,
 }
 
 const initialMapState = {
-  geoJsons: defaultGeoJsons,
+  data: {
+    rawTopoJson: null,
+    geoJsons: defaultGeoJsons,
+  },
+  control: {
+    feature: null,
+    mapUpperLevelId: defaultMapUpperLevelId,
+  },
+  ui: {
+    districtNames: defaultRenderingDistrictNames,
+  },
 }
 
 const mapSlice = createSlice({
   name: 'map',
   initialState: initialMapState,
   reducers: {
+    changeRawTopoJson(state, action) {
+      state.data.rawTopoJson = action.payload
+    },
     changeGeoJsons(state, action) {
-      state.geoJsons = action.payload
+      state.data.geoJsons = action.payload
+    },
+    changeMapFeature(state, action) {
+      state.control.feature = action.payload
+    },
+    resetMapFeature(state) {
+      state.control.feature = null
+    },
+    changeMapUpperLevelId(state, action) {
+      state.control.mapUpperLevelId = action.payload
+    },
+    resetMapUpperLevelId(state) {
+      state.control.mapUpperLevelId = defaultMapUpperLevelId
+    },
+    changeUiDistrictNames(state, action) {
+      state.ui.districtNames = action.payload
+    },
+    resetUiDistrictNames(state) {
+      state.ui.districtNames = defaultRenderingDistrictNames
     },
   },
 })

@@ -65,11 +65,7 @@ const PlaceHolder = styled.div`
     electionType === 'referendum' ? '350px' : '300px'};
 `
 
-export const Panels = ({
-  onEvcSelected,
-  mapUpperLevelId,
-  renderingDistrictNames,
-}) => {
+export const Panels = ({ onEvcSelected }) => {
   const lastUpdate = useAppSelector((state) => state.election.data.lastUpdate)
   const compareMode = useAppSelector(
     (state) => state.election.compare.info.compareMode
@@ -80,20 +76,19 @@ export const Panels = ({
   const number = useAppSelector((state) => state.election.control.number)
   const subtype = useAppSelector((state) => state.election.control.subtype)
   const seatData = useAppSelector((state) => state.election.data.seatData)
+  const renderingDistrictNames = useAppSelector(
+    (state) => state.map.ui.districtNames
+  )
   let seats
   if (electionConfig.electionType === 'councilMember') {
     seats = seatData[1][levelControl.countyCode]
   }
 
   const electionType = electionConfig.electionType
-  const { countyName, townName, constituencyName, villageName } =
-    renderingDistrictNames
-  const locations = [
-    countyName,
-    townName,
-    constituencyName,
-    villageName,
-  ].filter((name) => !!name)
+  const { countyName, townName, areaName, villageName } = renderingDistrictNames
+  const locations = [countyName, townName, areaName, villageName].filter(
+    (name) => !!name
+  )
   if (!locations.length) locations.push('全國')
 
   const expandMode = !!seats || compareMode
@@ -105,7 +100,7 @@ export const Panels = ({
         {number && <ReferendumControl key={electionType} />}
         {!number && (
           <>
-            <MapNavigateButton mapUpperLevelId={mapUpperLevelId} />
+            <MapNavigateButton />
             <MapLocations locations={locations} />
             <InfoboxPanels />
           </>
@@ -128,7 +123,7 @@ export const Panels = ({
         {number && (
           <>
             <BottomPanelWrapper>
-              <MapNavigateButton mapUpperLevelId={mapUpperLevelId} />
+              <MapNavigateButton />
               <MapLocations locations={locations} />
               <InfoboxPanels />
             </BottomPanelWrapper>

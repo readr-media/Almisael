@@ -97,7 +97,7 @@ const DataLoader = widgets.VotesComparison.DataLoader
  * @typedef {Object} CouncilMemberMapDistrict
  * @property {string} range - The name of the disctricts. Could be '臺北市' | '臺北市 第01選區'  | '臺北市 松山區' | '臺北市 松山區 莊敬里' depend on the map level.
  * @property {string | null} county - The code of county (縣市). Could be null if the level have no related info.
- * @property {string | null} area - The code of constituency (選區). Could be null if the level have no related info.
+ * @property {string | null} area - The code of area (選區). Could be null if the level have no related info.
  * @property {string | null} town - The code of town (鄉鎮市區). Could be null if the level have no related info.
  * @property {string | null} vill - The code of village (村里). Could be null if the level have no related info.
  * @property {number} profRate - The voting rate of the district. Numbers are multiplied by 100 and rounded to the second decimal place.
@@ -108,7 +108,7 @@ const DataLoader = widgets.VotesComparison.DataLoader
  * @property {string} updatedAt - The update time of the data.
  * @property {boolean} is_started - Flag to indicate if the election has started. True for all history data.
  * @property {boolean} is_running - Flag to indicate if the election is stlling running. False for all history data.
- * @property {CouncilMemberMapDistrict} [summary] - Only county level has it. The voting info summaried by every constituency. For the infobox to show info for each constituency.
+ * @property {CouncilMemberMapDistrict} [summary] - Only county level has it. The voting info summaried by every area. For the infobox to show info for each area.
  * @property {Array<CouncilMemberMapDistrict>} districts - The voting infos of the area in sub level. Country level contains all its counties. County level contains all its towns. Town level contains all its villages.
  *
  * Represent the legislator candidate's voting info.
@@ -119,7 +119,7 @@ const DataLoader = widgets.VotesComparison.DataLoader
  * @typedef {Object} AreaLegislatorMapDistrict
  * @property {string} range - The name of the disctricts. Could be '臺北市 第01選區(士林區、北投區)' | '臺北市 松山區 莊敬里' depend on the map level.
  * @property {string | null} county - The code of county (縣市). Could be null if the level have no related info.
- * @property {string | null} area - The code of constituency (選區). Could be null if the level have no related info.
+ * @property {string | null} area - The code of area (選區). Could be null if the level have no related info.
  * @property {string | null} town - The code of town (鄉鎮市區). Could be null if the level have no related info.
  * @property {string | null} vill - The code of village (村里). Could be null if the level have no related info.
  * @property {'normal'} type - The subtype of area legislator.
@@ -150,6 +150,7 @@ const DataLoader = widgets.VotesComparison.DataLoader
  * @property {boolean} is_running - Flag to indicate if the election is stlling running. False for all history data.
  * @property {NonAreaLegislatorMapDistrict} [summary] - The summary of the voting info in the level of the data. Only country level has it.
  * @property {Array<NonAreaLegislatorMapDistrict>} districts - The voting infos of the area in sub level. Country level contains all its counties. County level contains all its towns. Town level contains all its villages.
+ *
  */
 
 /**
@@ -343,5 +344,30 @@ export const fetchLegislatorMapData = async ({
 }) => {
   const mapDataUrl = `${gcsBaseUrl}/${yearKey}/${electionType}/map/${folderName}/${subtypeKey}/${fileName}.json`
   const { data } = await axios.get(mapDataUrl)
+  return data
+}
+
+/**
+ * Fetch the district mapping data (counties - towns - villages)
+ */
+export const fetchDistrictMappingData = async () => {
+  let mappingDataUrl = `${gcsBaseUrl}/district-mapping/district/mapping.json`
+  const { data } = await axios.get(mappingDataUrl)
+  return data
+}
+
+/**
+ * Fetch the district with area mapping data (counties - areas - villages)
+ * @param {Object} options
+ * @param {ElectionType} options.electionType
+ * @param {number} options.year
+ */
+export const fetchDistrictWithAreaMappingData = async ({
+  electionType,
+  year,
+}) => {
+  let mappingDataUrl = `${gcsBaseUrl}/district-mapping/district-with-area/${electionType}/${year}/mapping.json`
+
+  const { data } = await axios.get(mappingDataUrl)
   return data
 }

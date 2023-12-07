@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ReactGA from 'react-ga'
 import { electionActions } from '../store/election-slice'
 import { useAppSelector, useAppDispatch } from '../hook/useRedux'
+import { mapActions } from '../store/map-slice'
 
 const Wrapper = styled.div`
   display: flex;
@@ -166,6 +167,7 @@ export const YearSelect = ({ className }) => {
 
   const submitCompareEnd = () => {
     dispatch(electionActions.stopCompare())
+    dispatch(mapActions.resetMapFeature())
   }
 
   useEffect(() => {

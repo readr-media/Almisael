@@ -58,12 +58,7 @@ const defaultTooltip = {
   coordinate: [],
 }
 
-export const MapContainer = ({
-  dashboardInView,
-  mapColor,
-  setMapUpperLevelId,
-  setRenderingDistrictNames,
-}) => {
+export const MapContainer = ({ dashboardInView, mapColor }) => {
   useGeoJsons()
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
@@ -72,7 +67,7 @@ export const MapContainer = ({
   const year = useAppSelector((state) => state.election.control.year)
   const number = useAppSelector((state) => state.election.control.number)
   const electionData = useAppSelector((state) => state.election.data.mapData)
-  const geoJsons = useAppSelector((state) => state.map.geoJsons)
+  const geoJsons = useAppSelector((state) => state.map.data.geoJsons)
 
   const compareElectionData = useAppSelector(
     (state) => state.election.compare.mapData
@@ -111,8 +106,6 @@ export const MapContainer = ({
               setTooltip={setTooltip}
               electionData={electionData}
               mapColor={mapColor}
-              setMapUpperLevelId={setMapUpperLevelId}
-              setRenderingDistrictNames={setRenderingDistrictNames}
             />
             <CompareInfo left={true}>
               {number ? number.year + number.name : year.key}
@@ -124,8 +117,6 @@ export const MapContainer = ({
               setTooltip={setTooltip}
               electionData={compareElectionData}
               mapColor={mapColor}
-              setMapUpperLevelId={setMapUpperLevelId}
-              setRenderingDistrictNames={setRenderingDistrictNames}
             />
             <CompareInfo left={false}>
               {compareInfo?.filter?.number
@@ -149,8 +140,6 @@ export const MapContainer = ({
             setTooltip={setTooltip}
             electionData={electionData}
             mapColor={mapColor}
-            setMapUpperLevelId={setMapUpperLevelId}
-            setRenderingDistrictNames={setRenderingDistrictNames}
           />
         )}
         <MapTooltip tooltip={tooltip} />

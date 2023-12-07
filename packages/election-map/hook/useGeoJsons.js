@@ -41,6 +41,7 @@ export const useGeoJsons = () => {
       const counties = feature(twMapTopoJson, twMapTopoJson.objects.counties)
       const towns = feature(twMapTopoJson, twMapTopoJson.objects.towns)
       const villages = feature(twMapTopoJson, twMapTopoJson.objects.villages)
+      dispatch(mapActions.changeRawTopoJson(twMapTopoJson))
       dispatch(
         mapActions.changeGeoJsons({ counties, towns, villages, areas: null })
       )

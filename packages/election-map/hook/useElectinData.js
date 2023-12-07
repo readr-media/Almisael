@@ -7,6 +7,10 @@ import ReactGA from 'react-ga'
 import { prepareElectionData } from '../utils/electionsData'
 import { electionActions } from '../store/election-slice'
 import { useAppSelector, useAppDispatch } from './useRedux'
+import {
+  fetchDistrictMappingData,
+  fetchDistrictWithAreaMappingData,
+} from '../utils/fetchElectionData'
 
 /**
  * @typedef {import('../consts/electionsConifg').ElectionType} ElectionType
@@ -36,6 +40,9 @@ export const useElectionData = (showLoading, showTutorial) => {
   const [shouldRefetch, setShouldRefetch] = useState(false)
   const lastUpdate = useAppSelector((state) => state.election.data.lastUpdate)
   const compareInfo = useAppSelector((state) => state.election.compare.info)
+  const districtMapping = useAppSelector(
+    (state) => state.election.data.districtMapping
+  )
 
   const electionData = getElectionData(
     electionsData,
@@ -310,6 +317,33 @@ export const useElectionData = (showLoading, showTutorial) => {
     year?.key,
     dispatch,
   ])
+
+  // fetch district mapping data if needed
+  useEffect(() => {
+    const prepareDistrictMappingData = async () => {
+      if (electionConfig.electionType === 'legislator') {
+        if (!districtMapping.districtWithArea[year.key]) {
+          const data = await fetchDistrictWithAreaMappingData({
+            electionType: electionConfig.electionType,
+            year: year.key,
+          })
+          dispatch(
+            electionActions.changeDistrictWithAreaMappingData({
+              year: year.key,
+              data,
+            })
+          )
+        }
+      } else {
+        if (!districtMapping.district) {
+          const data = await fetchDistrictMappingData()
+          dispatch(electionActions.changeDistrictMappingData(data))
+        }
+      }
+    }
+
+    prepareDistrictMappingData()
+  }, [dispatch, districtMapping, electionConfig.electionType, year.key])
 
   // create interval to periodically trigger refetch and let react lifecycle to handle the refetch
   useEffect(() => {

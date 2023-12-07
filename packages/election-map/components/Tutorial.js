@@ -71,7 +71,7 @@ const TouchLayer = styled.div`
 `
 
 export const Tutorial = ({ onClick, show }) => {
-  const geoJsons = useAppSelector((state) => state.map.geoJsons)
+  const geoJsons = useAppSelector((state) => state.map.data.geoJsons)
   const isMapReady = !!geoJsons.villages
   useEffect(() => {
     if (show && isMapReady) {

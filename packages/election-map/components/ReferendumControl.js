@@ -5,6 +5,7 @@ import ReactGA from 'react-ga'
 import { electionActions } from '../store/election-slice'
 import { getReferendumNumbers } from '../utils/election'
 import { useAppDispatch, useAppSelector } from '../hook/useRedux'
+import { mapActions } from '../store/map-slice'
 
 const StyledReferendumSelect = styled(ReferendumSelect)`
   margin: 17px 0 0 12px;
@@ -54,6 +55,7 @@ export const ReferendumControl = () => {
 
   const submitCompareEnd = () => {
     dispatch(electionActions.stopCompare())
+    dispatch(mapActions.resetMapFeature())
   }
 
   useEffect(() => {

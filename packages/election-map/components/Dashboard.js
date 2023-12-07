@@ -3,11 +3,6 @@ import { electionMapColor } from '../consts/colors'
 import { MapContainer } from './MapContainer'
 import { Panels } from './Panels'
 import { Tutorial } from './Tutorial'
-import { useState } from 'react'
-import {
-  defaultMapUpperLevelId,
-  defaultRenderingDistrictNames,
-} from '../consts/election-module-pc'
 import { useAppSelector } from '../hook/useRedux'
 
 const Wrapper = styled.div`
@@ -38,25 +33,15 @@ export const Dashboard = ({
   dashboardInView,
   hasAnchor,
 }) => {
-  const [renderingDistrictNames, setRenderingDistrictNames] = useState(
-    defaultRenderingDistrictNames
-  )
-  const [mapUpperLevelId, setMapUpperLevelId] = useState(defaultMapUpperLevelId)
   const electionConfig = useAppSelector((state) => state.election.config)
 
   return (
     <Wrapper>
-      <Panels
-        onEvcSelected={onEvcSelected}
-        mapUpperLevelId={mapUpperLevelId}
-        renderingDistrictNames={renderingDistrictNames}
-      />
+      <Panels onEvcSelected={onEvcSelected} />
       <MapContainer
         showLoading={showLoading}
         dashboardInView={dashboardInView}
         mapColor={electionConfig.meta?.map?.mapColor}
-        setMapUpperLevelId={setMapUpperLevelId}
-        setRenderingDistrictNames={setRenderingDistrictNames}
       />
       {!hasAnchor && showTutorial && (
         <Tutorial

@@ -4,15 +4,15 @@
  * @property {string} countyName - The name of the county.
  * @property {string} townName - The name of the town.
  * @property {string} villageName - The name of the village.
- * @property {string} constituencyName - The name of the constituency.
+ * @property {string} areaName - The name of the areaName.
  */
 
 /** @type {RenderingDistrictNames} */
 export const defaultRenderingDistrictNames = {
   countyName: '',
   townName: '',
+  areaName: '',
   villageName: '',
-  constituencyName: '',
 }
 
 export const defaultMapUpperLevelId = 'background'

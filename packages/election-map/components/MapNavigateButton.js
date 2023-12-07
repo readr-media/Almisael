@@ -32,9 +32,12 @@ const MapLevelControlButton = styled.button`
   }
 `
 
-export const MapNavigateButton = ({ mapUpperLevelId }) => {
+export const MapNavigateButton = () => {
   const { width } = useWindowDimensions()
   const levelControl = useAppSelector((state) => state.election.control.level)
+  const mapUpperLevelId = useAppSelector(
+    (state) => state.map.control.mapUpperLevelId
+  )
 
   return (
     <MapButtonWrapper>
