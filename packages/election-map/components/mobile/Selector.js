@@ -11,7 +11,13 @@ const Wrapper = styled.div`
 `
 
 const Options = styled.ul`
-  z-index: ${({ shouldShowOptions }) => (shouldShowOptions ? '5' : '2')};
+  z-index: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} props.shouldShowOptions
+     */
+    ({ shouldShowOptions }) => (shouldShowOptions ? '5' : '2')
+  };
   background-color: #f2f2f2;
   position: absolute;
   color: #fff;
@@ -57,7 +63,13 @@ const SelectedButton = styled.button`
   position: absolute;
   padding: 4px 10px;
   width: 100%;
-  z-index: ${({ shouldShowOptions }) => (shouldShowOptions ? '6' : '3')};
+  z-index: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} props.shouldShowOptions
+     */
+    ({ shouldShowOptions }) => (shouldShowOptions ? '6' : '3')
+  };
   border-radius: 8px;
   background-color: #fff;
   border: 1px solid;
@@ -70,22 +82,6 @@ const SelectedButton = styled.button`
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-
-  /* &:after {
-      position: absolute;
-      content: '';
-      top: 14px;
-      right: 1em;
-      width: 0;
-      height: 0;
-      color: white;
-      border: 5px solid transparent;
-      border-color: #fff transparent transparent transparent;
-    } */
-  /* &.open {
-      border: none;
-      border-radius: 15px 15px 0px 0px;
-    } */
 
   .triangle {
     width: 0px;
