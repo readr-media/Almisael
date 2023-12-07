@@ -11,7 +11,13 @@ const Wrapper = styled.div`
 `
 
 const Options = styled.ul`
-  z-index: ${({ shouldShowOptions }) => (shouldShowOptions ? '5' : '2')};
+  z-index: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} props.shouldShowOptions
+     */
+    ({ shouldShowOptions }) => (shouldShowOptions ? '5' : '2')
+  };
   background-color: #f2f2f2;
   position: absolute;
   color: #fff;
@@ -57,7 +63,13 @@ const SelectedButton = styled.button`
   position: absolute;
   padding: 4px 10px;
   width: 100%;
-  z-index: ${({ shouldShowOptions }) => (shouldShowOptions ? '6' : '3')};
+  z-index: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} props.shouldShowOptions
+     */
+    ({ shouldShowOptions }) => (shouldShowOptions ? '6' : '3')
+  };
   border-radius: 8px;
   background-color: #fff;
   border: 1px solid;
