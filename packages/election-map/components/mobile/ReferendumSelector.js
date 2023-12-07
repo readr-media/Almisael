@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import { useAppDispatch, useAppSelector } from '../hook/useRedux'
-import { getReferendumNumbers } from '../utils/election'
-import useClickOutside from '../hook/useClickOutside'
-import { electionActions } from '../store/election-slice'
+import { useAppDispatch, useAppSelector } from '../../hook/useRedux'
+import { getReferendumNumbers } from '../../utils/election'
+import useClickOutside from '../../hook/useClickOutside'
+import { electionActions } from '../../store/election-slice'
 const SelectedButton = styled.button`
   padding: 2.5px 7.5px;
   width: fit-content;
@@ -105,7 +105,7 @@ export default function ReferendumSelector() {
   )
   /**
    *
-   * @param {import('../consts/electionsConifg').ReferendumNumber} detail
+   * @param {import('../../consts/electionsConifg').ReferendumNumber} detail
    */
   const handleSelectReferendum = (detail) => {
     setShouldShowModal(false)

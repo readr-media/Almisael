@@ -2,7 +2,7 @@ import { useState, useEffect, Fragment } from 'react'
 import { electionNamePairs } from '../../utils/election'
 import Selector from './Selector'
 import ElectionSelector from './ElectionSelector'
-import ReferendumSelector from '../ReferendumSelector'
+import ReferendumSelector from './ReferendumSelector'
 import styled from 'styled-components'
 
 import YearComparisonMenuBar from './YearComparisonMenuBar'
