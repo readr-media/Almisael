@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { electionNamePairs } from '../../utils/election'
 import Selector from './Selector'
 import ElectionSelector from './ElectionSelector'
@@ -157,31 +157,25 @@ export const MobileDashboardNew = () => {
 
   function getAllTown(code) {
     if (currentDistrictType === 'nation') {
-      return null
+      return []
     }
     if (!code) {
-      return null
+      return []
     }
 
-    return allCounty.find((item) => item.code === code).sub
+    return allCounty?.find((item) => item.code === code)?.sub
   }
+
   function getAllVillage(code) {
     if (currentDistrictType === 'nation' || currentDistrictType === 'county') {
-      return null
+      return []
     }
     if (!code) {
-      return null
+      return []
     }
     return allTown?.find((item) => item.code === code).sub
   }
-  const nationAndAllCounty = [
-    {
-      type: districtMapping.type,
-      code: districtMapping.code,
-      name: districtMapping.name,
-    },
-    ...districtMapping.sub,
-  ]
+
   /**
    *
    * @param {DistrictType} type
@@ -226,6 +220,42 @@ export const MobileDashboardNew = () => {
   const compareInfo = useAppSelector((state) => state.election.compare.info)
   const { compareMode } = compareInfo
 
+  const optionsForFirstDistrictSelector = useMemo(() => {
+    switch (electionsType) {
+      case 'mayor':
+      case 'councilMember':
+        return [...districtMapping.sub]
+      case 'referendum':
+      case 'president':
+      case 'legislator':
+        return [
+          {
+            type: districtMapping.type,
+            code: districtMapping.code,
+            name: districtMapping.name,
+          },
+          ...districtMapping.sub,
+        ]
+      default:
+        break
+    }
+  }, [electionsType, districtMapping])
+  const optionsForSecondDistrictSelector = useMemo(() => {
+    if (currentCountyCode) {
+      return [
+        { type: 'county', code: currentCountyCode, name: '-' },
+        ...allTown,
+      ]
+    }
+    return [...allTown]
+  }, [allTown, currentCountyCode])
+  const optionsForThirdDistrictSelector = useMemo(() => {
+    if (currentTownCode) {
+      return [{ type: 'town', code: currentTownCode, name: '-' }, ...allVillage]
+    }
+    return [...allVillage]
+  }, [allVillage, currentTownCode])
+
   // //clean up
   useEffect(() => {
     if (currentDistrictType === 'nation') {
@@ -250,7 +280,6 @@ export const MobileDashboardNew = () => {
         return
       case 'county':
         level = 1
-
         dispatch(
           changeLevelControl({
             level,
@@ -304,7 +333,36 @@ export const MobileDashboardNew = () => {
     currentTownCode,
     currentVillageCode,
   ])
+  useEffect(() => {
+    if (!hasDistrictMapping) {
+      return
+    }
 
+    switch (electionsType) {
+      case 'mayor':
+        if (!currentCountyCode) {
+          setCurrentDistrictType('county')
+          setCurrentCountyCode(allCounty?.[0]?.code)
+        }
+        break
+      case 'councilMember':
+        if (!currentCountyCode) {
+          setCurrentDistrictType('county')
+          setCurrentCountyCode(allCounty?.[0]?.code)
+        }
+
+        break
+      //TODO: 中央選舉
+      case 'president':
+      case 'legislator':
+        break
+      //todo: 公投
+      case 'referendum':
+        break
+      default:
+        break
+    }
+  }, [hasDistrictMapping, electionsType, allCounty, allTown, currentCountyCode])
   const topButtonJsx = compareMode ? (
     <TopButton onClick={handleCloseCompareMode}>離開</TopButton>
   ) : (
@@ -364,17 +422,17 @@ export const MobileDashboardNew = () => {
           <DistrictSelectorWrapper>
             <Selector
               selectorType="districtNationAndCounty"
-              options={nationAndAllCounty}
+              options={optionsForFirstDistrictSelector}
               districtCode={currentCountyCode}
               onSelected={handleOnClick}
               currentOpenSelector={currentOpenSelector}
               handleOpenSelector={setCurrentOpenSelector}
-              placeholderValue="全國"
+              placeholderValue="台灣"
             ></Selector>
 
             <Selector
               selectorType="districtTown"
-              options={allTown}
+              options={optionsForSecondDistrictSelector}
               districtCode={currentTownCode}
               onSelected={handleOnClick}
               currentOpenSelector={currentOpenSelector}
@@ -384,7 +442,7 @@ export const MobileDashboardNew = () => {
 
             <Selector
               selectorType="districtVillage"
-              options={allVillage}
+              options={optionsForThirdDistrictSelector}
               districtCode={currentVillageCode}
               onSelected={handleOnClick}
               currentOpenSelector={currentOpenSelector}
@@ -405,12 +463,12 @@ export const MobileDashboardNew = () => {
           onClick={() => {
             dispatch(
               changeLevelControl({
-                level: 2,
+                level: 1,
                 countyCode: currentCountyCode,
                 townCode: currentTownCode,
                 villageCode: currentVillageCode,
                 constituencyCode: '',
-                activeCode: currentTownCode,
+                activeCode: currentCountyCode,
               })
             )
           }}
