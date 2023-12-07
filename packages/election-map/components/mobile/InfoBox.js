@@ -72,7 +72,35 @@ const Wrapper = styled.section`
     border-bottom: 1px solid black;
   }
 `
-
+const ReferendumWrapper = styled(Wrapper)`
+  .prof-rate {
+    margin-bottom: 4px;
+  }
+  .result {
+    font-size: 15px;
+    line-height: 21.72px;
+    font-weight: 700;
+    color: #000;
+    border-bottom: 1px dashed #afafaf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &.pass-result {
+      color: #1c8450;
+    }
+    &.no-pass-result {
+      color: #ff8585;
+    }
+    .rate {
+      margin-left: auto;
+    }
+    .pass-or-no-pass {
+      display: block;
+      width: 50px;
+      text-align: end;
+    }
+  }
+`
 const CandidatesInfoWrapper = styled.ul`
   list-style-type: none;
   margin: 4px auto 0;
@@ -183,7 +211,8 @@ const checkHasElectionData = (electionsType, electionData) => {
     case 'president':
       return false
     case 'referendum':
-      return false
+      //will be undefined, empty object, object with some property
+      return Boolean(electionData && Object.keys(electionData)?.length)
     default:
       return false
   }
@@ -314,9 +343,30 @@ export default function InfoBox({ infoboxData }) {
             </Wrapper>
           )
         })
-      //TODO: 公投
       case 'referendum':
-        return null
+        const { profRate, agreeRate, disagreeRate, adptVictor } = electionData
+        const hasResult = adptVictor === 'Y' || adptVictor === 'N'
+        const isPass = hasResult && adptVictor === 'Y'
+        const isNoPass = hasResult && adptVictor === 'N'
+        return (
+          <>
+            <ReferendumWrapper>
+              <div className="prof-rate">投票率 {profRate}%</div>
+              <div className={isPass ? 'result pass-result' : 'result'}>
+                <span>同意</span>
+                <span className="rate">{agreeRate}%</span>
+                <span className="pass-or-no-pass">{isPass ? '通過' : ''}</span>
+              </div>
+              <div className={isNoPass ? 'result no-pass-result' : 'result'}>
+                <span>不同意</span>
+                <span className="rate">{disagreeRate}%</span>
+                <span className="pass-or-no-pass">
+                  {isNoPass ? '不通過' : ''}
+                </span>
+              </div>
+            </ReferendumWrapper>
+          </>
+        )
       //TODO: 中央選舉
       case 'legislator':
         return null

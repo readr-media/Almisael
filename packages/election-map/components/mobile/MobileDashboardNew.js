@@ -357,9 +357,9 @@ export const MobileDashboardNew = () => {
                 currentOpenSelector={currentOpenSelector}
               />
             )}
-            {electionsType === 'referendum' && (
+            {electionsType === 'referendum' && !compareMode ? (
               <ReferendumSelector></ReferendumSelector>
-            )}
+            ) : null}
           </ElectionSelectorWrapper>
           <DistrictSelectorWrapper>
             <Selector
