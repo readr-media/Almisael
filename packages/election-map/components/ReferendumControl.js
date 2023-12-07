@@ -15,7 +15,14 @@ const ActionButton = styled.button`
   display: inline-block;
   margin: 20px 0 0 12px;
   border: 1px solid #000;
-  background-color: ${({ compare }) => (compare ? '#e0e0e0' : '#ffc7bb')};
+  background-color: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} [props.compare]
+     * @param {string} [props.cancel]
+     */
+    ({ compare }) => (compare ? '#e0e0e0' : '#ffc7bb')
+  };
   color: #000;
   border-radius: 8px;
   line-height: 23px;
