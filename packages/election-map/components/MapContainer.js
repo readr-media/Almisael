@@ -4,7 +4,8 @@ import { useElementDimension } from '../hook/useElementDimension'
 import useWindowDimensions from '../hook/useWindowDimensions'
 import { Map } from './Map'
 import { MapTooltip } from './MapTooltip'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hook/useRedux'
+import { useGeoJsons } from '../hook/useGeoJsons'
 
 // margin-left: 368px;
 // width: ${({ compareMode }) =>
@@ -57,24 +58,22 @@ const defaultTooltip = {
   coordinate: [],
 }
 
-export const MapContainer = ({
-  dashboardInView,
-  mapColor,
-  geoJsonsData,
-  setMapUpperLevelId,
-  setRenderingDistrictNames,
-}) => {
+export const MapContainer = ({ dashboardInView, mapColor }) => {
+  useGeoJsons()
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
   const { width } = useWindowDimensions()
-  const { geoJsons, hasGeoJsons } = geoJsonsData
-  const compareInfo = useSelector((state) => state.election.compare.info)
-  const year = useSelector((state) => state.election.control.year)
-  const number = useSelector((state) => state.election.control.number)
-  const electionData = useSelector((state) => state.election.data.mapData)
-  const compareElectionData = useSelector(
+  const compareInfo = useAppSelector((state) => state.election.compare.info)
+  const year = useAppSelector((state) => state.election.control.year)
+  const number = useAppSelector((state) => state.election.control.number)
+  const electionData = useAppSelector((state) => state.election.data.mapData)
+  const geoJsons = useAppSelector((state) => state.map.data.geoJsons)
+
+  const compareElectionData = useAppSelector(
     (state) => state.election.compare.mapData
   )
+  const hasGeoJsons = !!geoJsons.villages
+
   const { compareMode } = compareInfo
   // if any level of map not exist
   if (!hasGeoJsons) {
@@ -107,8 +106,6 @@ export const MapContainer = ({
               setTooltip={setTooltip}
               electionData={electionData}
               mapColor={mapColor}
-              setMapUpperLevelId={setMapUpperLevelId}
-              setRenderingDistrictNames={setRenderingDistrictNames}
             />
             <CompareInfo left={true}>
               {number ? number.year + number.name : year.key}
@@ -120,8 +117,6 @@ export const MapContainer = ({
               setTooltip={setTooltip}
               electionData={compareElectionData}
               mapColor={mapColor}
-              setMapUpperLevelId={setMapUpperLevelId}
-              setRenderingDistrictNames={setRenderingDistrictNames}
             />
             <CompareInfo left={false}>
               {compareInfo?.filter?.number
@@ -145,8 +140,6 @@ export const MapContainer = ({
             setTooltip={setTooltip}
             electionData={electionData}
             mapColor={mapColor}
-            setMapUpperLevelId={setMapUpperLevelId}
-            setRenderingDistrictNames={setRenderingDistrictNames}
           />
         )}
         <MapTooltip tooltip={tooltip} />

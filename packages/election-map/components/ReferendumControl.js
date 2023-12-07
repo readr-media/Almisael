@@ -2,10 +2,10 @@ import { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { ReferendumSelect } from './ReferendumSelect'
 import ReactGA from 'react-ga'
-import { useDispatch } from 'react-redux'
 import { electionActions } from '../store/election-slice'
-import { useSelector } from 'react-redux'
 import { getReferendumNumbers } from '../utils/election'
+import { useAppDispatch, useAppSelector } from '../hook/useRedux'
+import { mapActions } from '../store/map-slice'
 
 const StyledReferendumSelect = styled(ReferendumSelect)`
   margin: 17px 0 0 12px;
@@ -27,14 +27,14 @@ const ActionButton = styled.button`
 `
 
 export const ReferendumControl = () => {
-  const compareMode = useSelector(
+  const compareMode = useAppSelector(
     (state) => state.election.compare.info.compareMode
   )
-  const number = useSelector((state) => state.election.control.number)
-  const electionConfig = useSelector((state) => state.election.config)
+  const number = useAppSelector((state) => state.election.control.number)
+  const electionConfig = useAppSelector((state) => state.election.config)
   const numbers = getReferendumNumbers(electionConfig)
   const [compare, setCompare] = useState(false)
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const [compareCandidates, setCompareCandidates] = useState([
     number,
@@ -55,6 +55,7 @@ export const ReferendumControl = () => {
 
   const submitCompareEnd = () => {
     dispatch(electionActions.stopCompare())
+    dispatch(mapActions.resetMapFeature())
   }
 
   useEffect(() => {

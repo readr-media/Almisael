@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import {
   getGradiantPartyColor,
   getGradiantReferendumColor,
@@ -8,14 +8,10 @@ import {
 } from '../consts/colors'
 
 import styled from 'styled-components'
-import { useState } from 'react'
-import {
-  defaultMapUpperLevelId,
-  defaultRenderingDistrictNames,
-} from '../consts/election-module-pc'
-import { useDispatch } from 'react-redux'
 import { electionActions } from '../store/election-slice'
-import { useSelector } from 'react-redux'
+import { useAppDispatch, useAppSelector } from '../hook/useRedux'
+import * as topojson from 'topojson'
+import { mapActions } from '../store/map-slice'
 
 const SVG = styled.svg`
   use {
@@ -29,18 +25,113 @@ export const Map = ({
   setTooltip,
   electionData,
   mapColor,
-  setMapUpperLevelId,
-  setRenderingDistrictNames,
 }) => {
-  const [currentFeature, setCurrentFeature] = useState(null)
-  const dispatch = useDispatch()
-  const electionType = useSelector(
+  const dispatch = useAppDispatch()
+  const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
-  const levelControl = useSelector((state) => state.election.control.level)
-  const { countyCode, townCode, activeCode } = levelControl
+  const levelControl = useAppSelector((state) => state.election.control.level)
+  const year = useAppSelector((state) => state.election.control.year)
+  const { countyCode, townCode, areaCode, activeCode } = levelControl
   const { width, height } = dimension
   const { counties, towns, villages } = geoJsons
+  const rawTopoJson = useAppSelector((state) => state.map.data.rawTopoJson)
+  const districtMapping = useAppSelector(
+    (state) => state.election.data.districtMapping
+  )
+  const feature = useAppSelector((state) => state.map.control.feature)
+  const areaName = useAppSelector(
+    (state) => state.map.ui.districtNames.areaName
+  )
+
+  const displayingDistricts = useMemo(() => {
+    let displayingTowns, displayingAreas, displayingVillages
+    if (electionType === 'legislator') {
+      if (districtMapping.districtWithArea[year.key]) {
+        const districtWithAreaMapping =
+          districtMapping.districtWithArea[year.key]
+        const countyMappingObj = districtWithAreaMapping.sub.find(
+          (countyObj) => countyObj.code === countyCode
+        )
+
+        if (countyMappingObj) {
+          displayingAreas = {
+            type: 'FeatureCollection',
+            features: [],
+          }
+          displayingAreas.features = countyMappingObj.sub.map(
+            (areaMappingObj) => {
+              const areaVillsCode = areaMappingObj.sub.map(
+                (villObj) => villObj.code
+              )
+              const villGeometries =
+                rawTopoJson.objects.villages.geometries.filter((geometry) =>
+                  areaVillsCode.includes(geometry.properties.VILLCODE)
+                )
+              const feature = topojson.merge(
+                JSON.parse(JSON.stringify(rawTopoJson)),
+                JSON.parse(JSON.stringify(villGeometries))
+              )
+              const someVillProperties = villGeometries[0].properties
+              const properties = {
+                COUNTYCODE: someVillProperties.COUNTYCODE,
+                COUNTYNAME: someVillProperties.COUNTYNAME,
+                AREACODE: areaMappingObj.code,
+                AREANAME: areaMappingObj.name,
+                AREANICKNAME: areaMappingObj.nickname,
+              }
+              feature.properties = properties
+              return feature
+            }
+          )
+
+          const areaMappingObj = countyMappingObj.sub.find(
+            (areaObj) => areaObj.code === areaCode
+          )
+
+          if (areaMappingObj) {
+            displayingVillages = { ...villages }
+            displayingVillages.features = villages.features.filter(
+              (feature) => {
+                const villCode = feature.properties.VILLCODE
+                const areaVillsCode = areaMappingObj.sub.map(
+                  (villObj) => villObj.code
+                )
+                return areaVillsCode.includes(villCode)
+              }
+            )
+          }
+        }
+      }
+    } else {
+      displayingTowns = { ...towns }
+      displayingTowns.features = displayingTowns.features.filter((feature) => {
+        return feature.properties.COUNTYCODE === countyCode
+      })
+
+      displayingVillages = { ...villages }
+      displayingVillages.features = displayingVillages.features.filter(
+        (feature) => {
+          return feature.properties.TOWNCODE === townCode
+        }
+      )
+    }
+    return { displayingTowns, displayingAreas, displayingVillages }
+  }, [
+    areaCode,
+    countyCode,
+    districtMapping.districtWithArea,
+    electionType,
+    rawTopoJson,
+    townCode,
+    towns,
+    villages,
+    year.key,
+  ])
+
+  const { displayingTowns, displayingAreas, displayingVillages } =
+    displayingDistricts
+
   const projection = d3.geoMercator().fitExtent(
     [
       [0, 0],
@@ -49,18 +140,6 @@ export const Map = ({
     counties
   )
   const path = d3.geoPath(projection)
-
-  const displayingTowns = { ...towns }
-  displayingTowns.features = displayingTowns.features.filter((feature) => {
-    return feature.properties.COUNTYCODE === countyCode
-  })
-
-  const displayingVillages = { ...villages }
-  displayingVillages.features = displayingVillages.features.filter(
-    (feature) => {
-      return feature.properties.TOWNCODE === townCode
-    }
-  )
 
   const getXYZ = (feature) => {
     if (feature) {
@@ -104,8 +183,8 @@ export const Map = ({
   }
 
   useEffect(() => {
-    zoom(750, currentFeature)
-  }, [currentFeature, width, height])
+    zoom(750, feature)
+  }, [feature, width, height])
 
   // useEffect(() => {
   //   zoom(0)
@@ -114,9 +193,9 @@ export const Map = ({
 
   const nonLandClicked = () => {
     dispatch(electionActions.resetLevelControl())
-    setCurrentFeature(null)
-    setMapUpperLevelId(defaultMapUpperLevelId)
-    setRenderingDistrictNames(defaultRenderingDistrictNames)
+    dispatch(mapActions.resetMapFeature())
+    dispatch(mapActions.resetMapUpperLevelId())
+    dispatch(mapActions.resetUiDistrictNames)
   }
 
   const countyClicked = (feature) => {
@@ -133,19 +212,21 @@ export const Map = ({
         level: 1,
         countyCode,
         townCode: '',
+        areaCode: '',
         villageCode: '',
-        constituencyCode: '',
         activeCode: countyCode,
       })
     )
-    setCurrentFeature(feature)
-    setMapUpperLevelId(defaultMapUpperLevelId)
-    setRenderingDistrictNames({
-      countyName,
-      townName: '',
-      villageName: '',
-      constituencyName: '',
-    })
+    dispatch(mapActions.changeMapFeature(feature))
+    dispatch(mapActions.resetMapUpperLevelId())
+    dispatch(
+      mapActions.changeUiDistrictNames({
+        countyName,
+        townName: '',
+        areaName: '',
+        villageName: '',
+      })
+    )
   }
   const townClicked = (feature) => {
     const {
@@ -166,19 +247,50 @@ export const Map = ({
         level: 2,
         countyCode,
         townCode,
+        areaCode: '',
         villageCode: '',
-        constituencyCode: '',
         activeCode: townCode,
       })
     )
-    setCurrentFeature(feature)
-    setMapUpperLevelId(countyCode)
-    setRenderingDistrictNames({
-      countyName,
-      townName,
-      villageName: '',
-      constituencyName: '',
-    })
+    dispatch(mapActions.changeMapFeature(feature))
+    dispatch(mapActions.changeMapUpperLevelId(countyCode))
+    dispatch(
+      mapActions.changeUiDistrictNames({
+        countyName,
+        townName,
+        areaName: '',
+        villageName: '',
+      })
+    )
+  }
+  const areaClicked = (feature) => {
+    const {
+      COUNTYCODE: countyCode,
+      COUNTYNAME: countyName,
+      AREACODE: areaCode,
+      AREANAME: areaName,
+    } = feature.properties
+
+    dispatch(
+      electionActions.changeLevelControl({
+        level: 2,
+        countyCode,
+        townCode: '',
+        areaCode,
+        villageCode: '',
+        activeCode: areaCode,
+      })
+    )
+    dispatch(mapActions.changeMapFeature(feature))
+    dispatch(mapActions.changeMapUpperLevelId(countyCode))
+    dispatch(
+      mapActions.changeUiDistrictNames({
+        countyName,
+        townName: '',
+        areaName,
+        villageName: '',
+      })
+    )
   }
   const villageClicked = (feature) => {
     const {
@@ -202,23 +314,47 @@ export const Map = ({
     // console.log('d is:', feature)
     // console.log('---')
 
-    dispatch(
-      electionActions.changeLevelControl({
-        level: 3,
-        countyCode,
-        townCode,
-        villageCode,
-        constituencyCode: '',
-        activeCode: villageCode,
-      })
-    )
-    setMapUpperLevelId(townCode)
-    setRenderingDistrictNames({
-      countyName,
-      townName,
-      villageName,
-      constituencyName: '',
-    })
+    if (!areaCode) {
+      dispatch(
+        electionActions.changeLevelControl({
+          level: 3,
+          countyCode,
+          townCode,
+          areaCode: '',
+          villageCode,
+          activeCode: villageCode,
+        })
+      )
+      dispatch(mapActions.changeMapUpperLevelId(townCode))
+      dispatch(
+        mapActions.changeUiDistrictNames({
+          countyName,
+          townName,
+          areaName: '',
+          villageName,
+        })
+      )
+    } else {
+      dispatch(
+        electionActions.changeLevelControl({
+          level: 3,
+          countyCode,
+          townCode: '',
+          areaCode,
+          villageCode,
+          activeCode: villageCode,
+        })
+      )
+      dispatch(mapActions.changeMapUpperLevelId(areaCode))
+      dispatch(
+        mapActions.changeUiDistrictNames({
+          countyName,
+          townName: '',
+          areaName,
+          villageName,
+        })
+      )
+    }
   }
 
   const getWinningCandidate = (candidates) => {
@@ -335,6 +471,20 @@ export const Map = ({
         return color
       }
     }
+    return defaultColor
+  }
+
+  const getAreaColor = (areaCode) => {
+    const countyCode = areaCode.slice(0, -2)
+    if (!mapColor || !electionData[1]) {
+      return defaultColor
+    }
+
+    if (activeCode && activeCode !== countyCode) {
+      return defaultColor
+    }
+
+    // need to implement logic for specific color
     return defaultColor
   }
 
@@ -491,6 +641,52 @@ export const Map = ({
                   ...tooltip,
                   show: true,
                   text: feature['properties']['TOWNNAME'],
+                }))
+              }
+              onMouseMove={(e) => {
+                setTooltip((tooltip) => ({
+                  ...tooltip,
+                  coordinate: [e.clientX, e.clientY],
+                }))
+              }}
+              onMouseOut={() =>
+                setTooltip((tooltip) => ({
+                  ...tooltip,
+                  show: false,
+                  text: '',
+                }))
+              }
+            />
+          ))}
+        </g>
+        <g id={`${id}-areas`}>
+          {displayingAreas?.features?.map((feature) => (
+            <path
+              key={feature.properties.AREACODE}
+              d={path(feature)}
+              id={`${id}-id-${feature['properties']['AREACODE']}`}
+              data-county-code={feature['properties']['COUNTYCODE']}
+              data-area-code={(() => {
+                const code = feature['properties']['AREACODE']
+                return code.slice(code.length - 2, code.length)
+              })()}
+              fill={
+                feature['properties']['AREACODE'] === activeCode
+                  ? 'transparent'
+                  : getAreaColor(feature['properties']['AREACODE'])
+              }
+              stroke={
+                feature['properties']['AREACODE'] === activeCode
+                  ? undefined
+                  : '#666666'
+              }
+              strokeWidth="0.3"
+              onClick={areaClicked.bind(null, feature)}
+              onMouseOver={() =>
+                setTooltip((tooltip) => ({
+                  ...tooltip,
+                  show: true,
+                  text: feature['properties']['AREANAME'],
                 }))
               }
               onMouseMove={(e) => {

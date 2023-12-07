@@ -1,9 +1,9 @@
 import { useState, useCallback, useEffect } from 'react'
 import styled from 'styled-components'
 import ReactGA from 'react-ga'
-import { useDispatch } from 'react-redux'
 import { electionActions } from '../store/election-slice'
-import { useSelector } from 'react-redux'
+import { useAppSelector, useAppDispatch } from '../hook/useRedux'
+import { mapActions } from '../store/map-slice'
 
 const Wrapper = styled.div`
   display: flex;
@@ -141,12 +141,12 @@ const ActionButton = styled.button`
 `
 
 export const YearSelect = ({ className }) => {
-  const compareMode = useSelector(
+  const compareMode = useAppSelector(
     (state) => state.election.compare.info.compareMode
   )
-  const year = useSelector((state) => state.election.control.year)
-  const years = useSelector((state) => state.election.config.years)
-  const dispatch = useDispatch()
+  const year = useAppSelector((state) => state.election.control.year)
+  const years = useAppSelector((state) => state.election.config.years)
+  const dispatch = useAppDispatch()
   const [compare, setCompare] = useState(false)
   const [compareCandidates, setCompareCandidates] = useState([
     years.find((y) => y === year),
@@ -167,6 +167,7 @@ export const YearSelect = ({ className }) => {
 
   const submitCompareEnd = () => {
     dispatch(electionActions.stopCompare())
+    dispatch(mapActions.resetMapFeature())
   }
 
   useEffect(() => {

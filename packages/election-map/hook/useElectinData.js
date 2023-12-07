@@ -5,9 +5,12 @@ import { countyMappingData } from '../consts/electionsConifg'
 import { deepCloneObj } from '../utils/deepClone'
 import ReactGA from 'react-ga'
 import { prepareElectionData } from '../utils/electionsData'
-import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux'
 import { electionActions } from '../store/election-slice'
+import { useAppSelector, useAppDispatch } from './useRedux'
+import {
+  fetchDistrictMappingData,
+  fetchDistrictWithAreaMappingData,
+} from '../utils/fetchElectionData'
 
 /**
  * @typedef {import('../consts/electionsConifg').ElectionType} ElectionType
@@ -22,21 +25,24 @@ import { electionActions } from '../store/election-slice'
  * @returns
  */
 export const useElectionData = (showLoading, showTutorial) => {
-  const dispatch = useDispatch()
-  const electionConfig = useSelector((state) => state.election.config)
+  const dispatch = useAppDispatch()
+  const electionConfig = useAppSelector((state) => state.election.config)
   // Object to store all data for infobox, map, evc and seat chart, store by election, year, subtype and referendum number. Check type ElectionsData for more detail.
-  const electionsData = useSelector(
+  const electionsData = useAppSelector(
     (state) => state.election.data.electionsData
   )
-  const year = useSelector((state) => state.election.control.year)
+  const year = useAppSelector((state) => state.election.control.year)
   //for councilMember, legislator
-  const subtype = useSelector((state) => state.election.control.subtype)
+  const subtype = useAppSelector((state) => state.election.control.subtype)
   //for referendum, referendumLocal
-  const number = useSelector((state) => state.election.control.number)
-  const levelControl = useSelector((state) => state.election.control.level)
+  const number = useAppSelector((state) => state.election.control.number)
+  const levelControl = useAppSelector((state) => state.election.control.level)
   const [shouldRefetch, setShouldRefetch] = useState(false)
-  const lastUpdate = useSelector((state) => state.election.data.lastUpdate)
-  const compareInfo = useSelector((state) => state.election.compare.info)
+  const lastUpdate = useAppSelector((state) => state.election.data.lastUpdate)
+  const compareInfo = useAppSelector((state) => state.election.compare.info)
+  const districtMapping = useAppSelector(
+    (state) => state.election.data.districtMapping
+  )
 
   const electionData = getElectionData(
     electionsData,
@@ -311,6 +317,33 @@ export const useElectionData = (showLoading, showTutorial) => {
     year?.key,
     dispatch,
   ])
+
+  // fetch district mapping data if needed
+  useEffect(() => {
+    const prepareDistrictMappingData = async () => {
+      if (electionConfig.electionType === 'legislator') {
+        if (!districtMapping.districtWithArea[year.key]) {
+          const data = await fetchDistrictWithAreaMappingData({
+            electionType: electionConfig.electionType,
+            year: year.key,
+          })
+          dispatch(
+            electionActions.changeDistrictWithAreaMappingData({
+              year: year.key,
+              data,
+            })
+          )
+        }
+      } else {
+        if (!districtMapping.district) {
+          const data = await fetchDistrictMappingData()
+          dispatch(electionActions.changeDistrictMappingData(data))
+        }
+      }
+    }
+
+    prepareDistrictMappingData()
+  }, [dispatch, districtMapping, electionConfig.electionType, year.key])
 
   // create interval to periodically trigger refetch and let react lifecycle to handle the refetch
   useEffect(() => {

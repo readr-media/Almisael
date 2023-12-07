@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 import widgets from '@readr-media/react-election-widgets'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hook/useRedux'
+
 const ElectionVotesComparison = widgets.VotesComparison.ReactComponent
 
 const ElectionVotesComparisonWrapper = styled(CollapsibleWrapper)`
@@ -38,14 +39,16 @@ const StyledEVC = styled(ElectionVotesComparison)`
 `
 
 const ElectionVoteComparisonPanel = ({ onEvcSelected }) => {
-  const evcScrollTo = useSelector((state) => state.election.control.evcScrollTo)
-  const electionType = useSelector(
+  const evcScrollTo = useAppSelector(
+    (state) => state.election.control.evcScrollTo
+  )
+  const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
-  const countyCode = useSelector(
+  const countyCode = useAppSelector(
     (state) => state.election.control.level.countyCode
   )
-  const evcData = useSelector((state) => state.election.data.evcData)
+  const evcData = useAppSelector((state) => state.election.data.evcData)
 
   let election
   if (electionType === 'councilMember') {

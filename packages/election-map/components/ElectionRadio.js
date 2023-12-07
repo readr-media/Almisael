@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import ReactGA from 'react-ga'
-import { useDispatch } from 'react-redux'
 import { electionActions } from '../store/election-slice'
-import { useSelector } from 'react-redux'
+import { useAppSelector, useAppDispatch } from '../hook/useRedux'
 
 const Wrapper = styled.div`
   display: flex;
@@ -58,9 +57,9 @@ const Radio = styled.span`
 `
 
 export const ElectionRadio = ({ className }) => {
-  const dispatch = useDispatch()
-  const selectedType = useSelector((state) => state.election.control.subtype)
-  const electionConfig = useSelector((state) => state.election.config)
+  const dispatch = useAppDispatch()
+  const selectedType = useAppSelector((state) => state.election.control.subtype)
+  const electionConfig = useAppSelector((state) => state.election.config)
   const subtypes = electionConfig.subtypes
 
   return (

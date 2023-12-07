@@ -3,7 +3,7 @@ import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 import { currentYear } from '../consts/electionsConifg'
 import { electionNamePairs } from '../utils/election'
 import { Infobox } from './infobox/Infobox'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hook/useRedux'
 
 const Wrppaer = styled.div`
   width: 320px;
@@ -29,7 +29,7 @@ export const InfoboxPanel = ({
   year,
   number,
 }) => {
-  const electionType = useSelector(
+  const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
   const { compareMode } = compareInfo

@@ -3,13 +3,7 @@ import { electionMapColor } from '../consts/colors'
 import { MapContainer } from './MapContainer'
 import { Panels } from './Panels'
 import { Tutorial } from './Tutorial'
-import { useGeoJsons } from '../hook/useGeoJsons'
-import { useState } from 'react'
-import {
-  defaultMapUpperLevelId,
-  defaultRenderingDistrictNames,
-} from '../consts/election-module-pc'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hook/useRedux'
 
 const Wrapper = styled.div`
   position: relative;
@@ -39,32 +33,19 @@ export const Dashboard = ({
   dashboardInView,
   hasAnchor,
 }) => {
-  const geoJsonsData = useGeoJsons()
-  const [renderingDistrictNames, setRenderingDistrictNames] = useState(
-    defaultRenderingDistrictNames
-  )
-  const [mapUpperLevelId, setMapUpperLevelId] = useState(defaultMapUpperLevelId)
-  const electionConfig = useSelector((state) => state.election.config)
+  const electionConfig = useAppSelector((state) => state.election.config)
 
   return (
     <Wrapper>
-      <Panels
-        onEvcSelected={onEvcSelected}
-        mapUpperLevelId={mapUpperLevelId}
-        renderingDistrictNames={renderingDistrictNames}
-      />
+      <Panels onEvcSelected={onEvcSelected} />
       <MapContainer
         showLoading={showLoading}
-        geoJsonsData={geoJsonsData}
         dashboardInView={dashboardInView}
         mapColor={electionConfig.meta?.map?.mapColor}
-        setMapUpperLevelId={setMapUpperLevelId}
-        setRenderingDistrictNames={setRenderingDistrictNames}
       />
       {!hasAnchor && showTutorial && (
         <Tutorial
           show={showTutorial}
-          isMapReady={geoJsonsData.hasGeoJsons}
           onClick={() => {
             setShowTutorial(false)
             onTutorialEnd()

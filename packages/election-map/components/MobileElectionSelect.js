@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import useClickOutside from '../hook/useClickOutside'
 import { electionNamePairs } from './helper/election'
 import ReactGA from 'react-ga'
-import { useDispatch } from 'react-redux'
 import { electionActions } from '../store/election-slice'
+import { useAppDispatch } from '../hook/useRedux'
 
 const closeSvg = (
   <svg
@@ -57,7 +57,7 @@ const Election = styled.div`
 
 export const MobileElectionSelect = ({ electionType, hideElectionSelect }) => {
   const wrapperRef = useRef(null)
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
   useClickOutside(wrapperRef, () => {
     hideElectionSelect()
   })

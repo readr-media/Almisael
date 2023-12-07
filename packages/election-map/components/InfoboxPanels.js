@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 import { InfoboxPanel } from './InfoboxPanel'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../hook/useRedux'
 
 const Wrapper = styled.div``
 
 export const InfoboxPanels = () => {
-  const infoboxData = useSelector((state) => state.election.data.infoboxData)
-  const compareInfoboxData = useSelector(
+  const infoboxData = useAppSelector((state) => state.election.data.infoboxData)
+  const compareInfoboxData = useAppSelector(
     (state) => state.election.compare.infoboxData
   )
-  const compareInfo = useSelector((state) => state.election.compare.info)
-  const year = useSelector((state) => state.election.control.year)
-  const number = useSelector((state) => state.election.control.number)
-  const subtype = useSelector((state) => state.election.control.subtype)
+  const compareInfo = useAppSelector((state) => state.election.compare.info)
+  const year = useAppSelector((state) => state.election.control.year)
+  const number = useAppSelector((state) => state.election.control.number)
+  const subtype = useAppSelector((state) => state.election.control.subtype)
 
   return (
     <Wrapper>
