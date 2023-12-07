@@ -137,24 +137,6 @@ export const MobileDashboardNew = () => {
   /** @type {VillageData[]} */
   const allVillage = getAllVillage(currentTownCode)
 
-  const currentDistrictCode = getCurrentDistrictCode()
-
-  function getCurrentDistrictCode() {
-    switch (currentDistrictType) {
-      case 'nation':
-        return districtMapping.code
-      case 'county':
-        return currentCountyCode
-      case 'town':
-        return currentTownCode
-      case 'village':
-        return currentVillageCode
-
-      default:
-        return districtMapping.code
-    }
-  }
-
   function getAllTown(code) {
     if (currentDistrictType === 'nation') {
       return []
@@ -452,37 +434,6 @@ export const MobileDashboardNew = () => {
           </DistrictSelectorWrapper>
           <InfoboxContainer />
         </ContentWrapper>
-
-        {/* <div>electionTypeYears: {JSON.stringify(electionTypeYears)}</div> */}
-        {/* <div>selectedYears: {JSON.stringify(selectedYears)}</div> */}
-        {/* <div>currentElectionType: {currentElection.electionType}</div> */}
-        {/* <div>
-          currentElectionSubType: {JSON.stringify(currentElectionSubType)}
-        </div> */}
-        <button
-          onClick={() => {
-            dispatch(
-              changeLevelControl({
-                level: 1,
-                countyCode: currentCountyCode,
-                townCode: currentTownCode,
-                villageCode: currentVillageCode,
-                constituencyCode: '',
-                activeCode: currentCountyCode,
-              })
-            )
-          }}
-        >
-          測試
-        </button>
-        <div>electionsType: {electionsType}</div>
-        <div>currentDistrictType: {currentDistrictType}</div>
-        <div>currentCountyCode: {currentCountyCode}</div>
-        <div>currentTownCode: {currentTownCode}</div>
-        <div>currentVillageCode: {currentVillageCode}</div>
-        <div>currentDistrictCode: {currentDistrictCode}</div>
-        <div>infobox result: </div>
-        {/* <div>{JSON.stringify(infoboxData)}</div> */}
       </Wrapper>
     </>
   )
