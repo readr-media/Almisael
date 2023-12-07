@@ -88,7 +88,7 @@ const ContentWrapper = styled.div`
 `
 const DistrictSelectorWrapper = styled.div`
   display: flex;
-  margin: 8px auto 0;
+  margin: 8px auto 4px;
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -99,7 +99,7 @@ const DistrictSelectorWrapper = styled.div`
 const ElectionSelectorWrapper = styled(DistrictSelectorWrapper)`
   justify-content: left;
   gap: 12px;
-  margin-top: 40px;
+  margin: 40px auto 0;
 `
 
 /**
