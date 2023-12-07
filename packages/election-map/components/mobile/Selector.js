@@ -83,22 +83,6 @@ const SelectedButton = styled.button`
     white-space: nowrap;
   }
 
-  /* &:after {
-      position: absolute;
-      content: '';
-      top: 14px;
-      right: 1em;
-      width: 0;
-      height: 0;
-      color: white;
-      border: 5px solid transparent;
-      border-color: #fff transparent transparent transparent;
-    } */
-  /* &.open {
-      border: none;
-      border-radius: 15px 15px 0px 0px;
-    } */
-
   .triangle {
     width: 0px;
     height: 0px;
