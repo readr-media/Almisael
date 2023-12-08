@@ -1,8 +1,9 @@
-import { useState } from 'react'
-// import { useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import { useAppDispatch } from '../../hook/useRedux'
 import { useAppSelector } from '../../hook/useRedux'
 import { electionActions } from '../../store/election-slice'
+import { ReferendumSelect } from '../ReferendumSelect'
+import { getReferendumNumbers } from '../../utils/election'
 import styled from 'styled-components'
 const Wrapper = styled.div`
   position: fixed;
@@ -100,13 +101,12 @@ const CancelBtn = styled(DecideBtn)`
   background-color: #e0e0e0;
   margin-bottom: 24px;
 `
-/**
- * Note: 有公投ui（比較案件）跟選舉ui（比較年份）
- * @returns
- */
-export default function YearComparisonMenuBar({
-  setShouldOpenYearComparisonMenuBar,
-}) {
+
+const StyledReferendumSelect = styled(ReferendumSelect)`
+  margin: 20px 0 100px;
+`
+
+const OtherTypeComparison = ({ setShouldOpenYearComparisonMenuBar }) => {
   const dispatch = useAppDispatch()
   const years = useAppSelector((state) => state.election.config.years)
   const year = useAppSelector((state) => state.election.control.year)
@@ -117,23 +117,6 @@ export default function YearComparisonMenuBar({
   ])
 
   const [firstYear, compareYear] = compareCandidates
-
-  // const selectedIndex = years.indexOf(years.find((y) => y === year))
-
-  // const submitCompareCandidates = useCallback(() => {
-  //   const [year, compareYear] = compareCandidates
-  //   dispatch(electionActions.changeYear(year))
-  //   dispatch(
-  //     electionActions.startCompare({
-  //       compareYearKey: compareYear.key,
-  //     })
-  //   )
-  // }, [compareCandidates, dispatch])
-
-  // const submitCompareEnd = () => {
-  //   setShouldOpenYearComparisonMenuBar(false)
-  //   dispatch(electionActions.stopCompare())
-  // }
 
   const handleOnChooseYears = (year) => {
     if (firstYear.key === year.key) {
@@ -175,10 +158,7 @@ export default function YearComparisonMenuBar({
     )
   })
   return (
-    <Wrapper>
-      <CloseBtn onClick={() => setShouldOpenYearComparisonMenuBar(false)}>
-        X
-      </CloseBtn>
+    <>
       {itemJsx}
       <span className="hint">選擇兩個年份</span>
       <CancelBtn onClick={() => setShouldOpenYearComparisonMenuBar(false)}>
@@ -187,6 +167,105 @@ export default function YearComparisonMenuBar({
       <DecideBtn disabled={!compareYear?.key} onClick={handleOnDecide}>
         決定
       </DecideBtn>
+    </>
+  )
+}
+
+const ReferendumComparison = ({ setShouldOpenYearComparisonMenuBar }) => {
+  const number = useAppSelector((state) => state.election.control.number)
+  const electionConfig = useAppSelector((state) => state.election.config)
+  const numbers = getReferendumNumbers(electionConfig)
+  const dispatch = useAppDispatch()
+
+  const [compareCandidates, setCompareCandidates] = useState([
+    number,
+    numbers?.length > 1 ? numbers.filter((n) => n.key !== number.key)[0] : null,
+  ])
+  const [first, second] = compareCandidates
+  const handleSelectFirstReferendum = (number) => {
+    setCompareCandidates(([, cand2]) => {
+      if (number === cand2) {
+        return [number, numbers.filter((n) => n.key !== number.key)[0]]
+      } else {
+        return [number, cand2]
+      }
+    })
+  }
+
+  const handleSelectSecondReferendum = (number) => {
+    setCompareCandidates(([cand1]) => {
+      if (number === cand1) {
+        return [numbers.filter((n) => n.key !== number.key)[0], number]
+      } else {
+        return [cand1, number]
+      }
+    })
+  }
+  const submitCompareCandidates = useCallback(() => {
+    dispatch(electionActions.changeNumber(first))
+    dispatch(
+      electionActions.startCompare({
+        compareYearKey: second.year,
+        compareNumber: second,
+      })
+    )
+    setShouldOpenYearComparisonMenuBar(false)
+  }, [dispatch, setShouldOpenYearComparisonMenuBar, first, second])
+  return (
+    <>
+      <ReferendumSelect
+        selectedNumber={first}
+        numbers={numbers}
+        onNumberChange={(number) => {
+          handleSelectFirstReferendum(number)
+        }}
+      />
+      <StyledReferendumSelect
+        selectedNumber={second}
+        numbers={numbers}
+        onNumberChange={(number) => {
+          handleSelectSecondReferendum(number)
+        }}
+      />
+      <span className="hint">選擇兩個公投案</span>
+      <CancelBtn onClick={() => setShouldOpenYearComparisonMenuBar(false)}>
+        取消
+      </CancelBtn>
+      <DecideBtn onClick={submitCompareCandidates}>決定</DecideBtn>
+    </>
+  )
+}
+
+/**
+ * Note: 有公投ui（比較案件）跟選舉ui（比較年份）
+ * @returns
+ */
+export default function YearComparisonMenuBar({
+  setShouldOpenYearComparisonMenuBar,
+}) {
+  const electionsType = useAppSelector(
+    (state) => state.election.config.electionType
+  )
+
+  return (
+    <Wrapper>
+      <CloseBtn onClick={() => setShouldOpenYearComparisonMenuBar(false)}>
+        X
+      </CloseBtn>
+
+      {electionsType === 'referendum' ? (
+        <ReferendumComparison
+          setShouldOpenYearComparisonMenuBar={
+            setShouldOpenYearComparisonMenuBar
+          }
+        ></ReferendumComparison>
+      ) : (
+        <OtherTypeComparison
+          setShouldOpenYearComparisonMenuBar={
+            setShouldOpenYearComparisonMenuBar
+          }
+        />
+      )}
     </Wrapper>
   )
 }

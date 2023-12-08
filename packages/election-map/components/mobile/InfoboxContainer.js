@@ -22,14 +22,36 @@ export default function InfoboxContainer() {
     (state) => state.election.compare.infoboxData
   )
   const infoboxData = useAppSelector((state) => state.election.data.infoboxData)
-
   const year = useAppSelector((state) => state.election.control.year)
+  const number = useAppSelector((state) => state.election.control.number)
   const electionsType = useAppSelector(
     (state) => state.election.config.electionType
   )
+
   if (electionsType === 'referendum') {
-    return null
+    return (
+      <>
+        {compareMode && (
+          <YearWrapper>
+            {number.year}
+            {number.name}
+          </YearWrapper>
+        )}
+        <InfoBox infoboxData={infoboxData}></InfoBox>
+        {compareMode && (
+          <>
+            {compareMode && (
+              <YearWrapper>
+                {filter.number.year} {filter.number.name}
+              </YearWrapper>
+            )}
+            <InfoBox infoboxData={compareInfoboxData}></InfoBox>
+          </>
+        )}
+      </>
+    )
   }
+
   return (
     <>
       {compareMode && <YearWrapper>{year.key}</YearWrapper>}

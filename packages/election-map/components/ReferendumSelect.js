@@ -1,7 +1,9 @@
 import { useRef, useState } from 'react'
 import styled from 'styled-components'
 import useClickOutside from '../hook/useClickOutside'
-
+/**
+ * @typedef {import('../consts/electionsConifg').ReferendumNumber} ReferendumNumber
+ */
 const SelectWrapper = styled.div`
   position: relative;
   width: 254px;
@@ -35,7 +37,13 @@ const SelectOptions = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  display: ${({ showOptions }) => (showOptions ? 'block' : 'none')};
+  display: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} props.showOptions
+     */
+    ({ showOptions }) => (showOptions ? 'block' : 'none')
+  };
   border: 1px solid #000;
   background-color: #fff;
   width: 254px;
@@ -48,7 +56,13 @@ const SelectOption = styled.li`
   padding: 0 0 0 21px;
   list-style: none;
   line-height: 36px;
-  color: ${({ selected }) => (selected ? '#000' : '#a5a5a5')};
+  color: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} props.selected
+     */
+    ({ selected }) => (selected ? '#000' : '#a5a5a5')
+  };
   cursor: pointer;
   &:hover {
     color: #000;
@@ -69,7 +83,14 @@ const downTriangleSvg = (
     />
   </svg>
 )
-
+/**
+ *
+ * @param {Object} props
+ * @param {ReferendumNumber} props.selectedNumber
+ * @param {ReferendumNumber[]} props.numbers
+ * @param {Function} props.onNumberChange
+ * @param {string} [props.className]
+ */
 export const ReferendumSelect = ({
   className,
   selectedNumber,
