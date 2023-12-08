@@ -242,6 +242,29 @@ export const fetchReferendumEvcData = async ({ yearKey }) => {
 }
 
 /**
+ * Fetch legislator election votes comparison data, need to import the return type from package '@readr-media/react-election-widgets'.
+ * @param {Object} options - Options for fetching legislator evc data.
+ * @param {number} options.yearKey - The key representing the year.
+ * @param {string} options.district - The name of the district (county).
+ * @param {'plainIndigenous' | 'mountainIndigenous' | 'party' | 'district'} options.subtypeKey - The key of the subtype of the election.
+ * @returns {Promise<Object>}
+ */
+export const fetchLegislatorEvcData = async ({
+  yearKey,
+  subtypeKey,
+  district,
+}) => {
+  const loader = new DataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
+  const data = await loader.loadLegislatorData({
+    year: yearKey,
+    subtype: subtypeKey,
+    district,
+  })
+
+  return data
+}
+
+/**
  * Fetch president map data in the specific level (folderName) and code (fileName).
  * @param {Object} options
  * @param {ElectionType} options.electionType - The type of election.
