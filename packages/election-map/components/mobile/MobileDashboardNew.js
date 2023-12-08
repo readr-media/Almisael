@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import YearComparisonMenuBar from './YearComparisonMenuBar'
 import { useDistrictMapping } from '../../hook/useDistrictMapping'
 import InfoboxContainer from './InfoboxContainer'
+import ElectionVoteComparisonPanel from '../ElectionVoteComparisonPanel'
 import { useAppSelector } from '../../hook/useRedux'
 import { useAppDispatch } from '../../hook/useRedux'
 import { electionActions } from '../../store/election-slice'
@@ -105,7 +106,7 @@ const ElectionSelectorWrapper = styled(DistrictSelectorWrapper)`
 /**
  * Dashboard for new election map, created in 2023.11.20
  */
-export const MobileDashboardNew = () => {
+export const MobileDashboardNew = ({ onEvcSelected }) => {
   const { districtMapping, hasDistrictMapping } = useDistrictMapping()
   // const [currentElection, setCurrentElection] = useState(ELECTION_TYPE[0])
   const dispatch = useAppDispatch()
@@ -426,6 +427,13 @@ export const MobileDashboardNew = () => {
         <div>infobox result: </div>
         {/* <div>{JSON.stringify(infoboxData)}</div> */}
       </Wrapper>
+
+      {!compareMode && (
+        <ElectionVoteComparisonPanel
+          onEvcSelected={onEvcSelected}
+          isMobile={true}
+        />
+      )}
     </>
   )
 }
