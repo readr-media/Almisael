@@ -4,8 +4,8 @@ import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 
 import { useAppSelector } from '../hook/useRedux'
 
-// import widgets from '@readr-media/react-election-widgets'
-import widgets from '../.yalc/@readr-media/react-election-widgets/lib/index.js'
+import widgets from '@readr-media/react-election-widgets'
+// import widgets from '../.yalc/@readr-media/react-election-widgets/lib/index.js'
 
 const ElectionVotesComparison = widgets.VotesComparison.ReactComponent
 import { data as LegislatorDistrictMock } from '../mock-datas/votes-comparison/legislator/district/taipeiCity'
