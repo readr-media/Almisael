@@ -193,17 +193,26 @@ const Divider = styled.div`
  *
  * @param {ElectionType} electionsType
  * @param {InfoboxData['electionData']} electionData
+ * @param {InfoboxData['level']} level
  */
-const checkHasElectionData = (electionsType, electionData) => {
+const checkHasElectionData = (electionsType, electionData, level) => {
   if (!electionData) {
     return false
   }
+
   switch (electionsType) {
     //地方選舉
     case 'mayor':
       return Boolean(electionData?.candidates)
     case 'councilMember':
-      return Array.isArray(electionData) && electionData.length
+      if (level === 1) {
+        return Boolean(
+          electionData?.districts &&
+            Array.isArray(electionData.districts) &&
+            electionData.districts.length
+        )
+      }
+      return Boolean(Array.isArray(electionData) && electionData.length)
 
     //中央選舉
     case 'legislator':
@@ -241,7 +250,7 @@ const sortCandidatesByTksRate = (candidates) => {
  * @returns
  */
 export default function InfoBox({ infoboxData }) {
-  const { electionData } = infoboxData
+  const { electionData, level } = infoboxData
   const [shouldInfoBoxExpand, setShouldInfoBoxExpand] = useState(false)
   const electionsType = useAppSelector(
     (state) => state.election.config.electionType
@@ -249,7 +258,11 @@ export default function InfoBox({ infoboxData }) {
   const handleExpand = () => {
     setShouldInfoBoxExpand((pre) => !pre)
   }
-  const hasElectionData = checkHasElectionData(electionsType, electionData)
+  const hasElectionData = checkHasElectionData(
+    electionsType,
+    electionData,
+    level
+  )
   const getInfoboxItemJsx = (candidate) => {
     if (!candidate) {
       return null
@@ -312,6 +325,44 @@ export default function InfoBox({ infoboxData }) {
           </Wrapper>
         )
       case 'councilMember':
+        if (level === 1) {
+          return electionData.districts.map((district, index) => {
+            if (
+              !district?.candidates ||
+              !Array.isArray(district.candidates) ||
+              !district.candidates.length
+            ) {
+              return null
+            }
+
+            const orderedCandidates = sortCandidatesByTksRate(
+              district.candidates
+            )
+
+            const candidatesAmount = orderedCandidates.length
+            const shouldShowExpandButton = candidatesAmount > 5
+            const maxHeight = calculateMaxHeightOfInfoBox(
+              candidatesAmount,
+              shouldShowExpandButton,
+              shouldInfoBoxExpand
+            )
+            const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
+            return (
+              <Wrapper key={index}>
+                {expendButtonJsx}
+                {shouldShowExpandButton && <Divider />}
+
+                <div className="prof-rate">投票率: {district?.profRate}%</div>
+                <CandidatesInfoWrapper maxHeight={maxHeight}>
+                  {orderedCandidates.map((candidate) =>
+                    getInfoboxItemJsx(candidate)
+                  )}
+                </CandidatesInfoWrapper>
+                {shouldShowExpandButton && <Divider />}
+              </Wrapper>
+            )
+          })
+        }
         return electionData.map((election, index) => {
           if (!election) {
             return null
