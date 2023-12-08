@@ -53,7 +53,7 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
     return (
       <div ref={ref}>
         {loading && <SpinningModal />}
-        <MobileDashboardNew />
+        <MobileDashboardNew onEvcSelected={onEvcSelected} />
       </div>
     )
   }
