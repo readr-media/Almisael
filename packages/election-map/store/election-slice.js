@@ -137,6 +137,7 @@ const electionsSlice = createSlice({
       state.compare = {
         info: defaultCompareInfo,
         infoboxData: {},
+        mapData: {},
       }
     },
     changeElectionsData(state, action) {
