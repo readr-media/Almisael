@@ -7,7 +7,7 @@
 /** @type {Organization} */
 export const organization = 'readr-media'
 /** @type {Env} */
-export const environment = 'prod' // 'dev | prod'
+export const environment = 'dev' // 'dev | prod'
 
 /*
 gsutil -m cp -r -a public-read ./out/* gs://statics.mirrormedia.mg/projects/election2022

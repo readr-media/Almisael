@@ -85,7 +85,7 @@ export const electionsConfig = [
       map: {
         mapColor: true,
         folderNames: {
-          0: '',
+          0: 'country',
           1: 'county',
           2: 'town',
         },
@@ -305,7 +305,7 @@ export const electionsConfig = [
       map: {
         mapColor: true,
         folderNames: {
-          0: '',
+          0: 'country',
           1: 'county',
           2: 'town',
         },
