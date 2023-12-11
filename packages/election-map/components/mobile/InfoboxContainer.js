@@ -17,7 +17,7 @@ const YearWrapper = styled.div`
 
 export default function InfoboxContainer() {
   const compareInfo = useAppSelector((state) => state.election.compare.info)
-  const { compareMode, filter } = compareInfo
+  const { compareMode, filter } = compareInfo ?? {}
   const compareInfoboxData = useAppSelector(
     (state) => state.election.compare.infoboxData
   )
@@ -37,15 +37,16 @@ export default function InfoboxContainer() {
             {number.name}
           </YearWrapper>
         )}
-        <InfoBox infoboxData={infoboxData}></InfoBox>
+        <InfoBox infoboxData={infoboxData} year={number.year}></InfoBox>
         {compareMode && (
           <>
-            {compareMode && (
-              <YearWrapper>
-                {filter.number.year} {filter.number.name}
-              </YearWrapper>
-            )}
-            <InfoBox infoboxData={compareInfoboxData}></InfoBox>
+            <YearWrapper>
+              {filter.number.year} {filter.number.name}
+            </YearWrapper>
+            <InfoBox
+              infoboxData={compareInfoboxData}
+              year={filter.number.year}
+            ></InfoBox>
           </>
         )}
       </>
@@ -55,12 +56,15 @@ export default function InfoboxContainer() {
   return (
     <>
       {compareMode && <YearWrapper>{year.key}</YearWrapper>}
-      <InfoBox infoboxData={infoboxData}></InfoBox>
+      <InfoBox infoboxData={infoboxData} year={year.key}></InfoBox>
 
       {compareMode && (
         <>
-          {compareMode && <YearWrapper>{filter.year.key}</YearWrapper>}
-          <InfoBox infoboxData={compareInfoboxData}></InfoBox>
+          <YearWrapper>{filter.year.key}</YearWrapper>
+          <InfoBox
+            infoboxData={compareInfoboxData}
+            year={filter.year.key}
+          ></InfoBox>
         </>
       )}
     </>

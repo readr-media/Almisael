@@ -1,5 +1,5 @@
 export const defaultElectionType = 'mayor'
-export const currentYear = 2022
+export const currentYear = 2024
 
 /**
  * Representing the type of the election.
