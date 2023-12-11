@@ -2,6 +2,7 @@ import styled from 'styled-components'
 // import { data as mockData } from '../../mock-datas/maps/legislators/normal/county/63000.js'
 import { useAppSelector } from '../../hook/useRedux'
 import { useState } from 'react'
+import { getInfoBoxData } from '../../utils/infoboxData'
 /**
  * @typedef {import('../../utils/electionsData').InfoboxData} InfoboxData
  * @typedef {import('../../consts/electionsConifg').ElectionType} ElectionType
@@ -200,43 +201,43 @@ const WrapperForCouncilMemberFirstLevel = styled.div`
   overflow: hidden;
   transition: max-height 1s ease-in-out;
 `
-/**
- *
- * @param {ElectionType} electionsType
- * @param {InfoboxData['electionData']} electionData
- * @param {InfoboxData['level']} level
- */
-const checkHasElectionData = (electionsType, electionData, level) => {
-  if (!electionData) {
-    return false
-  }
+// /**
+//  *
+//  * @param {ElectionType} electionsType
+//  * @param {InfoboxData['electionData']} electionData
+//  * @param {InfoboxData['level']} level
+//  */
+// const checkHasElectionData = (electionsType, electionData, level) => {
+//   if (!electionData) {
+//     return false
+//   }
 
-  switch (electionsType) {
-    //地方選舉
-    case 'mayor':
-      return Boolean(electionData?.candidates)
-    case 'councilMember':
-      if (level === 1) {
-        return Boolean(
-          electionData?.districts &&
-            Array.isArray(electionData.districts) &&
-            electionData.districts.length
-        )
-      }
-      return Boolean(Array.isArray(electionData) && electionData.length)
+//   switch (electionsType) {
+//     //地方選舉
+//     case 'mayor':
+//       return Boolean(electionData?.candidates)
+//     case 'councilMember':
+//       if (level === 1) {
+//         return Boolean(
+//           electionData?.districts &&
+//             Array.isArray(electionData.districts) &&
+//             electionData.districts.length
+//         )
+//       }
+//       return Boolean(Array.isArray(electionData) && electionData.length)
 
-    //中央選舉
-    case 'legislator':
-      return false
-    case 'president':
-      return false
-    case 'referendum':
-      //will be undefined, empty object, object with some property
-      return Boolean(electionData && Object.keys(electionData)?.length)
-    default:
-      return false
-  }
-}
+//     //中央選舉
+//     case 'legislator':
+//       return false
+//     case 'president':
+//       return false
+//     case 'referendum':
+//       //will be undefined, empty object, object with some property
+//       return Boolean(electionData && Object.keys(electionData)?.length)
+//     default:
+//       return false
+//   }
+// }
 
 /**
  *
@@ -258,10 +259,10 @@ const sortCandidatesByTksRate = (candidates) => {
  *
  * @param {Object} props
  * @param {InfoboxData | Object} props.infoboxData
- * @returns
+ * @param {number} props.year
  */
-export default function InfoBox({ infoboxData }) {
-  const { electionData, level } = infoboxData
+export default function InfoBox({ infoboxData, year }) {
+  const { level, electionData, isStarted } = infoboxData
   const [shouldInfoBoxExpand, setShouldInfoBoxExpand] = useState(false)
   const electionsType = useAppSelector(
     (state) => state.election.config.electionType
@@ -269,11 +270,11 @@ export default function InfoBox({ infoboxData }) {
   const handleExpand = () => {
     setShouldInfoBoxExpand((pre) => !pre)
   }
-  const hasElectionData = checkHasElectionData(
+  const getInfoboxDataOnCertainElectionType = getInfoBoxData(
     electionsType,
-    electionData,
-    level
+    'mobile'
   )
+
   const getInfoboxItemJsx = (candidate) => {
     if (!candidate) {
       return null
@@ -310,7 +311,16 @@ export default function InfoBox({ infoboxData }) {
   const getInfoboxJsx = () => {
     switch (electionsType) {
       //地方選舉
-      case 'mayor':
+      case 'mayor': {
+        const infoboxData = getInfoboxDataOnCertainElectionType(
+          electionData,
+          level,
+          year,
+          isStarted
+        )
+        if (typeof infoboxData === 'string') {
+          return <div>{infoboxData}</div>
+        }
         const candidates = electionData.candidates
         const orderedCandidates = sortCandidatesByTksRate(candidates)
         const candidatesAmount = orderedCandidates.length
@@ -335,9 +345,19 @@ export default function InfoBox({ infoboxData }) {
             {shouldShowExpandButton && <Divider />}
           </Wrapper>
         )
-      case 'councilMember':
+      }
+      case 'councilMember': {
+        const infoboxData = getInfoboxDataOnCertainElectionType(
+          electionData,
+          level,
+          year,
+          isStarted
+        )
+        if (typeof infoboxData === 'string') {
+          return <div>{infoboxData}</div>
+        }
         if (level === 1) {
-          const districtsAmount = electionData.districts.map((district) => {
+          const districtsAmount = infoboxData.districts.map((district) => {
             return district?.candidates?.length ?? 0
           })
           const candidatesAmount = districtsAmount.reduce(
@@ -352,7 +372,7 @@ export default function InfoBox({ infoboxData }) {
             '272px'
           )
           return (
-            <>
+            <div style={{ borderTop: 'solid 1px #000' }}>
               {expendButtonJsx}
               {shouldShowExpandButton && <Divider />}
               <WrapperForCouncilMemberFirstLevel maxHeight={maxHeight}>
@@ -384,7 +404,7 @@ export default function InfoBox({ infoboxData }) {
                 })}
               </WrapperForCouncilMemberFirstLevel>
               {shouldShowExpandButton && <Divider />}
-            </>
+            </div>
           )
         }
         return electionData.map((election, index) => {
@@ -418,8 +438,19 @@ export default function InfoBox({ infoboxData }) {
             </Wrapper>
           )
         })
-      case 'referendum':
-        const { profRate, agreeRate, disagreeRate, adptVictor } = electionData
+      }
+      case 'referendum': {
+        const infoboxData = getInfoboxDataOnCertainElectionType(
+          electionData,
+          level,
+          year,
+          isStarted
+        )
+
+        if (typeof infoboxData === 'string') {
+          return <div>{infoboxData}</div>
+        }
+        const { profRate, agreeRate, disagreeRate, adptVictor } = infoboxData
         const hasResult = adptVictor === 'Y' || adptVictor === 'N'
         const isPass = hasResult && adptVictor === 'Y'
         const isNoPass = hasResult && adptVictor === 'N'
@@ -442,6 +473,7 @@ export default function InfoBox({ infoboxData }) {
             </ReferendumWrapper>
           </>
         )
+      }
       //TODO: 中央選舉
       case 'legislator':
         return null
@@ -452,7 +484,7 @@ export default function InfoBox({ infoboxData }) {
         return null
     }
   }
-  const infoboxJsx = hasElectionData ? getInfoboxJsx() : null
+  const infoboxJsx = getInfoboxJsx()
 
   return <>{infoboxJsx}</>
 }
