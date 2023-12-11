@@ -8,22 +8,20 @@ import { useState } from 'react'
  * @typedef {import('../../consts/electionsConifg').ElectionSubtype} ElectionSubtype
  */
 
-/**
- * currently use mock data 63000.js
- */
-
+const HEIGHT = '46.44px'
 const calculateMaxHeightOfInfoBox = (
   candidatesAmount,
   shouldShowExpandButton,
-  shouldInfoBoxExpand
+  shouldInfoBoxExpand,
+  closedHeight = '232px'
 ) => {
   if (!shouldShowExpandButton) {
     return '100%'
   }
   if (shouldInfoBoxExpand) {
-    return '500vh'
+    return `calc(${candidatesAmount} * ${HEIGHT} + 50vh)`
   } else {
-    return '210px'
+    return closedHeight
   }
 }
 
@@ -113,7 +111,7 @@ const CandidatesInfoWrapper = styled.ul`
     ({ maxHeight }) => maxHeight && maxHeight
   };
   min-height: 100%;
-  transition: all 0.3s ease-in-out;
+  transition: max-height 1s 0s ease-in-out;
   overflow: hidden;
 `
 const CandidateInfo = styled.li`
@@ -188,6 +186,19 @@ const Divider = styled.div`
   height: 3px;
   margin-top: 5px;
   background-color: #000;
+`
+
+const WrapperForCouncilMemberFirstLevel = styled.div`
+  min-height: 100%;
+  max-height: ${
+    /**
+     * @param {Object} props
+     * @param {string} props.maxHeight
+     */
+    ({ maxHeight }) => maxHeight && maxHeight
+  };
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
 `
 /**
  *
@@ -326,42 +337,55 @@ export default function InfoBox({ infoboxData }) {
         )
       case 'councilMember':
         if (level === 1) {
-          return electionData.districts.map((district, index) => {
-            if (
-              !district?.candidates ||
-              !Array.isArray(district.candidates) ||
-              !district.candidates.length
-            ) {
-              return null
-            }
-
-            const orderedCandidates = sortCandidatesByTksRate(
-              district.candidates
-            )
-
-            const candidatesAmount = orderedCandidates.length
-            const shouldShowExpandButton = candidatesAmount > 5
-            const maxHeight = calculateMaxHeightOfInfoBox(
-              candidatesAmount,
-              shouldShowExpandButton,
-              shouldInfoBoxExpand
-            )
-            const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
-            return (
-              <Wrapper key={index}>
-                {expendButtonJsx}
-                {shouldShowExpandButton && <Divider />}
-
-                <div className="prof-rate">投票率: {district?.profRate}%</div>
-                <CandidatesInfoWrapper maxHeight={maxHeight}>
-                  {orderedCandidates.map((candidate) =>
-                    getInfoboxItemJsx(candidate)
-                  )}
-                </CandidatesInfoWrapper>
-                {shouldShowExpandButton && <Divider />}
-              </Wrapper>
-            )
+          const districtsAmount = electionData.districts.map((district) => {
+            return district?.candidates?.length ?? 0
           })
+          const candidatesAmount = districtsAmount.reduce(
+            (accumulator, currentValue) => accumulator + currentValue
+          )
+          const shouldShowExpandButton = candidatesAmount > 5
+          const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
+          const maxHeight = calculateMaxHeightOfInfoBox(
+            candidatesAmount,
+            shouldShowExpandButton,
+            shouldInfoBoxExpand,
+            '272px'
+          )
+          return (
+            <>
+              {expendButtonJsx}
+              {shouldShowExpandButton && <Divider />}
+              <WrapperForCouncilMemberFirstLevel maxHeight={maxHeight}>
+                {electionData.districts.map((district, index) => {
+                  if (
+                    !district?.candidates ||
+                    !Array.isArray(district.candidates) ||
+                    !district.candidates.length
+                  ) {
+                    return null
+                  }
+
+                  const orderedCandidates = sortCandidatesByTksRate(
+                    district.candidates
+                  )
+
+                  return (
+                    <Wrapper key={index}>
+                      <div className="prof-rate">
+                        投票率: {district?.profRate}%
+                      </div>
+                      <CandidatesInfoWrapper maxHeight={'100%'}>
+                        {orderedCandidates.map((candidate) =>
+                          getInfoboxItemJsx(candidate)
+                        )}
+                      </CandidatesInfoWrapper>
+                    </Wrapper>
+                  )
+                })}
+              </WrapperForCouncilMemberFirstLevel>
+              {shouldShowExpandButton && <Divider />}
+            </>
+          )
         }
         return electionData.map((election, index) => {
           if (!election) {
