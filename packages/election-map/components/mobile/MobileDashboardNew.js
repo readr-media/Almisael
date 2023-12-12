@@ -126,7 +126,6 @@ export const MobileDashboardNew = () => {
   const [currentCountyCode, setCurrentCountyCode] = useState('')
   const [currentTownCode, setCurrentTownCode] = useState('')
   const [currentVillageCode, setCurrentVillageCode] = useState('')
-  const [currentOpenSelector, setCurrentOpenSelector] = useState('')
 
   /** @type {CountyData[]} */
   const allCounty = districtMapping.sub
@@ -386,15 +385,11 @@ export const MobileDashboardNew = () => {
             <ElectionSelector
               options={electionNamePairs}
               selectorType="electionType"
-              handleOpenSelector={setCurrentOpenSelector}
-              currentOpenSelector={currentOpenSelector}
             />
             {electionSubTypes && (
               <ElectionSelector
                 selectorType="electionSubType"
                 options={electionSubTypes}
-                handleOpenSelector={setCurrentOpenSelector}
-                currentOpenSelector={currentOpenSelector}
               />
             )}
             {electionsType === 'referendum' && !compareMode ? (
@@ -403,32 +398,23 @@ export const MobileDashboardNew = () => {
           </ElectionSelectorWrapper>
           <DistrictSelectorWrapper>
             <Selector
-              selectorType="districtNationAndCounty"
               options={optionsForFirstDistrictSelector}
               districtCode={currentCountyCode}
               onSelected={handleOnClick}
-              currentOpenSelector={currentOpenSelector}
-              handleOpenSelector={setCurrentOpenSelector}
               placeholderValue="台灣"
             ></Selector>
 
             <Selector
-              selectorType="districtTown"
               options={optionsForSecondDistrictSelector}
               districtCode={currentTownCode}
               onSelected={handleOnClick}
-              currentOpenSelector={currentOpenSelector}
-              handleOpenSelector={setCurrentOpenSelector}
               placeholderValue="-"
             ></Selector>
 
             <Selector
-              selectorType="districtVillage"
               options={optionsForThirdDistrictSelector}
               districtCode={currentVillageCode}
               onSelected={handleOnClick}
-              currentOpenSelector={currentOpenSelector}
-              handleOpenSelector={setCurrentOpenSelector}
               placeholderValue="-"
             ></Selector>
           </DistrictSelectorWrapper>
