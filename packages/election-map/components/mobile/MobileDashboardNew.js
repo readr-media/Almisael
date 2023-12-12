@@ -1,9 +1,10 @@
 import { useState, useEffect, useMemo } from 'react'
 import { electionNamePairs } from '../../utils/election'
+import styled from 'styled-components'
 import Selector from './Selector'
 import ElectionSelector from './ElectionSelector'
 import ReferendumSelector from './ReferendumSelector'
-import styled from 'styled-components'
+import ElectionVoteComparisonPanel from '../ElectionVoteComparisonPanel'
 
 import YearComparisonMenuBar from './YearComparisonMenuBar'
 import { useDistrictMapping } from '../../hook/useDistrictMapping'
@@ -105,7 +106,7 @@ const ElectionSelectorWrapper = styled(DistrictSelectorWrapper)`
 /**
  * Dashboard for new election map, created in 2023.11.20
  */
-export const MobileDashboardNew = () => {
+export const MobileDashboardNew = ({ onEvcSelected }) => {
   const { districtMapping, hasDistrictMapping } = useDistrictMapping()
   // const [currentElection, setCurrentElection] = useState(ELECTION_TYPE[0])
   const dispatch = useAppDispatch()
@@ -420,6 +421,12 @@ export const MobileDashboardNew = () => {
           </DistrictSelectorWrapper>
           <InfoboxContainer />
         </ContentWrapper>
+        {!compareMode && (
+          <ElectionVoteComparisonPanel
+            onEvcSelected={onEvcSelected}
+            isMobile={true}
+          />
+        )}
       </Wrapper>
     </>
   )
