@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 import widgets from '@readr-media/react-election-widgets'
 import { useAppSelector } from '../hook/useRedux'
+import { getVoteComparisonTitle } from '../utils/getVoteComparisonTitle'
 
 /**
  * @typedef {import('../consts/electionsConifg').ElectionType} ElectionType
@@ -108,6 +109,9 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
   )
   const evcData = useAppSelector((state) => state.election.data.evcData)
 
+  const subtype = useAppSelector((state) => state.election.control.subtype)
+  const collapseTitle = getVoteComparisonTitle(electionType, subtype?.key)
+
   let election
   if (electionType === 'councilMember') {
     election = evcData[1][countyCode]
@@ -131,7 +135,7 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
       />
     </ElectionVotesComparisonMobileWrapper>
   ) : (
-    <ElectionVotesComparisonDesktopWrapper title={'縣市議員候選人'}>
+    <ElectionVotesComparisonDesktopWrapper title={collapseTitle}>
       <StyledEVC
         electionType={electionType}
         election={election}
