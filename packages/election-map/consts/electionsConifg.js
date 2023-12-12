@@ -9,6 +9,7 @@ export const currentYear = 2024
  * @typedef {Object} ElectionSubtype
  * @property {string} name - The name of the subtype of election.
  * @property {string} key - The key of the subtype of election.
+ * @property {boolean} mobileOnly - The flag to indicate whether the subtype should only used in mobile
  *
  * Representing a referendum in number.
  * @typedef {Object} ReferendumNumber
@@ -101,10 +102,11 @@ export const electionsConfig = [
     electionType: 'legislator',
     electionName: '立法委員',
     subtypes: [
-      { name: '區域', key: 'normal' },
-      { name: '山地原住民', key: 'mountainIndigenous' },
-      { name: '平地原住民', key: 'plainIndigenous' },
-      { name: '政黨票', key: 'party' },
+      { name: '區域', key: 'normal', mobileOnly: false },
+      { name: '山地原住民', key: 'mountainIndigenous', mobileOnly: false },
+      { name: '平地原住民', key: 'plainIndigenous', mobileOnly: false },
+      { name: '政黨票', key: 'party', mobileOnly: false },
+      { name: '全國', key: 'all', mobileOnly: true },
     ],
     years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }],
     meta: {
@@ -112,9 +114,26 @@ export const electionsConfig = [
       map: {
         // Only normal type starts from county level.
         folderNames: {
-          0: 'country',
-          1: 'county',
-          2: 'town',
+          normal: {
+            0: 'country',
+            1: 'county',
+            2: 'constituency',
+          },
+          mountainIndigenous: {
+            0: 'country',
+            1: 'county',
+            2: 'town',
+          },
+          plainIndigenous: {
+            0: 'country',
+            1: 'county',
+            2: 'town',
+          },
+          party: {
+            0: 'country',
+            1: 'county',
+            2: 'town',
+          },
         },
         fileNames: {
           0: 'country',
@@ -123,8 +142,18 @@ export const electionsConfig = [
         },
       },
       seat: {
-        wrapperTitle: '立法委員席次圖',
-        componentTitle: '立法委員選舉',
+        wrapperTitle: {
+          normal: '區域立法委員席次圖',
+          mountainIndigenous: '山地原住民立法委員席次圖',
+          plainIndigenous: '平地原住民立法委員席次圖',
+          party: '不分區立法委員席次圖',
+        },
+        componentTitle: {
+          normal: '區域立法委員選舉',
+          mountainIndigenous: '山地原住民立法委員選舉',
+          plainIndigenous: '平地原住民立法委員選舉',
+          party: '不分區立法委選舉',
+        },
       },
     },
   },
@@ -155,8 +184,8 @@ export const electionsConfig = [
   {
     electionType: 'councilMember',
     subtypes: [
-      { name: '區域', key: 'normal' },
-      { name: '原住民', key: 'indigenous' },
+      { name: '區域', key: 'normal', mobileOnly: false },
+      { name: '原住民', key: 'indigenous', mobileOnly: false },
     ],
     electionName: '縣市議員',
     years: [{ key: 2010 }, { key: 2014 }, { key: 2018 }, { key: 2022 }],
