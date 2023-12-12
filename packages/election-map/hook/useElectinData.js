@@ -147,8 +147,10 @@ export const useElectionData = (showLoading, showTutorial) => {
           const target = document.querySelector(
             `#first-id-${countyData.countyCode}`
           )
-          let event = new MouseEvent('click', { bubbles: true })
-          target.dispatchEvent(event)
+          if (target) {
+            let event = new MouseEvent('click', { bubbles: true })
+            target.dispatchEvent(event)
+          }
 
           ReactGA.event({
             category: 'Projects',
