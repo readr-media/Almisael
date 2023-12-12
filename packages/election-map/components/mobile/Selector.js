@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { useState, useEffect } from 'react'
+import { useState, useRef } from 'react'
+import useClickOutside from '../../hook/useClickOutside'
 const Wrapper = styled.div`
   position: relative;
   text-align: left;
@@ -11,13 +12,7 @@ const Wrapper = styled.div`
 `
 
 const Options = styled.ul`
-  z-index: ${
-    /**
-     * @param {Object} props
-     * @param {boolean} props.shouldShowOptions
-     */
-    ({ shouldShowOptions }) => (shouldShowOptions ? '5' : '2')
-  };
+  z-index: 1;
   background-color: #f2f2f2;
   position: absolute;
   color: #fff;
@@ -68,7 +63,7 @@ const SelectedButton = styled.button`
      * @param {Object} props
      * @param {boolean} props.shouldShowOptions
      */
-    ({ shouldShowOptions }) => (shouldShowOptions ? '6' : '3')
+    ({ shouldShowOptions }) => (shouldShowOptions ? '2' : '0')
   };
   border-radius: 8px;
   background-color: #fff;
@@ -96,38 +91,30 @@ export default function Selector({
   options = [],
   onSelected,
   districtCode,
-  selectorType = '',
   placeholderValue = '',
-  handleOpenSelector,
-  currentOpenSelector,
 }) {
   const [shouldShowOptions, setShouldShowOptions] = useState(false)
-
+  const wrapperRef = useRef(null)
+  useClickOutside(wrapperRef, () => {
+    setShouldShowOptions(false)
+  })
   const hasOptions = options && Array.isArray(options) && options.length
 
   const handleSelectedButtonOnClick = () => {
     setShouldShowOptions((pre) => !pre)
-    shouldShowOptions
-      ? handleOpenSelector(null)
-      : handleOpenSelector(selectorType)
   }
   const handleOptionOnSelected = (option) => {
     onSelected(option.type, option.code)
     setShouldShowOptions(false)
-    handleOpenSelector(null)
   }
   const currentSelectDistrictName = hasOptions
     ? options.find((option) => option.code === districtCode)?.name ??
       placeholderValue
     : null
-  useEffect(() => {
-    if (currentOpenSelector !== selectorType) {
-      setShouldShowOptions(false)
-    }
-  }, [currentOpenSelector, selectorType])
+
   return (
     <>
-      <Wrapper>
+      <Wrapper ref={wrapperRef}>
         <SelectedButton
           shouldShowOptions={shouldShowOptions}
           onClick={handleSelectedButtonOnClick}
@@ -138,7 +125,7 @@ export default function Selector({
           <i className="triangle"></i>
         </SelectedButton>
         {shouldShowOptions && hasOptions && (
-          <Options shouldShowOptions={shouldShowOptions}>
+          <Options>
             {options.map((option, index) => (
               <OptionItem
                 isSelected={option.name === currentSelectDistrictName}

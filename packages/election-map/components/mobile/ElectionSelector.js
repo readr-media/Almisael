@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useRef } from 'react'
 
 import { electionActions } from '../../store/election-slice'
 import { useAppDispatch } from '../../hook/useRedux'
 import { useAppSelector } from '../../hook/useRedux'
-
+import useClickOutside from '../../hook/useClickOutside'
 import styled from 'styled-components'
 
 const WIDTH = '100px'
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 `
 
 const Options = styled.ul`
-  z-index: 9;
+  z-index: 1;
   background-color: #3a3a3a;
   position: absolute;
   color: #fff;
@@ -56,25 +56,19 @@ const SelectedButton = styled.button`
   position: absolute;
   padding: 4px 10px;
   width: 100%;
-  z-index: 10;
+  z-index: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} props.shouldDisable
+     * @param {boolean} props.isOptionsOpen
+     */
+    ({ isOptionsOpen }) => (isOptionsOpen ? '2' : '1')
+  };
   border-radius: 8px;
   border: 1px solid;
-  cursor: ${
-    /**
-     *
-     * @param {Object} props
-     * @param {boolean} props.shouldDisable
-     */
-    ({ shouldDisable }) => (shouldDisable ? 'not-allowed' : 'pointer')
-  };
-  background-color: ${
-    /**
-     *
-     * @param {Object} props
-     * @param {boolean} props.shouldDisable
-     */
-    ({ shouldDisable }) => (shouldDisable ? '#747474' : '#000')
-  };
+  cursor: ${({ shouldDisable }) => (shouldDisable ? 'not-allowed' : 'pointer')};
+  background-color: ${({ shouldDisable }) =>
+    shouldDisable ? '#747474' : '#000'};
   span {
     color: #fff;
 
@@ -98,16 +92,8 @@ const SelectedButton = styled.button`
  * @param {Object} props
  * @param {Object[]} props.options
  * @param {'electionType' | 'electionSubType'} props.selectorType
- * @param {function} props.handleOpenSelector
- * @param {string} props.currentOpenSelector
- * @returns
  */
-export default function ElectionSelector({
-  options = [],
-  selectorType,
-  handleOpenSelector,
-  currentOpenSelector,
-}) {
+export default function ElectionSelector({ options = [], selectorType }) {
   const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
@@ -126,11 +112,12 @@ export default function ElectionSelector({
   const dispatch = useAppDispatch()
 
   const [shouldShowOptions, setShouldShowOptions] = useState(false)
+  const wrapperRef = useRef(null)
+  useClickOutside(wrapperRef, () => {
+    setShouldShowOptions(false)
+  })
   const handleSelectedButtonOnClick = () => {
     setShouldShowOptions((pre) => !pre)
-    shouldShowOptions
-      ? handleOpenSelector(null)
-      : handleOpenSelector(selectorType)
   }
   const handleOptionOnSelected = (option) => {
     if (selectorType === 'electionType') {
@@ -142,19 +129,13 @@ export default function ElectionSelector({
     }
 
     setShouldShowOptions(false)
-    handleOpenSelector(null)
   }
-
-  useEffect(() => {
-    if (currentOpenSelector !== selectorType) {
-      setShouldShowOptions(false)
-    }
-  }, [currentOpenSelector, selectorType])
 
   return (
     <>
-      <Wrapper>
+      <Wrapper ref={wrapperRef}>
         <SelectedButton
+          isOptionsOpen={shouldShowOptions}
           disabled={compareMode}
           shouldDisable={compareMode}
           onClick={handleSelectedButtonOnClick}

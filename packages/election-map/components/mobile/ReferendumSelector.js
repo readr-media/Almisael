@@ -7,7 +7,7 @@ import { electionActions } from '../../store/election-slice'
 const SelectedButton = styled.button`
   padding: 2.5px 7.5px;
   width: fit-content;
-  z-index: 10;
+  z-index: 0;
   border-radius: 8px;
   border: 1px solid;
   font-size: 14px;

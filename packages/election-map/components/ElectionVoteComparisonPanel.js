@@ -1,21 +1,39 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 import widgets from '@readr-media/react-election-widgets'
 import { useAppSelector } from '../hook/useRedux'
 
 const ElectionVotesComparison = widgets.VotesComparison.ReactComponent
 
-const ElectionVotesComparisonWrapper = styled(CollapsibleWrapper)`
+const ElectionVotesComparisonDesktopWrapper = styled(CollapsibleWrapper)`
   position: absolute;
   top: 76px;
   right: 20px;
 `
 
-const StyledEVC = styled(ElectionVotesComparison)`
+const ElectionVotesComparisonMobileWrapper = styled.div`
+  margin-top: 20px;
+`
+const mobileStyle = css`
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 0 !important;
+
+  overflow: auto;
+  border-radius: 12px;
+  border: 2px solid #000;
+`
+
+const desktopStyle = css`
   width: 320px !important;
   padding-bottom: 0 !important;
   max-height: 568px;
   overflow: auto;
+`
+
+const StyledEVC = styled(ElectionVotesComparison)`
+  ${({ isMobile }) => (isMobile ? mobileStyle : desktopStyle)};
 
   header {
     border-top: unset;
@@ -38,7 +56,13 @@ const StyledEVC = styled(ElectionVotesComparison)`
   }
 `
 
-const ElectionVoteComparisonPanel = ({ onEvcSelected }) => {
+/**
+ *  @param {Object} props
+ *  @param {Function} props.onEvcSelected
+ *  @param {boolean} [props.isMobile]
+ *  @returns {React.ReactElement}
+ */
+const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
   const evcScrollTo = useAppSelector(
     (state) => state.election.control.evcScrollTo
   )
@@ -56,25 +80,41 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected }) => {
   } else {
     election = evcData[0]
   }
-  console.log('election', evcData)
-
-  return (
-    election &&
-    (election.districts?.length || election.propositions?.length) && (
-      <ElectionVotesComparisonWrapper title={'縣市議員候選人'}>
-        <StyledEVC
-          electionType={electionType}
-          election={election}
-          device="mobile"
-          theme="electionMap"
-          scrollTo={evcScrollTo}
-          onChange={(selector, value) => {
-            onEvcSelected(value)
-          }}
-        />
-      </ElectionVotesComparisonWrapper>
-    )
+  const shouldShowEVC = Boolean(
+    election && (election.districts?.length || election.propositions?.length)
   )
+  const electionVoteComparisonJsx = isMobile ? (
+    <ElectionVotesComparisonMobileWrapper>
+      <StyledEVC
+        electionType={electionType}
+        election={election}
+        device="mobile"
+        theme="electionMap"
+        scrollTo={evcScrollTo}
+        onChange={(selector, value) => {
+          onEvcSelected(value)
+        }}
+        isMobile={isMobile} //for styled-component
+      />
+    </ElectionVotesComparisonMobileWrapper>
+  ) : (
+    <ElectionVotesComparisonDesktopWrapper title={'縣市議員候選人'}>
+      <StyledEVC
+        electionType={electionType}
+        election={election}
+        device="mobile"
+        theme="electionMap"
+        scrollTo={evcScrollTo}
+        onChange={(selector, value) => {
+          console.log('value', value)
+          onEvcSelected(value)
+        }}
+        isMobile={isMobile} //for styled-component
+      />
+    </ElectionVotesComparisonDesktopWrapper>
+  )
+
+  return shouldShowEVC && <>{electionVoteComparisonJsx}</>
 }
 
 export default ElectionVoteComparisonPanel

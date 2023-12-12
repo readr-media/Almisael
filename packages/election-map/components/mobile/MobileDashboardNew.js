@@ -1,9 +1,10 @@
 import { useState, useEffect, useMemo } from 'react'
 import { electionNamePairs } from '../../utils/election'
+import styled from 'styled-components'
 import Selector from './Selector'
 import ElectionSelector from './ElectionSelector'
 import ReferendumSelector from './ReferendumSelector'
-import styled from 'styled-components'
+import ElectionVoteComparisonPanel from '../ElectionVoteComparisonPanel'
 
 import YearComparisonMenuBar from './YearComparisonMenuBar'
 import { useDistrictMapping } from '../../hook/useDistrictMapping'
@@ -105,7 +106,7 @@ const ElectionSelectorWrapper = styled(DistrictSelectorWrapper)`
 /**
  * Dashboard for new election map, created in 2023.11.20
  */
-export const MobileDashboardNew = () => {
+export const MobileDashboardNew = ({ onEvcSelected }) => {
   const { districtMapping, hasDistrictMapping } = useDistrictMapping()
   // const [currentElection, setCurrentElection] = useState(ELECTION_TYPE[0])
   const dispatch = useAppDispatch()
@@ -126,7 +127,6 @@ export const MobileDashboardNew = () => {
   const [currentCountyCode, setCurrentCountyCode] = useState('')
   const [currentTownCode, setCurrentTownCode] = useState('')
   const [currentVillageCode, setCurrentVillageCode] = useState('')
-  const [currentOpenSelector, setCurrentOpenSelector] = useState('')
 
   /** @type {CountyData[]} */
   const allCounty = districtMapping.sub
@@ -386,15 +386,11 @@ export const MobileDashboardNew = () => {
             <ElectionSelector
               options={electionNamePairs}
               selectorType="electionType"
-              handleOpenSelector={setCurrentOpenSelector}
-              currentOpenSelector={currentOpenSelector}
             />
             {electionSubTypes && (
               <ElectionSelector
                 selectorType="electionSubType"
                 options={electionSubTypes}
-                handleOpenSelector={setCurrentOpenSelector}
-                currentOpenSelector={currentOpenSelector}
               />
             )}
             {electionsType === 'referendum' && !compareMode ? (
@@ -403,37 +399,34 @@ export const MobileDashboardNew = () => {
           </ElectionSelectorWrapper>
           <DistrictSelectorWrapper>
             <Selector
-              selectorType="districtNationAndCounty"
               options={optionsForFirstDistrictSelector}
               districtCode={currentCountyCode}
               onSelected={handleOnClick}
-              currentOpenSelector={currentOpenSelector}
-              handleOpenSelector={setCurrentOpenSelector}
               placeholderValue="台灣"
             ></Selector>
 
             <Selector
-              selectorType="districtTown"
               options={optionsForSecondDistrictSelector}
               districtCode={currentTownCode}
               onSelected={handleOnClick}
-              currentOpenSelector={currentOpenSelector}
-              handleOpenSelector={setCurrentOpenSelector}
               placeholderValue="-"
             ></Selector>
 
             <Selector
-              selectorType="districtVillage"
               options={optionsForThirdDistrictSelector}
               districtCode={currentVillageCode}
               onSelected={handleOnClick}
-              currentOpenSelector={currentOpenSelector}
-              handleOpenSelector={setCurrentOpenSelector}
               placeholderValue="-"
             ></Selector>
           </DistrictSelectorWrapper>
           <InfoboxContainer />
         </ContentWrapper>
+        {!compareMode && (
+          <ElectionVoteComparisonPanel
+            onEvcSelected={onEvcSelected}
+            isMobile={true}
+          />
+        )}
       </Wrapper>
     </>
   )
