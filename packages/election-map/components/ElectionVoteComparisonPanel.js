@@ -3,6 +3,10 @@ import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 import widgets from '@readr-media/react-election-widgets'
 import { useAppSelector } from '../hook/useRedux'
 
+/**
+ * @typedef {import('../consts/electionsConifg').ElectionType} ElectionType
+ */
+
 const ElectionVotesComparison = widgets.VotesComparison.ReactComponent
 
 const ElectionVotesComparisonDesktopWrapper = styled(CollapsibleWrapper)`
@@ -55,6 +59,36 @@ const StyledEVC = styled(ElectionVotesComparison)`
       electionType === 'referendum' && `max-height: 500px;`}
   }
 `
+/**
+ *
+ * @param {Object} election
+ * @param {ElectionType} electionType
+ * @returns {boolean}
+ */
+const computeShouldShowEVC = (election, electionType) => {
+  if (!election) {
+    return false
+  }
+  switch (electionType) {
+    case 'president':
+      return Array.isArray(election.candidates) && !!election.candidates.length
+    case 'mayor':
+      return Array.isArray(election.districts) && !!election.districts.length
+    //TODO: 立委
+    case 'legislator':
+      return false
+
+    case 'councilMember':
+      return Array.isArray(election.districts) && !!election.districts.length
+
+    case 'referendum':
+      return (
+        Array.isArray(election.propositions) && !!election.propositions.length
+      )
+    default:
+      return false
+  }
+}
 
 /**
  *  @param {Object} props
@@ -80,9 +114,8 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
   } else {
     election = evcData[0]
   }
-  const shouldShowEVC = Boolean(
-    election && (election.districts?.length || election.propositions?.length)
-  )
+  const shouldShowEVC = computeShouldShowEVC(election, electionType)
+
   const electionVoteComparisonJsx = isMobile ? (
     <ElectionVotesComparisonMobileWrapper>
       <StyledEVC
