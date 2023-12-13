@@ -1016,15 +1016,15 @@ export const prepareElectionData = async (
             // handle infobox data
             // subtype 'all' won't show infoboxData
             if (subtypeKey !== 'all') {
-              newInfoboxData.electionData = newMapData[0]?.districts.find(
-                (district) => {
-                  const levelCode =
-                    subtypeKey === 'normal'
-                      ? district.county + district.area
-                      : district.county + district.town
-                  return levelCode === levelControl.activeCode
-                }
-              )
+              newInfoboxData.electionData = newMapData[1]?.[
+                countyCode
+              ]?.districts?.find((district) => {
+                const levelCode =
+                  subtypeKey === 'normal'
+                    ? district.county + district.area
+                    : district.county + district.town
+                return levelCode === levelControl.activeCode
+              })
               newInfoboxData.isRunning = newMapData.isRunning
               newInfoboxData.isStarted = newMapData.isStarted
             }
