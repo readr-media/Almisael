@@ -1,16 +1,37 @@
 import { useState, useMemo, useEffect } from 'react'
 import axios from 'axios'
+import { environment } from '../consts/config'
+import { useAppSelector } from './useRedux'
+
+/**
+ * @typedef {import('../consts/electionsConifg').ElectionType} ElectionType
+ * @typedef {import('../consts/electionsConifg').Year} Year
+ */
+
+const gcsBaseUrl =
+  environment === 'dev'
+    ? 'https://whoareyou-gcs.readr.tw/elections-dev'
+    : 'https://whoareyou-gcs.readr.tw/elections'
 
 const fetchJson = async (url) => {
   const result = await axios.get(url)
   return result
 }
-const fetchDistrictJson = async () => {
-  const districtCodeJson =
-    'https://whoareyou-gcs.readr.tw/elections-dev/district-mapping/district/mapping.json'
+/**
+ *
+ * @param {Year} currentYear
+ * @param {ElectionType} electionType
+ * @returns
+ */
+const fetchDistrictJson = async (electionType, currentYear) => {
+  const mappingJsonPath =
+    electionType === 'legislator'
+      ? `/district-mapping/district-with-area/${electionType}/${currentYear.key}/mapping.json`
+      : '/district-mapping/district/mapping.json'
+  const url = `${gcsBaseUrl}${mappingJsonPath}`
 
   try {
-    const responses = await Promise.allSettled([fetchJson(districtCodeJson)])
+    const responses = await Promise.allSettled([fetchJson(url)])
 
     const responseJson = responses.map((response, i) => {
       if (response.status === 'fulfilled') {
@@ -76,19 +97,22 @@ const initialDistrictMapping = {
  */
 export const useDistrictMapping = () => {
   const [districtMapping, setDistrictMapping] = useState(initialDistrictMapping)
-
+  const currentYear = useAppSelector((state) => state.election.control.year)
+  const electionType = useAppSelector(
+    (state) => state.election.config.electionType
+  )
   const hasDistrictMapping = useMemo(() => {
     return districtMapping.sub.length > 0
   }, [districtMapping])
 
   useEffect(() => {
     const prepareDistrictMapping = async () => {
-      const responses = await fetchDistrictJson()
+      const responses = await fetchDistrictJson(electionType, currentYear)
       const [districtMapping] = responses
       setDistrictMapping(districtMapping.data)
     }
     prepareDistrictMapping()
-  }, [])
+  }, [currentYear, electionType])
 
   return { districtMapping, hasDistrictMapping }
 }

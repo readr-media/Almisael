@@ -16,7 +16,7 @@ const ElectionVotesComparisonDesktopWrapper = styled(CollapsibleWrapper)`
 `
 
 const ElectionVotesComparisonMobileWrapper = styled.div`
-  margin-top: 20px;
+  margin: 20px 15px 0;
 `
 const mobileStyle = css`
   margin: 0 auto;
