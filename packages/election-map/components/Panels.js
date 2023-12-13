@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import ElectionVoteComparisonPanel from './ElectionVoteComparisonPanel'
-import { countyMappingData } from '../consts/electionsConifg'
 import { SeatsPanel } from './SeatsPanel'
 import { MapNavigateButton } from './MapNavigateButton'
 import { MapLocations } from './MapLocations'
@@ -82,6 +81,12 @@ export const Panels = ({ onEvcSelected }) => {
   let seats
   if (electionConfig.electionType === 'councilMember') {
     seats = seatData[1][levelControl.countyCode]
+  } else if (electionConfig.electionType === 'legislator') {
+    if (subtype.key === 'normal') {
+      seats = seatData[1][levelControl.countyCode]
+    } else {
+      seats = seatData[0]
+    }
   }
 
   const electionType = electionConfig.electionType
@@ -105,19 +110,7 @@ export const Panels = ({ onEvcSelected }) => {
             <InfoboxPanels />
           </>
         )}
-        {!compareMode && (
-          <SeatsPanel
-            meta={{
-              ...electionConfig.meta.seat,
-              year: year?.key,
-              location: countyMappingData.find(
-                (countyData) =>
-                  countyData.countyCode === levelControl.countyCode
-              )?.countyName,
-            }}
-            data={seats}
-          />
-        )}
+        {!compareMode && <SeatsPanel />}
         {!number && <StyledYearSelect key={electionType + year.key} />}
         <PlaceHolder electionType={electionType} />
         {number && (
