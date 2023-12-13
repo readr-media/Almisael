@@ -8,7 +8,8 @@ const gcsBaseUrl =
     ? 'https://whoareyou-gcs.readr.tw/elections-dev'
     : 'https://whoareyou-gcs.readr.tw/elections'
 
-const DataLoader = widgets.VotesComparison.DataLoader
+const EVCDataLoader = widgets.VotesComparison.DataLoader
+const SCDataLoader = widgets.SeatChart.DataLoader
 
 /**
  * @typedef {import("../consts/electionsConifg").ElectionType} ElectionType
@@ -155,21 +156,52 @@ const DataLoader = widgets.VotesComparison.DataLoader
 
 /**
  * Fetch seat data in specific level and code (fileName).
- * @param {Object} options - Options for fetching seat data.
- * @param {ElectionType} options.electionType - The type of election.
+ * @param {Object} options - Options for fetching council member seat data.
  * @param {number} options.yearKey - The key representing the year.
- * @param {string} options.folderName - The name of the folder.
- * @param {string} options.fileName - The name of the file.
+ * @param {string} options.countyCode - The code of the county.
  * @returns {Promise<SeatsData>} A promise that resolves to the fetched seat data.
  */
-export const fetchSeatData = async ({
-  electionType,
+export const fetchCouncilMemberSeatData = async ({ yearKey, countyCode }) => {
+  const loader = new SCDataLoader({ version: 'v1', apiUrl: gcsBaseUrl })
+  const data = await loader.loadCouncilMemberData({ year: yearKey, countyCode })
+  return data
+}
+
+/**
+ * @param {Object} options - Options for fetching legislator seat data
+ * @param {string} options.subtype - The subtype of the legislator.
+ * @param {number} options.yearKey - The key representing the year.
+ * @param {string} [options.countyCode] - The code of the county, only used for normal legislator.
+ */
+export const fetchLegislatorSeatData = async ({
+  subtype,
   yearKey,
-  folderName,
-  fileName,
+  countyCode,
 }) => {
-  const seatDataUrl = `${gcsBaseUrl}/${yearKey}/${electionType}/seat/${folderName}/${fileName}.json`
-  const { data } = await axios.get(seatDataUrl)
+  const loader = new SCDataLoader({ version: 'v1', apiUrl: gcsBaseUrl })
+  let data
+  switch (subtype) {
+    case 'all':
+      data = await loader.loadAllLegislatorData({ year: yearKey })
+      break
+    case 'normal':
+      data = await loader.loadAreaLegislatorData({ year: yearKey, countyCode })
+      break
+    case 'mountainIndigenous':
+      data = await loader.loadMountainIndigenousLegislatorData({
+        year: yearKey,
+      })
+      break
+    case 'plainIndigenous':
+      data = await loader.loadPlainIndigenousLegislatorData({ year: yearKey })
+      break
+    case 'party':
+      data = await loader.loadPartyLegislatorData({ year: yearKey })
+      break
+    default:
+      console.error('fetchLegislatorSeatData without valid subtype', subtype)
+      break
+  }
   return data
 }
 
@@ -180,7 +212,7 @@ export const fetchSeatData = async ({
  * @returns {Promise<Object>}
  */
 export const fetchPresidentEvcData = async ({ yearKey }) => {
-  const loader = new DataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
+  const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadPresidentData({
     year: yearKey,
   })
@@ -194,7 +226,7 @@ export const fetchPresidentEvcData = async ({ yearKey }) => {
  * @returns {Promise<Object>}
  */
 export const fetchMayorEvcData = async ({ yearKey }) => {
-  const loader = new DataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
+  const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadMayorData({
     year: yearKey,
   })
@@ -214,7 +246,7 @@ export const fetchCouncilMemberEvcData = async ({
   district,
   subtypeKey,
 }) => {
-  const loader = new DataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
+  const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadCouncilMemberDataForElectionMapProject({
     year: yearKey,
     district,
@@ -234,7 +266,7 @@ export const fetchCouncilMemberEvcData = async ({
  * @returns {Promise<Object>}
  */
 export const fetchReferendumEvcData = async ({ yearKey }) => {
-  const loader = new DataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
+  const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadReferendumData({
     year: yearKey,
   })
@@ -245,19 +277,20 @@ export const fetchReferendumEvcData = async ({ yearKey }) => {
  * Fetch legislator election votes comparison data, need to import the return type from package '@readr-media/react-election-widgets'.
  * @param {Object} options - Options for fetching legislator evc data.
  * @param {number} options.yearKey - The key representing the year.
- * @param {string} options.district - The name of the district (county).
- * @param {'plainIndigenous' | 'mountainIndigenous' | 'party' | 'district'} options.subtypeKey - The key of the subtype of the election.
+ * @param {string} [options.district] - The name of the district (county).
+ * @param {string} options.subtypeKey - The key of the subtype of the election.
  * @returns {Promise<Object>}
  */
 export const fetchLegislatorEvcData = async ({
   yearKey,
   subtypeKey,
-  district,
+  district = '',
 }) => {
-  const loader = new DataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
+  let subtype = subtypeKey === 'normal' ? 'district' : subtypeKey
+  const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadLegislatorData({
     year: yearKey,
-    subtype: subtypeKey,
+    subtype,
     district,
   })
 
@@ -365,7 +398,25 @@ export const fetchLegislatorMapData = async ({
   folderName,
   fileName,
 }) => {
-  const mapDataUrl = `${gcsBaseUrl}/${yearKey}/${electionType}/map/${folderName}/${subtypeKey}/${fileName}.json`
+  let transformedSubtype
+  switch (subtypeKey) {
+    case 'normal':
+      transformedSubtype = 'normal'
+      break
+    case 'mountainIndigenous':
+      transformedSubtype = 'mountain-indigenous'
+      break
+    case 'plainIndigenous':
+      transformedSubtype = 'plain-indigenous'
+      break
+    case 'party':
+      transformedSubtype = 'party'
+      break
+
+    default:
+      break
+  }
+  const mapDataUrl = `${gcsBaseUrl}/${yearKey}/${electionType}/map/${folderName}/${transformedSubtype}/${fileName}.json`
   const { data } = await axios.get(mapDataUrl)
   return data
 }

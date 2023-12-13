@@ -1809,10 +1809,10 @@
     serialize-javascript "^6.0.0"
     uuid "^8.3.2"
 
-"@readr-media/react-election-widgets@1.1.1-alpha.2":
-  version "1.1.1-alpha.2"
-  resolved "https://registry.yarnpkg.com/@readr-media/react-election-widgets/-/react-election-widgets-1.1.1-alpha.2.tgz#91bfb89e4fae9b766b90ee4c08fc8f7302916384"
-  integrity sha512-z8a6KgY/ryvpSfnjzbkNJYGFal0qt9GAhQKmZ1dPvCHOCycRD0xBOjzgnCjjkhu7kfljIJJoyoqtXUWcHydR3w==
+"@readr-media/react-election-widgets@1.1.1-alpha.6":
+  version "1.1.1-alpha.6"
+  resolved "https://registry.yarnpkg.com/@readr-media/react-election-widgets/-/react-election-widgets-1.1.1-alpha.6.tgz#4886527d84726e21322c9cfe2e02ad00ffc4e3a2"
+  integrity sha512-bZ5Trd0nsqq0Pbbcad1Jv5EiXTVd9Hvq9MrIbBNiocMKPowYuRxiDwEVRWf5NWtbOU8JGzU5C/Nx+1Z4FyDEkg==
   dependencies:
     "@twreporter/errors" "^1.1.1"
     axios "^0.27.2"

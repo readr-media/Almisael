@@ -6,20 +6,25 @@ import {
   fetchMayorEvcData,
   fetchMayorMapData,
   fetchCouncilMemberEvcData,
-  fetchSeatData,
+  fetchCouncilMemberSeatData,
   fetchCouncilMemberMapData,
   fetchReferendumEvcData,
   fetchReferendumMapData,
+  fetchLegislatorEvcData,
+  fetchLegislatorMapData,
+  fetchLegislatorSeatData,
 } from './fetchElectionData'
 
 /**
- * @typedef {{isRunning: boolean, isStarted: boolean, [key: number]: null | Object}} ModuleData
+ * @typedef {{ [key: number]: null | Object}} ModuleData
+ * @typedef {{isRunning: boolean, isStarted: boolean, [key: number]: null | Object}} MapData
+ * @typedef {{all: null | Object, [key: number]: null | Object}} SeatData
  *
  * Representing the data for an election in a year. For referendum it represents the data in one number(案號).
  * @typedef {Object} ElectionData
- * @property {ModuleData} mapData
+ * @property {MapData} mapData
  * @property {ModuleData} evcData
- * @property {ModuleData} seatData
+ * @property {SeatData} seatData
  *
  * @typedef {{[key: number]: {
  * normal: ElectionData
@@ -63,18 +68,29 @@ import {
  * */
 
 /** @type {ModuleData} */
-export const defaultData = {
-  isRunning: false,
-  isStarted: true,
+const defaultModuleData = {
   0: null,
   1: {},
   2: {},
 }
 
+/** @type {MapData} */
+const defaultMapData = {
+  ...defaultModuleData,
+  isRunning: false,
+  isStarted: true,
+}
+
+/** @type {SeatData} */
+const defaultSeatData = {
+  ...defaultModuleData,
+  all: null, // only used in legislator to store cross subtype seats
+}
+
 export const defaultElectionData = {
-  mapData: defaultData,
-  evcData: defaultData,
-  seatData: defaultData,
+  mapData: defaultMapData,
+  evcData: defaultModuleData,
+  seatData: defaultSeatData,
 }
 
 /* electionsData
@@ -86,20 +102,18 @@ export const defaultElectionData = {
          isStarted: false,
          0: countryMapData,
          1: {
-           [countyId]: countyMapData
+           [countyCode]: countyMapData
          },
          2: {
-           [townId]: townMapData
+           [townCode]: townMapData
          }
        },
        evcData {
-         isRunning: false,
          0: countryEvcData,
          1: {},
          2: {}
        },
        seatData {
-         isRunning: false,
          0: null,
          1: {},
          2: {}
@@ -113,14 +127,13 @@ export const defaultElectionData = {
          isStarted: false,
          0: countryMapData,
          1: {
-           [countyId]: countyMapData
+           [countyCode]: countyMapData
          },
          2: {
-           [townId]: townMapData
+           [townCode]: townMapData
          }
        }
        evcData {
-         isRunning: false,
          0: countryEvcData,
          1: {},
          2: {}
@@ -139,85 +152,75 @@ export const defaultElectionData = {
          mapData: {
            isRunning: false,
            isStarted: false,
-           0: countryMapData,
+           0: null,
            1: {
-             [countyId]: countyMapData
+             [countyCode]: countyMapData
            },
            2: {
-             [townId]: townMapData
+             [areaCode]: areaMapData
            }
          }
          evcData {
-           isRunning: false,
            0: null,
            1: {
-             [countyId]: countyEvcData
+             [countyCode]: countyEvcData
            },
            2: {}
          }
          seatData {
-           isRunning: false,
-           0: countrySeatData,
-           1: {},
+           all: allSeatData,
+           0: null,
+           1: {
+            [countyCode]: countySeatData
+           },
            2: {}
          },
        },
-       indigenous: {
+       mountainIndigenous |  plainIndigenous | party: {
          mapData: {
            isRunning: false,
            isStarted: false,
            0: countryMapData,
            1: {
-             [countyId]: countyMapData
+             [countyCode]: countyMapData
            },
            2: {
-             [townId]: townMapData
+             [townCode]: townMapData
            }
          }
          evcData {
-           isRunning: false,
-           isStarted: false,
-           0: null,
-           1: {
-             [countyId]: countyEvcData
-           },
+           0: countryEvcData,
+           1: {},
            2: {}
          }
          seatData {
-           isRunning: false,
+           all: allSeatData,
            0: countrySeatData,
            1: {},
            2: {}
          },
-       }
-     },
-   },
-   legislatorParty: {
-     2020: {
-       mapData: {
-         isRunning: false,
-         isStarted: false,
-         0: countryMapData,
-         1: {
-           [countyId]: countyMapData
-         },
-         2: {
-           [townId]: townMapData
-         }
-       }
-       evcData {
-         isRunning: false,
-         0: countryEvcData,
-         1: {},
-         2: {}
-       }
-       seatData {
-         isRunning: false,
-         0: null,
-         1: {},
-         2: {}
        },
-     }
+       all: {
+         mapData: {
+           isRunning: false,
+           isStarted: false,
+           0: null,
+           1: {},
+           2: {}
+         }
+         evcData {
+           0: null,
+           1: {},
+           2: {}
+         }
+         seatData {
+           all: allSeatData,
+           0: null,
+           1: {},
+           2: {}
+         },
+       },
+     },
    },
    councilMember: {
      2022: {
@@ -225,27 +228,26 @@ export const defaultElectionData = {
          mapData: {
            isRunning: false,
            isStarted: false,
-           0: countryMapData,
+           0: null,
            1: {
-             [countyId]: countyMapData
+             [countyCode]: countyMapData
            },
            2: {
-             [townId]: townMapData
+             [townCode]: townMapData
            }
          }
          evcData {
-           isRunning: false,
            0: null,
            1: {
-             [countyId]: countyEvcData
+             [countyCode]: countyEvcData
            },
            2: {}
          }
          seatData {
-           isRunning: false,
+           all: null,
            0: null,
            1: {
-             [countyId]: countySeatData
+             [countyCode]: countySeatData
            },
            2: {}
          },
@@ -254,27 +256,26 @@ export const defaultElectionData = {
          mapData: {
            isRunning: false,
            isStarted: false,
-           0: countryMapData,
+           0: null,
            1: {
-             [countyId]: countyMapData
+             [countyCode]: countyMapData
            },
            2: {
-             [townId]: townMapData
+             [townCode]: townMapData
            }
          }
          evcData {
-           isRunning: false,
            0: null,
            1: {
-             [countyId]: countyEvcData
+             [countyCode]: countyEvcData
            },
            2: {}
          }
          seatData {
-           isRunning: false,
+           all: null,
            0: null,
            1: {
-             [countyId]: countySeatData
+             [countyCode]: countySeatData
            },
            2: {}
          },
@@ -289,10 +290,10 @@ export const defaultElectionData = {
            isStarted: false,
            0: countryMapData,
            1: {
-             [countyId]: countyMapData
+             [countyCode]: countyMapData
            },
            2: {
-             [townId]: townMapData
+             [townCode]: townMapData
            }
          }
          evcData {
@@ -318,10 +319,10 @@ export const defaultElectionData = {
            isStarted: false,
            0: countryMapData,
            1: {
-             [countyId]: countyMapData
+             [countyCode]: countyMapData
            },
            2: {
-             [townId]: townMapData
+             [townCode]: townMapData
            }
          }
          evcData {
@@ -491,7 +492,7 @@ export const prepareElectionData = async (
     evcData: newEvcData,
     seatData: newSeatData,
   } = newElectionData
-  const { level: currentLevel, townCode, countyCode } = levelControl
+  const { level: currentLevel, townCode, areaCode, countyCode } = levelControl
   const { electionType } = electionConfig
   let newLastUpdate = lastUpdate
 
@@ -780,7 +781,273 @@ export const prepareElectionData = async (
 
         break
       case 'legislator':
-        // to be implemented
+        switch (level) {
+          case 0:
+            // handle evc data
+            /**
+             * 1. evc will not show in compare mode
+             * 2. only subtypes in 'mountainIndigenous', 'plainIndigenous' and 'party' show evc in level 0
+             */
+            if (
+              !compareMode &&
+              ['mountainIndigenous', 'plainIndigenous', 'party'].includes(
+                subtypeKey
+              )
+            ) {
+              // fetch evcData if in refetch mode or no specific evc data
+              if (isRefetching || (!isRefetching && !newEvcData[level])) {
+                try {
+                  const data = await fetchLegislatorEvcData({
+                    yearKey,
+                    subtypeKey,
+                  })
+                  newEvcData[level] = data
+                } catch (error) {
+                  console.error(error)
+                }
+              }
+            }
+            // handle seat data
+            // seat chart will not show in compare mode
+            if (!compareMode) {
+              // handle all legislator seat data
+              // fetch all seatData if in refetch mode or no specific seat data
+              if (isRefetching || (!isRefetching && !newSeatData.all)) {
+                try {
+                  const data = await fetchLegislatorSeatData({
+                    subtype: 'all',
+                    yearKey,
+                  })
+                  newSeatData.all = data
+                } catch (error) {
+                  console.error(error)
+                }
+              }
+              // handle country level seat data
+              //only subtypes in 'mountainIndigenous', 'plainIndigenous' and 'party' show seat in level 0
+              if (
+                ['mountainIndigenous', 'plainIndigenous', 'party'].includes(
+                  subtypeKey
+                )
+              ) {
+                // fetch seatData if in refetch mode or no specific seat data
+                if (isRefetching || (!isRefetching && !newSeatData[level])) {
+                  try {
+                    const data = await fetchLegislatorSeatData({
+                      subtype: subtypeKey,
+                      yearKey,
+                    })
+                    newSeatData[level] = data
+                  } catch (error) {
+                    console.error(error)
+                  }
+                }
+              }
+            }
+
+            // handle map data
+            //only subtypes in 'mountainIndigenous', 'plainIndigenous' and 'party' show mapData in level 0
+            if (
+              ['mountainIndigenous', 'plainIndigenous', 'party'].includes(
+                subtypeKey
+              )
+            ) {
+              // fetch mapData if in refetch mode or no specific map data
+              if (isRefetching || (!isRefetching && !newMapData[level])) {
+                try {
+                  const data = await fetchLegislatorMapData({
+                    electionType,
+                    yearKey,
+                    subtypeKey,
+                    folderName:
+                      electionConfig.meta.map.folderNames[subtypeKey][level],
+                    fileName: electionConfig.meta.map.fileNames[level],
+                  })
+                  newMapData[level] = data
+                  newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
+                  newLastUpdate = data.updatedAt
+                } catch (error) {
+                  console.error(error)
+                }
+              }
+            }
+
+            // handle infobox data
+            //only subtypes in 'mountainIndigenous', 'plainIndigenous' and 'party' show infoboxData in level 0
+            if (
+              ['mountainIndigenous', 'plainIndigenous', 'party'].includes(
+                subtypeKey
+              )
+            ) {
+              newInfoboxData.electionData = newMapData[level]?.summary
+              newInfoboxData.isRunning = newMapData.isRunning
+              newInfoboxData.isStarted = newMapData.isStarted
+            }
+            break
+          case 1:
+            // handle evc data
+            /**
+             * 1. evc will not show in compare mode
+             * 2. only subtype 'normal' starts to show evc in level 1
+             */
+            if (!compareMode && subtypeKey === 'normal') {
+              // fetch evcData if in refetch mode or no specific evc data
+              if (
+                isRefetching ||
+                (!isRefetching && !newEvcData[level][countyCode])
+              ) {
+                try {
+                  const data = await fetchLegislatorEvcData({
+                    yearKey,
+                    subtypeKey,
+                    district: countyMappingData.find(
+                      (countyData) => countyData.countyCode === countyCode
+                    ).countyNameEng,
+                  })
+                  newEvcData[level][countyCode] = data
+                } catch (error) {
+                  console.error(error)
+                }
+              }
+            }
+
+            // handle county level seat data
+            /**
+             * 1. seat chart will not show in compare mode
+             * 2. only subtype 'normal'
+             */
+            if (!compareMode && subtypeKey === 'normal') {
+              // fetch seatData if in refetch mode or no specific seat data
+              if (
+                isRefetching ||
+                (!isRefetching && !newSeatData[level][countyCode])
+              ) {
+                try {
+                  const data = await fetchLegislatorSeatData({
+                    subtype: subtypeKey,
+                    yearKey,
+                    countyCode,
+                  })
+                  newSeatData[level][countyCode] = data
+                } catch (error) {
+                  console.error(error)
+                }
+              }
+            }
+
+            // handle map data
+            // subtype 'all' won't show mapData
+            if (subtypeKey !== 'all') {
+              // fetch mapData if in refetch mode or no specific map data
+              if (
+                isRefetching ||
+                (!isRefetching && !newMapData[level][countyCode])
+              ) {
+                try {
+                  const data = await fetchLegislatorMapData({
+                    electionType,
+                    yearKey,
+                    subtypeKey,
+                    folderName:
+                      electionConfig.meta.map.folderNames[subtypeKey][level],
+                    fileName: countyCode,
+                  })
+                  newMapData[level][countyCode] = data
+                  newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
+                  newLastUpdate = data.updatedAt
+                } catch (error) {
+                  console.error(error)
+                }
+              }
+            }
+
+            // handle infobox data
+            // subtpe 'normal' starts to show infoboxData in level 1
+            if (subtypeKey === 'normal') {
+              newInfoboxData.electionData =
+                newMapData[level][countyCode]?.districts
+              newInfoboxData.isRunning = newMapData.isRunning
+              newInfoboxData.isStarted = newMapData.isStarted
+            } else if (
+              ['mountainIndigenous', 'plainIndigenous', 'party'].includes(
+                subtypeKey
+              )
+            ) {
+              newInfoboxData.electionData = newMapData[0]?.districts.find(
+                (district) => district.county === levelControl.activeCode
+              )
+              newInfoboxData.isRunning = newMapData.isRunning
+              newInfoboxData.isStarted = newMapData.isStarted
+            }
+
+            break
+          case 2:
+            // handle map data
+            // subtype 'all' won't show mapData
+            if (subtypeKey !== 'all') {
+              // only subtype 'normal' use areaCode as level 2
+              const levelCode = subtypeKey === 'normal' ? areaCode : townCode
+              // fetch mapData if in refetch mode or no specific map data
+              if (
+                isRefetching ||
+                (!isRefetching && !newMapData[level][levelCode])
+              ) {
+                try {
+                  const data = await fetchLegislatorMapData({
+                    electionType,
+                    yearKey,
+                    subtypeKey,
+                    folderName:
+                      electionConfig.meta.map.folderNames[subtypeKey][level],
+                    fileName: levelCode,
+                  })
+                  newMapData[level][levelCode] = data
+                  newMapData.isRunning = data.is_running
+                  newMapData.isStarted = data.is_started
+                  newLastUpdate = data.updatedAt
+                } catch (error) {
+                  console.error(error)
+                }
+              }
+            }
+
+            // handle infobox data
+            // subtype 'all' won't show infoboxData
+            if (subtypeKey !== 'all') {
+              newInfoboxData.electionData = newMapData[0]?.districts.find(
+                (district) => {
+                  const levelCode =
+                    subtypeKey === 'normal'
+                      ? district.county + district.area
+                      : district.county + district.town
+                  return levelCode === levelControl.activeCode
+                }
+              )
+              newInfoboxData.isRunning = newMapData.isRunning
+              newInfoboxData.isStarted = newMapData.isStarted
+            }
+            break
+          case 3:
+            // handle infobox data only
+            // subtype 'all' won't show infoboxData
+            if (subtypeKey !== 'all') {
+              newInfoboxData.electionData = newMapData[2][
+                townCode
+              ]?.districts.find(
+                (district) =>
+                  district.county + district.town + district.vill ===
+                  levelControl.activeCode
+              )
+              newInfoboxData.isRunning = newMapData.isRunning
+              newInfoboxData.isStarted = newMapData.isStarted
+            }
+            break
+
+          default:
+            break
+        }
         break
       case 'councilMember':
         switch (level) {
@@ -819,11 +1086,9 @@ export const prepareElectionData = async (
                 (!isRefetching && !newSeatData[level][countyCode])
               ) {
                 try {
-                  const data = await fetchSeatData({
-                    electionType,
+                  const data = await fetchCouncilMemberSeatData({
                     yearKey,
-                    folderName: 'county',
-                    fileName: countyCode,
+                    countyCode,
                   })
                   newSeatData[level][countyCode] = data
                 } catch (error) {
