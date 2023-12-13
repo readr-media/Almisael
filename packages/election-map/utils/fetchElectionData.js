@@ -288,7 +288,6 @@ export const fetchLegislatorEvcData = async ({
 }) => {
   let subtype = subtypeKey === 'normal' ? 'district' : subtypeKey
   const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
-  console.log('subtype', subtype, district)
   const data = await loader.loadLegislatorData({
     year: yearKey,
     subtype,

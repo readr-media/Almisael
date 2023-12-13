@@ -157,30 +157,6 @@ export const electionsConfig = [
       },
     },
   },
-  // {
-  //   electionType: 'legislatorParty',
-  //   electionName: '立法委員（不分區）',
-  //   years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }],
-  //   meta: {
-  //     evc: { district: 'all' },
-  //     map: {
-  //       folderNames: {
-  //         0: '',
-  //         1: 'county',
-  //         2: 'town',
-  //       },
-  //       fileNames: {
-  //         0: 'country',
-  //         1: '',
-  //         2: '',
-  //       },
-  //     },
-  //     seat: {
-  //       wrapperTitle: '立法委員席次圖',
-  //       componentTitle: '立法委員選舉',
-  //     },
-  //   },
-  // },
   {
     electionType: 'councilMember',
     subtypes: [
