@@ -103,10 +103,16 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
   const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
+  const subtype = useAppSelector((state) => state.election.control.subtype)
   const countyCode = useAppSelector(
     (state) => state.election.control.level.countyCode
   )
   const evcData = useAppSelector((state) => state.election.data.evcData)
+  let wrapperTitle = useAppSelector(
+    (state) => state.election.config.meta.evc.wrapperTitle
+  )
+  wrapperTitle =
+    typeof wrapperTitle === 'string' ? wrapperTitle : wrapperTitle[subtype.key]
 
   let election
   if (electionType === 'councilMember') {
@@ -131,7 +137,7 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
       />
     </ElectionVotesComparisonMobileWrapper>
   ) : (
-    <ElectionVotesComparisonDesktopWrapper title={'縣市議員候選人'}>
+    <ElectionVotesComparisonDesktopWrapper title={wrapperTitle}>
       <StyledEVC
         electionType={electionType}
         election={election}
