@@ -208,7 +208,7 @@ export const Map = ({
     dispatch(electionActions.resetLevelControl())
     dispatch(mapActions.resetMapFeature())
     dispatch(mapActions.resetMapUpperLevelId())
-    dispatch(mapActions.resetUiDistrictNames)
+    dispatch(mapActions.resetUiDistrictNames())
   }
 
   const countyClicked = (feature) => {
