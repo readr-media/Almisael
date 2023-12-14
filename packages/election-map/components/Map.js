@@ -18,6 +18,18 @@ const SVG = styled.svg`
     pointer-events: none;
   }
 `
+
+/**
+ *
+ * @param {Object} props
+ * @param {{width: number, height: number}} props.dimension
+ * @param {import('../store/map-slice').GeoJsons} props.geoJsons
+ * @param {string} props.id
+ * @param {Function} props.setTooltip
+ * @param {import('../utils/electionsData').ElectionData} props.electionData
+ * @param {boolean} props.mapColor
+ * @returns {JSX.Element}
+ */
 export const Map = ({
   dimension,
   geoJsons,
@@ -43,10 +55,10 @@ export const Map = ({
   const areaName = useAppSelector(
     (state) => state.map.ui.districtNames.areaName
   )
-
+  const subtype = useAppSelector((state) => state.election.control.subtype)
   const displayingDistricts = useMemo(() => {
     let displayingTowns, displayingAreas, displayingVillages
-    if (electionType === 'legislator') {
+    if (electionType === 'legislator' && subtype?.key === 'normal') {
       if (districtMapping.districtWithArea[year.key]) {
         const districtWithAreaMapping =
           districtMapping.districtWithArea[year.key]
@@ -123,6 +135,7 @@ export const Map = ({
     districtMapping.districtWithArea,
     electionType,
     rawTopoJson,
+    subtype?.key,
     townCode,
     towns,
     villages,
@@ -367,20 +380,26 @@ export const Map = ({
     )
   }
 
-  // eslint-disable-next-line no-unused-vars
-  const getCountyColor = (countyCode) => {
+  /**
+   * Every county map will call this function and bring its countyCode to get the color.
+   * County maps will show for every level.
+   * @param {string} mapCountyCode - the code of a town map
+   * @returns {string}
+   */
+  const getCountyColor = (mapCountyCode) => {
     if (!mapColor || !electionData[0]) {
       return defaultColor
     }
 
-    if (activeCode && activeCode !== countyCode) {
+    // By pass when activeCode exists and is not countyCode. (Only country level and  county level matters.)
+    if (activeCode && activeCode !== mapCountyCode) {
       return defaultColor
     }
 
     if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
         electionData[0]?.districts?.find(
-          (district) => district.county === countyCode
+          (district) => district.county === mapCountyCode
         ) || {}
       if (agreeRate) {
         const agree = agreeRate >= disagreeRate
@@ -395,7 +414,7 @@ export const Map = ({
     }
 
     const countyCandidates = electionData[0]?.districts?.find(
-      (district) => district.county === countyCode
+      (district) => district.county === mapCountyCode
     )?.candidates
     if (countyCandidates) {
       const winningCandidate = getWinningCandidate(countyCandidates)
@@ -410,14 +429,20 @@ export const Map = ({
     return defaultColor
   }
 
-  // eslint-disable-next-line no-unused-vars
-  const getTownColor = (townCode) => {
-    const countyCode = townCode.slice(0, -3)
+  /**
+   * Every town map will call this function and bring its townCode to get the color.
+   * Town maps will show only when level is greater than 1 (county level, town level, village level).
+   * @param {string} mapTownCode - the code of a town map
+   * @returns {string}
+   */
+  const getTownColor = (mapTownCode) => {
+    const countyCode = mapTownCode.slice(0, -3)
 
     if (!mapColor || !electionData[1]) {
       return defaultColor
     }
 
+    // By pass when activeCode is not countyCode. (Only county level matters.)
     if (activeCode && activeCode !== countyCode) {
       return defaultColor
     }
@@ -425,7 +450,7 @@ export const Map = ({
     if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
         electionData[1][countyCode]?.districts?.find(
-          (district) => district.county + district.town === townCode
+          (district) => district.county + district.town === mapTownCode
         ) || {}
       if (agreeRate) {
         const agree = agreeRate >= disagreeRate
@@ -439,26 +464,8 @@ export const Map = ({
       }
     }
 
-    if (electionType === 'legislator') {
-      // const constituencyCandidates = electionData[1].districts.find(
-      //   (district) => district.county + district.area + '0' === townCode
-      // )?.candidates
-      const constituencyCandidates = electionData[1].districts[0].candidates
-
-      if (constituencyCandidates) {
-        const winningCandidate = getWinningCandidate(constituencyCandidates)
-        if (winningCandidate) {
-          const color = getGradiantPartyColor(
-            winningCandidate.party,
-            winningCandidate.tksRate
-          )
-          return color
-        }
-      }
-    }
-
     const townCandidates = electionData[1][countyCode]?.districts?.find(
-      (district) => district.county + district.town === townCode
+      (district) => district.county + district.town === mapTownCode
     )?.candidates
 
     if (townCandidates) {
@@ -474,55 +481,118 @@ export const Map = ({
     return defaultColor
   }
 
-  const getAreaColor = (areaCode) => {
-    const countyCode = areaCode.slice(0, -2)
+  /**
+   * Every area map will call this function and bring its areaCode to get the color.
+   * Area maps will show only when level is greater than 1 (county level, area level, village level) and the election type is normal legislator.
+   * @param {string} mapAreaCode - the code of a area map
+   * @returns {string}
+   */
+  const getAreaColor = (mapAreaCode) => {
+    const countyCode = mapAreaCode.slice(0, -2)
     if (!mapColor || !electionData[1]) {
       return defaultColor
     }
 
+    // By pass when activeCode is not countyCode. (Only county level matters.)
     if (activeCode && activeCode !== countyCode) {
       return defaultColor
+    }
+
+    // Only normal legislator will show area map and use this function.
+    if (electionType === 'legislator') {
+      // Try to find the area candidates from the countyCode map data.
+      const areaCandidates = electionData[1][countyCode]?.districts?.find(
+        (district) => district.county + district.area === mapAreaCode
+      )?.candidates
+      if (areaCandidates) {
+        const winningCandidate = getWinningCandidate(areaCandidates)
+        if (winningCandidate) {
+          const color = getGradiantPartyColor(
+            winningCandidate.party,
+            winningCandidate.tksRate
+          )
+          return color
+        }
+      }
     }
 
     // need to implement logic for specific color
     return defaultColor
   }
 
-  // eslint-disable-next-line no-unused-vars
-  const getVillageColor = (villCode) => {
-    const townCode = villCode.slice(0, -3)
+  /**
+   * Every village map will call this function and bring its villCode to get the color.
+   * Village maps will show only when level is greater than 2 (town/area level).
+   * @param {string} mapVillCode - the code of a village map
+   * @returns {string}
+   */
+  const getVillageColor = (mapVillCode) => {
     if (!mapColor || !electionData[2]) {
       return defaultColor
     }
 
-    if (activeCode && activeCode !== townCode && activeCode !== villCode) {
-      return defaultColor
-    }
+    // since only normal legislator will use areaCode to define color and other
+    // legislator subtype won't show any color, separate the legislator type if sufficient.
+    if (electionType !== 'legislator') {
+      const townCode = mapVillCode.slice(0, -3)
 
-    if (electionType === 'referendum') {
-      const { agreeRate, disagreeRate } =
-        electionData[2][townCode]?.districts?.find(
-          (district) =>
-            district.county + district.town + district.vill === villCode
-        ) || {}
-      if (agreeRate) {
-        const agree = agreeRate >= disagreeRate
-        const color = getGradiantReferendumColor(
-          agree,
-          agree ? agreeRate : disagreeRate
-        )
-        return color
-      } else {
+      // Bypass the village if is not active in level 3 (single village level).
+      if (
+        levelControl.level === 3 &&
+        activeCode &&
+        activeCode !== mapVillCode
+      ) {
         return defaultColor
       }
-    }
 
-    if (electionType === 'legislator') {
-      // const villageCandidates = electionData[2].districts.find(
-      //   (district) =>
-      //   district.county + district.area + '0' + district.vill === villCode
-      //   )?.candidates
-      const villageCandidates = electionData[2].districts[0].candidates
+      if (electionType === 'referendum') {
+        const { agreeRate, disagreeRate } =
+          electionData[2]?.[townCode]?.districts?.find(
+            (district) =>
+              district.county + district.town + district.vill === mapVillCode
+          ) || {}
+        if (agreeRate) {
+          const agree = agreeRate >= disagreeRate
+          const color = getGradiantReferendumColor(
+            agree,
+            agree ? agreeRate : disagreeRate
+          )
+          return color
+        } else {
+          return defaultColor
+        }
+      }
+
+      const villageCandidates = electionData[2][townCode]?.districts?.find(
+        (district) =>
+          district.county + district.town + district.vill === mapVillCode
+      )?.candidates
+
+      if (villageCandidates) {
+        const winningCandidate = getWinningCandidate(villageCandidates)
+        if (winningCandidate) {
+          const color = getGradiantPartyColor(
+            winningCandidate.party,
+            winningCandidate.tksRate
+          )
+          return color
+        }
+      }
+    } else {
+      // If the level is 3 (village level), only show the color for the active villCode
+      if (
+        levelControl.level === 3 &&
+        activeCode &&
+        activeCode !== mapVillCode
+      ) {
+        return defaultColor
+      }
+
+      // If the level is 2 (area level), try to find village from the current areaCode data.
+      const villageCandidates = electionData[2][areaCode]?.districts.find(
+        (district) =>
+          district.county + district.town + district.vill === mapVillCode
+      )?.candidates
 
       if (villageCandidates) {
         const winningCandidate = getWinningCandidate(villageCandidates)
@@ -535,21 +605,7 @@ export const Map = ({
         }
       }
     }
-
-    const villageCandidates = electionData[2][townCode]?.districts?.find(
-      (district) => district.county + district.town + district.vill === villCode
-    )?.candidates
-
-    if (villageCandidates) {
-      const winningCandidate = getWinningCandidate(villageCandidates)
-      if (winningCandidate) {
-        const color = getGradiantPartyColor(
-          winningCandidate.party,
-          winningCandidate.tksRate
-        )
-        return color
-      }
-    }
+    // Fallback to default color if none of the situation fits.
     return defaultColor
   }
 
@@ -720,15 +776,6 @@ export const Map = ({
                 const code = feature['properties']['VILLCODE']
                 return code.slice(code.length - 3, code.length)
               })()}
-              // fill={
-              //   !villageId
-              //     ? townId === activeId
-              //       ? 'lightcoral'
-              //       : defaultColor
-              //     : feature['properties']['VILLCODE'] === activeId
-              //     ? 'lightcoral'
-              //     : defaultColor
-              // }
               fill={getVillageColor(feature['properties']['VILLCODE'])}
               stroke={
                 feature['properties']['VILLCODE'] === activeCode

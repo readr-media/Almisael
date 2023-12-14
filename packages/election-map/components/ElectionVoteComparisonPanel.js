@@ -5,6 +5,7 @@ import { useAppSelector } from '../hook/useRedux'
 
 /**
  * @typedef {import('../consts/electionsConifg').ElectionType} ElectionType
+ * @typedef {import('../consts/electionsConifg').ElectionSubtype} ElectionSubtype
  */
 
 const ElectionVotesComparison = widgets.VotesComparison.ReactComponent
@@ -63,9 +64,10 @@ const StyledEVC = styled(ElectionVotesComparison)`
  *
  * @param {Object} election
  * @param {ElectionType} electionType
+ * @param {ElectionSubtype} subtype
  * @returns {boolean}
  */
-const computeShouldShowEVC = (election, electionType) => {
+const computeShouldShowEVC = (election, electionType, subtype) => {
   if (!election) {
     return false
   }
@@ -74,10 +76,22 @@ const computeShouldShowEVC = (election, electionType) => {
       return Array.isArray(election.candidates) && !!election.candidates.length
     case 'mayor':
       return Array.isArray(election.districts) && !!election.districts.length
-    //TODO: 立委
     case 'legislator':
-      return false
-
+      switch (subtype.key) {
+        case 'normal':
+          return (
+            Array.isArray(election.districts) && !!election.districts.length
+          )
+        case 'mountainIndigenous':
+        case 'plainIndigenous':
+          return (
+            Array.isArray(election.candidates) && !!election.candidates.length
+          )
+        case 'party':
+          return Array.isArray(election.parties) && !!election.parties.length
+        default:
+          return false
+      }
     case 'councilMember':
       return Array.isArray(election.districts) && !!election.districts.length
 
@@ -103,18 +117,28 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
   const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
+  const subtype = useAppSelector((state) => state.election.control.subtype)
   const countyCode = useAppSelector(
     (state) => state.election.control.level.countyCode
   )
   const evcData = useAppSelector((state) => state.election.data.evcData)
+  let wrapperTitle = useAppSelector(
+    (state) => state.election.config.meta.evc.wrapperTitle
+  )
+  wrapperTitle =
+    typeof wrapperTitle === 'string' ? wrapperTitle : wrapperTitle[subtype.key]
 
   let election
-  if (electionType === 'councilMember') {
+  // only councilMember and legislator with subtype 'normal' will have evcData for level 1
+  if (
+    electionType === 'councilMember' ||
+    (electionType === 'legislator' && subtype.key === 'normal')
+  ) {
     election = evcData[1][countyCode]
   } else {
     election = evcData[0]
   }
-  const shouldShowEVC = computeShouldShowEVC(election, electionType)
+  const shouldShowEVC = computeShouldShowEVC(election, electionType, subtype)
 
   const electionVoteComparisonJsx = isMobile ? (
     <ElectionVotesComparisonMobileWrapper>
@@ -131,7 +155,7 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
       />
     </ElectionVotesComparisonMobileWrapper>
   ) : (
-    <ElectionVotesComparisonDesktopWrapper title={'縣市議員候選人'}>
+    <ElectionVotesComparisonDesktopWrapper title={wrapperTitle}>
       <StyledEVC
         electionType={electionType}
         election={election}
