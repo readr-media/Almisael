@@ -1,4 +1,4 @@
-export const defaultElectionType = 'mayor'
+export const defaultElectionType = 'president'
 export const currentYear = 2024
 
 /**
@@ -23,26 +23,28 @@ export const currentYear = 2024
  * @property {number} key - The number of the year.
  * @property {Array<ReferendumNumber>} [numbers] - The numbers of referendum.
  *
- * Representing the default param that evc dataLoader will use
+ * Representing the default param that evc component will use
  * @typedef {Object} ElectionMetaEvc
- * @property {'all'} [district]  - The default district that evc dataLoader will use. For election cross whole country it will be 'all'. For election only stays in county there will be no default district.
+ * @property {string | {[key: string]: string}} wrapperTitle  - The collapsible wrapper title, legislator could have multiple titles related to the subtype.
+ *
+ * @typedef {{0: string, 1: string, 2: string}} NamesInLevels
  *
  * Representing the meta that map data fetching and rendering will use.
  * @typedef {Object} ElectionMetaMap
- * @property {boolean} mapColor - The flag indicating whether the map will show colors.
- * @property {{0: string, 1: string, 2: string}} folderNames - The folder name mapping to different levels. Empty string means there is no folder for the level.
- * @property {{0: string, 1: string, 2: string}} fileNames - The file name mapping to different levels. Empty string will be replaced by the level code.
+ * @property {boolean | {[key: string]: boolean}} mapColor - The flag indicating whether the map will show colors.
+ * @property {NamesInLevels | {[key: string]: NamesInLevels}} folderNames - The folder name mapping to different levels. Empty string means there is no folder for the level.
+ * @property {NamesInLevels} fileNames - The file name mapping to different levels. Empty string will be replaced by the level code.
  *
  * Representing the meta that seat chart will use.
  * @typedef {Object} ElectionMetaSeat
- * @property {string} wrapperTitle - The title of the wrapper of the seat chart.
- * @property {string} componentTitle - The title of the seat chart.
+ * @property {string | {[key: string]: string}} wrapperTitle - The title of the wrapper of the seat chart, legislator could have multiple titles related to the subtype.
+ * @property {string | {[key: string]: string}} componentTitle - The title of the seat chart, legislator could have multiple titles related to the subtype.
  *
  * Representing the how an election's data stored logic for each module.
  * @typedef {Object} ElectionMeta
  * @property {ElectionMetaEvc} evc - The default param that evc dataLoader will use.
  * @property {ElectionMetaMap} map - The meta that map data fetching and rendering will use.
- * @property {ElectionMetaSeat} seat - The meta that seat will use in rendering.
+ * @property {ElectionMetaSeat} [seat] - The meta that seat will use in rendering.
  *
  * Election configs directly control how many elections rendering, how many years each election contains.
  * The meta properties have the metadata for each module (evc, map, seat)
@@ -51,7 +53,7 @@ export const currentYear = 2024
  * @property {Array<ElectionSubtype>} [subtypes] - The subtypes of a type of election.
  * @property {string} electionName - The name of election for user to know which election they are checking.
  * @property {Array<Year>} years - The years and their subunit of an election.
- * @property {Object} meta - The metadata for each module (evc, map, seat). Pretty mess since it's the combination of gcs structure, evc package and map logic.
+ * @property {ElectionMeta} meta - The metadata for each module (evc, map, seat). Pretty mess since it's the combination of gcs structure, evc package and map logic.
  */
 
 // Check Election type for more detail
@@ -62,8 +64,9 @@ export const electionsConfig = [
     electionName: '總統',
     years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }, { key: 2024 }],
     meta: {
-      evc: { district: 'all' },
+      evc: { wrapperTitle: '正副總統候選人' },
       map: {
+        mapColor: true,
         folderNames: {
           0: 'country',
           1: 'county',
@@ -82,7 +85,7 @@ export const electionsConfig = [
     electionName: '縣市首長',
     years: [{ key: 2010 }, { key: 2014 }, { key: 2018 }, { key: 2022 }],
     meta: {
-      evc: { district: 'all' },
+      evc: { wrapperTitle: '縣市首長候選人' },
       map: {
         mapColor: true,
         folderNames: {
@@ -110,8 +113,21 @@ export const electionsConfig = [
     ],
     years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }],
     meta: {
-      evc: {},
+      evc: {
+        wrapperTitle: {
+          normal: '區域立委候選人',
+          mountainIndigenous: '山地原住民候選人',
+          plainIndigenous: '平地原住民候選人',
+          party: '不分區政黨',
+        },
+      },
       map: {
+        mapColor: {
+          normal: true,
+          mountainIndigenous: false,
+          plainIndigenous: false,
+          party: false,
+        },
         // Only normal type starts from county level.
         folderNames: {
           normal: {
@@ -166,7 +182,7 @@ export const electionsConfig = [
     electionName: '縣市議員',
     years: [{ key: 2010 }, { key: 2014 }, { key: 2018 }, { key: 2022 }],
     meta: {
-      evc: {},
+      evc: { wrapperTitle: '縣市議員候選人' },
       map: {
         mapColor: false,
         folderNames: {
@@ -309,7 +325,7 @@ export const electionsConfig = [
       },
     ],
     meta: {
-      evc: { district: 'all' },
+      evc: { wrapperTitle: '全國性公投' },
       map: {
         mapColor: true,
         folderNames: {
@@ -325,39 +341,6 @@ export const electionsConfig = [
       },
     },
   },
-  // {
-  //   electionType: 'referendumLocal',
-  //   electionName: '地方性公民投票',
-  //   years: [
-  //     {
-  //       key: 2021,
-  //       numbers: [
-  //         {
-  //           year: 2021,
-  //           key: 'hsinchu-1',
-  //           name: '新竹市第1案',
-  //           detail:
-  //             '您是否同意，新竹市應訂定，廢污水管理自治條例，明定工業廢水、醫療廢水及其他事業廢水和污水，應以專管回收，不可排入飲用水取水口或灌溉水取水口上游？',
-  //         },
-  //       ],
-  //     },
-  //   ],
-  //   meta: {
-  //     evc: { district: 'all' },
-  //     map: {
-  //       folderNames: {
-  //         0: '',
-  //         1: 'county',
-  //         2: 'town',
-  //       },
-  //       fileNames: {
-  //         0: 'country',
-  //         1: '',
-  //         2: '',
-  //       },
-  //     },
-  //   },
-  // },
 ]
 
 export const defaultElectionConfig = electionsConfig.find(
