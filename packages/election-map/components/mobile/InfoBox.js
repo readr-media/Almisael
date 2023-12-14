@@ -267,6 +267,9 @@ export default function InfoBox({ infoboxData, year }) {
   const electionsType = useAppSelector(
     (state) => state.election.config.electionType
   )
+  const currentElectionSubType = useAppSelector(
+    (state) => state.election.control.subtype
+  )
   const handleExpand = () => {
     setShouldInfoBoxExpand((pre) => !pre)
   }
@@ -485,14 +488,52 @@ export default function InfoBox({ infoboxData, year }) {
         if (typeof infoboxData === 'string') {
           return <div>{infoboxData}</div>
         }
+        const currentSubtypeKey = currentElectionSubType.key
 
+        const isIndigenous =
+          currentSubtypeKey === 'plainIndigenous' ||
+          currentSubtypeKey === 'mountainIndigenous'
+        const isParty = currentSubtypeKey === 'party'
+        const isAll = currentSubtypeKey === 'all'
+        if (isAll) {
+          return null
+        }
         if (level === 1) {
+          if (isIndigenous || isParty) {
+            const candidates = infoboxData?.candidates ?? []
+            const orderedCandidates = sortCandidatesByTksRate(candidates)
+            const candidatesAmount = orderedCandidates?.length ?? 0
+            const shouldShowExpandButton = candidatesAmount > 5
+            const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
+            const maxHeight = calculateMaxHeightOfInfoBox(
+              candidatesAmount,
+              shouldShowExpandButton,
+              shouldInfoBoxExpand
+            )
+            return (
+              <Wrapper>
+                {expendButtonJsx}
+                {shouldShowExpandButton && <Divider />}
+                <div className="prof-rate">
+                  投票率 {electionData?.profRate}%
+                </div>
+
+                <CandidatesInfoWrapper maxHeight={maxHeight}>
+                  {orderedCandidates.map((candidate) =>
+                    getInfoboxItemJsx(candidate)
+                  )}
+                </CandidatesInfoWrapper>
+                {shouldShowExpandButton && <Divider />}
+              </Wrapper>
+            )
+          }
           const districtsAmount = infoboxData.map((district) => {
             return district?.candidates?.length ?? 0
           })
           const candidatesAmount = districtsAmount.reduce(
             (accumulator, currentValue) => accumulator + currentValue
           )
+
           const shouldShowExpandButton = candidatesAmount > 5
           const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
           const maxHeight = calculateMaxHeightOfInfoBox(
@@ -563,7 +604,9 @@ export default function InfoBox({ infoboxData, year }) {
       case 'president': {
         const infoboxData = getInfoboxDataOnCertainElectionType(
           electionData,
-          level
+          level,
+          year,
+          isStarted
         )
         if (typeof infoboxData === 'string') {
           return <div>{infoboxData}</div>
