@@ -4,8 +4,8 @@ import widgets from '@readr-media/react-election-widgets'
 import { useAppSelector } from '../hook/useRedux'
 
 /**
- * @typedef {import('../consts/electionsConifg').ElectionType} ElectionType
- * @typedef {import('../consts/electionsConifg').ElectionSubtype} ElectionSubtype
+ * @typedef {import('../consts/electionsConfig').ElectionType} ElectionType
+ * @typedef {import('../consts/electionsConfig').ElectionSubtype} ElectionSubtype
  */
 
 const ElectionVotesComparison = widgets.VotesComparison.ReactComponent

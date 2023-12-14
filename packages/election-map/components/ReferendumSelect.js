@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import styled from 'styled-components'
 import useClickOutside from '../hook/useClickOutside'
 /**
- * @typedef {import('../consts/electionsConifg').ReferendumNumber} ReferendumNumber
+ * @typedef {import('../consts/electionsConfig').ReferendumNumber} ReferendumNumber
  */
 const SelectWrapper = styled.div`
   position: relative;

@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import {
   defaultElectionConfig,
   electionsConfig,
-} from '../consts/electionsConifg'
+} from '../consts/electionsConfig'
 import {
   defaultElectionData,
   generateDefaultElectionsData,
@@ -11,10 +11,10 @@ import {
 } from '../utils/electionsData'
 
 /**
- * @typedef {import('../consts/electionsConifg').ElectionType } ElectionType
- * @typedef {import('../consts/electionsConifg').ElectionSubtype} ElectionSubtype
- * @typedef {import('../consts/electionsConifg').Year} Year
- * @typedef {import('../consts/electionsConifg').ReferendumNumber} ReferendumNumber
+ * @typedef {import('../consts/electionsConfig').ElectionType } ElectionType
+ * @typedef {import('../consts/electionsConfig').ElectionSubtype} ElectionSubtype
+ * @typedef {import('../consts/electionsConfig').Year} Year
+ * @typedef {import('../consts/electionsConfig').ReferendumNumber} ReferendumNumber
  *
  * @typedef {Object} LevelControl
  * @property {0 | 1 | 2 | 3} level - The level of the map.

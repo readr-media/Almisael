@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { getElectionData, defaultElectionData } from '../utils/electionsData'
-import { currentYear } from '../consts/electionsConifg'
-import { countyMappingData } from '../consts/electionsConifg'
+import { currentYear } from '../consts/electionsConfig'
+import { countyMappingData } from '../consts/electionsConfig'
 import { deepCloneObj } from '../utils/deepClone'
 import ReactGA from 'react-ga'
 import { prepareElectionData } from '../utils/electionsData'
@@ -13,7 +13,7 @@ import {
 } from '../utils/fetchElectionData'
 
 /**
- * @typedef {import('../consts/electionsConifg').ElectionType} ElectionType
+ * @typedef {import('../consts/electionsConfig').ElectionType} ElectionType
  */
 
 /**

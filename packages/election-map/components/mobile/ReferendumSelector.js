@@ -105,7 +105,7 @@ export default function ReferendumSelector() {
   )
   /**
    *
-   * @param {import('../../consts/electionsConifg').ReferendumNumber} detail
+   * @param {import('../../consts/electionsConfig').ReferendumNumber} detail
    */
   const handleSelectReferendum = (detail) => {
     setShouldShowModal(false)

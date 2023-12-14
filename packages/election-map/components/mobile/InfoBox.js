@@ -5,8 +5,8 @@ import { useState } from 'react'
 import { getInfoBoxData } from '../../utils/infoboxData'
 /**
  * @typedef {import('../../utils/electionsData').InfoboxData} InfoboxData
- * @typedef {import('../../consts/electionsConifg').ElectionType} ElectionType
- * @typedef {import('../../consts/electionsConifg').ElectionSubtype} ElectionSubtype
+ * @typedef {import('../../consts/electionsConfig').ElectionType} ElectionType
+ * @typedef {import('../../consts/electionsConfig').ElectionSubtype} ElectionSubtype
  */
 
 const HEIGHT = '46.44px'

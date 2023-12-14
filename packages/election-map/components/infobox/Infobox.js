@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { currentYear } from '../../consts/electionsConifg'
+import { currentYear } from '../../consts/electionsConfig'
 
 const InfoboxWrapper = styled.div`
   font-family: 'Noto Sans TC', sans-serif;
