@@ -3,7 +3,6 @@ import { electionMapColor } from '../consts/colors'
 import { MapContainer } from './MapContainer'
 import { Panels } from './Panels'
 import { Tutorial } from './Tutorial'
-import { useAppSelector } from '../hook/useRedux'
 
 const Wrapper = styled.div`
   position: relative;
@@ -33,15 +32,12 @@ export const Dashboard = ({
   dashboardInView,
   hasAnchor,
 }) => {
-  const electionConfig = useAppSelector((state) => state.election.config)
-
   return (
     <Wrapper>
       <Panels onEvcSelected={onEvcSelected} />
       <MapContainer
         showLoading={showLoading}
         dashboardInView={dashboardInView}
-        mapColor={electionConfig.meta?.map?.mapColor}
       />
       {!hasAnchor && showTutorial && (
         <Tutorial

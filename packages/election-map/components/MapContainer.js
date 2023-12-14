@@ -58,7 +58,7 @@ const defaultTooltip = {
   coordinate: [],
 }
 
-export const MapContainer = ({ dashboardInView, mapColor }) => {
+export const MapContainer = ({ dashboardInView }) => {
   useGeoJsons()
   const [tooltip, setTooltip] = useState(defaultTooltip)
   const { elementRef, dimension } = useElementDimension()
@@ -68,6 +68,12 @@ export const MapContainer = ({ dashboardInView, mapColor }) => {
   const number = useAppSelector((state) => state.election.control.number)
   const electionData = useAppSelector((state) => state.election.data.mapData)
   const geoJsons = useAppSelector((state) => state.map.data.geoJsons)
+  const subtype = useAppSelector((state) => state.election.control.subtype)
+  const mapColorMeta = useAppSelector(
+    (state) => state.election.config.meta.map.mapColor
+  )
+  const mapColor =
+    typeof mapColorMeta === 'boolean' ? mapColorMeta : mapColorMeta[subtype.key]
 
   const compareElectionData = useAppSelector(
     (state) => state.election.compare.mapData
