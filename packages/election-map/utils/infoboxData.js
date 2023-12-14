@@ -5,8 +5,8 @@
  * @typedef {'mobile' | 'desktop'} InfoboxType
  * @typedef {any} ElectionData
  * @typedef {number} Year
- * @typedef {import('./electionsData').ModuleData['isRunning']} isRunning
- * @typedef {import('./electionsData').ModuleData['isStarted']} isStarted
+ * @typedef {import('./electionsData').MapData['isRunning']} isRunning
+ * @typedef {import('./electionsData').MapData['isStarted']} isStarted
  */
 
 import { currentYear } from '../consts/electionsConfig'
@@ -127,6 +127,43 @@ const councilMemberInfoboxData = (
  * @param {Level} level
  * @param {Year} year
  * @param {isStarted} isStarted
+ * @param {InfoboxType} infoboxType
+ */
+const legislatorInfoboxData = (data, level, year, isStarted, infoboxType) => {
+  if (level === 0) {
+    if (infoboxType === 'mobile') {
+      return ''
+    }
+    return '點擊地圖看更多資料'
+  }
+
+  if (!isStarted) {
+    return '目前無票數資料'
+  }
+
+  if (!data) {
+    return '此區無資料'
+  }
+
+  if (year === 2024 && level === 3 && data[0].profRate === null) {
+    return '目前即時開票無村里資料'
+  }
+
+  if (data.profRate === null) {
+    console.error(`data error for mayor infoboxData in level ${level}`, data)
+    return '資料錯誤，請確認'
+  }
+
+  return data
+}
+
+/**
+ * TODOs:
+ * 1. add type of params `data`
+ * @param {ElectionData} data
+ * @param {Level} level
+ * @param {Year} year
+ * @param {isStarted} isStarted
  */
 const referendumInfoboxData = (data, level, year, isStarted) => {
   if (!isStarted) {
@@ -161,11 +198,11 @@ const getInfoBoxData = (electionsType, infoboxType = 'desktop') => {
     case 'mayor':
       return (data, level, year, isStarted) =>
         mayorInfoboxData(data, level, year, isStarted, infoboxType)
-    //TODO
+
     case 'legislator':
-      return (data) => {
-        return data
-      }
+      return (data, level, year, isStarted) =>
+        legislatorInfoboxData(data, level, year, isStarted, infoboxType)
+
     case 'councilMember':
       return (data, level, year, isStarted) =>
         councilMemberInfoboxData(data, level, year, isStarted, infoboxType)

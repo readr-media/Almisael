@@ -376,7 +376,7 @@ export default function InfoBox({ infoboxData, year }) {
               {expendButtonJsx}
               {shouldShowExpandButton && <Divider />}
               <WrapperForCouncilMemberFirstLevel maxHeight={maxHeight}>
-                {electionData.districts.map((district, index) => {
+                {infoboxData.districts.map((district, index) => {
                   if (
                     !district?.candidates ||
                     !Array.isArray(district.candidates) ||
@@ -474,9 +474,92 @@ export default function InfoBox({ infoboxData, year }) {
           </>
         )
       }
-      //TODO: 中央選舉
-      case 'legislator':
-        return null
+      case 'legislator': {
+        const infoboxData = getInfoboxDataOnCertainElectionType(
+          electionData,
+          level,
+          year,
+          isStarted
+        )
+
+        if (typeof infoboxData === 'string') {
+          return <div>{infoboxData}</div>
+        }
+
+        if (level === 1) {
+          const districtsAmount = infoboxData.map((district) => {
+            return district?.candidates?.length ?? 0
+          })
+          const candidatesAmount = districtsAmount.reduce(
+            (accumulator, currentValue) => accumulator + currentValue
+          )
+          const shouldShowExpandButton = candidatesAmount > 5
+          const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
+          const maxHeight = calculateMaxHeightOfInfoBox(
+            candidatesAmount,
+            shouldShowExpandButton,
+            shouldInfoBoxExpand,
+            '272px'
+          )
+          return (
+            <div style={{ borderTop: 'solid 1px #000' }}>
+              {expendButtonJsx}
+              {shouldShowExpandButton && <Divider />}
+              <WrapperForCouncilMemberFirstLevel maxHeight={maxHeight}>
+                {infoboxData.map((district, index) => {
+                  if (
+                    !district?.candidates ||
+                    !Array.isArray(district.candidates) ||
+                    !district.candidates.length
+                  ) {
+                    return null
+                  }
+                  const orderedCandidates = sortCandidatesByTksRate(
+                    district.candidates
+                  )
+                  return (
+                    <Wrapper key={index}>
+                      <div className="prof-rate">
+                        投票率: {district?.profRate}%
+                      </div>
+                      <CandidatesInfoWrapper maxHeight={'100%'}>
+                        {orderedCandidates.map((candidate) =>
+                          getInfoboxItemJsx(candidate)
+                        )}
+                      </CandidatesInfoWrapper>
+                    </Wrapper>
+                  )
+                })}
+              </WrapperForCouncilMemberFirstLevel>
+              {shouldShowExpandButton && <Divider />}
+            </div>
+          )
+        }
+        const candidates = electionData?.candidates
+        const orderedCandidates = sortCandidatesByTksRate(candidates)
+        const candidatesAmount = orderedCandidates.length
+        const shouldShowExpandButton = candidatesAmount > 5
+        const maxHeight = calculateMaxHeightOfInfoBox(
+          candidatesAmount,
+          shouldShowExpandButton,
+          shouldInfoBoxExpand
+        )
+        const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
+        return (
+          <Wrapper>
+            {expendButtonJsx}
+            {shouldShowExpandButton && <Divider />}
+            <div className="prof-rate">投票率 {electionData?.profRate}%</div>
+
+            <CandidatesInfoWrapper maxHeight={maxHeight}>
+              {orderedCandidates.map((candidate) =>
+                getInfoboxItemJsx(candidate)
+              )}
+            </CandidatesInfoWrapper>
+            {shouldShowExpandButton && <Divider />}
+          </Wrapper>
+        )
+      }
       case 'president': {
         const infoboxData = getInfoboxDataOnCertainElectionType(
           electionData,
