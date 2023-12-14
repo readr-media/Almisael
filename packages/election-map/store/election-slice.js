@@ -198,6 +198,22 @@ const electionsSlice = createSlice({
         )
         // [to-do] check if the seat data is sync to the state.data.electionsData
         newElectionData.seatData = oldElectionData.seatData
+      } else if (state.config.electionType === 'legislator') {
+        const oldElectionData = getElectionData(
+          state.data.electionsData,
+          state.config.electionType,
+          state.control.year?.key,
+          state.control.subtype?.key,
+          state.control.number?.key
+        )
+        const newElectionData = getElectionData(
+          state.data.electionsData,
+          state.config.electionType,
+          state.control.year?.key,
+          newSubtype?.key,
+          state.control.number?.key
+        )
+        newElectionData.seatData.all = oldElectionData.seatData.all
       }
       if (state.compare.info.compareMode) {
         state.compare.info.filter.subtype = newSubtype
