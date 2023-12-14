@@ -16,15 +16,22 @@ import { currentYear } from '../consts/electionsConfig'
  * 1. add type of params `data`
  * @param {ElectionData} data
  * @param {Level} level
+ * @param {number} year
+ * @param {isStarted} isStarted
  */
-const presidentInfoboxData = (data, level) => {
+const presidentInfoboxData = (data, level, year, isStarted) => {
   if (!data) {
     return '無資料'
   }
 
-  if (!data.profRate && level === 3) {
+  if (!isStarted) {
+    return '目前無票數資料'
+  }
+
+  if (year === currentYear && !data.profRate && level === 3) {
     return '目前即時開票無村里資料'
   }
+
   if (data.profRate === null) {
     return '資料錯誤，請確認'
   }
@@ -193,7 +200,8 @@ const referendumInfoboxData = (data, level, year, isStarted) => {
 const getInfoBoxData = (electionsType, infoboxType = 'desktop') => {
   switch (electionsType) {
     case 'president':
-      return (data, level) => presidentInfoboxData(data, level)
+      return (data, level, year, isStarted) =>
+        presidentInfoboxData(data, level, year, isStarted)
 
     case 'mayor':
       return (data, level, year, isStarted) =>
