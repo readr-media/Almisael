@@ -5,6 +5,7 @@ import { useAppSelector } from './useRedux'
 
 /**
  * @typedef {import('../consts/electionsConfig').ElectionType} ElectionType
+ * @typedef {import('../consts/electionsConfig').ElectionSubtype} ElectionSubtype
  * @typedef {import('../consts/electionsConfig').Year} Year
  */
 
@@ -19,32 +20,24 @@ const fetchJson = async (url) => {
 }
 /**
  *
- * @param {Year} currentYear
  * @param {ElectionType} electionType
+ * @param {ElectionSubtype} currentSubType
+ * @param {Year} currentYear
  * @returns
  */
-const fetchDistrictJson = async (electionType, currentYear) => {
+const fetchDistrictJson = async (electionType, currentSubType, currentYear) => {
   const mappingJsonPath =
-    electionType === 'legislator'
+    electionType === 'legislator' && currentSubType.key === 'normal'
       ? `/district-mapping/district-with-area/${electionType}/${currentYear.key}/mapping.json`
       : '/district-mapping/district/mapping.json'
   const url = `${gcsBaseUrl}${mappingJsonPath}`
 
   try {
-    const responses = await Promise.allSettled([fetchJson(url)])
+    const responses = await fetchJson(url)
 
-    const responseJson = responses.map((response, i) => {
-      if (response.status === 'fulfilled') {
-        return response.value
-      } else if (response.status === 'rejected') {
-        throw new Error(
-          `Fetch ${i} level map topojson failed: ${response.reason}`
-        )
-      }
-    })
-    return responseJson
+    return responses
   } catch (error) {
-    console.error('fetch map error', error)
+    console.error('fetch district mapping.json error', error)
   }
 }
 
@@ -93,6 +86,7 @@ const initialDistrictMapping = {
 }
 
 /**
+ * TODO: 抓取兩個資料
  * Achieve districtCode.
  */
 export const useDistrictMapping = () => {
@@ -101,18 +95,26 @@ export const useDistrictMapping = () => {
   const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
+  const currentSubType = useAppSelector(
+    (state) => state.election.control.subtype
+  )
+
   const hasDistrictMapping = useMemo(() => {
     return districtMapping.sub.length > 0
   }, [districtMapping])
 
   useEffect(() => {
     const prepareDistrictMapping = async () => {
-      const responses = await fetchDistrictJson(electionType, currentYear)
-      const [districtMapping] = responses
+      const responses = await fetchDistrictJson(
+        electionType,
+        currentSubType,
+        currentYear
+      )
+      const districtMapping = responses
       setDistrictMapping(districtMapping.data)
     }
     prepareDistrictMapping()
-  }, [currentYear, electionType])
+  }, [currentYear, electionType, currentSubType])
 
   return { districtMapping, hasDistrictMapping }
 }
