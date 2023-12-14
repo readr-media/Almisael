@@ -4,8 +4,8 @@ import { environment } from '../consts/config'
 import { useAppSelector } from './useRedux'
 
 /**
- * @typedef {import('../consts/electionsConifg').ElectionType} ElectionType
- * @typedef {import('../consts/electionsConifg').Year} Year
+ * @typedef {import('../consts/electionsConfig').ElectionType} ElectionType
+ * @typedef {import('../consts/electionsConfig').Year} Year
  */
 
 const gcsBaseUrl =

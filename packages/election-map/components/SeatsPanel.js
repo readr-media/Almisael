@@ -4,7 +4,7 @@ import widgets from '@readr-media/react-election-widgets'
 const SeatsChart = widgets.SeatChart.ReactComponent
 import { useAppSelector } from '../hook/useRedux'
 import { useEffect, useState } from 'react'
-import { countyMappingData } from '../consts/electionsConifg'
+import { countyMappingData } from '../consts/electionsConfig'
 
 const SeatsChartWrapper = styled(CollapsibleWrapper)`
   width: 320px;

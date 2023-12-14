@@ -12,7 +12,7 @@ const EVCDataLoader = widgets.VotesComparison.DataLoader
 const SCDataLoader = widgets.SeatChart.DataLoader
 
 /**
- * @typedef {import("../consts/electionsConifg").ElectionType} ElectionType
+ * @typedef {import("../consts/electionsConfig").ElectionType} ElectionType
  *
  * Represent the seats of a party.
  * @typedef {Object} Seat

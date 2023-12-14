@@ -9,7 +9,7 @@
  * @typedef {import('./electionsData').ModuleData['isStarted']} isStarted
  */
 
-import { currentYear } from '../consts/electionsConifg'
+import { currentYear } from '../consts/electionsConfig'
 
 /**
  * TODOs:

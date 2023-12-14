@@ -1,9 +1,9 @@
-import { electionsConfig } from '../consts/electionsConifg'
+import { electionsConfig } from '../consts/electionsConfig'
 
 /**
  * Merge all referendum number in all years.
- * @param {import("../consts/electionsConifg").ElectionConfig} electionConfig
- * @returns {Array<import("../consts/electionsConifg").ReferendumNumber>}
+ * @param {import("../consts/electionsConfig").ElectionConfig} electionConfig
+ * @returns {Array<import("../consts/electionsConfig").ReferendumNumber>}
  */
 export const getReferendumNumbers = (electionConfig) => {
   if (!electionConfig.electionType.startsWith('referendum')) {

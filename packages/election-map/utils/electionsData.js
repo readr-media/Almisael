@@ -1,5 +1,5 @@
 import { deepCloneObj } from './deepClone'
-import { countyMappingData, electionsConfig } from '../consts/electionsConifg'
+import { countyMappingData, electionsConfig } from '../consts/electionsConfig'
 import {
   fetchPresidentEvcData,
   fetchPresidentMapData,
@@ -57,7 +57,7 @@ import {
  * @property {CouncilMemberElectionData} councilMember - Council Member election data.
  * @property {ReferendumElectionData} referendum - Referendum election data.
  *
- * @typedef {import('../consts/electionsConifg').ElectionType} ElectionType
+ * @typedef {import('../consts/electionsConfig').ElectionType} ElectionType
  *
  * @typedef {Object} InfoboxData
  * @property {ElectionType} electionType
@@ -477,8 +477,8 @@ export const getElectionData = (
 
 export const prepareElectionData = async (
   /** @type {import('../utils/electionsData').ElectionData} */ electionData,
-  /** @type {import('../consts/electionsConifg').ElectionConfig} */ electionConfig,
-  /** @type {import('../hook/useElectinData').LevelControl} */ levelControl,
+  /** @type {import('../consts/electionsConfig').ElectionConfig} */ electionConfig,
+  /** @type {import('../store/election-slice').LevelControl} */ levelControl,
   /** @type {number} */ yearKey,
   /** @type {string} */ subtypeKey,
   /** @type {string} */ numberKey,
