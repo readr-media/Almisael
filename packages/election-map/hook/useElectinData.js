@@ -104,7 +104,6 @@ export const useElectionData = (showLoading, showTutorial) => {
         }
         break
       }
-
       case 'councilMember': {
         // try to get scrollTo, but ignore any error
         // ignore 原住民分類
@@ -117,6 +116,21 @@ export const useElectionData = (showLoading, showTutorial) => {
             )
             if (targetDistrict) {
               newScrollTo = `第${targetDistrict.area}選區`
+            }
+          } catch (error) {
+            console.error(error)
+          }
+        }
+        break
+      }
+      case 'legislator': {
+        // only normal legislator will scroll evc
+        if (subtype.key === 'normal') {
+          try {
+            const areaCode = levelControl.areaCode
+            const area = areaCode.slice(-2)
+            if (area) {
+              newScrollTo = `第${area}選區`
             }
           } catch (error) {
             console.error(error)
@@ -187,6 +201,20 @@ export const useElectionData = (showLoading, showTutorial) => {
             label: `票數比較篩選器：縣市議員 / ${subtype.name} / ${countyName} / ${evcSelectedValue}`,
           })
 
+          break
+        }
+        case 'legislator': {
+          // only normal legislator will handle evc callback
+          if (subtype.key === 'normal') {
+            console.log('evcSelectedValue', evcSelectedValue)
+            const area = evcSelectedValue.slice(1, 3)
+            const newAreaCode = levelControl.countyCode + area
+            const target = document.querySelector(`#first-id-${newAreaCode}`)
+            if (target) {
+              let event = new MouseEvent('click', { bubbles: true })
+              target.dispatchEvent(event)
+            }
+          }
           break
         }
         case 'referendum': {
