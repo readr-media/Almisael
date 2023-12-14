@@ -43,7 +43,7 @@ import { electionActions } from '../../store/election-slice'
  */
 
 /**
- * @typedef {'nation' | 'county' | 'town' | 'village'} DistrictType
+ * @typedef {'nation' | 'county' | 'town' | 'village' | 'constituency'} DistrictType
  */
 
 const TopButtonsWrapper = styled.div`
@@ -105,20 +105,16 @@ const ElectionSelectorWrapper = styled(DistrictSelectorWrapper)`
 
 /**
  * Dashboard for new election map, created in 2023.11.20
+ * TODO:
+ * 1. Need refactor corresponding business logic of districts in different election type.
+ * 2. Rewrite state to make it more clear and clean, remove unneeded useEffect if need.
  */
 export const MobileDashboardNew = ({ onEvcSelected }) => {
   const { districtMapping, hasDistrictMapping } = useDistrictMapping()
-  // const [currentElection, setCurrentElection] = useState(ELECTION_TYPE[0])
+
   const dispatch = useAppDispatch()
   const { stopCompare, changeLevelControl, changeYear, resetLevelControl } =
     electionActions
-  // const [currentElectionSubType, setCurrentElectionSubType] = useState(
-  //   ELECTION_TYPE[3]?.subtypes[0]
-  // )
-
-  // const electionTypeYears = currentElection.years
-  // const defaultYears = currentElection.years[currentElection.years.length - 1]
-  // const [selectedYears, setSelectedYears] = useState([defaultYears])
 
   const [shouldOpenYearComparisonMenuBar, setShouldOpenYearComparisonMenuBar] =
     useState(false)
@@ -126,16 +122,33 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
   const [currentDistrictType, setCurrentDistrictType] = useState('nation')
   const [currentCountyCode, setCurrentCountyCode] = useState('')
   const [currentTownCode, setCurrentTownCode] = useState('')
+  const [currentConstituencyCode, setCurrentConstituencyCode] = useState('')
   const [currentVillageCode, setCurrentVillageCode] = useState('')
+  const [currentConstituencyVillageCode, setCurrentConstituencyVillageCode] =
+    useState('')
+  const electionsType = useAppSelector(
+    (state) => state.election.config.electionType
+  )
+  const electionSubTypes = useAppSelector(
+    (state) => state.election.config.subtypes
+  )
+  const currentElectionSubType = useAppSelector(
+    (state) => state.election.control.subtype
+  )
+  const year = useAppSelector((state) => state.election.control.year)
+  const years = useAppSelector((state) => state.election.config.years)
 
-  /** @type {CountyData[]} */
+  const compareInfo = useAppSelector((state) => state.election.compare.info)
+  const { compareMode } = compareInfo
+  const isConstituency =
+    electionsType === 'legislator' && currentElectionSubType.key === 'normal'
   const allCounty = districtMapping.sub
 
-  /** @type {TownData[]} */
   const allTown = getAllTown(currentCountyCode)
 
-  /** @type {VillageData[]} */
-  const allVillage = getAllVillage(currentTownCode)
+  const allVillage = getAllVillage(
+    isConstituency ? currentConstituencyCode : currentTownCode
+  )
 
   function getAllTown(code) {
     if (currentDistrictType === 'nation') {
@@ -145,17 +158,19 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
       return []
     }
 
-    return allCounty?.find((item) => item.code === code)?.sub
+    return allCounty?.find((item) => item.code === code)?.sub ?? []
   }
 
   function getAllVillage(code) {
-    if (currentDistrictType === 'nation' || currentDistrictType === 'county') {
+    if (
+      !code ||
+      currentDistrictType === 'nation' ||
+      currentDistrictType === 'county'
+    ) {
       return []
     }
-    if (!code) {
-      return []
-    }
-    return allTown?.find((item) => item.code === code).sub
+
+    return allTown?.find((item) => item.code === code)?.sub ?? []
   }
 
   /**
@@ -178,7 +193,14 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
         setCurrentTownCode(code)
         break
       case 'village':
-        setCurrentVillageCode(code)
+        if (isConstituency) {
+          setCurrentConstituencyVillageCode(code)
+        } else {
+          setCurrentVillageCode(code)
+        }
+        break
+      case 'constituency':
+        setCurrentConstituencyCode(code)
         break
       default:
         break
@@ -189,18 +211,6 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
     setShouldOpenYearComparisonMenuBar(false)
     dispatch(stopCompare())
   }
-  const electionsType = useAppSelector(
-    (state) => state.election.config.electionType
-  )
-  const electionSubTypes = useAppSelector(
-    (state) => state.election.config.subtypes
-  )
-
-  const year = useAppSelector((state) => state.election.control.year)
-  const years = useAppSelector((state) => state.election.config.years)
-
-  const compareInfo = useAppSelector((state) => state.election.compare.info)
-  const { compareMode } = compareInfo
 
   const optionsForFirstDistrictSelector = useMemo(() => {
     switch (electionsType) {
@@ -232,11 +242,16 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
     return [...allTown]
   }, [allTown, currentCountyCode])
   const optionsForThirdDistrictSelector = useMemo(() => {
-    if (currentTownCode) {
+    if (isConstituency && currentConstituencyCode) {
+      return [
+        { type: 'constituency', code: currentConstituencyCode, name: '-' },
+        ...allVillage,
+      ]
+    } else if (currentTownCode) {
       return [{ type: 'town', code: currentTownCode, name: '-' }, ...allVillage]
     }
     return [...allVillage]
-  }, [allVillage, currentTownCode])
+  }, [allVillage, currentTownCode, currentConstituencyCode, isConstituency])
 
   // //clean up
   useEffect(() => {
@@ -246,9 +261,14 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
       setCurrentVillageCode('')
     } else if (currentDistrictType === 'county') {
       setCurrentTownCode('')
+      setCurrentConstituencyCode('')
       setCurrentVillageCode('')
     } else if (currentDistrictType === 'town') {
+      setCurrentConstituencyVillageCode('')
       setCurrentVillageCode('')
+    } else if (currentDistrictType === 'constituency') {
+      setCurrentVillageCode('')
+      setCurrentConstituencyVillageCode('')
     }
   }, [currentDistrictType])
   useEffect(() => {
@@ -286,6 +306,19 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
           })
         )
         break
+      case 'constituency':
+        level = 2
+        dispatch(
+          changeLevelControl({
+            level,
+            countyCode: currentCountyCode,
+            townCode: '',
+            villageCode: '',
+            constituencyCode: currentConstituencyCode,
+            activeCode: currentConstituencyCode,
+          })
+        )
+        break
       case 'village':
         level = 3
         dispatch(
@@ -293,8 +326,10 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
             level,
             countyCode: currentCountyCode,
             townCode: currentTownCode,
-            villageCode: currentVillageCode,
-            constituencyCode: '',
+            villageCode: isConstituency
+              ? currentConstituencyVillageCode
+              : currentVillageCode,
+            constituencyCode: currentConstituencyCode,
             activeCode: currentVillageCode,
           })
         )
@@ -314,6 +349,9 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
     currentCountyCode,
     currentTownCode,
     currentVillageCode,
+    currentConstituencyCode,
+    currentConstituencyVillageCode,
+    isConstituency,
   ])
   useEffect(() => {
     if (!hasDistrictMapping) {
@@ -367,6 +405,18 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
     </>
   )
 
+  const test = () => {
+    dispatch(
+      changeLevelControl({
+        level: 3,
+        countyCode: '63000',
+        townCode: '63000020',
+        villageCode: '63000020005',
+        constituencyCode: '',
+        activeCode: '63000020005',
+      })
+    )
+  }
   if (!hasDistrictMapping) {
     return <Wrapper>loading....</Wrapper>
   }
@@ -407,20 +457,34 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
 
             <Selector
               options={optionsForSecondDistrictSelector}
-              districtCode={currentTownCode}
+              districtCode={
+                isConstituency ? currentConstituencyCode : currentTownCode
+              }
               onSelected={handleOnClick}
               placeholderValue="-"
             ></Selector>
 
             <Selector
               options={optionsForThirdDistrictSelector}
-              districtCode={currentVillageCode}
+              districtCode={
+                isConstituency
+                  ? currentConstituencyVillageCode
+                  : currentVillageCode
+              }
               onSelected={handleOnClick}
               placeholderValue="-"
             ></Selector>
           </DistrictSelectorWrapper>
           <InfoboxContainer />
         </ContentWrapper>
+        <>
+          <button onClick={test}>測試</button>
+          <div>currentDistrictType:{currentDistrictType}</div>
+          <div>currentCountyCode:{currentCountyCode}</div>
+          <div>currentConstituencyCode:{currentConstituencyCode}</div>
+          <div>currentTownCode:{currentTownCode}</div>
+          <div>currentVillageCode:{currentVillageCode}</div>
+        </>
         {!compareMode && (
           <ElectionVoteComparisonPanel
             onEvcSelected={onEvcSelected}
