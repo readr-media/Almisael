@@ -125,7 +125,9 @@ export default function ElectionSelector({ options = [], selectorType }) {
         dispatch(electionActions.changeElection(option.electionType))
       }
     } else if (selectorType === 'electionSubType') {
-      dispatch(electionActions.changeSubtype(option))
+      if (currentSubType.key !== option.key) {
+        dispatch(electionActions.changeSubtype(option))
+      }
     }
 
     setShouldShowOptions(false)
