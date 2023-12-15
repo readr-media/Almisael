@@ -152,7 +152,7 @@ const legislatorInfoboxData = (data, level, year, isStarted, infoboxType) => {
     return '此區無資料'
   }
 
-  if (year === 2024 && level === 3 && data[0].profRate === null) {
+  if (year === currentYear && level === 3 && data[0].profRate === null) {
     return '目前即時開票無村里資料'
   }
 
