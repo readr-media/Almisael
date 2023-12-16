@@ -163,7 +163,6 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
         theme="electionMap"
         scrollTo={evcScrollTo}
         onChange={(selector, value) => {
-          console.log('value', value)
           onEvcSelected(value)
         }}
         isMobile={isMobile} //for styled-component

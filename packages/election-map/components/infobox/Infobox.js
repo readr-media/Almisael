@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { currentYear } from '../../consts/electionsConfig'
+import { getInfoBoxData } from '../../utils/infoboxData'
 
 const InfoboxWrapper = styled.div`
   font-family: 'Noto Sans TC', sans-serif;
@@ -20,12 +20,26 @@ const PresidentTitle = styled.p`
 `
 
 const PresidentCandidate = styled.p`
+  position: relative;
   display: flex;
-  align-items: center;
-  margin: 0;
+  flex-direction: column;
+  width: fit-content;
+  align-items: start;
+  margin-top: 20px;
   font-weight: 700;
   line-height: 26px;
   ${({ elected }) => elected && 'color: #DB4C65;'}
+`
+
+const PresidentCandidateName = styled.div`
+  max-width: 160px;
+  font-weight: 700;
+  ${({ compareMode }) => compareMode && `max-width: 100px;`}
+`
+
+const PresidentCandidateParty = styled.div`
+  font-weight: 350;
+  ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 
 const InfoboxText = styled.p`
@@ -119,7 +133,7 @@ const electedSvg = (
   </svg>
 )
 
-const PresidentInfobox = ({ level, data, isRunning }) => {
+const PresidentInfobox = ({ level, data, isRunning, isCurrentYear }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
@@ -128,22 +142,46 @@ const PresidentInfobox = ({ level, data, isRunning }) => {
     )
   }
 
+  const isCurrentYearRunningJsx = isCurrentYear ? (
+    isRunning ? (
+      <RunningHint>開票中</RunningHint>
+    ) : (
+      <RunningHint>開票結束</RunningHint>
+    )
+  ) : (
+    <></>
+  )
+
   const { profRate, candidates } = data
   return (
     <InfoboxScrollWrapper>
-      {isRunning && '開票中'}
       <PresidentTitle>
-        {level === 0 && '總'}投票率 {profRate}%
+        {level === 0 && '總'}投票率 {profRate}% {isCurrentYearRunningJsx}
       </PresidentTitle>
-      {candidates.map((candidate) => {
-        const elected = candidate.candVictor === '*'
-        return (
-          <PresidentCandidate elected={elected} key={candidate.candNo}>
-            {candidate.name} {candidate.party} {candidate.tksRate}%
-            {elected && <ElectedIcon>{electedSvg}</ElectedIcon>}
-          </PresidentCandidate>
-        )
-      })}
+      {[...candidates]
+        .sort((cand1, cand2) => {
+          if (cand1.tksRate === cand2.tksRate) {
+            return 0
+          }
+          return cand1.tksRate < cand2.tksRate ? 1 : -1
+        })
+        .map((candidate) => {
+          const elected = candidate.candVictor === '*'
+          const candNames = candidate.name.split(' ')
+          return (
+            <PresidentCandidate elected={elected} key={candidate.candNo}>
+              {candNames.map((candName) => (
+                <PresidentCandidateName key={candName}>
+                  {candName}
+                </PresidentCandidateName>
+              ))}
+              <PresidentCandidateParty>
+                {candidate.party} {candidate.tksRate}%
+              </PresidentCandidateParty>
+              {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
+            </PresidentCandidate>
+          )
+        })}
     </InfoboxScrollWrapper>
   )
 }
@@ -259,6 +297,11 @@ const LegislatorCandidate = styled.div`
 `
 
 const LegislatorInfobox = ({ level, data }) => {
+  return (
+    <InfoboxScrollWrapper>
+      <InfoboxText>開發中</InfoboxText>
+    </InfoboxScrollWrapper>
+  )
   if (level === 0) {
     return (
       <InfoboxScrollWrapper>
@@ -682,103 +725,19 @@ const ReferendumInfobox = ({ data, isRunning, isCurrentYear, compareName }) => {
 //   `,
 // }
 
-const presidentInfoboxData = (data, level) => {
-  if (!data) {
-    return '無資料'
-  }
-
-  if (!data.profRate && level === 3) {
-    return '目前即時開票無村里資料'
-  }
-  if (data.profRate === null) {
-    return '資料錯誤，請確認'
-  }
-
-  return data
-}
-
-const mayorInfoboxData = ({ data, level, year, isStarted }) => {
-  if (level === 0) {
-    return '點擊地圖看更多資料'
-  }
-
-  if (year === 2022 && data === '10020') {
-    return '嘉義市長選舉改期至2022/12/18'
-  }
-
-  if (!isStarted) {
-    return '目前無票數資料'
-  }
-
-  if (!data) {
-    if (year === 2010) {
-      return '2010為直轄市長及直轄市議員選舉，此區無資料'
-    }
-    return '此區無資料'
-  }
-
-  if (year === currentYear && !data.profRate && level === 3) {
-    return '目前即時開票無村里資料'
-  }
-
-  if (data.profRate === null) {
-    return '資料錯誤，請確認'
-  }
-
-  return data
-}
-
-const councilMemberInfoboxData = ({ data, level, year, isStarted }) => {
-  if (level === 0) {
-    return '點擊地圖看更多資料'
-  }
-
-  if (!isStarted) {
-    return '目前無票數資料'
-  }
-
-  if (!data) {
-    if (year === 2010) {
-      return '2010為直轄市長及直轄市議員選舉，此區無資料'
-    }
-    return '此區無資料'
-  }
-
-  if (year === currentYear && level === 3 && data[0].profRate === null) {
-    return '目前即時開票無村里資料'
-  }
-
-  if (data.profRate === null) {
-    console.error(`data error for mayor infoboxData in level ${level}`, data)
-    return '資料錯誤，請確認'
-  }
-
-  return data
-}
-
-const referendumInfoboxData = ({ data, level, year, isStarted }) => {
-  if (!isStarted) {
-    return '目前無票數資料'
-  }
-
-  if (!data) {
-    return '此區無資料'
-  }
-
-  if (year === currentYear && !data.profRate && level === 3) {
-    return '目前即時開票無村里資料'
-  }
-
-  if (data.profRate === null) {
-    return '資料錯誤，請確認'
-  }
-
-  return data
-}
-
+/**
+ *
+ * @param {Object} props
+ * @param {import('../../utils/electionsData').InfoboxData} props.data
+ * @param {boolean} props.compareMode
+ * @param {boolean} props.isCurrentYear
+ * @param {string} props.compareName
+ * @param {number} props.year
+ * @param {import('../../consts/electionsConfig').ElectionSubtype} props.subtype
+ * @returns {JSX.Element}
+ */
 export const Infobox = ({
   data,
-  subtype,
   compareMode,
   isCurrentYear,
   compareName,
@@ -787,9 +746,19 @@ export const Infobox = ({
   const { electionType, level, electionData, isRunning, isStarted } = data
   let infobox
 
+  const getInfoboxDataOnCertainElectionType = getInfoBoxData(
+    electionType,
+    'desktop'
+  )
+
   switch (electionType) {
     case 'president': {
-      const data = presidentInfoboxData(electionData, level, year)
+      const data = getInfoboxDataOnCertainElectionType(
+        electionData,
+        level,
+        year,
+        isStarted
+      )
       infobox = (
         <PresidentInfobox
           level={level}
@@ -801,13 +770,12 @@ export const Infobox = ({
       break
     }
     case 'mayor': {
-      const data = mayorInfoboxData({
-        data: electionData,
+      const data = getInfoboxDataOnCertainElectionType(
+        electionData,
         level,
         year,
-        isRunning,
-        isStarted,
-      })
+        isStarted
+      )
       infobox = (
         <MayorInfobox
           level={level}
@@ -825,14 +793,12 @@ export const Infobox = ({
       break
     }
     case 'councilMember': {
-      const data = councilMemberInfoboxData({
-        data: electionData,
+      const data = getInfoboxDataOnCertainElectionType(
+        electionData,
         level,
         year,
-        subtype,
-        isRunning,
-        isStarted,
-      })
+        isStarted
+      )
       infobox = (
         <CouncilMemberInfobox
           level={level}
@@ -846,13 +812,12 @@ export const Infobox = ({
       break
     }
     case 'referendum':
-      const data = referendumInfoboxData({
-        data: electionData,
+      const data = getInfoboxDataOnCertainElectionType(
+        electionData,
         level,
         year,
-        isRunning,
-        isStarted,
-      })
+        isStarted
+      )
       infobox = (
         <ReferendumInfobox
           data={data}
