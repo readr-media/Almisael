@@ -21,6 +21,17 @@ const InfoboxYear = styled.div`
   line-height: 35px;
 `
 
+/**
+ *
+ * @param {Object} props
+ * @param {string} [props.className]
+ * @param {import('../utils/electionsData').InfoboxData} props.data
+ * @param {import('../consts/electionsConfig').ElectionSubtype} props.subtype
+ * @param {Object} props.compareInfo
+ * @param {import('../consts/electionsConfig').Year} props.year
+ * @param {import('../consts/electionsConfig').ReferendumNumber} props.number
+ * @returns {JSX.Element}
+ */
 export const InfoboxPanel = ({
   className,
   data,
@@ -32,6 +43,14 @@ export const InfoboxPanel = ({
   const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
+  const level = useAppSelector((state) => state.election.control.level)
+  // add key for infobox component to rerender when level control changed
+  const key =
+    level.level +
+    level.countyCode +
+    level.townCode +
+    level.areaCode +
+    level.villageCode
   const { compareMode } = compareInfo
   const electionName = electionNamePairs.find(
     (electionNamePair) => electionNamePair.electionType === electionType
@@ -42,7 +61,7 @@ export const InfoboxPanel = ({
       : electionName
     : '詳細資訊'
   return (
-    <Wrppaer className={className}>
+    <Wrppaer className={className} key={key}>
       {compareMode && !number && <InfoboxYear>{year.key}</InfoboxYear>}
       <InfoboxWrapper title={title}>
         <Infobox
