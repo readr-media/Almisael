@@ -73,12 +73,19 @@ const ElectionSelectorWrapper = styled(DistrictSelectorWrapper)`
   margin: 40px auto 0;
 `
 
+const FixedWrapper = styled.div`
+  position: sticky;
+  top: 40px;
+  z-index: 1;
+  padding: 0 24px;
+`
+
 /**
  * TODO:
  * 1. Need refactor corresponding business logic of districts in different election type.
  * 2. Rewrite state to make it more clear and clean, remove unneeded useEffect if need.
  */
-export default function SelectorWrapper() {
+export default function SelectorsContainer({ className = '' }) {
   const { hasDistrictMapping } = useDistrictMapping()
 
   const electionsType = useAppSelector(
@@ -97,8 +104,9 @@ export default function SelectorWrapper() {
   if (!hasDistrictMapping) {
     return <Wrapper>loading....</Wrapper>
   }
+
   return (
-    <>
+    <FixedWrapper className={className}>
       <ElectionSelectorWrapper>
         <ElectionSelector
           options={electionNamePairs}
@@ -119,6 +127,6 @@ export default function SelectorWrapper() {
       ) : (
         <DistrictSelectors key="DistrictSelectors"></DistrictSelectors>
       )}
-    </>
+    </FixedWrapper>
   )
 }

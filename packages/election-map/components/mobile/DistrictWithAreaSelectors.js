@@ -275,55 +275,31 @@ export default function DistrictWithAreaSelectors({}) {
     isConstituency,
   ])
 
-  const test = () => {
-    dispatch(
-      changeLevelControl({
-        level: 3,
-        countyCode: currentCountyCode,
-        townCode: currentConstituencyCode,
-        villageCode: currentConstituencyVillageCode,
-        constituencyCode: currentConstituencyCode,
-        activeCode: currentConstituencyVillageCode,
-      })
-    )
-  }
   if (!hasDistrictMapping) {
     return <Wrapper>loading....</Wrapper>
   }
   return (
-    <>
-      <DistrictSelectorWrapper>
-        <Selector
-          options={optionsForFirstDistrictSelector}
-          districtCode={currentCountyCode}
-          onSelected={handleOnClick}
-          placeholderValue="台灣"
-        ></Selector>
+    <DistrictSelectorWrapper>
+      <Selector
+        options={optionsForFirstDistrictSelector}
+        districtCode={currentCountyCode}
+        onSelected={handleOnClick}
+        placeholderValue="台灣"
+      ></Selector>
 
-        <Selector
-          options={optionsForSecondDistrictSelector}
-          districtCode={currentConstituencyCode}
-          onSelected={handleOnClick}
-          placeholderValue="-"
-        ></Selector>
+      <Selector
+        options={optionsForSecondDistrictSelector}
+        districtCode={currentConstituencyCode}
+        onSelected={handleOnClick}
+        placeholderValue="-"
+      ></Selector>
 
-        <Selector
-          options={optionsForThirdDistrictSelector}
-          districtCode={currentConstituencyVillageCode}
-          onSelected={handleOnClick}
-          placeholderValue="-"
-        ></Selector>
-      </DistrictSelectorWrapper>
-
-      <>
-        <button onClick={test}>測試DistrictWithAreaSelector</button>
-        <div>currentDistrictType:{currentDistrictType}</div>
-        <div>currentCountyCode:{currentCountyCode}</div>
-        <div>currentConstituencyCode:{currentConstituencyCode}</div>
-        <div>
-          currentConstituencyVillageCode:{currentConstituencyVillageCode}
-        </div>
-      </>
-    </>
+      <Selector
+        options={optionsForThirdDistrictSelector}
+        districtCode={currentConstituencyVillageCode}
+        onSelected={handleOnClick}
+        placeholderValue="-"
+      ></Selector>
+    </DistrictSelectorWrapper>
   )
 }
