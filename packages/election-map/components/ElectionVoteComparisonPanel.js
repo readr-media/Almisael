@@ -22,7 +22,6 @@ const ElectionVotesComparisonMobileWrapper = styled.div`
 const mobileStyle = css`
   margin: 0 auto;
   padding-bottom: 0 !important;
-  max-height: 568px;
   overflow: auto;
   border-radius: 12px;
   border: 2px solid #000;
