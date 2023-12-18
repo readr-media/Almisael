@@ -21,6 +21,8 @@ const Options = styled.ul`
   padding: 14px 0 0 0;
   margin: 14px 0 0 0;
   border-top: none;
+  max-height: 50vh;
+  overflow-y: scroll;
   width: 88px;
   list-style-type: none;
   border: 1px solid black;

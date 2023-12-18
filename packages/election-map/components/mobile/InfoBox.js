@@ -69,6 +69,14 @@ const Wrapper = styled.section`
     font-weight: 700;
     padding: 4px;
     border-bottom: 1px solid black;
+    &--text-align-start {
+      text-align: start;
+    }
+    .range {
+      font-size: 14px;
+      line-height: 20.27px;
+      color: #000;
+    }
   }
 `
 const ReferendumWrapper = styled(Wrapper)`
@@ -360,10 +368,13 @@ export default function InfoBox({ infoboxData, year }) {
         if (typeof infoboxData === 'string') {
           return <div>{infoboxData}</div>
         }
+        let districtName = ''
+
         if (level === 1) {
           const districtsAmount = infoboxData.districts.map((district) => {
             return district?.candidates?.length ?? 0
           })
+
           const candidatesAmount = districtsAmount.reduce(
             (accumulator, currentValue) => accumulator + currentValue
           )
@@ -393,10 +404,18 @@ export default function InfoBox({ infoboxData, year }) {
                     district.candidates
                   )
 
+                  if (district?.type === 'plainIndigenous') {
+                    districtName = '平地原住民'
+                  } else if (district?.type === 'mountainIndigenous') {
+                    districtName = '山地原住民'
+                  } else {
+                    districtName = district?.range ?? ''
+                  }
                   return (
                     <Wrapper key={index}>
-                      <div className="prof-rate">
-                        投票率: {district?.profRate}%
+                      <div className="prof-rate prof-rate--text-align-start">
+                        <div className="range">{districtName}</div>
+                        <div>投票率: {district?.profRate}%</div>
                       </div>
                       <CandidatesInfoWrapper maxHeight={'100%'}>
                         {orderedCandidates.map((candidate) =>
@@ -411,9 +430,17 @@ export default function InfoBox({ infoboxData, year }) {
             </div>
           )
         }
-        return electionData.map((election, index) => {
+
+        return infoboxData.map((election, index) => {
           if (!election) {
             return null
+          }
+          if (election?.type === 'plainIndigenous') {
+            districtName = '平地原住民'
+          } else if (election?.type === 'mountainIndigenous') {
+            districtName = '山地原住民'
+          } else {
+            districtName = ''
           }
 
           const orderedCandidates = sortCandidatesByTksRate(election.candidates)
@@ -426,13 +453,20 @@ export default function InfoBox({ infoboxData, year }) {
             shouldInfoBoxExpand
           )
           const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
-
+          const profRateClassName = districtName
+            ? 'prof-rate prof-rate--text-align-start'
+            : 'prof-rate'
           return (
             <Wrapper key={index}>
               {expendButtonJsx}
               {shouldShowExpandButton && <Divider />}
 
-              <div className="prof-rate">投票率: {election?.profRate}%</div>
+              <div className={profRateClassName}>
+                {districtName ? (
+                  <div className="range">{districtName}</div>
+                ) : null}
+                <div>投票率: {election?.profRate}%</div>
+              </div>
               <CandidatesInfoWrapper maxHeight={maxHeight}>
                 {orderedCandidates.map((candidate) =>
                   getInfoboxItemJsx(candidate)
@@ -489,6 +523,7 @@ export default function InfoBox({ infoboxData, year }) {
         if (typeof infoboxData === 'string') {
           return <div>{infoboxData}</div>
         }
+        let districtName = ''
         const currentSubtypeKey = currentElectionSubType.key
 
         const isIndigenous =
@@ -534,7 +569,6 @@ export default function InfoBox({ infoboxData, year }) {
           const candidatesAmount = districtsAmount.reduce(
             (accumulator, currentValue) => accumulator + currentValue
           )
-
           const shouldShowExpandButton = candidatesAmount > 5
           const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
           const maxHeight = calculateMaxHeightOfInfoBox(
@@ -556,13 +590,15 @@ export default function InfoBox({ infoboxData, year }) {
                   ) {
                     return null
                   }
+                  districtName = district?.area_nickname
                   const orderedCandidates = sortCandidatesByTksRate(
                     district.candidates
                   )
                   return (
                     <Wrapper key={index}>
-                      <div className="prof-rate">
-                        投票率: {district?.profRate}%
+                      <div className="prof-rate prof-rate--text-align-start">
+                        <div className="range">{districtName}</div>
+                        <div>投票率: {district?.profRate}%</div>
                       </div>
                       <CandidatesInfoWrapper maxHeight={'100%'}>
                         {orderedCandidates.map((candidate) =>
@@ -577,7 +613,7 @@ export default function InfoBox({ infoboxData, year }) {
             </div>
           )
         }
-        const candidates = electionData?.candidates
+        const candidates = infoboxData?.candidates
         const orderedCandidates = sortCandidatesByTksRate(candidates)
         const candidatesAmount = orderedCandidates.length
         const shouldShowExpandButton = candidatesAmount > 5
@@ -587,11 +623,15 @@ export default function InfoBox({ infoboxData, year }) {
           shouldInfoBoxExpand
         )
         const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
+        districtName = infoboxData?.area_nickname
         return (
           <Wrapper>
             {expendButtonJsx}
             {shouldShowExpandButton && <Divider />}
-            <div className="prof-rate">投票率 {electionData?.profRate}%</div>
+            <div className="prof-rate prof-rate--text-align-start">
+              <div className="range">{districtName}</div>
+              <div>投票率 {infoboxData?.profRate}%</div>
+            </div>
 
             <CandidatesInfoWrapper maxHeight={maxHeight}>
               {orderedCandidates.map((candidate) =>
