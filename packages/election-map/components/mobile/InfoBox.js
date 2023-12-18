@@ -20,7 +20,7 @@ const calculateMaxHeightOfInfoBox = (
     return '100%'
   }
   if (shouldInfoBoxExpand) {
-    return `calc(${candidatesAmount} * ${HEIGHT} + 50vh)`
+    return `calc(${candidatesAmount} * ${HEIGHT} + 100vh)`
   } else {
     return closedHeight
   }
@@ -239,6 +239,7 @@ const WrapperForCouncilMemberFirstLevel = styled.div`
 //   }
 // }
 
+const InfoboxWrapper = styled.div``
 /**
  *
  * @param {Array} candidates
@@ -643,5 +644,5 @@ export default function InfoBox({ infoboxData, year }) {
   }
   const infoboxJsx = getInfoboxJsx()
 
-  return <>{infoboxJsx}</>
+  return <InfoboxWrapper>{infoboxJsx}</InfoboxWrapper>
 }

@@ -68,7 +68,7 @@ const DistrictSelectorWrapper = styled.div`
   gap: 12px;
 `
 
-export default function DistrictSelectors({}) {
+export default function DistrictSelectors() {
   const { districtMapping, hasDistrictMapping } = useDistrictMapping()
   const allCounty = districtMapping.sub
   const [currentDistrictType, setCurrentDistrictType] = useState('nation')
@@ -324,54 +324,31 @@ export default function DistrictSelectors({}) {
     setCurrentDistrictType,
   ])
 
-  const test = () => {
-    dispatch(
-      changeLevelControl({
-        level: 3,
-        countyCode: currentCountyCode,
-        townCode: currentTownCode,
-        villageCode: currentVillageCode,
-        constituencyCode: '',
-        activeCode: currentVillageCode,
-      })
-    )
-  }
   if (!hasDistrictMapping) {
     return <Wrapper>loading....</Wrapper>
   }
   return (
-    <>
-      <DistrictSelectorWrapper>
-        <Selector
-          options={optionsForFirstDistrictSelector}
-          districtCode={currentCountyCode}
-          onSelected={handleOnClick}
-          placeholderValue="台灣"
-        ></Selector>
+    <DistrictSelectorWrapper>
+      <Selector
+        options={optionsForFirstDistrictSelector}
+        districtCode={currentCountyCode}
+        onSelected={handleOnClick}
+        placeholderValue="台灣"
+      ></Selector>
 
-        <Selector
-          options={optionsForSecondDistrictSelector}
-          districtCode={currentTownCode}
-          onSelected={handleOnClick}
-          placeholderValue="-"
-        ></Selector>
+      <Selector
+        options={optionsForSecondDistrictSelector}
+        districtCode={currentTownCode}
+        onSelected={handleOnClick}
+        placeholderValue="-"
+      ></Selector>
 
-        <Selector
-          options={optionsForThirdDistrictSelector}
-          districtCode={currentVillageCode}
-          onSelected={handleOnClick}
-          placeholderValue="-"
-        ></Selector>
-      </DistrictSelectorWrapper>
-
-      <>
-        <button onClick={test}>測試DistrictSelector</button>
-        <div>currentDistrictType:{currentDistrictType}</div>
-        <div>currentCountyCode:{currentCountyCode}</div>
-        {/* <div>currentConstituencyCode:{currentConstituencyCode}</div> */}
-        <div>currentTownCode:{currentTownCode}</div>
-        <div>currentVillageCode:{currentVillageCode}</div>
-      </>
-    </>
+      <Selector
+        options={optionsForThirdDistrictSelector}
+        districtCode={currentVillageCode}
+        onSelected={handleOnClick}
+        placeholderValue="-"
+      ></Selector>
+    </DistrictSelectorWrapper>
   )
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import styled from 'styled-components'
 
 import ElectionVoteComparisonPanel from '../ElectionVoteComparisonPanel'
@@ -9,6 +9,7 @@ import { useAppSelector } from '../../hook/useRedux'
 import { useAppDispatch } from '../../hook/useRedux'
 import { electionActions } from '../../store/election-slice'
 import SelectorContainer from './SeletorsContainer'
+import useDetectScrollDirection from '../../hook/useDetectScrollDirection'
 /**
  * @typedef {Object} NationData
  * @property {string} name
@@ -84,7 +85,17 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   padding: 0 24px;
 `
-
+const StyledSelectorContainer = styled(SelectorContainer)`
+  background-color: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} props.isCompareMode
+     * @param {boolean} props.shouldShow
+     */
+    ({ isCompareMode }) => (isCompareMode ? '#E9E9E9' : '#fff1db')
+  };
+  opacity: ${({ shouldShow }) => (shouldShow ? '1' : '0')}; ;
+`
 /**
  * Dashboard for new election map, created in 2023.11.20
  * TODO:
@@ -94,10 +105,11 @@ const ContentWrapper = styled.div`
 export const MobileDashboardNew = ({ onEvcSelected }) => {
   const dispatch = useAppDispatch()
   const { stopCompare, changeYear } = electionActions
-
+  const topButtonWrapperRef = useRef(null)
+  const contentWrapperRef = useRef(null)
+  const { scrollDirection } = useDetectScrollDirection(20)
   const [shouldOpenYearComparisonMenuBar, setShouldOpenYearComparisonMenuBar] =
     useState(false)
-
   const electionsType = useAppSelector(
     (state) => state.election.config.electionType
   )
@@ -145,18 +157,24 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
         />
       )}
       <Wrapper isCompareMode={compareMode}>
-        <TopButtonsWrapper>{topButtonJsx}</TopButtonsWrapper>
-        <ContentWrapper>
-          <SelectorContainer />
-          <InfoboxContainer />
-        </ContentWrapper>
+        <TopButtonsWrapper ref={topButtonWrapperRef}>
+          {topButtonJsx}
+        </TopButtonsWrapper>
 
-        {!compareMode && (
-          <ElectionVoteComparisonPanel
-            onEvcSelected={onEvcSelected}
-            isMobile={true}
-          />
-        )}
+        <StyledSelectorContainer
+          isCompareMode={compareMode}
+          shouldShow={scrollDirection === 'up' || scrollDirection === 'stale'}
+        />
+
+        <ContentWrapper ref={contentWrapperRef}>
+          <InfoboxContainer />
+          {!compareMode && (
+            <ElectionVoteComparisonPanel
+              onEvcSelected={onEvcSelected}
+              isMobile={true}
+            />
+          )}
+        </ContentWrapper>
       </Wrapper>
     </>
   )
