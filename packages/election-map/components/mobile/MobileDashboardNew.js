@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 
 import ElectionVoteComparisonPanel from '../ElectionVoteComparisonPanel'
@@ -46,6 +46,9 @@ import useDetectScrollDirection from '../../hook/useDetectScrollDirection'
 
 const TopButtonsWrapper = styled.div`
   display: flex;
+  position: absolute;
+  z-index: 10;
+  right: 16px;
   justify-content: end;
   gap: 8px;
   flex-wrap: wrap;
@@ -105,8 +108,7 @@ const StyledSelectorContainer = styled(SelectorContainer)`
 export const MobileDashboardNew = ({ onEvcSelected }) => {
   const dispatch = useAppDispatch()
   const { stopCompare, changeYear } = electionActions
-  const topButtonWrapperRef = useRef(null)
-  const contentWrapperRef = useRef(null)
+
   const { scrollDirection } = useDetectScrollDirection(20)
   const [shouldOpenYearComparisonMenuBar, setShouldOpenYearComparisonMenuBar] =
     useState(false)
@@ -157,16 +159,14 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
         />
       )}
       <Wrapper isCompareMode={compareMode}>
-        <TopButtonsWrapper ref={topButtonWrapperRef}>
-          {topButtonJsx}
-        </TopButtonsWrapper>
+        <TopButtonsWrapper>{topButtonJsx}</TopButtonsWrapper>
 
         <StyledSelectorContainer
           isCompareMode={compareMode}
           shouldShow={scrollDirection === 'up' || scrollDirection === 'stale'}
         />
 
-        <ContentWrapper ref={contentWrapperRef}>
+        <ContentWrapper>
           <InfoboxContainer />
           {!compareMode && (
             <ElectionVoteComparisonPanel
