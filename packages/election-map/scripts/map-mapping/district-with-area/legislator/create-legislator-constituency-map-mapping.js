@@ -41,6 +41,8 @@ fs.readdirSync(inputPath).forEach((fileName) => {
     areaCode: rawVillage.areaCode,
     areaName: `第${rawVillage.areaCode.slice(-2)}選區`,
     areaNickName: rawVillage.area_nickname,
+    townCode: rawVillage.towncode,
+    townName: rawVillage.townname,
     villCode: rawVillage.villcode,
     villName: rawVillage.villname,
   }))
@@ -155,6 +157,7 @@ fs.readdirSync(inputPath).forEach((fileName) => {
               ...villageObj,
               code: village.villCode,
               name: village.villName,
+              nickName: village.townName + ' ' + village.villName,
             }
           }),
         }
