@@ -11,5 +11,5 @@ export const environment = 'dev' // 'dev | prod'
 
 /*
 gsutil -m cp -r -a public-read ./out/* gs://statics.mirrormedia.mg/projects/election2022
-gsutil -m cp -r -a public-read ./out/* gs://readr-coverages/3/election2022
+gsutil -m cp -r ./out/* gs://readr-coverage/project/3/election2022
 */
