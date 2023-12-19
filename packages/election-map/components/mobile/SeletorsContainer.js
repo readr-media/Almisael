@@ -75,9 +75,9 @@ const ElectionSelectorWrapper = styled(DistrictSelectorWrapper)`
 
 const FixedWrapper = styled.div`
   position: sticky;
-  top: 40px;
+  top: 0px;
   z-index: 1;
-  padding: 0 24px;
+  padding: 40px 24px 0;
 `
 
 /**
