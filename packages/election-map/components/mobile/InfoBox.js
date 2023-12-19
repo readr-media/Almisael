@@ -384,7 +384,7 @@ export default function InfoBox({ infoboxData, year }) {
             candidatesAmount,
             shouldShowExpandButton,
             shouldInfoBoxExpand,
-            '272px'
+            '310px'
           )
           return (
             <div style={{ borderTop: 'solid 1px #000' }}>
