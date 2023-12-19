@@ -68,11 +68,20 @@ const defaultCompareInfo = {
   },
 }
 
+/** @type {import('../utils/electionsData').InfoboxData} */
+const defaultInfoboxData = {
+  electionType: defaultElectionConfig.electionType,
+  level: defaultControl.level.level,
+  electionData: null,
+  isRunning: false,
+  isStarted: true,
+}
+
 const initialElectionState = {
   config: defaultElectionConfig,
   data: {
     electionsData: defaultElectionsData,
-    infoboxData: {},
+    infoboxData: defaultInfoboxData,
     mapData: {},
     seatData: {},
     evcData: {},
