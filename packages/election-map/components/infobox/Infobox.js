@@ -34,12 +34,10 @@ const PresidentCandidate = styled.p`
 const PresidentCandidateName = styled.div`
   max-width: 160px;
   font-weight: 700;
-  ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 
 const PresidentCandidateParty = styled.div`
   font-weight: 350;
-  ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 
 const InfoboxText = styled.p`
@@ -99,13 +97,6 @@ const HintWrapper = styled.p`
   > span:before {
     margin-left: 1px;
   }
-`
-
-const MobileCompareName = styled.p`
-  margin: 0;
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 7px;
 `
 
 const electedSvg = (
@@ -202,25 +193,15 @@ const MayorCandidate = styled.div`
 const MayorCandidateName = styled.div`
   max-width: 160px;
   font-weight: 700;
-  ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 const MayorCandidateParty = styled.div`
   font-weight: 350;
-  ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 
-const MayorInfobox = ({
-  level,
-  data,
-  isRunning,
-  compareMode,
-  isCurrentYear,
-  compareName,
-}) => {
+const MayorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
-        {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
         <InfoboxText>{data}</InfoboxText>
       </InfoboxScrollWrapper>
     )
@@ -229,7 +210,6 @@ const MayorInfobox = ({
   const { profRate, candidates } = data
   return (
     <InfoboxScrollWrapper>
-      {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
       <MayorTitle>
         {level === 1 && '總'}投票率 {profRate}%
         {isCurrentYear ? (
@@ -253,10 +233,8 @@ const MayorInfobox = ({
           const elected = candidate.candVictor === '*'
           return (
             <MayorCandidate elected={elected} key={candidate.candNo}>
-              <MayorCandidateName compareMode={compareMode}>
-                {candidate.name}
-              </MayorCandidateName>
-              <MayorCandidateParty compareMode={compareMode}>
+              <MayorCandidateName>{candidate.name}</MayorCandidateName>
+              <MayorCandidateParty>
                 {candidate.party} {candidate.tksRate}%
               </MayorCandidateParty>
               {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
@@ -410,25 +388,15 @@ const CouncilMemberCandidate = styled.div`
 const CouncilMemberCandidateName = styled.div`
   max-width: 160px;
   font-weight: 700;
-  ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 const CouncilMemberCandidateParty = styled.div`
   font-weight: 350;
-  ${({ compareMode }) => compareMode && `max-width: 100px;`}
 `
 
-const CouncilMemberInfobox = ({
-  level,
-  data,
-  compareMode,
-  isRunning,
-  isCurrentYear,
-  compareName,
-}) => {
+const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
-        {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
         <InfoboxText>{data}</InfoboxText>
       </InfoboxScrollWrapper>
     )
@@ -438,7 +406,6 @@ const CouncilMemberInfobox = ({
     const { districts } = data
     return (
       <InfoboxScrollWrapper>
-        {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
         {isCurrentYear ? (
           isRunning ? (
             <HintWrapper>
@@ -469,10 +436,10 @@ const CouncilMemberInfobox = ({
                   elected={elected}
                   key={councilMemberdPrefix + candidate.candNo}
                 >
-                  <CouncilMemberCandidateName compareMode={compareMode}>
+                  <CouncilMemberCandidateName>
                     {candidate.name}
                   </CouncilMemberCandidateName>
-                  <CouncilMemberCandidateParty compareMode={compareMode}>
+                  <CouncilMemberCandidateParty>
                     {candidate.party} {candidate.tksRate}%
                   </CouncilMemberCandidateParty>
                   {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
@@ -527,10 +494,10 @@ const CouncilMemberInfobox = ({
                   id={councilMemberdPrefix + candidate.candNo}
                   key={councilMemberdPrefix + candidate.candNo}
                 >
-                  <CouncilMemberCandidateName compareMode={compareMode}>
+                  <CouncilMemberCandidateName>
                     {candidate.name}
                   </CouncilMemberCandidateName>
-                  <CouncilMemberCandidateParty compareMode={compareMode}>
+                  <CouncilMemberCandidateParty>
                     {candidate.party} {candidate.tksRate}%
                   </CouncilMemberCandidateParty>
                   {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
@@ -571,10 +538,10 @@ const CouncilMemberInfobox = ({
                   elected={elected}
                   key={councilMemberdPrefix + candidate.candNo}
                 >
-                  <CouncilMemberCandidateName compareMode={compareMode}>
+                  <CouncilMemberCandidateName>
                     {candidate.name}
                   </CouncilMemberCandidateName>
-                  <CouncilMemberCandidateParty compareMode={compareMode}>
+                  <CouncilMemberCandidateParty>
                     {candidate.party} {candidate.tksRate}%
                   </CouncilMemberCandidateParty>
                   {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
@@ -586,12 +553,7 @@ const CouncilMemberInfobox = ({
     }
   })
 
-  return (
-    <InfoboxScrollWrapper>
-      {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
-      {councilMembers}
-    </InfoboxScrollWrapper>
-  )
+  return <InfoboxScrollWrapper>{councilMembers}</InfoboxScrollWrapper>
 }
 
 const ReferendumPassWrapper = styled.span`
@@ -623,11 +585,10 @@ const ReferendumCandidate = styled.div`
   line-height: 23px;
 `
 
-const ReferendumInfobox = ({ data, isRunning, isCurrentYear, compareName }) => {
+const ReferendumInfobox = ({ data, isRunning, isCurrentYear }) => {
   if (typeof data === 'string') {
     return (
       <InfoboxScrollWrapper>
-        {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
         <InfoboxText>{data}</InfoboxText>
       </InfoboxScrollWrapper>
     )
@@ -638,7 +599,6 @@ const ReferendumInfobox = ({ data, isRunning, isCurrentYear, compareName }) => {
   const pass = adptVictor === 'Y'
   return (
     <InfoboxScrollWrapper>
-      {compareName && <MobileCompareName>{compareName}</MobileCompareName>}
       {isCurrentYear ? (
         isRunning ? (
           <HintWrapper>
@@ -735,21 +695,12 @@ const ReferendumInfobox = ({ data, isRunning, isCurrentYear, compareName }) => {
  *
  * @param {Object} props
  * @param {import('../../utils/electionsData').InfoboxData} props.data
- * @param {boolean} [props.compareMode]
  * @param {boolean} props.isCurrentYear
- * @param {string} [props.compareName]
  * @param {number} props.year
  * @param {import('../../consts/electionsConfig').ElectionSubtype} props.subtype
  * @returns {JSX.Element}
  */
-export const Infobox = ({
-  data,
-  compareMode,
-  isCurrentYear,
-  compareName,
-  year,
-  subtype,
-}) => {
+export const Infobox = ({ data, isCurrentYear, year, subtype }) => {
   const { electionType, level, electionData, isRunning, isStarted } = data
   let infobox
 
@@ -788,9 +739,7 @@ export const Infobox = ({
           level={level}
           data={data}
           isRunning={isRunning}
-          compareMode={compareMode}
           isCurrentYear={isCurrentYear}
-          compareName={compareName}
         />
       )
       break
@@ -825,9 +774,7 @@ export const Infobox = ({
           level={level}
           data={data}
           isRunning={isRunning}
-          compareMode={compareMode}
           isCurrentYear={isCurrentYear}
-          compareName={compareName}
         />
       )
       break
@@ -844,7 +791,6 @@ export const Infobox = ({
           data={data}
           isRunning={isRunning}
           isCurrentYear={isCurrentYear}
-          compareName={compareName}
         />
       )
       break
