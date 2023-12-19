@@ -296,6 +296,12 @@ const LegislatorCandidate = styled.div`
   ${({ elected }) => elected && 'color: #DB4C65;'}
 `
 
+/**
+ *
+ * @param {Object} props
+ * @param {}
+ * @returns
+ */
 const LegislatorInfobox = ({ level, data }) => {
   return (
     <InfoboxScrollWrapper>
@@ -729,9 +735,9 @@ const ReferendumInfobox = ({ data, isRunning, isCurrentYear, compareName }) => {
  *
  * @param {Object} props
  * @param {import('../../utils/electionsData').InfoboxData} props.data
- * @param {boolean} props.compareMode
+ * @param {boolean} [props.compareMode]
  * @param {boolean} props.isCurrentYear
- * @param {string} props.compareName
+ * @param {string} [props.compareName]
  * @param {number} props.year
  * @param {import('../../consts/electionsConfig').ElectionSubtype} props.subtype
  * @returns {JSX.Element}
@@ -742,6 +748,7 @@ export const Infobox = ({
   isCurrentYear,
   compareName,
   year,
+  subtype,
 }) => {
   const { electionType, level, electionData, isRunning, isStarted } = data
   let infobox
@@ -789,7 +796,21 @@ export const Infobox = ({
       break
     }
     case 'legislator': {
-      infobox = <LegislatorInfobox level={level} data={electionData} />
+      const data = getInfoboxDataOnCertainElectionType(
+        electionData,
+        level,
+        year,
+        isStarted,
+        subtype
+      )
+      infobox = (
+        <LegislatorInfobox
+          level={level}
+          data={data}
+          isRunning={isRunning}
+          isCurrentYear={isCurrentYear}
+        />
+      )
       break
     }
     case 'councilMember': {
