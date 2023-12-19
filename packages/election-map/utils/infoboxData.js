@@ -7,6 +7,7 @@
  * @typedef {number} Year
  * @typedef {import('./electionsData').MapData['isRunning']} isRunning
  * @typedef {import('./electionsData').MapData['isStarted']} isStarted
+ * @typedef {import('../consts/electionsConfig').ElectionSubtype} ElectionSubtype
  */
 
 import { currentYear } from '../consts/electionsConfig'
@@ -134,9 +135,17 @@ const councilMemberInfoboxData = (
  * @param {Level} level
  * @param {Year} year
  * @param {isStarted} isStarted
+ * @param {ElectionSubtype} subtype
  * @param {InfoboxType} infoboxType
  */
-const legislatorInfoboxData = (data, level, year, isStarted, infoboxType) => {
+const legislatorInfoboxData = (
+  data,
+  level,
+  year,
+  isStarted,
+  subtype,
+  infoboxType
+) => {
   if (level === 0) {
     if (infoboxType === 'mobile') {
       return ''
@@ -208,8 +217,15 @@ const getInfoBoxData = (electionsType, infoboxType = 'desktop') => {
         mayorInfoboxData(data, level, year, isStarted, infoboxType)
 
     case 'legislator':
-      return (data, level, year, isStarted) =>
-        legislatorInfoboxData(data, level, year, isStarted, infoboxType)
+      return (data, level, year, isStarted, subtype) =>
+        legislatorInfoboxData(
+          data,
+          level,
+          year,
+          isStarted,
+          subtype,
+          infoboxType
+        )
 
     case 'councilMember':
       return (data, level, year, isStarted) =>

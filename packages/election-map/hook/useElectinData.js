@@ -484,11 +484,6 @@ export const useElectionData = (showLoading, showTutorial) => {
   useEffect(() => {
     if (showTutorial) {
       dispatch(electionActions.changeElection('councilMember'))
-      dispatch(
-        electionActions.changeYear(
-          electionConfig.years[electionConfig.years.length - 2]
-        )
-      )
     }
   }, [showTutorial, electionConfig.years, dispatch])
 
