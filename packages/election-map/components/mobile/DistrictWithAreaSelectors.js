@@ -36,6 +36,7 @@ import { electionActions } from '../../store/election-slice'
  * @property {string} code
  * @property {'village'} type
  * @property {null} sub
+ * @property {string} [nickName]
  */
 
 /**
@@ -63,7 +64,7 @@ const DistrictSelectorWrapper = styled.div`
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   justify-content: left;
   gap: 12px;
 `
@@ -115,7 +116,7 @@ export default function DistrictWithAreaSelectors({}) {
       return []
     }
 
-    return allTown?.find((item) => item.code === code)?.sub ?? []
+    return allTown?.find((item) => item.code === code)?.sub
   }
 
   /**
@@ -232,6 +233,7 @@ export default function DistrictWithAreaSelectors({}) {
     electionsType,
     year,
     currentDistrictType,
+    currentElectionSubType,
     changeLevelControl,
     currentCountyCode,
     currentConstituencyCode,
@@ -295,6 +297,7 @@ export default function DistrictWithAreaSelectors({}) {
       ></Selector>
 
       <Selector
+        shouldShowNickName={true}
         options={optionsForThirdDistrictSelector}
         districtCode={currentConstituencyVillageCode}
         onSelected={handleOnClick}

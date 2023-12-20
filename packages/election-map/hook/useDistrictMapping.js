@@ -59,6 +59,7 @@ const fetchDistrictJson = async (electionType, currentSubType, currentYear) => {
 /**
  * @typedef {Object} TownData
  * @property {string} name
+ * @property {string} [nickName]
  * @property {string} code
  * @property {'town'} type
  * @property {VillageData[]} sub
@@ -66,6 +67,7 @@ const fetchDistrictJson = async (electionType, currentSubType, currentYear) => {
 /**
  * @typedef {Object} VillageData
  * @property {string} name
+ * @property {string} [nickName]
  * @property {string} code
  * @property {'village'} type
  * @property {null} sub
