@@ -17,7 +17,7 @@ const FolderPath = parsedArgs.FolderPath
 
 if (!FolderPath) {
   throw new Error(
-    `required param 'FolderPath' not provided\n ex: node script.js FolderPath=./map-mapping/constituency/legislator/csv/`
+    `required param 'FolderPath' not provided\n ex: node script.js FolderPath=./map-mapping/district-width-area/legislator/csv/`
   )
 }
 

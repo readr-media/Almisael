@@ -15,7 +15,7 @@ const FolderPath = parsedArgs.FolderPath
 
 if (!FolderPath) {
   throw new Error(
-    `required param 'FolderPath' not provided\n ex: node script.js FolderPath=./map-mapping/constituency/legislator/csv/`
+    `required param 'FolderPath' not provided\n ex: node script.js FolderPath=./map-mapping/district-with-area/legislator/csv/`
   )
 }
 
@@ -143,7 +143,7 @@ fs.readdirSync(inputPath).forEach((fileName) => {
       name: districtCodeToName[countyCode],
       // 這個 county 下所有的選區
       sub: Object.keys(countyMap).map((areaCode) => {
-        const constituencyMap = countyMap[areaCode]
+        const areaMap = countyMap[areaCode]
         // console.log(subs)
         return {
           ...counstituencyObj,
@@ -151,8 +151,8 @@ fs.readdirSync(inputPath).forEach((fileName) => {
           name: districtCodeToName[areaCode],
           nickName: areaCodeToNickName[areaCode],
           // 這個選區下所有的村裡
-          sub: Object.keys(constituencyMap).map((villageCode) => {
-            const village = constituencyMap[villageCode]
+          sub: Object.keys(areaMap).map((villageCode) => {
+            const village = areaMap[villageCode]
             return {
               ...villageObj,
               code: village.villCode,
@@ -175,7 +175,7 @@ fs.readdirSync(inputPath).forEach((fileName) => {
       )
     })
   })
-  console.log('output constituency count', outputConstituencies.length)
+  console.log('output area count', outputConstituencies.length)
   console.log('output villages count', outputVillageCodes.length)
 
   const missingVillages = filterVillages.filter((village) => {

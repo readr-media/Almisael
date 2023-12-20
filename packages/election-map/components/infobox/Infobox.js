@@ -287,7 +287,7 @@ const NormalLegislatorDistrict = styled.div`
   }
 `
 
-const NormalLegislatorConstituency = styled.div`
+const NormalLegislatorArea = styled.div`
   font-weight: 700;
   line-height: 23px;
   color: gray;
@@ -324,7 +324,7 @@ const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
         <HintWrapper>{isCurrentYearRunningJsx}</HintWrapper>
         {districts.map(({ county, area, range, candidates, profRate }) => {
           const legislatorPrefix = county + area
-          const constituency = range.split(' ')[1]
+          const areaName = range.split(' ')[1]
           const candidateComps = [...candidates]
             .sort((cand1, cand2) => {
               if (cand1.tksRate === cand2.tksRate) {
@@ -351,9 +351,7 @@ const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
             })
           return (
             <NormalLegislatorDistrict key={legislatorPrefix}>
-              <NormalLegislatorConstituency>
-                {constituency}
-              </NormalLegislatorConstituency>
+              <NormalLegislatorArea>{areaName}</NormalLegislatorArea>
               <NormalLegislatorTitle>投票率 {profRate}%</NormalLegislatorTitle>
               {candidateComps}
             </NormalLegislatorDistrict>
@@ -673,7 +671,7 @@ const CouncilMemberTypeWrapper = styled.div`
   }
 `
 
-const CouncilMemberConstituency = styled.div`
+const CouncilMemberArea = styled.div`
   font-weight: 700;
   line-height: 23px;
   color: gray;
@@ -728,7 +726,7 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
         )}
         {districts.map(({ county, area, range, candidates, profRate }) => {
           const councilMemberdPrefix = county + area
-          const constituency = range.split(' ')[1]
+          const areaName = range.split(' ')[1]
           const candidateComps = [...candidates]
             .sort((cand1, cand2) => {
               if (cand1.tksRate === cand2.tksRate) {
@@ -755,9 +753,7 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
             })
           return (
             <CouncilMemberDistrict key={councilMemberdPrefix}>
-              <CouncilMemberConstituency>
-                {constituency}
-              </CouncilMemberConstituency>
+              <CouncilMemberArea>{areaName}</CouncilMemberArea>
               <CouncilMemberTitle>投票率 {profRate}%</CouncilMemberTitle>
               {candidateComps}
             </CouncilMemberDistrict>
@@ -816,9 +812,9 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
     } else {
       return (
         <CouncilMemberTypeWrapper key={councilMemberdPrefix}>
-          <CouncilMemberConstituency>
+          <CouncilMemberArea>
             {type === 'plainIndigenous' ? '平地原住民' : '山地原住民'}
-          </CouncilMemberConstituency>
+          </CouncilMemberArea>
           <CouncilMemberTitle>
             投票率 {profRate}%
             {isCurrentYear ? (
@@ -959,46 +955,6 @@ const ReferendumInfobox = ({ data, isRunning, isCurrentYear }) => {
 }
 
 /**
- * The complete Triforce, or one or more components of the Triforce.
- * @typedef {Object} InfoboxTemplateInput
- * @property {string} type - Election types, like president
- * @property {number} level - Info level: 1. country, 2. county, 3. towns / constituency 4. village
- * @property {number} profRate - Total vote rate
- * @property {object[]} candidates - All candidates info
- */
-
-/**
- * Create infobox template based on the election infos
- * @param {InfoboxTemplateInput} input
- * @return {string} template
- */
-
-// const templates = {
-//   president: `
-//   投票率 ${profRate}
-//   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-//   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-//   `,
-//   mayor: `
-//   總投票率 ${profRate}
-//   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-//   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-//   `,
-//   councilMember: `
-//   ${constituency}
-//   投票率 ${profRate}
-//   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-//   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-//   `,
-//   legislator: `
-//   ${constituency}
-//   投票率 ${profRate}
-//   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-//   ${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-//   `,
-// }
-
-/**
  *
  * @param {Object} props
  * @param {import('../../utils/electionsData').InfoboxData} props.data
@@ -1108,53 +1064,3 @@ export const Infobox = ({ data, isCurrentYear, year, subtype }) => {
 
   return <InfoboxWrapper>{infobox}</InfoboxWrapper>
 }
-
-/*
-總統
-投票率 ${profRate}
-${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-
-縣市首長
-總投票率 ${profRate}
-${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-
-立法委員
-下面可能是array
-${選區名稱}
-投票率 ${profRate}
-${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-or
-點擊地圖看更多資訊
-
-縣市議員
-下面可能是array
-${選區名稱}
-投票率 ${profRate}
-${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-${candidate.name} ${candidate.party} ${candidate.tksRate} ${candidate.candVictor}
-or
-點擊地圖看更多資訊
-
-公投
-${公投案號} ${公投案簡稱}
-此案是否通過：${通過與否}
-投票率 ${profRate}
-同意 ${agreeRate}
-不同意 ${全國投票率得票率}
-
-
-*/
-
-/**
- * President level: 1. country, 2. county, 3. towns 4. village
- * Mayor level: 1. county, 2. towns 3. village
- * Councilmen level: 1. county, 2. constituency 3. village
- * Indigenous Councilmen level: 1. county, 2. constituency 3. village
- * Legislators level: 1. county 2. constituency 3. village
- * Indigenous Legislators level: 1. country, 2. county, 3. towns 4. village
- * Legislators Party level: 1. country, 2. county, 3. towns 4. village
- * Referendum level: 1. country, 2. county, 3. towns 4. village
- */
