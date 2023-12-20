@@ -63,7 +63,7 @@ const DistrictSelectorWrapper = styled.div`
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   justify-content: left;
   gap: 12px;
 `
