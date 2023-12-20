@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 
 import ElectionVoteComparisonPanel from '../ElectionVoteComparisonPanel'
-
+import { SeatsPanel } from '../SeatsPanel'
 import YearComparisonMenuBar from './YearComparisonMenuBar'
 import InfoboxContainer from './InfoboxContainer'
 import { useAppSelector } from '../../hook/useRedux'
@@ -169,10 +169,13 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
         <ContentWrapper>
           <InfoboxContainer />
           {!compareMode && (
-            <ElectionVoteComparisonPanel
-              onEvcSelected={onEvcSelected}
-              isMobile={true}
-            />
+            <>
+              <SeatsPanel isMobile={true} />
+              <ElectionVoteComparisonPanel
+                onEvcSelected={onEvcSelected}
+                isMobile={true}
+              />
+            </>
           )}
         </ContentWrapper>
       </Wrapper>

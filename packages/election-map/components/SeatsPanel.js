@@ -6,22 +6,35 @@ import { useAppSelector } from '../hook/useRedux'
 import { useEffect, useState } from 'react'
 import { countyMappingData } from '../consts/electionsConfig'
 
-const SeatsChartWrapper = styled(CollapsibleWrapper)`
+const SeatsChartDesktopWrapper = styled(CollapsibleWrapper)`
   width: 320px;
   background-color: white;
   pointer-events: auto;
   margin: 9px 0 0;
 `
 
-const StyledSeatsChart = styled(SeatsChart)`
+const SeatsChartMobileWrapper = styled.div`
+  background-color: white;
+  pointer-events: auto;
+  margin: 12px 0 0;
+  border-radius: 12px;
+  border: 1px solid #000;
+`
+const StyledSeatsDesktopChart = styled(SeatsChart)`
   max-height: 317px;
+  overflow: auto;
+`
+const StyledSeatsMobileChart = styled(SeatsChart)`
+  height: fit-content;
   overflow: auto;
 `
 
 /**
  * Control seats chart from @readr-media/react-election-widgets
+ * @param {Object} props
+ * @param {boolean} [props.isMobile]
  */
-export const SeatsPanel = () => {
+export const SeatsPanel = ({ isMobile = false }) => {
   const [switchOn, setSwitchOn] = useState(false)
   const electionType = useAppSelector(
     (state) => state.election.config.electionType
@@ -95,11 +108,16 @@ export const SeatsPanel = () => {
 
   return (
     <>
-      {data && (
-        <SeatsChartWrapper title={meta.wrapperTitle}>
-          <StyledSeatsChart data={data} meta={meta} />
-        </SeatsChartWrapper>
-      )}
+      {data &&
+        (isMobile ? (
+          <SeatsChartMobileWrapper title={meta.wrapperTitle}>
+            <StyledSeatsMobileChart data={data} meta={meta} />
+          </SeatsChartMobileWrapper>
+        ) : (
+          <SeatsChartDesktopWrapper title={meta.wrapperTitle}>
+            <StyledSeatsDesktopChart data={data} meta={meta} />
+          </SeatsChartDesktopWrapper>
+        ))}
     </>
   )
 }
