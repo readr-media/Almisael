@@ -1033,7 +1033,6 @@ export const prepareElectionData = async (
             // handle infobox data only
             // subtype 'all' won't show infoboxData
             if (subtypeKey !== 'all') {
-              console.log('possibly wrong')
               const levelCode = subtypeKey === 'normal' ? areaCode : townCode
               newInfoboxData.electionData = newMapData[2][
                 levelCode
