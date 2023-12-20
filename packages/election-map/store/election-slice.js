@@ -223,6 +223,7 @@ const electionsSlice = createSlice({
           state.control.number?.key
         )
         newElectionData.seatData.all = oldElectionData.seatData.all
+        state.control.level = defaultLevelControl
       }
       if (state.compare.info.compareMode) {
         state.compare.info.filter.subtype = newSubtype
