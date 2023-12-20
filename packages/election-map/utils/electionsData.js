@@ -1018,7 +1018,7 @@ export const prepareElectionData = async (
             if (subtypeKey !== 'all') {
               newInfoboxData.electionData = newMapData[1]?.[
                 countyCode
-              ]?.districts?.find((district) => {
+              ]?.districts?.filter((district) => {
                 const levelCode =
                   subtypeKey === 'normal'
                     ? district.county + district.area
@@ -1033,9 +1033,10 @@ export const prepareElectionData = async (
             // handle infobox data only
             // subtype 'all' won't show infoboxData
             if (subtypeKey !== 'all') {
+              const levelCode = subtypeKey === 'normal' ? areaCode : townCode
               newInfoboxData.electionData = newMapData[2][
-                townCode
-              ]?.districts.find(
+                levelCode
+              ]?.districts.filter(
                 (district) =>
                   district.county + district.town + district.vill ===
                   levelControl.activeCode
