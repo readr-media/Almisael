@@ -78,7 +78,7 @@ export default function DistrictWithAreaSelectors({}) {
   const dispatch = useAppDispatch()
   const { changeLevelControl, resetLevelControl } = electionActions
 
-  const [currentConstituencyCode, setCurrentConstituencyCode] = useState('')
+  const [currentAreaCode, setCurrentAreaCode] = useState('')
   const [currentConstituencyVillageCode, setCurrentConstituencyVillageCode] =
     useState('')
   const electionsType = useAppSelector(
@@ -94,7 +94,7 @@ export default function DistrictWithAreaSelectors({}) {
     electionsType === 'legislator' && currentElectionSubType.key === 'normal'
 
   const allTown = getAllTown(currentCountyCode)
-  const allVillage = getAllVillage(currentConstituencyCode)
+  const allVillage = getAllVillage(currentAreaCode)
 
   function getAllTown(code) {
     if (currentDistrictType === 'nation') {
@@ -129,16 +129,16 @@ export default function DistrictWithAreaSelectors({}) {
     switch (type) {
       case 'nation':
         setCurrentCountyCode('')
-        setCurrentConstituencyCode('')
+        setCurrentAreaCode('')
         setCurrentConstituencyVillageCode('')
         break
       case 'county':
         setCurrentCountyCode(code)
-        setCurrentConstituencyCode('')
+        setCurrentAreaCode('')
         setCurrentConstituencyVillageCode('')
         break
       case 'constituency':
-        setCurrentConstituencyCode(code)
+        setCurrentAreaCode(code)
         setCurrentConstituencyVillageCode('')
         break
       case 'village':
@@ -162,14 +162,14 @@ export default function DistrictWithAreaSelectors({}) {
     return [...allTown]
   }, [allTown, currentCountyCode])
   const optionsForThirdDistrictSelector = useMemo(() => {
-    if (currentConstituencyCode) {
+    if (currentAreaCode) {
       return [
-        { type: 'constituency', code: currentConstituencyCode, name: '-' },
+        { type: 'constituency', code: currentAreaCode, name: '-' },
         ...allVillage,
       ]
     }
     return [...allVillage]
-  }, [allVillage, currentConstituencyCode])
+  }, [allVillage, currentAreaCode])
 
   useEffect(() => {
     if (!hasDistrictMapping) {
@@ -191,7 +191,7 @@ export default function DistrictWithAreaSelectors({}) {
             countyCode: currentCountyCode,
             townCode: '',
             villageCode: '',
-            constituencyCode: '',
+            areaCode: '',
             activeCode: currentCountyCode,
           })
         )
@@ -205,8 +205,8 @@ export default function DistrictWithAreaSelectors({}) {
             countyCode: currentCountyCode,
             townCode: '',
             villageCode: '',
-            constituencyCode: currentConstituencyCode,
-            activeCode: currentConstituencyCode,
+            areaCode: currentAreaCode,
+            activeCode: currentAreaCode,
           })
         )
         break
@@ -218,7 +218,7 @@ export default function DistrictWithAreaSelectors({}) {
             countyCode: currentCountyCode,
             townCode: '',
             villageCode: currentConstituencyVillageCode,
-            constituencyCode: currentConstituencyCode,
+            areaCode: currentAreaCode,
             activeCode: currentConstituencyVillageCode,
           })
         )
@@ -236,7 +236,7 @@ export default function DistrictWithAreaSelectors({}) {
     currentElectionSubType,
     changeLevelControl,
     currentCountyCode,
-    currentConstituencyCode,
+    currentAreaCode,
     currentConstituencyVillageCode,
     hasDistrictMapping,
   ])
@@ -273,13 +273,14 @@ export default function DistrictWithAreaSelectors({}) {
     currentCountyCode,
     setCurrentCountyCode,
     setCurrentDistrictType,
-    currentConstituencyCode,
+    currentAreaCode,
     isConstituency,
   ])
 
   if (!hasDistrictMapping) {
     return <Wrapper>loading....</Wrapper>
   }
+
   return (
     <DistrictSelectorWrapper>
       <Selector
@@ -291,7 +292,7 @@ export default function DistrictWithAreaSelectors({}) {
 
       <Selector
         options={optionsForSecondDistrictSelector}
-        districtCode={currentConstituencyCode}
+        districtCode={currentAreaCode}
         onSelected={handleOnClick}
         placeholderValue="-"
       ></Selector>
