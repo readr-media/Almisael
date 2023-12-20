@@ -975,7 +975,7 @@ export const prepareElectionData = async (
                 subtypeKey
               )
             ) {
-              newInfoboxData.electionData = newMapData[0]?.districts.find(
+              newInfoboxData.electionData = newMapData[0]?.districts.filter(
                 (district) => district.county === levelControl.activeCode
               )
               newInfoboxData.isRunning = newMapData.isRunning
