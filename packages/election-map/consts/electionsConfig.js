@@ -111,7 +111,7 @@ export const electionsConfig = [
       { name: '政黨票', key: 'party', mobileOnly: false },
       { name: '全國', key: 'all', mobileOnly: true },
     ],
-    years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }],
+    years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }, { key: 2024 }],
     meta: {
       evc: {
         wrapperTitle: {
