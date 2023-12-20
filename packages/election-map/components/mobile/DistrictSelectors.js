@@ -155,8 +155,19 @@ export default function DistrictSelectors() {
     switch (electionsType) {
       case 'mayor':
       case 'councilMember':
-      case 'legislator':
         return [...districtMapping.sub]
+      case 'legislator':
+        if (currentElectionSubType.key === 'normal') {
+          return [...districtMapping.sub]
+        }
+        return [
+          {
+            type: districtMapping.type,
+            code: districtMapping.code,
+            name: districtMapping.name,
+          },
+          ...districtMapping.sub,
+        ]
       case 'referendum':
       case 'president':
         return [
@@ -171,7 +182,7 @@ export default function DistrictSelectors() {
       default:
         break
     }
-  }, [electionsType, districtMapping])
+  }, [electionsType, districtMapping, currentElectionSubType])
   const optionsForSecondDistrictSelector = useMemo(() => {
     if (currentCountyCode) {
       return [
@@ -303,10 +314,6 @@ export default function DistrictSelectors() {
       case 'president':
         break
       case 'legislator':
-        if (!currentCountyCode) {
-          setCurrentDistrictType('county')
-          setCurrentCountyCode(allCounty?.[0]?.code)
-        }
         break
       //todo: 公投
       case 'referendum':
@@ -315,6 +322,7 @@ export default function DistrictSelectors() {
         break
     }
   }, [
+    currentElectionSubType,
     hasDistrictMapping,
     electionsType,
     allCounty,
@@ -328,27 +336,36 @@ export default function DistrictSelectors() {
     return <Wrapper>loading....</Wrapper>
   }
   return (
-    <DistrictSelectorWrapper>
-      <Selector
-        options={optionsForFirstDistrictSelector}
-        districtCode={currentCountyCode}
-        onSelected={handleOnClick}
-        placeholderValue="台灣"
-      ></Selector>
+    <>
+      <DistrictSelectorWrapper>
+        <Selector
+          options={optionsForFirstDistrictSelector}
+          districtCode={currentCountyCode}
+          onSelected={handleOnClick}
+          placeholderValue="台灣"
+        ></Selector>
 
-      <Selector
-        options={optionsForSecondDistrictSelector}
-        districtCode={currentTownCode}
-        onSelected={handleOnClick}
-        placeholderValue="-"
-      ></Selector>
+        <Selector
+          options={optionsForSecondDistrictSelector}
+          districtCode={currentTownCode}
+          onSelected={handleOnClick}
+          placeholderValue="-"
+        ></Selector>
 
-      <Selector
-        options={optionsForThirdDistrictSelector}
-        districtCode={currentVillageCode}
-        onSelected={handleOnClick}
-        placeholderValue="-"
-      ></Selector>
-    </DistrictSelectorWrapper>
+        <Selector
+          options={optionsForThirdDistrictSelector}
+          districtCode={currentVillageCode}
+          onSelected={handleOnClick}
+          placeholderValue="-"
+        ></Selector>
+      </DistrictSelectorWrapper>
+      <div>
+        <button onClick={() => dispatch(resetLevelControl())}>test</button>
+        <div>currentDistrictType:{currentDistrictType}</div>
+        <div>currentCountyCode:{currentCountyCode}</div>
+        <div>currentTownCode:{currentTownCode}</div>
+        <div>currentVillageCode:{currentVillageCode}</div>
+      </div>
+    </>
   )
 }

@@ -233,6 +233,7 @@ export default function DistrictWithAreaSelectors({}) {
     electionsType,
     year,
     currentDistrictType,
+    currentElectionSubType,
     changeLevelControl,
     currentCountyCode,
     currentConstituencyCode,

@@ -517,7 +517,8 @@ export default function InfoBox({ infoboxData, year }) {
           electionData,
           level,
           year,
-          isStarted
+          isStarted,
+          currentElectionSubType
         )
 
         if (typeof infoboxData === 'string') {
@@ -534,9 +535,38 @@ export default function InfoBox({ infoboxData, year }) {
         if (isAll) {
           return null
         }
-        if (level === 1) {
+        if (level === 0) {
+          const candidates = infoboxData?.candidates
+          const orderedCandidates = sortCandidatesByTksRate(candidates)
+          const candidatesAmount = orderedCandidates.length
+          const shouldShowExpandButton = candidatesAmount > 5
+          const maxHeight = calculateMaxHeightOfInfoBox(
+            candidatesAmount,
+            shouldShowExpandButton,
+            shouldInfoBoxExpand
+          )
+          const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
+          districtName = infoboxData?.area_nickname
+          return (
+            <Wrapper>
+              {expendButtonJsx}
+              {shouldShowExpandButton && <Divider />}
+              <div className="prof-rate prof-rate--text-align-start">
+                <div className="range">{districtName}</div>
+                <div>投票率 {infoboxData?.profRate}%</div>
+              </div>
+
+              <CandidatesInfoWrapper maxHeight={maxHeight}>
+                {orderedCandidates.map((candidate) =>
+                  getInfoboxItemJsx(candidate)
+                )}
+              </CandidatesInfoWrapper>
+              {shouldShowExpandButton && <Divider />}
+            </Wrapper>
+          )
+        } else if (level === 1) {
           if (isIndigenous || isParty) {
-            const candidates = infoboxData?.candidates ?? []
+            const candidates = infoboxData?.[0]?.candidates ?? []
             const orderedCandidates = sortCandidatesByTksRate(candidates)
             const candidatesAmount = orderedCandidates?.length ?? 0
             const shouldShowExpandButton = candidatesAmount > 5
@@ -551,7 +581,7 @@ export default function InfoBox({ infoboxData, year }) {
                 {expendButtonJsx}
                 {shouldShowExpandButton && <Divider />}
                 <div className="prof-rate">
-                  投票率 {electionData?.profRate}%
+                  投票率 {infoboxData?.[0]?.profRate}%
                 </div>
 
                 <CandidatesInfoWrapper maxHeight={maxHeight}>
@@ -613,7 +643,7 @@ export default function InfoBox({ infoboxData, year }) {
             </div>
           )
         }
-        const candidates = infoboxData?.candidates
+        const candidates = infoboxData?.[0]?.candidates
         const orderedCandidates = sortCandidatesByTksRate(candidates)
         const candidatesAmount = orderedCandidates.length
         const shouldShowExpandButton = candidatesAmount > 5
@@ -623,14 +653,14 @@ export default function InfoBox({ infoboxData, year }) {
           shouldInfoBoxExpand
         )
         const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
-        districtName = infoboxData?.area_nickname
+        districtName = infoboxData?.[0]?.area_nickname
         return (
           <Wrapper>
             {expendButtonJsx}
             {shouldShowExpandButton && <Divider />}
             <div className="prof-rate prof-rate--text-align-start">
               <div className="range">{districtName}</div>
-              <div>投票率 {infoboxData?.profRate}%</div>
+              <div>投票率 {infoboxData?.[0]?.profRate}%</div>
             </div>
 
             <CandidatesInfoWrapper maxHeight={maxHeight}>
