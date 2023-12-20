@@ -8,6 +8,9 @@ import { LiveblogContainer } from '../components/LiveblogContainer'
 import { electionMapColor } from '../consts/colors'
 import { organization } from '../consts/config'
 import ReactGA from 'react-ga'
+import { useAppDispatch, useAppSelector } from '../hook/useRedux'
+import { electionActions } from '../store/election-slice'
+import { mapActions } from '../store/map-slice'
 
 const upTriangle = (
   <svg
@@ -60,19 +63,23 @@ const StickyHeader = /** @type {import('styled-components').ThemedStyledFunction
 `
 
 export default function Home() {
-  const [showTutorial, setShowTutorial] = useState(false)
+  const showTutorial = useAppSelector((state) => state.map.ui.showTutorial)
   const [dashboardInView, setDashboardInView] = useState(true)
   const [hasAnchor, setHasAnchor] = useState(false)
   /** @type {{current: IntersectionObserver} | null} */
   const dashboardObserver = useRef(null)
   /** @type {{current: IntersectionObserver} | null} */
   const endDivObserver = useRef()
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    if (!localStorage.finishTutorial) {
-      setShowTutorial(true)
+    // only PC mode (map) has tutorial
+    if (!localStorage.finishTutorial && window.innerWidth > 1024) {
+      // show tutorial in current year election type with seat map.
+      dispatch(mapActions.changeUiShowTutorial(true))
+      dispatch(electionActions.changeElection('councilMember'))
     }
-  }, [])
+  }, [dispatch])
 
   useEffect(() => {
     if (organization === 'readr-media' && document.location.hash) {
@@ -139,9 +146,7 @@ export default function Home() {
       <NavBar dashboardInView={dashboardInView} />
       {!hasAnchor && <LandingPage />}
       <DashboardContainer
-        showTutorial={showTutorial}
         hasAnchor={hasAnchor}
-        setShowTutorial={setShowTutorial}
         ref={dashboardRef}
         dashboardInView={dashboardInView}
       />

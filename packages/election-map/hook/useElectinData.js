@@ -21,10 +21,9 @@ import {
  *
  * A fat hook handle all election related data (votes, mapGeoJson) fetching, refetching.
  * @param {BooleanCallback} showLoading - A callback to show loading spinner.
- * @param {boolean} showTutorial - A flag to indicate whether the tutorial is showing.
  * @returns
  */
-export const useElectionData = (showLoading, showTutorial) => {
+export const useElectionData = (showLoading) => {
   const dispatch = useAppDispatch()
   const electionConfig = useAppSelector((state) => state.election.config)
   // Object to store all data for infobox, map, evc and seat chart, store by election, year, subtype and referendum number. Check type ElectionsData for more detail.
@@ -233,16 +232,6 @@ export const useElectionData = (showLoading, showTutorial) => {
     },
     [electionConfig.electionType, mapData, subtype, levelControl.countyCode]
   )
-
-  // Show the default election and the year after tutorial is finished.
-  const onTutorialEnd = () => {
-    dispatch(electionActions.changeElection('mayor'))
-    dispatch(
-      electionActions.changeYear(
-        electionConfig.years[electionConfig.years.length - 1]
-      )
-    )
-  }
 
   // Handle all fetching data logic for the first time.
   useEffect(() => {
@@ -480,15 +469,7 @@ export const useElectionData = (showLoading, showTutorial) => {
     dispatch,
   ])
 
-  // Handle default election and year for tutorial state.
-  useEffect(() => {
-    if (showTutorial) {
-      dispatch(electionActions.changeElection('councilMember'))
-    }
-  }, [showTutorial, electionConfig.years, dispatch])
-
   return {
     onEvcSelected,
-    onTutorialEnd,
   }
 }

@@ -29,6 +29,7 @@ const initialMapState = {
   },
   ui: {
     districtNames: defaultRenderingDistrictNames,
+    showTutorial: false,
   },
 }
 
@@ -59,6 +60,9 @@ const mapSlice = createSlice({
     },
     resetUiDistrictNames(state) {
       state.ui.districtNames = defaultRenderingDistrictNames
+    },
+    changeUiShowTutorial(state, action) {
+      state.ui.showTutorial = action.payload
     },
   },
 })
