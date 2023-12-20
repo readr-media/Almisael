@@ -231,7 +231,7 @@ export default function DistrictSelectors() {
             countyCode: currentCountyCode,
             townCode: '',
             villageCode: '',
-            constituencyCode: '',
+            areaCode: '',
             activeCode: currentCountyCode,
           })
         )
@@ -244,7 +244,7 @@ export default function DistrictSelectors() {
             countyCode: currentCountyCode,
             townCode: currentTownCode,
             villageCode: '',
-            constituencyCode: '',
+            areaCode: '',
             activeCode: currentTownCode,
           })
         )
@@ -257,7 +257,7 @@ export default function DistrictSelectors() {
       //       countyCode: currentCountyCode,
       //       townCode: '',
       //       villageCode: '',
-      //       constituencyCode: currentConstituencyCode,
+      //       areaCode: currentConstituencyCode,
       //       activeCode: currentConstituencyCode,
       //     })
       //   )
@@ -270,7 +270,7 @@ export default function DistrictSelectors() {
             countyCode: currentCountyCode,
             townCode: currentTownCode,
             villageCode: currentVillageCode,
-            constituencyCode: '',
+            areaCode: '',
             activeCode: currentVillageCode,
           })
         )

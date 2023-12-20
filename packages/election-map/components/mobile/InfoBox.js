@@ -653,13 +653,14 @@ export default function InfoBox({ infoboxData, year }) {
           shouldInfoBoxExpand
         )
         const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
+
         districtName = infoboxData?.[0]?.area_nickname
         return (
           <Wrapper>
             {expendButtonJsx}
             {shouldShowExpandButton && <Divider />}
             <div className="prof-rate prof-rate--text-align-start">
-              <div className="range">{districtName}</div>
+              {level === 2 && <div className="range">{districtName}</div>}
               <div>投票率 {infoboxData?.[0]?.profRate}%</div>
             </div>
 
