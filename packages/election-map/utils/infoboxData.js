@@ -146,7 +146,8 @@ const legislatorInfoboxData = (
   subtype,
   infoboxType
 ) => {
-  if (level === 0) {
+  // normal level 0 點擊地圖看更多
+  if (subtype.key === 'normal' && level === 0) {
     if (infoboxType === 'mobile') {
       return ''
     }
