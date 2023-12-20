@@ -3,6 +3,10 @@ import { electionMapColor } from '../consts/colors'
 import { MapContainer } from './MapContainer'
 import { Panels } from './Panels'
 import { Tutorial } from './Tutorial'
+import { useAppDispatch, useAppSelector } from '../hook/useRedux'
+import { mapActions } from '../store/map-slice'
+import { electionActions } from '../store/election-slice'
+import { defaultElectionType } from '../consts/electionsConfig'
 
 const Wrapper = styled.div`
   position: relative;
@@ -26,12 +30,11 @@ const MoreHint = styled.div`
 export const Dashboard = ({
   onEvcSelected,
   showLoading,
-  showTutorial,
-  setShowTutorial,
-  onTutorialEnd,
   dashboardInView,
   hasAnchor,
 }) => {
+  const showTutorial = useAppSelector((state) => state.map.ui.showTutorial)
+  const dispatch = useAppDispatch()
   return (
     <Wrapper>
       <Panels onEvcSelected={onEvcSelected} />
@@ -43,8 +46,8 @@ export const Dashboard = ({
         <Tutorial
           show={showTutorial}
           onClick={() => {
-            setShowTutorial(false)
-            onTutorialEnd()
+            dispatch(mapActions.changeUiShowTutorial(false))
+            dispatch(electionActions.changeElection(defaultElectionType))
           }}
         />
       )}

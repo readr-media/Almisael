@@ -7,7 +7,7 @@ import { MobileDashboardNew } from './mobile/MobileDashboardNew'
 import { Dashboard } from './Dashboard'
 
 export const DashboardContainer = forwardRef(function DashboardContainer(
-  { showTutorial, hasAnchor, setShowTutorial, dashboardInView },
+  { hasAnchor, dashboardInView },
   ref
 ) {
   const [loading, setLoading] = useState(false)
@@ -29,10 +29,7 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
     }
   }, [])
 
-  const { onEvcSelected, onTutorialEnd } = useElectionData(
-    showLoading,
-    showTutorial
-  )
+  const { onEvcSelected } = useElectionData(showLoading)
 
   if (!isMobile) {
     return (
@@ -41,9 +38,6 @@ export const DashboardContainer = forwardRef(function DashboardContainer(
         <Dashboard
           onEvcSelected={onEvcSelected}
           showLoading={showLoading}
-          showTutorial={showTutorial}
-          setShowTutorial={setShowTutorial}
-          onTutorialEnd={onTutorialEnd}
           dashboardInView={dashboardInView}
           hasAnchor={hasAnchor}
         />
