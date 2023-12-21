@@ -5,7 +5,7 @@ import useWindowDimensions from '../hook/useWindowDimensions'
 import { useAppSelector } from '../hook/useRedux'
 
 const MapButtonWrapper = styled.div`
-  margin-top: 20px;
+  margin-top: 16px;
 `
 
 const MapLevelControlButton = styled.button`
