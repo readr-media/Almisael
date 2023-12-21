@@ -81,27 +81,6 @@ export const electionsConfig = [
     },
   },
   {
-    electionType: 'mayor',
-    electionName: '縣市首長',
-    years: [{ key: 2010 }, { key: 2014 }, { key: 2018 }, { key: 2022 }],
-    meta: {
-      evc: { wrapperTitle: '縣市首長候選人' },
-      map: {
-        mapColor: true,
-        folderNames: {
-          0: 'country',
-          1: 'county',
-          2: 'town',
-        },
-        fileNames: {
-          0: 'country',
-          1: '',
-          2: '',
-        },
-      },
-    },
-  },
-  {
     electionType: 'legislator',
     electionName: '立法委員',
     subtypes: [
@@ -169,6 +148,27 @@ export const electionsConfig = [
           mountainIndigenous: '山地原住民立法委員選舉',
           plainIndigenous: '平地原住民立法委員選舉',
           party: '不分區立法委選舉',
+        },
+      },
+    },
+  },
+  {
+    electionType: 'mayor',
+    electionName: '縣市首長',
+    years: [{ key: 2010 }, { key: 2014 }, { key: 2018 }, { key: 2022 }],
+    meta: {
+      evc: { wrapperTitle: '縣市首長候選人' },
+      map: {
+        mapColor: true,
+        folderNames: {
+          0: 'country',
+          1: 'county',
+          2: 'town',
+        },
+        fileNames: {
+          0: 'country',
+          1: '',
+          2: '',
         },
       },
     },
