@@ -4,11 +4,12 @@ import { SeatsPanel } from './SeatsPanel'
 import { MapNavigateButton } from './MapNavigateButton'
 import { MapLocations } from './MapLocations'
 import { YearSelect } from './YearSelect'
-import { ElectionSelect } from './ElectionSelect'
-import { ElectionRadio } from './ElectionRadio'
 import { ReferendumControl } from './ReferendumControl'
 import { InfoboxPanels } from './InfoboxPanels'
 import { useAppSelector } from '../hook/useRedux'
+import ElectionSelector from './mobile/ElectionSelector'
+import { electionNamePairs } from '../utils/election'
+import { useMemo } from 'react'
 
 const Wrapper = styled.div`
   position: relative;
@@ -36,15 +37,15 @@ const BottomPanelWrapper = styled.div`
   bottom: 47px;
 `
 
-const StyledElectionSelect = styled(ElectionSelect)`
-  margin-left: 12px;
+const ElectionSelectWrapper = styled.div`
+  display: flex;
+  gap: 8px;
 `
 
-const StyledELectionRadio = styled(ElectionRadio)`
-  position: absolute;
-  bottom: 73px;
-  right: 121px;
+const StyledElectionSelect = styled(ElectionSelector)`
+  height: 31px;
 `
+
 const LastUpdateTime = styled.div`
   position: absolute;
   bottom: 28px;
@@ -98,10 +99,28 @@ export const Panels = ({ onEvcSelected }) => {
 
   const expandMode = !!seats || compareMode
 
+  const electionSubtypes = useMemo(() => {
+    if (!electionConfig.subtypes) {
+      return
+    }
+    return electionConfig.subtypes.filter((subtype) => !subtype.mobileOnly)
+  }, [electionConfig.subtypes])
+
   return (
     <Wrapper expandMode={expandMode}>
       <LeftPanelWrapper>
-        <StyledElectionSelect />
+        <ElectionSelectWrapper>
+          <StyledElectionSelect
+            selectorType="electionType"
+            options={electionNamePairs}
+          />
+          {electionConfig.subtypes && (
+            <StyledElectionSelect
+              selectorType="electionSubType"
+              options={electionSubtypes}
+            />
+          )}
+        </ElectionSelectWrapper>
         {number && <ReferendumControl key={electionType} />}
         {!number && (
           <>
@@ -127,7 +146,6 @@ export const Panels = ({ onEvcSelected }) => {
       {!compareMode && (
         <ElectionVoteComparisonPanel onEvcSelected={onEvcSelected} />
       )}
-      {subtype && <StyledELectionRadio />}
       {lastUpdate && (
         <LastUpdateTime>
           最後更新時間：{lastUpdate}資料來源：中央選舉委員會
