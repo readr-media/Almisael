@@ -159,10 +159,10 @@ export const electionsConfig = [
       },
       seat: {
         wrapperTitle: {
-          normal: '區域立法委員席次圖',
-          mountainIndigenous: '山地原住民立法委員席次圖',
-          plainIndigenous: '平地原住民立法委員席次圖',
-          party: '不分區立法委員席次圖',
+          normal: '立法委員席次圖',
+          mountainIndigenous: '立法委員席次圖',
+          plainIndigenous: '立法委員席次圖',
+          party: '立法委員席次圖',
         },
         componentTitle: {
           normal: '區域立法委員選舉',
