@@ -5,6 +5,7 @@ import { useAppDispatch } from '../../hook/useRedux'
 import { useAppSelector } from '../../hook/useRedux'
 import useClickOutside from '../../hook/useClickOutside'
 import styled from 'styled-components'
+import { mapActions } from '../../store/map-slice'
 
 const WIDTH = '100px'
 const Wrapper = styled.div`
@@ -27,7 +28,7 @@ const Options = styled.ul`
   padding: 14px 0 0 0;
   margin: 14px 0 0 0;
   border-top: none;
-  width: ${WIDTH};
+  width: 100%;
   list-style-type: none;
   border: 1px solid black;
 `
@@ -56,6 +57,7 @@ const SelectedButton = styled.button`
   position: absolute;
   padding: 4px 10px;
   width: 100%;
+  height: 100%;
   z-index: ${
     /**
      * @param {Object} props
@@ -90,10 +92,15 @@ const SelectedButton = styled.button`
 /**
  *
  * @param {Object} props
+ * @param {string} [props.className]
  * @param {Object[]} props.options
  * @param {'electionType' | 'electionSubType'} props.selectorType
  */
-export default function ElectionSelector({ options = [], selectorType }) {
+export default function ElectionSelector({
+  className,
+  options = [],
+  selectorType,
+}) {
   const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
@@ -123,6 +130,9 @@ export default function ElectionSelector({ options = [], selectorType }) {
     if (selectorType === 'electionType') {
       if (option.electionType !== electionType) {
         dispatch(electionActions.changeElection(option.electionType))
+        if (window.innerWidth > 1024) {
+          dispatch(mapActions.resetMapFeature())
+        }
       }
     } else if (selectorType === 'electionSubType') {
       if (currentSubType.key !== option.key) {
@@ -134,30 +144,28 @@ export default function ElectionSelector({ options = [], selectorType }) {
   }
 
   return (
-    <>
-      <Wrapper ref={wrapperRef}>
-        <SelectedButton
-          isOptionsOpen={shouldShowOptions}
-          disabled={compareMode}
-          shouldDisable={compareMode}
-          onClick={handleSelectedButtonOnClick}
-        >
-          <span>{currentSelectedOptionName}</span>
-          <i className="triangle"></i>
-        </SelectedButton>
-        {shouldShowOptions && (
-          <Options>
-            {options.map((option) => (
-              <OptionItem
-                key={option.electionType || option.key}
-                onClick={() => handleOptionOnSelected(option)}
-              >
-                <span>{option.electionName || option.name}</span>
-              </OptionItem>
-            ))}
-          </Options>
-        )}
-      </Wrapper>
-    </>
+    <Wrapper ref={wrapperRef} className={className}>
+      <SelectedButton
+        isOptionsOpen={shouldShowOptions}
+        disabled={compareMode}
+        shouldDisable={compareMode}
+        onClick={handleSelectedButtonOnClick}
+      >
+        <span>{currentSelectedOptionName}</span>
+        <i className="triangle"></i>
+      </SelectedButton>
+      {shouldShowOptions && (
+        <Options>
+          {options.map((option) => (
+            <OptionItem
+              key={option.electionType || option.key}
+              onClick={() => handleOptionOnSelected(option)}
+            >
+              <span>{option.electionName || option.name}</span>
+            </OptionItem>
+          ))}
+        </Options>
+      )}
+    </Wrapper>
   )
 }
