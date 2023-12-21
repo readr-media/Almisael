@@ -46,7 +46,7 @@ export const Map = ({
   const year = useAppSelector((state) => state.election.control.year)
   const { countyCode, townCode, areaCode, activeCode } = levelControl
   const { width, height } = dimension
-  const { counties, towns, villages } = geoJsons
+  const { nation, counties, towns, villages } = geoJsons
   const rawTopoJson = useAppSelector((state) => state.map.data.rawTopoJson)
   const districtMapping = useAppSelector(
     (state) => state.election.data.districtMapping
@@ -625,6 +625,17 @@ export const Map = ({
         onClick={nonLandClicked}
       />
       <g id={`${id}-control`}>
+        <g id={`${id}-nation`}>
+          {nation.features.map((feature) => (
+            <path
+              key={feature['properties']['NAME']}
+              d={path(feature)}
+              id={`${id}-id-${feature['properties']['NAME']}`}
+              fill={defaultColor}
+              stroke="black"
+            />
+          ))}
+        </g>
         <g id={`${id}-counties`}>
           {counties.features.map((feature) => (
             <path
@@ -634,14 +645,10 @@ export const Map = ({
               data-county-code={feature['properties']['COUNTYCODE']}
               fill={
                 feature['properties']['COUNTYCODE'] === activeCode
-                  ? undefined
+                  ? 'transparent'
                   : getCountyColor(feature['properties']['COUNTYCODE'])
               }
-              stroke={
-                feature['properties']['COUNTYCODE'] === activeCode
-                  ? undefined
-                  : 'black'
-              }
+              stroke="black"
               strokeWidth="0.5"
               strokeLinejoin="round"
               onClick={countyClicked.bind(null, feature)}
@@ -733,7 +740,7 @@ export const Map = ({
               }
               stroke={
                 feature['properties']['AREACODE'] === activeCode
-                  ? undefined
+                  ? 'black'
                   : '#666666'
               }
               strokeWidth="0.3"
@@ -779,7 +786,7 @@ export const Map = ({
               fill={getVillageColor(feature['properties']['VILLCODE'])}
               stroke={
                 feature['properties']['VILLCODE'] === activeCode
-                  ? undefined
+                  ? 'black'
                   : '#666666'
               }
               strokeWidth="0.1"
