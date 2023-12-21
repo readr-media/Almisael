@@ -6,13 +6,9 @@ import { useAppSelector } from '../hook/useRedux'
 
 const MapButtonWrapper = styled.div`
   margin-top: 20px;
-  @media (max-width: 1024px) {
-    margin: 0;
-  }
 `
 
 const MapLevelControlButton = styled.button`
-  margin-left: 4px;
   border: 1px solid #000;
   background-color: #686868;
   color: ${electionMapColor};
@@ -21,14 +17,13 @@ const MapLevelControlButton = styled.button`
   text-align: center;
   font-weight: 500;
   padding: 3px 15px 4px;
+  &:nth-of-type(2) {
+    margin-left: 4px;
+  }
 
   s &:hover,
   &:active {
     background-color: #000;
-  }
-  @media (max-width: 1024px) {
-    font-size: 14px;
-    padding: 3px 8px;
   }
 `
 

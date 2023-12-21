@@ -8,12 +8,12 @@ import { useAppDispatch, useAppSelector } from '../hook/useRedux'
 import { mapActions } from '../store/map-slice'
 
 const StyledReferendumSelect = styled(ReferendumSelect)`
-  margin: 17px 0 0 12px;
+  margin-top: 20px;
 `
 
 const ActionButton = styled.button`
   display: inline-block;
-  margin: 20px 0 0 12px;
+  margin-top: 20px;
   border: 1px solid #000;
   background-color: ${
     /**
@@ -30,6 +30,9 @@ const ActionButton = styled.button`
   font-weight: 500;
   width: 80px;
   height: 32px;
+  &:nth-of-type(2) {
+    margin-left: 12px;
+  }
   ${({ cancel }) => cancel && 'background-color: #e0e0e0;'}
 `
 
