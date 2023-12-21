@@ -99,13 +99,14 @@ const SelectedButton = styled.button`
     /**
      * @param {Object} props
      * @param {boolean} props.shouldShowOptions
+     * @param {boolean} props.hasOptions
      */
     ({ shouldShowOptions }) => (shouldShowOptions ? '2' : '0')
   };
   border-radius: 8px;
   background-color: #fff;
   border: 1px solid;
-  cursor: pointer;
+  cursor: ${({ hasOptions }) => (hasOptions ? 'pointer' : 'not-allowed')};
   .content {
     display: flex;
     flex-direction: column;
@@ -141,7 +142,9 @@ export default function Selector({
   useClickOutside(wrapperRef, () => {
     setShouldShowOptions(false)
   })
-  const hasOptions = options && Array.isArray(options) && options.length
+  const hasOptions = Boolean(
+    options && Array.isArray(options) && options.length
+  )
 
   const handleSelectedButtonOnClick = () => {
     setShouldShowOptions((pre) => !pre)
@@ -209,6 +212,7 @@ export default function Selector({
     <>
       <Wrapper ref={wrapperRef} shouldShowNickName={shouldShowNickName}>
         <SelectedButton
+          hasOptions={hasOptions}
           shouldShowOptions={shouldShowOptions}
           onClick={handleSelectedButtonOnClick}
         >

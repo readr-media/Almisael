@@ -160,6 +160,9 @@ export default function DistrictSelectors() {
         if (currentElectionSubType.key === 'normal') {
           return [...districtMapping.sub]
         }
+        if (currentElectionSubType.key === 'all') {
+          return []
+        }
         return [
           {
             type: districtMapping.type,
@@ -314,6 +317,12 @@ export default function DistrictSelectors() {
       case 'president':
         break
       case 'legislator':
+        if (currentElectionSubType.key === 'all') {
+          setCurrentDistrictType('nation')
+          setCurrentCountyCode('')
+          setCurrentTownCode('')
+          setCurrentVillageCode('')
+        }
         break
       //todo: 公投
       case 'referendum':
@@ -342,7 +351,7 @@ export default function DistrictSelectors() {
           options={optionsForFirstDistrictSelector}
           districtCode={currentCountyCode}
           onSelected={handleOnClick}
-          placeholderValue="台灣"
+          placeholderValue="全國"
         ></Selector>
 
         <Selector
