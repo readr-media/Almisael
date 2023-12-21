@@ -28,6 +28,8 @@ const SelectDetail = styled.div`
   font-weight: 500;
   border: 1px solid #000;
   max-height: 105px;
+  line-height: 1.5;
+  overflow: auto;
 `
 
 const SelectOptions = styled.ul`
