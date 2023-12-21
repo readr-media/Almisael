@@ -7,7 +7,7 @@ import taiwanMap from '../public/images/taiwan_map.png'
 import taiwanMapMobile from '../public/images/taiwan_map_m.png'
 import Image from 'next/image'
 import { imageLoader } from '../loader'
-import { organization } from '../consts/config'
+import { og, organization } from '../consts/config'
 import ReactGA from 'react-ga'
 
 const GlobalStyle = createGlobalStyle`
@@ -162,7 +162,7 @@ const StyledImage = styled(Image)`
 const teamMembers = [
   '監製：簡信昌',
   '製作人：李又如、王薏晴',
-  '工程：李文瀚、李法賢、蘇庭葳',
+  '工程：李文瀚、傅典洋、張容瑄、劉鴻明、李又如、李法賢、蘇庭葳',
   '設計：曾立宇、吳曼努',
   '社群：徐湘芸',
 ]
@@ -198,16 +198,11 @@ export const LandingPage = () => {
           {!isMobile ? (
             <Intro>
               <h1>
-                2022 縣市長、議員選舉暨
+                2024 總統、立委選舉
                 <br />
-                公投開票即時資訊
+                開票即時資訊
               </h1>
-              <p>
-                {organization === 'readr-media'
-                  ? `2022 年縣市長、議員、公投開票結果看
-                READr！提供最詳盡的選舉票數地圖、歷年比較等功能。`
-                  : `鏡週刊即時關注 2022 年縣市長、議員、公投開票結果！並且提供最詳盡的選舉票數地圖、歷年比較功能。`}
-              </p>
+              <p>{og.descriptioin}</p>
             </Intro>
           ) : (
             <IntroWrapper preventCollapse={true}>
