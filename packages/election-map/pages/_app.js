@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { Provider } from 'react-redux'
 
 import { GlobalStyles } from '../styles/global-styles'
-import { environment } from '../consts/config'
+import { environment, og } from '../consts/config'
 import store from '../store'
 
 ReactGA.initialize(environment === 'dev' ? 'UA-83609754-2' : 'UA-83609754-1')
@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Provider>
       <Head>
-        <title>2022 縣市長、議員選舉暨公投開票即時資訊</title>
+        <title>{og.title}</title>
       </Head>
     </>
   )
