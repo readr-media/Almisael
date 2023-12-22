@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build:mirrorMedia": "NEXT_PUBLIC_RELEASE_TARGET='mirrorMedia' next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export:mirrorMedia": "yarn build:mirrorMedia && next export"
   },
   "dependencies": {
     "react": "18.2.0",
