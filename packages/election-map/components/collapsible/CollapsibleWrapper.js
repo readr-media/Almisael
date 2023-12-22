@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import { MapLocations } from '../MapLocations'
 
 /**
  * Styled image component.
@@ -59,15 +58,6 @@ const CollapseButtonSpecialTitle = styled.div`
   }
 `
 
-const CollapseButtonSubTitle = styled.div`
-  position: absolute;
-  top: 0;
-  right: 52px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-`
-
 /**
  * Styled image component.
  *
@@ -120,8 +110,6 @@ export const CollapsibleWrapper = ({
   className,
   preventCollapse,
   centerTitle,
-  compareMode,
-  locations,
 }) => {
   const [collapse, setCollapse] = useState(true)
 
@@ -139,11 +127,6 @@ export const CollapsibleWrapper = ({
         </CollapseButtonIcon>
         {centerTitle && (
           <CollapseButtonSpecialTitle>{centerTitle}</CollapseButtonSpecialTitle>
-        )}
-        {compareMode && (
-          <CollapseButtonSubTitle>
-            <MapLocations locations={locations} compareMode={compareMode} />
-          </CollapseButtonSubTitle>
         )}
       </CollapseButton>
       <CollapseContent collapse={collapse}>{children}</CollapseContent>
