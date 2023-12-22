@@ -48,6 +48,8 @@ export const Dashboard = ({
           onClick={() => {
             dispatch(mapActions.changeUiShowTutorial(false))
             dispatch(electionActions.changeElection(defaultElectionType))
+            dispatch(mapActions.resetUiDistrictNames())
+            dispatch(mapActions.resetMapFeature())
           }}
         />
       )}

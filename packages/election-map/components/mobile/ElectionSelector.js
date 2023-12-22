@@ -130,13 +130,20 @@ export default function ElectionSelector({
     if (selectorType === 'electionType') {
       if (option.electionType !== electionType) {
         dispatch(electionActions.changeElection(option.electionType))
+        // only PC should reset the map and panels
         if (window.innerWidth > 1024) {
           dispatch(mapActions.resetMapFeature())
+          dispatch(mapActions.resetUiDistrictNames())
         }
       }
     } else if (selectorType === 'electionSubType') {
       if (currentSubType.key !== option.key) {
         dispatch(electionActions.changeSubtype(option))
+        // only PC legislator should reset the map and panels
+        if (window.innerWidth > 1024 && electionType === 'legislator') {
+          dispatch(mapActions.resetMapFeature())
+          dispatch(mapActions.resetUiDistrictNames())
+        }
       }
     }
 
