@@ -347,6 +347,7 @@ export const Map = ({
         })
       )
       dispatch(mapActions.changeMapUpperLevelId(areaCode))
+      dispatch(mapActions.changeMapFeature(feature))
       dispatch(
         mapActions.changeUiDistrictNames({
           countyName,
