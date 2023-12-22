@@ -142,7 +142,7 @@ const electionsSlice = createSlice({
         number: newNumber,
         subtype: newSubtype,
       }
-      state.data.infoboxData = {}
+      state.data.infoboxData = defaultInfoboxData
       state.compare = {
         info: defaultCompareInfo,
         infoboxData: {},
@@ -228,7 +228,7 @@ const electionsSlice = createSlice({
       if (state.compare.info.compareMode) {
         state.compare.info.filter.subtype = newSubtype
       }
-      state.data.infoboxData = {}
+      state.data.infoboxData = defaultInfoboxData
       state.control.subtype = newSubtype
     },
     changeNumber(state, action) {
