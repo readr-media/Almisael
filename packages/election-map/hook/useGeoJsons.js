@@ -17,7 +17,8 @@ const fetchTopoJson = (url) => {
 }
 
 const fetchTwMapTopoJsons = async () => {
-  const twMapUrl = 'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan_map.json'
+  const twMapUrl =
+    'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan_map_2023.json'
 
   try {
     const twMapTopoJson = await fetchTopoJson(twMapUrl)
