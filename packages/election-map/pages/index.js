@@ -78,6 +78,8 @@ export default function Home() {
       // show tutorial in current year election type with seat map.
       dispatch(mapActions.changeUiShowTutorial(true))
       dispatch(electionActions.changeElection('councilMember'))
+      dispatch(mapActions.resetMapFeature())
+      dispatch(mapActions.resetUiDistrictNames())
     }
   }, [dispatch])
 

@@ -19,11 +19,12 @@ import {
  * @typedef {{ [key: number]: null | Object}} ModuleData
  * @typedef {{isRunning: boolean, isStarted: boolean, [key: number]: null | Object}} MapData
  * @typedef {{all: null | Object, [key: number]: null | Object}} SeatData
+ * @typedef {{[key: number]: null | Object}} EVCData
  *
  * Representing the data for an election in a year. For referendum it represents the data in one number(案號).
  * @typedef {Object} ElectionData
  * @property {MapData} mapData
- * @property {ModuleData} evcData
+ * @property {EVCData} evcData
  * @property {SeatData} seatData
  *
  * @typedef {{[key: number]: {
@@ -75,21 +76,26 @@ const defaultModuleData = {
 }
 
 /** @type {MapData} */
-const defaultMapData = {
+export const defaultMapData = {
   ...defaultModuleData,
   isRunning: false,
   isStarted: true,
 }
 
 /** @type {SeatData} */
-const defaultSeatData = {
+export const defaultSeatData = {
   ...defaultModuleData,
   all: null, // only used in legislator to store cross subtype seats
 }
 
+/** @type {EVCData} */
+export const defaultEvcData = {
+  ...defaultModuleData,
+}
+
 export const defaultElectionData = {
   mapData: defaultMapData,
-  evcData: defaultModuleData,
+  evcData: defaultEvcData,
   seatData: defaultSeatData,
 }
 

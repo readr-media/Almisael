@@ -5,21 +5,29 @@ const LocationsWrapper = styled.div`
   @media (max-width: 1024px) {
     margin: 0 6px 0 0;
     padding-left: 36px;
-    ${({ expand, shrink, compareMode }) => {
-      if (compareMode) {
-        return `
+    ${
+      /**
+       * @param {Object} props
+       * @param {boolean} props.expand
+       * @param {boolean} props.shrink
+       * @param {boolean} props.compareMode
+       */
+      ({ expand, shrink, compareMode }) => {
+        if (compareMode) {
+          return `
           margin: 0;
           padding: 0;
         `
-      } else {
-        if (shrink) {
-          return `padding-left: 36px;`
-        }
-        if (expand) {
-          return `padding-left: 24px;`
+        } else {
+          if (shrink) {
+            return `padding-left: 36px;`
+          }
+          if (expand) {
+            return `padding-left: 24px;`
+          }
         }
       }
-    }}
+    }
   }
   @media (max-width: 375px) {
     ${({ shrink }) => shrink && `padding-left: 30px;`}
@@ -37,18 +45,15 @@ const Location = styled.span`
 
   @media (max-width: 1024px) {
     margin-right: 4px;
-    font-size: 18px;
-    ${({ shrink }) => shrink && 'font-size: 14px;'}
-
-    ${({ shrink, compareMode }) => {
-      if (compareMode) {
-        return `
-          font-size: 14px;
-        `
-      } else if (shrink) {
-        return `font-size: 14px;`
-      }
-    }}}
+    ${
+      /**
+       * @param {Object} props
+       * @param {boolean} props.shrink
+       * @param {boolean} props.compareMode
+       */
+      ({ shrink, compareMode }) =>
+        shrink || compareMode ? `font-size: 14px` : `font-size: 18px;`
+    }}
   }
 `
 
