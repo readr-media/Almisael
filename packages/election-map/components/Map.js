@@ -90,7 +90,7 @@ export const Map = ({
                 COUNTYNAME: someVillProperties.COUNTYNAME,
                 AREACODE: areaMappingObj.code,
                 AREANAME: areaMappingObj.name,
-                AREANICKNAME: areaMappingObj.nickname,
+                AREANICKNAME: areaMappingObj.nickName,
               }
               feature.properties = properties
               return feature
@@ -646,6 +646,7 @@ export const Map = ({
                   ...tooltip,
                   show: true,
                   text: feature['properties']['COUNTYNAME'],
+                  title: '',
                 }))
               }
               onMouseMove={(e) => {
@@ -693,6 +694,7 @@ export const Map = ({
                   ...tooltip,
                   show: true,
                   text: feature['properties']['TOWNNAME'],
+                  title: '',
                 }))
               }
               onMouseMove={(e) => {
@@ -738,7 +740,8 @@ export const Map = ({
                 setTooltip((tooltip) => ({
                   ...tooltip,
                   show: true,
-                  text: feature['properties']['AREANAME'],
+                  text: `(${feature['properties']['AREANICKNAME']})`,
+                  title: `${feature['properties']['COUNTYNAME']} ${feature['properties']['AREANAME']}`,
                 }))
               }
               onMouseMove={(e) => {
@@ -785,6 +788,7 @@ export const Map = ({
                   ...tooltip,
                   show: true,
                   text: feature['properties']['VILLNAME'],
+                  title: '',
                 }))
               }}
               onMouseMove={(e) => {
