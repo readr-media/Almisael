@@ -145,64 +145,52 @@ export const Map = ({
   const { displayingTowns, displayingAreas, displayingVillages } =
     displayingDistricts
 
-  const projection = d3.geoMercator().fitExtent(
-    [
-      [0, 0],
-      [width, height],
-    ],
-    counties
-  )
-  const path = d3.geoPath(projection)
+  const path = useMemo(() => {
+    const projection = d3.geoMercator().fitExtent(
+      [
+        [0, 0],
+        [width, height],
+      ],
+      counties
+    )
 
-  const getXYZ = (feature) => {
-    if (feature) {
-      const bounds = path.bounds(feature)
-      const wScale = (bounds[1][0] - bounds[0][0]) / width
-      const hScale = (bounds[1][1] - bounds[0][1]) / height
-      const z = 0.56 / Math.max(wScale, hScale)
-
-      const centroid = path.centroid(feature)
-      const [x, y] = centroid
-      return [x, y, z]
-    } else {
-      // default xyz
-      return [width / 2, height / 2, 1]
-    }
-  }
-
-  const zoom = (duration, currentFeature) => {
-    const xyz = getXYZ(currentFeature)
-    const g = d3.select(`#${id}-control`)
-    g.transition()
-      .duration(duration)
-      .attr(
-        'transform',
-        `translate(${width / 2}, ${height / 2})scale(${xyz[2]})translate(-${
-          xyz[0]
-        }, -${xyz[1]})`
-      )
-
-    g.selectAll([`#${id}-#counties`, `#${id}-towns`, `#${id}-villages`])
-      .style('stroke', 'black')
-      // .style('stroke-linejoin', 'round')
-      // .style('stroke-linecap', 'round')
-      .style('stroke-width', '0px')
-      .transition()
-      .delay(750)
-      .duration(0)
-      .style('stroke-width', `${0.3 / xyz[2]}px`)
-      .selectAll('.villages')
-      .attr('d', path.pointRadius(20.0 / xyz[2]))
-  }
+    return d3.geoPath(projection)
+  }, [counties, height, width])
 
   useEffect(() => {
-    zoom(750, feature)
-  }, [feature, width, height])
+    const getXYZ = (feature) => {
+      if (feature) {
+        const bounds = path.bounds(feature)
+        const wScale = (bounds[1][0] - bounds[0][0]) / width
+        const hScale = (bounds[1][1] - bounds[0][1]) / height
+        const magicNumber = 0.56
+        // Restrict the highest scale rate to 25 to prevent extreme condition.
+        const z = Math.min(25, magicNumber / Math.max(wScale, hScale))
 
-  // useEffect(() => {
-  //   zoom(0)
-  //   console.log('zoom here')
-  // }, [width, height])
+        const centroid = path.centroid(feature)
+        const [x, y] = centroid
+        return [x, y, z]
+      } else {
+        // default xyz
+        return [width / 2, height / 2, 1]
+      }
+    }
+
+    const zoom = (duration, currentFeature) => {
+      const xyz = getXYZ(currentFeature)
+      const g = d3.select(`#${id}-control`)
+      g.transition()
+        .duration(duration)
+        .attr(
+          'transform',
+          `translate(${width / 2}, ${height / 2})scale(${xyz[2]})translate(-${
+            xyz[0]
+          }, -${xyz[1]})`
+        )
+    }
+
+    zoom(750, feature)
+  }, [feature, width, height, path, id])
 
   const nonLandClicked = () => {
     dispatch(electionActions.resetLevelControl())
