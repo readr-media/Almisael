@@ -5,6 +5,9 @@ import {
 } from '../consts/electionsConfig'
 import {
   defaultElectionData,
+  defaultEvcData,
+  defaultMapData,
+  defaultSeatData,
   generateDefaultElectionsData,
   getElectionData,
   updateElectionsData,
@@ -82,9 +85,9 @@ const initialElectionState = {
   data: {
     electionsData: defaultElectionsData,
     infoboxData: defaultInfoboxData,
-    mapData: {},
-    seatData: {},
-    evcData: {},
+    mapData: defaultMapData,
+    seatData: defaultSeatData,
+    evcData: defaultEvcData,
     lastUpdate: '',
     districtMapping: {
       district: null,
