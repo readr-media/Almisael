@@ -729,7 +729,7 @@ export const Map = ({
               }
               stroke={
                 feature['properties']['AREACODE'] === activeCode
-                  ? 'black'
+                  ? undefined
                   : '#666666'
               }
               strokeWidth="0.3"
@@ -775,7 +775,7 @@ export const Map = ({
               fill={getVillageColor(feature['properties']['VILLCODE'])}
               stroke={
                 feature['properties']['VILLCODE'] === activeCode
-                  ? 'black'
+                  ? undefined
                   : '#666666'
               }
               strokeWidth="0.1"
