@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import useSWR from 'swr'
 import Image from 'next/image'
 import { numberWithCommas } from '../utils'
-
+import { jsonEndpoint, staticFileDestination } from '../config/index.mjs'
 /**
  * @typedef {Object} HeightAndWidth
  * @property {string} width
@@ -300,16 +300,17 @@ const Party = styled.div`
     height: ${({ imageSize }) => imageSize && imageSize.desktop.height};
   }
 `
-const ENDPOINT = 'https://whoareyou-gcs.readr.tw/json/2024homepage.json'
 export default function Home() {
-  const { data, error, isLoading } = useSWR(ENDPOINT, fetcher)
+  const { data, error, isLoading } = useSWR(jsonEndpoint, fetcher, {
+    refreshInterval: 1000 * 60 * 3, // 3 minutes
+  })
 
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div>
   return (
     <Wrapper>
       <Title>2024 總統及立委大選開票</Title>
-      <SubTitle>{MOCK_DATA.title}</SubTitle>
+      <SubTitle>{data.title}</SubTitle>
       <InfoWrapper>
         <CandidateInfoItem />
         {CANDIDATES_CONFIG.map((candidate) => (
@@ -319,13 +320,13 @@ export default function Home() {
               <PartyAndNumber>
                 <Party imageSize={candidate.partyImage.size}>
                   <Image
-                    src={`/${candidate.partyImage.name}.svg`}
+                    src={`${staticFileDestination}/${candidate.partyImage.name}.svg`}
                     fill
                     alt={candidate.partyImage.name}
                   ></Image>
                 </Party>
                 <Image
-                  src={`/${candidate.number}.svg`}
+                  src={`${staticFileDestination}/${candidate.number}.svg`}
                   width={20}
                   height={20}
                   alt={candidate.number}
@@ -339,7 +340,7 @@ export default function Home() {
             </PartyAndNumberAndPersonWrapper>
           </CandidateInfoItem>
         ))}
-        {MOCK_DATA.result.map((item, index) => {
+        {data.result.map((item, index) => {
           const isOdd = Boolean(index % 2)
           const color = isOdd ? LIGHT_BLUE : DARK_BLUE
           const shouldShowDivider = index !== 0
@@ -366,7 +367,7 @@ export default function Home() {
                     >
                       {value === '*' ? (
                         <Image
-                          src="/victor.svg"
+                          src={`${staticFileDestination}/victor.svg`}
                           width={17}
                           height={17}
                           alt="當選"
