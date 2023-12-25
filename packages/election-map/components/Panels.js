@@ -61,8 +61,13 @@ const StyledYearSelect = styled(YearSelect)`
 
 const PlaceHolder = styled.div`
   pointer-events: none;
-  height: ${({ electionType }) =>
-    electionType === 'referendum' ? '350px' : '300px'};
+  height: ${
+    /**
+     * @param {Object} props
+     * @param {import('../consts/electionsConfig').ElectionType} props.electionType
+     */
+    ({ electionType }) => (electionType === 'referendum' ? '350px' : '136px')
+  };
 `
 
 export const Panels = ({ onEvcSelected }) => {
