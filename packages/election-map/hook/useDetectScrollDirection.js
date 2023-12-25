@@ -13,13 +13,20 @@ import { useState, useEffect } from 'react'
 /**
  * Copy from https://stackoverflow.com/a/62497293
  * @param {number} [threshold]
+ * @param {boolean} [shouldActivate]
  * @returns {{scrollDirection: ScrollDirection}}
  */
-export default function useDetectScrollDirection(threshold = 0) {
+export default function useDetectScrollDirection(
+  threshold = 0,
+  shouldActivate = true
+) {
   /** @type {UseState<ScrollDirection>} */
   const [scrollDirection, setScrollDirection] = useState('stale')
 
   useEffect(() => {
+    if (!shouldActivate) {
+      return
+    }
     let lastScrollY = window.scrollY
     let ticking = false
 
@@ -45,6 +52,6 @@ export default function useDetectScrollDirection(threshold = 0) {
     window.addEventListener('scroll', onScroll)
 
     return () => window.removeEventListener('scroll', onScroll)
-  }, [threshold])
+  }, [threshold, shouldActivate])
   return { scrollDirection }
 }

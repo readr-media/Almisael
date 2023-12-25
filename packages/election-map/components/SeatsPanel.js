@@ -86,8 +86,17 @@ export const SeatsPanel = ({ isMobile = false }) => {
       meta.componentTitle = `${
         seatMeta.componentTitle[subtype.key]
       } (${location})`
-      meta.switchInfo.onText = '區域'
-      meta.switchInfo.offText = offText
+      if (isMobile) {
+        meta.switchInfo = null
+      } else {
+        meta.switchInfo.onText = '區域'
+        meta.switchInfo.offText = offText
+      }
+    } else if (subtype.key === 'all' && isMobile) {
+      data = seatData.all
+      meta.wrapperTitle = seatMeta.wrapperTitle[subtype.key]
+      meta.componentTitle = seatMeta.componentTitle[subtype.key]
+      meta.switchInfo = null
     } else {
       data = switchOn ? seatData.all : seatData[0]
       meta.wrapperTitle = seatMeta.wrapperTitle[subtype.key]

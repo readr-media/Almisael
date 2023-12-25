@@ -345,36 +345,27 @@ export default function DistrictSelectors() {
     return <Wrapper>loading....</Wrapper>
   }
   return (
-    <>
-      <DistrictSelectorWrapper>
-        <Selector
-          options={optionsForFirstDistrictSelector}
-          districtCode={currentCountyCode}
-          onSelected={handleOnClick}
-          placeholderValue="全國"
-        ></Selector>
+    <DistrictSelectorWrapper>
+      <Selector
+        options={optionsForFirstDistrictSelector}
+        districtCode={currentCountyCode}
+        onSelected={handleOnClick}
+        placeholderValue="全國"
+      ></Selector>
 
-        <Selector
-          options={optionsForSecondDistrictSelector}
-          districtCode={currentTownCode}
-          onSelected={handleOnClick}
-          placeholderValue="-"
-        ></Selector>
+      <Selector
+        options={optionsForSecondDistrictSelector}
+        districtCode={currentTownCode}
+        onSelected={handleOnClick}
+        placeholderValue="-"
+      ></Selector>
 
-        <Selector
-          options={optionsForThirdDistrictSelector}
-          districtCode={currentVillageCode}
-          onSelected={handleOnClick}
-          placeholderValue="-"
-        ></Selector>
-      </DistrictSelectorWrapper>
-      <div>
-        <button onClick={() => dispatch(resetLevelControl())}>test</button>
-        <div>currentDistrictType:{currentDistrictType}</div>
-        <div>currentCountyCode:{currentCountyCode}</div>
-        <div>currentTownCode:{currentTownCode}</div>
-        <div>currentVillageCode:{currentVillageCode}</div>
-      </div>
-    </>
+      <Selector
+        options={optionsForThirdDistrictSelector}
+        districtCode={currentVillageCode}
+        onSelected={handleOnClick}
+        placeholderValue="-"
+      ></Selector>
+    </DistrictSelectorWrapper>
   )
 }

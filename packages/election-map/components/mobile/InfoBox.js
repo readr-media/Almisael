@@ -77,6 +77,11 @@ const Wrapper = styled.section`
       line-height: 20.27px;
       color: #000;
     }
+    .range-note {
+      font-size: 12px;
+      line-height: 21.6px;
+      color: #000;
+    }
   }
 `
 const ReferendumWrapper = styled(Wrapper)`
@@ -125,7 +130,9 @@ const CandidatesInfoWrapper = styled.ul`
 `
 const CandidateInfo = styled.li`
   list-style: none;
-
+  &:last-child {
+    border: none;
+  }
   overflow: hidden;
   width: 100%;
 
@@ -620,7 +627,7 @@ export default function InfoBox({ infoboxData, year }) {
                   ) {
                     return null
                   }
-                  districtName = district?.area_nickname
+                  districtName = district?.range
                   const orderedCandidates = sortCandidatesByTksRate(
                     district.candidates
                   )
@@ -655,12 +662,17 @@ export default function InfoBox({ infoboxData, year }) {
         const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
 
         districtName = infoboxData?.[0]?.area_nickname
+        const districtNote =
+          level === 2 && districtName.includes('*')
+            ? '* 表示該行政區僅有部分村里在此選區'
+            : null
         return (
           <Wrapper>
             {expendButtonJsx}
             {shouldShowExpandButton && <Divider />}
             <div className="prof-rate prof-rate--text-align-start">
               {level === 2 && <div className="range">{districtName}</div>}
+              {districtNote && <div className="range-note">{districtNote}</div>}
               <div>投票率 {infoboxData?.[0]?.profRate}%</div>
             </div>
 
