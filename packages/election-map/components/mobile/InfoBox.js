@@ -125,7 +125,9 @@ const CandidatesInfoWrapper = styled.ul`
 `
 const CandidateInfo = styled.li`
   list-style: none;
-
+  &:last-child {
+    border: none;
+  }
   overflow: hidden;
   width: 100%;
 
