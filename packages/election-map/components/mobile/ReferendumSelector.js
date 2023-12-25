@@ -4,6 +4,8 @@ import { useAppDispatch, useAppSelector } from '../../hook/useRedux'
 import { getReferendumNumbers } from '../../utils/election'
 import useClickOutside from '../../hook/useClickOutside'
 import { electionActions } from '../../store/election-slice'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+
 const SelectedButton = styled.button`
   padding: 2.5px 7.5px;
   width: fit-content;
@@ -123,7 +125,19 @@ export default function ReferendumSelector() {
       })
     }
   })
-
+  // While the sidebar is open, disable body scroll.
+  useEffect(() => {
+    const modal = modalRef.current
+    if (!modal) {
+      return
+    }
+    if (shouldShowModal) {
+      disableBodyScroll(modal)
+      return () => enableBodyScroll(modal)
+    } else {
+      return undefined
+    }
+  }, [shouldShowModal])
   return (
     <>
       <SelectedButton onClick={handleSelectedButtonOnClick}>
@@ -145,7 +159,9 @@ export default function ReferendumSelector() {
                 isSelected={detail.key === referendumNumber.key}
                 key={detail.key}
               >
-                <div className="name">{detail.name}</div>
+                <div className="name">
+                  {detail.year} {detail.name}
+                </div>
                 <div className="detail">{detail.detail}</div>
               </ReferendumItem>
             )
