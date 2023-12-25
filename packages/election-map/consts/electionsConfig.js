@@ -87,7 +87,7 @@ export const electionsConfig = [
       { name: '區域', key: 'normal', mobileOnly: false },
       { name: '山地原住民', key: 'mountainIndigenous', mobileOnly: false },
       { name: '平地原住民', key: 'plainIndigenous', mobileOnly: false },
-      { name: '政黨票', key: 'party', mobileOnly: false },
+      { name: '不分區', key: 'party', mobileOnly: false },
       { name: '全國', key: 'all', mobileOnly: true },
     ],
     years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }, { key: 2024 }],
