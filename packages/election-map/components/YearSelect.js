@@ -140,6 +140,12 @@ const ActionButton = styled.button`
   ${({ cancel }) => cancel && 'background-color: #e0e0e0;'}
 `
 
+/**
+ *
+ * @param {Object} props
+ * @param {string} [props.className]
+ * @returns
+ */
 export const YearSelect = ({ className }) => {
   const compareMode = useAppSelector(
     (state) => state.election.compare.info.compareMode

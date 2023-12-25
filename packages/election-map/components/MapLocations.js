@@ -10,21 +10,13 @@ const LocationsWrapper = styled.div`
        * @param {Object} props
        * @param {boolean} props.expand
        * @param {boolean} props.shrink
-       * @param {boolean} props.compareMode
        */
-      ({ expand, shrink, compareMode }) => {
-        if (compareMode) {
-          return `
-          margin: 0;
-          padding: 0;
-        `
-        } else {
-          if (shrink) {
-            return `padding-left: 36px;`
-          }
-          if (expand) {
-            return `padding-left: 24px;`
-          }
+      ({ expand, shrink }) => {
+        if (shrink) {
+          return `padding-left: 36px;`
+        }
+        if (expand) {
+          return `padding-left: 24px;`
         }
       }
     }
@@ -49,22 +41,26 @@ const Location = styled.span`
       /**
        * @param {Object} props
        * @param {boolean} props.shrink
-       * @param {boolean} props.compareMode
        */
-      ({ shrink, compareMode }) =>
-        shrink || compareMode ? `font-size: 14px` : `font-size: 18px;`
+      ({ shrink }) => (shrink ? `font-size: 14px` : `font-size: 18px;`)
     }}
   }
 `
 
-export const MapLocations = ({ locations, compareMode }) => {
+/**
+ *
+ * @param {Object} props
+ * @param {Array<string>} props.locations
+ * @returns
+ */
+export const MapLocations = ({ locations }) => {
   const words = locations.reduce((words, location) => words + location, '')
   const expand = words.length > 9
   const shrink = words.length > 10
   return (
-    <LocationsWrapper expand={expand} shrink={shrink} compareMode={compareMode}>
+    <LocationsWrapper expand={expand} shrink={shrink}>
       {locations.map((location, i) => (
-        <Location key={i} shrink={shrink} compareMode={compareMode}>
+        <Location key={i} shrink={shrink}>
           {location}
         </Location>
       ))}
