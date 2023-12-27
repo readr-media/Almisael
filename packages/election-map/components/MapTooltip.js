@@ -41,6 +41,9 @@ const TooltipTitle = styled.div`
 `
 
 export const MapTooltip = ({ tooltip }) => {
+  if (!tooltip.text) {
+    return <></>
+  }
   return (
     <Tooltip
       show={tooltip.show}
