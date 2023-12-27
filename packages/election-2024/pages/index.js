@@ -1,8 +1,13 @@
 import styled from 'styled-components'
 import useSWR from 'swr'
 import Image from 'next/image'
+import Link from 'next/link'
 import { numberWithCommas } from '../utils'
-import { jsonEndpoint, staticFileDestination } from '../config/index.mjs'
+import {
+  jsonEndpoint,
+  staticFileDestination,
+  watchMoreLinkSrc,
+} from '../config/index.mjs'
 /**
  * @typedef {Object} HeightAndWidth
  * @property {string} width
@@ -224,6 +229,21 @@ const Party = styled.div`
     height: ${({ imageSize }) => imageSize && imageSize.desktop.height};
   }
 `
+const WatchMore = styled.div`
+  width: 100%;
+  margin: 24px auto 0;
+  a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    color: ${DARK_BLUE};
+    text-align: center;
+    text-decoration: underline;
+  }
+  @media (min-width: 768px) {
+    margin: 12px auto 0;
+  }
+`
 export default function Home() {
   const { data, error, isLoading } = useSWR(jsonEndpoint, fetcher, {
     refreshInterval: 1000 * 60 * 3, // 3 minutes
@@ -320,6 +340,15 @@ export default function Home() {
         票數說明：1.呈現票數係根據各台已報導票數輸入，與其即時票數略有落差。2.正確結果以中選會為主。
       </Caption>
       <UpdateTime>最後更新時間：{data?.updateAt}</UpdateTime>
+      <WatchMore>
+        <Link
+          href={watchMoreLinkSrc}
+          target="_blank"
+          rel="noreferrer noopenner"
+        >
+          查看更多
+        </Link>
+      </WatchMore>
     </Wrapper>
   )
 }
