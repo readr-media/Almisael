@@ -4,10 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build:mirrorMedia": "NEXT_PUBLIC_RELEASE_TARGET='mirrorMedia' next build",
     "start": "next start",
     "lint": "next lint",
-    "export:mirrorMedia": "yarn build:mirrorMedia && next export"
+    "build:dev-mirrorMedia": "NEXT_PUBLIC_RELEASE_TARGET='dev-mirrorMedia' next build",
+    "build:mirrorMedia": "NEXT_PUBLIC_RELEASE_TARGET='mirrorMedia' next build",
+    "build:dev-mirrorTV": "NEXT_PUBLIC_RELEASE_TARGET='dev-mirrorTV' next build",
+    "build:mirrorTV": "NEXT_PUBLIC_RELEASE_TARGET='mirrorTV' next build",
+    "build:readr": "NEXT_PUBLIC_RELEASE_TARGET='readr' next build",
+    "export:dev-mirrorMedia": "yarn build:dev-mirrorMedia && next export -o out/dev-mirrorMedia",
+    "export:mirrorMedia": "yarn build:mirrorMedia && next export -o out/mirrorMedia",
+    "export:dev-mirrorTV": "yarn build:dev-mirrorTV && next export -o out/dev-mirrorTV",
+    "export:mirrorTV": "yarn build:mirrorTV && next export -o out/mirrorTV",
+    "export:readr": "yarn build:readr && next export -o out/readr",
+    "export:all": "yarn export:dev-mirrorMedia && yarn export:mirrorMedia && yarn export:dev-mirrorTV && yarn export:mirrorTV && yarn export:readr"
   },
   "dependencies": {
     "react": "18.2.0",
