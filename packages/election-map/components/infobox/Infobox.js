@@ -1,6 +1,16 @@
 import styled from 'styled-components'
 import { getInfoBoxData } from '../../utils/infoboxData'
 
+/**
+ *  Inside infobox data, a summary object or district object may have a note object
+ *  which is special description to the current infobox data.
+ *  The note object only exists when needed and the text must exist to describe the situation.
+ *  The note.displayVotes flag is used for infobox component to decide if the infobox data should still be displayed.
+ * @typedef {Object} InfoboxNote
+ * @property {string} text - note content to add additional description to the current infobox data
+ * @property {boolean} displayVotes - a flag to indicate whether the following infobox data should display or not
+ */
+
 const InfoboxWrapper = styled.div`
   font-family: 'Noto Sans TC', sans-serif;
   padding: 16px 22px;
@@ -42,6 +52,10 @@ const PresidentCandidateParty = styled.div`
 
 const InfoboxText = styled.p`
   margin: 0;
+`
+
+const InfoboxNote = styled.p`
+  margin-bottom: 28px;
 `
 
 const ElectedIcon = styled.div`
@@ -133,6 +147,18 @@ const PresidentInfobox = ({ level, data, isRunning, isCurrentYear }) => {
     )
   }
 
+  /** @type {InfoboxNote | undefined} */
+  const note = data.note
+
+  // check the type of InfoboxNote for the business logic of the note
+  if (note?.text && !note?.displayVotes) {
+    return (
+      <InfoboxScrollWrapper>
+        <InfoboxNote>{note.text}</InfoboxNote>
+      </InfoboxScrollWrapper>
+    )
+  }
+
   const isCurrentYearRunningJsx = isCurrentYear ? (
     isRunning ? (
       <RunningHint>開票中</RunningHint>
@@ -146,6 +172,7 @@ const PresidentInfobox = ({ level, data, isRunning, isCurrentYear }) => {
   const { profRate, candidates } = data
   return (
     <InfoboxScrollWrapper>
+      {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
       <PresidentTitle>
         {level === 0 && '總'}投票率 {profRate}% {isCurrentYearRunningJsx}
       </PresidentTitle>
@@ -207,9 +234,22 @@ const MayorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
     )
   }
 
+  /** @type {InfoboxNote | undefined} */
+  const note = data.note
+
+  // check the type of InfoboxNote for the business logic of the note
+  if (note?.text && !note?.displayVotes) {
+    return (
+      <InfoboxScrollWrapper>
+        <InfoboxNote>{note.text}</InfoboxNote>
+      </InfoboxScrollWrapper>
+    )
+  }
+
   const { profRate, candidates } = data
   return (
     <InfoboxScrollWrapper>
+      {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
       <MayorTitle>
         {level === 1 && '總'}投票率 {profRate}%
         {isCurrentYear ? (
@@ -317,10 +357,24 @@ const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
     <></>
   )
 
+  // check the type of InfoboxNote for the business logic of the note
+  // use one of the note
+  /** @type {InfoboxNote | undefined} */
+  const note = data.find((data) => !!data.note?.text)?.note
+
+  if (note?.text && !note?.displayVotes) {
+    return (
+      <InfoboxScrollWrapper>
+        <InfoboxNote>{note.text}</InfoboxNote>
+      </InfoboxScrollWrapper>
+    )
+  }
+
   if (level === 1) {
     const districts = data
     return (
       <InfoboxScrollWrapper>
+        {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
         <HintWrapper>{isCurrentYearRunningJsx}</HintWrapper>
         {districts.map(({ county, area, range, candidates, profRate }) => {
           const legislatorPrefix = county + area
@@ -363,6 +417,7 @@ const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
 
   return (
     <InfoboxScrollWrapper>
+      {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
       {data.map((district) => {
         const { candidates, profRate, type, county, town, area } = district
         const legislatorPrefix = county + town + area + type
@@ -452,8 +507,22 @@ const IndigenousLegislatorInfobox = ({ data, isRunning, isCurrentYear }) => {
 
   let infoboxData = Array.isArray(data) ? data : [data]
 
+  // check the type of InfoboxNote for the business logic of the note
+  // use one of the note
+  /** @type {InfoboxNote | undefined} */
+  const note = infoboxData.find((data) => !!data.note?.text)?.note
+
+  if (note?.text && !note?.displayVotes) {
+    return (
+      <InfoboxScrollWrapper>
+        <InfoboxNote>{note.text}</InfoboxNote>
+      </InfoboxScrollWrapper>
+    )
+  }
+
   return (
     <InfoboxScrollWrapper>
+      {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
       {infoboxData.map((district) => {
         const { candidates, profRate, type, county, town, area } = district
         const legislatorPrefix = county + town + area + type
@@ -540,8 +609,22 @@ const PartyLegislatorInfobox = ({ data, isRunning, isCurrentYear }) => {
   )
   let infoboxData = Array.isArray(data) ? data : [data]
 
+  // check the type of InfoboxNote for the business logic of the note
+  // use one of the note
+  /** @type {InfoboxNote | undefined} */
+  const note = infoboxData.find((data) => !!data.note?.text)?.note
+
+  if (note?.text && !note?.displayVotes) {
+    return (
+      <InfoboxScrollWrapper>
+        <InfoboxNote>{note.text}</InfoboxNote>
+      </InfoboxScrollWrapper>
+    )
+  }
+
   return (
     <InfoboxScrollWrapper>
+      {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
       {/* 
           Although all party legislator data should only contain one district to render,
           use map function to handle cause all legislator infobox data is filled in array.
@@ -708,9 +791,22 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
   }
 
   if (level === 1) {
+    /** @type {InfoboxNote | undefined} */
+    const note = data.note
+
+    // check the type of InfoboxNote for the business logic of the note
+    if (note?.text && !note?.displayVotes) {
+      return (
+        <InfoboxScrollWrapper>
+          <InfoboxNote>{note.text}</InfoboxNote>
+        </InfoboxScrollWrapper>
+      )
+    }
+
     const { districts } = data
     return (
       <InfoboxScrollWrapper>
+        {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
         {isCurrentYear ? (
           isRunning ? (
             <HintWrapper>
@@ -759,6 +855,19 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
             </CouncilMemberDistrict>
           )
         })}
+      </InfoboxScrollWrapper>
+    )
+  }
+
+  // check the type of InfoboxNote for the business logic of the note
+  // use one of the note
+  /** @type {InfoboxNote | undefined} */
+  const note = data.find((data) => !!data.note?.text)?.note
+
+  if (note?.text && !note?.displayVotes) {
+    return (
+      <InfoboxScrollWrapper>
+        <InfoboxNote>{note.text}</InfoboxNote>
       </InfoboxScrollWrapper>
     )
   }
@@ -856,7 +965,12 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
     }
   })
 
-  return <InfoboxScrollWrapper>{councilMembers}</InfoboxScrollWrapper>
+  return (
+    <InfoboxScrollWrapper>
+      {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
+      {councilMembers}
+    </InfoboxScrollWrapper>
+  )
 }
 
 const ReferendumPassWrapper = styled.span`
@@ -900,8 +1014,22 @@ const ReferendumInfobox = ({ data, isRunning, isCurrentYear }) => {
   const { profRate, adptVictor, agreeRate, disagreeRate } = data
   const noResult = adptVictor !== 'Y' && adptVictor !== 'N'
   const pass = adptVictor === 'Y'
+
+  /** @type {InfoboxNote | undefined} */
+  const note = data.note
+
+  // check the type of InfoboxNote for the business logic of the note
+  if (note?.text && !note?.displayVotes) {
+    return (
+      <InfoboxScrollWrapper>
+        <InfoboxNote>{note.text}</InfoboxNote>
+      </InfoboxScrollWrapper>
+    )
+  }
+
   return (
     <InfoboxScrollWrapper>
+      {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
       {isCurrentYear ? (
         isRunning ? (
           <HintWrapper>
