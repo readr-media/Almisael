@@ -94,6 +94,13 @@ const InfoWrapper = styled.div`
 `
 const Item = styled.div`
   height: auto;
+  background-color: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} [props.isVictor]
+     */
+    ({ isVictor }) => (isVictor ? '#EAEAEA' : `${GRAY}`)
+  };
 `
 const CandidateInfoItem = styled(Item)``
 const ResultItem = styled(Item)`
@@ -251,6 +258,15 @@ export default function Home() {
 
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div>
+  const getVictor = (result) => {
+    const victorArray = result?.find((item) => item.key === '當選')
+    const victorResult = victorArray.value.find((item, index) => {
+      return item[`${index + 1}`] === '*'
+    })
+    return Object.keys(victorResult)?.[0]
+  }
+  const victorNumber = getVictor(data.result)
+
   return (
     <Wrapper>
       <Title>2024 總統及立委大選開票</Title>
@@ -258,7 +274,10 @@ export default function Home() {
       <InfoWrapper>
         <CandidateInfoItem />
         {CANDIDATES_CONFIG.map((candidate) => (
-          <CandidateInfoItem key={candidate.number}>
+          <CandidateInfoItem
+            isVictor={candidate.number === victorNumber}
+            key={candidate.number}
+          >
             <MockGrayImage></MockGrayImage>
             <PartyAndNumberAndPersonWrapper>
               <PartyAndNumber>
@@ -306,6 +325,7 @@ export default function Home() {
                     <ResultItem
                       key={index}
                       color={color}
+                      isVictor={`${index + 1}` === victorNumber}
                       shouldShowDivider={shouldShowDivider}
                       className="victor"
                     >
@@ -324,6 +344,7 @@ export default function Home() {
                 return (
                   <ResultItem
                     key={index}
+                    isVictor={`${index + 1}` === victorNumber}
                     color={color}
                     shouldShowDivider={shouldShowDivider}
                   >
