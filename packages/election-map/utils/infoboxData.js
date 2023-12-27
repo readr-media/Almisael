@@ -109,7 +109,7 @@ const councilMemberInfoboxData = (
     return '目前無票數資料'
   }
 
-  if (!data) {
+  if (!data || (Array.isArray(data) && data.length === 0)) {
     if (year === 2010) {
       return '2010為直轄市長及直轄市議員選舉，此區無資料'
     }
@@ -158,7 +158,7 @@ const legislatorInfoboxData = (
     return '目前無票數資料'
   }
 
-  if (!data) {
+  if (!data || (Array.isArray(data) && data.length === 0)) {
     return '此區無資料'
   }
 
