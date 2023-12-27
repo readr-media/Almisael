@@ -9,6 +9,16 @@ import { getInfoBoxData } from '../../utils/infoboxData'
  * @typedef {import('../../consts/electionsConfig').ElectionSubtype} ElectionSubtype
  */
 
+/**
+ *  Inside infobox data, a summary object or district object may have a note object
+ *  which is special description to the current infobox data.
+ *  The note object only exists when needed and the text must exist to describe the situation.
+ *  The note.displayVotes flag is used for infobox component to decide if the infobox data should still be displayed.
+ * @typedef {Object} InfoboxNote
+ * @property {string} text - note content to add additional description to the current infobox data
+ * @property {boolean} displayVotes - a flag to indicate whether the following infobox data should display or not
+ */
+
 const HEIGHT = '46.44px'
 const calculateMaxHeightOfInfoBox = (
   candidatesAmount,
@@ -216,45 +226,22 @@ const WrapperForCouncilMemberFirstLevel = styled.div`
   overflow: hidden;
   transition: max-height 1s ease-in-out;
 `
-// /**
-//  *
-//  * @param {ElectionType} electionsType
-//  * @param {InfoboxData['electionData']} electionData
-//  * @param {InfoboxData['level']} level
-//  */
-// const checkHasElectionData = (electionsType, electionData, level) => {
-//   if (!electionData) {
-//     return false
-//   }
-
-//   switch (electionsType) {
-//     //地方選舉
-//     case 'mayor':
-//       return Boolean(electionData?.candidates)
-//     case 'councilMember':
-//       if (level === 1) {
-//         return Boolean(
-//           electionData?.districts &&
-//             Array.isArray(electionData.districts) &&
-//             electionData.districts.length
-//         )
-//       }
-//       return Boolean(Array.isArray(electionData) && electionData.length)
-
-//     //中央選舉
-//     case 'legislator':
-//       return false
-//     case 'president':
-//       return false
-//     case 'referendum':
-//       //will be undefined, empty object, object with some property
-//       return Boolean(electionData && Object.keys(electionData)?.length)
-//     default:
-//       return false
-//   }
-// }
 
 const InfoboxWrapper = styled.div``
+const InfoNote = styled.p`
+  font-size: 15px;
+  line-height: 21.72px;
+  font-weight: 400;
+  padding: 6px 0 10px;
+  border-bottom: 1px solid black;
+  text-align: start;
+  margin-bottom: 4px;
+  &.no-border-margin {
+    margin-bottom: 0px;
+    border: none;
+  }
+`
+
 /**
  *
  * @param {Array} candidates
@@ -337,8 +324,17 @@ export default function InfoBox({ infoboxData, year }) {
           year,
           isStarted
         )
+        /** @type {InfoboxNote | undefined} */
+        const note = infoboxData?.note
         if (typeof infoboxData === 'string') {
           return <div>{infoboxData}</div>
+        }
+        if (note?.text && !note?.displayVotes) {
+          return (
+            <Wrapper>
+              <InfoNote>{note?.text}</InfoNote>
+            </Wrapper>
+          )
         }
         const candidates = electionData.candidates
         const orderedCandidates = sortCandidatesByTksRate(candidates)
@@ -355,6 +351,7 @@ export default function InfoBox({ infoboxData, year }) {
             {expendButtonJsx}
             {shouldShowExpandButton && <Divider />}
             <div className="prof-rate">投票率 {electionData?.profRate}%</div>
+            {!!note?.text && <InfoNote>{note?.text}</InfoNote>}
 
             <CandidatesInfoWrapper maxHeight={maxHeight}>
               {orderedCandidates.map((candidate) =>
@@ -376,8 +373,17 @@ export default function InfoBox({ infoboxData, year }) {
           return <div>{infoboxData}</div>
         }
         let districtName = ''
-
         if (level === 1) {
+          /** @type {InfoboxNote | undefined} */
+          const note = infoboxData?.note
+          if (note?.text && !note?.displayVotes) {
+            return (
+              <Wrapper>
+                <InfoNote>{note.text}</InfoNote>
+              </Wrapper>
+            )
+          }
+
           const districtsAmount = infoboxData.districts.map((district) => {
             return district?.candidates?.length ?? 0
           })
@@ -397,6 +403,10 @@ export default function InfoBox({ infoboxData, year }) {
             <div style={{ borderTop: 'solid 1px #000' }}>
               {expendButtonJsx}
               {shouldShowExpandButton && <Divider />}
+              {note?.text && (
+                <InfoNote className="no-border-margin">{note.text}</InfoNote>
+              )}
+
               <WrapperForCouncilMemberFirstLevel maxHeight={maxHeight}>
                 {infoboxData.districts.map((district, index) => {
                   if (
@@ -438,6 +448,17 @@ export default function InfoBox({ infoboxData, year }) {
           )
         }
 
+        // check the type of InfoboxNote for the business logic of the note
+        // use one of the note
+        /** @type {InfoboxNote | undefined} */
+        const note = infoboxData.find((data) => !!data.note?.text)?.note
+        if (note?.text && !note?.displayVotes) {
+          return (
+            <Wrapper>
+              <InfoNote>{note.text}</InfoNote>
+            </Wrapper>
+          )
+        }
         return infoboxData.map((election, index) => {
           if (!election) {
             return null
@@ -474,6 +495,8 @@ export default function InfoBox({ infoboxData, year }) {
                 ) : null}
                 <div>投票率: {election?.profRate}%</div>
               </div>
+              {!!note?.text && <InfoNote>{note.text}</InfoNote>}
+
               <CandidatesInfoWrapper maxHeight={maxHeight}>
                 {orderedCandidates.map((candidate) =>
                   getInfoboxItemJsx(candidate)
@@ -495,6 +518,18 @@ export default function InfoBox({ infoboxData, year }) {
         if (typeof infoboxData === 'string') {
           return <div>{infoboxData}</div>
         }
+        /** @type {InfoboxNote | undefined} */
+        const note = infoboxData.note
+
+        // check the type of InfoboxNote for the business logic of the note
+        if (note?.text && !note?.displayVotes) {
+          return (
+            <Wrapper>
+              <InfoNote>{note.text}</InfoNote>
+            </Wrapper>
+          )
+        }
+
         const { profRate, agreeRate, disagreeRate, adptVictor } = infoboxData
         const hasResult = adptVictor === 'Y' || adptVictor === 'N'
         const isPass = hasResult && adptVictor === 'Y'
@@ -503,6 +538,7 @@ export default function InfoBox({ infoboxData, year }) {
           <>
             <ReferendumWrapper>
               <div className="prof-rate">投票率 {profRate}%</div>
+              {!!note?.text && <InfoNote>{note.text}</InfoNote>}
               <div className={isPass ? 'result pass-result' : 'result'}>
                 <span>同意</span>
                 <span className="rate">{agreeRate}%</span>
@@ -543,6 +579,17 @@ export default function InfoBox({ infoboxData, year }) {
           return null
         }
         if (level === 0) {
+          // check the type of InfoboxNote for the business logic of the note
+          // use one of the note
+          /** @type {InfoboxNote | undefined} */
+          const note = infoboxData?.note
+          if (note?.text && !note?.displayVotes) {
+            return (
+              <Wrapper>
+                <InfoNote>{note.text}</InfoNote>
+              </Wrapper>
+            )
+          }
           const candidates = infoboxData?.candidates
           const orderedCandidates = sortCandidatesByTksRate(candidates)
           const candidatesAmount = orderedCandidates.length
@@ -562,6 +609,7 @@ export default function InfoBox({ infoboxData, year }) {
                 <div className="range">{districtName}</div>
                 <div>投票率 {infoboxData?.profRate}%</div>
               </div>
+              {!!note?.text && <InfoNote>{note.text}</InfoNote>}
 
               <CandidatesInfoWrapper maxHeight={maxHeight}>
                 {orderedCandidates.map((candidate) =>
@@ -572,6 +620,11 @@ export default function InfoBox({ infoboxData, year }) {
             </Wrapper>
           )
         } else if (level === 1) {
+          // check the type of InfoboxNote for the business logic of the note
+          // use one of the note
+          /** @type {InfoboxNote | undefined} */
+          const note = infoboxData?.find((data) => !!data.note?.text)?.note
+
           if (isIndigenous || isParty) {
             const candidates = infoboxData?.[0]?.candidates ?? []
             const orderedCandidates = sortCandidatesByTksRate(candidates)
@@ -590,7 +643,7 @@ export default function InfoBox({ infoboxData, year }) {
                 <div className="prof-rate">
                   投票率 {infoboxData?.[0]?.profRate}%
                 </div>
-
+                {!!note?.text && <InfoNote>{note.text}</InfoNote>}
                 <CandidatesInfoWrapper maxHeight={maxHeight}>
                   {orderedCandidates.map((candidate) =>
                     getInfoboxItemJsx(candidate)
@@ -614,10 +667,14 @@ export default function InfoBox({ infoboxData, year }) {
             shouldInfoBoxExpand,
             '272px'
           )
+
           return (
             <div style={{ borderTop: 'solid 1px #000' }}>
               {expendButtonJsx}
               {shouldShowExpandButton && <Divider />}
+              {!!note?.text && (
+                <InfoNote className="no-border-margin">{note.text}</InfoNote>
+              )}
               <WrapperForCouncilMemberFirstLevel maxHeight={maxHeight}>
                 {infoboxData.map((district, index) => {
                   if (
@@ -650,6 +707,18 @@ export default function InfoBox({ infoboxData, year }) {
             </div>
           )
         }
+        /** @type {InfoboxNote | undefined} */
+        const note = infoboxData?.[0]?.note
+
+        // check the type of InfoboxNote for the business logic of the note
+        if (note?.text && !note?.displayVotes) {
+          return (
+            <Wrapper>
+              <InfoNote>{note.text}</InfoNote>
+            </Wrapper>
+          )
+        }
+
         const candidates = infoboxData?.[0]?.candidates
         const orderedCandidates = sortCandidatesByTksRate(candidates)
         const candidatesAmount = orderedCandidates.length
@@ -662,20 +731,21 @@ export default function InfoBox({ infoboxData, year }) {
         const expendButtonJsx = getExpendButtonJsx(shouldShowExpandButton)
 
         districtName = infoboxData?.[0]?.area_nickname
+
         const districtNote =
-          level === 2 && districtName.includes('*')
+          level === 2 && districtName && districtName?.includes('*')
             ? '* 表示該行政區僅有部分村里在此選區'
             : null
         return (
           <Wrapper>
             {expendButtonJsx}
             {shouldShowExpandButton && <Divider />}
+            {!!note?.text && <InfoNote>{note.text}</InfoNote>}
             <div className="prof-rate prof-rate--text-align-start">
               {level === 2 && <div className="range">{districtName}</div>}
               {districtNote && <div className="range-note">{districtNote}</div>}
               <div>投票率 {infoboxData?.[0]?.profRate}%</div>
             </div>
-
             <CandidatesInfoWrapper maxHeight={maxHeight}>
               {orderedCandidates.map((candidate) =>
                 getInfoboxItemJsx(candidate)
@@ -692,8 +762,18 @@ export default function InfoBox({ infoboxData, year }) {
           year,
           isStarted
         )
+
         if (typeof infoboxData === 'string') {
           return <div>{infoboxData}</div>
+        }
+        /** @type {InfoboxNote | undefined} */
+        const note = infoboxData?.note
+        if (note?.text && !note?.displayVotes) {
+          return (
+            <Wrapper>
+              <InfoNote>{note?.text}</InfoNote>
+            </Wrapper>
+          )
         }
         const candidates = electionData.candidates
         const orderedCandidates = sortCandidatesByTksRate(candidates)
@@ -710,7 +790,7 @@ export default function InfoBox({ infoboxData, year }) {
             {expendButtonJsx}
             {shouldShowExpandButton && <Divider />}
             <div className="prof-rate">投票率 {electionData?.profRate}%</div>
-
+            {!!note?.text && <InfoNote>{note?.text}</InfoNote>}
             <CandidatesInfoWrapper maxHeight={maxHeight}>
               {orderedCandidates.map((candidate) =>
                 getInfoboxItemJsx(candidate)
