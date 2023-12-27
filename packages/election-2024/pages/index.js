@@ -77,82 +77,6 @@ const CANDIDATES_CONFIG = [
   },
 ]
 
-const MOCK_DATA = {
-  timestamp: '2099/13/32 25:99',
-  result: [
-    {
-      key: '得票數',
-      value: [
-        {
-          1: '9999999',
-        },
-        {
-          2: '9999999',
-        },
-        {
-          3: '9999999',
-        },
-      ],
-    },
-    {
-      key: '得票數',
-      value: [
-        {
-          1: '9999999',
-        },
-        {
-          2: '9999999',
-        },
-        {
-          3: '9999999',
-        },
-      ],
-    },
-    {
-      key: '得票數',
-      value: [
-        {
-          1: '9999999',
-        },
-        {
-          2: '9999999',
-        },
-        {
-          3: '9999999',
-        },
-      ],
-    },
-    {
-      key: '得票率',
-      value: [
-        {
-          1: '99.99',
-        },
-        {
-          2: '99.99',
-        },
-        {
-          3: '99.99',
-        },
-      ],
-    },
-    {
-      key: '當選',
-      value: [
-        {
-          1: ' ',
-        },
-        {
-          2: '*',
-        },
-        {
-          3: ' ',
-        },
-      ],
-    },
-  ],
-  title: '這是小標',
-}
 const Wrapper = styled.section`
   padding: 12px 10px;
   background-color: ${GRAY};
@@ -395,7 +319,7 @@ export default function Home() {
       <Caption>
         票數說明：1.呈現票數係根據各台已報導票數輸入，與其即時票數略有落差。2.正確結果以中選會為主。
       </Caption>
-      <UpdateTime>最後更新時間：{MOCK_DATA.timestamp}</UpdateTime>
+      <UpdateTime>最後更新時間：{data?.updateAt}</UpdateTime>
     </Wrapper>
   )
 }
