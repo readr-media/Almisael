@@ -206,7 +206,7 @@ export const electionsConfig = [
   },
   {
     electionType: 'referendum',
-    electionName: '全國性公民投票',
+    electionName: '全國公投',
     years: [
       {
         key: 2018,
