@@ -16,7 +16,12 @@
     "export:dev-mirrorTV": "yarn build:dev-mirrorTV && next export -o out/dev-mirrorTV",
     "export:mirrorTV": "yarn build:mirrorTV && next export -o out/mirrorTV",
     "export:readr": "yarn build:readr && next export -o out/readr",
-    "export:all": "yarn export:dev-mirrorMedia && yarn export:mirrorMedia && yarn export:dev-mirrorTV && yarn export:mirrorTV && yarn export:readr"
+    "export:all": "yarn export:dev-mirrorMedia && yarn export:mirrorMedia && yarn export:dev-mirrorTV && yarn export:mirrorTV && yarn export:readr",
+    "deploy:dev-mirrorMedia": "NEXT_PUBLIC_RELEASE_TARGET='dev-mirrorMedia' node ./deploy-scripts/index.mjs",
+    "deploy:mirrorMedia": "NEXT_PUBLIC_RELEASE_TARGET='mirrorMedia' node ./deploy-scripts/index.mjs",
+    "deploy:dev-mirrorTV": "NEXT_PUBLIC_RELEASE_TARGET='dev-mirrorTV' node ./deploy-scripts/index.mjs",
+    "deploy:mirrorTV": "NEXT_PUBLIC_RELEASE_TARGET='mirrorTV' node ./deploy-scripts/index.mjs",
+    "deploy:readr": "NEXT_PUBLIC_RELEASE_TARGET='readr' node ./deploy-scripts/index.mjs"
   },
   "dependencies": {
     "react": "18.2.0",
