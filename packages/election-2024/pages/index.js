@@ -289,6 +289,7 @@ export default function Home() {
                 src={`${candidate.candidateImage}`}
                 fill
                 alt={candidate.president}
+                style={{ objectFit: 'cover' }}
               ></Image>
             </MockGrayImage>
             <PartyAndNumberAndPersonWrapper>
