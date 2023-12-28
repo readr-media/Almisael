@@ -30,6 +30,7 @@ const CANDIDATES_CONFIG = [
     number: '1',
     president: '柯文哲',
     vicePresident: '吳欣盈',
+    candidateImage: 'ko.jpeg',
     partyImage: {
       name: 'TPP',
       size: {
@@ -48,6 +49,7 @@ const CANDIDATES_CONFIG = [
     number: '2',
     president: '賴清德',
     vicePresident: '蕭美琴',
+    candidateImage: 'lai.jpeg',
     partyImage: {
       name: 'DPP',
       size: {
@@ -66,6 +68,7 @@ const CANDIDATES_CONFIG = [
     number: '3',
     president: '侯友宜',
     vicePresident: '趙少康',
+    candidateImage: 'hou.jpeg',
     partyImage: {
       name: 'KMT',
       size: {
@@ -102,7 +105,9 @@ const Item = styled.div`
     ({ isVictor }) => (isVictor ? '#EAEAEA' : `${GRAY}`)
   };
 `
-const CandidateInfoItem = styled(Item)``
+const CandidateInfoItem = styled(Item)`
+  padding-top: 8px;
+`
 const ResultItem = styled(Item)`
   font-size: 13px;
   line-height: 1.5;
@@ -141,6 +146,7 @@ const ResultItem = styled(Item)`
   }
 `
 const MockGrayImage = styled.div`
+  position: relative;
   width: 40px;
   height: 40px;
   margin: 0 auto;
@@ -278,7 +284,13 @@ export default function Home() {
             isVictor={candidate.number === victorNumber}
             key={candidate.number}
           >
-            <MockGrayImage></MockGrayImage>
+            <MockGrayImage>
+              <Image
+                src={`${candidate.candidateImage}`}
+                fill
+                alt={candidate.president}
+              ></Image>
+            </MockGrayImage>
             <PartyAndNumberAndPersonWrapper>
               <PartyAndNumber>
                 <Party imageSize={candidate.partyImage.size}>
