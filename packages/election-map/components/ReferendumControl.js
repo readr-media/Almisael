@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { ReferendumSelect } from './ReferendumSelect'
-// import ReactGA from 'react-ga'
 import { electionActions } from '../store/election-slice'
 import { getReferendumNumbers } from '../utils/election'
 import { useAppDispatch, useAppSelector } from '../hook/useRedux'

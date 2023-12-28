@@ -6,7 +6,7 @@ import taiwanMap from '../public/images/taiwan_map.png'
 import taiwanMapMobile from '../public/images/taiwan_map_m.png'
 import Image from 'next/image'
 import { imageLoader } from '../loader'
-import { og, organization } from '../consts/config'
+import { og } from '../consts/config'
 import gtag from '../utils/gtag'
 import { useAppSelector } from '../hook/useRedux'
 
@@ -206,18 +206,11 @@ export const LandingPage = () => {
             <IntroWrapper preventCollapse={true}>
               <Intro>
                 <h1>
-                  2022
+                  2024 總統、立委選舉
                   <br />
-                  縣市長、議員選舉暨
-                  <br />
-                  公投開票即時資訊
+                  開票即時資訊
                 </h1>
-                <p>
-                  {organization === 'readr-media'
-                    ? `2022 年縣市長、議員、公投開票結果看
-                READr！提供最詳盡的選舉票數地圖、歷年比較等功能。`
-                    : `鏡週刊即時關注 2022 年縣市長、議員、公投開票結果！並且提供最詳盡的選舉票數地圖、歷年比較功能。`}
-                </p>
+                <p>{og.descriptioin}</p>
               </Intro>
             </IntroWrapper>
           )}

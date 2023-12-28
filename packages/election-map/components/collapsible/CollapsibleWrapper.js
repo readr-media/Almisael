@@ -101,7 +101,7 @@ const upTriangle = (
 /**
  * @param {Object} props
  * @param {React.ReactNode} props.children
- * @param {string} props.title
+ * @param {string} [props.title]
  * @param {string} [props.className]
  * @param {boolean} [props.preventCollapse]
  * @param {boolean} [props.centerTitle]
@@ -110,7 +110,7 @@ const upTriangle = (
  */
 export const CollapsibleWrapper = ({
   children,
-  title,
+  title = '',
   className,
   preventCollapse = false,
   centerTitle = false,
