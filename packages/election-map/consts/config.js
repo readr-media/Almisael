@@ -6,8 +6,21 @@
  */
 /** @type {Organization} */
 export const organization = 'readr-media'
+// export const organization = 'mirror-media'
 /** @type {Env} */
 export const environment = 'dev' // 'dev | prod'
+const ga4Ids = {
+  'readr-media': {
+    dev: 'G-YDKYSDG3RL',
+    prod: 'G-4Z12TPZTMB',
+  },
+  'mirror-media': {
+    dev: 'G-36HYH6NF6P',
+    prod: 'G-341XFN0675',
+  },
+}
+
+export const ga4Id = ga4Ids[organization][environment]
 
 export const og = {
   title: '2024 總統、立委選舉開票即時資訊',

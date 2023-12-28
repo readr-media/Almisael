@@ -1,9 +1,9 @@
 import { useState, useCallback, useEffect } from 'react'
 import styled from 'styled-components'
-import ReactGA from 'react-ga'
 import { electionActions } from '../store/election-slice'
 import { useAppSelector, useAppDispatch } from '../hook/useRedux'
 import { mapActions } from '../store/map-slice'
+import gtag from '../utils/gtag'
 
 const Wrapper = styled.div`
   display: flex;
@@ -152,6 +152,11 @@ export const YearSelect = ({ className }) => {
   )
   const year = useAppSelector((state) => state.election.control.year)
   const years = useAppSelector((state) => state.election.config.years)
+  const device = useAppSelector((state) => state.ui.device)
+  const electionName = useAppSelector(
+    (state) => state.election.config.electionName
+  )
+  const subtype = useAppSelector((state) => state.election.control.subtype)
   const dispatch = useAppDispatch()
   const [compare, setCompare] = useState(false)
   const [compareCandidates, setCompareCandidates] = useState([
@@ -247,15 +252,10 @@ export const YearSelect = ({ className }) => {
           <>
             {!compareMode && (
               <ActionButton
-                cancel="true"
+                cancel={true}
                 onClick={() => {
                   setCompare(false)
                   setCompareCandidates([years.find((y) => y === year), null])
-                  ReactGA.event({
-                    category: 'Projects',
-                    action: 'Click',
-                    label: `比較取消：年份 / 桌機`,
-                  })
                 }}
               >
                 取消
@@ -272,10 +272,10 @@ export const YearSelect = ({ className }) => {
                   document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
                 } else {
                   submitCompareCandidates()
-                  ReactGA.event({
-                    category: 'Projects',
-                    action: 'Click',
-                    label: `比較確定：年份 / 桌機`,
+                  gtag.sendGAEvent('Click', {
+                    project: `比較確定：${electionName}${
+                      subtype ? ` - ${subtype.name}` : ''
+                    } / 年份 / ${device}`,
                   })
                 }
               }}
@@ -287,10 +287,8 @@ export const YearSelect = ({ className }) => {
           <ActionButton
             onClick={() => {
               setCompare(true)
-              ReactGA.event({
-                category: 'Projects',
-                action: 'Click',
-                label: `比較：年份 / 桌機`,
+              gtag.sendGAEvent('Click', {
+                project: `比較 / ${device}`,
               })
             }}
           >

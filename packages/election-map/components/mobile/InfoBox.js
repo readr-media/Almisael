@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useAppSelector } from '../../hook/useRedux'
 import { useState } from 'react'
 import { getInfoBoxData } from '../../utils/infoboxData'
+import gtag from '../../utils/gtag'
 /**
  * @typedef {import('../../utils/electionsData').InfoboxData} InfoboxData
  * @typedef {import('../../consts/electionsConfig').ElectionType} ElectionType
@@ -275,6 +276,9 @@ export default function InfoBox({ infoboxData, year }) {
   )
   const handleExpand = () => {
     setShouldInfoBoxExpand((pre) => !pre)
+    gtag.sendGAEvent('Click', {
+      project: `infobox 展開 / 收合`,
+    })
   }
   const getInfoboxDataOnCertainElectionType = getInfoBoxData(
     electionsType,

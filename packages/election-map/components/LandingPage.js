@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import useWindowDimension from '../hook/useWindowDimensions'
 import { electionMapColor } from '../consts/colors'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 import taiwanMap from '../public/images/taiwan_map.png'
@@ -8,7 +7,8 @@ import taiwanMapMobile from '../public/images/taiwan_map_m.png'
 import Image from 'next/image'
 import { imageLoader } from '../loader'
 import { og, organization } from '../consts/config'
-import ReactGA from 'react-ga'
+import gtag from '../utils/gtag'
+import { useAppSelector } from '../hook/useRedux'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -170,9 +170,8 @@ const teamMembers = [
 
 export const LandingPage = () => {
   const [show, setShow] = useState(false)
-
-  const { width } = useWindowDimension()
-  const isMobile = width <= 1024
+  const device = useAppSelector((state) => state.ui.device)
+  const isMobile = device !== 'desktop'
   const imgSrc = isMobile ? taiwanMapMobile : taiwanMap
 
   useEffect(() => {
@@ -182,10 +181,8 @@ export const LandingPage = () => {
   /** @type {React.MouseEventHandler} */
   const onEnterClickedHandler = () => {
     setShow(false)
-    ReactGA.event({
-      category: 'Projects',
-      action: 'Click',
-      label: 'landing page enter',
+    gtag.sendGAEvent('Click', {
+      project: `landing page enter / ${device}`,
     })
   }
 

@@ -7,10 +7,10 @@ import { RelatedPost } from '../components/related-post/RelatedPost'
 import { LiveblogContainer } from '../components/LiveblogContainer'
 import { electionMapColor } from '../consts/colors'
 import { organization } from '../consts/config'
-import ReactGA from 'react-ga'
 import { useAppDispatch, useAppSelector } from '../hook/useRedux'
 import { electionActions } from '../store/election-slice'
 import { mapActions } from '../store/map-slice'
+import gtag from '../utils/gtag'
 
 const upTriangle = (
   <svg
@@ -64,6 +64,7 @@ const StickyHeader = /** @type {import('styled-components').ThemedStyledFunction
 
 export default function Home() {
   const showTutorial = useAppSelector((state) => state.map.ui.showTutorial)
+  const device = useAppSelector((state) => state.ui.device)
   const [dashboardInView, setDashboardInView] = useState(true)
   const [hasAnchor, setHasAnchor] = useState(false)
   /** @type {{current: IntersectionObserver} | null} */
@@ -102,46 +103,54 @@ export default function Home() {
    *
    * @type {RefCallback}
    */
-  const dashboardRef = useCallback((node) => {
-    if (dashboardObserver.current) dashboardObserver.current.disconnect()
-    dashboardObserver.current = new IntersectionObserver((entries) => {
-      const isIntersecting = entries[0].isIntersecting
-      setDashboardInView(isIntersecting)
-      if (!isIntersecting && organization === 'readr-media') {
-        ReactGA.event({
-          category: 'Projects',
-          action: 'Scroll',
-          label: `Scroll To Liveblog`,
-        })
-      }
-    })
-    if (node) dashboardObserver.current.observe(node)
-  }, [])
+  const dashboardRef = useCallback(
+    (node) => {
+      if (dashboardObserver.current) dashboardObserver.current.disconnect()
+      dashboardObserver.current = new IntersectionObserver((entries) => {
+        const isIntersecting = entries[0].isIntersecting
+        setDashboardInView(isIntersecting)
+        if (!isIntersecting) {
+          if (organization === 'readr-media') {
+            gtag.sendGAEvent('Scroll', {
+              project: `scroll to liveblog / ${device}`,
+            })
+          } else if (organization === 'mirror-media') {
+            gtag.sendGAEvent('Scroll', {
+              project: `scroll to related post / ${device}`,
+            })
+          }
+        }
+      })
+      if (node) dashboardObserver.current.observe(node)
+    },
+    [device]
+  )
 
   /**
    * A ref callback for the end div.
    *
    * @type {RefCallback}
    */
-  const EndRef = useCallback((node) => {
-    if (endDivObserver.current) endDivObserver.current.disconnect()
-    endDivObserver.current = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          ReactGA.event({
-            category: 'Projects',
-            action: 'Scroll',
-            label: `Scroll To Bottom`,
-          })
+  const EndRef = useCallback(
+    (node) => {
+      if (endDivObserver.current) endDivObserver.current.disconnect()
+      endDivObserver.current = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            gtag.sendGAEvent('Click', {
+              project: `scroll to bottom / ${device}`,
+            })
+          }
+        },
+        {
+          rootMargin: '20px',
+          threshold: 0,
         }
-      },
-      {
-        rootMargin: '20px',
-        threshold: 0,
-      }
-    )
-    if (node) endDivObserver.current.observe(node)
-  }, [])
+      )
+      if (node) endDivObserver.current.observe(node)
+    },
+    [device]
+  )
 
   return (
     <>

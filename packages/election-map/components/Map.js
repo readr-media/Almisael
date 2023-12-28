@@ -12,6 +12,7 @@ import { electionActions } from '../store/election-slice'
 import { useAppDispatch, useAppSelector } from '../hook/useRedux'
 import * as topojson from 'topojson'
 import { mapActions } from '../store/map-slice'
+import gtag from '../utils/gtag'
 
 const SVG = styled.svg`
   use {
@@ -42,8 +43,12 @@ export const Map = ({
   const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
+  const electionName = useAppSelector(
+    (state) => state.election.config.electionName
+  )
   const levelControl = useAppSelector((state) => state.election.control.level)
   const year = useAppSelector((state) => state.election.control.year)
+  const number = useAppSelector((state) => state.election.control.number)
   const { countyCode, townCode, areaCode, activeCode } = levelControl
   const { width, height } = dimension
   const { nation, counties, towns, villages } = geoJsons
@@ -202,12 +207,6 @@ export const Map = ({
   const countyClicked = (feature) => {
     const { COUNTYCODE: countyCode, COUNTYNAME: countyName } =
       feature.properties
-    // console.log('---')
-    // console.log(`county:${countyName} clicked`)
-    // console.log(`countyId = ${countyId}`)
-    // console.log('path id is:', `#id-${countyId}`)
-    // console.log('d is:', feature)
-    // console.log('---')
     dispatch(
       electionActions.changeLevelControl({
         level: 1,
@@ -228,6 +227,11 @@ export const Map = ({
         villageName: '',
       })
     )
+    gtag.sendGAEvent('Click', {
+      project: `${electionName}${subtype ? ` - ${subtype.name}` : ''} / ${
+        year.key
+      } / ${number ? `${number.name} / ` : ''}${countyName}`,
+    })
   }
   const townClicked = (feature) => {
     const {
@@ -236,13 +240,6 @@ export const Map = ({
       TOWNCODE: townCode,
       TOWNNAME: townName,
     } = feature.properties
-
-    // console.log('---')
-    // console.log(`county:${countyName} town:${townName} clicked`)
-    // console.log(`countyId = ${countyId}, townId = ${townId}`)
-    // console.log('path id is:', `#id-${townId}`)
-    // console.log('d is:', feature)
-    // console.log('---')
     dispatch(
       electionActions.changeLevelControl({
         level: 2,
@@ -263,6 +260,11 @@ export const Map = ({
         villageName: '',
       })
     )
+    gtag.sendGAEvent('Click', {
+      project: `${electionName}${subtype ? ` - ${subtype.name}` : ''} / ${
+        year.key
+      } / ${number ? `${number.name} / ` : ''}${countyName} / ${townName}`,
+    })
   }
   const areaClicked = (feature) => {
     const {
@@ -292,6 +294,11 @@ export const Map = ({
         villageName: '',
       })
     )
+    gtag.sendGAEvent('Click', {
+      project: `${electionName}${subtype ? ` - ${subtype.name}` : ''} / ${
+        year.key
+      } / ${number ? `${number.name} / ` : ''}${countyName} / ${areaName}`,
+    })
   }
   const villageClicked = (feature) => {
     const {
@@ -302,18 +309,6 @@ export const Map = ({
       VILLCODE: villageCode,
       VILLNAME: villageName,
     } = feature.properties
-
-    // console.log('---')
-    // console.log(
-    //   `county:${countyName} town:${townName} village:${villageName} clicked`
-    // )
-    // console.log(
-    //   `countyId = ${countyId}, townId = ${townId}, villageId = ${villageId}`
-    // )
-    // console.log('village_clicked:')
-    // console.log('path id is:', `#id-${villageId}`)
-    // console.log('d is:', feature)
-    // console.log('---')
 
     if (!areaCode) {
       dispatch(
@@ -335,6 +330,13 @@ export const Map = ({
           villageName,
         })
       )
+      gtag.sendGAEvent('Click', {
+        project: `${electionName}${subtype ? ` - ${subtype.name}` : ''} / ${
+          year.key
+        } / ${
+          number ? `${number.name} / ` : ''
+        }${countyName} / ${townName} / ${villageName}`,
+      })
     } else {
       dispatch(
         electionActions.changeLevelControl({
@@ -356,6 +358,13 @@ export const Map = ({
           villageName,
         })
       )
+      gtag.sendGAEvent('Click', {
+        project: `${electionName}${subtype ? ` - ${subtype.name}` : ''} / ${
+          year.key
+        } / ${
+          number ? `${number.name} / ` : ''
+        }${countyName} / ${areaName} / ${villageName}`,
+      })
     }
   }
 

@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 import widgets from '@readr-media/react-election-widgets'
 import { useAppSelector } from '../hook/useRedux'
+import gtag from '../utils/gtag'
 
 /**
  * @typedef {import('../consts/electionsConfig').ElectionType} ElectionType
@@ -146,13 +147,22 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
         theme="electionMap"
         scrollTo={evcScrollTo}
         onChange={(selector, value) => {
+          // In fact mobile selector won't react to the evc selected value,
+          // but here we still call the callback to centralized GA event logic.
           onEvcSelected(value)
         }}
         isMobile={isMobile} //for styled-component
       />
     </ElectionVotesComparisonMobileWrapper>
   ) : (
-    <ElectionVotesComparisonDesktopWrapper title={wrapperTitle}>
+    <ElectionVotesComparisonDesktopWrapper
+      title={wrapperTitle}
+      onCollapse={() => {
+        gtag.sendGAEvent('Click', {
+          project: `票數比較 收合`,
+        })
+      }}
+    >
       <StyledEVC
         electionType={electionType}
         election={election}

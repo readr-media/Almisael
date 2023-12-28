@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import { electionMapColor } from '../consts/colors'
-import ReactGA from 'react-ga'
-import useWindowDimensions from '../hook/useWindowDimensions'
 import { useAppSelector } from '../hook/useRedux'
+import gtag from '../utils/gtag'
 
 const MapButtonWrapper = styled.div`
   margin-top: 16px;
@@ -28,7 +27,6 @@ const MapLevelControlButton = styled.button`
 `
 
 export const MapNavigateButton = () => {
-  const { width } = useWindowDimensions()
   const levelControl = useAppSelector((state) => state.election.control.level)
   const mapUpperLevelId = useAppSelector(
     (state) => state.map.control.mapUpperLevelId
@@ -42,10 +40,8 @@ export const MapNavigateButton = () => {
           const target = document.querySelector(`#first-id-${mapUpperLevelId}`)
           let event = new MouseEvent('click', { bubbles: true })
           target.dispatchEvent(event)
-          ReactGA.event({
-            category: 'Projects',
-            action: 'Click',
-            label: `回上層：${width > 1024 ? '桌機' : '手機平板'}`,
+          gtag.sendGAEvent('Click', {
+            project: '回上層',
           })
         }}
       >
@@ -57,10 +53,8 @@ export const MapNavigateButton = () => {
           const target = document.querySelector(`#first-id-background`)
           let event = new MouseEvent('click', { bubbles: true })
           target.dispatchEvent(event)
-          ReactGA.event({
-            category: 'Projects',
-            action: 'Click',
-            label: `回全國：${width > 1024 ? '桌機' : '手機平板'}`,
+          gtag.sendGAEvent('Click', {
+            project: '回全國',
           })
         }}
       >

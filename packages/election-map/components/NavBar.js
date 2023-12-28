@@ -3,12 +3,13 @@ import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 import { organization } from '../consts/config'
 import useClickOutside from '../hook/useClickOutside'
-import useWindowDimensions from '../hook/useWindowDimensions'
 import { imageLoader } from '../loader'
 // @ts-ignore
 import fbLogo from '../public/images/fb.png'
 // @ts-ignore
 import lineLogo from '../public/images/line.png'
+import gtag from '../utils/gtag'
+import { useAppSelector } from '../hook/useRedux'
 
 const isReadr = organization === 'readr-media'
 
@@ -451,8 +452,8 @@ export const NavBar = ({ dashboardInView }) => {
   const [showShareIcon, setShowShareIcon] = useState(false)
   /** @type {React.MutableRefObject<null | HTMLDivElement>} */
   const shareIconRef = useRef(null)
-  const { width } = useWindowDimensions()
-  const isMobile = width <= 1024
+  const device = useAppSelector((state) => state.ui.device)
+  const isMobile = device !== 'desktop'
   useClickOutside(shareIconRef, () => {
     setShowShareIcon(false)
   })
@@ -470,6 +471,9 @@ export const NavBar = ({ dashboardInView }) => {
         )
       )
     )
+    gtag.sendGAEvent('Click', {
+      project: `share-facebook / ${device}`,
+    })
   }
 
   /** @type {React.MouseEventHandler} */
@@ -487,6 +491,9 @@ export const NavBar = ({ dashboardInView }) => {
           )
         )
     )
+    gtag.sendGAEvent('Click', {
+      project: `share-line / ${device}`,
+    })
   }
 
   const Logo = isReadr
