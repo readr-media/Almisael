@@ -1,6 +1,6 @@
 // 'mirrorMedia' | 'mirrorTV' | 'readr'
 const releaseTarget = process.env.NEXT_PUBLIC_RELEASE_TARGET
-const projectName = 'dev-election2024-homepage-1227-4'
+const projectName = 'dev-election2024-homepage-1227-8'
 let assetPrefixPath = ''
 let jsonEndpoint = ''
 let staticFileDestination = ''
