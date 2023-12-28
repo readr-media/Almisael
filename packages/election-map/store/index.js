@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import electionReducer from './election-slice'
 import mapReducer from './map-slice'
+import uiReducer from './ui-slice'
 
 /**
  * @typedef {ReturnType<typeof store.getState>} RootState
@@ -11,7 +12,7 @@ import mapReducer from './map-slice'
  */
 
 const store = configureStore({
-  reducer: { election: electionReducer, map: mapReducer },
+  reducer: { election: electionReducer, map: mapReducer, ui: uiReducer },
 })
 
 export default store
