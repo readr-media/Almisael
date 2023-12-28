@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
-// import ReactGA from 'react-ga'
 
 import { electionMapColor } from '../consts/colors'
 import lb from '@readr-media/react-live-blog'
