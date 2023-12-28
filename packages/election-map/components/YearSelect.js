@@ -278,10 +278,11 @@ export const YearSelect = ({ className }) => {
                   document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
                 } else {
                   submitCompareCandidates()
+                  const [year, compareYear] = compareCandidates
                   gtag.sendGAEvent('Click', {
                     project: `比較確定：${electionName}${
                       subtype ? ` - ${subtype.name}` : ''
-                    } / 年份 / ${device}`,
+                    } / ${year.key} - ${compareYear.key} / ${device}`,
                   })
                 }
               }}

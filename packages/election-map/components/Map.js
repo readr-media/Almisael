@@ -228,9 +228,9 @@ export const Map = ({
       })
     )
     gtag.sendGAEvent('Click', {
-      project: `${electionName}${subtype ? ` - ${subtype.name}` : ''} / ${
-        year.key
-      } / ${number ? `${number.name} / ` : ''}${countyName}`,
+      project: `地圖點擊: ${electionName}${
+        subtype ? ` - ${subtype.name}` : ''
+      } / ${year.key} / ${number ? `${number.name} / ` : ''}${countyName}`,
     })
   }
   const townClicked = (feature) => {
@@ -261,9 +261,11 @@ export const Map = ({
       })
     )
     gtag.sendGAEvent('Click', {
-      project: `${electionName}${subtype ? ` - ${subtype.name}` : ''} / ${
-        year.key
-      } / ${number ? `${number.name} / ` : ''}${countyName} / ${townName}`,
+      project: `地圖點擊: ${electionName}${
+        subtype ? ` - ${subtype.name}` : ''
+      } / ${year.key} / ${
+        number ? `${number.name} / ` : ''
+      }${countyName} / ${townName}`,
     })
   }
   const areaClicked = (feature) => {
@@ -295,9 +297,11 @@ export const Map = ({
       })
     )
     gtag.sendGAEvent('Click', {
-      project: `${electionName}${subtype ? ` - ${subtype.name}` : ''} / ${
-        year.key
-      } / ${number ? `${number.name} / ` : ''}${countyName} / ${areaName}`,
+      project: `地圖點擊: ${electionName}${
+        subtype ? ` - ${subtype.name}` : ''
+      } / ${year.key} / ${
+        number ? `${number.name} / ` : ''
+      }${countyName} / ${areaName}`,
     })
   }
   const villageClicked = (feature) => {
@@ -331,9 +335,9 @@ export const Map = ({
         })
       )
       gtag.sendGAEvent('Click', {
-        project: `${electionName}${subtype ? ` - ${subtype.name}` : ''} / ${
-          year.key
-        } / ${
+        project: `地圖點擊: ${electionName}${
+          subtype ? ` - ${subtype.name}` : ''
+        } / ${year.key} / ${
           number ? `${number.name} / ` : ''
         }${countyName} / ${townName} / ${villageName}`,
       })
@@ -359,9 +363,9 @@ export const Map = ({
         })
       )
       gtag.sendGAEvent('Click', {
-        project: `${electionName}${subtype ? ` - ${subtype.name}` : ''} / ${
-          year.key
-        } / ${
+        project: `地圖點擊: ${electionName}${
+          subtype ? ` - ${subtype.name}` : ''
+        } / ${year.key} / ${
           number ? `${number.name} / ` : ''
         }${countyName} / ${areaName} / ${villageName}`,
       })

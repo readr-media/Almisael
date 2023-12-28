@@ -147,10 +147,13 @@ export const ReferendumControl = () => {
                 document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
               } else {
                 submitCompareCandidates()
+                const [number, compareNumber] = compareCandidates
                 gtag.sendGAEvent('Click', {
                   project: `比較確定：${electionName}${
                     subtype ? ` - ${subtype.name}` : ''
-                  } / 公投 / ${device}`,
+                  } / ${number.year + number.name} - ${
+                    compareNumber.year + compareNumber.name
+                  } / ${device}`,
                 })
               }
             }}
