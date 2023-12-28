@@ -73,7 +73,10 @@ export const SeatsPanel = ({ isMobile = false }) => {
   let data
 
   // For council member, only provide each county parties data and the titles for the SeatsChart to show
-  if (electionType === 'councilMember') {
+  if (
+    electionType === 'councilMember' &&
+    typeof seatMeta.wrapperTitle === 'string'
+  ) {
     data = seatData[1][countyCode]
     meta.wrapperTitle = seatMeta.wrapperTitle
     meta.componentTitle = location + seatMeta.componentTitle

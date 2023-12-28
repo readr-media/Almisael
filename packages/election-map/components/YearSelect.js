@@ -137,7 +137,13 @@ const ActionButton = styled.button`
   &:nth-of-type(2) {
     margin-left: 12px;
   }
-  ${({ cancel }) => cancel && 'background-color: #e0e0e0;'}
+  ${
+    /**
+     * @param {Object} props
+     * @param {boolean} [props.cancel]
+     */
+    ({ cancel }) => cancel && 'background-color: #e0e0e0;'
+  }
 `
 
 /**

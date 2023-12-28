@@ -67,8 +67,14 @@ const PlaceHolder = styled.div`
     /**
      * @param {Object} props
      * @param {import('../consts/electionsConfig').ElectionType} props.electionType
+     * @param {boolean} props.compareMode
      */
-    ({ electionType }) => (electionType === 'referendum' ? '350px' : '136px')
+    ({ electionType, compareMode }) =>
+      electionType === 'referendum'
+        ? compareMode
+          ? '520px'
+          : '350px'
+        : '136px'
   };
 `
 
@@ -123,7 +129,7 @@ export const Panels = ({ onEvcSelected }) => {
         )}
         {!compareMode && <SeatsPanel />}
         {!number && <StyledYearSelect key={electionType + year.key} />}
-        <PlaceHolder electionType={electionType} />
+        <PlaceHolder electionType={electionType} compareMode={compareMode} />
         {number && (
           <>
             <BottomPanelWrapper>

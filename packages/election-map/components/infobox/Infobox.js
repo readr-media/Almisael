@@ -349,9 +349,13 @@ const NormalLegislatorTitle = styled.div`
 const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
   const isCurrentYearRunningJsx = isCurrentYear ? (
     isRunning ? (
-      <RunningHint>開票中</RunningHint>
+      <HintWrapper>
+        <RunningHint>開票中</RunningHint>
+      </HintWrapper>
     ) : (
-      <FinalHint>開票結束</FinalHint>
+      <HintWrapper>
+        <FinalHint>開票結束</FinalHint>
+      </HintWrapper>
     )
   ) : (
     <></>
@@ -375,7 +379,7 @@ const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
     return (
       <InfoboxScrollWrapper>
         {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
-        <HintWrapper>{isCurrentYearRunningJsx}</HintWrapper>
+        {isCurrentYearRunningJsx}
         {districts.map(({ county, area, range, candidates, profRate }) => {
           const legislatorPrefix = county + area
           const areaName = range.split(' ')[1]
