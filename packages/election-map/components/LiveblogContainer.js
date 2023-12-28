@@ -52,8 +52,8 @@ export const LiveblogContainer = () => {
   }
   const liveblogUrl =
     environment === 'dev'
-      ? 'https://editools-gcs.readr.tw/files/liveblogs/election2022-test.json'
-      : 'https://editools-gcs.readr.tw/files/liveblogs/election2022.json'
+      ? 'https://editools-gcs.readr.tw/files/liveblogs/election2024-test.json'
+      : 'https://editools-gcs.readr.tw/files/liveblogs/election2024.json'
   useEffect(() => {
     const fetchLiveblog = async () => {
       const { data } = await axios.get(liveblogUrl)
