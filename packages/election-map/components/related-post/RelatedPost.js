@@ -3,6 +3,8 @@ import axios from 'axios'
 import styled from 'styled-components'
 import { Card } from './Card'
 import { electionMapColor } from '../../consts/colors'
+import gtag from '../../utils/gtag'
+import { useAppSelector } from '../../hook/useRedux'
 
 const Wrapper = styled.div`
   position: relative;
@@ -52,6 +54,7 @@ const Cards = styled.div`
 export const RelatedPost = () => {
   const [posts, setPosts] = useState([])
   const [nextShowingIndex, setNextShowingIndex] = useState(12)
+  const device = useAppSelector((state) => state.ui.device)
   const observer = useRef()
 
   const displayPosts = posts.slice(0, nextShowingIndex)
@@ -103,6 +106,11 @@ export const RelatedPost = () => {
               value={
                 index === displayPosts.length - 1 ? 'lastArticleRef' : null
               }
+              onClick={() => {
+                gtag.sendGAEvent('Click', {
+                  project: `related post: ${post.title} / ${device}`,
+                })
+              }}
             />
           ))}
         </Cards>

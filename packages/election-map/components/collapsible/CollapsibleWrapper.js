@@ -99,17 +99,22 @@ const upTriangle = (
 )
 
 /**
- *
  * @param {Object} props
- *
- * @returns {React.ReactElement}
+ * @param {React.ReactNode} props.children
+ * @param {string} props.title
+ * @param {string} [props.className]
+ * @param {boolean} [props.preventCollapse]
+ * @param {boolean} [props.centerTitle]
+ * @param {Function} [props.onCollapse]
+ * @returns {JSX.Element}
  */
 export const CollapsibleWrapper = ({
   children,
   title,
   className,
-  preventCollapse,
-  centerTitle,
+  preventCollapse = false,
+  centerTitle = false,
+  onCollapse = () => {},
 }) => {
   const [collapse, setCollapse] = useState(true)
 
@@ -119,6 +124,7 @@ export const CollapsibleWrapper = ({
         className="collapseBtn"
         onClick={() => {
           !preventCollapse && setCollapse((v) => !v)
+          onCollapse()
         }}
       >
         <CollapseButtonTitle>{title}</CollapseButtonTitle>

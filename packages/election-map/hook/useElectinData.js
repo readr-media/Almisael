@@ -3,7 +3,6 @@ import { getElectionData, defaultElectionData } from '../utils/electionsData'
 import { currentYear } from '../consts/electionsConfig'
 import { countyMappingData } from '../consts/electionsConfig'
 import { deepCloneObj } from '../utils/deepClone'
-import ReactGA from 'react-ga'
 import { prepareElectionData } from '../utils/electionsData'
 import { electionActions } from '../store/election-slice'
 import { useAppSelector, useAppDispatch } from './useRedux'
@@ -11,6 +10,7 @@ import {
   fetchDistrictMappingData,
   fetchDistrictWithAreaMappingData,
 } from '../utils/fetchElectionData'
+import gtag from '../utils/gtag'
 
 /**
  * @typedef {import('../consts/electionsConfig').ElectionType} ElectionType
@@ -42,6 +42,7 @@ export const useElectionData = (showLoading) => {
   const districtMapping = useAppSelector(
     (state) => state.election.data.districtMapping
   )
+  const device = useAppSelector((state) => state.ui.device)
 
   const electionData = getElectionData(
     electionsData,
@@ -165,10 +166,8 @@ export const useElectionData = (showLoading) => {
             target.dispatchEvent(event)
           }
 
-          ReactGA.event({
-            category: 'Projects',
-            action: 'Click',
-            label: `票數比較篩選器：縣市長 / ${evcSelectedValue}`,
+          gtag.sendGAEvent('Click', {
+            project: `票數比較篩選：${year.key} / 縣市長 / ${evcSelectedValue} / ${device}`,
           })
 
           break
@@ -191,13 +190,8 @@ export const useElectionData = (showLoading) => {
             }
           }
 
-          const countyName = countyMappingData.find(
-            (countyData) => countyData.countyCode === levelControl.countyCode
-          ).countyName
-          ReactGA.event({
-            category: 'Projects',
-            action: 'Click',
-            label: `票數比較篩選器：縣市議員 / ${subtype.name} / ${countyName} / ${evcSelectedValue}`,
+          gtag.sendGAEvent('Click', {
+            project: `票數比較篩選：${year.key} / 縣市議員區域 / ${evcSelectedValue} / ${device}`,
           })
 
           break
@@ -213,6 +207,9 @@ export const useElectionData = (showLoading) => {
               let event = new MouseEvent('click', { bubbles: true })
               target.dispatchEvent(event)
             }
+            gtag.sendGAEvent('Click', {
+              project: `票數比較篩選：${year.key} / 立法委員區域 / ${evcSelectedValue} / ${device}`,
+            })
           }
           break
         }
@@ -230,7 +227,14 @@ export const useElectionData = (showLoading) => {
           break
       }
     },
-    [electionConfig.electionType, mapData, subtype, levelControl.countyCode]
+    [
+      electionConfig.electionType,
+      year.key,
+      device,
+      subtype?.key,
+      mapData,
+      levelControl.countyCode,
+    ]
   )
 
   // Handle all fetching data logic for the first time.

@@ -4,6 +4,7 @@ import { currentYear } from '../consts/electionsConfig'
 import { electionNamePairs } from '../utils/election'
 import { Infobox } from './infobox/Infobox'
 import { useAppSelector } from '../hook/useRedux'
+import gtag from '../utils/gtag'
 
 const Wrppaer = styled.div`
   width: 320px;
@@ -63,7 +64,14 @@ export const InfoboxPanel = ({
   return (
     <Wrppaer className={className} key={key}>
       {compareMode && !number && <InfoboxYear>{year.key}</InfoboxYear>}
-      <InfoboxWrapper title={title}>
+      <InfoboxWrapper
+        title={title}
+        onCollapse={() => {
+          gtag.sendGAEvent('Click', {
+            project: `infobox 收合`,
+          })
+        }}
+      >
         <Infobox
           data={data}
           subtype={subtype}

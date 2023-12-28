@@ -5,6 +5,7 @@ const SeatsChart = widgets.SeatChart.ReactComponent
 import { useAppSelector } from '../hook/useRedux'
 import { useEffect, useState } from 'react'
 import { countyMappingData } from '../consts/electionsConfig'
+import gtag from '../utils/gtag'
 
 const SeatsChartDesktopWrapper = styled(CollapsibleWrapper)`
   width: 320px;
@@ -48,6 +49,9 @@ export const SeatsPanel = ({ isMobile = false }) => {
 
   const onSwitchChange = (switchOn) => {
     setSwitchOn(switchOn)
+    gtag.sendGAEvent('Click', {
+      project: `立委席次表切換`,
+    })
   }
 
   const initialSwitchInfo = {
@@ -123,7 +127,14 @@ export const SeatsPanel = ({ isMobile = false }) => {
             <StyledSeatsMobileChart data={data} meta={meta} />
           </SeatsChartMobileWrapper>
         ) : (
-          <SeatsChartDesktopWrapper title={meta.wrapperTitle}>
+          <SeatsChartDesktopWrapper
+            title={meta.wrapperTitle}
+            onCollapse={() => {
+              gtag.sendGAEvent('Click', {
+                project: `席次表 收合`,
+              })
+            }}
+          >
             <StyledSeatsDesktopChart data={data} meta={meta} />
           </SeatsChartDesktopWrapper>
         ))}

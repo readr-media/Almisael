@@ -6,6 +6,7 @@ import { useAppSelector } from '../../hook/useRedux'
 import useClickOutside from '../../hook/useClickOutside'
 import styled from 'styled-components'
 import { mapActions } from '../../store/map-slice'
+import gtag from '../../utils/gtag'
 
 const WIDTH = '100px'
 const Wrapper = styled.div`
@@ -104,6 +105,9 @@ export default function ElectionSelector({
   const electionType = useAppSelector(
     (state) => state.election.config.electionType
   )
+  const electionName = useAppSelector(
+    (state) => state.election.config.electionName
+  )
 
   const compareMode = useAppSelector(
     (state) => state.election.compare.info.compareMode
@@ -111,6 +115,7 @@ export default function ElectionSelector({
   const currentSubType = useAppSelector(
     (state) => state.election.control.subtype
   )
+  const device = useAppSelector((state) => state.ui.device)
   const currentSelectedOptionName =
     selectorType === 'electionSubType'
       ? options.find((options) => options.key === currentSubType?.key)?.name
@@ -131,19 +136,25 @@ export default function ElectionSelector({
       if (option.electionType !== electionType) {
         dispatch(electionActions.changeElection(option.electionType))
         // only PC should reset the map and panels
-        if (window.innerWidth > 1024) {
+        if (device === 'desktop') {
           dispatch(mapActions.resetMapFeature())
           dispatch(mapActions.resetUiDistrictNames())
         }
+        gtag.sendGAEvent('Click', {
+          project: `選舉類別一：${option.electionName} / ${device}`,
+        })
       }
     } else if (selectorType === 'electionSubType') {
       if (currentSubType.key !== option.key) {
         dispatch(electionActions.changeSubtype(option))
         // only PC legislator should reset the map and panels
-        if (window.innerWidth > 1024 && electionType === 'legislator') {
+        if (device === 'desktop' && electionType === 'legislator') {
           dispatch(mapActions.resetMapFeature())
           dispatch(mapActions.resetUiDistrictNames())
         }
+        gtag.sendGAEvent('Click', {
+          project: `選舉類別二：${electionName} - ${option.name} / ${device}`,
+        })
       }
     }
 
