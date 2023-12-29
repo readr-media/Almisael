@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import styled from 'styled-components'
 import useSWR from 'swr'
 import Image from 'next/image'
@@ -7,6 +8,7 @@ import {
   jsonEndpoint,
   staticFileDestination,
   watchMoreLinkSrc,
+  breakpoint,
 } from '../config/index.mjs'
 /**
  * @typedef {Object} HeightAndWidth
@@ -21,7 +23,13 @@ import {
  *
  */
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
+const fetcher = (url) => {
+  return fetch(url).then((res) => {
+    const result = res.json()
+    result.then((r) => console.log(r?.updateAt))
+    return result
+  })
+}
 const DARK_BLUE = '#153047'
 const LIGHT_BLUE = '#004EBC'
 const GRAY = '#f5f5f5'
@@ -138,7 +146,7 @@ const ResultItem = styled(Item)`
   };
   border-top: ${({ shouldShowDivider }) =>
     shouldShowDivider ? '1px solid #C2C2C2' : 'none'};
-  @media (min-width: 1200px) {
+  @media (min-width: ${breakpoint}) {
     font-size: 16px;
     &.key {
       font-size: 16px;
@@ -151,7 +159,7 @@ const MockGrayImage = styled.div`
   height: 40px;
   margin: 0 auto;
   background-color: #d9d9d9;
-  @media (min-width: 1200px) {
+  @media (min-width: ${breakpoint}) {
     width: 120px;
     height: 120px;
   }
@@ -162,14 +170,14 @@ const PartyAndNumber = styled.div`
   margin: 12px auto 8px;
   justify-content: space-between;
   align-items: center;
-  @media (min-width: 1200px) {
+  @media (min-width: ${breakpoint}) {
     gap: 24px;
     width: fit-content;
     margin: 12px 8px 8px 0;
   }
 `
 const PartyAndNumberAndPersonWrapper = styled.div`
-  @media (min-width: 1200px) {
+  @media (min-width: ${breakpoint}) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,7 +191,7 @@ const Person = styled.div`
   line-height: 1.5;
   color: ${DARK_BLUE};
   text-align: center;
-  @media (min-width: 1200px) {
+  @media (min-width: ${breakpoint}) {
     font-size: 16px;
   }
 `
@@ -196,7 +204,7 @@ const Title = styled.h2`
   margin: 0 auto 12px;
   text-align: center;
   background-color: ${GRAY};
-  @media (min-width: 1200px) {
+  @media (min-width: ${breakpoint}) {
     font-size: 20px;
   }
 `
@@ -231,7 +239,7 @@ const Party = styled.div`
     ({ imageSize }) => imageSize && imageSize.mobile.width
   };
   height: ${({ imageSize }) => imageSize && imageSize.mobile.height};
-  @media (min-width: 1200px) {
+  @media (min-width: ${breakpoint}) {
     width: ${
       /**
        * @param {Object} props
@@ -258,9 +266,13 @@ const WatchMore = styled.div`
   }
 `
 export default function Home() {
-  const { data, error, isLoading } = useSWR(jsonEndpoint, fetcher, {
-    refreshInterval: 1000 * 60 * 3, // 3 minutes
+  const { data, error, isLoading, mutate } = useSWR(jsonEndpoint, fetcher, {
+    refreshInterval: 1000 * 60,
+    revalidateIfStale: true,
   })
+  useEffect(() => {
+    console.log(data)
+  }, [data])
 
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div>
@@ -283,7 +295,8 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <Title>2024 總統及立委大選開票</Title>
+      <Title className="h2">2024 總統及立委大選開票</Title>
+      <button onClick={() => mutate()}>測1231254</button>
       <SubTitle>{data.title}</SubTitle>
       <InfoWrapper>
         <CandidateInfoItem />
