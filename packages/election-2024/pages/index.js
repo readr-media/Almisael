@@ -266,6 +266,14 @@ export default function Home() {
   if (isLoading) return <div>loading...</div>
   const getVictor = (result) => {
     const victorArray = result?.find((item) => item.key === '當選')
+    if (
+      !victorArray ||
+      !victorArray?.value ||
+      !Array.isArray(victorArray?.value) ||
+      !victorArray?.value?.length
+    ) {
+      return ''
+    }
     const victorResult = victorArray.value.find((item, index) => {
       return item[`${index + 1}`] === '*'
     })
