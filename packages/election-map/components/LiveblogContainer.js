@@ -31,6 +31,11 @@ export const LiveblogContainer = () => {
           project: `liveblog item: tag - ${eventValue} / ${device}`,
         })
         break
+      case 'lightbox按鈕':
+        gtag.sendGAEvent('Click', {
+          project: `liveblog item: ${eventValue}: ${metadata.article.title} / ${device}`,
+        })
+        break
       case '繼續閱讀按鈕':
         gtag.sendGAEvent('Click', {
           project: `liveblog item ${eventValue}: ${metadata.article.title} / ${device}`,
@@ -38,7 +43,7 @@ export const LiveblogContainer = () => {
         break
       case '複製按鈕':
         gtag.sendGAEvent('Click', {
-          project: `liveblog item ${eventTarget}: ${metadata.article.title} / ${device}`,
+          project: `liveblog item ${eventValue}: ${metadata.article.title} / ${device}`,
         })
         break
       case '外連按鈕':

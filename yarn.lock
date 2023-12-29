@@ -1846,10 +1846,10 @@
   resolved "https://registry.yarnpkg.com/@readr-media/react-image/-/react-image-1.5.1.tgz#d04b809416be6a1432a0a3154f2641292d7b6b8d"
   integrity sha512-BExGQWO158vtfox2mkwjT8khZp00KOwAObnZsQVzO4JNO4RlTog/5u7ccw7WuBd1OR07rlh/jKm4ts+qt78saw==
 
-"@readr-media/react-live-blog@1.1.12":
-  version "1.1.12"
-  resolved "https://registry.yarnpkg.com/@readr-media/react-live-blog/-/react-live-blog-1.1.12.tgz#8a5fd9ef8e015924e46fdffee98240d506039e7f"
-  integrity sha512-c4LRS+vJrdW+4zSLJEATXHAxD3hl9I3GXEUetJQznZUEmRfLrfpmppXoQr3IUU4ofzTMCiQiHA7n/kF4wBKvfg==
+"@readr-media/react-live-blog@1.1.13":
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/@readr-media/react-live-blog/-/react-live-blog-1.1.13.tgz#f29f17c97c765806ace63bfb396b1a77c06c0e03"
+  integrity sha512-fROjo4sn6wlad/OcMVHR27R8lmrQBurrkZqe+AmUT9kLGnpfwzDUf+vy+JVwIbui8rKAfyCjXYC6TpqZmIerbA==
   dependencies:
     axios "^0.27.2"
     draft-js "^0.11.7"
