@@ -127,9 +127,10 @@ export const TitleWrapper = styled.div`
     -webkit-line-clamp: 3;
     color: rgba(0, 9, 40, 0.87);
     font-size: 16px;
+    overflow: hidden;
     @media (min-width: 1200px) {
       font-size: 16px;
-      -webkit-line-clamp: 4;
+      -webkit-line-clamp: 3;
     }
   }
 `
