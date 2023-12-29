@@ -2,6 +2,24 @@ import dayjs from 'dayjs'
 import React from 'react'
 import styled from 'styled-components'
 
+/**
+ * @typedef {Object} ResizedImage
+ * @property {string} w800
+ * @property {string} w1600
+ * @property {string} w2400
+ * @property {string} original
+ *
+ * @typedef {Object} HeroImage
+ * @property {ResizedImage} resized
+ *
+ * @typedef {Object} Post
+ * @property {string} id
+ * @property {string} slug
+ * @property {HeroImage} heroImage
+ * @property {string} title
+ * @property {string} publishedDate
+ */
+
 export const CardWrapper = styled.div`
   width: 288px;
   height: 298px;
@@ -109,38 +127,49 @@ export const TitleWrapper = styled.div`
     -webkit-line-clamp: 3;
     color: rgba(0, 9, 40, 0.87);
     font-size: 16px;
+    overflow: hidden;
     @media (min-width: 1200px) {
       font-size: 16px;
-      -webkit-line-clamp: 4;
+      -webkit-line-clamp: 3;
     }
   }
 `
-export const Card = React.forwardRef(function Card({ item, onClick }, ref) {
-  return (
-    <Link
-      href={`https://www.mirrormedia.mg/story/${item?.slug}`}
-      target="_blank"
-      rel="noreferrer"
-      ref={ref}
-      key={item._id}
-      onClick={() => onClick()}
-    >
-      <CardWrapper key={item._id}>
-        <ImgWrapper>
-          <img
-            src={`${item?.heroImage?.image?.resizedTargets?.mobile?.url}`}
-            alt={`${item?.title}`}
-          />
-        </ImgWrapper>
-        <TextWrapper>
-          <TitleWrapper>
-            <p className="title">{item?.title}</p>
-          </TitleWrapper>
-          <p className="date">
-            {dayjs(item?.publishedDate).format('YYYY/MM/DD HH:mm')}
-          </p>
-        </TextWrapper>
-      </CardWrapper>
-    </Link>
-  )
-})
+
+export const Card = React.forwardRef(
+  /**
+   *
+   * @param {Object} props
+   * @param {Post} props.item
+   * @param {Function} props.onClick
+   * @returns {JSX.Element}
+   */
+  function Card({ item, onClick }, ref) {
+    return (
+      <Link
+        href={`https://www.mirrormedia.mg/story/${item?.slug}`}
+        target="_blank"
+        rel="noreferrer"
+        ref={ref}
+        key={item?.id}
+        onClick={() => onClick()}
+      >
+        <CardWrapper key={item?.id}>
+          <ImgWrapper>
+            <img
+              src={`${item?.heroImage?.resized?.w800}`}
+              alt={`${item?.title}`}
+            />
+          </ImgWrapper>
+          <TextWrapper>
+            <TitleWrapper>
+              <p className="title">{item?.title}</p>
+            </TitleWrapper>
+            <p className="date">
+              {dayjs(item?.publishedDate).format('YYYY/MM/DD HH:mm')}
+            </p>
+          </TextWrapper>
+        </CardWrapper>
+      </Link>
+    )
+  }
+)
