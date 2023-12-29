@@ -266,7 +266,7 @@ const WatchMore = styled.div`
   }
 `
 export default function Home() {
-  const { data, error, isLoading, mutate } = useSWR(jsonEndpoint, fetcher, {
+  const { data, error, isLoading } = useSWR(jsonEndpoint, fetcher, {
     refreshInterval: 1000 * 60,
     revalidateIfStale: true,
   })
@@ -295,8 +295,7 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <Title className="h2">2024 總統及立委大選開票</Title>
-      <button onClick={() => mutate()}>測1231254</button>
+      <Title>2024 總統及立委大選開票</Title>
       <SubTitle>{data.title}</SubTitle>
       <InfoWrapper>
         <CandidateInfoItem />
