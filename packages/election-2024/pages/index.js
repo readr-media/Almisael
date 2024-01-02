@@ -9,6 +9,7 @@ import {
   staticFileDestination,
   watchMoreLinkSrc,
   breakpoint,
+  color,
 } from '../config/index.mjs'
 /**
  * @typedef {Object} HeightAndWidth
@@ -30,9 +31,6 @@ const fetcher = (url) => {
     return result
   })
 }
-const DARK_BLUE = '#153047'
-const LIGHT_BLUE = '#004EBC'
-const GRAY = '#f5f5f5'
 const CANDIDATES_CONFIG = [
   {
     number: '1',
@@ -95,7 +93,7 @@ const CANDIDATES_CONFIG = [
 
 const Wrapper = styled.section`
   padding: 12px 10px;
-  background-color: ${GRAY};
+  background-color: ${color.background.normal};
 `
 const InfoWrapper = styled.div`
   display: grid;
@@ -110,7 +108,8 @@ const Item = styled.div`
      * @param {Object} props
      * @param {boolean} [props.isVictor]
      */
-    ({ isVictor }) => (isVictor ? '#EAEAEA' : `${GRAY}`)
+    ({ isVictor }) =>
+      isVictor ? color.background.victor : color.background.normal
   };
 `
 const CandidateInfoItem = styled(Item)`
@@ -145,7 +144,7 @@ const ResultItem = styled(Item)`
     ({ color }) => color && color
   };
   border-top: ${({ shouldShowDivider }) =>
-    shouldShowDivider ? '1px solid #C2C2C2' : 'none'};
+    shouldShowDivider ? `1px solid ${color.infoBox.border}` : 'none'};
   @media (min-width: ${breakpoint}) {
     font-size: 16px;
     &.key {
@@ -189,7 +188,7 @@ const Person = styled.div`
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
-  color: ${DARK_BLUE};
+  color: ${color.candidateName};
   text-align: center;
   @media (min-width: ${breakpoint}) {
     font-size: 16px;
@@ -198,12 +197,12 @@ const Person = styled.div`
 const Title = styled.h2`
   font-size: 16px;
   line-height: 1.5;
-  color: ${DARK_BLUE};
+  color: ${color.title};
   font-weight: 700;
   width: 100%;
   margin: 0 auto 12px;
   text-align: center;
-  background-color: ${GRAY};
+
   @media (min-width: ${breakpoint}) {
     font-size: 20px;
   }
@@ -214,19 +213,19 @@ const SubTitle = styled.h3`
   line-height: 1.5;
   font-weight: 400;
   padding: 6.5px 0;
-  color: #ffcc01;
-  background-color: ${DARK_BLUE};
+  color: ${color.subTitle.text};
+  background-color: ${color.subTitle.background};
   text-align: center;
 `
 const Caption = styled.div`
-  color: ${DARK_BLUE};
+  color: ${color.caption};
   font-size: 11px;
   line-height: 1.5;
 `
 const UpdateTime = styled.div`
   font-size: 11px;
   line-height: 1.5;
-  color: #9b9b9b;
+  color: ${color.update};
   margin-top: 4px;
 `
 const Party = styled.div`
@@ -257,7 +256,7 @@ const WatchMore = styled.div`
     display: block;
     width: fit-content;
     margin: 0 auto;
-    color: ${DARK_BLUE};
+    color: ${color.watchMore};
     text-align: center;
     text-decoration: underline;
   }
@@ -338,12 +337,12 @@ export default function Home() {
         ))}
         {data.result.map((item, index) => {
           const isOdd = Boolean(index % 2)
-          const color = isOdd ? LIGHT_BLUE : DARK_BLUE
+          const textColor = isOdd ? color.infoBox.light : color.infoBox.dark
           const shouldShowDivider = index !== 0
           return (
             <>
               <ResultItem
-                color={color}
+                color={textColor}
                 shouldShowDivider={shouldShowDivider}
                 className="key"
                 key={item.key}
@@ -357,7 +356,7 @@ export default function Home() {
                   return (
                     <ResultItem
                       key={index}
-                      color={color}
+                      color={textColor}
                       isVictor={`${index + 1}` === victorNumber}
                       shouldShowDivider={shouldShowDivider}
                       className="victor"
@@ -378,7 +377,7 @@ export default function Home() {
                   <ResultItem
                     key={index}
                     isVictor={`${index + 1}` === victorNumber}
-                    color={color}
+                    color={textColor}
                     shouldShowDivider={shouldShowDivider}
                   >
                     {numberWithCommas(value)}
