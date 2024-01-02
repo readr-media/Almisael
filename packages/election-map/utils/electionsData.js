@@ -545,7 +545,7 @@ export const prepareElectionData = async (
                 newMapData[level] = data
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
-                newLastUpdate = data.updatedAt
+                newLastUpdate = data.updatedAt || newLastUpdate
               } catch (error) {
                 console.error(error)
               }
@@ -573,7 +573,7 @@ export const prepareElectionData = async (
                 newMapData[level][countyCode] = data
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
-                newLastUpdate = data.updatedAt
+                newLastUpdate = data.updatedAt || newLastUpdate
               } catch (error) {
                 console.error(error)
               }
@@ -603,7 +603,7 @@ export const prepareElectionData = async (
                 newMapData[level][townCode] = data
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
-                newLastUpdate = data.updatedAt
+                newLastUpdate = data.updatedAt || newLastUpdate
               } catch (error) {
                 console.error(error)
               }
@@ -668,7 +668,7 @@ export const prepareElectionData = async (
                 newMapData[level] = data
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
-                newLastUpdate = data.updatedAt
+                newLastUpdate = data.updatedAt || newLastUpdate
               } catch (error) {
                 console.error(error)
               }
@@ -691,7 +691,7 @@ export const prepareElectionData = async (
                 newMapData[level][countyCode] = data
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
-                newLastUpdate = data.updatedAt
+                newLastUpdate = data.updatedAt || newLastUpdate
               } catch (error) {
                 console.error(error)
               }
@@ -730,7 +730,7 @@ export const prepareElectionData = async (
                 newMapData[level][townCode] = data
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
-                newLastUpdate = data.updatedAt
+                newLastUpdate = data.updatedAt || newLastUpdate
               } catch (error) {
                 console.error(error)
               }
@@ -872,7 +872,7 @@ export const prepareElectionData = async (
                   newMapData[level] = data
                   newMapData.isRunning = data.is_running
                   newMapData.isStarted = data.is_started
-                  newLastUpdate = data.updatedAt
+                  newLastUpdate = data.updatedAt || newLastUpdate
                 } catch (error) {
                   console.error(error)
                 }
@@ -962,7 +962,7 @@ export const prepareElectionData = async (
                   newMapData[level][countyCode] = data
                   newMapData.isRunning = data.is_running
                   newMapData.isStarted = data.is_started
-                  newLastUpdate = data.updatedAt
+                  newLastUpdate = data.updatedAt || newLastUpdate
                 } catch (error) {
                   console.error(error)
                 }
@@ -1012,7 +1012,7 @@ export const prepareElectionData = async (
                   newMapData[level][levelCode] = data
                   newMapData.isRunning = data.is_running
                   newMapData.isStarted = data.is_started
-                  newLastUpdate = data.updatedAt
+                  newLastUpdate = data.updatedAt || newLastUpdate
                 } catch (error) {
                   console.error(error)
                 }
@@ -1121,7 +1121,7 @@ export const prepareElectionData = async (
                 newMapData[level][countyCode] = data
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
-                newLastUpdate = data.updatedAt
+                newLastUpdate = data.updatedAt || newLastUpdate
               } catch (error) {
                 console.error(error)
               }
@@ -1148,7 +1148,7 @@ export const prepareElectionData = async (
                 newMapData[level][townCode] = data
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
-                newLastUpdate = data.updatedAt
+                newLastUpdate = data.updatedAt || newLastUpdate
               } catch (error) {
                 console.error(error)
               }
@@ -1218,7 +1218,7 @@ export const prepareElectionData = async (
                 newMapData[level] = data
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
-                newLastUpdate = data.updatedAt
+                newLastUpdate = data.updatedAt || newLastUpdate
               } catch (error) {
                 console.error(error)
               }
@@ -1248,7 +1248,7 @@ export const prepareElectionData = async (
                 newMapData[level][countyCode] = data
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
-                newLastUpdate = data.updatedAt
+                newLastUpdate = data.updatedAt || newLastUpdate
               } catch (error) {
                 console.error(error)
               }
@@ -1280,7 +1280,7 @@ export const prepareElectionData = async (
                 newMapData[level][townCode] = data
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
-                newLastUpdate = data.updatedAt
+                newLastUpdate = data.updatedAt || newLastUpdate
               } catch (error) {
                 console.error(error)
               }
