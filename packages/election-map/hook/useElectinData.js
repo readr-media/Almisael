@@ -199,7 +199,6 @@ export const useElectionData = (showLoading) => {
         case 'legislator': {
           // only normal legislator will handle evc callback
           if (subtype.key === 'normal') {
-            console.log('evcSelectedValue', evcSelectedValue)
             const area = evcSelectedValue.slice(1, 3)
             const newAreaCode = levelControl.countyCode + area
             const target = document.querySelector(`#first-id-${newAreaCode}`)
