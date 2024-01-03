@@ -1,5 +1,6 @@
 export const defaultElectionType = 'president'
 export const currentYear = 2024
+export const refetchInervalInSecond = 3 * 60
 
 /**
  * Representing the type of the election.
