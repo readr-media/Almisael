@@ -266,7 +266,7 @@ const sortCandidatesByTksRate = (candidates) => {
  * @param {number} props.year
  */
 export default function InfoBox({ infoboxData, year }) {
-  const { level, electionData, isStarted } = infoboxData
+  const { level, electionData, isStarted, isRunning } = infoboxData
   const [shouldInfoBoxExpand, setShouldInfoBoxExpand] = useState(false)
   const electionsType = useAppSelector(
     (state) => state.election.config.electionType
@@ -326,7 +326,8 @@ export default function InfoBox({ infoboxData, year }) {
           electionData,
           level,
           year,
-          isStarted
+          isStarted,
+          isRunning
         )
         /** @type {InfoboxNote | undefined} */
         const note = infoboxData?.note
@@ -371,7 +372,8 @@ export default function InfoBox({ infoboxData, year }) {
           electionData,
           level,
           year,
-          isStarted
+          isStarted,
+          isRunning
         )
         if (typeof infoboxData === 'string') {
           return <div>{infoboxData}</div>
@@ -516,7 +518,8 @@ export default function InfoBox({ infoboxData, year }) {
           electionData,
           level,
           year,
-          isStarted
+          isStarted,
+          isRunning
         )
 
         if (typeof infoboxData === 'string') {
@@ -565,6 +568,7 @@ export default function InfoBox({ infoboxData, year }) {
           level,
           year,
           isStarted,
+          isRunning,
           currentElectionSubType
         )
 
@@ -764,7 +768,8 @@ export default function InfoBox({ infoboxData, year }) {
           electionData,
           level,
           year,
-          isStarted
+          isStarted,
+          isRunning
         )
 
         if (typeof infoboxData === 'string') {
