@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { getElectionData, defaultElectionData } from '../utils/electionsData'
-import { currentYear } from '../consts/electionsConfig'
+import { currentYear, refetchInervalInSecond } from '../consts/electionsConfig'
 import { countyMappingData } from '../consts/electionsConfig'
 import { deepCloneObj } from '../utils/deepClone'
 import { prepareElectionData } from '../utils/electionsData'
@@ -199,7 +199,6 @@ export const useElectionData = (showLoading) => {
         case 'legislator': {
           // only normal legislator will handle evc callback
           if (subtype.key === 'normal') {
-            console.log('evcSelectedValue', evcSelectedValue)
             const area = evcSelectedValue.slice(1, 3)
             const newAreaCode = levelControl.countyCode + area
             const target = document.querySelector(`#first-id-${newAreaCode}`)
@@ -372,9 +371,7 @@ export const useElectionData = (showLoading) => {
   useEffect(() => {
     const interval = window.setInterval(() => {
       setShouldRefetch(true)
-      // }, 100 * 60 * 1000)
-    }, 1 * 60 * 1000)
-    // }, 10 * 1000)
+    }, refetchInervalInSecond * 1000)
 
     return () => {
       window.clearInterval(interval)

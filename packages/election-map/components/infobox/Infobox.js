@@ -1110,7 +1110,8 @@ export const Infobox = ({ data, isCurrentYear, year, subtype }) => {
         electionData,
         level,
         year,
-        isStarted
+        isStarted,
+        isRunning
       )
       infobox = (
         <PresidentInfobox
@@ -1127,7 +1128,8 @@ export const Infobox = ({ data, isCurrentYear, year, subtype }) => {
         electionData,
         level,
         year,
-        isStarted
+        isStarted,
+        isRunning
       )
       infobox = (
         <MayorInfobox
@@ -1145,6 +1147,7 @@ export const Infobox = ({ data, isCurrentYear, year, subtype }) => {
         level,
         year,
         isStarted,
+        isRunning,
         subtype
       )
       infobox = (
@@ -1163,7 +1166,8 @@ export const Infobox = ({ data, isCurrentYear, year, subtype }) => {
         electionData,
         level,
         year,
-        isStarted
+        isStarted,
+        isRunning
       )
       infobox = (
         <CouncilMemberInfobox
@@ -1180,7 +1184,8 @@ export const Infobox = ({ data, isCurrentYear, year, subtype }) => {
         electionData,
         level,
         year,
-        isStarted
+        isStarted,
+        isRunning
       )
       infobox = (
         <ReferendumInfobox

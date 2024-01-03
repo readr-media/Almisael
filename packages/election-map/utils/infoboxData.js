@@ -20,7 +20,7 @@ import { currentYear } from '../consts/electionsConfig'
  * @param {number} year
  * @param {isStarted} isStarted
  */
-const presidentInfoboxData = (data, level, year, isStarted) => {
+const presidentInfoboxData = (data, level, year, isStarted, isRunning) => {
   if (!data) {
     return '無資料'
   }
@@ -30,7 +30,7 @@ const presidentInfoboxData = (data, level, year, isStarted) => {
   }
 
   if (year === currentYear && !data.profRate && level === 3) {
-    return '目前即時開票無村里資料'
+    return isRunning ? '目前即時開票無村里資料' : '無資料'
   }
 
   if (data.profRate === null) {
@@ -48,7 +48,14 @@ const presidentInfoboxData = (data, level, year, isStarted) => {
  * @param {isStarted} isStarted
  * @param {InfoboxType} infoboxType
  */
-const mayorInfoboxData = (data, level, year, isStarted, infoboxType) => {
+const mayorInfoboxData = (
+  data,
+  level,
+  year,
+  isStarted,
+  isRunning,
+  infoboxType
+) => {
   if (level === 0) {
     if (infoboxType === 'mobile') {
       return ''
@@ -72,7 +79,7 @@ const mayorInfoboxData = (data, level, year, isStarted, infoboxType) => {
   }
 
   if (year === currentYear && !data.profRate && level === 3) {
-    return '目前即時開票無村里資料'
+    return isRunning ? '目前即時開票無村里資料' : '無資料'
   }
 
   if (data.profRate === null) {
@@ -96,6 +103,7 @@ const councilMemberInfoboxData = (
   level,
   year,
   isStarted,
+  isRunning,
   infoboxType
 ) => {
   if (level === 0) {
@@ -116,8 +124,8 @@ const councilMemberInfoboxData = (
     return '此區無資料'
   }
 
-  if (year === 2022 && level === 3 && data[0].profRate === null) {
-    return '目前即時開票無村里資料'
+  if (year === currentYear && level === 3 && data[0].profRate === null) {
+    return isRunning ? '目前即時開票無村里資料' : '無資料'
   }
 
   if (data.profRate === null) {
@@ -143,6 +151,7 @@ const legislatorInfoboxData = (
   level,
   year,
   isStarted,
+  isRunning,
   subtype,
   infoboxType
 ) => {
@@ -163,7 +172,7 @@ const legislatorInfoboxData = (
   }
 
   if (year === currentYear && level === 3 && data[0].profRate === null) {
-    return '目前即時開票無村里資料'
+    return isRunning ? '目前即時開票無村里資料' : '無資料'
   }
 
   if (data.profRate === null) {
@@ -182,7 +191,7 @@ const legislatorInfoboxData = (
  * @param {Year} year
  * @param {isStarted} isStarted
  */
-const referendumInfoboxData = (data, level, year, isStarted) => {
+const referendumInfoboxData = (data, level, year, isStarted, isRunning) => {
   if (!isStarted) {
     return '目前無票數資料'
   }
@@ -192,7 +201,7 @@ const referendumInfoboxData = (data, level, year, isStarted) => {
   }
 
   if (year === currentYear && !data.profRate && level === 3) {
-    return '目前即時開票無村里資料'
+    return isRunning ? '目前即時開票無村里資料' : '無資料'
   }
 
   if (data.profRate === null) {
@@ -210,30 +219,38 @@ const referendumInfoboxData = (data, level, year, isStarted) => {
 const getInfoBoxData = (electionsType, infoboxType = 'desktop') => {
   switch (electionsType) {
     case 'president':
-      return (data, level, year, isStarted) =>
-        presidentInfoboxData(data, level, year, isStarted)
+      return (data, level, year, isStarted, isRunning) =>
+        presidentInfoboxData(data, level, year, isStarted, isRunning)
 
     case 'mayor':
-      return (data, level, year, isStarted) =>
-        mayorInfoboxData(data, level, year, isStarted, infoboxType)
+      return (data, level, year, isStarted, isRunning) =>
+        mayorInfoboxData(data, level, year, isStarted, isRunning, infoboxType)
 
     case 'legislator':
-      return (data, level, year, isStarted, subtype) =>
+      return (data, level, year, isStarted, isRunning, subtype) =>
         legislatorInfoboxData(
           data,
           level,
           year,
           isStarted,
+          isRunning,
           subtype,
           infoboxType
         )
 
     case 'councilMember':
-      return (data, level, year, isStarted) =>
-        councilMemberInfoboxData(data, level, year, isStarted, infoboxType)
+      return (data, level, year, isStarted, isRunning) =>
+        councilMemberInfoboxData(
+          data,
+          level,
+          year,
+          isStarted,
+          isRunning,
+          infoboxType
+        )
     case 'referendum':
-      return (data, level, year, isStarted) =>
-        referendumInfoboxData(data, level, year, isStarted)
+      return (data, level, year, isStarted, isRunning) =>
+        referendumInfoboxData(data, level, year, isStarted, isRunning)
   }
 }
 
