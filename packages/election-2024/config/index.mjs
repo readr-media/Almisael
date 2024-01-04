@@ -6,7 +6,7 @@ let jsonEndpoint = ''
 let staticFileDestination = ''
 let watchMoreLinkSrc = ''
 let breakpoint = '1200px'
-
+let imageName = ''
 const DARK_BLUE = '#153047'
 const BLACK = '#000000'
 const COLOR_SETTING_MM_TV = {
@@ -46,6 +46,7 @@ switch (releaseTarget) {
     watchMoreLinkSrc =
       'https://www.mirrormedia.mg/projects/election2024/index.html?utm_source=mmweb&utm_medium=dev_election2024'
     breakpoint = '1200px'
+    imageName = 'weekly_1200x630'
     color = COLOR_SETTING_MM_TV
 
     break
@@ -57,6 +58,7 @@ switch (releaseTarget) {
     watchMoreLinkSrc =
       'https://www.mirrormedia.mg/projects/election2024/index.html?utm_source=mmweb&utm_medium=election2024'
     breakpoint = '1200px'
+    imageName = 'weekly_1200x630'
     color = COLOR_SETTING_MM_TV
     break
 
@@ -68,6 +70,7 @@ switch (releaseTarget) {
       'https://dev.mnews.tw/projects/dev-election2024/index.html?utm_source=homepage&utm_medium=election2024'
     breakpoint = '1127px'
     color = COLOR_SETTING_MM_TV
+    imageName = 'news_1200x630'
     break
 
   case 'mirrorTV':
@@ -78,7 +81,7 @@ switch (releaseTarget) {
       'https://www.mnews.tw/projects/election2024/index.html?utm_source=homepage&utm_medium=election2024'
     breakpoint = '1127px'
     color = COLOR_SETTING_MM_TV
-
+    imageName = 'news_1200x630'
     break
   case 'readr':
     assetPrefixPath = `https://www.readr.tw/project/3/${projectName}`
@@ -88,6 +91,7 @@ switch (releaseTarget) {
       'https://www.readr.tw/project/3/election2024/index.html?utm_source=READr&utm_medium=election2024'
     breakpoint = '1200px'
     color = COLOR_SETTING_READR
+    imageName = 'readr_1200x630'
     break
   default:
     assetPrefixPath = '.'
@@ -95,8 +99,8 @@ switch (releaseTarget) {
     staticFileDestination = `http://localhost:3000`
     watchMoreLinkSrc = '.'
     breakpoint = '1200px'
-    color = COLOR_SETTING_READR
-
+    color = COLOR_SETTING_MM_TV
+    imageName = 'weekly_1200x630'
     break
 }
 
@@ -108,4 +112,5 @@ export {
   watchMoreLinkSrc,
   breakpoint,
   color,
+  imageName,
 }

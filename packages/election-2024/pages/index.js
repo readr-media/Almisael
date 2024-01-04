@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import useSWR from 'swr'
 import Image from 'next/image'
@@ -10,6 +10,7 @@ import {
   watchMoreLinkSrc,
   breakpoint,
   color,
+  imageName,
 } from '../config/index.mjs'
 /**
  * @typedef {Object} HeightAndWidth
@@ -94,6 +95,29 @@ const CANDIDATES_CONFIG = [
 const Wrapper = styled.section`
   padding: 12px 10px;
   background-color: ${color.background.normal};
+
+  picture {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 523px;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+    @media (min-width: ${breakpoint}) {
+      height: 571.5px;
+      img {
+        height: 100%;
+      }
+    }
+  }
 `
 const InfoWrapper = styled.div`
   display: grid;
@@ -265,6 +289,7 @@ const WatchMore = styled.div`
   }
 `
 export default function Home() {
+  const [shouldShowResult, setShouldResult] = useState(false)
   const { data, error, isLoading } = useSWR(jsonEndpoint, fetcher, {
     refreshInterval: 1000 * 60,
     revalidateIfStale: true,
@@ -272,7 +297,13 @@ export default function Home() {
   useEffect(() => {
     console.log(data)
   }, [data])
-
+  useEffect(() => {
+    const currentTimeStamp = new Date().getTime()
+    const targetTimestamp = new Date('2024-01-13T08:00:00Z').getTime()
+    if (currentTimeStamp >= targetTimestamp) {
+      setShouldResult(true)
+    }
+  }, [])
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div>
   const getVictor = (result) => {
@@ -294,114 +325,133 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <Title>2024 總統及立委大選開票</Title>
-      <SubTitle>{data.title}</SubTitle>
-      <InfoWrapper>
-        <CandidateInfoItem />
-        {CANDIDATES_CONFIG.map((candidate) => (
-          <CandidateInfoItem
-            isVictor={candidate.number === victorNumber}
-            key={candidate.number}
-          >
-            <MockGrayImage>
-              <Image
-                src={`${candidate.candidateImage}`}
-                fill
-                alt={candidate.president}
-                style={{ objectFit: 'cover' }}
-              ></Image>
-            </MockGrayImage>
-            <PartyAndNumberAndPersonWrapper>
-              <PartyAndNumber>
-                <Party imageSize={candidate.partyImage.size}>
-                  <Image
-                    src={`${staticFileDestination}/${candidate.partyImage.name}.svg`}
-                    fill
-                    alt={candidate.partyImage.name}
-                  ></Image>
-                </Party>
-                <Image
-                  src={`${staticFileDestination}/${candidate.number}.svg`}
-                  width={20}
-                  height={20}
-                  alt={candidate.number}
-                ></Image>
-              </PartyAndNumber>
-
-              <PersonWrapper>
-                <Person>{candidate.president}</Person>
-                <Person>{candidate.vicePresident}</Person>
-              </PersonWrapper>
-            </PartyAndNumberAndPersonWrapper>
-          </CandidateInfoItem>
-        ))}
-        {data.result.map((item, index) => {
-          const isOdd = Boolean(index % 2)
-          const textColor = isOdd ? color.infoBox.light : color.infoBox.dark
-          const shouldShowDivider = index !== 0
-          return (
-            <>
-              <ResultItem
-                color={textColor}
-                shouldShowDivider={shouldShowDivider}
-                className="key"
-                key={item.key}
+      {shouldShowResult ? (
+        <>
+          <Title>2024 總統及立委大選開票</Title>
+          <SubTitle>{data.title}</SubTitle>
+          <InfoWrapper>
+            <CandidateInfoItem />
+            {CANDIDATES_CONFIG.map((candidate) => (
+              <CandidateInfoItem
+                isVictor={candidate.number === victorNumber}
+                key={candidate.number}
               >
-                {item.key}
-              </ResultItem>
+                <MockGrayImage>
+                  <Image
+                    src={`${candidate.candidateImage}`}
+                    fill
+                    alt={candidate.president}
+                    style={{ objectFit: 'cover' }}
+                  ></Image>
+                </MockGrayImage>
+                <PartyAndNumberAndPersonWrapper>
+                  <PartyAndNumber>
+                    <Party imageSize={candidate.partyImage.size}>
+                      <Image
+                        src={`${staticFileDestination}/${candidate.partyImage.name}.svg`}
+                        fill
+                        alt={candidate.partyImage.name}
+                      ></Image>
+                    </Party>
+                    <Image
+                      src={`${staticFileDestination}/${candidate.number}.svg`}
+                      width={20}
+                      height={20}
+                      alt={candidate.number}
+                    ></Image>
+                  </PartyAndNumber>
 
-              {item.value.map((i, index) => {
-                const value = Object.values(i).toString()
-                if (item.key === '當選') {
-                  return (
-                    <ResultItem
-                      key={index}
-                      color={textColor}
-                      isVictor={`${index + 1}` === victorNumber}
-                      shouldShowDivider={shouldShowDivider}
-                      className="victor"
-                    >
-                      {value === '*' ? (
-                        <Image
-                          src={`${staticFileDestination}/victor.svg`}
-                          width={17}
-                          height={17}
-                          alt="當選"
-                        ></Image>
-                      ) : null}
-                    </ResultItem>
-                  )
-                }
-
-                return (
+                  <PersonWrapper>
+                    <Person>{candidate.president}</Person>
+                    <Person>{candidate.vicePresident}</Person>
+                  </PersonWrapper>
+                </PartyAndNumberAndPersonWrapper>
+              </CandidateInfoItem>
+            ))}
+            {data.result.map((item, index) => {
+              const isOdd = Boolean(index % 2)
+              const textColor = isOdd ? color.infoBox.light : color.infoBox.dark
+              const shouldShowDivider = index !== 0
+              return (
+                <>
                   <ResultItem
-                    key={index}
-                    isVictor={`${index + 1}` === victorNumber}
                     color={textColor}
                     shouldShowDivider={shouldShowDivider}
+                    className="key"
+                    key={item.key}
                   >
-                    {numberWithCommas(value)}
-                    {item.key === '得票率' ? '%' : null}
+                    {item.key}
                   </ResultItem>
-                )
-              })}
-            </>
-          )
-        })}
-      </InfoWrapper>
-      <Caption>
-        票數說明：1.呈現票數係根據各台已報導票數輸入，與其即時票數略有落差。2.正確結果以中選會為主。
-      </Caption>
-      <UpdateTime>最後更新時間：{data?.updateAt}</UpdateTime>
-      <WatchMore>
-        <Link
-          href={watchMoreLinkSrc}
-          target="_blank"
-          rel="noreferrer noopenner"
-        >
-          查看更多
-        </Link>
-      </WatchMore>
+
+                  {item.value.map((i, index) => {
+                    const value = Object.values(i).toString()
+                    if (item.key === '當選') {
+                      return (
+                        <ResultItem
+                          key={index}
+                          color={textColor}
+                          isVictor={`${index + 1}` === victorNumber}
+                          shouldShowDivider={shouldShowDivider}
+                          className="victor"
+                        >
+                          {value === '*' ? (
+                            <Image
+                              src={`${staticFileDestination}/victor.svg`}
+                              width={17}
+                              height={17}
+                              alt="當選"
+                            ></Image>
+                          ) : null}
+                        </ResultItem>
+                      )
+                    }
+
+                    return (
+                      <ResultItem
+                        key={index}
+                        isVictor={`${index + 1}` === victorNumber}
+                        color={textColor}
+                        shouldShowDivider={shouldShowDivider}
+                      >
+                        {numberWithCommas(value)}
+                        {item.key === '得票率' ? '%' : null}
+                      </ResultItem>
+                    )
+                  })}
+                </>
+              )
+            })}
+          </InfoWrapper>
+          <Caption>
+            票數說明：1.呈現票數係根據各台已報導票數輸入，與其即時票數略有落差。2.正確結果以中選會為主。
+          </Caption>
+          <UpdateTime>最後更新時間：{data?.updateAt}</UpdateTime>
+          <WatchMore>
+            <Link
+              href={watchMoreLinkSrc}
+              target="_blank"
+              rel="noreferrer noopenner"
+            >
+              查看更多
+            </Link>
+          </WatchMore>
+        </>
+      ) : (
+        <picture>
+          <source
+            srcSet={`/banner/${imageName}_m.jpg`}
+            media="(max-width: 1199px)"
+          />
+          <img src={`/banner/${imageName}.jpg`} alt="尚未開票" />
+        </picture>
+      )}
+      <button
+        onClick={() => {
+          setShouldResult((pre) => !pre)
+        }}
+      >
+        測試切換
+      </button>
     </Wrapper>
   )
 }
