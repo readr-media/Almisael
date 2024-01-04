@@ -1,6 +1,6 @@
 // 'mirrorMedia' | 'mirrorTV' | 'readr'
 const releaseTarget = process.env.NEXT_PUBLIC_RELEASE_TARGET
-const projectName = 'dev-election2024-homepage-0102'
+const projectName = 'dev-election2024-homepage-0104-4'
 let assetPrefixPath = ''
 let jsonEndpoint = ''
 let staticFileDestination = ''
@@ -96,7 +96,7 @@ switch (releaseTarget) {
   default:
     assetPrefixPath = '.'
     jsonEndpoint = 'https://whoareyou-gcs.readr.tw/json/2024homepage.json'
-    staticFileDestination = `http://localhost:3000`
+    staticFileDestination = ``
     watchMoreLinkSrc = '.'
     breakpoint = '1200px'
     color = COLOR_SETTING_MM_TV

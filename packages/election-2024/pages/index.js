@@ -440,10 +440,13 @@ export default function Home() {
       ) : (
         <picture>
           <source
-            srcSet={`/banner/${imageName}_m.jpg`}
-            media="(max-width: 1199px)"
+            srcSet={`${staticFileDestination}/banner/${imageName}.jpg`}
+            media={`(min-width: ${breakpoint})`}
           />
-          <img src={`/banner/${imageName}.jpg`} alt="尚未開票" />
+          <img
+            src={`${staticFileDestination}/banner/${imageName}_m.jpg`}
+            alt="尚未開票"
+          />
         </picture>
       )}
       <button
