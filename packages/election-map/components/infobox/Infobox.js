@@ -169,7 +169,7 @@ const PresidentInfobox = ({ level, data, isRunning, isCurrentYear }) => {
     <></>
   )
 
-  const { profRate, candidates } = data
+  const { profRate, candidates = [] } = data
   return (
     <InfoboxScrollWrapper>
       {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
@@ -246,7 +246,7 @@ const MayorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
     )
   }
 
-  const { profRate, candidates } = data
+  const { profRate, candidates = [] } = data
   return (
     <InfoboxScrollWrapper>
       {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
@@ -383,30 +383,34 @@ const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
         {districts.map(({ county, area, range, candidates, profRate }) => {
           const legislatorPrefix = county + area
           const areaName = range.split(' ')[1]
-          const candidateComps = [...candidates]
-            .sort((cand1, cand2) => {
-              if (cand1.tksRate === cand2.tksRate) {
-                return 0
-              }
-              return cand1.tksRate < cand2.tksRate ? 1 : -1
-            })
-            .map((candidate) => {
-              const elected = candidate.candVictor === '*'
-              return (
-                <NormalLegislatorCandidate
-                  elected={elected}
-                  key={legislatorPrefix + candidate.candNo}
-                >
-                  <NormalLegislatorCandidateName>
-                    {candidate.name}
-                  </NormalLegislatorCandidateName>
-                  <NormalLegislatorCandidateParty>
-                    {candidate.party} {candidate.tksRate}%
-                  </NormalLegislatorCandidateParty>
-                  {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
-                </NormalLegislatorCandidate>
-              )
-            })
+          const candidateComps = Array.isArray(candidates) ? (
+            [...candidates]
+              .sort((cand1, cand2) => {
+                if (cand1.tksRate === cand2.tksRate) {
+                  return 0
+                }
+                return cand1.tksRate < cand2.tksRate ? 1 : -1
+              })
+              .map((candidate) => {
+                const elected = candidate.candVictor === '*'
+                return (
+                  <NormalLegislatorCandidate
+                    elected={elected}
+                    key={legislatorPrefix + candidate.candNo}
+                  >
+                    <NormalLegislatorCandidateName>
+                      {candidate.name}
+                    </NormalLegislatorCandidateName>
+                    <NormalLegislatorCandidateParty>
+                      {candidate.party} {candidate.tksRate}%
+                    </NormalLegislatorCandidateParty>
+                    {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
+                  </NormalLegislatorCandidate>
+                )
+              })
+          ) : (
+            <></>
+          )
           return (
             <NormalLegislatorDistrict key={legislatorPrefix}>
               <NormalLegislatorArea>{areaName}</NormalLegislatorArea>
@@ -423,7 +427,7 @@ const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
     <InfoboxScrollWrapper>
       {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
       {data.map((district) => {
-        const { candidates, profRate, type, county, town, area } = district
+        const { candidates = [], profRate, type, county, town, area } = district
         const legislatorPrefix = county + town + area + type
 
         return (
@@ -528,7 +532,7 @@ const IndigenousLegislatorInfobox = ({ data, isRunning, isCurrentYear }) => {
     <InfoboxScrollWrapper>
       {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
       {infoboxData.map((district) => {
-        const { candidates, profRate, type, county, town, area } = district
+        const { candidates = [], profRate, type, county, town, area } = district
         const legislatorPrefix = county + town + area + type
 
         return (
@@ -634,7 +638,7 @@ const PartyLegislatorInfobox = ({ data, isRunning, isCurrentYear }) => {
           use map function to handle cause all legislator infobox data is filled in array.
        */}
       {infoboxData.map((district) => {
-        const { candidates, profRate, type, county, town, area } = district
+        const { candidates = [], profRate, type, county, town, area } = district
         const legislatorPrefix = county + town + area + type
 
         return (
@@ -827,30 +831,34 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
         {districts.map(({ county, area, range, candidates, profRate }) => {
           const councilMemberdPrefix = county + area
           const areaName = range.split(' ')[1]
-          const candidateComps = [...candidates]
-            .sort((cand1, cand2) => {
-              if (cand1.tksRate === cand2.tksRate) {
-                return 0
-              }
-              return cand1.tksRate < cand2.tksRate ? 1 : -1
-            })
-            .map((candidate) => {
-              const elected = candidate.candVictor === '*'
-              return (
-                <CouncilMemberCandidate
-                  elected={elected}
-                  key={councilMemberdPrefix + candidate.candNo}
-                >
-                  <CouncilMemberCandidateName>
-                    {candidate.name}
-                  </CouncilMemberCandidateName>
-                  <CouncilMemberCandidateParty>
-                    {candidate.party} {candidate.tksRate}%
-                  </CouncilMemberCandidateParty>
-                  {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
-                </CouncilMemberCandidate>
-              )
-            })
+          const candidateComps = Array.isArray(candidates) ? (
+            [...candidates]
+              .sort((cand1, cand2) => {
+                if (cand1.tksRate === cand2.tksRate) {
+                  return 0
+                }
+                return cand1.tksRate < cand2.tksRate ? 1 : -1
+              })
+              .map((candidate) => {
+                const elected = candidate.candVictor === '*'
+                return (
+                  <CouncilMemberCandidate
+                    elected={elected}
+                    key={councilMemberdPrefix + candidate.candNo}
+                  >
+                    <CouncilMemberCandidateName>
+                      {candidate.name}
+                    </CouncilMemberCandidateName>
+                    <CouncilMemberCandidateParty>
+                      {candidate.party} {candidate.tksRate}%
+                    </CouncilMemberCandidateParty>
+                    {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
+                  </CouncilMemberCandidate>
+                )
+              })
+          ) : (
+            <></>
+          )
           return (
             <CouncilMemberDistrict key={councilMemberdPrefix}>
               <CouncilMemberArea>{areaName}</CouncilMemberArea>
@@ -877,7 +885,7 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
   }
 
   const councilMembers = data.map((district) => {
-    const { candidates, profRate, type, county, town, area } = district
+    const { candidates = [], profRate, type, county, town, area } = district
     const councilMemberdPrefix = county + town + area + type
 
     if (type === 'normal') {
