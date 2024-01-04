@@ -26,7 +26,8 @@ import {
  */
 
 const fetcher = (url) => {
-  return fetch(url).then((res) => {
+  const timestamp = new Date().getTime()
+  return fetch(`${url}?t=${timestamp}`).then((res) => {
     const result = res.json()
     result.then((r) => console.log(r?.updateAt))
     return result
