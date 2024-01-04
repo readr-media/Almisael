@@ -21,16 +21,15 @@ import { currentYear } from '../consts/electionsConfig'
  * @param {isStarted} isStarted
  */
 const presidentInfoboxData = (data, level, year, isStarted, isRunning) => {
-  if (!data) {
-    return '無資料'
-  }
-
   if (!isStarted) {
     return '目前無票數資料'
   }
 
-  if (year === currentYear && !data.profRate && level === 3) {
-    return isRunning ? '目前即時開票無村里資料' : '無資料'
+  if (!data || (Array.isArray(data) && data.length === 0)) {
+    if (year === currentYear && level === 3) {
+      return isRunning ? '目前即時開票無村里資料' : '無資料'
+    }
+    return '此區無資料'
   }
 
   if (data.profRate === null) {
@@ -63,16 +62,14 @@ const mayorInfoboxData = (
     return '點擊地圖看更多資料'
   }
 
-  if (year === 2022 && data === '10020') {
-    return '嘉義市長選舉改期至2022/12/18'
-  }
-
   if (!isStarted) {
     return '目前無票數資料'
   }
 
   if (!data) {
-    if (year === 2010) {
+    if (year === currentYear && level === 3) {
+      return isRunning ? '目前即時開票無村里資料' : '無資料'
+    } else if (year === 2010) {
       return '2010為直轄市長及直轄市議員選舉，此區無資料'
     }
     return '此區無資料'
@@ -118,14 +115,10 @@ const councilMemberInfoboxData = (
   }
 
   if (!data || (Array.isArray(data) && data.length === 0)) {
-    if (year === 2010) {
-      return '2010為直轄市長及直轄市議員選舉，此區無資料'
+    if (year === currentYear && level === 3) {
+      return isRunning ? '目前即時開票無村里資料' : '無資料'
     }
     return '此區無資料'
-  }
-
-  if (year === currentYear && level === 3 && data[0].profRate === null) {
-    return isRunning ? '目前即時開票無村里資料' : '無資料'
   }
 
   if (data.profRate === null) {
@@ -168,11 +161,10 @@ const legislatorInfoboxData = (
   }
 
   if (!data || (Array.isArray(data) && data.length === 0)) {
+    if (year === currentYear && level === 3) {
+      return isRunning ? '目前即時開票無村里資料' : '無資料'
+    }
     return '此區無資料'
-  }
-
-  if (year === currentYear && level === 3 && data[0].profRate === null) {
-    return isRunning ? '目前即時開票無村里資料' : '無資料'
   }
 
   if (data.profRate === null) {
@@ -197,11 +189,10 @@ const referendumInfoboxData = (data, level, year, isStarted, isRunning) => {
   }
 
   if (!data) {
+    if (year === currentYear && level === 3) {
+      return isRunning ? '目前即時開票無村里資料' : '無資料'
+    }
     return '此區無資料'
-  }
-
-  if (year === currentYear && !data.profRate && level === 3) {
-    return isRunning ? '目前即時開票無村里資料' : '無資料'
   }
 
   if (data.profRate === null) {
