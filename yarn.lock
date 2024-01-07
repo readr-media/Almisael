@@ -1821,18 +1821,6 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
-"@readr-media/react-election-votes-comparison@2.0.0-beta.25":
-  version "2.0.0-beta.25"
-  resolved "https://registry.yarnpkg.com/@readr-media/react-election-votes-comparison/-/react-election-votes-comparison-2.0.0-beta.25.tgz#0c8e1f63b4f7b5356ffa85f62a76cb854e351bce"
-  integrity sha512-fqI+YJI1Z/4DPB9T5+BE6+1Iy4VQrTU6PVriaIpriJmR2ECn9Y7Vi0GhoFZwYtBg+8qixh+oohZv4gGAmL8Rbw==
-  dependencies:
-    "@twreporter/errors" "^1.1.1"
-    axios "0.27.2"
-    lodash "^4.17.21"
-    regenerator-runtime "^0.13.9"
-    serialize-javascript "^6.0.0"
-    uuid "^8.3.2"
-
 "@readr-media/react-election-widgets@1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@readr-media/react-election-widgets/-/react-election-widgets-1.1.1.tgz#19895f678be3f7b925e416e495187d6776c418e2"
@@ -2824,7 +2812,7 @@ axe-core@^4.4.3:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.5.0.tgz#6efe2ecdba205fcc9d7ddb3d48c2cf630f70eb5e"
   integrity sha512-4+rr8eQ7+XXS5nZrKcMO/AikHL0hVqy+lHWAnE3xdHl+aguag8SOQ6eEqLexwLNWgXIMfunGuD3ON1/6Kyet0A==
 
-axios@0.27.2, axios@^0.27.2:
+axios@^0.27.2:
   version "0.27.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
   integrity sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==
@@ -7175,7 +7163,7 @@ regenerator-runtime@^0.13.10, regenerator-runtime@^0.13.11:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
 
-regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.9:
+regenerator-runtime@^0.13.4:
   version "0.13.10"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.10.tgz#ed07b19616bcbec5da6274ebc75ae95634bfc2ee"
   integrity sha512-KepLsg4dU12hryUO7bp/axHAKvwGOCV0sGloQtpagJ12ai+ojVDqkeGSiRX1zlq+kjIMZ1t7gpze+26QqtdGqw==
