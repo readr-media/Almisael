@@ -162,7 +162,7 @@ const SCDataLoader = widgets.SeatChart.DataLoader
  * @returns {Promise<SeatsData>} A promise that resolves to the fetched seat data.
  */
 export const fetchCouncilMemberSeatData = async ({ yearKey, countyCode }) => {
-  const loader = new SCDataLoader({ version: 'v1', apiUrl: gcsBaseUrl })
+  const loader = new SCDataLoader({ apiUrl: gcsBaseUrl })
   const data = await loader.loadCouncilMemberData({ year: yearKey, countyCode })
   return data
 }
@@ -178,7 +178,7 @@ export const fetchLegislatorSeatData = async ({
   yearKey,
   countyCode,
 }) => {
-  const loader = new SCDataLoader({ version: 'v1', apiUrl: gcsBaseUrl })
+  const loader = new SCDataLoader({ apiUrl: gcsBaseUrl })
   let data
   switch (subtype) {
     case 'all':
