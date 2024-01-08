@@ -159,9 +159,9 @@ export const getPartyColor = (party) => {
 export const getGradiantPartyColor = (party, percent) => {
   const colorIndex = getColorIndexByPercent(percent)
   const color =
-    partiesColor.find((partyColor) => partyColor.name === party)?.colors[
-      colorIndex
-    ] || partiesColor[partiesColor.length - 1].colors[colorIndex]
+    partiesColor.find((partyColor) => party.startsWith(partyColor.name))
+      ?.colors[colorIndex] ||
+    partiesColor[partiesColor.length - 1].colors[colorIndex]
 
   return color
 }
