@@ -76,18 +76,16 @@ export const useElectionData = (showLoading) => {
   /**
    * Control the evc to scroll to the specific position.
    * @param {ElectionType} electionType
-   * @param {import('../components/helper/electionData').ModuleData} mapData
+   * @param {import('../utils/electionsData').ModuleData} mapData
    * @param {string} subtypeKey
    * @param {import('../store/election-slice').LevelControl} levelControl
-   * @param {number} yearKey
    * @returns
    */
   const scrollEvcFromLevelControl = (
     electionType,
     mapData,
     subtypeKey,
-    levelControl,
-    yearKey
+    levelControl
   ) => {
     let newScrollTo
     switch (electionType) {
@@ -98,9 +96,7 @@ export const useElectionData = (showLoading) => {
             (countyData) => countyData.countyCode === countyCode
           )
 
-          if (!(yearKey === 2022 && countyData.countyName === '嘉義市')) {
-            newScrollTo = countyData.countyName
-          }
+          newScrollTo = countyData.countyName
         }
         break
       }
@@ -292,8 +288,7 @@ export const useElectionData = (showLoading) => {
                 electionConfig.electionType,
                 newElectionData.mapData,
                 subtype?.key,
-                levelControl,
-                year?.key
+                levelControl
               )
             )
           )

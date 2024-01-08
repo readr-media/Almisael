@@ -701,15 +701,6 @@ export const prepareElectionData = async (
             newInfoboxData.electionData = newMapData[0]?.districts.find(
               (district) => district.county === levelControl.activeCode
             )
-            // to-be-updated when data is available
-            if (
-              !newInfoboxData.electionData &&
-              yearKey === 2022 &&
-              countyCode === '10020'
-            ) {
-              // 2022 chiayi city postpond the mayor election
-              newInfoboxData.electionData = '10020'
-            }
             newInfoboxData.isRunning = newMapData.isRunning
             newInfoboxData.isStarted = newMapData.isStarted
             break
@@ -743,16 +734,6 @@ export const prepareElectionData = async (
               (district) =>
                 district.county + district.town === levelControl.activeCode
             )
-            // to-be-updated when data is available
-            if (
-              !newInfoboxData.electionData &&
-              yearKey === 2022 &&
-              countyCode === '10020'
-            ) {
-              // 2022 chiayi city postpond the mayor election
-              newInfoboxData.electionData = '10020'
-              break
-            }
             newInfoboxData.isRunning = newMapData.isRunning
             newInfoboxData.isStarted = newMapData.isStarted
 
@@ -766,16 +747,6 @@ export const prepareElectionData = async (
                 district.county + district.town + district.vill ===
                 levelControl.activeCode
             )
-            // to-be-updated when data is available
-            if (
-              !newInfoboxData.electionData &&
-              yearKey === 2022 &&
-              countyCode === '10020'
-            ) {
-              // 2022 chiayi city postpond the mayor election
-              newInfoboxData.electionData = '10020'
-              break
-            }
             newInfoboxData.isRunning = newMapData.isRunning
             newInfoboxData.isStarted = newMapData.isStarted
 
@@ -886,7 +857,7 @@ export const prepareElectionData = async (
                 subtypeKey
               )
             ) {
-              newInfoboxData.electionData = newMapData[level]?.summary
+              newInfoboxData.electionData = newMapData[level]?.summary || []
               newInfoboxData.isRunning = newMapData.isRunning
               newInfoboxData.isStarted = newMapData.isStarted
             }
@@ -973,7 +944,7 @@ export const prepareElectionData = async (
             // subtpe 'normal' starts to show infoboxData in level 1
             if (subtypeKey === 'normal') {
               newInfoboxData.electionData =
-                newMapData[level][countyCode]?.districts
+                newMapData[level][countyCode]?.districts || []
               newInfoboxData.isRunning = newMapData.isRunning
               newInfoboxData.isStarted = newMapData.isStarted
             } else if (
@@ -981,9 +952,10 @@ export const prepareElectionData = async (
                 subtypeKey
               )
             ) {
-              newInfoboxData.electionData = newMapData[0]?.districts.filter(
-                (district) => district.county === levelControl.activeCode
-              )
+              newInfoboxData.electionData =
+                newMapData[0]?.districts.filter(
+                  (district) => district.county === levelControl.activeCode
+                ) || []
               newInfoboxData.isRunning = newMapData.isRunning
               newInfoboxData.isStarted = newMapData.isStarted
             }
@@ -1022,15 +994,14 @@ export const prepareElectionData = async (
             // handle infobox data
             // subtype 'all' won't show infoboxData
             if (subtypeKey !== 'all') {
-              newInfoboxData.electionData = newMapData[1]?.[
-                countyCode
-              ]?.districts?.filter((district) => {
-                const levelCode =
-                  subtypeKey === 'normal'
-                    ? district.county + district.area
-                    : district.county + district.town
-                return levelCode === levelControl.activeCode
-              })
+              newInfoboxData.electionData =
+                newMapData[1]?.[countyCode]?.districts?.filter((district) => {
+                  const levelCode =
+                    subtypeKey === 'normal'
+                      ? district.county + district.area
+                      : district.county + district.town
+                  return levelCode === levelControl.activeCode
+                }) || []
               newInfoboxData.isRunning = newMapData.isRunning
               newInfoboxData.isStarted = newMapData.isStarted
             }
@@ -1040,13 +1011,12 @@ export const prepareElectionData = async (
             // subtype 'all' won't show infoboxData
             if (subtypeKey !== 'all') {
               const levelCode = subtypeKey === 'normal' ? areaCode : townCode
-              newInfoboxData.electionData = newMapData[2][
-                levelCode
-              ]?.districts.filter(
-                (district) =>
-                  district.county + district.town + district.vill ===
-                  levelControl.activeCode
-              )
+              newInfoboxData.electionData =
+                newMapData[2][levelCode]?.districts.filter(
+                  (district) =>
+                    district.county + district.town + district.vill ===
+                    levelControl.activeCode
+                ) || []
               newInfoboxData.isRunning = newMapData.isRunning
               newInfoboxData.isStarted = newMapData.isStarted
             }
@@ -1128,7 +1098,8 @@ export const prepareElectionData = async (
             }
 
             // handle infoboxData
-            newInfoboxData.electionData = newMapData[1][countyCode]?.summary
+            newInfoboxData.electionData =
+              newMapData[1][countyCode]?.summary || []
             newInfoboxData.isRunning = newMapData.isRunning
             newInfoboxData.isStarted = newMapData.isStarted
 
@@ -1155,25 +1126,23 @@ export const prepareElectionData = async (
             }
 
             // handle infobox data
-            newInfoboxData.electionData = newMapData[1][
-              countyCode
-            ]?.districts.filter(
-              (district) =>
-                district.county + district.town === levelControl.activeCode
-            )
+            newInfoboxData.electionData =
+              newMapData[1][countyCode]?.districts.filter(
+                (district) =>
+                  district.county + district.town === levelControl.activeCode
+              ) || []
             newInfoboxData.isRunning = newMapData.isRunning
             newInfoboxData.isStarted = newMapData.isStarted
 
             break
           case 3:
             // handle infobox data
-            newInfoboxData.electionData = newMapData[2][
-              townCode
-            ]?.districts.filter(
-              (district) =>
-                district.county + district.town + district.vill ===
-                levelControl.activeCode
-            )
+            newInfoboxData.electionData =
+              newMapData[2][townCode]?.districts.filter(
+                (district) =>
+                  district.county + district.town + district.vill ===
+                  levelControl.activeCode
+              ) || []
             newInfoboxData.isRunning = newMapData.isRunning
             newInfoboxData.isStarted = newMapData.isStarted
 
