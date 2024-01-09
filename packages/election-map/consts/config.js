@@ -40,8 +40,8 @@ export const og = {
 }
 
 /*
-gsutil -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/election2022
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/dev-election2024
-gsutil -m cp -r ./out/* gs://readr-coverage/project/3/election2022
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://readr-coverage/project/3/dev-election2024
+gsutil -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/taiwan-elections
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/dev-taiwan-elections
+gsutil -m cp -r ./out/* gs://readr-coverage/project/3/taiwan-elections
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://readr-coverage/project/3/dev-taiwan-elections
 */
