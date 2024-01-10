@@ -306,7 +306,7 @@ export default function Home() {
     }
   }, [])
   if (error) return <div>failed to load</div>
-  if (isLoading) return <div>loading...</div>
+  if (isLoading) return <></>
   const getVictor = (result) => {
     const victorArray = result?.find((item) => item.key === '當選')
     if (
