@@ -20,7 +20,7 @@ if (!FolderPath) {
 }
 
 const inputPath = FolderPath
-const outputPath = `${FolderPath}//output/`
+const outputPath = `${FolderPath}/output/`
 
 // Loop through each file in inputPath
 fs.readdirSync(inputPath).forEach((fileName) => {
