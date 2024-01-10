@@ -21,6 +21,18 @@ const ga4Ids = {
 }
 
 export const ga4Id = ga4Ids[organization][environment]
+const siteUrls = {
+  'readr-media': {
+    dev: 'https://www.readr.tw/project/3/dev-taiwan-elections',
+    prod: 'https://www.readr.tw/project/3/taiwan-elections',
+  },
+  'mirror-media': {
+    dev: 'https://www.mirrormedia.mg/projects/dev-taiwan-elections',
+    prod: 'https://www.mirrormedia.mg/projects/taiwan-elections',
+  },
+}
+
+export const siteUrl = siteUrls[organization][environment]
 
 export const og = {
   title: '2024 總統、立委選舉開票即時資訊',
@@ -40,8 +52,8 @@ export const og = {
 }
 
 /*
-gsutil -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/election2022
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/dev-election2024
-gsutil -m cp -r ./out/* gs://readr-coverage/project/3/election2022
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://readr-coverage/project/3/dev-election2024
+gsutil -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/taiwan-elections
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/dev-taiwan-elections
+gsutil -m cp -r ./out/* gs://readr-coverage/project/3/taiwan-elections
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://readr-coverage/project/3/dev-taiwan-elections
 */

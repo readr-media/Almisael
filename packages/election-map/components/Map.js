@@ -89,13 +89,13 @@ export const Map = ({
                 JSON.parse(JSON.stringify(rawTopoJson)),
                 JSON.parse(JSON.stringify(villGeometries))
               )
-              const someVillProperties = villGeometries[0].properties
+              const someVillProperties = villGeometries[0]?.properties
               const properties = {
-                COUNTYCODE: someVillProperties.COUNTYCODE,
-                COUNTYNAME: someVillProperties.COUNTYNAME,
-                AREACODE: areaMappingObj.code,
-                AREANAME: areaMappingObj.name,
-                AREANICKNAME: areaMappingObj.nickName,
+                COUNTYCODE: someVillProperties?.COUNTYCODE,
+                COUNTYNAME: someVillProperties?.COUNTYNAME,
+                AREACODE: areaMappingObj?.code,
+                AREANAME: areaMappingObj?.name,
+                AREANICKNAME: areaMappingObj?.nickName,
               }
               feature.properties = properties
               return feature

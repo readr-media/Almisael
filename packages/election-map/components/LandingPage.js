@@ -47,7 +47,7 @@ const InfoWrapper = styled.div`
     top: 0;
     bottom: 0;
     margin: auto 0;
-    height: 558px;
+    height: 580px;
   }
 `
 
