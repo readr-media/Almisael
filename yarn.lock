@@ -1821,10 +1821,10 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.21.tgz#5de5a2385a35309427f6011992b544514d559aa1"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
-"@readr-media/react-election-widgets@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@readr-media/react-election-widgets/-/react-election-widgets-1.1.1.tgz#19895f678be3f7b925e416e495187d6776c418e2"
-  integrity sha512-pBPGC92rZBn3HHgFtGA9Ea3kns2ZTMgNYmz7hUHz7DVEb9O+4EHhaLEN/rYxReDLNotZQpDVnba1KTCU4qcedw==
+"@readr-media/react-election-widgets@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@readr-media/react-election-widgets/-/react-election-widgets-1.1.2.tgz#20d35970d10567ffd5ed9e7954fef94657ccd750"
+  integrity sha512-nEbAS3+OKJ5T3baQwvQWuubOMIes24EK2hZ/oE8vztQ/w8Sk/tMd4wF9kkrfOEI2D4RPEEmxa4w3iYaYis87Qg==
   dependencies:
     "@twreporter/errors" "^1.1.1"
     axios "^0.27.2"
