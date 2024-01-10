@@ -21,6 +21,18 @@ const ga4Ids = {
 }
 
 export const ga4Id = ga4Ids[organization][environment]
+const siteUrls = {
+  'readr-media': {
+    dev: 'https://www.readr.tw/project/3/dev-taiwan-elections',
+    prod: 'https://www.readr.tw/project/3/taiwan-elections',
+  },
+  'mirror-media': {
+    dev: 'https://www.mirrormedia.mg/projects/dev-taiwan-elections',
+    prod: 'https://www.mirrormedia.mg/projects/taiwan-elections',
+  },
+}
+
+export const siteUrl = siteUrls[organization][environment]
 
 export const og = {
   title: '2024 總統、立委選舉開票即時資訊',
