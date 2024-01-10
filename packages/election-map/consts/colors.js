@@ -77,7 +77,7 @@ export const partiesColor = [
   },
   {
     index: 998,
-    name: '開票中',
+    name: '席次尚未確認',
     color: '#fff',
   },
   {
@@ -152,7 +152,7 @@ export const rgbaToRgb = (rgbaObj, bg = { r: 255, g: 255, b: 255, a: 1 }) => {
 export const getPartyColor = (party) => {
   const color =
     partiesColor.find((partyColor) => party?.startsWith(partyColor.name))
-      ?.colors[0] || partiesColor[partiesColor.length - 1].colors[0]
+      ?.colors[2] || partiesColor[partiesColor.length - 1].colors[2]
   return color
 }
 
