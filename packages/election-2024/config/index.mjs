@@ -1,6 +1,6 @@
 // 'mirrorMedia' | 'mirrorTV' | 'readr'
 const releaseTarget = process.env.NEXT_PUBLIC_RELEASE_TARGET
-const projectName = 'dev-election2024-homepage-0104-4'
+const projectName = 'dev-election2024-homepage-0110'
 let assetPrefixPath = ''
 let jsonEndpoint = ''
 let staticFileDestination = ''
@@ -44,7 +44,7 @@ switch (releaseTarget) {
     jsonEndpoint = 'https://whoareyou-gcs.readr.tw/json/2024homepage.json'
     staticFileDestination = `https://dev.mirrormedia.mg/projects/${projectName}`
     watchMoreLinkSrc =
-      'https://www.mirrormedia.mg/projects/election2024/index.html?utm_source=mmweb&utm_medium=dev_election2024'
+      'https://www.mirrormedia.mg/projects/taiwan-elections/index.html?utm_source=mmapp&utm_medium=election2024'
     breakpoint = '1200px'
     imageName = 'weekly_1200x630'
     color = COLOR_SETTING_MM_TV
@@ -56,7 +56,7 @@ switch (releaseTarget) {
     jsonEndpoint = 'https://whoareyou-gcs.readr.tw/json/2024homepage.json'
     staticFileDestination = `https://www.mirrormedia.mg/projects/${projectName}`
     watchMoreLinkSrc =
-      'https://www.mirrormedia.mg/projects/election2024/index.html?utm_source=mmweb&utm_medium=election2024'
+      'https://www.mirrormedia.mg/projects/taiwan-elections/index.html?utm_source=mmapp&utm_medium=election2024'
     breakpoint = '1200px'
     imageName = 'weekly_1200x630'
     color = COLOR_SETTING_MM_TV
@@ -88,7 +88,7 @@ switch (releaseTarget) {
     jsonEndpoint = 'https://whoareyou-gcs.readr.tw/json/2024cec_homepage.json'
     staticFileDestination = `https://www.readr.tw/project/3/${projectName}`
     watchMoreLinkSrc =
-      'https://www.readr.tw/project/3/election2024/index.html?utm_source=READr&utm_medium=election2024'
+      'https://www.readr.tw/project/3/taiwan-elections?utm_source=READr&utm_medium=election2024'
     breakpoint = '1200px'
     color = COLOR_SETTING_READR
     imageName = 'readr_1200x630'
