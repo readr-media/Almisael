@@ -1,6 +1,6 @@
 // 'mirrorMedia' | 'mirrorTV' | 'readr'
 const releaseTarget = process.env.NEXT_PUBLIC_RELEASE_TARGET
-const projectName = 'dev-election2024-homepage-0110-8'
+const projectName = 'election2024-homepage'
 let assetPrefixPath = ''
 let jsonEndpoint = ''
 let staticFileDestination = ''
@@ -95,6 +95,7 @@ switch (releaseTarget) {
       'https://www.readr.tw/project/3/taiwan-elections?utm_source=READr&utm_medium=election2024'
     breakpoint = '1200px'
     color = COLOR_SETTING_READR
+    alwaysShow = false
     imageName = 'readr_970x250'
     break
   default:
