@@ -9,7 +9,7 @@ import { useAppSelector } from '../../hook/useRedux'
 import { useAppDispatch } from '../../hook/useRedux'
 import { electionActions } from '../../store/election-slice'
 import SelectorContainer from './SeletorsContainer'
-
+import { electionMapColor } from '../../consts/colors'
 /**
  * @typedef {Object} NationData
  * @property {string} name
@@ -95,7 +95,7 @@ const StyledSelectorContainer = styled(SelectorContainer)`
      * @param {boolean} props.isCompareMode
 
      */
-    ({ isCompareMode }) => (isCompareMode ? '#E9E9E9' : '#fff1db')
+    ({ isCompareMode }) => (isCompareMode ? '#E9E9E9' : `${electionMapColor}`)
   };
 `
 /**
