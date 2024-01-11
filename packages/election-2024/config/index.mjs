@@ -1,12 +1,13 @@
 // 'mirrorMedia' | 'mirrorTV' | 'readr'
 const releaseTarget = process.env.NEXT_PUBLIC_RELEASE_TARGET
-const projectName = 'dev-election2024-homepage-0102'
+const projectName = 'dev-election2024-homepage-0110-8'
 let assetPrefixPath = ''
 let jsonEndpoint = ''
 let staticFileDestination = ''
 let watchMoreLinkSrc = ''
 let breakpoint = '1200px'
 let imageName = ''
+let alwaysShow = false
 const DARK_BLUE = '#153047'
 const BLACK = '#000000'
 const COLOR_SETTING_MM_TV = {
@@ -44,11 +45,11 @@ switch (releaseTarget) {
     jsonEndpoint = 'https://whoareyou-gcs.readr.tw/json/2024homepage.json'
     staticFileDestination = `https://dev.mirrormedia.mg/projects/${projectName}`
     watchMoreLinkSrc =
-      'https://www.mirrormedia.mg/projects/election2024/index.html?utm_source=mmweb&utm_medium=dev_election2024'
-    breakpoint = '1200px'
-    imageName = 'weekly_1200x630'
+      'https://www.mirrormedia.mg/projects/taiwan-elections/index.html?utm_source=mmapp&utm_medium=election2024'
+    breakpoint = '1024px'
+    imageName = 'weekly_970x250'
     color = COLOR_SETTING_MM_TV
-
+    alwaysShow = true
     break
 
   case 'mirrorMedia':
@@ -56,10 +57,11 @@ switch (releaseTarget) {
     jsonEndpoint = 'https://whoareyou-gcs.readr.tw/json/2024homepage.json'
     staticFileDestination = `https://www.mirrormedia.mg/projects/${projectName}`
     watchMoreLinkSrc =
-      'https://www.mirrormedia.mg/projects/election2024/index.html?utm_source=mmweb&utm_medium=election2024'
-    breakpoint = '1200px'
-    imageName = 'weekly_1200x630'
+      'https://www.mirrormedia.mg/projects/taiwan-elections/index.html?utm_source=mmapp&utm_medium=election2024'
+    breakpoint = '1024px'
+    imageName = 'weekly_970x250'
     color = COLOR_SETTING_MM_TV
+    alwaysShow = false
     break
 
   case 'dev-mirrorTV':
@@ -68,9 +70,10 @@ switch (releaseTarget) {
     staticFileDestination = `https://dev.mnews.tw/projects/${projectName}`
     watchMoreLinkSrc =
       'https://dev.mnews.tw/projects/dev-election2024/index.html?utm_source=homepage&utm_medium=election2024'
-    breakpoint = '1127px'
+    breakpoint = '1120px'
     color = COLOR_SETTING_MM_TV
-    imageName = 'news_1200x630'
+    imageName = 'news_970x250'
+    alwaysShow = true
     break
 
   case 'mirrorTV':
@@ -79,28 +82,30 @@ switch (releaseTarget) {
     staticFileDestination = `https://www.mnews.tw/projects/${projectName}`
     watchMoreLinkSrc =
       'https://www.mnews.tw/projects/election2024/index.html?utm_source=homepage&utm_medium=election2024'
-    breakpoint = '1127px'
+    breakpoint = '1120px'
     color = COLOR_SETTING_MM_TV
-    imageName = 'news_1200x630'
+    imageName = 'news_970x250'
+    alwaysShow = false
     break
   case 'readr':
     assetPrefixPath = `https://www.readr.tw/project/3/${projectName}`
     jsonEndpoint = 'https://whoareyou-gcs.readr.tw/json/2024cec_homepage.json'
     staticFileDestination = `https://www.readr.tw/project/3/${projectName}`
     watchMoreLinkSrc =
-      'https://www.readr.tw/project/3/election2024/index.html?utm_source=READr&utm_medium=election2024'
+      'https://www.readr.tw/project/3/taiwan-elections?utm_source=READr&utm_medium=election2024'
     breakpoint = '1200px'
     color = COLOR_SETTING_READR
-    imageName = 'readr_1200x630'
+    imageName = 'readr_970x250'
     break
   default:
     assetPrefixPath = '.'
     jsonEndpoint = 'https://whoareyou-gcs.readr.tw/json/2024homepage.json'
-    staticFileDestination = `http://localhost:3000`
+    staticFileDestination = ``
     watchMoreLinkSrc = '.'
-    breakpoint = '1200px'
+    breakpoint = '1024px'
     color = COLOR_SETTING_MM_TV
-    imageName = 'weekly_1200x630'
+    imageName = 'weekly_970x250'
+    alwaysShow = true
     break
 }
 
@@ -113,4 +118,5 @@ export {
   breakpoint,
   color,
   imageName,
+  alwaysShow,
 }

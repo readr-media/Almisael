@@ -10,7 +10,7 @@ import {
   watchMoreLinkSrc,
   breakpoint,
   color,
-  imageName,
+  alwaysShow,
 } from '../config/index.mjs'
 /**
  * @typedef {Object} HeightAndWidth
@@ -96,29 +96,6 @@ const CANDIDATES_CONFIG = [
 const Wrapper = styled.section`
   padding: 12px 10px;
   background-color: ${color.background.normal};
-
-  picture {
-    display: flex;
-    width: fit-content;
-    height: 100%;
-    margin: 0 auto;
-    object-fit: contain;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 523px;
-
-    img {
-      height: auto;
-      width: 100%;
-    }
-    @media (min-width: ${breakpoint}) {
-      height: 571.5px;
-      img {
-        height: 100%;
-      }
-    }
-  }
 `
 const InfoWrapper = styled.div`
   display: grid;
@@ -291,6 +268,7 @@ const WatchMore = styled.div`
 `
 export default function Home() {
   const [shouldShowResult, setShouldResult] = useState(false)
+  const shouldShowInfoBox = alwaysShow || shouldShowResult
   const { data, error, isLoading } = useSWR(jsonEndpoint, fetcher, {
     refreshInterval: 1000 * 60,
     revalidateIfStale: true,
@@ -306,7 +284,7 @@ export default function Home() {
     }
   }, [])
   if (error) return <div>failed to load</div>
-  if (isLoading) return <div>loading...</div>
+  if (isLoading) return <></>
   const getVictor = (result) => {
     const victorArray = result?.find((item) => item.key === '當選')
     if (
@@ -326,7 +304,7 @@ export default function Home() {
 
   return (
     <Wrapper>
-      {shouldShowResult ? (
+      {shouldShowInfoBox ? (
         <>
           <Title>2024 總統及立委大選開票</Title>
           <SubTitle>{data.title}</SubTitle>
@@ -437,22 +415,7 @@ export default function Home() {
             </Link>
           </WatchMore>
         </>
-      ) : (
-        <picture>
-          <source
-            srcSet={`/banner/${imageName}_m.jpg`}
-            media="(max-width: 1199px)"
-          />
-          <img src={`/banner/${imageName}.jpg`} alt="尚未開票" />
-        </picture>
-      )}
-      <button
-        onClick={() => {
-          setShouldResult((pre) => !pre)
-        }}
-      >
-        測試切換
-      </button>
+      ) : null}
     </Wrapper>
   )
 }
