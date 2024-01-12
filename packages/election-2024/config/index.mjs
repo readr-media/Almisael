@@ -87,6 +87,17 @@ switch (releaseTarget) {
     imageName = 'news_970x250'
     alwaysShow = false
     break
+  case 'dev-readr':
+    assetPrefixPath = `https://www.readr.tw/project/3/${projectName}`
+    jsonEndpoint = 'https://whoareyou-gcs.readr.tw/json/2024cec_homepage.json'
+    staticFileDestination = `https://www.readr.tw/project/3/${projectName}`
+    watchMoreLinkSrc =
+      'https://www.readr.tw/project/3/taiwan-elections?utm_source=READr&utm_medium=election2024'
+    breakpoint = '1200px'
+    color = COLOR_SETTING_READR
+    alwaysShow = true
+    imageName = 'readr_970x250'
+    break
   case 'readr':
     assetPrefixPath = `https://www.readr.tw/project/3/${projectName}`
     jsonEndpoint = 'https://whoareyou-gcs.readr.tw/json/2024cec_homepage.json'
@@ -98,6 +109,7 @@ switch (releaseTarget) {
     alwaysShow = false
     imageName = 'readr_970x250'
     break
+
   default:
     assetPrefixPath = '.'
     jsonEndpoint = 'https://whoareyou-gcs.readr.tw/json/2024homepage.json'
