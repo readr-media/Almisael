@@ -18,6 +18,9 @@ switch (releaseTarget) {
   case 'readr':
     execCommand = `gsutil -m cp -r ./out/${releaseTarget} gs://readr-coverage/project/3/${projectName}`
     break
+  case 'dev-readr':
+    execCommand = `gsutil -m cp -r ./out/${releaseTarget} gs://readr-coverage/project/3/${projectName}`
+    break
 
   default:
     break
