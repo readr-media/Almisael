@@ -401,9 +401,7 @@ export default function Home() {
               )
             })}
           </InfoWrapper>
-          <Caption>
-            票數說明：1.呈現票數係根據各台已報導票數輸入，與其即時票數略有落差。2.正確結果以中選會為主。
-          </Caption>
+          <Caption>票數說明：正確結果以中選會為主。</Caption>
           <UpdateTime>最後更新時間：{data?.updateAt}</UpdateTime>
           <WatchMore>
             <Link
