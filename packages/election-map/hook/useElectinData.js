@@ -387,6 +387,7 @@ export const useElectionData = (showLoading) => {
   }, [dispatch, districtMapping, electionConfig.electionType, year.key])
 
   // create interval to periodically trigger refetch and let react lifecycle to handle the refetch
+  // use additional useEffect to prevent interval reset from the state change
   useEffect(() => {
     const interval = window.setInterval(() => {
       setShouldRefetch(true)
@@ -488,7 +489,8 @@ export const useElectionData = (showLoading) => {
       setShouldRefetch(false)
       showLoading(false)
     }
-    if (shouldRefetch) {
+    // only refetch when displaying current year election
+    if (shouldRefetch && year?.key === currentYear) {
       refetchHandler()
     }
   }, [
