@@ -93,6 +93,10 @@ const initialElectionState = {
       district: null,
       districtWithArea: {},
     },
+    currentYearElectionState: {
+      isRunning: false,
+      isStarted: false,
+    },
   },
   compare: {
     info: defaultCompareInfo,
@@ -295,6 +299,9 @@ const electionsSlice = createSlice({
     changeDistrictWithAreaMappingData(state, action) {
       const { year, data } = action.payload
       state.data.districtMapping.districtWithArea[year] = data
+    },
+    changeCurrentYearElectionState(state, action) {
+      state.data.currentYearElectionState = action.payload
     },
   },
 })

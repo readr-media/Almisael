@@ -236,8 +236,8 @@ export const useElectionData = (showLoading) => {
   useEffect(() => {
     const prepareDataHandler = async () => {
       showLoading(true)
-      console.warn('prepareDataHandler', number?.key)
       const { filter } = compareInfo
+      const refetchMode = false
       const [
         { value: electionDataResult },
         { value: compareElectionDataResult },
@@ -250,7 +250,8 @@ export const useElectionData = (showLoading) => {
           subtype?.key,
           number?.key,
           lastUpdate,
-          compareInfo?.compareMode
+          compareInfo?.compareMode,
+          refetchMode
         ),
         compareInfo.compareMode
           ? prepareElectionData(
@@ -261,14 +262,19 @@ export const useElectionData = (showLoading) => {
               filter?.subtype?.key,
               filter?.number?.key,
               lastUpdate,
-              compareInfo?.compareMode
+              compareInfo?.compareMode,
+              refetchMode
             )
           : Promise.resolve({}),
       ])
 
       if (electionDataResult.newElectionData) {
-        const { newElectionData, newInfoboxData, newLastUpdate } =
-          electionDataResult
+        const {
+          newElectionData,
+          newInfoboxData,
+          newLastUpdate,
+          newCurrentYearElectionState,
+        } = electionDataResult
 
         dispatch(electionActions.changeInfoboxData(newInfoboxData))
         dispatch(
@@ -295,12 +301,23 @@ export const useElectionData = (showLoading) => {
         }
         if (year?.key === currentYear) {
           dispatch(electionActions.changeLastUpdate(newLastUpdate))
+          if (newCurrentYearElectionState) {
+            dispatch(
+              electionActions.changeCurrentYearElectionState(
+                newCurrentYearElectionState
+              )
+            )
+          }
         }
       }
 
       if (compareElectionDataResult.newElectionData) {
-        const { newElectionData, newInfoboxData, newLastUpdate } =
-          compareElectionDataResult
+        const {
+          newElectionData,
+          newInfoboxData,
+          newLastUpdate,
+          newCurrentYearElectionState,
+        } = compareElectionDataResult
         dispatch(electionActions.changeCompareInfoboxData(newInfoboxData))
 
         dispatch(
@@ -315,6 +332,13 @@ export const useElectionData = (showLoading) => {
 
         if (filter?.key === currentYear) {
           dispatch(electionActions.changeLastUpdate(newLastUpdate))
+          if (newCurrentYearElectionState) {
+            dispatch(
+              electionActions.changeCurrentYearElectionState(
+                newCurrentYearElectionState
+              )
+            )
+          }
         }
       }
       showLoading(false)
@@ -323,9 +347,9 @@ export const useElectionData = (showLoading) => {
     prepareDataHandler()
   }, [
     // compareElectionData,
+    // electionData,
     compareInfo,
     electionConfig,
-    // electionData,
     lastUpdate,
     levelControl,
     number?.key,
@@ -379,6 +403,7 @@ export const useElectionData = (showLoading) => {
       showLoading(true)
 
       const { filter } = compareInfo
+      const refetchMode = true
       const normalRefetch = prepareElectionData(
         deepCloneObj(defaultElectionData),
         electionConfig,
@@ -388,7 +413,7 @@ export const useElectionData = (showLoading) => {
         number?.key,
         lastUpdate,
         compareInfo?.compareMode,
-        true
+        refetchMode
       )
       const compareRefetch = compareInfo.compareMode
         ? prepareElectionData(
@@ -400,7 +425,7 @@ export const useElectionData = (showLoading) => {
             filter.number?.key,
             lastUpdate,
             compareInfo?.compareMode,
-            true
+            refetchMode
           )
         : Promise.resolve({})
       const [{ value: normalResult }, { value: compareResult }] =
@@ -410,7 +435,8 @@ export const useElectionData = (showLoading) => {
         ])
 
       if (normalResult.newElectionData) {
-        const { newElectionData, newLastUpdate } = normalResult
+        const { newElectionData, newLastUpdate, newCurrentYearElectionState } =
+          normalResult
 
         dispatch(
           electionActions.changeElectionsData({
@@ -424,10 +450,18 @@ export const useElectionData = (showLoading) => {
 
         if (year?.key === currentYear && newElectionData) {
           dispatch(electionActions.changeLastUpdate(newLastUpdate))
+          if (newCurrentYearElectionState) {
+            dispatch(
+              electionActions.changeCurrentYearElectionState(
+                newCurrentYearElectionState
+              )
+            )
+          }
         }
       }
       if (compareResult.newElectionData) {
-        const { newElectionData, newLastUpdate } = compareResult
+        const { newElectionData, newLastUpdate, newCurrentYearElectionState } =
+          compareResult
 
         dispatch(
           electionActions.changeElectionsData({
@@ -441,6 +475,13 @@ export const useElectionData = (showLoading) => {
 
         if (filter.year?.key === currentYear && newElectionData) {
           dispatch(electionActions.changeLastUpdate(newLastUpdate))
+          if (newCurrentYearElectionState) {
+            dispatch(
+              electionActions.changeCurrentYearElectionState(
+                newCurrentYearElectionState
+              )
+            )
+          }
         }
       }
 
