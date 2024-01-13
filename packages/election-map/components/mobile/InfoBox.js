@@ -93,6 +93,9 @@ const Wrapper = styled.section`
       line-height: 21.6px;
       color: #000;
     }
+    .legislator-party-vote-range-hint {
+      font-size: 12px;
+    }
   }
 `
 const ReferendumWrapper = styled(Wrapper)`
@@ -616,6 +619,11 @@ export default function InfoBox({ infoboxData, year }) {
               <div className="prof-rate prof-rate--text-align-start">
                 <div className="range">{districtName}</div>
                 <div>投票率 {infoboxData?.profRate}%</div>
+                {isParty && (
+                  <div className="legislator-party-vote-range-hint">
+                    ＊此為第一階段投票率
+                  </div>
+                )}
               </div>
               {!!note?.text && <InfoNote>{note.text}</InfoNote>}
 
@@ -650,6 +658,11 @@ export default function InfoBox({ infoboxData, year }) {
                 {shouldShowExpandButton && <Divider />}
                 <div className="prof-rate">
                   投票率 {infoboxData?.[0]?.profRate}%
+                  {isParty && (
+                    <div className="legislator-party-vote-range-hint">
+                      ＊此為第一階段投票率
+                    </div>
+                  )}
                 </div>
                 {!!note?.text && <InfoNote>{note.text}</InfoNote>}
                 <CandidatesInfoWrapper maxHeight={maxHeight}>
@@ -753,6 +766,11 @@ export default function InfoBox({ infoboxData, year }) {
               {level === 2 && <div className="range">{districtName}</div>}
               {districtNote && <div className="range-note">{districtNote}</div>}
               <div>投票率 {infoboxData?.[0]?.profRate}%</div>
+              {isParty && (
+                <div className="legislator-party-vote-range-hint">
+                  ＊此為第一階段投票率
+                </div>
+              )}
             </div>
             <CandidatesInfoWrapper maxHeight={maxHeight}>
               {orderedCandidates.map((candidate) =>
