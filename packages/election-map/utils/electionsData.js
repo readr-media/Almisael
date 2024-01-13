@@ -1,5 +1,9 @@
 import { deepCloneObj } from './deepClone'
-import { countyMappingData, electionsConfig } from '../consts/electionsConfig'
+import {
+  countyMappingData,
+  currentYear,
+  electionsConfig,
+} from '../consts/electionsConfig'
 import {
   fetchPresidentEvcData,
   fetchPresidentMapData,
@@ -501,6 +505,7 @@ export const prepareElectionData = async (
   const { level: currentLevel, townCode, areaCode, countyCode } = levelControl
   const { electionType } = electionConfig
   let newLastUpdate = lastUpdate
+  let newCurrentYearElectionState = null
 
   /** @type {InfoboxData} */
   const newInfoboxData = {
@@ -512,6 +517,9 @@ export const prepareElectionData = async (
   }
 
   for (let level = 0; level <= currentLevel; level++) {
+    // refetch mode or current level running on current year will need to fetch data no matter data exist or not
+    const forceRefetching =
+      isRefetching || (yearKey === currentYear && level === currentLevel)
     switch (electionType) {
       case 'president':
         switch (level) {
@@ -520,7 +528,7 @@ export const prepareElectionData = async (
             // evc will not show in compare mode
             if (!compareMode) {
               // fetch evcData if in refetch mode or no specific evc data
-              if (isRefetching || (!isRefetching && !newEvcData[level])) {
+              if (forceRefetching || (!forceRefetching && !newEvcData[level])) {
                 try {
                   const data = await fetchPresidentEvcData({
                     yearKey,
@@ -534,7 +542,7 @@ export const prepareElectionData = async (
 
             // handle map data
             // fetch mapData if in refetch mode or no specific mpa data
-            if (isRefetching || (!isRefetching && !newMapData[level])) {
+            if (forceRefetching || (!forceRefetching && !newMapData[level])) {
               try {
                 const data = await fetchPresidentMapData({
                   electionType,
@@ -546,6 +554,12 @@ export const prepareElectionData = async (
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
                 newLastUpdate = data.updatedAt || newLastUpdate
+
+                // handle currentYearElectionState
+                newCurrentYearElectionState = {
+                  isRunning: newMapData.isRunning,
+                  isStarted: newMapData.isStarted,
+                }
               } catch (error) {
                 console.error(error)
               }
@@ -555,13 +569,14 @@ export const prepareElectionData = async (
             newInfoboxData.electionData = newMapData[level]?.summary
             newInfoboxData.isRunning = newMapData.isRunning
             newInfoboxData.isStarted = newMapData.isStarted
+
             break
           case 1:
             // handle map data
             // fetch mapData if in refetch mode or no specific mpa data
             if (
-              isRefetching ||
-              (!isRefetching && !newMapData[level][countyCode])
+              forceRefetching ||
+              (!forceRefetching && !newMapData[level][countyCode])
             ) {
               try {
                 const data = await fetchPresidentMapData({
@@ -574,6 +589,12 @@ export const prepareElectionData = async (
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
                 newLastUpdate = data.updatedAt || newLastUpdate
+
+                // handle currentYearElectionState
+                newCurrentYearElectionState = {
+                  isRunning: newMapData.isRunning,
+                  isStarted: newMapData.isStarted,
+                }
               } catch (error) {
                 console.error(error)
               }
@@ -585,13 +606,14 @@ export const prepareElectionData = async (
             )
             newInfoboxData.isRunning = newMapData.isRunning
             newInfoboxData.isStarted = newMapData.isStarted
+
             break
           case 2:
             // handle map data
             // fetch mapData if in refetch mode or no specific mpa data
             if (
-              isRefetching ||
-              (!isRefetching && !newMapData[level][townCode])
+              forceRefetching ||
+              (!forceRefetching && !newMapData[level][townCode])
             ) {
               try {
                 const data = await fetchPresidentMapData({
@@ -604,6 +626,12 @@ export const prepareElectionData = async (
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
                 newLastUpdate = data.updatedAt || newLastUpdate
+
+                // handle currentYearElectionState
+                newCurrentYearElectionState = {
+                  isRunning: newMapData.isRunning,
+                  isStarted: newMapData.isStarted,
+                }
               } catch (error) {
                 console.error(error)
               }
@@ -643,7 +671,7 @@ export const prepareElectionData = async (
             // evc will not show in compare mode
             if (!compareMode) {
               // fetch evcData if in refetch mode or no specific evc data
-              if (isRefetching || (!isRefetching && !newEvcData[level])) {
+              if (forceRefetching || (!forceRefetching && !newEvcData[level])) {
                 try {
                   const data = await fetchMayorEvcData({
                     yearKey,
@@ -657,7 +685,7 @@ export const prepareElectionData = async (
 
             // handle map data
             // fetch mapData if in refetch mode or no specific mpa data
-            if (isRefetching || (!isRefetching && !newMapData[level])) {
+            if (forceRefetching || (!forceRefetching && !newMapData[level])) {
               try {
                 const data = await fetchMayorMapData({
                   electionType,
@@ -669,6 +697,12 @@ export const prepareElectionData = async (
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
                 newLastUpdate = data.updatedAt || newLastUpdate
+
+                // handle currentYearElectionState
+                newCurrentYearElectionState = {
+                  isRunning: newMapData.isRunning,
+                  isStarted: newMapData.isStarted,
+                }
               } catch (error) {
                 console.error(error)
               }
@@ -678,8 +712,8 @@ export const prepareElectionData = async (
             // handle map data
             // fetch mapData if in refetch mode or no specific mpa data
             if (
-              isRefetching ||
-              (!isRefetching && !newMapData[level][countyCode])
+              forceRefetching ||
+              (!forceRefetching && !newMapData[level][countyCode])
             ) {
               try {
                 const data = await fetchMayorMapData({
@@ -692,6 +726,12 @@ export const prepareElectionData = async (
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
                 newLastUpdate = data.updatedAt || newLastUpdate
+
+                // handle currentYearElectionState
+                newCurrentYearElectionState = {
+                  isRunning: newMapData.isRunning,
+                  isStarted: newMapData.isStarted,
+                }
               } catch (error) {
                 console.error(error)
               }
@@ -708,8 +748,8 @@ export const prepareElectionData = async (
             // handle map data
             // fetch mapData if in refetch mode or no specific mpa data
             if (
-              isRefetching ||
-              (!isRefetching && !newMapData[level][townCode])
+              forceRefetching ||
+              (!forceRefetching && !newMapData[level][townCode])
             ) {
               try {
                 const data = await fetchMayorMapData({
@@ -722,6 +762,12 @@ export const prepareElectionData = async (
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
                 newLastUpdate = data.updatedAt || newLastUpdate
+
+                // handle currentYearElectionState
+                newCurrentYearElectionState = {
+                  isRunning: newMapData.isRunning,
+                  isStarted: newMapData.isStarted,
+                }
               } catch (error) {
                 console.error(error)
               }
@@ -772,7 +818,7 @@ export const prepareElectionData = async (
               )
             ) {
               // fetch evcData if in refetch mode or no specific evc data
-              if (isRefetching || (!isRefetching && !newEvcData[level])) {
+              if (forceRefetching || (!forceRefetching && !newEvcData[level])) {
                 try {
                   const data = await fetchLegislatorEvcData({
                     yearKey,
@@ -789,7 +835,7 @@ export const prepareElectionData = async (
             if (!compareMode) {
               // handle all legislator seat data
               // fetch all seatData if in refetch mode or no specific seat data
-              if (isRefetching || (!isRefetching && !newSeatData.all)) {
+              if (forceRefetching || (!forceRefetching && !newSeatData.all)) {
                 try {
                   const data = await fetchLegislatorSeatData({
                     subtype: 'all',
@@ -808,7 +854,10 @@ export const prepareElectionData = async (
                 )
               ) {
                 // fetch seatData if in refetch mode or no specific seat data
-                if (isRefetching || (!isRefetching && !newSeatData[level])) {
+                if (
+                  forceRefetching ||
+                  (!forceRefetching && !newSeatData[level])
+                ) {
                   try {
                     const data = await fetchLegislatorSeatData({
                       subtype: subtypeKey,
@@ -830,7 +879,7 @@ export const prepareElectionData = async (
               )
             ) {
               // fetch mapData if in refetch mode or no specific map data
-              if (isRefetching || (!isRefetching && !newMapData[level])) {
+              if (forceRefetching || (!forceRefetching && !newMapData[level])) {
                 try {
                   const data = await fetchLegislatorMapData({
                     electionType,
@@ -844,6 +893,12 @@ export const prepareElectionData = async (
                   newMapData.isRunning = data.is_running
                   newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt || newLastUpdate
+
+                  // handle currentYearElectionState
+                  newCurrentYearElectionState = {
+                    isRunning: newMapData.isRunning,
+                    isStarted: newMapData.isStarted,
+                  }
                 } catch (error) {
                   console.error(error)
                 }
@@ -871,8 +926,8 @@ export const prepareElectionData = async (
             if (!compareMode && subtypeKey === 'normal') {
               // fetch evcData if in refetch mode or no specific evc data
               if (
-                isRefetching ||
-                (!isRefetching && !newEvcData[level][countyCode])
+                forceRefetching ||
+                (!forceRefetching && !newEvcData[level][countyCode])
               ) {
                 try {
                   const data = await fetchLegislatorEvcData({
@@ -897,8 +952,8 @@ export const prepareElectionData = async (
             if (!compareMode && subtypeKey === 'normal') {
               // fetch seatData if in refetch mode or no specific seat data
               if (
-                isRefetching ||
-                (!isRefetching && !newSeatData[level][countyCode])
+                forceRefetching ||
+                (!forceRefetching && !newSeatData[level][countyCode])
               ) {
                 try {
                   const data = await fetchLegislatorSeatData({
@@ -918,8 +973,8 @@ export const prepareElectionData = async (
             if (subtypeKey !== 'all') {
               // fetch mapData if in refetch mode or no specific map data
               if (
-                isRefetching ||
-                (!isRefetching && !newMapData[level][countyCode])
+                forceRefetching ||
+                (!forceRefetching && !newMapData[level][countyCode])
               ) {
                 try {
                   const data = await fetchLegislatorMapData({
@@ -934,6 +989,12 @@ export const prepareElectionData = async (
                   newMapData.isRunning = data.is_running
                   newMapData.isStarted = data.is_started
                   newLastUpdate = data.updatedAt || newLastUpdate
+
+                  // handle currentYearElectionState
+                  newCurrentYearElectionState = {
+                    isRunning: newMapData.isRunning,
+                    isStarted: newMapData.isStarted,
+                  }
                 } catch (error) {
                   console.error(error)
                 }
@@ -969,8 +1030,8 @@ export const prepareElectionData = async (
               const levelCode = subtypeKey === 'normal' ? areaCode : townCode
               // fetch mapData if in refetch mode or no specific map data
               if (
-                isRefetching ||
-                (!isRefetching && !newMapData[level][levelCode])
+                forceRefetching ||
+                (!forceRefetching && !newMapData[level][levelCode])
               ) {
                 try {
                   const data = await fetchLegislatorMapData({
@@ -984,6 +1045,12 @@ export const prepareElectionData = async (
                   newMapData[level][levelCode] = data
                   newMapData.isRunning = data.is_running
                   newMapData.isStarted = data.is_started
+
+                  // handle currentYearElectionState
+                  newCurrentYearElectionState = {
+                    isRunning: newMapData.isRunning,
+                    isStarted: newMapData.isStarted,
+                  }
                   newLastUpdate = data.updatedAt || newLastUpdate
                 } catch (error) {
                   console.error(error)
@@ -1036,8 +1103,8 @@ export const prepareElectionData = async (
             if (!compareMode) {
               // fetch evcData if in refetch mode or no specific evc data
               if (
-                isRefetching ||
-                (!isRefetching && !newEvcData[level][countyCode])
+                forceRefetching ||
+                (!forceRefetching && !newEvcData[level][countyCode])
               ) {
                 try {
                   const data = await fetchCouncilMemberEvcData({
@@ -1059,8 +1126,8 @@ export const prepareElectionData = async (
             if (!compareMode) {
               // fetch seatData if in refetch mode or no specific seat data
               if (
-                isRefetching ||
-                (!isRefetching && !newSeatData[level][countyCode])
+                forceRefetching ||
+                (!forceRefetching && !newSeatData[level][countyCode])
               ) {
                 try {
                   const data = await fetchCouncilMemberSeatData({
@@ -1077,8 +1144,8 @@ export const prepareElectionData = async (
             // handle map data
             // fetch mapData if in refetch mode or no specific map data
             if (
-              isRefetching ||
-              (!isRefetching && !newMapData[level][countyCode])
+              forceRefetching ||
+              (!forceRefetching && !newMapData[level][countyCode])
             ) {
               try {
                 const data = await fetchCouncilMemberMapData({
@@ -1092,6 +1159,12 @@ export const prepareElectionData = async (
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
                 newLastUpdate = data.updatedAt || newLastUpdate
+
+                // handle currentYearElectionState
+                newCurrentYearElectionState = {
+                  isRunning: newMapData.isRunning,
+                  isStarted: newMapData.isStarted,
+                }
               } catch (error) {
                 console.error(error)
               }
@@ -1107,7 +1180,10 @@ export const prepareElectionData = async (
           case 2:
             // handle map data
             // fetch mapData if in refetch mode or no specific map data
-            if (isRefetching || (!isRefetching && !newMapData[2][townCode])) {
+            if (
+              forceRefetching ||
+              (!forceRefetching && !newMapData[2][townCode])
+            ) {
               try {
                 const data = await fetchCouncilMemberMapData({
                   electionType,
@@ -1120,6 +1196,12 @@ export const prepareElectionData = async (
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
                 newLastUpdate = data.updatedAt || newLastUpdate
+
+                // handle currentYearElectionState
+                newCurrentYearElectionState = {
+                  isRunning: newMapData.isRunning,
+                  isStarted: newMapData.isStarted,
+                }
               } catch (error) {
                 console.error(error)
               }
@@ -1159,14 +1241,12 @@ export const prepareElectionData = async (
             // evc will not show in compare mode
             if (!compareMode) {
               // fetch evcData if in refetch mode or no specific evc data
-              console.warn('teststet?')
-              if (isRefetching || (!isRefetching && !newEvcData[level])) {
+              if (forceRefetching || (!forceRefetching && !newEvcData[level])) {
                 try {
                   const data = await fetchReferendumEvcData({
                     yearKey,
                   })
                   newEvcData[level] = data
-                  console.warn('log referen evc success', data)
                 } catch (error) {
                   console.error(error)
                 }
@@ -1175,7 +1255,7 @@ export const prepareElectionData = async (
 
             // handle map data
             // fetch mapData if in refetch mode or no specific map data
-            if (isRefetching || (!isRefetching && !newMapData[level])) {
+            if (forceRefetching || (!forceRefetching && !newMapData[level])) {
               try {
                 const data = await fetchReferendumMapData({
                   electionType,
@@ -1188,6 +1268,12 @@ export const prepareElectionData = async (
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
                 newLastUpdate = data.updatedAt || newLastUpdate
+
+                // handle currentYearElectionState
+                newCurrentYearElectionState = {
+                  isRunning: newMapData.isRunning,
+                  isStarted: newMapData.isStarted,
+                }
               } catch (error) {
                 console.error(error)
               }
@@ -1203,8 +1289,8 @@ export const prepareElectionData = async (
             // handle map data
             // fetch mapData if in refetch mode or no specific map data
             if (
-              isRefetching ||
-              (!isRefetching && !newMapData[level][countyCode])
+              forceRefetching ||
+              (!forceRefetching && !newMapData[level][countyCode])
             ) {
               try {
                 const data = await fetchReferendumMapData({
@@ -1218,6 +1304,12 @@ export const prepareElectionData = async (
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
                 newLastUpdate = data.updatedAt || newLastUpdate
+
+                // handle currentYearElectionState
+                newCurrentYearElectionState = {
+                  isRunning: newMapData.isRunning,
+                  isStarted: newMapData.isStarted,
+                }
               } catch (error) {
                 console.error(error)
               }
@@ -1235,8 +1327,8 @@ export const prepareElectionData = async (
             // handle map data
             // fetch mapData if in refetch mode or no specific map data
             if (
-              isRefetching ||
-              (!isRefetching && !newMapData[level][townCode])
+              forceRefetching ||
+              (!forceRefetching && !newMapData[level][townCode])
             ) {
               try {
                 const data = await fetchReferendumMapData({
@@ -1250,6 +1342,12 @@ export const prepareElectionData = async (
                 newMapData.isRunning = data.is_running
                 newMapData.isStarted = data.is_started
                 newLastUpdate = data.updatedAt || newLastUpdate
+
+                // handle currentYearElectionState
+                newCurrentYearElectionState = {
+                  isRunning: newMapData.isRunning,
+                  isStarted: newMapData.isStarted,
+                }
               } catch (error) {
                 console.error(error)
               }
@@ -1294,5 +1392,6 @@ export const prepareElectionData = async (
     newElectionData,
     newInfoboxData,
     newLastUpdate,
+    newCurrentYearElectionState,
   }
 }
