@@ -149,7 +149,7 @@ export const electionsConfig = [
           normal: '區域立法委員選舉',
           mountainIndigenous: '山地原住民立法委員選舉',
           plainIndigenous: '平地原住民立法委員選舉',
-          party: '不分區立法委選舉',
+          party: '不分區立法委員選舉',
           all: '立法委員選舉（總席次圖）',
         },
       },
