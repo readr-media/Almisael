@@ -9,8 +9,7 @@ const ReadrLogo = styled.a`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 42px;
-  height: auto;
+  height: 40px;
 
   > svg,
   img {
@@ -21,7 +20,7 @@ const ReadrLogo = styled.a`
 
   @media (min-width: 576px) {
     margin: 16px 24px;
-    width: 48px;
+    height: 48px;
   }
 `
 
@@ -29,7 +28,7 @@ const ReadrLogo = styled.a`
  * @param {Object} props
  * @param {React.ReactNode} [props.children]
  * @param {string} [props.href='https://www.readr.tw/']
- * @param {string} [props.iconStyle='original']
+ * @param {'original' | 'black' | 'white'} [props.iconStyle='original']
  * @param {boolean} [props.openNewTab=true]
  * @param {string} [props.className='readr-logo']
  * @param {import("react").MouseEventHandler} [props.onClick]
@@ -44,21 +43,6 @@ export default function Logo({
   className = 'readr-logo',
   onClick,
 }) {
-  let iconColor
-
-  switch (iconStyle) {
-    case 'original':
-      break
-    case 'black':
-      iconColor = '#000000'
-      break
-    case 'white':
-      iconColor = '#ffffff'
-      break
-    default:
-      break
-  }
-
   return (
     <ReadrLogo
       className={className}
@@ -68,7 +52,7 @@ export default function Logo({
       onClick={onClick}
       aria-label="前往 READr 首頁"
     >
-      {children ?? <ReadrIcon iconColor={iconColor} />}
+      {children ?? <ReadrIcon iconStyle={iconStyle} />}
     </ReadrLogo>
   )
 }

@@ -1,6 +1,6 @@
 {
   "name": "@readr-media/react-component",
-  "version": "2.1.5",
+  "version": "2.2.0",
   "description": "",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
