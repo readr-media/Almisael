@@ -63,7 +63,7 @@ export default function ComponentName() {
 
 | 名稱       | 資料型別          | 必須 | 預設值                    | 說明                                                                                                                                         |
 | ---------- | ----------------- | ---- | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| iconStyle  | String            |      | `"original"`              | 設定 Readr Logo (svg path) 顏色。因設計需求緣故，選項僅限填入：`"original"｜"black" ｜"white"`，若傳入其餘 string，則一律視為 `"original"`。 |
+| iconStyle  | `"original"` \| `"black"` \| `"white"`            |      | `"original"`              | 設定 Readr Logo (svg path) 顏色。因設計需求緣故，選項僅限填入：`"original"｜"black" ｜"white"`，若傳入其餘 string，則一律視為 `"original"`。 |
 | href       | String            |      | `"https://www.readr.tw/"` | 設定 Logo 點擊後連結頁面網址。                                                                                                               |
 | openNewTab | Boolean           |      | true                      | 設定點擊後是否另開分頁。true='target: "\_blank"', false='target: "\_self"',                                                                  |
 | className  | String            |      | `"readr-logo"`            | 自訂 className。如無傳入自訂 className，仍可透過 `.readr-logo` 更改 Logo 尺寸或背景/外框樣式。                                               |
