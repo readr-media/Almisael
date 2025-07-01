@@ -90,6 +90,7 @@ export const electionsConfig = [
       { name: '平地原住民', key: 'plainIndigenous', mobileOnly: false },
       { name: '不分區', key: 'party', mobileOnly: false },
       { name: '全國', key: 'all', mobileOnly: true },
+      { name: '罷免', key: 'recall-july', mobileOnly: false },
     ],
     years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }, { key: 2024 }],
     meta: {
@@ -99,6 +100,7 @@ export const electionsConfig = [
           mountainIndigenous: '山地原住民候選人',
           plainIndigenous: '平地原住民候選人',
           party: '不分區政黨',
+          'recall-july': '罷免候選人',
         },
       },
       map: {
@@ -107,6 +109,7 @@ export const electionsConfig = [
           mountainIndigenous: false,
           plainIndigenous: false,
           party: false,
+          'recall-july': true,
         },
         // Only normal type starts from county level.
         folderNames: {
@@ -130,6 +133,11 @@ export const electionsConfig = [
             1: 'county',
             2: 'town',
           },
+          'recall-july': {
+            0: 'country',
+            1: 'county',
+            2: 'constituency',
+          },
         },
         fileNames: {
           0: 'country',
@@ -144,6 +152,7 @@ export const electionsConfig = [
           plainIndigenous: '立法委員席次圖',
           party: '立法委員席次圖',
           all: '立法委員席次圖',
+          'recall-july': '立法委員席次圖',
         },
         componentTitle: {
           normal: '區域立法委員選舉',
@@ -151,6 +160,7 @@ export const electionsConfig = [
           plainIndigenous: '平地原住民立法委員選舉',
           party: '不分區立法委員選舉',
           all: '立法委員選舉（總席次圖）',
+          'recall-july': '大罷免選舉',
         },
       },
     },
