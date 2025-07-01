@@ -360,6 +360,7 @@ const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
   ) : (
     <></>
   )
+  console.log({ data })
 
   // check the type of InfoboxNote for the business logic of the note
   // use one of the note
@@ -633,7 +634,7 @@ const PartyLegislatorInfobox = ({ data, isRunning, isCurrentYear }) => {
   return (
     <InfoboxScrollWrapper>
       {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
-      {/* 
+      {/*
           Although all party legislator data should only contain one district to render,
           use map function to handle cause all legislator infobox data is filled in array.
        */}
@@ -709,6 +710,7 @@ const LegislatorInfobox = ({
 
   // separate all types for individual component to support extreme custom UI for each type
   switch (subtype.key) {
+    case 'recall-july':
     case 'normal':
       return (
         <NormalLegislatorInfobox
