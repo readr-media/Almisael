@@ -260,3 +260,8 @@ Infobox
 - 各地圖/篩選層級：全國 > 縣市 > 鄉鎮市區 > 村里 (選區為行政區)
 
 ## 新年度修改方式
+
+
+# 大罷免修改方式
+## 上了prod要刪除的資料
+`packages/election-map/utils/mockUtils.js` 這裡面的函式都應該要清除
