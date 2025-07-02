@@ -402,8 +402,10 @@ export const fetchLegislatorMapData = async ({
   let transformedSubtype
   switch (subtypeKey) {
     case 'normal':
-    case 'recall-july':
       transformedSubtype = 'normal'
+      break
+    case 'recall-july':
+      transformedSubtype = 'recall-july'
       break
     case 'mountainIndigenous':
       transformedSubtype = 'mountain-indigenous'

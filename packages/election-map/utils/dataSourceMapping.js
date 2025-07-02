@@ -17,8 +17,8 @@
 /** @type {RecallDataSourceMapping} */
 export const recallJulyDataSourceMapping = {
   sourceElectionType: 'legislator',
-  sourceSubtype: 'normal', // { name: '區域', key: 'normal', mobileOnly: false }
-  note: '暫時使用區域立委的資料，未來 API 更新後會移除此映射'
+  sourceSubtype: 'recall-july', // { name: '罷免', key: 'recall-july', mobileOnly: false }
+  note: '使用獨立的罷免資料源，API 已支援 recall-july 資料'
 }
 
 /**

@@ -891,9 +891,9 @@ export const prepareElectionData = async (
             }
 
             // handle map data
-            //only subtypes in 'mountainIndigenous', 'plainIndigenous' and 'party' show mapData in level 0
+            //subtypes 'normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous' and 'party' show mapData in level 0
             if (
-              ['mountainIndigenous', 'plainIndigenous', 'party'].includes(
+              ['normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous', 'party'].includes(
                 subtypeKey
               )
             ) {
@@ -931,9 +931,9 @@ export const prepareElectionData = async (
             }
 
             // handle infobox data
-            //only subtypes in 'mountainIndigenous', 'plainIndigenous' and 'party' show infoboxData in level 0
+            //subtypes 'normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous' and 'party' show infoboxData in level 0
             if (
-              ['mountainIndigenous', 'plainIndigenous', 'party'].includes(
+              ['normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous', 'party'].includes(
                 subtypeKey
               )
             ) {
