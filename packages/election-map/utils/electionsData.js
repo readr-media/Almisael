@@ -1075,8 +1075,8 @@ export const prepareElectionData = async (
             // handle map data
             // subtype 'all' won't show mapData
             if (subtypeKey !== 'all') {
-              // only subtype 'normal' use areaCode as level 2
-              const levelCode = subtypeKey === 'normal' ? areaCode : townCode
+              // only subtype 'normal' and 'recall-july' use areaCode as level 2
+              const levelCode = (subtypeKey === 'normal' || subtypeKey === 'recall-july') ? areaCode : townCode
               // fetch mapData if in refetch mode or no specific map data
               if (
                 forceRefetching ||
