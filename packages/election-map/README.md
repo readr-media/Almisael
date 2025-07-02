@@ -320,3 +320,15 @@ Infobox
   - 修復了 `Map.js` 中 `displayingDistricts` 邏輯，使 `recall-july` subType能正確顯示選區地圖和顏色。
   - 在縣市層級切換時，罷免選項現在能正確顯示與區域立委相同的地圖上色邏輯。
   - 修改位置：`Map.js` 第66行，將條件從 `subtype?.key === 'normal'` 擴展為 `(subtype?.key === 'normal' || subtype?.key === 'recall-july')`。
+
+- **fix(map): add recall-july support to area and village color functions**
+  - 修復了 `Map.js` 中 `getAreaColor` 和 `getVillageColor` 函數，讓 recall-july 在選區和村里層級也能正確顯示顏色。
+  - `getAreaColor` 函數（第504行）：擴展條件判斷支援 recall-july
+  - `getVillageColor` 函數（第536-537行，第583行）：更新註解和邏輯分支支援 recall-july
+
+- **fix(data): fix recall-july area code handling in data fetching**
+  - 修復了 `electionsData.js` 中 recall-july 選區編碼處理問題。
+  - 在 level 2 (選區層級) 資料獲取時，recall-july 現在也使用 `areaCode` (選區編碼) 而非 `townCode` (鄉鎮編碼)。
+  - 修改位置：`electionsData.js` 第1079行，確保 API URL 包含正確的選區編碼。
+  - 修復前：`/constituency/normal/.json` (缺少選區編碼)
+  - 修復後：`/constituency/normal/6500012.json` (包含選區編碼)
