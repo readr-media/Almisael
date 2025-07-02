@@ -1119,7 +1119,7 @@ export const prepareElectionData = async (
               newInfoboxData.electionData =
                 newMapData[1]?.[countyCode]?.districts?.filter((district) => {
                   const levelCode =
-                    subtypeKey === 'normal'
+                    (subtypeKey === 'normal' || subtypeKey === 'recall-july')
                       ? district.county + district.area
                       : district.county + district.town
                   return levelCode === levelControl.activeCode
@@ -1132,7 +1132,7 @@ export const prepareElectionData = async (
             // handle infobox data only
             // subtype 'all' won't show infoboxData
             if (subtypeKey !== 'all') {
-              const levelCode = subtypeKey === 'normal' ? areaCode : townCode
+              const levelCode = (subtypeKey === 'normal' || subtypeKey === 'recall-july') ? areaCode : townCode
               newInfoboxData.electionData =
                 newMapData[2][levelCode]?.districts.filter(
                   (district) =>

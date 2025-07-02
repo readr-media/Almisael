@@ -185,6 +185,7 @@ export const fetchLegislatorSeatData = async ({
       data = await loader.loadAllLegislatorData({ year: yearKey })
       break
     case 'normal':
+    case 'recall-july':
       data = await loader.loadAreaLegislatorData({ year: yearKey, countyCode })
       break
     case 'mountainIndigenous':
@@ -286,7 +287,7 @@ export const fetchLegislatorEvcData = async ({
   subtypeKey,
   district = '',
 }) => {
-  let subtype = subtypeKey === 'normal' ? 'district' : subtypeKey
+  let subtype = (subtypeKey === 'normal' || subtypeKey === 'recall-july') ? 'district' : subtypeKey
   const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadLegislatorData({
     year: yearKey,
@@ -401,6 +402,7 @@ export const fetchLegislatorMapData = async ({
   let transformedSubtype
   switch (subtypeKey) {
     case 'normal':
+    case 'recall-july':
       transformedSubtype = 'normal'
       break
     case 'mountainIndigenous':

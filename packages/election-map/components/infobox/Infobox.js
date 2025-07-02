@@ -360,7 +360,6 @@ const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
   ) : (
     <></>
   )
-  console.log({ data })
 
   // check the type of InfoboxNote for the business logic of the note
   // use one of the note

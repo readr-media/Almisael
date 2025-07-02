@@ -332,3 +332,20 @@ Infobox
   - 修改位置：`electionsData.js` 第1079行，確保 API URL 包含正確的選區編碼。
   - 修復前：`/constituency/normal/.json` (缺少選區編碼)
   - 修復後：`/constituency/normal/6500012.json` (包含選區編碼)
+
+### 2025-07-02: 修復罷免選舉InfoboxPanel資料顯示問題
+
+- **fix(data): fix recall-july subtype support in fetchElectionData functions**
+  - 修復了 `fetchElectionData.js` 中三個關鍵函數對 recall-july subtype 的支援問題，解決了當選舉條件是「罷免」時 infoboxPanel 沒有顯示詳細資訊的bug。
+  - `fetchLegislatorMapData` 函數（第403-405行）：在 switch 語句中新增 `recall-july` case，讓它與 `normal` 使用相同的 `transformedSubtype = 'normal'`
+  - `fetchLegislatorEvcData` 函數（第289行）：修改條件判斷從 `subtypeKey === 'normal'` 擴展為 `(subtypeKey === 'normal' || subtypeKey === 'recall-july')`
+  - `fetchLegislatorSeatData` 函數（第187-189行）：在 switch 語句中新增 `recall-july` case，使用與 `normal` 相同的 `loadAreaLegislatorData` 函數
+  - **問題根因**：這些函數缺少對 recall-july 的處理，導致 API URL 中的 `transformedSubtype` 為 `undefined`，造成資料獲取失敗
+  - **修復效果**：現在當使用者選擇罷免選舉並點擊地圖進入詳細層級時，infoboxPanel 能正確顯示詳細的候選人資訊和投票率資料
+
+- **fix(data): fix recall-july infobox data handling for level 2 and level 3**
+  - 修復了 `electionsData.js` 中 `prepareElectionData` 函數在 level 2 (選區) 和 level 3 (村里) 層級對 recall-july subtype 的 infobox 資料處理問題。
+  - **Level 2 修復**（第1122-1124行）：將條件從 `subtypeKey === 'normal'` 擴展為 `(subtypeKey === 'normal' || subtypeKey === 'recall-july')`，確保選區層級使用正確的 `district.county + district.area` 編碼邏輯
+  - **Level 3 修復**（第1135行）：將條件從 `subtypeKey === 'normal'` 擴展為 `(subtypeKey === 'normal' || subtypeKey === 'recall-july')`，確保村里層級使用正確的 `areaCode` 而非 `townCode`
+  - **問題根因**：level 2 和 level 3 的 infobox data 處理邏輯只檢查 normal subtype，導致 recall-july 無法正確過濾和顯示對應層級的選舉資料
+  - **修復效果**：現在罷免選舉在所有層級（縣市、選區、村里）都能正確顯示完整的 infoboxPanel 詳細資訊，包括候選人資料、投票率和得票情況
