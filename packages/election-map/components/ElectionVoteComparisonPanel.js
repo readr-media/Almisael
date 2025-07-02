@@ -77,6 +77,7 @@ const computeShouldShowEVC = (election, electionType, subtype) => {
     case 'legislator':
       switch (subtype.key) {
         case 'normal':
+        case 'recall-july':
           return (
             Array.isArray(election.districts) && !!election.districts.length
           )
@@ -130,7 +131,7 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
   // only councilMember and legislator with subtype 'normal' will have evcData for level 1
   if (
     electionType === 'councilMember' ||
-    (electionType === 'legislator' && subtype.key === 'normal')
+    (electionType === 'legislator' && (subtype.key === 'normal' || subtype.key === 'recall-july'))
   ) {
     election = evcData[1][countyCode]
   } else {

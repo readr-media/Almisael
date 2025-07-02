@@ -27,7 +27,7 @@ const fetchJson = async (url) => {
  */
 const fetchDistrictJson = async (electionType, currentSubType, currentYear) => {
   const mappingJsonPath =
-    electionType === 'legislator' && currentSubType.key === 'normal'
+    electionType === 'legislator' && (currentSubType.key === 'normal' || currentSubType.key === 'recall-july')
       ? `/district-mapping/district-with-area/${electionType}/${currentYear.key}/mapping.json`
       : '/district-mapping/district/mapping.json'
   const url = `${gcsBaseUrl}${mappingJsonPath}`

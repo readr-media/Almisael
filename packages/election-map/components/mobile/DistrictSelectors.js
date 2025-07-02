@@ -89,7 +89,7 @@ export default function DistrictSelectors() {
   const year = useAppSelector((state) => state.election.control.year)
 
   const isConstituency =
-    electionsType === 'legislator' && currentElectionSubType.key === 'normal'
+    electionsType === 'legislator' && (currentElectionSubType.key === 'normal' || currentElectionSubType.key === 'recall-july')
 
   const allTown = getAllTown(currentCountyCode)
 
@@ -157,7 +157,7 @@ export default function DistrictSelectors() {
       case 'councilMember':
         return [...districtMapping.sub]
       case 'legislator':
-        if (currentElectionSubType.key === 'normal') {
+        if (currentElectionSubType.key === 'normal' || currentElectionSubType.key === 'recall-july') {
           return [...districtMapping.sub]
         }
         if (currentElectionSubType.key === 'all') {

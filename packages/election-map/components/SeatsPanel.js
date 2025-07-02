@@ -87,7 +87,7 @@ export const SeatsPanel = ({ isMobile = false }) => {
      */
     const offText = '立法院總席次'
     meta.switchInfo = initialSwitchInfo
-    if (subtype.key === 'normal') {
+    if (subtype.key === 'normal' || subtype.key === 'recall-july') {
       data = switchOn ? seatData.all : seatData[1][countyCode]
       meta.wrapperTitle = seatMeta.wrapperTitle[subtype.key]
       meta.componentTitle = `${
