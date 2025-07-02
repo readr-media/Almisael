@@ -262,9 +262,27 @@ Infobox
 ## 新年度修改方式
 
 
-# 大罷免修改方式
-## 上了prod要刪除的資料
-`packages/election-map/utils/mockUtils.js` 這裡面的函式都應該要清除
+# 2025罷免功能架構說明
+
+## 資料源mapping機制
+
+為了支援罷免選舉功能，建立了彈性的資料源mapping機制：
+
+### 核心檔案
+- `utils/dataSourceMapping.js` - 配置檔案，定義 recall-july 到 legislator.normal 的資料mapping規則
+- `utils/DataSourceResolver.js` - 統一的資料源解析工具類，提供 API 參數準備和mapping檢查功能
+- `utils/mockUtils.js` - 向後相容性檔案，保持既有整合點的相容性
+
+### mapping邏輯
+目前 `recall-july` subType會：
+1. 在 UI 層面顯示為獨立的罷免選舉選項
+2. 在資料層面使用 `legislator.normal` (區域立委) 的資料
+3. 透過 `DataSourceResolver` 統一處理所有 API 呼叫的參數轉換
+
+### 未來升級路徑
+當 API 支援獨立的罷免資料後：
+1. 更新 `dataSourceMapping.js` 中的mapping配置
+2. 移除 `mockUtils.js` 檔案 (保留向後相容性)
 
 ---
 ## 開發紀錄
@@ -274,21 +292,31 @@ Infobox
 為了支援 2025 年 7 月的全國性罷免選舉，進行了以下修改：
 
 - **feat(election): add data source mapping for recall elections**
-  - 新增 `DataSourceResolver.js` 和 `dataSourceMapping.js`，建立了一個資料來源對應機制。
-  - 此機制允許將新的 `recall-july` 選舉類型，暫時對應到既有的 `legislator` (區域立委) 資料來源，以利前端開發，而無需等待後端 API 更新。
+  - 新增 `DataSourceResolver.js` 和 `dataSourceMapping.js`，建立彈性的資料來源mapping機制。
+  - 透過配置檔案方式，將 `recall-july` subType mapping到 `legislator.normal` 資料來源。
+  - 提供統一的 API 參數解析和mapping檢查功能，便於未來升級至獨立 API。
 
 - **feat(config): add 'recall-july' subtype to legislator election**
-  - 在 `electionsConfig.js` 中��將 `recall-july` 新增為 `legislator` 選舉的一個子類型。
-  - 這讓整個應用程式能識別這個新的選舉類型，並為其定義了名稱、地圖顏色和資料結構。
+  - 在 `electionsConfig.js` 中將 `recall-july` 新增為 `legislator` 選舉的subType。
+  - 配置完整的 folderNames、席次表標題和地圖顏色設定。
+  - 移除原本獨立的 recall-july 選舉類型配置，統一架構設計。
 
 - **feat(data): integrate recall-july subtype into data layer**
-  - 更新了核心的資料處理邏輯，包括 `useElectinData` hook 和 `electionsData.js` 等工具函式。
-  - 確保在使用 `DataSourceResolver` 的情況下，能正確地為 `recall-july` 子類型抓取、處理和儲存選舉資料。
+  - 更新 `useElectinData.js`、`electionsData.js` 和 `election-slice.js` 等核心資料處理邏輯。
+  - 所有 API 呼叫統一透過 `DataSourceResolver.prepareApiParams()` 處理參數轉換。
+  - 在 EVC 和席次資料層級支援 recall-july 的特殊邏輯處理。
 
 - **feat(ui): adapt components to support recall-july subtype**
-  - 修改了多個 UI 元件，使其能正確顯示 `recall-july` 子類型的資訊。
-  - 修正了 `Infobox.js` 中的渲染錯誤，並更新了 `Panels.js` 和相關的行動版元件，以確保 EVC 面板等功能可以正常運作。
+  - 更新 `ElectionVoteComparisonPanel.js`、`SeatsPanel.js` 等主要 UI 元件。
+  - 修改手機版選擇器 (`SeletorsContainer.js`、`DistrictSelectors.js` 等) 支援 recall-july。
+  - 更新地圖相關邏輯 (`useDistrictMapping.js`、`DistrictWithAreaSelectors.js`) 確保選區顯示正確。
 
 - **docs: update documentation for recall election feature**
   - 在 `README.md` 中新增了關於此功能的說明，並提醒在功能上線正式環境後，需要移除暫時性的 `mockUtils.js` 檔案。
 
+### 2025-07-02: 修復罷免選舉地圖顏色顯示問題
+
+- **fix(map): add recall-july support to map district display logic**
+  - 修復了 `Map.js` 中 `displayingDistricts` 邏輯，使 `recall-july` subType能正確顯示選區地圖和顏色。
+  - 在縣市層級切換時，罷免選項現在能正確顯示與區域立委相同的地圖上色邏輯。
+  - 修改位置：`Map.js` 第66行，將條件從 `subtype?.key === 'normal'` 擴展為 `(subtype?.key === 'normal' || subtype?.key === 'recall-july')`。
