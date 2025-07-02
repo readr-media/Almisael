@@ -149,7 +149,10 @@ const legislatorInfoboxData = (
   infoboxType
 ) => {
   // normal level 0 點擊地圖看更多
-  if (subtype?.key === 'normal' && level === 0) {
+  if (
+    (subtype?.key === 'normal' || subtype?.key === 'recall-july') &&
+    level === 0
+  ) {
     if (infoboxType === 'mobile') {
       return ''
     }
@@ -159,6 +162,7 @@ const legislatorInfoboxData = (
   if (!isStarted) {
     return '目前無票數資料'
   }
+  console.log({ data })
 
   if (!data || (Array.isArray(data) && data.length === 0)) {
     if (year === currentYear && level === 3) {
