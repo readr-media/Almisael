@@ -500,8 +500,8 @@ export const Map = ({
       return defaultColor
     }
 
-    // Only normal legislator will show area map and use this function.
-    if (electionType === 'legislator') {
+    // Only normal legislator and recall-july will show area map and use this function.
+    if (electionType === 'legislator' && (subtype.key === 'normal' || subtype.key === 'recall-july')) {
       // Try to find the area candidates from the countyCode map data.
       const areaCandidates = electionData[1][countyCode]?.districts?.find(
         (district) => district.county + district.area === mapAreaCode
@@ -533,7 +533,7 @@ export const Map = ({
       return defaultColor
     }
 
-    // since only normal legislator will use areaCode to define color and other
+    // since only normal legislator and recall-july will use areaCode to define color and other
     // legislator subtype won't show any color, separate the legislator type if sufficient.
     if (electionType !== 'legislator') {
       const townCode = mapVillCode.slice(0, -3)
@@ -580,7 +580,7 @@ export const Map = ({
           return color
         }
       }
-    } else {
+    } else if (subtype.key === 'normal' || subtype.key === 'recall-july') {
       // If the level is 3 (village level), only show the color for the active villCode
       if (
         levelControl.level === 3 &&
