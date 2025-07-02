@@ -34,7 +34,7 @@
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | defaultElectionType   | [ElectionType](https://github.com/readr-media/Almisael/blob/main/packages/election-map/consts/electionsConfig.js#L7)        | 預設的選舉制度                                                                           |
 | currentYear           | number (年份)                                                                                                               | 選舉的年份                                                                               |
-| electionsConfig       | [ElectionConfig](https://github.com/readr-media/Almisael/blob/main/packages/election-map/consts/electionsConfig.js#L52-L57) | 各個選制的設定值，包含中英文名稱、選舉年份、子選舉類別和各個 Panels 對應的 metadata      |
+| electionsConfig       | [ElectionConfig](https://github.com/readr-media/Almisael/blob/main/packages/election-map/consts/electionsConfig.js#L52-L57) | 各個選制的設定值，包含中英文��稱、選舉年份、子選舉類別和各個 Panels 對應的 metadata      |
 | defaultElectionConfig | [ElectionConfig](https://github.com/readr-media/Almisael/blob/main/packages/election-map/consts/electionsConfig.js#L52-L57) | 預設的選舉設定值                                                                         |
 | countyMappingData     | Object                                                                                                                      | 縣市中英文名稱和代碼對照表，主要用來與 EVC 和 SeatChart 等外部元件溝通時轉換縣市單位使用 |
 
@@ -48,8 +48,8 @@
 
 選舉模板的資料主要分成三大類，分別是 map、seat、evc 三種：
 
-- map: 提供地圖、infobox 顯示資訊使用，各個選制都一定會有資料，名稱取為 map 是因為資料結構的設計是以地圖為出發點下去設計，而 infobox 是剛好可以透過同一份資料來顯示，以 2022 年縣市首長的縣市層級為例，其 [country.json](https://storage.googleapis.com/whoareyou-gcs.readr.tw/elections-dev/2022/mayor/map/country/country.json) 中包含了全國縣市的縣市首長選舉資料，在地圖顯示全國層級的時候就可以透過這個資料來呈現各縣市勝選政黨的顏色，而在此時因為縣市首長沒有全國性的資料所以會顯示 "點擊地圖看更多資料" ; 如果在地圖點擊台北市的話，將會取得 [63000.json](https://storage.googleapis.com/whoareyou-gcs.readr.tw/elections-dev/2022/mayor/map/county/63000.json) 台北市的資料，而台北市的資料中會有台北市各個鄉鎮市區的投票狀況，以供地圖使用，而 infobox 在這個層級則是需要呈現台北市整體的市長選舉狀況，因此其實是從前一個層級取得的 country.json 中取出台北市的資料來顯示，在理解上相對來說會複雜一些。
-- seat: 提供席次表使用，只有縣市議員、立法委員等有席次的選制才會有此資料，資料只會有子選制層級，沒有像 map 有到鄉鎮市區或是村裡層級。
+- map: 提供地圖、infobox 顯示資訊使用，各個選制都一定會有資料，名稱取為 map 是因為資料結構的設計��以地圖為出發點下去設計，而 infobox 是剛好可以透過同一份資料來顯示，以 2022 年縣市首長的縣市層級為例，其 [country.json](https://storage.googleapis.com/whoareyou-gcs.readr.tw/elections-dev/2022/mayor/map/country/country.json) 中包含了全國縣市的縣市首長選舉資料，在地圖顯示全國層級的時候就可以透過這個資料來呈現各縣市勝選政黨的顏色，而在此時因為縣市首長沒有全國性的資料所以會顯示 "點擊地圖看更多資料" ; 如果在地圖點擊台北市的話，將會取得 [63000.json](https://storage.googleapis.com/whoareyou-gcs.readr.tw/elections-dev/2022/mayor/map/county/63000.json) 台北市的資料，而台北市的資料中會有台北市各個鄉鎮市區的投票狀況，以供地圖使用，而 infobox 在這個層級則是需要呈現台北市整體的市長選舉狀況，因此其實是從前一個層級取得的 country.json 中取出台北市的資料來顯示，在理解上相對來說會複雜一些。
+- seat: 提供席次表使用，只有縣市議員、立法委員等有席次的選制才會有此資料，資料只會有子選制層級，沒有��� map 有到鄉鎮市區或是村裡層級。
 - evc: 提供票數比較元件使用，各選制都有，資料只會有子選制層級，沒有像 map 有到鄉鎮市區或是村裡層級。
 
 > 如果仔細看三者的資料，會發現只有 map json 中有包含了 `isRunning` 和 `is_started` 的資料，選舉模板在即時開票的狀況下會依照這兩個 properties 來決定 infobox 所實際顯示的內容 (像是尚未開票、開票中、開票結束等提示)，後續提到的即時開票三個階段會再詳述。
@@ -58,7 +58,7 @@
 
 #### useElectionData
 
-`useElectionData` 為 react custom hook，主要用來拿取各選制下所有 Panel 對應的資料，並控制 refetch 機制確保開票時能及時更新最新的開票資訊。
+`useElectionData` 為 react custom hook，主要用來拿取各選制下所有 Panel 對應的資料��並控制 refetch 機制確保開票時能及時更新最新的開票資訊。
 
 拿取三大資料的 function 為放在 `utils/electionsData` 中的 [prepareElectionData](https://github.com/readr-media/Almisael/blob/main/packages/election-map/utils/electionsData.js#L484)，其中根據每個選舉類別和層級去拿取對應的資料。
 
@@ -97,7 +97,7 @@ note 的用法
 
 資料：
 EVC (Election Votes Comparison，票數比較元件)，是由選舉模板和政見追蹤平台(whoareyou)兩個頁面所共用，因此不像 map 和 seat 資料都是以行政區碼為 json 檔名，evc 的檔案大致分為 all 和縣市英文名兩者，視下面講到的最高層級是否有多個而定。
-evc 主要為顯示目前選制下的整體的投票資訊，只會有該選制下最高層級的資料，以下列出所有選制的層級：
+evc 主要為���示目前選制下的整體的投票資訊，只會有該選制下最高層級的資料，以下列出所有選制的層級：
 
 | 選制                   | 最高層級   | EVC 檔名          |
 | ---------------------- | ---------- | ----------------- |
@@ -169,7 +169,7 @@ Infobox
 
 ## 選制
 
-這個專案涵蓋台灣各種類別的大選，因為各個選制之間有需多差異但又需要共用同樣的架構來呈現，因此造成程式碼在處理選制上有許多 case by case 的處理方式，而對於選制本身有基本的了解有助於維護並開發新的功能，以下逐一介紹選制並把各選制特殊的商業邏輯一併補上。
+這個專案涵蓋台灣各種類別的大選，因為各個選制之間有需多差異但又需要共用同樣的架構來呈現，因此造成程式碼在處理選制上有許多 case by case 的處理方式，而對於選制本身有基本的了解有助於維護並開發新的功能，以下逐一介紹。
 
 如對任一選舉有疑惑可以查看[中選會選舉資料庫](https://db.cec.gov.tw/ElecTable/Election?type=President)以查看各年度選舉資料長相。
 
@@ -177,7 +177,7 @@ Infobox
 
 總統選制為全國選民統一針對多組候選人(總統候選人＋副總統候選人為一組)進行單組勝出的投票。
 
-> 專案中一組候選人統一以提名政黨為其政黨名稱。
+> ���案中一組候選人統一以提名政黨為其政黨名稱。
 
 - 選舉範圍：全國
 - 勝出人數：全國一組
@@ -233,7 +233,7 @@ Infobox
 
 區域縣市議員由各縣市向下劃分 1 到多個選區，選區由一到多個鄉鎮市區所組成，不像區域立法委員，區域縣市議員的選區沒有將鄉鎮市區拆分成兩個以上的選區。
 
-> 雖然選區是由鄉鎮市區組成，但在開發當下因時程較趕以及不夠熟悉地圖資料的合成等技術，因此在選舉模板地圖版中仍是以行政區為主要的瀏覽方式，未來若有時間應將區域縣市議員改為選區地圖的呈現方式，不過後端生成的選舉資料也會需要重新產生。
+> 雖然選區是由鄉鎮市區組成，但在開發當下因時程較趕以及不夠熟悉地圖資料的合成等技術，因此在選舉模板地圖版中仍是以行政區為主要的瀏覽方式，未來若有時間應將區域縣市議員改為選區地圖的呈現方式，不過後端生成的選舉���料也會需要重新產生。
 
 各縣市內的各選區內的選民針對該選區的多位候選人進行多人勝出(視各選區分配席次而有所不同)的投票，也就是單一選區多人勝選。
 
@@ -249,7 +249,7 @@ Infobox
 
 - 選舉範圍：具有山地或平地原住民選區的縣市中的選區
 - 勝出人數：各選區 1 至多人
-- 各地圖/篩選層級：縣市 > 鄉鎮市區 > 村里 (皆為行政區)
+- 各地圖/篩選層級���縣市 > 鄉鎮市區 > 村里 (皆為行政區)
 
 ### 全國性公投
 
@@ -265,3 +265,30 @@ Infobox
 # 大罷免修改方式
 ## 上了prod要刪除的資料
 `packages/election-map/utils/mockUtils.js` 這裡面的函式都應該要清除
+
+---
+## 開發紀錄
+
+### 2025-07-01: 全國性罷免功能開發
+
+為了支援 2025 年 7 月的全國性罷免選舉，進行了以下修改：
+
+- **feat(election): add data source mapping for recall elections**
+  - 新增 `DataSourceResolver.js` 和 `dataSourceMapping.js`，建立了一個資料來源對應機制。
+  - 此機制允許將新的 `recall-july` 選舉類型，暫時對應到既有的 `legislator` (區域立委) 資料來源，以利前端開發，而無需等待後端 API 更新。
+
+- **feat(config): add 'recall-july' subtype to legislator election**
+  - 在 `electionsConfig.js` 中��將 `recall-july` 新增為 `legislator` 選舉的一個子類型。
+  - 這讓整個應用程式能識別這個新的選舉類型，並為其定義了名稱、地圖顏色和資料結構。
+
+- **feat(data): integrate recall-july subtype into data layer**
+  - 更新了核心的資料處理邏輯，包括 `useElectinData` hook 和 `electionsData.js` 等工具函式。
+  - 確保在使用 `DataSourceResolver` 的情況下，能正確地為 `recall-july` 子類型抓取、處理和儲存選舉資料。
+
+- **feat(ui): adapt components to support recall-july subtype**
+  - 修改了多個 UI 元件，使其能正確顯示 `recall-july` 子類型的資訊。
+  - 修正了 `Infobox.js` 中的渲染錯誤，並更新了 `Panels.js` 和相關的行動版元件，以確保 EVC 面板等功能可以正常運作。
+
+- **docs: update documentation for recall election feature**
+  - 在 `README.md` 中新增了關於此功能的說明，並提醒在功能上線正式環境後，需要移除暫時性的 `mockUtils.js` 檔案。
+
