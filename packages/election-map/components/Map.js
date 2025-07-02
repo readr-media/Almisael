@@ -63,7 +63,7 @@ export const Map = ({
   const subtype = useAppSelector((state) => state.election.control.subtype)
   const displayingDistricts = useMemo(() => {
     let displayingTowns, displayingAreas, displayingVillages
-    if (electionType === 'legislator' && subtype?.key === 'normal') {
+    if (electionType === 'legislator' && (subtype?.key === 'normal' || subtype?.key === 'recall-july')) {
       if (districtMapping.districtWithArea[year.key]) {
         const districtWithAreaMapping =
           districtMapping.districtWithArea[year.key]
