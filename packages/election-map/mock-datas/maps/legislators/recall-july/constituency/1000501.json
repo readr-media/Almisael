@@ -1,0 +1,3044 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮苑東里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.89,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 55.77,
+          "candVictor": "*",
+          "tks": 792,
+          "profRate": 21.68,
+          "agreeRate": 62.23,
+          "disagreeRate": 37.77
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮苑南里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 70.04,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 49.4,
+          "candVictor": " ",
+          "tks": 455,
+          "profRate": 77.74,
+          "agreeRate": 35.86,
+          "disagreeRate": 64.14
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮苑北里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.24,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 48.48,
+          "candVictor": " ",
+          "tks": 287,
+          "profRate": 96.19,
+          "agreeRate": 38.44,
+          "disagreeRate": 61.56
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮西平里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 72.67,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 45.74,
+          "candVictor": " ",
+          "tks": 473,
+          "profRate": 31.77,
+          "agreeRate": 7.0,
+          "disagreeRate": 93.0
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮苑港里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 73.09,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 45.78,
+          "candVictor": " ",
+          "tks": 358,
+          "profRate": 75.52,
+          "agreeRate": 16.88,
+          "disagreeRate": 83.12
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮西勢里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.37,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 49.93,
+          "candVictor": " ",
+          "tks": 705,
+          "profRate": 72.16,
+          "agreeRate": 33.43,
+          "disagreeRate": 66.57
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮海岸里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 72.32,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 53.64,
+          "candVictor": "*",
+          "tks": 368,
+          "profRate": 66.41,
+          "agreeRate": 65.04,
+          "disagreeRate": 34.96
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮房裡里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 73.79,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 51.36,
+          "candVictor": "*",
+          "tks": 753,
+          "profRate": 60.52,
+          "agreeRate": 51.22,
+          "disagreeRate": 48.78
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮客庄里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 73.38,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 50.38,
+          "candVictor": "*",
+          "tks": 1379,
+          "profRate": 4.55,
+          "agreeRate": 82.81,
+          "disagreeRate": 17.19
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮中正里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 71.99,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 49.52,
+          "candVictor": " ",
+          "tks": 725,
+          "profRate": 29.99,
+          "agreeRate": 56.71,
+          "disagreeRate": 43.29
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮苑坑里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 67.88,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 41.86,
+          "candVictor": " ",
+          "tks": 247,
+          "profRate": 19.82,
+          "agreeRate": 44.49,
+          "disagreeRate": 55.51
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮水坡里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 68.21,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 51.26,
+          "candVictor": "*",
+          "tks": 203,
+          "profRate": 55.65,
+          "agreeRate": 89.93,
+          "disagreeRate": 10.07
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮新復里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 75.31,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 54.52,
+          "candVictor": "*",
+          "tks": 501,
+          "profRate": 28.4,
+          "agreeRate": 24.99,
+          "disagreeRate": 75.01
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮山脚里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.35,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 54.64,
+          "candVictor": "*",
+          "tks": 477,
+          "profRate": 13.29,
+          "agreeRate": 82.55,
+          "disagreeRate": 17.45
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮舊社里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 70.68,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 51.84,
+          "candVictor": "*",
+          "tks": 607,
+          "profRate": 92.17,
+          "agreeRate": 80.62,
+          "disagreeRate": 19.38
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮福田里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 70.47,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 54.74,
+          "candVictor": "*",
+          "tks": 433,
+          "profRate": 55.86,
+          "agreeRate": 26.03,
+          "disagreeRate": 73.97
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮石鎮里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 71.4,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 69.03,
+          "candVictor": "*",
+          "tks": 243,
+          "profRate": 0.47,
+          "agreeRate": 56.6,
+          "disagreeRate": 43.4
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮蕉埔里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 75.44,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 64.8,
+          "candVictor": "*",
+          "tks": 348,
+          "profRate": 52.86,
+          "agreeRate": 99.74,
+          "disagreeRate": 0.26
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮南勢里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 68.78,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 55.12,
+          "candVictor": "*",
+          "tks": 237,
+          "profRate": 37.01,
+          "agreeRate": 9.74,
+          "disagreeRate": 90.26
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮泰田里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 72.84,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 50.27,
+          "candVictor": "*",
+          "tks": 556,
+          "profRate": 36.45,
+          "agreeRate": 89.32,
+          "disagreeRate": 10.68
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮上舘里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 71.4,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 57.85,
+          "candVictor": "*",
+          "tks": 604,
+          "profRate": 69.61,
+          "agreeRate": 66.21,
+          "disagreeRate": 33.79
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮玉田里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 72.5,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 60.96,
+          "candVictor": "*",
+          "tks": 726,
+          "profRate": 36.64,
+          "agreeRate": 61.99,
+          "disagreeRate": 38.01
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮社苓里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 71.66,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 53.73,
+          "candVictor": "*",
+          "tks": 871,
+          "profRate": 21.05,
+          "agreeRate": 20.34,
+          "disagreeRate": 79.66
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮山柑里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 70.35,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 62.4,
+          "candVictor": "*",
+          "tks": 566,
+          "profRate": 16.28,
+          "agreeRate": 49.35,
+          "disagreeRate": 50.65
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 苑裡鎮田心里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "020",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 73.82,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 60.35,
+          "candVictor": "*",
+          "tks": 799,
+          "profRate": 18.2,
+          "agreeRate": 30.95,
+          "disagreeRate": 69.05
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮通東里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.39,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 50.15,
+          "candVictor": "*",
+          "tks": 339,
+          "profRate": 63.24,
+          "agreeRate": 52.83,
+          "disagreeRate": 47.17
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮通西里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 74.21,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 52.36,
+          "candVictor": "*",
+          "tks": 676,
+          "profRate": 80.88,
+          "agreeRate": 8.43,
+          "disagreeRate": 91.57
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮平元里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 76.3,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 49.28,
+          "candVictor": " ",
+          "tks": 618,
+          "profRate": 25.3,
+          "agreeRate": 67.92,
+          "disagreeRate": 32.08
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮平安里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 72.97,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 50.72,
+          "candVictor": "*",
+          "tks": 670,
+          "profRate": 37.83,
+          "agreeRate": 54.04,
+          "disagreeRate": 45.96
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮圳頭里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 71.65,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 53.8,
+          "candVictor": "*",
+          "tks": 248,
+          "profRate": 15.14,
+          "agreeRate": 88.49,
+          "disagreeRate": 11.51
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮梅南里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 71.78,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 50.4,
+          "candVictor": "*",
+          "tks": 500,
+          "profRate": 23.24,
+          "agreeRate": 2.47,
+          "disagreeRate": 97.53
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮通南里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 69.34,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 51.09,
+          "candVictor": "*",
+          "tks": 842,
+          "profRate": 17.45,
+          "agreeRate": 70.56,
+          "disagreeRate": 29.44
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮內湖里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 70.13,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 53.62,
+          "candVictor": "*",
+          "tks": 629,
+          "profRate": 22.87,
+          "agreeRate": 62.52,
+          "disagreeRate": 37.48
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮楓樹里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 64.74,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 65.73,
+          "candVictor": "*",
+          "tks": 163,
+          "profRate": 66.62,
+          "agreeRate": 63.0,
+          "disagreeRate": 37.0
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮烏眉里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 68.36,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 68.76,
+          "candVictor": "*",
+          "tks": 361,
+          "profRate": 45.84,
+          "agreeRate": 65.85,
+          "disagreeRate": 34.15
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮福龍里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 65.16,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 66.97,
+          "candVictor": "*",
+          "tks": 148,
+          "profRate": 28.74,
+          "agreeRate": 63.71,
+          "disagreeRate": 36.29
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮福源里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 67.09,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 55.04,
+          "candVictor": "*",
+          "tks": 251,
+          "profRate": 48.78,
+          "agreeRate": 38.7,
+          "disagreeRate": 61.3
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮城北里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 72.31,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 59.42,
+          "candVictor": "*",
+          "tks": 246,
+          "profRate": 99.43,
+          "agreeRate": 71.13,
+          "disagreeRate": 28.87
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮城南里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 67.49,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 56.34,
+          "candVictor": "*",
+          "tks": 311,
+          "profRate": 93.4,
+          "agreeRate": 92.99,
+          "disagreeRate": 7.01
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮南和里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 73.55,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 51.0,
+          "candVictor": "*",
+          "tks": 254,
+          "profRate": 55.03,
+          "agreeRate": 65.73,
+          "disagreeRate": 34.27
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮福興里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 68.93,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 63.28,
+          "candVictor": "*",
+          "tks": 243,
+          "profRate": 54.4,
+          "agreeRate": 33.62,
+          "disagreeRate": 66.38
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮坪頂里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 69.76,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 59.82,
+          "candVictor": "*",
+          "tks": 460,
+          "profRate": 64.12,
+          "agreeRate": 49.66,
+          "disagreeRate": 50.34
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮五南里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 69.8,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 58.46,
+          "candVictor": "*",
+          "tks": 501,
+          "profRate": 94.13,
+          "agreeRate": 18.89,
+          "disagreeRate": 81.11
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮五北里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 70.04,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 51.41,
+          "candVictor": "*",
+          "tks": 439,
+          "profRate": 36.79,
+          "agreeRate": 86.68,
+          "disagreeRate": 13.32
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮通灣里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 66.99,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 62.48,
+          "candVictor": "*",
+          "tks": 841,
+          "profRate": 36.59,
+          "agreeRate": 74.62,
+          "disagreeRate": 25.38
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮新埔里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 66.93,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 54.01,
+          "candVictor": "*",
+          "tks": 357,
+          "profRate": 56.76,
+          "agreeRate": 24.68,
+          "disagreeRate": 75.32
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮內島里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 67.5,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 52.9,
+          "candVictor": "*",
+          "tks": 237,
+          "profRate": 68.1,
+          "agreeRate": 41.52,
+          "disagreeRate": 58.48
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮白東里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 68.12,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 62.11,
+          "candVictor": "*",
+          "tks": 541,
+          "profRate": 16.16,
+          "agreeRate": 75.99,
+          "disagreeRate": 24.01
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 通霄鎮白西里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "030",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 70.78,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 62.33,
+          "candVictor": "*",
+          "tks": 283,
+          "profRate": 86.68,
+          "agreeRate": 84.91,
+          "disagreeRate": 15.09
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮竹南里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.48,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 54.13,
+          "candVictor": "*",
+          "tks": 701,
+          "profRate": 26.36,
+          "agreeRate": 31.88,
+          "disagreeRate": 68.12
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮照南里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 76.17,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 51.56,
+          "candVictor": "*",
+          "tks": 1209,
+          "profRate": 60.48,
+          "agreeRate": 9.63,
+          "disagreeRate": 90.37
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮正南里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 66.9,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 47.5,
+          "candVictor": " ",
+          "tks": 798,
+          "profRate": 39.82,
+          "agreeRate": 89.59,
+          "disagreeRate": 10.41
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮新南里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 74.97,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 50.63,
+          "candVictor": "*",
+          "tks": 1778,
+          "profRate": 59.26,
+          "agreeRate": 94.84,
+          "disagreeRate": 5.16
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮大厝里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 76.43,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 54.97,
+          "candVictor": "*",
+          "tks": 2013,
+          "profRate": 46.76,
+          "agreeRate": 53.14,
+          "disagreeRate": 46.86
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮營盤里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.76,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 51.97,
+          "candVictor": "*",
+          "tks": 1264,
+          "profRate": 71.86,
+          "agreeRate": 7.39,
+          "disagreeRate": 92.61
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮聖福里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 75.37,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 52.33,
+          "candVictor": "*",
+          "tks": 1214,
+          "profRate": 56.51,
+          "agreeRate": 88.76,
+          "disagreeRate": 11.24
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮竹興里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 68.82,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 53.8,
+          "candVictor": "*",
+          "tks": 1098,
+          "profRate": 10.41,
+          "agreeRate": 33.63,
+          "disagreeRate": 66.37
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮龍山里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 75.97,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 59.86,
+          "candVictor": "*",
+          "tks": 999,
+          "profRate": 51.31,
+          "agreeRate": 30.17,
+          "disagreeRate": 69.83
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮天文里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 72.57,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 59.09,
+          "candVictor": "*",
+          "tks": 861,
+          "profRate": 1.42,
+          "agreeRate": 48.56,
+          "disagreeRate": 51.44
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮龍鳳里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 71.67,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 56.9,
+          "candVictor": "*",
+          "tks": 759,
+          "profRate": 52.71,
+          "agreeRate": 27.43,
+          "disagreeRate": 72.57
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮山佳里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 71.32,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 55.31,
+          "candVictor": "*",
+          "tks": 1770,
+          "profRate": 24.19,
+          "agreeRate": 62.67,
+          "disagreeRate": 37.33
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮佳興里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 74.68,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 51.61,
+          "candVictor": "*",
+          "tks": 1123,
+          "profRate": 75.4,
+          "agreeRate": 14.66,
+          "disagreeRate": 85.34
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮中港里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 73.37,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 46.78,
+          "candVictor": " ",
+          "tks": 334,
+          "profRate": 84.49,
+          "agreeRate": 14.77,
+          "disagreeRate": 85.23
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮中華里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 76.41,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 52.21,
+          "candVictor": "*",
+          "tks": 992,
+          "profRate": 43.59,
+          "agreeRate": 49.57,
+          "disagreeRate": 50.43
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮中英里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 70.65,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 55.52,
+          "candVictor": "*",
+          "tks": 553,
+          "profRate": 86.64,
+          "agreeRate": 61.84,
+          "disagreeRate": 38.16
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮中美里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 70.87,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 52.67,
+          "candVictor": "*",
+          "tks": 642,
+          "profRate": 74.43,
+          "agreeRate": 82.88,
+          "disagreeRate": 17.12
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮開元里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 73.7,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 49.2,
+          "candVictor": " ",
+          "tks": 430,
+          "profRate": 19.55,
+          "agreeRate": 86.4,
+          "disagreeRate": 13.6
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮海口里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 72.5,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 52.53,
+          "candVictor": "*",
+          "tks": 1504,
+          "profRate": 61.57,
+          "agreeRate": 17.51,
+          "disagreeRate": 82.49
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮港墘里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 73.97,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 53.54,
+          "candVictor": "*",
+          "tks": 816,
+          "profRate": 50.47,
+          "agreeRate": 25.25,
+          "disagreeRate": 74.75
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮公舘里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 69.81,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 57.1,
+          "candVictor": "*",
+          "tks": 422,
+          "profRate": 31.38,
+          "agreeRate": 26.91,
+          "disagreeRate": 73.09
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮大埔里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 70.86,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 52.08,
+          "candVictor": "*",
+          "tks": 1825,
+          "profRate": 32.07,
+          "agreeRate": 93.05,
+          "disagreeRate": 6.95
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮頂埔里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 71.09,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 52.62,
+          "candVictor": "*",
+          "tks": 713,
+          "profRate": 54.88,
+          "agreeRate": 75.2,
+          "disagreeRate": 24.8
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮崎頂里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 71.8,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 57.4,
+          "candVictor": "*",
+          "tks": 1431,
+          "profRate": 67.58,
+          "agreeRate": 60.39,
+          "disagreeRate": 39.61
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 竹南鎮公義里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "040",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 72.46,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 46.64,
+          "candVictor": " ",
+          "tks": 312,
+          "profRate": 59.9,
+          "agreeRate": 24.77,
+          "disagreeRate": 75.23
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮南龍里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 69.51,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 59.89,
+          "candVictor": "*",
+          "tks": 521,
+          "profRate": 60.96,
+          "agreeRate": 71.77,
+          "disagreeRate": 28.23
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮中龍里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 76.49,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 52.37,
+          "candVictor": "*",
+          "tks": 265,
+          "profRate": 86.06,
+          "agreeRate": 71.44,
+          "disagreeRate": 28.56
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮北龍里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 73.81,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 52.73,
+          "candVictor": "*",
+          "tks": 445,
+          "profRate": 87.63,
+          "agreeRate": 62.54,
+          "disagreeRate": 37.46
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮大庄里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 69.53,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 55.67,
+          "candVictor": "*",
+          "tks": 1513,
+          "profRate": 46.17,
+          "agreeRate": 10.13,
+          "disagreeRate": 89.87
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮東明里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 68.06,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 57.26,
+          "candVictor": "*",
+          "tks": 505,
+          "profRate": 87.51,
+          "agreeRate": 42.95,
+          "disagreeRate": 57.05
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮灣寶里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 65.24,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 54.62,
+          "candVictor": "*",
+          "tks": 390,
+          "profRate": 30.92,
+          "agreeRate": 69.72,
+          "disagreeRate": 30.28
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮海寶里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 65.98,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 56.58,
+          "candVictor": "*",
+          "tks": 331,
+          "profRate": 63.88,
+          "agreeRate": 20.24,
+          "disagreeRate": 79.76
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮豐富里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 73.72,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 64.24,
+          "candVictor": "*",
+          "tks": 521,
+          "profRate": 97.13,
+          "agreeRate": 36.84,
+          "disagreeRate": 63.16
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮校椅里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 72.01,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 61.72,
+          "candVictor": "*",
+          "tks": 516,
+          "profRate": 52.83,
+          "agreeRate": 15.3,
+          "disagreeRate": 84.7
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮埔頂里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 70.49,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 60.19,
+          "candVictor": "*",
+          "tks": 1010,
+          "profRate": 14.61,
+          "agreeRate": 61.64,
+          "disagreeRate": 38.36
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮新民里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 70.59,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 62.5,
+          "candVictor": "*",
+          "tks": 520,
+          "profRate": 63.15,
+          "agreeRate": 36.51,
+          "disagreeRate": 63.49
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮復興里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 71.67,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 61.63,
+          "candVictor": "*",
+          "tks": 273,
+          "profRate": 86.95,
+          "agreeRate": 21.72,
+          "disagreeRate": 78.28
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮大山里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 67.28,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 57.72,
+          "candVictor": "*",
+          "tks": 512,
+          "profRate": 15.67,
+          "agreeRate": 40.07,
+          "disagreeRate": 59.93
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮溪洲里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 68.51,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 62.37,
+          "candVictor": "*",
+          "tks": 870,
+          "profRate": 40.61,
+          "agreeRate": 72.51,
+          "disagreeRate": 27.49
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮外埔里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 59.52,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 64.65,
+          "candVictor": "*",
+          "tks": 342,
+          "profRate": 4.63,
+          "agreeRate": 20.55,
+          "disagreeRate": 79.45
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮海埔里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 64.14,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 54.84,
+          "candVictor": "*",
+          "tks": 283,
+          "profRate": 0.4,
+          "agreeRate": 51.62,
+          "disagreeRate": 48.38
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮秀水里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 69.92,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 60.98,
+          "candVictor": "*",
+          "tks": 261,
+          "profRate": 68.13,
+          "agreeRate": 87.64,
+          "disagreeRate": 12.36
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮水尾里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 67.91,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 57.99,
+          "candVictor": "*",
+          "tks": 363,
+          "profRate": 56.27,
+          "agreeRate": 60.58,
+          "disagreeRate": 39.42
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮龍津里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 67.85,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 58.91,
+          "candVictor": "*",
+          "tks": 205,
+          "profRate": 77.0,
+          "agreeRate": 18.86,
+          "disagreeRate": 81.14
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮龍坑里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 64.05,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 52.82,
+          "candVictor": "*",
+          "tks": 384,
+          "profRate": 40.11,
+          "agreeRate": 40.09,
+          "disagreeRate": 59.91
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮福寧里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 66.32,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 63.57,
+          "candVictor": "*",
+          "tks": 274,
+          "profRate": 89.53,
+          "agreeRate": 49.92,
+          "disagreeRate": 50.08
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮中和里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 62.41,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 65.54,
+          "candVictor": "*",
+          "tks": 367,
+          "profRate": 59.9,
+          "agreeRate": 97.95,
+          "disagreeRate": 2.05
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 後龍鎮南港里",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "060",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 63.69,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 62.61,
+          "candVictor": "*",
+          "tks": 437,
+          "profRate": 17.93,
+          "agreeRate": 26.22,
+          "disagreeRate": 73.78
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 銅鑼鄉銅鑼村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "100",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.34,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 64.93,
+          "candVictor": "*",
+          "tks": 1833,
+          "profRate": 66.42,
+          "agreeRate": 63.79,
+          "disagreeRate": 36.21
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 銅鑼鄉樟樹村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "100",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 71.85,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 60.35,
+          "candVictor": "*",
+          "tks": 484,
+          "profRate": 67.42,
+          "agreeRate": 64.59,
+          "disagreeRate": 35.41
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 銅鑼鄉九湖村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "100",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 71.3,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 70.47,
+          "candVictor": "*",
+          "tks": 506,
+          "profRate": 6.03,
+          "agreeRate": 36.33,
+          "disagreeRate": 63.67
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 銅鑼鄉福興村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "100",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 71.07,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 76.18,
+          "candVictor": "*",
+          "tks": 467,
+          "profRate": 99.75,
+          "agreeRate": 34.52,
+          "disagreeRate": 65.48
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 銅鑼鄉朝陽村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "100",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 73.16,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 64.74,
+          "candVictor": "*",
+          "tks": 694,
+          "profRate": 38.91,
+          "agreeRate": 16.03,
+          "disagreeRate": 83.97
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 銅鑼鄉竹森村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "100",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 68.73,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 68.62,
+          "candVictor": "*",
+          "tks": 433,
+          "profRate": 69.89,
+          "agreeRate": 33.14,
+          "disagreeRate": 66.86
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 銅鑼鄉中平村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "100",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 68.94,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 59.2,
+          "candVictor": "*",
+          "tks": 1142,
+          "profRate": 84.84,
+          "agreeRate": 96.91,
+          "disagreeRate": 3.09
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 銅鑼鄉興隆村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "100",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 68.73,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 61.14,
+          "candVictor": "*",
+          "tks": 203,
+          "profRate": 93.11,
+          "agreeRate": 5.99,
+          "disagreeRate": 94.01
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 銅鑼鄉盛隆村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "100",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 72.64,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 67.14,
+          "candVictor": "*",
+          "tks": 190,
+          "profRate": 70.15,
+          "agreeRate": 44.67,
+          "disagreeRate": 55.33
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 銅鑼鄉新隆村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "100",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.13,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 74.72,
+          "candVictor": "*",
+          "tks": 266,
+          "profRate": 64.53,
+          "agreeRate": 82.5,
+          "disagreeRate": 17.5
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 三義鄉廣盛村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "130",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.68,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 67.47,
+          "candVictor": "*",
+          "tks": 1699,
+          "profRate": 69.68,
+          "agreeRate": 95.45,
+          "disagreeRate": 4.55
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 三義鄉勝興村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "130",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 73.85,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 63.69,
+          "candVictor": "*",
+          "tks": 1368,
+          "profRate": 65.68,
+          "agreeRate": 40.23,
+          "disagreeRate": 59.77
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 三義鄉双潭村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "130",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 74.6,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 65.94,
+          "candVictor": "*",
+          "tks": 573,
+          "profRate": 4.9,
+          "agreeRate": 52.53,
+          "disagreeRate": 47.47
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 三義鄉双湖村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "130",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.25,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 64.91,
+          "candVictor": "*",
+          "tks": 777,
+          "profRate": 97.65,
+          "agreeRate": 65.67,
+          "disagreeRate": 34.33
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 三義鄉西湖村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "130",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 76.5,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 73.52,
+          "candVictor": "*",
+          "tks": 722,
+          "profRate": 8.91,
+          "agreeRate": 64.41,
+          "disagreeRate": 35.59
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 三義鄉龍騰村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "130",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 77.23,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 78.32,
+          "candVictor": "*",
+          "tks": 224,
+          "profRate": 21.84,
+          "agreeRate": 83.4,
+          "disagreeRate": 16.6
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 三義鄉鯉魚潭村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "130",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 72.7,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 61.19,
+          "candVictor": "*",
+          "tks": 503,
+          "profRate": 0.02,
+          "agreeRate": 3.22,
+          "disagreeRate": 96.78
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 西湖鄉高埔村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "140",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 70.78,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 75.2,
+          "candVictor": "*",
+          "tks": 276,
+          "profRate": 86.54,
+          "agreeRate": 74.54,
+          "disagreeRate": 25.46
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 西湖鄉下埔村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "140",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 68.65,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 77.65,
+          "candVictor": "*",
+          "tks": 271,
+          "profRate": 73.01,
+          "agreeRate": 4.66,
+          "disagreeRate": 95.34
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 西湖鄉五湖村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "140",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 67.8,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 68.35,
+          "candVictor": "*",
+          "tks": 324,
+          "profRate": 17.72,
+          "agreeRate": 97.96,
+          "disagreeRate": 2.04
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 西湖鄉四湖村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "140",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 69.65,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 74.29,
+          "candVictor": "*",
+          "tks": 286,
+          "profRate": 38.83,
+          "agreeRate": 59.38,
+          "disagreeRate": 40.62
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 西湖鄉三湖村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "140",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 70.47,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 68.97,
+          "candVictor": "*",
+          "tks": 389,
+          "profRate": 1.99,
+          "agreeRate": 90.45,
+          "disagreeRate": 9.55
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 西湖鄉龍洞村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "140",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 71.5,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 72.89,
+          "candVictor": "*",
+          "tks": 207,
+          "profRate": 70.13,
+          "agreeRate": 28.19,
+          "disagreeRate": 71.81
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 西湖鄉金獅村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "140",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 69.48,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 69.81,
+          "candVictor": "*",
+          "tks": 215,
+          "profRate": 38.68,
+          "agreeRate": 60.98,
+          "disagreeRate": 39.02
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 西湖鄉湖東村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "140",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 69.0,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 67.89,
+          "candVictor": "*",
+          "tks": 463,
+          "profRate": 73.69,
+          "agreeRate": 83.25,
+          "disagreeRate": 16.75
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 西湖鄉二湖村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "140",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 68.24,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 71.5,
+          "candVictor": "*",
+          "tks": 286,
+          "profRate": 60.89,
+          "agreeRate": 3.34,
+          "disagreeRate": 96.66
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 造橋鄉造橋村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "150",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 69.07,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 65.92,
+          "candVictor": "*",
+          "tks": 797,
+          "profRate": 94.26,
+          "agreeRate": 11.78,
+          "disagreeRate": 88.22
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 造橋鄉平興村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "150",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 70.82,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 73.98,
+          "candVictor": "*",
+          "tks": 199,
+          "profRate": 18.4,
+          "agreeRate": 71.51,
+          "disagreeRate": 28.49
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 造橋鄉豐湖村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "150",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 74.25,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 67.53,
+          "candVictor": "*",
+          "tks": 443,
+          "profRate": 77.94,
+          "agreeRate": 63.71,
+          "disagreeRate": 36.29
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 造橋鄉大西村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "150",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 70.27,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 61.25,
+          "candVictor": "*",
+          "tks": 1263,
+          "profRate": 55.71,
+          "agreeRate": 34.24,
+          "disagreeRate": 65.76
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 造橋鄉錦水村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "150",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 71.9,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 68.17,
+          "candVictor": "*",
+          "tks": 212,
+          "profRate": 85.68,
+          "agreeRate": 66.28,
+          "disagreeRate": 33.72
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 造橋鄉大龍村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "150",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 73.36,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 63.96,
+          "candVictor": "*",
+          "tks": 197,
+          "profRate": 81.99,
+          "agreeRate": 92.97,
+          "disagreeRate": 7.03
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 造橋鄉朝陽村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "150",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 70.89,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 60.92,
+          "candVictor": "*",
+          "tks": 488,
+          "profRate": 62.01,
+          "agreeRate": 47.18,
+          "disagreeRate": 52.82
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 造橋鄉談文村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "150",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 67.1,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 57.25,
+          "candVictor": "*",
+          "tks": 308,
+          "profRate": 6.13,
+          "agreeRate": 31.06,
+          "disagreeRate": 68.94
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第01選區 造橋鄉龍昇村",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": "150",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 69.09,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 49.28,
+          "candVictor": " ",
+          "tks": 273,
+          "profRate": 37.63,
+          "agreeRate": 44.67,
+          "disagreeRate": 55.33
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

@@ -1,0 +1,3205 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "臺東縣 第01選區 臺東市文化里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 60.46,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 34.36,
+          "candVictor": " ",
+          "tks": 301,
+          "profRate": 78.59,
+          "agreeRate": 28.64,
+          "disagreeRate": 71.36
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市中華里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 67.5,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 31.6,
+          "candVictor": " ",
+          "tks": 365,
+          "profRate": 6.47,
+          "agreeRate": 61.53,
+          "disagreeRate": 38.47
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市中山里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 71.14,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 26.99,
+          "candVictor": " ",
+          "tks": 312,
+          "profRate": 76.87,
+          "agreeRate": 12.0,
+          "disagreeRate": 88.0
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市中正里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 69.67,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 32.52,
+          "candVictor": " ",
+          "tks": 426,
+          "profRate": 93.28,
+          "agreeRate": 17.64,
+          "disagreeRate": 82.36
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市成功里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 67.8,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 35.43,
+          "candVictor": " ",
+          "tks": 388,
+          "profRate": 94.58,
+          "agreeRate": 10.44,
+          "disagreeRate": 89.56
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市建國里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 63.87,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 36.0,
+          "candVictor": "*",
+          "tks": 369,
+          "profRate": 3.01,
+          "agreeRate": 12.45,
+          "disagreeRate": 87.55
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市民族里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 71.72,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 33.55,
+          "candVictor": " ",
+          "tks": 505,
+          "profRate": 98.11,
+          "agreeRate": 86.2,
+          "disagreeRate": 13.8
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市自強里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.48,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 36.83,
+          "candVictor": "*",
+          "tks": 724,
+          "profRate": 3.19,
+          "agreeRate": 38.41,
+          "disagreeRate": 61.59
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市中心里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 71.54,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 37.2,
+          "candVictor": "*",
+          "tks": 599,
+          "profRate": 5.89,
+          "agreeRate": 26.76,
+          "disagreeRate": 73.24
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市馬蘭里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 69.3,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 39.78,
+          "candVictor": "*",
+          "tks": 510,
+          "profRate": 24.0,
+          "agreeRate": 53.13,
+          "disagreeRate": 46.87
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市民生里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 72.14,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 35.65,
+          "candVictor": "*",
+          "tks": 630,
+          "profRate": 11.68,
+          "agreeRate": 64.05,
+          "disagreeRate": 35.95
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市寶桑里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 67.78,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 33.99,
+          "candVictor": " ",
+          "tks": 243,
+          "profRate": 20.83,
+          "agreeRate": 61.17,
+          "disagreeRate": 38.83
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市仁和里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "047",
+      "type": "normal",
+      "profRate": 68.29,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 37.64,
+          "candVictor": "*",
+          "tks": 638,
+          "profRate": 51.44,
+          "agreeRate": 56.74,
+          "disagreeRate": 43.26
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市新生里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.65,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 34.92,
+          "candVictor": "*",
+          "tks": 688,
+          "profRate": 46.06,
+          "agreeRate": 31.09,
+          "disagreeRate": 68.91
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市南榮里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 70.68,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 37.73,
+          "candVictor": "*",
+          "tks": 415,
+          "profRate": 31.16,
+          "agreeRate": 67.77,
+          "disagreeRate": 32.23
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市岩灣里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 66.69,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 39.45,
+          "candVictor": "*",
+          "tks": 460,
+          "profRate": 99.19,
+          "agreeRate": 46.04,
+          "disagreeRate": 53.96
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市卑南里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 74.2,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 31.1,
+          "candVictor": " ",
+          "tks": 590,
+          "profRate": 31.69,
+          "agreeRate": 72.86,
+          "disagreeRate": 27.14
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市南王里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 68.74,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 39.45,
+          "candVictor": "*",
+          "tks": 471,
+          "profRate": 97.93,
+          "agreeRate": 84.13,
+          "disagreeRate": 15.87
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市富岡里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 60.81,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 37.45,
+          "candVictor": "*",
+          "tks": 312,
+          "profRate": 33.16,
+          "agreeRate": 3.39,
+          "disagreeRate": 96.61
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市新興里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 65.98,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 34.29,
+          "candVictor": " ",
+          "tks": 263,
+          "profRate": 27.3,
+          "agreeRate": 97.85,
+          "disagreeRate": 2.15
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市東海里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 72.14,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 38.76,
+          "candVictor": "*",
+          "tks": 488,
+          "profRate": 62.32,
+          "agreeRate": 94.43,
+          "disagreeRate": 5.57
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市豐樂里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 70.39,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 30.46,
+          "candVictor": " ",
+          "tks": 258,
+          "profRate": 25.57,
+          "agreeRate": 25.89,
+          "disagreeRate": 74.11
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市光明里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 68.3,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 37.31,
+          "candVictor": "*",
+          "tks": 516,
+          "profRate": 79.79,
+          "agreeRate": 82.99,
+          "disagreeRate": 17.01
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市豐年里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 66.2,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 34.61,
+          "candVictor": "*",
+          "tks": 460,
+          "profRate": 84.27,
+          "agreeRate": 86.3,
+          "disagreeRate": 13.7
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市康樂里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 66.7,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 29.55,
+          "candVictor": " ",
+          "tks": 211,
+          "profRate": 8.52,
+          "agreeRate": 33.46,
+          "disagreeRate": 66.54
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市永樂里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 70.3,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 34.74,
+          "candVictor": " ",
+          "tks": 452,
+          "profRate": 84.82,
+          "agreeRate": 1.52,
+          "disagreeRate": 98.48
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市豐安里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "048",
+      "type": "normal",
+      "profRate": 69.43,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 36.84,
+          "candVictor": "*",
+          "tks": 603,
+          "profRate": 88.9,
+          "agreeRate": 43.89,
+          "disagreeRate": 56.11
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市豐榮里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 67.36,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 38.64,
+          "candVictor": "*",
+          "tks": 643,
+          "profRate": 81.23,
+          "agreeRate": 80.86,
+          "disagreeRate": 19.14
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市豐盛里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "049",
+      "type": "normal",
+      "profRate": 71.08,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 36.53,
+          "candVictor": "*",
+          "tks": 694,
+          "profRate": 54.5,
+          "agreeRate": 67.97,
+          "disagreeRate": 32.03
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市豐谷里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 67.18,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 37.55,
+          "candVictor": "*",
+          "tks": 602,
+          "profRate": 40.94,
+          "agreeRate": 22.27,
+          "disagreeRate": 77.73
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市豐里里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 69.59,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 28.31,
+          "candVictor": " ",
+          "tks": 340,
+          "profRate": 27.14,
+          "agreeRate": 34.03,
+          "disagreeRate": 65.97
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市豐原里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "041",
+      "type": "normal",
+      "profRate": 67.52,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 29.21,
+          "candVictor": " ",
+          "tks": 210,
+          "profRate": 23.16,
+          "agreeRate": 53.46,
+          "disagreeRate": 46.54
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市豐田里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 67.45,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 31.03,
+          "candVictor": " ",
+          "tks": 382,
+          "profRate": 25.08,
+          "agreeRate": 47.11,
+          "disagreeRate": 52.89
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市新園里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 62.73,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 30.06,
+          "candVictor": " ",
+          "tks": 153,
+          "profRate": 62.87,
+          "agreeRate": 22.03,
+          "disagreeRate": 77.97
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市建和里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "042",
+      "type": "normal",
+      "profRate": 59.45,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 40.73,
+          "candVictor": "*",
+          "tks": 156,
+          "profRate": 17.34,
+          "agreeRate": 94.37,
+          "disagreeRate": 5.63
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市建興里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "043",
+      "type": "normal",
+      "profRate": 69.99,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 31.02,
+          "candVictor": " ",
+          "tks": 228,
+          "profRate": 98.18,
+          "agreeRate": 43.2,
+          "disagreeRate": 56.8
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市知本里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "045",
+      "type": "normal",
+      "profRate": 66.67,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 32.0,
+          "candVictor": " ",
+          "tks": 287,
+          "profRate": 68.58,
+          "agreeRate": 17.81,
+          "disagreeRate": 82.19
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 臺東市建農里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "010",
+      "vill": "046",
+      "type": "normal",
+      "profRate": 58.77,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 39.88,
+          "candVictor": "*",
+          "tks": 270,
+          "profRate": 65.28,
+          "agreeRate": 92.16,
+          "disagreeRate": 7.84
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 成功鎮信義里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "020",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 52.97,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 36.02,
+          "candVictor": "*",
+          "tks": 76,
+          "profRate": 96.86,
+          "agreeRate": 8.62,
+          "disagreeRate": 91.38
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 成功鎮和平里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "020",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 59.12,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 26.25,
+          "candVictor": " ",
+          "tks": 21,
+          "profRate": 7.19,
+          "agreeRate": 80.91,
+          "disagreeRate": 19.09
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 成功鎮忠仁里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "020",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 62.15,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 40.72,
+          "candVictor": "*",
+          "tks": 384,
+          "profRate": 3.44,
+          "agreeRate": 89.32,
+          "disagreeRate": 10.68
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 成功鎮忠智里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "020",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 64.26,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 40.5,
+          "candVictor": "*",
+          "tks": 390,
+          "profRate": 76.32,
+          "agreeRate": 52.22,
+          "disagreeRate": 47.78
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 成功鎮三民里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "020",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 60.86,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 45.23,
+          "candVictor": "*",
+          "tks": 299,
+          "profRate": 30.25,
+          "agreeRate": 15.02,
+          "disagreeRate": 84.98
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 成功鎮三仙里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "020",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 52.28,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 34.9,
+          "candVictor": "*",
+          "tks": 67,
+          "profRate": 79.29,
+          "agreeRate": 74.25,
+          "disagreeRate": 25.75
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 成功鎮忠孝里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "020",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 50.95,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 30.82,
+          "candVictor": " ",
+          "tks": 49,
+          "profRate": 80.78,
+          "agreeRate": 53.55,
+          "disagreeRate": 46.45
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 成功鎮博愛里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "020",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 61.4,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 25.71,
+          "candVictor": " ",
+          "tks": 9,
+          "profRate": 38.45,
+          "agreeRate": 65.79,
+          "disagreeRate": 34.21
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 關山鎮里壠里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "030",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 62.01,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 28.4,
+          "candVictor": " ",
+          "tks": 209,
+          "profRate": 48.64,
+          "agreeRate": 46.41,
+          "disagreeRate": 53.59
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 關山鎮中福里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "030",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 71.26,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 23.11,
+          "candVictor": " ",
+          "tks": 107,
+          "profRate": 8.39,
+          "agreeRate": 0.17,
+          "disagreeRate": 99.83
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 關山鎮新福里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "030",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 68.37,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 28.86,
+          "candVictor": " ",
+          "tks": 114,
+          "profRate": 44.87,
+          "agreeRate": 93.89,
+          "disagreeRate": 6.11
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 關山鎮豐泉里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "030",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 66.89,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 31.99,
+          "candVictor": " ",
+          "tks": 191,
+          "profRate": 72.35,
+          "agreeRate": 66.08,
+          "disagreeRate": 33.92
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 關山鎮月眉里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "030",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 58.96,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 29.22,
+          "candVictor": "*",
+          "tks": 90,
+          "profRate": 81.56,
+          "agreeRate": 79.17,
+          "disagreeRate": 20.83
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 關山鎮德高里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "030",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 67.69,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 21.34,
+          "candVictor": " ",
+          "tks": 143,
+          "profRate": 67.31,
+          "agreeRate": 16.29,
+          "disagreeRate": 83.71
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 關山鎮電光里",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "030",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 51.38,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 23.66,
+          "candVictor": " ",
+          "tks": 22,
+          "profRate": 71.25,
+          "agreeRate": 43.13,
+          "disagreeRate": 56.87
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉賓朗村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 69.39,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 27.69,
+          "candVictor": " ",
+          "tks": 291,
+          "profRate": 76.08,
+          "agreeRate": 26.09,
+          "disagreeRate": 73.91
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉美農村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 64.48,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 25.59,
+          "candVictor": " ",
+          "tks": 151,
+          "profRate": 60.43,
+          "agreeRate": 65.46,
+          "disagreeRate": 34.54
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉初鹿村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 67.18,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 31.02,
+          "candVictor": " ",
+          "tks": 161,
+          "profRate": 80.69,
+          "agreeRate": 98.64,
+          "disagreeRate": 1.36
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉明峰村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 62.38,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 32.73,
+          "candVictor": " ",
+          "tks": 162,
+          "profRate": 90.54,
+          "agreeRate": 86.75,
+          "disagreeRate": 13.25
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉嘉豐村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 56.58,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 26.19,
+          "candVictor": " ",
+          "tks": 22,
+          "profRate": 32.04,
+          "agreeRate": 6.51,
+          "disagreeRate": 93.49
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉太平村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 65.5,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 39.88,
+          "candVictor": "*",
+          "tks": 583,
+          "profRate": 95.24,
+          "agreeRate": 37.82,
+          "disagreeRate": 62.18
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉泰安村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 65.22,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 39.4,
+          "candVictor": "*",
+          "tks": 145,
+          "profRate": 52.98,
+          "agreeRate": 22.08,
+          "disagreeRate": 77.92
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉利嘉村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 66.39,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 32.77,
+          "candVictor": " ",
+          "tks": 78,
+          "profRate": 55.56,
+          "agreeRate": 14.03,
+          "disagreeRate": 85.97
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉東興村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 57.98,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 44.78,
+          "candVictor": "*",
+          "tks": 30,
+          "profRate": 10.95,
+          "agreeRate": 11.77,
+          "disagreeRate": 88.23
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉溫泉村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 64.77,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 24.41,
+          "candVictor": " ",
+          "tks": 145,
+          "profRate": 73.94,
+          "agreeRate": 2.25,
+          "disagreeRate": 97.75
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉富山村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 61.62,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 46.78,
+          "candVictor": "*",
+          "tks": 80,
+          "profRate": 63.2,
+          "agreeRate": 51.14,
+          "disagreeRate": 48.86
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉富源村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 63.85,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 28.72,
+          "candVictor": " ",
+          "tks": 54,
+          "profRate": 35.89,
+          "agreeRate": 27.71,
+          "disagreeRate": 72.29
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 卑南鄉利吉村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "040",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 67.39,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 38.31,
+          "candVictor": " ",
+          "tks": 59,
+          "profRate": 26.11,
+          "agreeRate": 64.43,
+          "disagreeRate": 35.57
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 鹿野鄉鹿野村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "050",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 62.18,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 35.28,
+          "candVictor": " ",
+          "tks": 133,
+          "profRate": 53.25,
+          "agreeRate": 0.41,
+          "disagreeRate": 99.59
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 鹿野鄉龍田村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "050",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 64.09,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 23.39,
+          "candVictor": " ",
+          "tks": 138,
+          "profRate": 5.83,
+          "agreeRate": 11.2,
+          "disagreeRate": 88.8
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 鹿野鄉永安村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "050",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 60.86,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 29.73,
+          "candVictor": "*",
+          "tks": 165,
+          "profRate": 63.88,
+          "agreeRate": 91.39,
+          "disagreeRate": 8.61
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 鹿野鄉瑞隆村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "050",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 55.09,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 35.05,
+          "candVictor": " ",
+          "tks": 109,
+          "profRate": 58.91,
+          "agreeRate": 67.75,
+          "disagreeRate": 32.25
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 鹿野鄉瑞源村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "050",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 65.52,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 28.71,
+          "candVictor": " ",
+          "tks": 87,
+          "profRate": 73.81,
+          "agreeRate": 70.77,
+          "disagreeRate": 29.23
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 鹿野鄉瑞和村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "050",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 64.86,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 26.46,
+          "candVictor": " ",
+          "tks": 50,
+          "profRate": 94.26,
+          "agreeRate": 71.4,
+          "disagreeRate": 28.6
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 鹿野鄉瑞豐村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "050",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 65.23,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 20.98,
+          "candVictor": " ",
+          "tks": 103,
+          "profRate": 59.94,
+          "agreeRate": 67.4,
+          "disagreeRate": 32.6
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 池上鄉福原村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "060",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 65.71,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 33.4,
+          "candVictor": "*",
+          "tks": 351,
+          "profRate": 85.91,
+          "agreeRate": 7.55,
+          "disagreeRate": 92.45
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 池上鄉福文村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "060",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 60.87,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 40.98,
+          "candVictor": "*",
+          "tks": 193,
+          "profRate": 29.88,
+          "agreeRate": 48.58,
+          "disagreeRate": 51.42
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 池上鄉慶豐村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "060",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 56.85,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 35.79,
+          "candVictor": "*",
+          "tks": 107,
+          "profRate": 49.86,
+          "agreeRate": 91.75,
+          "disagreeRate": 8.25
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 池上鄉大坡村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "060",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 58.89,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 44.23,
+          "candVictor": "*",
+          "tks": 23,
+          "profRate": 80.17,
+          "agreeRate": 13.89,
+          "disagreeRate": 86.11
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 池上鄉大埔村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "060",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 66.76,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 27.98,
+          "candVictor": " ",
+          "tks": 68,
+          "profRate": 40.12,
+          "agreeRate": 64.9,
+          "disagreeRate": 35.1
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 池上鄉新興村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "060",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 56.21,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 33.42,
+          "candVictor": " ",
+          "tks": 123,
+          "profRate": 20.89,
+          "agreeRate": 60.78,
+          "disagreeRate": 39.22
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 池上鄉錦園村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "060",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 57.95,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 32.95,
+          "candVictor": "*",
+          "tks": 57,
+          "profRate": 9.46,
+          "agreeRate": 58.67,
+          "disagreeRate": 41.33
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 池上鄉萬安村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "060",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 59.35,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 20.86,
+          "candVictor": " ",
+          "tks": 34,
+          "profRate": 54.17,
+          "agreeRate": 82.17,
+          "disagreeRate": 17.83
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 池上鄉富興村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "060",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 57.38,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 44.2,
+          "candVictor": "*",
+          "tks": 61,
+          "profRate": 41.78,
+          "agreeRate": 26.26,
+          "disagreeRate": 73.74
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 池上鄉振興村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "060",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 57.14,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 26.39,
+          "candVictor": " ",
+          "tks": 19,
+          "profRate": 83.6,
+          "agreeRate": 70.54,
+          "disagreeRate": 29.46
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 東河鄉都蘭村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "070",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 65.15,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 31.76,
+          "candVictor": " ",
+          "tks": 216,
+          "profRate": 81.44,
+          "agreeRate": 4.6,
+          "disagreeRate": 95.4
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 東河鄉興昌村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "070",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 62.18,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 26.58,
+          "candVictor": " ",
+          "tks": 84,
+          "profRate": 46.3,
+          "agreeRate": 47.54,
+          "disagreeRate": 52.46
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 東河鄉隆昌村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "070",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 57.59,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 29.36,
+          "candVictor": " ",
+          "tks": 32,
+          "profRate": 34.45,
+          "agreeRate": 56.65,
+          "disagreeRate": 43.35
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 東河鄉東河村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "070",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 51.94,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 38.22,
+          "candVictor": "*",
+          "tks": 60,
+          "profRate": 80.35,
+          "agreeRate": 30.81,
+          "disagreeRate": 69.19
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 東河鄉泰源村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "070",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 61.2,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 20.17,
+          "candVictor": " ",
+          "tks": 47,
+          "profRate": 72.94,
+          "agreeRate": 60.24,
+          "disagreeRate": 39.76
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 東河鄉北源村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "070",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 44.28,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 28.33,
+          "candVictor": " ",
+          "tks": 102,
+          "profRate": 55.04,
+          "agreeRate": 26.0,
+          "disagreeRate": 74.0
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 東河鄉尚德村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "070",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 54.43,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 30.59,
+          "candVictor": " ",
+          "tks": 26,
+          "profRate": 5.76,
+          "agreeRate": 68.81,
+          "disagreeRate": 31.19
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 長濱鄉寧埔村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "080",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 54.39,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 33.59,
+          "candVictor": " ",
+          "tks": 43,
+          "profRate": 45.03,
+          "agreeRate": 94.46,
+          "disagreeRate": 5.54
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 長濱鄉竹湖村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "080",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 54.38,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 33.11,
+          "candVictor": " ",
+          "tks": 49,
+          "profRate": 48.91,
+          "agreeRate": 23.85,
+          "disagreeRate": 76.15
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 長濱鄉長濱村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "080",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 52.67,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 42.14,
+          "candVictor": "*",
+          "tks": 228,
+          "profRate": 52.08,
+          "agreeRate": 47.3,
+          "disagreeRate": 52.7
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 長濱鄉忠勇村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "080",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 45.05,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 53.37,
+          "candVictor": "*",
+          "tks": 87,
+          "profRate": 11.27,
+          "agreeRate": 91.35,
+          "disagreeRate": 8.65
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 長濱鄉三間村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "080",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 51.69,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 40.0,
+          "candVictor": "*",
+          "tks": 54,
+          "profRate": 14.52,
+          "agreeRate": 78.97,
+          "disagreeRate": 21.03
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 長濱鄉樟原村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "080",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 62.11,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 45.76,
+          "candVictor": "*",
+          "tks": 54,
+          "profRate": 56.73,
+          "agreeRate": 57.19,
+          "disagreeRate": 42.81
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 太麻里鄉美和村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "090",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 65.07,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 25.49,
+          "candVictor": " ",
+          "tks": 144,
+          "profRate": 73.97,
+          "agreeRate": 44.07,
+          "disagreeRate": 55.93
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 太麻里鄉三和村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "090",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 63.83,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 37.46,
+          "candVictor": "*",
+          "tks": 124,
+          "profRate": 30.68,
+          "agreeRate": 63.71,
+          "disagreeRate": 36.29
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 太麻里鄉華源村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "090",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 62.63,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 28.08,
+          "candVictor": " ",
+          "tks": 98,
+          "profRate": 50.59,
+          "agreeRate": 87.45,
+          "disagreeRate": 12.55
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 太麻里鄉北里村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "090",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 62.5,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 26.04,
+          "candVictor": " ",
+          "tks": 50,
+          "profRate": 28.69,
+          "agreeRate": 98.55,
+          "disagreeRate": 1.45
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 太麻里鄉大王村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "090",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 59.59,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 37.52,
+          "candVictor": "*",
+          "tks": 227,
+          "profRate": 41.01,
+          "agreeRate": 44.31,
+          "disagreeRate": 55.69
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 太麻里鄉泰和村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "090",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 68.54,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 41.1,
+          "candVictor": "*",
+          "tks": 270,
+          "profRate": 41.72,
+          "agreeRate": 29.09,
+          "disagreeRate": 70.91
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 太麻里鄉香蘭村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "090",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 60.8,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 40.27,
+          "candVictor": "*",
+          "tks": 91,
+          "profRate": 20.9,
+          "agreeRate": 10.13,
+          "disagreeRate": 89.87
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 太麻里鄉金崙村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "090",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 62.45,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 39.29,
+          "candVictor": "*",
+          "tks": 55,
+          "profRate": 26.82,
+          "agreeRate": 17.31,
+          "disagreeRate": 82.69
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 太麻里鄉多良村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "090",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 62.41,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 51.16,
+          "candVictor": "*",
+          "tks": 44,
+          "profRate": 50.42,
+          "agreeRate": 18.05,
+          "disagreeRate": 81.95
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 大武鄉南興村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "100",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 62.79,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 43.61,
+          "candVictor": "*",
+          "tks": 58,
+          "profRate": 36.07,
+          "agreeRate": 67.39,
+          "disagreeRate": 32.61
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 大武鄉尚武村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "100",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 52.77,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 53.63,
+          "candVictor": "*",
+          "tks": 266,
+          "profRate": 98.44,
+          "agreeRate": 52.63,
+          "disagreeRate": 47.37
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 大武鄉大武村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "100",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 57.76,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 52.51,
+          "candVictor": "*",
+          "tks": 178,
+          "profRate": 86.15,
+          "agreeRate": 3.55,
+          "disagreeRate": 96.45
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 大武鄉大鳥村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "100",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 61.11,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 63.64,
+          "candVictor": "*",
+          "tks": 14,
+          "profRate": 85.37,
+          "agreeRate": 14.87,
+          "disagreeRate": 85.13
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 大武鄉大竹村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "100",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 40.38,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 45.0,
+          "candVictor": "*",
+          "tks": 9,
+          "profRate": 72.22,
+          "agreeRate": 16.6,
+          "disagreeRate": 83.4
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 綠島鄉南寮村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "110",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 46.28,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 46.58,
+          "candVictor": "*",
+          "tks": 334,
+          "profRate": 70.14,
+          "agreeRate": 5.94,
+          "disagreeRate": 94.06
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 綠島鄉中寮村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "110",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 45.02,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 34.38,
+          "candVictor": " ",
+          "tks": 153,
+          "profRate": 53.95,
+          "agreeRate": 29.83,
+          "disagreeRate": 70.17
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 綠島鄉公舘村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "110",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 47.37,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 44.54,
+          "candVictor": "*",
+          "tks": 204,
+          "profRate": 84.51,
+          "agreeRate": 26.93,
+          "disagreeRate": 73.07
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 海端鄉加拿村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "120",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 79.17,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 47.37,
+          "candVictor": "*",
+          "tks": 9,
+          "profRate": 52.7,
+          "agreeRate": 5.7,
+          "disagreeRate": 94.3
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 海端鄉崁頂村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "120",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 60.87,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 35.71,
+          "candVictor": " ",
+          "tks": 5,
+          "profRate": 51.53,
+          "agreeRate": 59.08,
+          "disagreeRate": 40.92
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 海端鄉海端村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "120",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 58.67,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 38.1,
+          "candVictor": "*",
+          "tks": 16,
+          "profRate": 41.31,
+          "agreeRate": 60.08,
+          "disagreeRate": 39.92
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 海端鄉廣原村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "120",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 44.0,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 38.1,
+          "candVictor": "*",
+          "tks": 8,
+          "profRate": 67.38,
+          "agreeRate": 39.12,
+          "disagreeRate": 60.88
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 海端鄉霧鹿村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "120",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 63.16,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 33.33,
+          "candVictor": " ",
+          "tks": 4,
+          "profRate": 71.46,
+          "agreeRate": 1.68,
+          "disagreeRate": 98.32
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 海端鄉利稻村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "120",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 76.19,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 12.5,
+          "candVictor": " ",
+          "tks": 2,
+          "profRate": 56.46,
+          "agreeRate": 29.46,
+          "disagreeRate": 70.54
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 延平鄉桃源村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "130",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 63.46,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 32.26,
+          "candVictor": " ",
+          "tks": 20,
+          "profRate": 32.86,
+          "agreeRate": 16.64,
+          "disagreeRate": 83.36
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 延平鄉紅葉村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "130",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 57.14,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 58.33,
+          "candVictor": "*",
+          "tks": 7,
+          "profRate": 5.08,
+          "agreeRate": 35.11,
+          "disagreeRate": 64.89
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 延平鄉永康村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "130",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 72.73,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 40.0,
+          "candVictor": "*",
+          "tks": 6,
+          "profRate": 12.78,
+          "agreeRate": 82.46,
+          "disagreeRate": 17.54
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 延平鄉武陵村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "130",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 70.83,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 41.18,
+          "candVictor": "*",
+          "tks": 7,
+          "profRate": 25.75,
+          "agreeRate": 89.45,
+          "disagreeRate": 10.55
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 延平鄉鸞山村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "130",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 57.58,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 28.95,
+          "candVictor": " ",
+          "tks": 11,
+          "profRate": 92.49,
+          "agreeRate": 89.14,
+          "disagreeRate": 10.86
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 金峰鄉嘉蘭村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "140",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 65.22,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 39.29,
+          "candVictor": "*",
+          "tks": 11,
+          "profRate": 31.21,
+          "agreeRate": 55.19,
+          "disagreeRate": 44.81
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 金峰鄉正興村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "140",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 60.87,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 50.0,
+          "candVictor": "*",
+          "tks": 7,
+          "profRate": 93.73,
+          "agreeRate": 64.46,
+          "disagreeRate": 35.54
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 金峰鄉新興村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "140",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 78.95,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 46.67,
+          "candVictor": "*",
+          "tks": 7,
+          "profRate": 98.73,
+          "agreeRate": 10.76,
+          "disagreeRate": 89.24
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 金峰鄉賓茂村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "140",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 70.0,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 42.86,
+          "candVictor": "*",
+          "tks": 3,
+          "profRate": 83.29,
+          "agreeRate": 13.81,
+          "disagreeRate": 86.19
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 金峰鄉歷坵村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "140",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 84.21,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 56.25,
+          "candVictor": "*",
+          "tks": 9,
+          "profRate": 98.49,
+          "agreeRate": 93.91,
+          "disagreeRate": 6.09
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 達仁鄉安朔村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "150",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 56.52,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 52.63,
+          "candVictor": "*",
+          "tks": 20,
+          "profRate": 91.17,
+          "agreeRate": 63.5,
+          "disagreeRate": 36.5
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 達仁鄉南田村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "150",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 57.14,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 52.63,
+          "candVictor": "*",
+          "tks": 10,
+          "profRate": 15.86,
+          "agreeRate": 45.88,
+          "disagreeRate": 54.12
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 達仁鄉森永村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "150",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 61.29,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 47.37,
+          "candVictor": "*",
+          "tks": 9,
+          "profRate": 47.4,
+          "agreeRate": 53.15,
+          "disagreeRate": 46.85
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 達仁鄉新化村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "150",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 66.67,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 50.0,
+          "candVictor": "*",
+          "tks": 5,
+          "profRate": 70.7,
+          "agreeRate": 33.42,
+          "disagreeRate": 66.58
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 達仁鄉台坂村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "150",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 58.33,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 42.86,
+          "candVictor": " ",
+          "tks": 3,
+          "profRate": 43.73,
+          "agreeRate": 36.23,
+          "disagreeRate": 63.77
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 達仁鄉土坂村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "150",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 50.0,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 25.0,
+          "candVictor": " ",
+          "tks": 2,
+          "profRate": 28.97,
+          "agreeRate": 17.5,
+          "disagreeRate": 82.5
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 蘭嶼鄉椰油村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "160",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 36.82,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 26.67,
+          "candVictor": " ",
+          "tks": 24,
+          "profRate": 51.81,
+          "agreeRate": 35.65,
+          "disagreeRate": 64.35
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 蘭嶼鄉紅頭村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "160",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 36.88,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 32.46,
+          "candVictor": "*",
+          "tks": 37,
+          "profRate": 7.76,
+          "agreeRate": 21.73,
+          "disagreeRate": 78.27
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 蘭嶼鄉東清村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "160",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 35.91,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 21.88,
+          "candVictor": " ",
+          "tks": 14,
+          "profRate": 51.61,
+          "agreeRate": 88.81,
+          "disagreeRate": 11.19
+        }
+      ]
+    },
+    {
+      "range": "臺東縣 第01選區 蘭嶼鄉朗島村",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": "160",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 34.18,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 23.08,
+          "candVictor": " ",
+          "tks": 6,
+          "profRate": 80.84,
+          "agreeRate": 45.94,
+          "disagreeRate": 54.06
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

@@ -1,0 +1,1480 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "臺中市 第04選區 西屯區西安里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 75.48,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 46.06,
+          "candVictor": " ",
+          "tks": 1817,
+          "profRate": 60.03,
+          "agreeRate": 67.76,
+          "disagreeRate": 32.24
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區至善里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 74.47,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 49.27,
+          "candVictor": "*",
+          "tks": 1543,
+          "profRate": 89.92,
+          "agreeRate": 83.15,
+          "disagreeRate": 16.85
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區西平里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 70.21,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 54.29,
+          "candVictor": "*",
+          "tks": 1777,
+          "profRate": 98.15,
+          "agreeRate": 7.1,
+          "disagreeRate": 92.9
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區西墩里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 75.47,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 45.15,
+          "candVictor": " ",
+          "tks": 2014,
+          "profRate": 0.76,
+          "agreeRate": 14.17,
+          "disagreeRate": 85.83
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區潮洋里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 63.86,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 48.66,
+          "candVictor": "*",
+          "tks": 2029,
+          "profRate": 30.07,
+          "agreeRate": 16.22,
+          "disagreeRate": 83.78
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區龍潭里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 75.28,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 39.01,
+          "candVictor": " ",
+          "tks": 284,
+          "profRate": 96.69,
+          "agreeRate": 0.7,
+          "disagreeRate": 99.3
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區惠來里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.28,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 51.73,
+          "candVictor": "*",
+          "tks": 5569,
+          "profRate": 88.88,
+          "agreeRate": 28.04,
+          "disagreeRate": 71.96
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區上石里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 73.57,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 48.94,
+          "candVictor": "*",
+          "tks": 1750,
+          "profRate": 55.42,
+          "agreeRate": 73.45,
+          "disagreeRate": 26.55
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區上安里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 74.19,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 49.67,
+          "candVictor": "*",
+          "tks": 1856,
+          "profRate": 79.31,
+          "agreeRate": 7.91,
+          "disagreeRate": 92.09
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區上德里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 74.02,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 50.6,
+          "candVictor": "*",
+          "tks": 1479,
+          "profRate": 45.86,
+          "agreeRate": 8.83,
+          "disagreeRate": 91.17
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區逢甲里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 72.88,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 49.74,
+          "candVictor": "*",
+          "tks": 1602,
+          "profRate": 83.55,
+          "agreeRate": 29.94,
+          "disagreeRate": 70.06
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區逢福里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 74.7,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 51.12,
+          "candVictor": "*",
+          "tks": 1937,
+          "profRate": 35.58,
+          "agreeRate": 56.76,
+          "disagreeRate": 43.24
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區鵬程里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 73.3,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 81.86,
+          "candVictor": "*",
+          "tks": 1435,
+          "profRate": 91.22,
+          "agreeRate": 14.47,
+          "disagreeRate": 85.53
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區何厝里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 72.0,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 47.87,
+          "candVictor": " ",
+          "tks": 1033,
+          "profRate": 74.25,
+          "agreeRate": 38.0,
+          "disagreeRate": 62.0
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區何明里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 75.74,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 47.99,
+          "candVictor": " ",
+          "tks": 1194,
+          "profRate": 61.66,
+          "agreeRate": 6.99,
+          "disagreeRate": 93.01
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區何南里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 75.91,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 50.22,
+          "candVictor": "*",
+          "tks": 1483,
+          "profRate": 15.11,
+          "agreeRate": 48.01,
+          "disagreeRate": 51.99
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區何成里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 74.09,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 50.54,
+          "candVictor": "*",
+          "tks": 2526,
+          "profRate": 78.21,
+          "agreeRate": 18.89,
+          "disagreeRate": 81.11
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區何安里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 72.52,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 48.17,
+          "candVictor": " ",
+          "tks": 1682,
+          "profRate": 40.82,
+          "agreeRate": 63.96,
+          "disagreeRate": 36.04
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區何仁里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 74.72,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 48.16,
+          "candVictor": " ",
+          "tks": 2079,
+          "profRate": 16.46,
+          "agreeRate": 43.03,
+          "disagreeRate": 56.97
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區何德里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 75.46,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 46.63,
+          "candVictor": " ",
+          "tks": 1232,
+          "profRate": 52.53,
+          "agreeRate": 20.8,
+          "disagreeRate": 79.2
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區何福里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 76.1,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 48.76,
+          "candVictor": " ",
+          "tks": 1512,
+          "profRate": 1.15,
+          "agreeRate": 64.23,
+          "disagreeRate": 35.77
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區何源里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 74.25,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 51.42,
+          "candVictor": "*",
+          "tks": 2405,
+          "profRate": 33.92,
+          "agreeRate": 37.01,
+          "disagreeRate": 62.99
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區大河里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 77.6,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 41.11,
+          "candVictor": " ",
+          "tks": 1174,
+          "profRate": 81.26,
+          "agreeRate": 76.36,
+          "disagreeRate": 23.64
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區大石里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 76.18,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 79.34,
+          "candVictor": "*",
+          "tks": 1229,
+          "profRate": 68.86,
+          "agreeRate": 88.15,
+          "disagreeRate": 11.85
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區大福里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 69.36,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 54.15,
+          "candVictor": "*",
+          "tks": 1161,
+          "profRate": 94.04,
+          "agreeRate": 96.7,
+          "disagreeRate": 3.3
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區大鵬里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.54,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 53.38,
+          "candVictor": "*",
+          "tks": 1736,
+          "profRate": 42.97,
+          "agreeRate": 31.89,
+          "disagreeRate": 68.11
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區港尾里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 74.44,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 47.07,
+          "candVictor": " ",
+          "tks": 1671,
+          "profRate": 56.66,
+          "agreeRate": 62.64,
+          "disagreeRate": 37.36
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區廣福里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 77.02,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 36.8,
+          "candVictor": " ",
+          "tks": 605,
+          "profRate": 9.69,
+          "agreeRate": 85.78,
+          "disagreeRate": 14.22
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區林厝里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 74.34,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 48.22,
+          "candVictor": " ",
+          "tks": 1190,
+          "profRate": 28.55,
+          "agreeRate": 51.54,
+          "disagreeRate": 48.46
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區永安里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 71.92,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 52.05,
+          "candVictor": "*",
+          "tks": 4487,
+          "profRate": 78.66,
+          "agreeRate": 99.0,
+          "disagreeRate": 1.0
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區福安里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 76.15,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 49.43,
+          "candVictor": "*",
+          "tks": 1086,
+          "profRate": 99.95,
+          "agreeRate": 11.52,
+          "disagreeRate": 88.48
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區福雅里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 74.65,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 52.22,
+          "candVictor": "*",
+          "tks": 2167,
+          "profRate": 67.91,
+          "agreeRate": 17.8,
+          "disagreeRate": 82.2
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區福林里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 74.42,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 53.79,
+          "candVictor": "*",
+          "tks": 2987,
+          "profRate": 48.07,
+          "agreeRate": 26.62,
+          "disagreeRate": 73.38
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區福瑞里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 70.3,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 57.62,
+          "candVictor": "*",
+          "tks": 1134,
+          "profRate": 71.44,
+          "agreeRate": 61.55,
+          "disagreeRate": 38.45
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區福聯里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 67.48,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 50.95,
+          "candVictor": "*",
+          "tks": 1076,
+          "profRate": 59.28,
+          "agreeRate": 63.31,
+          "disagreeRate": 36.69
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區福和里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 73.99,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 40.7,
+          "candVictor": " ",
+          "tks": 1229,
+          "profRate": 17.61,
+          "agreeRate": 60.46,
+          "disagreeRate": 39.54
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區福中里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 74.0,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 49.36,
+          "candVictor": "*",
+          "tks": 1123,
+          "profRate": 30.69,
+          "agreeRate": 21.88,
+          "disagreeRate": 78.12
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區福恩里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 76.05,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 51.56,
+          "candVictor": "*",
+          "tks": 1804,
+          "profRate": 82.12,
+          "agreeRate": 59.26,
+          "disagreeRate": 40.74
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 西屯區協和里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "060",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 73.65,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 45.8,
+          "candVictor": " ",
+          "tks": 1476,
+          "profRate": 92.83,
+          "agreeRate": 15.41,
+          "disagreeRate": 84.59
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區南屯里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.94,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 48.7,
+          "candVictor": " ",
+          "tks": 2958,
+          "profRate": 15.08,
+          "agreeRate": 57.35,
+          "disagreeRate": 42.65
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區豐樂里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 76.78,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 48.55,
+          "candVictor": " ",
+          "tks": 4127,
+          "profRate": 74.68,
+          "agreeRate": 65.55,
+          "disagreeRate": 34.45
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區楓樹里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 78.65,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 47.3,
+          "candVictor": " ",
+          "tks": 2156,
+          "profRate": 46.05,
+          "agreeRate": 96.92,
+          "disagreeRate": 3.08
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區中和里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 75.47,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 44.59,
+          "candVictor": " ",
+          "tks": 1340,
+          "profRate": 1.42,
+          "agreeRate": 58.05,
+          "disagreeRate": 41.95
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區鎮平里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 77.71,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 38.05,
+          "candVictor": " ",
+          "tks": 360,
+          "profRate": 54.73,
+          "agreeRate": 69.0,
+          "disagreeRate": 31.0
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區春社里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 68.48,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 50.77,
+          "candVictor": "*",
+          "tks": 2145,
+          "profRate": 60.23,
+          "agreeRate": 50.03,
+          "disagreeRate": 49.97
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區春安里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 76.34,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 55.25,
+          "candVictor": "*",
+          "tks": 974,
+          "profRate": 17.7,
+          "agreeRate": 89.19,
+          "disagreeRate": 10.81
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區文山里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 74.48,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 48.1,
+          "candVictor": " ",
+          "tks": 3914,
+          "profRate": 48.25,
+          "agreeRate": 89.49,
+          "disagreeRate": 10.51
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區寶山里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 74.55,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 48.05,
+          "candVictor": " ",
+          "tks": 1802,
+          "profRate": 28.82,
+          "agreeRate": 94.55,
+          "disagreeRate": 5.45
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區新生里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 75.63,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 47.6,
+          "candVictor": " ",
+          "tks": 1101,
+          "profRate": 53.03,
+          "agreeRate": 61.11,
+          "disagreeRate": 38.89
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區永定里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 76.34,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 44.78,
+          "candVictor": " ",
+          "tks": 1711,
+          "profRate": 41.28,
+          "agreeRate": 39.87,
+          "disagreeRate": 60.13
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區三厝里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 75.26,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 50.04,
+          "candVictor": "*",
+          "tks": 2613,
+          "profRate": 6.43,
+          "agreeRate": 2.18,
+          "disagreeRate": 97.82
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區三義里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 77.1,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 53.72,
+          "candVictor": "*",
+          "tks": 2513,
+          "profRate": 28.91,
+          "agreeRate": 72.35,
+          "disagreeRate": 27.65
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區三和里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 75.81,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 54.1,
+          "candVictor": "*",
+          "tks": 3409,
+          "profRate": 8.93,
+          "agreeRate": 71.66,
+          "disagreeRate": 28.34
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區黎明里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 75.93,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 57.98,
+          "candVictor": "*",
+          "tks": 1704,
+          "profRate": 63.57,
+          "agreeRate": 92.83,
+          "disagreeRate": 7.17
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區溝墘里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 77.71,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 49.69,
+          "candVictor": "*",
+          "tks": 1983,
+          "profRate": 4.58,
+          "agreeRate": 20.96,
+          "disagreeRate": 79.04
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區大業里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 75.09,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 50.17,
+          "candVictor": "*",
+          "tks": 2398,
+          "profRate": 16.0,
+          "agreeRate": 82.55,
+          "disagreeRate": 17.45
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區惠中里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 74.49,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 51.14,
+          "candVictor": "*",
+          "tks": 2947,
+          "profRate": 14.51,
+          "agreeRate": 20.11,
+          "disagreeRate": 79.89
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區田心里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 76.02,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 47.81,
+          "candVictor": " ",
+          "tks": 2252,
+          "profRate": 77.96,
+          "agreeRate": 47.23,
+          "disagreeRate": 52.77
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區向心里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 66.77,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 51.7,
+          "candVictor": "*",
+          "tks": 1820,
+          "profRate": 97.95,
+          "agreeRate": 46.49,
+          "disagreeRate": 53.51
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區文心里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 75.15,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 50.45,
+          "candVictor": "*",
+          "tks": 1397,
+          "profRate": 53.77,
+          "agreeRate": 85.62,
+          "disagreeRate": 14.38
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區同心里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 74.51,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 51.67,
+          "candVictor": "*",
+          "tks": 1936,
+          "profRate": 39.41,
+          "agreeRate": 15.89,
+          "disagreeRate": 84.11
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區大同里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 76.88,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 48.26,
+          "candVictor": " ",
+          "tks": 1751,
+          "profRate": 33.5,
+          "agreeRate": 31.61,
+          "disagreeRate": 68.39
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區大興里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 76.09,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 47.88,
+          "candVictor": " ",
+          "tks": 1527,
+          "profRate": 2.83,
+          "agreeRate": 49.86,
+          "disagreeRate": 50.14
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第04選區 南屯區大誠里",
+      "area_nickname": "西屯區、南屯區",
+      "county": "66000",
+      "area": "04",
+      "town": "070",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 75.61,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "廖偉翔",
+          "party": "中國國民黨",
+          "tksRate": 50.04,
+          "candVictor": "*",
+          "tks": 1329,
+          "profRate": 60.14,
+          "agreeRate": 20.92,
+          "disagreeRate": 79.08
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

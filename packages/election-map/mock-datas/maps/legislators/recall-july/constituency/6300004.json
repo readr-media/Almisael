@@ -1,0 +1,1365 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "臺北市 第04選區 南港區南港里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 67.63,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 47.1,
+          "candVictor": "*",
+          "tks": 1659,
+          "profRate": 49.37,
+          "agreeRate": 98.73,
+          "disagreeRate": 1.27
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區中南里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 44.61,
+          "candVictor": "*",
+          "tks": 927,
+          "profRate": 9.09,
+          "agreeRate": 88.03,
+          "disagreeRate": 11.97
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區三重里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 74.04,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 47.87,
+          "candVictor": "*",
+          "tks": 2165,
+          "profRate": 63.44,
+          "agreeRate": 49.42,
+          "disagreeRate": 50.58
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區新富里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.61,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 45.74,
+          "candVictor": "*",
+          "tks": 1062,
+          "profRate": 0.33,
+          "agreeRate": 94.79,
+          "disagreeRate": 5.21
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區中研里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 76.29,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 47.21,
+          "candVictor": "*",
+          "tks": 2624,
+          "profRate": 10.15,
+          "agreeRate": 82.77,
+          "disagreeRate": 17.23
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區九如里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 74.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 54.77,
+          "candVictor": "*",
+          "tks": 2072,
+          "profRate": 80.43,
+          "agreeRate": 54.69,
+          "disagreeRate": 45.31
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區舊莊里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 72.07,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 48.91,
+          "candVictor": "*",
+          "tks": 2524,
+          "profRate": 45.89,
+          "agreeRate": 29.81,
+          "disagreeRate": 70.19
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區東新里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 74.89,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 48.1,
+          "candVictor": "*",
+          "tks": 1971,
+          "profRate": 38.43,
+          "agreeRate": 88.83,
+          "disagreeRate": 11.17
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區重陽里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 77.2,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 49.41,
+          "candVictor": "*",
+          "tks": 1811,
+          "profRate": 43.42,
+          "agreeRate": 74.51,
+          "disagreeRate": 25.49
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區東明里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 75.49,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 49.94,
+          "candVictor": "*",
+          "tks": 1684,
+          "profRate": 32.48,
+          "agreeRate": 11.98,
+          "disagreeRate": 88.02
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區西新里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 76.83,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 39.23,
+          "candVictor": " ",
+          "tks": 1096,
+          "profRate": 29.89,
+          "agreeRate": 54.29,
+          "disagreeRate": 45.71
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區玉成里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 76.25,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 44.85,
+          "candVictor": "*",
+          "tks": 1299,
+          "profRate": 89.42,
+          "agreeRate": 68.85,
+          "disagreeRate": 31.15
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區合成里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.93,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 46.59,
+          "candVictor": "*",
+          "tks": 1866,
+          "profRate": 18.43,
+          "agreeRate": 22.1,
+          "disagreeRate": 77.9
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區新光里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.82,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 51.41,
+          "candVictor": "*",
+          "tks": 1165,
+          "profRate": 90.73,
+          "agreeRate": 88.52,
+          "disagreeRate": 11.48
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區聯成里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 76.5,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 49.2,
+          "candVictor": "*",
+          "tks": 1452,
+          "profRate": 87.96,
+          "agreeRate": 87.62,
+          "disagreeRate": 12.38
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區萬福里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 79.6,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 52.74,
+          "candVictor": "*",
+          "tks": 1462,
+          "profRate": 66.21,
+          "agreeRate": 91.53,
+          "disagreeRate": 8.47
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區鴻福里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 76.42,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 49.03,
+          "candVictor": "*",
+          "tks": 1368,
+          "profRate": 41.49,
+          "agreeRate": 5.53,
+          "disagreeRate": 94.47
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區百福里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 74.47,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 47.24,
+          "candVictor": "*",
+          "tks": 1491,
+          "profRate": 77.88,
+          "agreeRate": 75.7,
+          "disagreeRate": 24.3
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區成福里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 77.04,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 53.05,
+          "candVictor": "*",
+          "tks": 2463,
+          "profRate": 53.99,
+          "agreeRate": 44.12,
+          "disagreeRate": 55.88
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 南港區仁福里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "090",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 77.59,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 55.05,
+          "candVictor": "*",
+          "tks": 1923,
+          "profRate": 20.16,
+          "agreeRate": 60.42,
+          "disagreeRate": 39.58
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區西湖里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 77.74,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 43.71,
+          "candVictor": "*",
+          "tks": 1951,
+          "profRate": 76.27,
+          "agreeRate": 0.4,
+          "disagreeRate": 99.6
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區西康里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 75.74,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 48.95,
+          "candVictor": "*",
+          "tks": 2904,
+          "profRate": 75.47,
+          "agreeRate": 20.24,
+          "disagreeRate": 79.76
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區西安里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 78.1,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 48.9,
+          "candVictor": "*",
+          "tks": 2031,
+          "profRate": 37.84,
+          "agreeRate": 50.77,
+          "disagreeRate": 49.23
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區港墘里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 77.73,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 45.14,
+          "candVictor": "*",
+          "tks": 1677,
+          "profRate": 82.15,
+          "agreeRate": 56.25,
+          "disagreeRate": 43.75
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區港都里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 77.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 42.44,
+          "candVictor": " ",
+          "tks": 1408,
+          "profRate": 83.9,
+          "agreeRate": 55.15,
+          "disagreeRate": 44.85
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區港富里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 76.41,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 43.8,
+          "candVictor": "*",
+          "tks": 2530,
+          "profRate": 80.65,
+          "agreeRate": 8.86,
+          "disagreeRate": 91.14
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區港華里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 77.13,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 44.25,
+          "candVictor": "*",
+          "tks": 2441,
+          "profRate": 99.81,
+          "agreeRate": 80.84,
+          "disagreeRate": 19.16
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區內湖里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 74.28,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 49.59,
+          "candVictor": "*",
+          "tks": 1986,
+          "profRate": 43.14,
+          "agreeRate": 59.1,
+          "disagreeRate": 40.9
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區湖濱里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 77.66,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 51.17,
+          "candVictor": "*",
+          "tks": 2695,
+          "profRate": 31.09,
+          "agreeRate": 1.32,
+          "disagreeRate": 98.68
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區紫星里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 77.26,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 44.71,
+          "candVictor": "*",
+          "tks": 2229,
+          "profRate": 7.84,
+          "agreeRate": 6.64,
+          "disagreeRate": 93.36
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區大湖里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 75.92,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 49.5,
+          "candVictor": "*",
+          "tks": 1631,
+          "profRate": 44.75,
+          "agreeRate": 75.57,
+          "disagreeRate": 24.43
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區金龍里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 76.07,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 47.48,
+          "candVictor": "*",
+          "tks": 1583,
+          "profRate": 71.77,
+          "agreeRate": 94.61,
+          "disagreeRate": 5.39
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區金瑞里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 76.75,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 45.83,
+          "candVictor": "*",
+          "tks": 1913,
+          "profRate": 20.36,
+          "agreeRate": 28.27,
+          "disagreeRate": 71.73
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區碧山里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 75.89,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 48.06,
+          "candVictor": "*",
+          "tks": 2085,
+          "profRate": 81.44,
+          "agreeRate": 24.14,
+          "disagreeRate": 75.86
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區紫雲里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 75.66,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 52.41,
+          "candVictor": "*",
+          "tks": 1818,
+          "profRate": 97.95,
+          "agreeRate": 93.06,
+          "disagreeRate": 6.94
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區清白里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 76.36,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 49.32,
+          "candVictor": "*",
+          "tks": 2631,
+          "profRate": 10.8,
+          "agreeRate": 36.55,
+          "disagreeRate": 63.45
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區葫洲里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 75.92,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 49.88,
+          "candVictor": "*",
+          "tks": 2142,
+          "profRate": 73.97,
+          "agreeRate": 84.77,
+          "disagreeRate": 15.23
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區紫陽里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 76.64,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 47.13,
+          "candVictor": "*",
+          "tks": 2469,
+          "profRate": 80.63,
+          "agreeRate": 31.59,
+          "disagreeRate": 68.41
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區瑞陽里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 78.28,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 55.34,
+          "candVictor": "*",
+          "tks": 2708,
+          "profRate": 65.93,
+          "agreeRate": 69.32,
+          "disagreeRate": 30.68
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區瑞光里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 77.43,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 53.01,
+          "candVictor": "*",
+          "tks": 1486,
+          "profRate": 14.36,
+          "agreeRate": 11.12,
+          "disagreeRate": 88.88
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區五分里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 74.91,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 43.58,
+          "candVictor": " ",
+          "tks": 2640,
+          "profRate": 96.25,
+          "agreeRate": 42.59,
+          "disagreeRate": 57.41
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區東湖里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 76.75,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 43.54,
+          "candVictor": " ",
+          "tks": 2147,
+          "profRate": 38.35,
+          "agreeRate": 32.4,
+          "disagreeRate": 67.6
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區樂康里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 74.83,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 43.24,
+          "candVictor": " ",
+          "tks": 1983,
+          "profRate": 49.83,
+          "agreeRate": 1.57,
+          "disagreeRate": 98.43
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區內溝里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 76.56,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 45.35,
+          "candVictor": "*",
+          "tks": 1303,
+          "profRate": 34.38,
+          "agreeRate": 19.34,
+          "disagreeRate": 80.66
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區週美里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 76.04,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 46.85,
+          "candVictor": "*",
+          "tks": 2607,
+          "profRate": 94.44,
+          "agreeRate": 19.94,
+          "disagreeRate": 80.06
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區行善里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 76.27,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 45.16,
+          "candVictor": "*",
+          "tks": 2008,
+          "profRate": 91.41,
+          "agreeRate": 19.69,
+          "disagreeRate": 80.31
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區石潭里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 73.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 48.47,
+          "candVictor": "*",
+          "tks": 1192,
+          "profRate": 41.28,
+          "agreeRate": 62.76,
+          "disagreeRate": 37.24
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區湖興里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 63.3,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 46.31,
+          "candVictor": "*",
+          "tks": 2085,
+          "profRate": 63.26,
+          "agreeRate": 52.3,
+          "disagreeRate": 47.7
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區湖元里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 74.71,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 42.73,
+          "candVictor": " ",
+          "tks": 1654,
+          "profRate": 21.08,
+          "agreeRate": 89.35,
+          "disagreeRate": 10.65
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區安湖里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 76.5,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 43.61,
+          "candVictor": "*",
+          "tks": 1989,
+          "profRate": 5.0,
+          "agreeRate": 12.58,
+          "disagreeRate": 87.42
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區秀湖里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 75.67,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 52.29,
+          "candVictor": "*",
+          "tks": 2008,
+          "profRate": 58.8,
+          "agreeRate": 32.26,
+          "disagreeRate": 67.74
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區安泰里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 75.32,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 47.5,
+          "candVictor": "*",
+          "tks": 1528,
+          "profRate": 10.15,
+          "agreeRate": 8.52,
+          "disagreeRate": 91.48
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區金湖里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 76.21,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 50.25,
+          "candVictor": "*",
+          "tks": 2968,
+          "profRate": 42.85,
+          "agreeRate": 97.29,
+          "disagreeRate": 2.71
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區康寧里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 75.53,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 47.27,
+          "candVictor": "*",
+          "tks": 2368,
+          "profRate": 97.11,
+          "agreeRate": 13.9,
+          "disagreeRate": 86.1
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區明湖里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 77.31,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 44.16,
+          "candVictor": "*",
+          "tks": 1400,
+          "profRate": 32.81,
+          "agreeRate": 18.53,
+          "disagreeRate": 81.47
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區蘆洲里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 69.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 47.45,
+          "candVictor": "*",
+          "tks": 325,
+          "profRate": 50.86,
+          "agreeRate": 62.8,
+          "disagreeRate": 37.2
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區麗山里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 76.12,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 41.9,
+          "candVictor": " ",
+          "tks": 1508,
+          "profRate": 26.34,
+          "agreeRate": 44.61,
+          "disagreeRate": 55.39
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區寶湖里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 75.64,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 50.94,
+          "candVictor": "*",
+          "tks": 2995,
+          "profRate": 34.58,
+          "agreeRate": 80.84,
+          "disagreeRate": 19.16
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區 內湖區南湖里",
+      "area_nickname": "南港區、內湖區",
+      "county": "63000",
+      "area": "04",
+      "town": "100",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 76.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 48.63,
+          "candVictor": "*",
+          "tks": 1633,
+          "profRate": 84.15,
+          "agreeRate": 3.8,
+          "disagreeRate": 96.2
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

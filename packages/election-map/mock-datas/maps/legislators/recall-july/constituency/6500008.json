@@ -1,0 +1,1733 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "新北市 第08選區 中和區中原里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 75.94,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 38.85,
+          "candVictor": "*",
+          "tks": 2320,
+          "profRate": 3.87,
+          "agreeRate": 14.84,
+          "disagreeRate": 85.16
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區連和里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 73.94,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 47.71,
+          "candVictor": "*",
+          "tks": 759,
+          "profRate": 48.58,
+          "agreeRate": 63.32,
+          "disagreeRate": 36.68
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區連城里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 76.15,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 44.12,
+          "candVictor": "*",
+          "tks": 1842,
+          "profRate": 50.15,
+          "agreeRate": 33.99,
+          "disagreeRate": 66.01
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區力行里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 77.08,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 39.75,
+          "candVictor": "*",
+          "tks": 1569,
+          "profRate": 96.76,
+          "agreeRate": 88.21,
+          "disagreeRate": 11.79
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區正行里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "093",
+      "type": "normal",
+      "profRate": 74.47,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 42.19,
+          "candVictor": "*",
+          "tks": 762,
+          "profRate": 73.82,
+          "agreeRate": 36.9,
+          "disagreeRate": 63.1
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區德行里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "073",
+      "type": "normal",
+      "profRate": 76.94,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 41.32,
+          "candVictor": "*",
+          "tks": 1749,
+          "profRate": 76.53,
+          "agreeRate": 6.58,
+          "disagreeRate": 93.42
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區枋寮里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.82,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 42.51,
+          "candVictor": "*",
+          "tks": 996,
+          "profRate": 60.16,
+          "agreeRate": 34.62,
+          "disagreeRate": 65.38
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區漳和里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 73.66,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 41.87,
+          "candVictor": "*",
+          "tks": 1010,
+          "profRate": 44.61,
+          "agreeRate": 47.1,
+          "disagreeRate": 52.9
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區廟美里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 74.16,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 39.42,
+          "candVictor": " ",
+          "tks": 1093,
+          "profRate": 85.32,
+          "agreeRate": 92.65,
+          "disagreeRate": 7.35
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區福真里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 73.73,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 37.47,
+          "candVictor": " ",
+          "tks": 981,
+          "profRate": 82.85,
+          "agreeRate": 97.24,
+          "disagreeRate": 2.76
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區福善里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 74.04,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 41.71,
+          "candVictor": "*",
+          "tks": 1132,
+          "profRate": 25.55,
+          "agreeRate": 72.68,
+          "disagreeRate": 27.32
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區福美里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 77.84,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 41.42,
+          "candVictor": "*",
+          "tks": 1182,
+          "profRate": 54.62,
+          "agreeRate": 93.55,
+          "disagreeRate": 6.45
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區福祥里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 77.51,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 38.85,
+          "candVictor": " ",
+          "tks": 1279,
+          "profRate": 76.58,
+          "agreeRate": 42.48,
+          "disagreeRate": 57.52
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區福和里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 74.19,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 43.0,
+          "candVictor": "*",
+          "tks": 974,
+          "profRate": 97.34,
+          "agreeRate": 74.19,
+          "disagreeRate": 25.81
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區佳和里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 74.52,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 42.06,
+          "candVictor": "*",
+          "tks": 1316,
+          "profRate": 19.85,
+          "agreeRate": 3.56,
+          "disagreeRate": 96.44
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區新南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 75.34,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 46.12,
+          "candVictor": "*",
+          "tks": 2380,
+          "profRate": 13.44,
+          "agreeRate": 31.56,
+          "disagreeRate": 68.44
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區南山里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 75.75,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 45.15,
+          "candVictor": "*",
+          "tks": 1502,
+          "profRate": 13.16,
+          "agreeRate": 83.16,
+          "disagreeRate": 16.84
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區平河里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 76.19,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 39.97,
+          "candVictor": "*",
+          "tks": 2329,
+          "profRate": 94.72,
+          "agreeRate": 64.39,
+          "disagreeRate": 35.61
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區信和里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 74.22,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 37.22,
+          "candVictor": " ",
+          "tks": 974,
+          "profRate": 43.13,
+          "agreeRate": 54.72,
+          "disagreeRate": 45.28
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區仁和里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 74.22,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 39.99,
+          "candVictor": " ",
+          "tks": 977,
+          "profRate": 72.69,
+          "agreeRate": 46.29,
+          "disagreeRate": 53.71
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區中正里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.93,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 40.98,
+          "candVictor": "*",
+          "tks": 965,
+          "profRate": 17.65,
+          "agreeRate": 0.51,
+          "disagreeRate": 99.49
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區建和里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 77.0,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 45.99,
+          "candVictor": "*",
+          "tks": 1049,
+          "profRate": 83.88,
+          "agreeRate": 22.22,
+          "disagreeRate": 77.78
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區中山里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "083",
+      "type": "normal",
+      "profRate": 73.84,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 38.88,
+          "candVictor": " ",
+          "tks": 654,
+          "profRate": 2.2,
+          "agreeRate": 36.84,
+          "disagreeRate": 63.16
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區碧河里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "084",
+      "type": "normal",
+      "profRate": 77.57,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 39.13,
+          "candVictor": "*",
+          "tks": 1342,
+          "profRate": 88.02,
+          "agreeRate": 97.73,
+          "disagreeRate": 2.27
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區正南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "092",
+      "type": "normal",
+      "profRate": 70.06,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 52.36,
+          "candVictor": "*",
+          "tks": 1067,
+          "profRate": 88.35,
+          "agreeRate": 31.22,
+          "disagreeRate": 68.78
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區頂南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 74.61,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 51.71,
+          "candVictor": "*",
+          "tks": 936,
+          "profRate": 20.13,
+          "agreeRate": 62.74,
+          "disagreeRate": 37.26
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區華新里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 71.67,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 49.33,
+          "candVictor": "*",
+          "tks": 2339,
+          "profRate": 86.61,
+          "agreeRate": 80.11,
+          "disagreeRate": 19.89
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區東南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 73.36,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 60.57,
+          "candVictor": "*",
+          "tks": 1561,
+          "profRate": 0.18,
+          "agreeRate": 44.13,
+          "disagreeRate": 55.87
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區華南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 73.71,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 51.08,
+          "candVictor": "*",
+          "tks": 1590,
+          "profRate": 37.8,
+          "agreeRate": 18.03,
+          "disagreeRate": 81.97
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區忠孝里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 72.45,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 51.76,
+          "candVictor": "*",
+          "tks": 1458,
+          "profRate": 58.85,
+          "agreeRate": 27.17,
+          "disagreeRate": 72.83
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區崇南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 75.24,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 49.77,
+          "candVictor": "*",
+          "tks": 1402,
+          "profRate": 84.15,
+          "agreeRate": 93.75,
+          "disagreeRate": 6.25
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區興南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "078",
+      "type": "normal",
+      "profRate": 73.04,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 47.62,
+          "candVictor": "*",
+          "tks": 899,
+          "profRate": 19.61,
+          "agreeRate": 51.41,
+          "disagreeRate": 48.59
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區景南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 71.95,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 48.75,
+          "candVictor": "*",
+          "tks": 920,
+          "profRate": 67.03,
+          "agreeRate": 51.91,
+          "disagreeRate": 48.09
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區景本里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "079",
+      "type": "normal",
+      "profRate": 75.06,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 44.79,
+          "candVictor": "*",
+          "tks": 584,
+          "profRate": 1.67,
+          "agreeRate": 7.03,
+          "disagreeRate": 92.97
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區橫路里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "041",
+      "type": "normal",
+      "profRate": 78.72,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 37.23,
+          "candVictor": " ",
+          "tks": 86,
+          "profRate": 62.69,
+          "agreeRate": 15.41,
+          "disagreeRate": 84.59
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區內南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "042",
+      "type": "normal",
+      "profRate": 73.08,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 46.58,
+          "candVictor": "*",
+          "tks": 1402,
+          "profRate": 91.05,
+          "agreeRate": 87.1,
+          "disagreeRate": 12.9
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區壽南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "043",
+      "type": "normal",
+      "profRate": 72.08,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 44.81,
+          "candVictor": "*",
+          "tks": 703,
+          "profRate": 7.97,
+          "agreeRate": 36.89,
+          "disagreeRate": 63.11
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區福南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "080",
+      "type": "normal",
+      "profRate": 72.58,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 51.58,
+          "candVictor": "*",
+          "tks": 1325,
+          "profRate": 71.76,
+          "agreeRate": 80.54,
+          "disagreeRate": 19.46
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區外南里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "044",
+      "type": "normal",
+      "profRate": 42.75,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 41.24,
+          "candVictor": "*",
+          "tks": 1156,
+          "profRate": 41.42,
+          "agreeRate": 25.52,
+          "disagreeRate": 74.48
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區中興里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "081",
+      "type": "normal",
+      "profRate": 75.01,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 42.64,
+          "candVictor": "*",
+          "tks": 1782,
+          "profRate": 63.68,
+          "agreeRate": 82.96,
+          "disagreeRate": 17.04
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區吉興里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "082",
+      "type": "normal",
+      "profRate": 74.63,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 47.27,
+          "candVictor": "*",
+          "tks": 884,
+          "profRate": 80.68,
+          "agreeRate": 88.12,
+          "disagreeRate": 11.88
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區復興里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "045",
+      "type": "normal",
+      "profRate": 74.09,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 44.68,
+          "candVictor": "*",
+          "tks": 1381,
+          "profRate": 29.99,
+          "agreeRate": 25.37,
+          "disagreeRate": 74.63
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區和興里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "046",
+      "type": "normal",
+      "profRate": 75.34,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 44.65,
+          "candVictor": "*",
+          "tks": 1248,
+          "profRate": 25.99,
+          "agreeRate": 16.81,
+          "disagreeRate": 83.19
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區景平里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "047",
+      "type": "normal",
+      "profRate": 76.35,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 49.31,
+          "candVictor": "*",
+          "tks": 1931,
+          "profRate": 75.59,
+          "agreeRate": 72.53,
+          "disagreeRate": 27.47
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區景新里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "048",
+      "type": "normal",
+      "profRate": 75.02,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 47.49,
+          "candVictor": "*",
+          "tks": 1079,
+          "profRate": 68.05,
+          "agreeRate": 91.53,
+          "disagreeRate": 8.47
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區景福里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "049",
+      "type": "normal",
+      "profRate": 74.03,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 45.66,
+          "candVictor": "*",
+          "tks": 1722,
+          "profRate": 77.19,
+          "agreeRate": 48.49,
+          "disagreeRate": 51.51
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區景安里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "050",
+      "type": "normal",
+      "profRate": 77.4,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 47.04,
+          "candVictor": "*",
+          "tks": 1501,
+          "profRate": 3.12,
+          "agreeRate": 21.93,
+          "disagreeRate": 78.07
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區景文里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "051",
+      "type": "normal",
+      "profRate": 76.86,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 44.66,
+          "candVictor": "*",
+          "tks": 1176,
+          "profRate": 12.22,
+          "agreeRate": 44.97,
+          "disagreeRate": 55.03
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區錦和里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "052",
+      "type": "normal",
+      "profRate": 75.03,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 40.41,
+          "candVictor": "*",
+          "tks": 1363,
+          "profRate": 40.69,
+          "agreeRate": 36.04,
+          "disagreeRate": 63.96
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區錦昌里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "053",
+      "type": "normal",
+      "profRate": 75.93,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 45.3,
+          "candVictor": "*",
+          "tks": 670,
+          "profRate": 42.62,
+          "agreeRate": 30.12,
+          "disagreeRate": 69.88
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區灰磘里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "054",
+      "type": "normal",
+      "profRate": 73.74,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 35.29,
+          "candVictor": " ",
+          "tks": 168,
+          "profRate": 70.07,
+          "agreeRate": 57.19,
+          "disagreeRate": 42.81
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區積穗里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "055",
+      "type": "normal",
+      "profRate": 77.25,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 40.0,
+          "candVictor": "*",
+          "tks": 2143,
+          "profRate": 5.31,
+          "agreeRate": 33.05,
+          "disagreeRate": 66.95
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區民享里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "056",
+      "type": "normal",
+      "profRate": 79.64,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 37.44,
+          "candVictor": " ",
+          "tks": 623,
+          "profRate": 59.33,
+          "agreeRate": 50.62,
+          "disagreeRate": 49.38
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區員山里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "057",
+      "type": "normal",
+      "profRate": 75.6,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 37.73,
+          "candVictor": " ",
+          "tks": 1502,
+          "profRate": 66.97,
+          "agreeRate": 4.33,
+          "disagreeRate": 95.67
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區嘉穗里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "058",
+      "type": "normal",
+      "profRate": 76.18,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 37.32,
+          "candVictor": " ",
+          "tks": 671,
+          "profRate": 57.32,
+          "agreeRate": 62.19,
+          "disagreeRate": 37.81
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區文元里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "059",
+      "type": "normal",
+      "profRate": 73.56,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 35.71,
+          "candVictor": " ",
+          "tks": 1118,
+          "profRate": 19.66,
+          "agreeRate": 76.71,
+          "disagreeRate": 23.29
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區嘉新里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "060",
+      "type": "normal",
+      "profRate": 72.69,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 35.71,
+          "candVictor": " ",
+          "tks": 885,
+          "profRate": 85.47,
+          "agreeRate": 90.49,
+          "disagreeRate": 9.51
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區民安里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "061",
+      "type": "normal",
+      "profRate": 75.54,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 37.02,
+          "candVictor": " ",
+          "tks": 1217,
+          "profRate": 9.38,
+          "agreeRate": 91.99,
+          "disagreeRate": 8.01
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區安穗里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "062",
+      "type": "normal",
+      "profRate": 75.28,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 36.87,
+          "candVictor": " ",
+          "tks": 1039,
+          "profRate": 6.74,
+          "agreeRate": 34.23,
+          "disagreeRate": 65.77
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區瑞穗里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "063",
+      "type": "normal",
+      "profRate": 75.74,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 46.11,
+          "candVictor": "*",
+          "tks": 687,
+          "profRate": 64.22,
+          "agreeRate": 16.81,
+          "disagreeRate": 83.19
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區明穗里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "064",
+      "type": "normal",
+      "profRate": 76.2,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 36.58,
+          "candVictor": " ",
+          "tks": 1030,
+          "profRate": 56.83,
+          "agreeRate": 20.7,
+          "disagreeRate": 79.3
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區清穗里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "065",
+      "type": "normal",
+      "profRate": 76.25,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 40.28,
+          "candVictor": " ",
+          "tks": 854,
+          "profRate": 44.95,
+          "agreeRate": 86.81,
+          "disagreeRate": 13.19
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區自強里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "066",
+      "type": "normal",
+      "profRate": 73.93,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 37.14,
+          "candVictor": " ",
+          "tks": 1145,
+          "profRate": 82.72,
+          "agreeRate": 42.39,
+          "disagreeRate": 57.61
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區德穗里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "067",
+      "type": "normal",
+      "profRate": 74.02,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 42.64,
+          "candVictor": "*",
+          "tks": 1223,
+          "profRate": 59.79,
+          "agreeRate": 17.95,
+          "disagreeRate": 82.05
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區民生里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "068",
+      "type": "normal",
+      "profRate": 76.76,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 40.64,
+          "candVictor": "*",
+          "tks": 1112,
+          "profRate": 26.7,
+          "agreeRate": 36.51,
+          "disagreeRate": 63.49
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區國光里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "069",
+      "type": "normal",
+      "profRate": 76.68,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 42.75,
+          "candVictor": "*",
+          "tks": 1070,
+          "profRate": 54.66,
+          "agreeRate": 52.95,
+          "disagreeRate": 47.05
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區壽德里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "070",
+      "type": "normal",
+      "profRate": 77.1,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 53.44,
+          "candVictor": "*",
+          "tks": 1531,
+          "profRate": 22.82,
+          "agreeRate": 26.17,
+          "disagreeRate": 73.83
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區明德里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "071",
+      "type": "normal",
+      "profRate": 75.34,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 40.05,
+          "candVictor": " ",
+          "tks": 984,
+          "profRate": 90.65,
+          "agreeRate": 69.31,
+          "disagreeRate": 30.69
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區錦中里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "085",
+      "type": "normal",
+      "profRate": 73.44,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 41.16,
+          "candVictor": "*",
+          "tks": 1048,
+          "profRate": 66.78,
+          "agreeRate": 17.51,
+          "disagreeRate": 82.49
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區錦盛里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "086",
+      "type": "normal",
+      "profRate": 74.22,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 36.66,
+          "candVictor": " ",
+          "tks": 871,
+          "profRate": 34.84,
+          "agreeRate": 66.71,
+          "disagreeRate": 33.29
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區民有里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "087",
+      "type": "normal",
+      "profRate": 77.12,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 41.08,
+          "candVictor": "*",
+          "tks": 748,
+          "profRate": 37.49,
+          "agreeRate": 41.19,
+          "disagreeRate": 58.81
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區員富里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "088",
+      "type": "normal",
+      "profRate": 73.72,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 36.48,
+          "candVictor": " ",
+          "tks": 838,
+          "profRate": 19.31,
+          "agreeRate": 73.56,
+          "disagreeRate": 26.44
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區嘉慶里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "089",
+      "type": "normal",
+      "profRate": 71.88,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 36.25,
+          "candVictor": " ",
+          "tks": 932,
+          "profRate": 15.54,
+          "agreeRate": 65.59,
+          "disagreeRate": 34.41
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區冠穗里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "090",
+      "type": "normal",
+      "profRate": 79.25,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 37.65,
+          "candVictor": " ",
+          "tks": 829,
+          "profRate": 11.05,
+          "agreeRate": 98.57,
+          "disagreeRate": 1.43
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區 中和區國華里",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": "030",
+      "vill": "091",
+      "type": "normal",
+      "profRate": 75.81,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 38.74,
+          "candVictor": " ",
+          "tks": 834,
+          "profRate": 48.28,
+          "agreeRate": 30.09,
+          "disagreeRate": 69.91
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

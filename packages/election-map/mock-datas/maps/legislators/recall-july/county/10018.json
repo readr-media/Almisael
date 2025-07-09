@@ -1,0 +1,30 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "新竹市 第01選區",
+      "area_nickname": "東區、北區、香山區",
+      "county": "10018",
+      "area": "01",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 74.69,
+      "candidates": [
+        {
+          "candNo": 7,
+          "name": "鄭正鈐",
+          "party": "中國國民黨",
+          "tksRate": 35.23,
+          "candVictor": "*",
+          "tks": 92014,
+          "profRate": 87.23,
+          "agreeRate": 71.31,
+          "disagreeRate": 28.69
+        }
+      ]
+    }
+  ]
+}

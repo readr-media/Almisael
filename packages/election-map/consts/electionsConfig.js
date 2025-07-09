@@ -92,7 +92,13 @@ export const electionsConfig = [
       { name: '全國', key: 'all', mobileOnly: true },
       { name: '罷免', key: 'recall-july', mobileOnly: false },
     ],
-    years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }, { key: 2024 }],
+    years: [
+      { key: 2012 },
+      { key: 2016 },
+      { key: 2020 },
+      { key: 2024 },
+      { key: 2025 },
+    ],
     meta: {
       evc: {
         wrapperTitle: {

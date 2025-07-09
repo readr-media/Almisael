@@ -13,7 +13,7 @@ import { useAppDispatch, useAppSelector } from '../hook/useRedux'
 import * as topojson from 'topojson'
 import { mapActions } from '../store/map-slice'
 import gtag from '../utils/gtag'
-import recallCountryData from '../mock-datas/maps/legislators/recall-july/country'
+import recallConstituencyData from '../mock-datas/maps/legislators/recall-july/constituency'
 
 const SVG = styled.svg`
   use {
@@ -420,10 +420,9 @@ export const Map = ({
     }
     if (electionType === 'legislator') {
       const { agreeRate, disagreeRate } =
-        recallCountryData?.districts
+        electionData[0]?.districts
           ?.find((district) => district.county === mapCountyCode)
           ?.candidates.at(0) || {}
-
       if (agreeRate) {
         const agree = agreeRate >= disagreeRate
         const color = getGradiantReferendumColor(
@@ -459,7 +458,6 @@ export const Map = ({
    * @returns {string}
    */
   const getTownColor = (mapTownCode) => {
-    console.log('getTownColor')
     const countyCode = mapTownCode.slice(0, -3)
 
     if (!mapColor || !electionData[1]) {
@@ -512,7 +510,6 @@ export const Map = ({
    * @returns {string}
    */
   const getAreaColor = (mapAreaCode) => {
-    console.log('getAreaColor')
     const countyCode = mapAreaCode.slice(0, -2)
     if (!mapColor || !electionData[1]) {
       return defaultColor
@@ -522,12 +519,22 @@ export const Map = ({
     if (activeCode && activeCode !== countyCode) {
       return defaultColor
     }
+    if (subtype.key === 'recall-july') {
+      const areaCandidates = electionData?.[1]?.[countyCode]?.districts?.find(
+        (district) => district.county + district.area === mapAreaCode
+      )?.candidates
+      if (!areaCandidates || !areaCandidates.length) return defaultColor
+      const { agreeRate, disagreeRate } = areaCandidates?.[0]
+      const agree = agreeRate >= disagreeRate
+      const color = getGradiantReferendumColor(
+        agree,
+        agree ? agreeRate : disagreeRate
+      )
+      return color
+    }
 
     // Only normal legislator and recall-july will show area map and use this function.
-    if (
-      electionType === 'legislator' &&
-      (subtype.key === 'normal' || subtype.key === 'recall-july')
-    ) {
+    if (electionType === 'legislator' && subtype.key === 'normal') {
       // Try to find the area candidates from the countyCode map data.
       const areaCandidates = electionData[1][countyCode]?.districts?.find(
         (district) => district.county + district.area === mapAreaCode
@@ -606,7 +613,7 @@ export const Map = ({
           return color
         }
       }
-    } else if (subtype.key === 'normal' || subtype.key === 'recall-july') {
+    } else if (subtype.key === 'normal') {
       // If the level is 3 (village level), only show the color for the active villCode
       if (
         levelControl.level === 3 &&
@@ -631,6 +638,22 @@ export const Map = ({
           )
           return color
         }
+      }
+    } else if (subtype.key === 'recall-july') {
+      const villageCandidates = electionData[2][areaCode]?.districts.find(
+        (district) =>
+          district.county + district.town + district.vill === mapVillCode
+      )?.candidates
+      if (villageCandidates && villageCandidates.length) {
+        const { agreeRate, disagreeRate } = villageCandidates[0]
+        const agree = agreeRate >= disagreeRate
+        const color = getGradiantReferendumColor(
+          agree,
+          agree ? agreeRate : disagreeRate
+        )
+        return color
+      } else {
+        return defaultColor
       }
     }
     // Fallback to default color if none of the situation fits.

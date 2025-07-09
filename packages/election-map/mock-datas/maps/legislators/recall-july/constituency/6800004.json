@@ -1,0 +1,1549 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "桃園市 第04選區 桃園區大林里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 72.23,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 54.7,
+          "candVictor": "*",
+          "tks": 2588,
+          "profRate": 71.64,
+          "agreeRate": 74.61,
+          "disagreeRate": 25.39
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區大樹里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "077",
+      "type": "normal",
+      "profRate": 72.76,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 53.36,
+          "candVictor": "*",
+          "tks": 1412,
+          "profRate": 72.54,
+          "agreeRate": 18.97,
+          "disagreeRate": 81.03
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區大豐里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "043",
+      "type": "normal",
+      "profRate": 72.85,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 52.74,
+          "candVictor": "*",
+          "tks": 1735,
+          "profRate": 28.69,
+          "agreeRate": 35.18,
+          "disagreeRate": 64.82
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區建國里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "042",
+      "type": "normal",
+      "profRate": 73.11,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 52.79,
+          "candVictor": "*",
+          "tks": 1836,
+          "profRate": 38.23,
+          "agreeRate": 35.61,
+          "disagreeRate": 64.39
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區雲林里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 74.96,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 56.36,
+          "candVictor": "*",
+          "tks": 2388,
+          "profRate": 74.47,
+          "agreeRate": 5.11,
+          "disagreeRate": 94.89
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區福安里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "044",
+      "type": "normal",
+      "profRate": 73.62,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 54.05,
+          "candVictor": "*",
+          "tks": 1534,
+          "profRate": 80.53,
+          "agreeRate": 22.91,
+          "disagreeRate": 77.09
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區福林里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 75.38,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 54.47,
+          "candVictor": "*",
+          "tks": 2314,
+          "profRate": 21.98,
+          "agreeRate": 89.19,
+          "disagreeRate": 10.81
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區豐林里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "041",
+      "type": "normal",
+      "profRate": 74.86,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 54.55,
+          "candVictor": "*",
+          "tks": 2373,
+          "profRate": 25.18,
+          "agreeRate": 11.46,
+          "disagreeRate": 88.54
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中和里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 73.51,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 44.35,
+          "candVictor": " ",
+          "tks": 404,
+          "profRate": 76.96,
+          "agreeRate": 57.78,
+          "disagreeRate": 42.22
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中興里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 75.25,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 50.37,
+          "candVictor": "*",
+          "tks": 2120,
+          "profRate": 34.12,
+          "agreeRate": 4.66,
+          "disagreeRate": 95.34
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區文化里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 76.96,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 49.94,
+          "candVictor": "*",
+          "tks": 393,
+          "profRate": 28.18,
+          "agreeRate": 30.22,
+          "disagreeRate": 69.78
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區文昌里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 76.98,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 43.07,
+          "candVictor": " ",
+          "tks": 236,
+          "profRate": 82.0,
+          "agreeRate": 89.12,
+          "disagreeRate": 10.88
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區文明里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.52,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 54.63,
+          "candVictor": "*",
+          "tks": 578,
+          "profRate": 14.99,
+          "agreeRate": 58.61,
+          "disagreeRate": 41.39
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區北門里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 72.79,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 44.66,
+          "candVictor": " ",
+          "tks": 531,
+          "profRate": 27.72,
+          "agreeRate": 17.83,
+          "disagreeRate": 82.17
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區民生里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 73.16,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 49.67,
+          "candVictor": "*",
+          "tks": 596,
+          "profRate": 54.05,
+          "agreeRate": 71.13,
+          "disagreeRate": 28.87
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區永興里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 70.08,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 44.44,
+          "candVictor": " ",
+          "tks": 539,
+          "profRate": 73.89,
+          "agreeRate": 84.42,
+          "disagreeRate": 15.58
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區光興里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 75.12,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 47.58,
+          "candVictor": "*",
+          "tks": 1511,
+          "profRate": 75.46,
+          "agreeRate": 94.73,
+          "disagreeRate": 5.27
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區西門里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 69.59,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 50.3,
+          "candVictor": "*",
+          "tks": 591,
+          "profRate": 84.3,
+          "agreeRate": 4.46,
+          "disagreeRate": 95.54
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區西湖里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 73.42,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 50.26,
+          "candVictor": "*",
+          "tks": 490,
+          "profRate": 34.54,
+          "agreeRate": 11.66,
+          "disagreeRate": 88.34
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區武陵里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 64.43,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 51.26,
+          "candVictor": "*",
+          "tks": 528,
+          "profRate": 41.79,
+          "agreeRate": 79.28,
+          "disagreeRate": 20.72
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區長美里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.2,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 40.09,
+          "candVictor": " ",
+          "tks": 275,
+          "profRate": 71.5,
+          "agreeRate": 3.48,
+          "disagreeRate": 96.52
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區南門里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 72.87,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 52.48,
+          "candVictor": "*",
+          "tks": 2119,
+          "profRate": 30.27,
+          "agreeRate": 52.12,
+          "disagreeRate": 47.88
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區南華里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 74.3,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 44.0,
+          "candVictor": " ",
+          "tks": 411,
+          "profRate": 66.48,
+          "agreeRate": 30.5,
+          "disagreeRate": 69.5
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中山里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 75.21,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 56.58,
+          "candVictor": "*",
+          "tks": 2678,
+          "profRate": 78.79,
+          "agreeRate": 80.02,
+          "disagreeRate": 19.98
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中平里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "064",
+      "type": "normal",
+      "profRate": 73.09,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 58.48,
+          "candVictor": "*",
+          "tks": 1889,
+          "profRate": 86.96,
+          "agreeRate": 70.83,
+          "disagreeRate": 29.17
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中正里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 74.29,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 55.24,
+          "candVictor": "*",
+          "tks": 2880,
+          "profRate": 24.68,
+          "agreeRate": 47.36,
+          "disagreeRate": 52.64
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中成里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 74.11,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 53.93,
+          "candVictor": "*",
+          "tks": 2498,
+          "profRate": 43.34,
+          "agreeRate": 35.92,
+          "disagreeRate": 64.08
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中信里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "062",
+      "type": "normal",
+      "profRate": 71.51,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 55.64,
+          "candVictor": "*",
+          "tks": 2098,
+          "profRate": 84.69,
+          "agreeRate": 7.34,
+          "disagreeRate": 92.66
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中原里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "065",
+      "type": "normal",
+      "profRate": 75.75,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 61.39,
+          "candVictor": "*",
+          "tks": 1994,
+          "profRate": 70.08,
+          "agreeRate": 81.32,
+          "disagreeRate": 18.68
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中泰里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "066",
+      "type": "normal",
+      "profRate": 74.48,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 62.25,
+          "candVictor": "*",
+          "tks": 1814,
+          "profRate": 60.48,
+          "agreeRate": 85.1,
+          "disagreeRate": 14.9
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中聖里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "070",
+      "type": "normal",
+      "profRate": 72.37,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 63.26,
+          "candVictor": "*",
+          "tks": 2369,
+          "profRate": 89.73,
+          "agreeRate": 58.95,
+          "disagreeRate": 41.05
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中路里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "054",
+      "type": "normal",
+      "profRate": 74.52,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 56.05,
+          "candVictor": "*",
+          "tks": 1561,
+          "profRate": 66.88,
+          "agreeRate": 99.87,
+          "disagreeRate": 0.13
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中德里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "055",
+      "type": "normal",
+      "profRate": 73.4,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 55.39,
+          "candVictor": "*",
+          "tks": 2482,
+          "profRate": 71.23,
+          "agreeRate": 51.59,
+          "disagreeRate": 48.41
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區文中里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "052",
+      "type": "normal",
+      "profRate": 76.81,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 54.49,
+          "candVictor": "*",
+          "tks": 2299,
+          "profRate": 32.63,
+          "agreeRate": 56.71,
+          "disagreeRate": 43.29
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區玉山里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 73.16,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 50.64,
+          "candVictor": "*",
+          "tks": 1705,
+          "profRate": 74.78,
+          "agreeRate": 7.68,
+          "disagreeRate": 92.32
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區泰山里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "053",
+      "type": "normal",
+      "profRate": 73.3,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 52.72,
+          "candVictor": "*",
+          "tks": 1330,
+          "profRate": 18.76,
+          "agreeRate": 87.8,
+          "disagreeRate": 12.2
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區龍山里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 67.91,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 55.55,
+          "candVictor": "*",
+          "tks": 1211,
+          "profRate": 29.5,
+          "agreeRate": 86.88,
+          "disagreeRate": 13.12
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區龍安里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "060",
+      "type": "normal",
+      "profRate": 73.46,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 59.96,
+          "candVictor": "*",
+          "tks": 2303,
+          "profRate": 21.61,
+          "agreeRate": 93.13,
+          "disagreeRate": 6.87
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區龍岡里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 72.13,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 61.75,
+          "candVictor": "*",
+          "tks": 2417,
+          "profRate": 71.27,
+          "agreeRate": 74.34,
+          "disagreeRate": 25.66
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區龍祥里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "056",
+      "type": "normal",
+      "profRate": 72.06,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 62.84,
+          "candVictor": "*",
+          "tks": 2129,
+          "profRate": 17.69,
+          "agreeRate": 16.65,
+          "disagreeRate": 83.35
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區龍壽里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "071",
+      "type": "normal",
+      "profRate": 73.35,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 58.2,
+          "candVictor": "*",
+          "tks": 2658,
+          "profRate": 96.36,
+          "agreeRate": 98.9,
+          "disagreeRate": 1.1
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區龍鳳里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "059",
+      "type": "normal",
+      "profRate": 55.42,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 59.72,
+          "candVictor": "*",
+          "tks": 3084,
+          "profRate": 53.04,
+          "agreeRate": 12.88,
+          "disagreeRate": 87.12
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中埔里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 75.24,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 49.13,
+          "candVictor": "*",
+          "tks": 1181,
+          "profRate": 37.46,
+          "agreeRate": 77.58,
+          "disagreeRate": 22.42
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區中寧里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "049",
+      "type": "normal",
+      "profRate": 70.9,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 58.89,
+          "candVictor": "*",
+          "tks": 2480,
+          "profRate": 36.36,
+          "agreeRate": 30.33,
+          "disagreeRate": 69.67
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區北埔里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "069",
+      "type": "normal",
+      "profRate": 72.42,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 60.23,
+          "candVictor": "*",
+          "tks": 1981,
+          "profRate": 47.29,
+          "agreeRate": 80.68,
+          "disagreeRate": 19.32
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區永安里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 73.52,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 47.47,
+          "candVictor": "*",
+          "tks": 1503,
+          "profRate": 85.79,
+          "agreeRate": 37.77,
+          "disagreeRate": 62.23
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區同安里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "050",
+      "type": "normal",
+      "profRate": 72.85,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 56.4,
+          "candVictor": "*",
+          "tks": 3977,
+          "profRate": 97.03,
+          "agreeRate": 44.76,
+          "disagreeRate": 55.24
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區同德里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "072",
+      "type": "normal",
+      "profRate": 74.48,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 60.67,
+          "candVictor": "*",
+          "tks": 2605,
+          "profRate": 63.82,
+          "agreeRate": 63.14,
+          "disagreeRate": 36.86
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區自強里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "061",
+      "type": "normal",
+      "profRate": 74.97,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 60.06,
+          "candVictor": "*",
+          "tks": 3218,
+          "profRate": 55.24,
+          "agreeRate": 48.53,
+          "disagreeRate": 51.47
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區西埔里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 75.34,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 45.6,
+          "candVictor": " ",
+          "tks": 999,
+          "profRate": 66.55,
+          "agreeRate": 99.26,
+          "disagreeRate": 0.74
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區明德里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "073",
+      "type": "normal",
+      "profRate": 73.93,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 60.61,
+          "candVictor": "*",
+          "tks": 1351,
+          "profRate": 41.34,
+          "agreeRate": 26.46,
+          "disagreeRate": 73.54
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區東埔里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 71.88,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 50.56,
+          "candVictor": "*",
+          "tks": 1621,
+          "profRate": 46.12,
+          "agreeRate": 11.21,
+          "disagreeRate": 88.79
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區長安里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 74.29,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 49.86,
+          "candVictor": "*",
+          "tks": 1210,
+          "profRate": 89.65,
+          "agreeRate": 51.32,
+          "disagreeRate": 48.68
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區長德里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "063",
+      "type": "normal",
+      "profRate": 74.14,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 52.44,
+          "candVictor": "*",
+          "tks": 1803,
+          "profRate": 20.87,
+          "agreeRate": 28.26,
+          "disagreeRate": 71.74
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區信光里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "048",
+      "type": "normal",
+      "profRate": 73.16,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 52.95,
+          "candVictor": "*",
+          "tks": 2554,
+          "profRate": 69.08,
+          "agreeRate": 16.84,
+          "disagreeRate": 83.16
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區南埔里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "067",
+      "type": "normal",
+      "profRate": 74.8,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 53.25,
+          "candVictor": "*",
+          "tks": 1982,
+          "profRate": 93.77,
+          "agreeRate": 3.78,
+          "disagreeRate": 96.22
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區莊敬里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "051",
+      "type": "normal",
+      "profRate": 72.5,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 60.45,
+          "candVictor": "*",
+          "tks": 3715,
+          "profRate": 99.03,
+          "agreeRate": 52.47,
+          "disagreeRate": 47.53
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區慈文里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 71.62,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 52.93,
+          "candVictor": "*",
+          "tks": 2283,
+          "profRate": 18.69,
+          "agreeRate": 70.61,
+          "disagreeRate": 29.39
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區新埔里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 75.63,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 58.93,
+          "candVictor": "*",
+          "tks": 2043,
+          "profRate": 16.2,
+          "agreeRate": 31.02,
+          "disagreeRate": 68.98
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區瑞慶里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "075",
+      "type": "normal",
+      "profRate": 70.95,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 59.97,
+          "candVictor": "*",
+          "tks": 2375,
+          "profRate": 22.57,
+          "agreeRate": 35.52,
+          "disagreeRate": 64.48
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區經國里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "080",
+      "type": "normal",
+      "profRate": 73.81,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 58.31,
+          "candVictor": "*",
+          "tks": 2066,
+          "profRate": 18.74,
+          "agreeRate": 45.17,
+          "disagreeRate": 54.83
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區寶安里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "074",
+      "type": "normal",
+      "profRate": 71.82,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 60.02,
+          "candVictor": "*",
+          "tks": 3267,
+          "profRate": 41.51,
+          "agreeRate": 77.79,
+          "disagreeRate": 22.21
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區寶慶里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "068",
+      "type": "normal",
+      "profRate": 73.78,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 58.92,
+          "candVictor": "*",
+          "tks": 2575,
+          "profRate": 61.22,
+          "agreeRate": 24.93,
+          "disagreeRate": 75.07
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區朝陽里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 71.49,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 47.16,
+          "candVictor": "*",
+          "tks": 622,
+          "profRate": 61.73,
+          "agreeRate": 79.49,
+          "disagreeRate": 20.51
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區成功里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 74.06,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 51.26,
+          "candVictor": "*",
+          "tks": 1400,
+          "profRate": 77.71,
+          "agreeRate": 30.16,
+          "disagreeRate": 69.84
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區東門里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 72.12,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 51.4,
+          "candVictor": "*",
+          "tks": 1062,
+          "profRate": 79.47,
+          "agreeRate": 8.79,
+          "disagreeRate": 91.21
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區 桃園區東山里",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": "010",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 71.27,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 50.42,
+          "candVictor": "*",
+          "tks": 656,
+          "profRate": 60.14,
+          "agreeRate": 94.01,
+          "disagreeRate": 5.99
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

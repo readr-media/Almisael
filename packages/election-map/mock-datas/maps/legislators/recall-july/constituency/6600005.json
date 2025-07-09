@@ -1,0 +1,1802 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "臺中市 第05選區 北區中正里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 72.08,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 43.97,
+          "candVictor": " ",
+          "tks": 361,
+          "profRate": 37.73,
+          "agreeRate": 6.95,
+          "disagreeRate": 93.05
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區六合里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 69.1,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 40.73,
+          "candVictor": " ",
+          "tks": 455,
+          "profRate": 85.36,
+          "agreeRate": 91.68,
+          "disagreeRate": 8.32
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區光大里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 70.51,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 48.7,
+          "candVictor": "*",
+          "tks": 658,
+          "profRate": 41.88,
+          "agreeRate": 74.67,
+          "disagreeRate": 25.33
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區文莊里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.79,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 60.34,
+          "candVictor": "*",
+          "tks": 1342,
+          "profRate": 19.57,
+          "agreeRate": 39.75,
+          "disagreeRate": 60.25
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區大湖里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 68.24,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 42.48,
+          "candVictor": " ",
+          "tks": 573,
+          "profRate": 51.06,
+          "agreeRate": 50.18,
+          "disagreeRate": 49.82
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區五常里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 70.25,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 43.95,
+          "candVictor": " ",
+          "tks": 374,
+          "profRate": 49.89,
+          "agreeRate": 59.13,
+          "disagreeRate": 40.87
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區錦平里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 69.9,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 45.91,
+          "candVictor": "*",
+          "tks": 561,
+          "profRate": 16.9,
+          "agreeRate": 96.16,
+          "disagreeRate": 3.84
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區新北里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 71.03,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 49.82,
+          "candVictor": "*",
+          "tks": 542,
+          "profRate": 77.69,
+          "agreeRate": 21.34,
+          "disagreeRate": 78.66
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區新興里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 71.13,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 55.86,
+          "candVictor": "*",
+          "tks": 534,
+          "profRate": 25.8,
+          "agreeRate": 57.54,
+          "disagreeRate": 42.46
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區樂英里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 71.15,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 70.28,
+          "candVictor": "*",
+          "tks": 1161,
+          "profRate": 65.14,
+          "agreeRate": 35.98,
+          "disagreeRate": 64.02
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區錦村里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 77.34,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 51.12,
+          "candVictor": "*",
+          "tks": 1143,
+          "profRate": 57.79,
+          "agreeRate": 38.09,
+          "disagreeRate": 61.91
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區建成里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 72.54,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 47.64,
+          "candVictor": "*",
+          "tks": 1815,
+          "profRate": 53.3,
+          "agreeRate": 63.83,
+          "disagreeRate": 36.17
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區建德里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 75.35,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 52.27,
+          "candVictor": "*",
+          "tks": 1186,
+          "profRate": 76.25,
+          "agreeRate": 80.62,
+          "disagreeRate": 19.38
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區錦洲里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 73.2,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 53.91,
+          "candVictor": "*",
+          "tks": 1207,
+          "profRate": 30.42,
+          "agreeRate": 34.34,
+          "disagreeRate": 65.66
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區錦祥里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 72.65,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 52.38,
+          "candVictor": "*",
+          "tks": 1817,
+          "profRate": 94.63,
+          "agreeRate": 23.68,
+          "disagreeRate": 76.32
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區金華里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.56,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 53.68,
+          "candVictor": "*",
+          "tks": 1006,
+          "profRate": 83.81,
+          "agreeRate": 35.36,
+          "disagreeRate": 64.64
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區金龍里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 71.35,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.34,
+          "candVictor": "*",
+          "tks": 1492,
+          "profRate": 92.22,
+          "agreeRate": 92.79,
+          "disagreeRate": 7.21
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區邱厝里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.53,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 49.87,
+          "candVictor": "*",
+          "tks": 759,
+          "profRate": 85.11,
+          "agreeRate": 22.65,
+          "disagreeRate": 77.35
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區建興里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 73.63,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 48.28,
+          "candVictor": "*",
+          "tks": 1801,
+          "profRate": 55.31,
+          "agreeRate": 75.05,
+          "disagreeRate": 24.95
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區頂厝里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.51,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 51.39,
+          "candVictor": "*",
+          "tks": 1464,
+          "profRate": 50.77,
+          "agreeRate": 71.58,
+          "disagreeRate": 28.42
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區崇德里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 71.67,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.2,
+          "candVictor": "*",
+          "tks": 1157,
+          "profRate": 92.97,
+          "agreeRate": 18.3,
+          "disagreeRate": 81.7
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區賴厝里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 59.92,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 55.19,
+          "candVictor": "*",
+          "tks": 1568,
+          "profRate": 86.17,
+          "agreeRate": 19.62,
+          "disagreeRate": 80.38
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區賴福里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 76.53,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 51.28,
+          "candVictor": "*",
+          "tks": 1439,
+          "profRate": 91.15,
+          "agreeRate": 94.82,
+          "disagreeRate": 5.18
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區賴興里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 74.51,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 54.51,
+          "candVictor": "*",
+          "tks": 1449,
+          "profRate": 4.57,
+          "agreeRate": 6.83,
+          "disagreeRate": 93.17
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區賴旺里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 70.63,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 53.22,
+          "candVictor": "*",
+          "tks": 1481,
+          "profRate": 89.93,
+          "agreeRate": 58.61,
+          "disagreeRate": 41.39
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區賴明里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 72.27,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 52.97,
+          "candVictor": "*",
+          "tks": 1329,
+          "profRate": 45.15,
+          "agreeRate": 59.47,
+          "disagreeRate": 40.53
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區梅川里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 74.22,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.77,
+          "candVictor": "*",
+          "tks": 1150,
+          "profRate": 94.9,
+          "agreeRate": 90.76,
+          "disagreeRate": 9.24
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區賴村里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 72.99,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 44.9,
+          "candVictor": " ",
+          "tks": 1330,
+          "profRate": 75.17,
+          "agreeRate": 54.21,
+          "disagreeRate": 45.79
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區育德里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 72.88,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.93,
+          "candVictor": "*",
+          "tks": 1260,
+          "profRate": 97.75,
+          "agreeRate": 90.48,
+          "disagreeRate": 9.52
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區淡溝里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 74.19,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 49.04,
+          "candVictor": "*",
+          "tks": 1739,
+          "profRate": 15.0,
+          "agreeRate": 84.89,
+          "disagreeRate": 15.11
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區健行里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 74.93,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 46.72,
+          "candVictor": "*",
+          "tks": 2150,
+          "profRate": 77.37,
+          "agreeRate": 62.5,
+          "disagreeRate": 37.5
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區明德里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 75.28,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.19,
+          "candVictor": "*",
+          "tks": 1848,
+          "profRate": 45.6,
+          "agreeRate": 27.73,
+          "disagreeRate": 72.27
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區明新里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 74.04,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.63,
+          "candVictor": "*",
+          "tks": 929,
+          "profRate": 24.86,
+          "agreeRate": 85.08,
+          "disagreeRate": 14.92
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區長青里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 72.83,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.42,
+          "candVictor": "*",
+          "tks": 2052,
+          "profRate": 40.64,
+          "agreeRate": 18.9,
+          "disagreeRate": 81.1
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區立人里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 70.6,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 55.14,
+          "candVictor": "*",
+          "tks": 1373,
+          "profRate": 99.7,
+          "agreeRate": 7.35,
+          "disagreeRate": 92.65
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北區中達里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "050",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 73.43,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 46.24,
+          "candVictor": " ",
+          "tks": 823,
+          "profRate": 69.15,
+          "agreeRate": 63.68,
+          "disagreeRate": 36.32
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區三光里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 74.05,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 51.79,
+          "candVictor": "*",
+          "tks": 2521,
+          "profRate": 56.3,
+          "agreeRate": 12.77,
+          "disagreeRate": 87.23
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區三和里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "041",
+      "type": "normal",
+      "profRate": 74.68,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 54.02,
+          "candVictor": "*",
+          "tks": 2161,
+          "profRate": 83.45,
+          "agreeRate": 66.49,
+          "disagreeRate": 33.51
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區大坑里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 74.02,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 43.99,
+          "candVictor": " ",
+          "tks": 666,
+          "profRate": 26.44,
+          "agreeRate": 92.15,
+          "disagreeRate": 7.85
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區大德里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 74.18,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 56.33,
+          "candVictor": "*",
+          "tks": 1834,
+          "profRate": 99.39,
+          "agreeRate": 35.52,
+          "disagreeRate": 64.48
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區仁和里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 66.29,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.89,
+          "candVictor": "*",
+          "tks": 3046,
+          "profRate": 83.27,
+          "agreeRate": 73.99,
+          "disagreeRate": 26.01
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區仁美里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 75.98,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.89,
+          "candVictor": "*",
+          "tks": 3530,
+          "profRate": 23.87,
+          "agreeRate": 86.02,
+          "disagreeRate": 13.98
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區仁愛里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 76.02,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 56.43,
+          "candVictor": "*",
+          "tks": 421,
+          "profRate": 3.75,
+          "agreeRate": 56.59,
+          "disagreeRate": 43.41
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區水景里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 75.38,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 49.52,
+          "candVictor": "*",
+          "tks": 4877,
+          "profRate": 12.15,
+          "agreeRate": 18.93,
+          "disagreeRate": 81.07
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區水湳里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 73.99,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 51.69,
+          "candVictor": "*",
+          "tks": 2434,
+          "profRate": 87.25,
+          "agreeRate": 58.75,
+          "disagreeRate": 41.25
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區北屯里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.22,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 51.9,
+          "candVictor": "*",
+          "tks": 1227,
+          "profRate": 51.52,
+          "agreeRate": 68.63,
+          "disagreeRate": 31.37
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區北京里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 74.04,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 46.73,
+          "candVictor": " ",
+          "tks": 1015,
+          "profRate": 33.62,
+          "agreeRate": 17.7,
+          "disagreeRate": 82.3
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區北興里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.35,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.88,
+          "candVictor": "*",
+          "tks": 1158,
+          "profRate": 78.0,
+          "agreeRate": 85.25,
+          "disagreeRate": 14.75
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區四民里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 76.6,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 48.69,
+          "candVictor": "*",
+          "tks": 778,
+          "profRate": 16.09,
+          "agreeRate": 80.09,
+          "disagreeRate": 19.91
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區平心里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 73.23,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 54.15,
+          "candVictor": "*",
+          "tks": 1789,
+          "profRate": 90.92,
+          "agreeRate": 88.33,
+          "disagreeRate": 11.67
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區平田里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 72.83,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 51.85,
+          "candVictor": "*",
+          "tks": 2023,
+          "profRate": 4.31,
+          "agreeRate": 91.85,
+          "disagreeRate": 8.15
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區平安里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 73.9,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 49.95,
+          "candVictor": "*",
+          "tks": 1839,
+          "profRate": 52.02,
+          "agreeRate": 17.94,
+          "disagreeRate": 82.06
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區平和里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 73.84,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 53.06,
+          "candVictor": "*",
+          "tks": 1915,
+          "profRate": 97.52,
+          "agreeRate": 38.88,
+          "disagreeRate": 61.12
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區平昌里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 72.9,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 51.65,
+          "candVictor": "*",
+          "tks": 1566,
+          "profRate": 38.56,
+          "agreeRate": 73.03,
+          "disagreeRate": 26.97
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區平陽里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 73.14,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 52.39,
+          "candVictor": "*",
+          "tks": 1742,
+          "profRate": 60.86,
+          "agreeRate": 50.06,
+          "disagreeRate": 49.94
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區平順里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 71.9,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 49.65,
+          "candVictor": "*",
+          "tks": 1057,
+          "profRate": 7.11,
+          "agreeRate": 17.19,
+          "disagreeRate": 82.81
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區平福里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 74.82,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 57.81,
+          "candVictor": "*",
+          "tks": 1436,
+          "profRate": 95.27,
+          "agreeRate": 40.77,
+          "disagreeRate": 59.23
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區平德里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 72.86,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.79,
+          "candVictor": "*",
+          "tks": 2167,
+          "profRate": 55.18,
+          "agreeRate": 22.59,
+          "disagreeRate": 77.41
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區平興里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 73.28,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 53.45,
+          "candVictor": "*",
+          "tks": 2492,
+          "profRate": 12.86,
+          "agreeRate": 42.49,
+          "disagreeRate": 57.51
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區民政里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 70.94,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 45.74,
+          "candVictor": " ",
+          "tks": 311,
+          "profRate": 6.23,
+          "agreeRate": 24.89,
+          "disagreeRate": 75.11
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區民德里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 71.8,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 41.58,
+          "candVictor": " ",
+          "tks": 274,
+          "profRate": 49.5,
+          "agreeRate": 74.92,
+          "disagreeRate": 25.08
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區同榮里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 76.16,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 52.37,
+          "candVictor": "*",
+          "tks": 2022,
+          "profRate": 93.81,
+          "agreeRate": 7.01,
+          "disagreeRate": 92.99
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區后庄里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 75.69,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 56.6,
+          "candVictor": "*",
+          "tks": 4028,
+          "profRate": 70.9,
+          "agreeRate": 66.99,
+          "disagreeRate": 33.01
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區和平里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.79,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.23,
+          "candVictor": "*",
+          "tks": 4189,
+          "profRate": 17.69,
+          "agreeRate": 86.2,
+          "disagreeRate": 13.8
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區忠平里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "042",
+      "type": "normal",
+      "profRate": 75.46,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 58.9,
+          "candVictor": "*",
+          "tks": 1601,
+          "profRate": 78.12,
+          "agreeRate": 19.23,
+          "disagreeRate": 80.77
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區東山里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 75.43,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 41.23,
+          "candVictor": " ",
+          "tks": 599,
+          "profRate": 82.87,
+          "agreeRate": 64.27,
+          "disagreeRate": 35.73
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區東光里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.46,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 48.89,
+          "candVictor": "*",
+          "tks": 1539,
+          "profRate": 89.93,
+          "agreeRate": 37.4,
+          "disagreeRate": 62.6
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區松安里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 74.36,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 50.85,
+          "candVictor": "*",
+          "tks": 1731,
+          "profRate": 80.03,
+          "agreeRate": 8.89,
+          "disagreeRate": 91.11
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區松竹里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 75.05,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 54.71,
+          "candVictor": "*",
+          "tks": 3484,
+          "profRate": 98.12,
+          "agreeRate": 16.3,
+          "disagreeRate": 83.7
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區松和里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 71.87,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 52.77,
+          "candVictor": "*",
+          "tks": 2372,
+          "profRate": 88.34,
+          "agreeRate": 69.92,
+          "disagreeRate": 30.08
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區松勇里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 76.5,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 52.58,
+          "candVictor": "*",
+          "tks": 1924,
+          "profRate": 95.36,
+          "agreeRate": 75.01,
+          "disagreeRate": 24.99
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區松茂里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 73.87,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 54.62,
+          "candVictor": "*",
+          "tks": 1988,
+          "profRate": 73.18,
+          "agreeRate": 44.29,
+          "disagreeRate": 55.71
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區松強里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 74.32,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 52.3,
+          "candVictor": "*",
+          "tks": 2512,
+          "profRate": 85.25,
+          "agreeRate": 34.13,
+          "disagreeRate": 65.87
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區軍功里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 76.39,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 48.55,
+          "candVictor": "*",
+          "tks": 4421,
+          "profRate": 43.54,
+          "agreeRate": 81.65,
+          "disagreeRate": 18.35
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區陳平里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 74.14,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 53.54,
+          "candVictor": "*",
+          "tks": 1745,
+          "profRate": 1.08,
+          "agreeRate": 21.08,
+          "disagreeRate": 78.92
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區新平里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 70.86,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 55.2,
+          "candVictor": "*",
+          "tks": 1571,
+          "profRate": 12.06,
+          "agreeRate": 69.43,
+          "disagreeRate": 30.57
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區廍子里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 73.88,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 53.52,
+          "candVictor": "*",
+          "tks": 6910,
+          "profRate": 26.93,
+          "agreeRate": 75.59,
+          "disagreeRate": 24.41
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第05選區 北屯區舊社里",
+      "area_nickname": "北區、北屯區",
+      "county": "66000",
+      "area": "05",
+      "town": "080",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 75.57,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "黃健豪",
+          "party": "中國國民黨",
+          "tksRate": 49.72,
+          "candVictor": "*",
+          "tks": 4463,
+          "profRate": 42.56,
+          "agreeRate": 74.15,
+          "disagreeRate": 25.85
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

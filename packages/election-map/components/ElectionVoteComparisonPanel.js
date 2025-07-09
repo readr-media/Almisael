@@ -117,8 +117,8 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
     (state) => state.election.config.electionType
   )
   const subtype = useAppSelector((state) => state.election.control.subtype)
-  const countyCode = useAppSelector(
-    (state) => state.election.control.level.countyCode
+  const { countyCode, level, areaCode } = useAppSelector(
+    (state) => state.election.control.level
   )
   const evcData = useAppSelector((state) => state.election.data.evcData)
   let wrapperTitle = useAppSelector(
@@ -126,16 +126,30 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
   )
   wrapperTitle =
     typeof wrapperTitle === 'string' ? wrapperTitle : wrapperTitle[subtype.key]
-
   let election
   // only councilMember and legislator with subtype 'normal' will have evcData for level 1
   if (
     electionType === 'councilMember' ||
-    (electionType === 'legislator' && (subtype.key === 'normal' || subtype.key === 'recall-july'))
+    (electionType === 'legislator' &&
+      (subtype.key === 'normal' || subtype.key === 'recall-july'))
   ) {
     election = evcData[1][countyCode]
   } else {
     election = evcData[0]
+  }
+
+  if (
+    electionType === 'legislator' &&
+    (subtype.key === 'normal' || subtype.key === 'recall-july') &&
+    level === 2
+  ) {
+    const selectedArea = areaCode.slice(-2)
+    election = {
+      ...election,
+      districts: election.districts.filter(
+        (district) => district.districtName === selectedArea
+      ),
+    }
   }
   const shouldShowEVC = computeShouldShowEVC(election, electionType, subtype)
 
