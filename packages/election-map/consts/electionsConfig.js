@@ -1,10 +1,10 @@
-export const defaultElectionType = 'president'
+export const defaultElectionType = 'legislator'
 export const currentYear = 2024
 export const refetchInervalInSecond = 3 * 60
 
 /**
  * Representing the type of the election.
- * @typedef {'president' | 'mayor' | 'legislator' | 'councilMember' | 'referendum'} ElectionType
+ * @typedef {'president' | 'mayor' | 'legislator' | 'councilMember' | 'referendum' | 'recall-july'} ElectionType
  *
  * Representing a subtype of a election
  * @typedef {Object} ElectionSubtype

@@ -57,7 +57,7 @@ const defaultControl = {
     defaultElectionConfig.years[defaultElectionConfig.years.length - 1]
       .numbers[0],
   subtype: defaultElectionConfig.subtypes?.find(
-    (subtype) => subtype.key === 'normal'
+    (subtype) => subtype.key === 'recall-july'
   ),
   evcScrollTo: '',
 }
