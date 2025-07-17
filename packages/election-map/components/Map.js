@@ -427,8 +427,8 @@ export const Map = ({
       const candidate = electionData[0]?.districts
         ?.find((district) => district.county === mapCountyCode)
         ?.candidates.at(0)
-      if (candidate) return '#D9D9D9'
-      return '#999999'
+      if (candidate) return '#999999'
+      return '#D9D9D9'
     }
     if (electionType === 'legislator') {
       const { agreeRate, disagreeRate } =
