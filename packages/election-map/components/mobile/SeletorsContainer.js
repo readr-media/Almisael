@@ -122,7 +122,9 @@ export default function SelectorsContainer({ className = '' }) {
   const compareInfo = useAppSelector((state) => state.election.compare.info)
   const { compareMode } = compareInfo
   const shouldShowDistrictWithAreaSelectors =
-    electionsType === 'legislator' && (currentElectionSubtype.key === 'normal' || currentElectionSubtype.key === 'recall-july')
+    electionsType === 'legislator' &&
+    (currentElectionSubtype.key === 'normal' ||
+      currentElectionSubtype.key === 'recall-july')
   useEffect(() => {
     setShouldActivate(!inView)
   }, [inView])

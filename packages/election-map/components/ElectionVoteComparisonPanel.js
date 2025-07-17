@@ -141,7 +141,7 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
   if (
     electionType === 'legislator' &&
     (subtype.key === 'normal' || subtype.key === 'recall-july') &&
-    level === 2
+    level >= 2
   ) {
     const selectedArea = areaCode.slice(-2)
     election = {
@@ -152,7 +152,6 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
     }
   }
   const shouldShowEVC = computeShouldShowEVC(election, electionType, subtype)
-
   const electionVoteComparisonJsx = isMobile ? (
     <ElectionVotesComparisonMobileWrapper>
       <StyledEVC

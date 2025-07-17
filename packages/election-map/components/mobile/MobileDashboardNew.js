@@ -91,10 +91,10 @@ const ContentWrapper = styled.div`
 const StyledSelectorContainer = styled(SelectorContainer)`
   background-color: ${
     /**
-     * @param {Object} props
-     * @param {boolean} props.isCompareMode
+* @param {Object} props
+* @param {boolean} props.isCompareMode
 
-     */
+*/
     ({ isCompareMode }) => (isCompareMode ? '#E9E9E9' : `${electionMapColor}`)
   };
 `
@@ -113,6 +113,9 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
   const electionsType = useAppSelector(
     (state) => state.election.config.electionType
   )
+  const currentSubType = useAppSelector(
+    (state) => state.election.control.subtype
+  )
 
   const year = useAppSelector((state) => state.election.control.year)
   const years = useAppSelector((state) => state.election.config.years)
@@ -130,6 +133,7 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
   ) : (
     <>
       {electionsType !== 'referendum' &&
+        currentSubType?.key !== 'recall-july' &&
         years.map((y) => (
           <TopButton
             isSelected={year.key === y.key}
@@ -141,9 +145,11 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
             {y.key}
           </TopButton>
         ))}
-      <TopButton onClick={() => setShouldOpenYearComparisonMenuBar(true)}>
-        比較
-      </TopButton>
+      {currentSubType?.key !== 'recall-july' && (
+        <TopButton onClick={() => setShouldOpenYearComparisonMenuBar(true)}>
+          比較
+        </TopButton>
+      )}
     </>
   )
 

@@ -72,6 +72,9 @@ export const MapContainer = ({ dashboardInView }) => {
   const mapColorMeta = useAppSelector(
     (state) => state.election.config.meta.map.mapColor
   )
+  const isRunning = useAppSelector(
+    (state) => state.election.data.mapData.isRunning
+  )
   const mapColor =
     typeof mapColorMeta === 'boolean' ? mapColorMeta : mapColorMeta[subtype.key]
 
@@ -106,6 +109,7 @@ export const MapContainer = ({ dashboardInView }) => {
         {dimension && (
           <>
             <Map
+              isRunning={isRunning}
               dimension={splitDimension}
               geoJsons={geoJsons}
               id="first"
@@ -117,6 +121,7 @@ export const MapContainer = ({ dashboardInView }) => {
               {number ? number.year + number.name : year.key}
             </CompareInfo>
             <Map
+              isRunning={isRunning}
               dimension={splitDimension}
               geoJsons={geoJsons}
               id="second"
@@ -140,6 +145,7 @@ export const MapContainer = ({ dashboardInView }) => {
       <Wrapper ref={elementRef} dashboardInView={dashboardInView}>
         {dimension && (
           <Map
+            isRunning={isRunning}
             dimension={dimension}
             geoJsons={geoJsons}
             id="first"

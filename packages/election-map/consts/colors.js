@@ -1,6 +1,6 @@
 import { organization } from './config'
 
-export const defaultColor = '#AFAFAF'
+export const defaultColor = '#D9D9D9'
 
 export const partiesColor = [
   {

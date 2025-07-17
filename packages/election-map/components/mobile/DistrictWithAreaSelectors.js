@@ -84,14 +84,15 @@ export default function DistrictWithAreaSelectors({}) {
   const electionsType = useAppSelector(
     (state) => state.election.config.electionType
   )
-
   const currentElectionSubType = useAppSelector(
     (state) => state.election.control.subtype
   )
   const year = useAppSelector((state) => state.election.control.year)
 
   const isConstituency =
-    electionsType === 'legislator' && (currentElectionSubType.key === 'normal' || currentElectionSubType.key === 'recall-july')
+    electionsType === 'legislator' &&
+    (currentElectionSubType.key === 'normal' ||
+      currentElectionSubType.key === 'recall-july')
 
   const allTown = getAllTown(currentCountyCode)
   const allVillage = getAllVillage(currentAreaCode)

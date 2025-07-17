@@ -287,6 +287,15 @@ export const fetchLegislatorEvcData = async ({
   subtypeKey,
   district = '',
 }) => {
+  if (subtypeKey === 'recall-july') {
+    const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
+    const data = await loader.loadRecallData({
+      year: yearKey,
+      recallType: 'recall',
+      district,
+    })
+    return data
+  }
   let subtype =
     subtypeKey === 'normal' || subtypeKey === 'recall-july'
       ? 'district'
@@ -408,7 +417,9 @@ export const fetchLegislatorMapData = async ({
       transformedSubtype = 'normal'
       break
     case 'recall-july':
+      // NOTE: switch for running or finish GCS resources
       transformedSubtype = 'recall-july'
+      // transformedSubtype = 'recall-july-dev'
       break
     case 'mountainIndigenous':
       transformedSubtype = 'mountain-indigenous'

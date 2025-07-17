@@ -11,7 +11,7 @@
     "export": "next build && next export"
   },
   "dependencies": {
-    "@readr-media/react-election-widgets": "1.1.5",
+    "@readr-media/react-election-widgets": "1.1.6-beta.1",
     "@readr-media/react-live-blog": "1.1.13",
     "@reduxjs/toolkit": "^1.9.7",
     "axios": "^1.1.3",

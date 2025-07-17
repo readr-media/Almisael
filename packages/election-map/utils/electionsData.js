@@ -835,7 +835,6 @@ export const prepareElectionData = async (
                     yearKey,
                     subtypeKey: apiParams.subtypeKey,
                   })
-                  console.log({ data })
                   newEvcData[level] = data
                 } catch (error) {
                   console.error(error)
@@ -893,9 +892,13 @@ export const prepareElectionData = async (
             // handle map data
             //subtypes 'normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous' and 'party' show mapData in level 0
             if (
-              ['normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous', 'party'].includes(
-                subtypeKey
-              )
+              [
+                'normal',
+                'recall-july',
+                'mountainIndigenous',
+                'plainIndigenous',
+                'party',
+              ].includes(subtypeKey)
             ) {
               // fetch mapData if in refetch mode or no specific map data
               if (forceRefetching || (!forceRefetching && !newMapData[level])) {
@@ -933,9 +936,13 @@ export const prepareElectionData = async (
             // handle infobox data
             //subtypes 'normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous' and 'party' show infoboxData in level 0
             if (
-              ['normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous', 'party'].includes(
-                subtypeKey
-              )
+              [
+                'normal',
+                'recall-july',
+                'mountainIndigenous',
+                'plainIndigenous',
+                'party',
+              ].includes(subtypeKey)
             ) {
               newInfoboxData.electionData = newMapData[level]?.summary || []
               newInfoboxData.isRunning = newMapData.isRunning
@@ -1076,7 +1083,10 @@ export const prepareElectionData = async (
             // subtype 'all' won't show mapData
             if (subtypeKey !== 'all') {
               // only subtype 'normal' and 'recall-july' use areaCode as level 2
-              const levelCode = (subtypeKey === 'normal' || subtypeKey === 'recall-july') ? areaCode : townCode
+              const levelCode =
+                subtypeKey === 'normal' || subtypeKey === 'recall-july'
+                  ? areaCode
+                  : townCode
               // fetch mapData if in refetch mode or no specific map data
               if (
                 forceRefetching ||
@@ -1119,7 +1129,7 @@ export const prepareElectionData = async (
               newInfoboxData.electionData =
                 newMapData[1]?.[countyCode]?.districts?.filter((district) => {
                   const levelCode =
-                    (subtypeKey === 'normal' || subtypeKey === 'recall-july')
+                    subtypeKey === 'normal' || subtypeKey === 'recall-july'
                       ? district.county + district.area
                       : district.county + district.town
                   return levelCode === levelControl.activeCode
@@ -1132,7 +1142,10 @@ export const prepareElectionData = async (
             // handle infobox data only
             // subtype 'all' won't show infoboxData
             if (subtypeKey !== 'all') {
-              const levelCode = (subtypeKey === 'normal' || subtypeKey === 'recall-july') ? areaCode : townCode
+              const levelCode =
+                subtypeKey === 'normal' || subtypeKey === 'recall-july'
+                  ? areaCode
+                  : townCode
               newInfoboxData.electionData =
                 newMapData[2][levelCode]?.districts.filter(
                   (district) =>

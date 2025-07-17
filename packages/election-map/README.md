@@ -316,6 +316,13 @@ Infobox
   - 優化 `ThresholdBarChart` 元件，增加了 `unit` prop 使單位可自訂。
   - 調整了圖例和標籤顯示邏輯，使其更符合設計並避免文字擁擠。
 
+- **feat(infobox): integrate ThresholdBarChart for recall-july elections**
+  - 在 `Infobox.js` 的 `NormalLegislatorInfobox` 元件中整合 `ThresholdBarChart`。
+  - 針對 `recall-july` 子類型選舉，自動將候選人資料轉換為門檻圖表格式。
+  - 實作台灣罷免選舉門檻計算邏輯（需 25% 合格選民參與投票）。
+  - 使用藍色 (#5673da) 表示支持罷免，紅色 (#ff8585) 表示反對罷免。
+  - 保持對一般立委選舉的向後相容性，非罷免選舉仍使用原有顯示方式。
+
 ### 2025-07-02: 修正罷免選舉功能
 
 - **fix(data): complete recall-july infobox data support across all levels**

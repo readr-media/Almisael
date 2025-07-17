@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { getInfoBoxData } from '../../utils/infoboxData'
+import { ThresholdBarChart } from '../ThresholdBarChart'
 
 /**
  *  Inside infobox data, a summary object or district object may have a note object
@@ -14,7 +15,7 @@ import { getInfoBoxData } from '../../utils/infoboxData'
 const InfoboxWrapper = styled.div`
   font-family: 'Noto Sans TC', sans-serif;
   padding: 16px 22px;
-  height: 130px;
+  height: 626px;
   overflow: auto;
 
   @media (max-width: 1024px) {
@@ -38,7 +39,13 @@ const PresidentCandidate = styled.p`
   margin-top: 20px;
   font-weight: 700;
   line-height: 26px;
-  ${({ elected }) => elected && 'color: #DB4C65;'}
+  ${
+    /**
+     * @param {Object} props
+     * @param {boolean} [props.elected]
+     */
+    ({ elected }) => elected && 'color: #DB4C65;'
+  }
 `
 
 const PresidentCandidateName = styled.div`
@@ -112,7 +119,26 @@ const HintWrapper = styled.p`
     margin-left: 1px;
   }
 `
+const EndVotedText = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #939393;
+  ${
+    /**
+     * @param {object} props
+     * @param {boolean} props.isLevelOne - Is the title in level 1.
+     * @returns
+     */
+    (props) => (props.isLevelOne ? 'margin-bottom:20px;' : '')
+  }
+`
 
+const GrayBoxIndicator = styled.div`
+  height: 12px;
+  width: 12px;
+  background-color: #939393;
+`
 const electedSvg = (
   <svg
     width="20"
@@ -214,7 +240,13 @@ const MayorCandidate = styled.div`
   margin-top: 20px;
   align-items: center;
   line-height: 23px;
-  ${({ elected }) => elected && 'color: #DB4C65;'}
+  ${
+    /**
+     * @param {Object} props
+     * @param {boolean} [props.elected]
+     */
+    ({ elected }) => elected && 'color: #DB4C65;'
+  }
 `
 
 const MayorCandidateName = styled.div`
@@ -297,6 +329,7 @@ const NormalLegislatorCandidate = styled.div`
   margin-top: 20px;
   align-items: center;
   line-height: 23px;
+  width: 100%;
   ${
     /**
      * @param {Object} props
@@ -305,14 +338,37 @@ const NormalLegislatorCandidate = styled.div`
     ({ elected }) => elected && 'color: #DB4C65;'
   }
 `
+const RecallLegislatorCandidate = styled(NormalLegislatorCandidate)`
+  color: #000;
+`
 
 const NormalLegislatorCandidateName = styled.div`
   max-width: 160px;
   font-weight: 700;
 `
+const RecallLegislatorCandidateName = styled.div`
+  width: 100%;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+`
+
+const PassStatus = styled.p`
+  ${
+    /**
+     * @param {Object} props
+     * @param {boolean} [props.elected]
+     */
+    ({ elected }) => (elected ? 'color: #5673DA;' : 'color: #FF8585;')
+  }
+`
 
 const NormalLegislatorCandidateParty = styled.div`
   font-weight: 350;
+  color: #939393;
+`
+const RecallLegislatorCandidateParty = styled(NormalLegislatorCandidateParty)`
+  margin-bottom: 20px;
 `
 
 const NormalLegislatorDistrict = styled.div`
@@ -415,6 +471,191 @@ const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
             <NormalLegislatorDistrict key={legislatorPrefix}>
               <NormalLegislatorArea>{areaName}</NormalLegislatorArea>
               <NormalLegislatorTitle>投票率 {profRate}%</NormalLegislatorTitle>
+              {candidateComps}
+            </NormalLegislatorDistrict>
+          )
+        })}
+      </InfoboxScrollWrapper>
+    )
+  }
+
+  return (
+    <InfoboxScrollWrapper>
+      {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
+      {data.map((district) => {
+        const { candidates = [], profRate, type, county, town, area } = district
+        const legislatorPrefix = county + town + area + type
+
+        return (
+          <LegislatorTypeWrapper key={legislatorPrefix}>
+            <NormalLegislatorTitle>
+              投票率 {profRate}% {isCurrentYearRunningJsx}
+            </NormalLegislatorTitle>
+            {[...candidates]
+              .sort((cand1, cand2) => {
+                if (cand1.tksRate === cand2.tksRate) {
+                  return 0
+                }
+                return cand1.tksRate < cand2.tksRate ? 1 : -1
+              })
+              .map((candidate) => {
+                const elected = candidate.candVictor === '*'
+                return (
+                  <NormalLegislatorCandidate
+                    elected={elected}
+                    id={legislatorPrefix + candidate.candNo}
+                    key={legislatorPrefix + candidate.candNo}
+                  >
+                    <NormalLegislatorCandidateName>
+                      {candidate.name}
+                    </NormalLegislatorCandidateName>
+                    <NormalLegislatorCandidateParty>
+                      {candidate.party} {candidate.tksRate}%
+                    </NormalLegislatorCandidateParty>
+                    {elected && <ElectedIcon>{electedSvg} </ElectedIcon>}
+                  </NormalLegislatorCandidate>
+                )
+              })}
+          </LegislatorTypeWrapper>
+        )
+      })}
+    </InfoboxScrollWrapper>
+  )
+}
+
+/**
+ *
+ * @param {Object} props
+ * @param {number} props.level
+ * @param {Object} props.data
+ * @param {boolean} props.isRunning
+ * @param {boolean} props.isStarted
+ * @param {boolean} props.isCurrentYear
+ * @returns {JSX.Element}
+ */
+const RecallLegislatorInfobox = ({
+  level,
+  data,
+  isRunning,
+  isCurrentYear,
+  isStarted,
+}) => {
+  const isCurrentYearRunningJsx = isCurrentYear ? (
+    isRunning ? (
+      <HintWrapper>
+        <RunningHint>開票中</RunningHint>
+      </HintWrapper>
+    ) : (
+      <HintWrapper>
+        <FinalHint>開票結束</FinalHint>
+      </HintWrapper>
+    )
+  ) : (
+    <></>
+  )
+
+  // check the type of InfoboxNote for the business logic of the note
+  // use one of the note
+  /** @type {InfoboxNote | undefined} */
+  const note = data.find((data) => !!data.note?.text)?.note
+
+  if (note?.text && !note?.displayVotes) {
+    return (
+      <InfoboxScrollWrapper>
+        <InfoboxNote>{note.text}</InfoboxNote>
+      </InfoboxScrollWrapper>
+    )
+  }
+  if (level) {
+    const districts = data
+    return (
+      <InfoboxScrollWrapper>
+        {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
+        {isCurrentYearRunningJsx}
+        {districts.map(({ county, area, range, candidates, profRate }) => {
+          const shouldShowThresholdValueLevelList = [1, 2]
+          const shouldShowThresholdBarLevelList = [1, 2]
+          const legislatorPrefix = county + area
+          const areaName = range.split(' ')[1]
+          const candidateComps = Array.isArray(candidates) ? (
+            [...candidates]
+              .sort((cand1, cand2) => {
+                if (cand1.tksRate === cand2.tksRate) {
+                  return 0
+                }
+                return cand1.tksRate < cand2.tksRate ? 1 : -1
+              })
+              .map((candidate) => {
+                //NOTE: Because there is a running state which has no results.
+                const elected = candidate.adptVictor === 'Y'
+                const notElected = candidate.adptVictor === 'N'
+                return (
+                  <RecallLegislatorCandidate
+                    elected={elected}
+                    key={legislatorPrefix + candidate.candNo}
+                  >
+                    <RecallLegislatorCandidateName>
+                      {candidate.name}
+                      <PassStatus elected={elected}>
+                        {candidate.adptVictor
+                          ? '通過'
+                          : notElected
+                          ? '不通過'
+                          : ''}
+                      </PassStatus>
+                    </RecallLegislatorCandidateName>
+                    <RecallLegislatorCandidateParty>
+                      {candidate.party}
+                    </RecallLegislatorCandidateParty>
+                    {/* TODO: some hard code. */}
+                    <ThresholdBarChart
+                      title="通過門檻"
+                      thresholdValue={candidate.ytpRate}
+                      totalValue={candidate.agreeTks + candidate.disagreeTks}
+                      shouldShowThresholdValue={shouldShowThresholdValueLevelList.includes(
+                        level
+                      )}
+                      shouldShowThresholdBar={shouldShowThresholdBarLevelList.includes(
+                        level
+                      )}
+                      data={[
+                        {
+                          label: '同意',
+                          value: candidate.agreeTks,
+                          color: '#448DE3',
+                        },
+                        {
+                          label: '不同意',
+                          value: candidate.disagreeTks,
+                          color: '#ED4541',
+                        },
+                      ]}
+                      unit="票"
+                    />
+                  </RecallLegislatorCandidate>
+                )
+              })
+          ) : (
+            <></>
+          )
+          return (
+            <NormalLegislatorDistrict key={legislatorPrefix}>
+              {level === 1 && isStarted && !isRunning && (
+                <EndVotedText isLevelOne={level === 1}>
+                  <GrayBoxIndicator />
+                  開票結束
+                </EndVotedText>
+              )}
+              {level === 1 && (
+                <NormalLegislatorArea>{areaName}</NormalLegislatorArea>
+              )}
+              <NormalLegislatorTitle>投票率 {profRate}%</NormalLegislatorTitle>
+              {level !== 1 && isStarted && !isRunning && (
+                <EndVotedText isLevelOne={level === 1}>
+                  <GrayBoxIndicator />
+                  開票結束
+                </EndVotedText>
+              )}
               {candidateComps}
             </NormalLegislatorDistrict>
           )
@@ -688,6 +929,7 @@ const PartyLegislatorInfobox = ({ data, isRunning, isCurrentYear }) => {
  * @param {number} props.level
  * @param {Object} props.data
  * @param {boolean} props.isRunning
+ * @param {boolean} props.isStarted
  * @param {boolean} props.isCurrentYear
  * @param {import('../../consts/electionsConfig').ElectionSubtype} props.subtype
  * @returns {JSX.Element}
@@ -696,6 +938,7 @@ const LegislatorInfobox = ({
   level,
   data,
   isRunning,
+  isStarted,
   isCurrentYear,
   subtype,
 }) => {
@@ -710,6 +953,15 @@ const LegislatorInfobox = ({
   // separate all types for individual component to support extreme custom UI for each type
   switch (subtype.key) {
     case 'recall-july':
+      return (
+        <RecallLegislatorInfobox
+          level={level}
+          data={data}
+          isRunning={isRunning}
+          isStarted={isStarted}
+          isCurrentYear={isCurrentYear}
+        />
+      )
     case 'normal':
       return (
         <NormalLegislatorInfobox
@@ -1164,6 +1416,7 @@ export const Infobox = ({ data, isCurrentYear, year, subtype }) => {
           level={level}
           data={data}
           isRunning={isRunning}
+          isStarted={isStarted}
           isCurrentYear={isCurrentYear}
           subtype={subtype}
         />

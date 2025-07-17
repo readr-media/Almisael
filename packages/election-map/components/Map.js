@@ -13,7 +13,6 @@ import { useAppDispatch, useAppSelector } from '../hook/useRedux'
 import * as topojson from 'topojson'
 import { mapActions } from '../store/map-slice'
 import gtag from '../utils/gtag'
-import recallConstituencyData from '../mock-datas/maps/legislators/recall-july/constituency'
 
 const SVG = styled.svg`
   use {
@@ -30,6 +29,7 @@ const SVG = styled.svg`
  * @param {Function} props.setTooltip
  * @param {import('../utils/electionsData').ElectionData} props.electionData
  * @param {boolean} props.mapColor
+ * @param {boolean} props.isRunning
  * @returns {JSX.Element}
  */
 export const Map = ({
@@ -39,6 +39,7 @@ export const Map = ({
   setTooltip,
   electionData,
   mapColor,
+  isRunning,
 }) => {
   const dispatch = useAppDispatch()
   const electionType = useAppSelector(
@@ -273,6 +274,8 @@ export const Map = ({
     })
   }
   const areaClicked = (feature) => {
+    // NOTE: if it is running do not open area
+    if (subtype.key === 'recall-july' && isRunning) return
     const {
       COUNTYCODE: countyCode,
       COUNTYNAME: countyName,
@@ -394,11 +397,13 @@ export const Map = ({
    */
   const getCountyColor = (mapCountyCode) => {
     if (!mapColor || !electionData[0]) {
+      if (subtype && subtype.key === 'recall-july') return '#999'
       return defaultColor
     }
 
     // By pass when activeCode exists and is not countyCode. (Only country level and  county level matters.)
     if (activeCode && activeCode !== mapCountyCode) {
+      if (subtype && subtype.key === 'recall-july') return '#999'
       return defaultColor
     }
 
@@ -417,6 +422,13 @@ export const Map = ({
       } else {
         return defaultColor
       }
+    }
+    if (subtype && subtype.key === 'recall-july') {
+      const candidate = electionData[0]?.districts
+        ?.find((district) => district.county === mapCountyCode)
+        ?.candidates.at(0)
+      if (candidate) return '#D9D9D9'
+      return '#999999'
     }
     if (electionType === 'legislator') {
       const { agreeRate, disagreeRate } =
@@ -653,7 +665,7 @@ export const Map = ({
         )
         return color
       } else {
-        return defaultColor
+        return '#D9D9D9'
       }
     }
     // Fallback to default color if none of the situation fits.
