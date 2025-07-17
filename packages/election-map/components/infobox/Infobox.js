@@ -572,94 +572,98 @@ const RecallLegislatorInfobox = ({
       <InfoboxScrollWrapper>
         {note?.text && <InfoboxNote>{note.text}</InfoboxNote>}
         {isCurrentYearRunningJsx}
-        {districts.map(({ county, area, range, candidates, profRate }) => {
-          const shouldShowThresholdValueLevelList = [1, 2]
-          const shouldShowThresholdBarLevelList = [1, 2]
-          const legislatorPrefix = county + area
-          const areaName = range.split(' ')[1]
-          const candidateComps = Array.isArray(candidates) ? (
-            [...candidates]
-              .sort((cand1, cand2) => {
-                if (cand1.tksRate === cand2.tksRate) {
-                  return 0
-                }
-                return cand1.tksRate < cand2.tksRate ? 1 : -1
-              })
-              .map((candidate) => {
-                //NOTE: Because there is a running state which has no results.
-                const elected = candidate.adptVictor === 'Y'
-                const notElected = candidate.adptVictor === 'N'
-                return (
-                  <RecallLegislatorCandidate
-                    elected={elected}
-                    key={legislatorPrefix + candidate.candNo}
-                  >
-                    <RecallLegislatorCandidateName>
-                      {candidate.name}
-                      <PassStatus elected={elected}>
-                        {candidate.adptVictor
-                          ? '通過'
-                          : notElected
-                          ? '不通過'
-                          : ''}
-                      </PassStatus>
-                    </RecallLegislatorCandidateName>
-                    <RecallLegislatorCandidateParty>
-                      {candidate.party}
-                    </RecallLegislatorCandidateParty>
-                    {/* TODO: some hard code. */}
-                    <ThresholdBarChart
-                      title="通過門檻"
-                      thresholdValue={candidate.ytpRate}
-                      totalValue={candidate.agreeTks + candidate.disagreeTks}
-                      shouldShowThresholdValue={shouldShowThresholdValueLevelList.includes(
-                        level
-                      )}
-                      shouldShowThresholdBar={shouldShowThresholdBarLevelList.includes(
-                        level
-                      )}
-                      data={[
-                        {
-                          label: '同意',
-                          value: candidate.agreeTks,
-                          color: '#448DE3',
-                        },
-                        {
-                          label: '不同意',
-                          value: candidate.disagreeTks,
-                          color: '#ED4541',
-                        },
-                      ]}
-                      unit="票"
-                    />
-                  </RecallLegislatorCandidate>
-                )
-              })
-          ) : (
-            <></>
-          )
-          return (
-            <NormalLegislatorDistrict key={legislatorPrefix}>
-              {level === 1 && isStarted && !isRunning && (
-                <EndVotedText isLevelOne={level === 1}>
-                  <GrayBoxIndicator />
-                  開票結束
-                </EndVotedText>
-              )}
-              {level === 1 && (
-                <NormalLegislatorArea>{areaName}</NormalLegislatorArea>
-              )}
-              <NormalLegislatorTitle>投票率 {profRate}%</NormalLegislatorTitle>
-              {level !== 1 && isStarted && !isRunning && (
-                <EndVotedText isLevelOne={level === 1}>
-                  <GrayBoxIndicator />
-                  開票結束
-                </EndVotedText>
-              )}
-              {candidateComps}
-            </NormalLegislatorDistrict>
-          )
-        })}
+        {districts.map(
+          ({ county, area, range, candidates, profRate, votePop }) => {
+            const shouldShowThresholdValueLevelList = [1, 2]
+            const shouldShowThresholdBarLevelList = [1, 2]
+            const legislatorPrefix = county + area
+            const areaName = range.split(' ')[1]
+            const candidateComps = Array.isArray(candidates) ? (
+              [...candidates]
+                .sort((cand1, cand2) => {
+                  if (cand1.tksRate === cand2.tksRate) {
+                    return 0
+                  }
+                  return cand1.tksRate < cand2.tksRate ? 1 : -1
+                })
+                .map((candidate) => {
+                  //NOTE: Because there is a running state which has no results.
+                  const elected = candidate.adptVictor === 'Y'
+                  const notElected = candidate.adptVictor === 'N'
+                  return (
+                    <RecallLegislatorCandidate
+                      elected={elected}
+                      key={legislatorPrefix + candidate.candNo}
+                    >
+                      <RecallLegislatorCandidateName>
+                        {candidate.name}
+                        <PassStatus elected={elected}>
+                          {candidate.adptVictor
+                            ? '通過'
+                            : notElected
+                            ? '不通過'
+                            : ''}
+                        </PassStatus>
+                      </RecallLegislatorCandidateName>
+                      <RecallLegislatorCandidateParty>
+                        {candidate.party}
+                      </RecallLegislatorCandidateParty>
+                      {/* TODO: some hard code. */}
+                      <ThresholdBarChart
+                        title="通過門檻"
+                        thresholdValue={votePop}
+                        totalValue={candidate.agreeTks + candidate.disagreeTks}
+                        shouldShowThresholdValue={shouldShowThresholdValueLevelList.includes(
+                          level
+                        )}
+                        shouldShowThresholdBar={shouldShowThresholdBarLevelList.includes(
+                          level
+                        )}
+                        data={[
+                          {
+                            label: '同意',
+                            value: candidate.agreeTks,
+                            color: '#448DE3',
+                          },
+                          {
+                            label: '不同意',
+                            value: candidate.disagreeTks,
+                            color: '#ED4541',
+                          },
+                        ]}
+                        unit="票"
+                      />
+                    </RecallLegislatorCandidate>
+                  )
+                })
+            ) : (
+              <></>
+            )
+            return (
+              <NormalLegislatorDistrict key={legislatorPrefix}>
+                {level === 1 && isStarted && !isRunning && (
+                  <EndVotedText isLevelOne={level === 1}>
+                    <GrayBoxIndicator />
+                    開票結束
+                  </EndVotedText>
+                )}
+                {level === 1 && (
+                  <NormalLegislatorArea>{areaName}</NormalLegislatorArea>
+                )}
+                <NormalLegislatorTitle>
+                  投票率 {profRate}%
+                </NormalLegislatorTitle>
+                {level !== 1 && isStarted && !isRunning && (
+                  <EndVotedText isLevelOne={level === 1}>
+                    <GrayBoxIndicator />
+                    開票結束
+                  </EndVotedText>
+                )}
+                {candidateComps}
+              </NormalLegislatorDistrict>
+            )
+          }
+        )}
       </InfoboxScrollWrapper>
     )
   }

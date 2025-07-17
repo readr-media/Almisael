@@ -41,6 +41,7 @@ const LegendItem = styled.div`
 const ThresholdText = styled.p`
   display: none;
   @media ${device.tablet} {
+    display: unset;
     color: #666666;
   }
 `
@@ -159,7 +160,7 @@ export const ThresholdBarChart = ({
   if (!data || data.length === 0 || !totalValue) {
     return null
   }
-
+  console.log(shouldShowThresholdValue)
   return (
     <ChartWrapper>
       <Header>
@@ -175,7 +176,7 @@ export const ThresholdBarChart = ({
           <ThresholdText>
             {title}：
             <ThresholdValue>
-              {(thresholdValue * totalValue).toFixed(0)} {unit}
+              {(thresholdValue / 4).toFixed(0)} {unit}
             </ThresholdValue>
           </ThresholdText>
         )}
@@ -213,7 +214,7 @@ export const ThresholdBarChart = ({
                 </Bar>
                 <PercentageLabel>{percentage.toFixed(1)}%</PercentageLabel>
                 {item.label === '同意' && shouldShowThresholdBar && (
-                  <ThresholdLine left={thresholdValue} />
+                  <ThresholdLine left={25} />
                 )}
               </BarRow>
             </div>
@@ -224,7 +225,7 @@ export const ThresholdBarChart = ({
         <MobileThresholdText>
           {title}：
           <MobileThresholdValue>
-            {(thresholdValue * totalValue).toFixed(0)} {unit}
+            {(thresholdValue / 4).toFixed(0)} {unit}
           </MobileThresholdValue>
         </MobileThresholdText>
       )}

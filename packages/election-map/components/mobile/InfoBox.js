@@ -314,7 +314,7 @@ export default function InfoBox({ infoboxData, year }) {
       </CandidateInfo>
     )
   }
-  const getRecallInfoboxItemJsx = (candidate, level) => {
+  const getRecallInfoboxItemJsx = (candidate, level, votePop) => {
     if (!candidate) {
       return null
     }
@@ -325,6 +325,7 @@ export default function InfoBox({ infoboxData, year }) {
       { label: '不同意', value: candidate.disagreeTks, color: '#ED4541' },
     ]
     const shouldShowThresholdValueLevelList = [0, 1]
+    console.log({ candidate, votePop })
     return (
       <CandidateInfo isVictor={false} key={candidate.canNo}>
         <div className="name">{candidate.name}</div>
@@ -336,8 +337,7 @@ export default function InfoBox({ infoboxData, year }) {
         </div>
         <ThresholdBarChart
           title="通過門檻"
-          //TODO: have to pass this
-          thresholdValue={0.3}
+          thresholdValue={votePop}
           shouldShowThresholdValue={shouldShowThresholdValueLevelList.includes(
             level
           )}
@@ -762,7 +762,11 @@ export default function InfoBox({ infoboxData, year }) {
                       <CandidatesInfoWrapper maxHeight={'100%'}>
                         {orderedCandidates.map((candidate) => {
                           if (currentElectionSubType.key === 'recall-july')
-                            return getRecallInfoboxItemJsx(candidate, level)
+                            return getRecallInfoboxItemJsx(
+                              candidate,
+                              level,
+                              district?.votePop
+                            )
                           return getInfoboxItemJsx(candidate)
                         })}
                       </CandidatesInfoWrapper>
