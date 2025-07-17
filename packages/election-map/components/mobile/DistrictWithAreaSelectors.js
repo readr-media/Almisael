@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 
 import styled from 'styled-components'
 import Selector from './Selector'
@@ -89,6 +89,8 @@ export default function DistrictWithAreaSelectors({}) {
   )
   const year = useAppSelector((state) => state.election.control.year)
 
+  const electionData = useAppSelector((state) => state.election.data.mapData)
+
   const isConstituency =
     electionsType === 'legislator' &&
     (currentElectionSubType.key === 'normal' ||
@@ -151,8 +153,18 @@ export default function DistrictWithAreaSelectors({}) {
   }
 
   const optionsForFirstDistrictSelector = useMemo(() => {
+    if (currentElectionSubType.key === 'recall-july') {
+      console.log({ electionData })
+      const recallCountyCodes = electionData[0]?.districts.map(
+        (district) => district.county
+      )
+      console.log(recallCountyCodes, allCounty)
+      return allCounty.filter((county) => {
+        return recallCountyCodes?.includes(county.code)
+      })
+    }
     return allCounty
-  }, [allCounty])
+  }, [allCounty, currentElectionSubType.key, electionData])
   const optionsForSecondDistrictSelector = useMemo(() => {
     if (currentCountyCode) {
       return [
