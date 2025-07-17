@@ -210,6 +210,10 @@ export const Map = ({
   }
 
   const countyClicked = (feature) => {
+    const countyHasData = !!electionData?.[0]?.districts?.find(
+      (county) => county.county === feature.properties.COUNTYCODE
+    )
+    if (subtype.key === 'recall-july' && !countyHasData) return
     const { COUNTYCODE: countyCode, COUNTYNAME: countyName } =
       feature.properties
     dispatch(
