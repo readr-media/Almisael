@@ -1,7 +1,7 @@
 import widgets from '@readr-media/react-election-widgets'
-import axios from 'axios'
+import axios from './api'
 
-import { environment } from '../consts/config'
+import { environment, isRunning } from '../consts/config'
 
 const gcsBaseUrl =
   environment === 'dev'
@@ -418,8 +418,7 @@ export const fetchLegislatorMapData = async ({
       break
     case 'recall-july':
       // NOTE: switch for running or finish GCS resources
-      // transformedSubtype = 'recall-july'
-      transformedSubtype = 'recall-july-dev'
+      transformedSubtype = isRunning ? 'recall-july-dev' : 'recall-july'
       break
     case 'mountainIndigenous':
       transformedSubtype = 'mountain-indigenous'

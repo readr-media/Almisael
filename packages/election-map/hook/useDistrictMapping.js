@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react'
-import axios from 'axios'
+import axios from '../utils/api'
 import { environment } from '../consts/config'
 import { useAppSelector } from './useRedux'
 
@@ -27,7 +27,8 @@ const fetchJson = async (url) => {
  */
 const fetchDistrictJson = async (electionType, currentSubType, currentYear) => {
   const mappingJsonPath =
-    electionType === 'legislator' && (currentSubType.key === 'normal' || currentSubType.key === 'recall-july')
+    electionType === 'legislator' &&
+    (currentSubType.key === 'normal' || currentSubType.key === 'recall-july')
       ? `/district-mapping/district-with-area/${electionType}/${currentYear.key}/mapping.json`
       : '/district-mapping/district/mapping.json'
   const url = `${gcsBaseUrl}${mappingJsonPath}`

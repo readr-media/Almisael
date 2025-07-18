@@ -9,6 +9,9 @@ export const organization = 'readr-media'
 // export const organization = 'mirror-media'
 // export const organization = 'mirror-daily'
 // export const organization = 'mnews'
+
+/** @typedef {boolean} isRunning - fetch isRunning data or not */
+export const isRunning = true
 /** @type {Env} */
 export const environment = 'dev' // 'dev | prod'
 const ga4Ids = {
@@ -77,6 +80,6 @@ export const og = {
 /*
 gsutil -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/taiwan-elections
 gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/dev-taiwan-elections
-gsutil -m cp -r ./out/* gs://readr-coverage/project/3/taiwan-elections
+gsutil -m cp -r ./out/* gs://readr-coverage/project/3/dev-taiwan-elections
 gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://readr-coverage/project/3/dev-taiwan-elections
 */
