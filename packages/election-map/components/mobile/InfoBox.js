@@ -133,11 +133,11 @@ const CandidatesInfoWrapper = styled.ul`
   margin: 4px auto 0;
   padding: 0;
   max-height: ${
-  /**
-   * @param {Object} props
-   * @param {string} props.maxHeight
-   */
-  ({ maxHeight }) => maxHeight && maxHeight
+    /**
+     * @param {Object} props
+     * @param {string} props.maxHeight
+     */
+    ({ maxHeight }) => maxHeight && maxHeight
   };
   min-height: 100%;
   transition: max-height 1s 0s ease-in-out;
@@ -159,11 +159,11 @@ const CandidateInfo = styled.li`
   position: relative;
   z-index: 0;
   color: ${
-  /**
-   * @param {Object} props
-   * @param {boolean} props.isVictor
-   */
-  ({ isVictor }) => (isVictor ? '#db4c65' : 'black')
+    /**
+     * @param {Object} props
+     * @param {boolean} props.isVictor
+     */
+    ({ isVictor }) => (isVictor ? '#db4c65' : 'black')
   };
   .name {
     font-weight: 700;
@@ -203,13 +203,13 @@ const ExpendButton = styled.button`
     border-width: 8px 4px 0 4px;
     border-color: #000 transparent transparent transparent;
     transform: ${
-  /**
-   * @param {Object} props
-   * @param {boolean} props.shouldInfoBoxExpand
-   */
-  ({ shouldInfoBoxExpand }) =>
-    shouldInfoBoxExpand ? 'rotate(180deg)' : 'rotate(0deg)'
-  };
+      /**
+       * @param {Object} props
+       * @param {boolean} props.shouldInfoBoxExpand
+       */
+      ({ shouldInfoBoxExpand }) =>
+        shouldInfoBoxExpand ? 'rotate(180deg)' : 'rotate(0deg)'
+    };
     transition: transform 0.1s ease-in-out;
   }
 `
@@ -222,11 +222,11 @@ const Divider = styled.div`
 const WrapperForCouncilMemberFirstLevel = styled.div`
   min-height: 100%;
   max-height: ${
-  /**
-   * @param {Object} props
-   * @param {string} props.maxHeight
-   */
-  ({ maxHeight }) => maxHeight && maxHeight
+    /**
+     * @param {Object} props
+     * @param {string} props.maxHeight
+     */
+    ({ maxHeight }) => maxHeight && maxHeight
   };
   overflow: hidden;
   transition: max-height 1s ease-in-out;
@@ -248,11 +248,11 @@ const InfoNote = styled.p`
 `
 const IsCandidatePassedText = styled.div`
   ${
-  /**
-   * @param {object} props
-   * @param {boolean} props.isVictor - is victor or not
-   */
-  (props) => (props.isVictor ? 'color:#5673DA;' : 'color:#FF8585;')
+    /**
+     * @param {object} props
+     * @param {boolean} props.isVictor - is victor or not
+     */
+    (props) => (props.isVictor ? 'color:#5673DA;' : 'color:#FF8585;')
   }
 `
 

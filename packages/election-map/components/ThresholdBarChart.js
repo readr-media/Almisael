@@ -86,11 +86,11 @@ const BarRow = styled.div`
 const Bar = styled.div`
   height: 100%;
   width: ${
-  /**
-   * @param {Object} props
-   * @param {number} [props.width]
-   */
-  (props) => props.width
+    /**
+     * @param {Object} props
+     * @param {number} [props.width]
+     */
+    (props) => props.width
   }%;
   background-color: ${(props) => props.color};
   display: flex;
@@ -125,11 +125,11 @@ const PercentageLabel = styled.span`
 const ThresholdLine = styled.div`
   position: absolute;
   left: ${
-  /**
-   * @param {Object} props
-   * @param {number} [props.left]
-   */
-  (props) => props.left
+    /**
+     * @param {Object} props
+     * @param {number} [props.left]
+     */
+    (props) => props.left
   }%;
   top: 0;
   bottom: 0;

@@ -86,8 +86,9 @@ const Spot = styled.span`
   ${({ compare, cand1, cand2 }) => {
     if (compare) {
       return `
-        ${!cand1 &&
-        `
+        ${
+          !cand1 &&
+          `
             border: 1px solid #cdcdcd;
             &:after {
               color: #cdcdcd;
@@ -103,8 +104,9 @@ const Spot = styled.span`
             }
           `
         }
-        ${cand2 &&
-        `
+        ${
+          cand2 &&
+          `
             border: 1px solid #000;
             &:before {
               background-color: #000;
@@ -136,11 +138,11 @@ const ActionButton = styled.button`
     margin-left: 12px;
   }
   ${
-  /**
-   * @param {Object} props
-   * @param {boolean} [props.cancel]
-   */
-  ({ cancel }) => cancel && 'background-color: #e0e0e0;'
+    /**
+     * @param {Object} props
+     * @param {boolean} [props.cancel]
+     */
+    ({ cancel }) => cancel && 'background-color: #e0e0e0;'
   }
 `
 
@@ -160,8 +162,14 @@ export const YearSelect = ({ className }) => {
   const electionName = useAppSelector(
     (state) => state.election.config.electionName
   )
+  const electionType = useAppSelector(
+    (state) => state.election.config.electionType
+  )
   const subtype = useAppSelector((state) => state.election.control.subtype)
-  const filteredYears = years.filter((y) => y.subType.includes(subtype.key))
+  const filteredYears =
+    electionType === 'legislator'
+      ? years.filter((y) => y?.subType?.includes(subtype.key))
+      : years
   const dispatch = useAppDispatch()
   const [compare, setCompare] = useState(false)
   const [compareCandidates, setCompareCandidates] = useState([
@@ -206,35 +214,39 @@ export const YearSelect = ({ className }) => {
         {compare ? (
           <SpotWrapper>
             {filteredYears.map((y) => {
-              return <Spot
-                key={y.key}
-                content={y.key}
-                compare={compare}
-                selected={
-                  (compareCandidates[0] && y === compareCandidates[0]) ||
-                  (compareCandidates[1] && y === compareCandidates[1])
-                }
-                cand1={compareCandidates[0] && y === compareCandidates[0]}
-                cand2={compareCandidates[1] && y === compareCandidates[1]}
-                onClick={() => {
-                  if (y !== compareCandidates[0]) {
-                    setCompareCandidates(([cand1]) => [cand1, y])
+              return (
+                <Spot
+                  key={y.key}
+                  content={y.key}
+                  compare={compare}
+                  selected={
+                    (compareCandidates[0] && y === compareCandidates[0]) ||
+                    (compareCandidates[1] && y === compareCandidates[1])
                   }
-                }}
-              />
+                  cand1={compareCandidates[0] && y === compareCandidates[0]}
+                  cand2={compareCandidates[1] && y === compareCandidates[1]}
+                  onClick={() => {
+                    if (y !== compareCandidates[0]) {
+                      setCompareCandidates(([cand1]) => [cand1, y])
+                    }
+                  }}
+                />
+              )
             })}
           </SpotWrapper>
         ) : (
           <SpotWrapper>
             {filteredYears.map((y) => {
-              return <Spot
-                key={y.key}
-                content={y.key}
-                selected={y === year}
-                onClick={() => {
-                  dispatch(electionActions.changeYear(y))
-                }}
-              />
+              return (
+                <Spot
+                  key={y.key}
+                  content={y.key}
+                  selected={y === year}
+                  onClick={() => {
+                    dispatch(electionActions.changeYear(y))
+                  }}
+                />
+              )
             })}
           </SpotWrapper>
         )}
@@ -279,8 +291,9 @@ export const YearSelect = ({ className }) => {
                   submitCompareCandidates()
                   const [year, compareYear] = compareCandidates
                   gtag.sendGAEvent('Click', {
-                    project: `比較確定：${electionName}${subtype ? ` - ${subtype.name}` : ''
-                      } / ${year.key} - ${compareYear.key} / ${device}`,
+                    project: `比較確定：${electionName}${
+                      subtype ? ` - ${subtype.name}` : ''
+                    } / ${year.key} - ${compareYear.key} / ${device}`,
                   })
                 }
               }}

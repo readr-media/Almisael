@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 
 import styled from 'styled-components'
 import Selector from './Selector'
@@ -50,11 +50,11 @@ const Wrapper = styled.div`
   padding: 12px 16px;
   min-height: 100vh;
   background-color: ${
-  /**
-   * @param {Object} props
-   * @param {boolean} [props.isCompareMode]
-   */
-  ({ isCompareMode }) => (isCompareMode ? '#E9E9E9' : 'transparent')
+    /**
+     * @param {Object} props
+     * @param {boolean} [props.isCompareMode]
+     */
+    ({ isCompareMode }) => (isCompareMode ? '#E9E9E9' : 'transparent')
   };
 `
 
@@ -69,7 +69,7 @@ const DistrictSelectorWrapper = styled.div`
   gap: 12px;
 `
 
-export default function DistrictWithAreaSelectors({ }) {
+export default function DistrictWithAreaSelectors({}) {
   const { districtMapping, hasDistrictMapping } = useDistrictMapping()
   const allCounty = districtMapping.sub
   const [currentCountyCode, setCurrentCountyCode] = useState('')
