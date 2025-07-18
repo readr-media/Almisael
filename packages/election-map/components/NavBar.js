@@ -510,6 +510,10 @@ export const NavBar = ({ dashboardInView }) => {
         href={
           organization === 'readr-media'
             ? 'https://www.readr.tw/'
+            : organization === 'mirror-daily'
+            ? 'https://www.mirrordaily.news/'
+            : organization === 'mirror-tv'
+            ? 'https://www.mnews.tw/'
             : 'https://www.mirrormedia.mg/'
         }
         target="_blank"
