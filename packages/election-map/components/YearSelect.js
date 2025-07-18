@@ -206,7 +206,6 @@ export const YearSelect = ({ className }) => {
         {compare ? (
           <SpotWrapper>
             {filteredYears.map((y) => {
-              console.log({ y })
               return <Spot
                 key={y.key}
                 content={y.key}
@@ -228,7 +227,6 @@ export const YearSelect = ({ className }) => {
         ) : (
           <SpotWrapper>
             {filteredYears.map((y) => {
-              console.log({ y })
               return <Spot
                 key={y.key}
                 content={y.key}

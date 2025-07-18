@@ -50,11 +50,11 @@ const Wrapper = styled.div`
   padding: 12px 16px;
   min-height: 100vh;
   background-color: ${
-    /**
-     * @param {Object} props
-     * @param {boolean} [props.isCompareMode]
-     */
-    ({ isCompareMode }) => (isCompareMode ? '#E9E9E9' : 'transparent')
+  /**
+   * @param {Object} props
+   * @param {boolean} [props.isCompareMode]
+   */
+  ({ isCompareMode }) => (isCompareMode ? '#E9E9E9' : 'transparent')
   };
 `
 
@@ -69,7 +69,7 @@ const DistrictSelectorWrapper = styled.div`
   gap: 12px;
 `
 
-export default function DistrictWithAreaSelectors({}) {
+export default function DistrictWithAreaSelectors({ }) {
   const { districtMapping, hasDistrictMapping } = useDistrictMapping()
   const allCounty = districtMapping.sub
   const [currentCountyCode, setCurrentCountyCode] = useState('')
@@ -154,11 +154,9 @@ export default function DistrictWithAreaSelectors({}) {
 
   const optionsForFirstDistrictSelector = useMemo(() => {
     if (currentElectionSubType.key === 'recall-july') {
-      console.log({ electionData })
       const recallCountyCodes = electionData[0]?.districts.map(
         (district) => district.county
       )
-      console.log(recallCountyCodes, allCounty)
       return allCounty.filter((county) => {
         return recallCountyCodes?.includes(county.code)
       })
