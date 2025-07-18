@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { isRunning } from '../consts/config'
 
 const apiClient = axios.create()
 
