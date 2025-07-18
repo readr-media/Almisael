@@ -418,8 +418,8 @@ export const fetchLegislatorMapData = async ({
       break
     case 'recall-july':
       // NOTE: switch for running or finish GCS resources
-      transformedSubtype = 'recall-july'
-      // transformedSubtype = 'recall-july-dev'
+      // transformedSubtype = 'recall-july'
+      transformedSubtype = 'recall-july-dev'
       break
     case 'mountainIndigenous':
       transformedSubtype = 'mountain-indigenous'

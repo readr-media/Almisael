@@ -1458,10 +1458,10 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.28.tgz#d45e01c4a56f143ee69c54dd6b12eade9e270a73"
   integrity sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==
 
-"@readr-media/react-election-widgets@1.1.6-beta.1":
-  version "1.1.6-beta.1"
-  resolved "https://registry.yarnpkg.com/@readr-media/react-election-widgets/-/react-election-widgets-1.1.6-beta.1.tgz#3e10f5b95805318ef9c29d598e32f777a2e6d291"
-  integrity sha512-W8AykMN7RvniHz+/qmB5goUiuiXWjoDepV2fLj1E7QXofDLPEjP1YIqhtWS/z4qzPa4v0PJ2sBkCgSC8H80Dbw==
+"@readr-media/react-election-widgets@1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@readr-media/react-election-widgets/-/react-election-widgets-1.1.6.tgz#7e581dfd6412187e74c3d2de901f53ec206048a8"
+  integrity sha512-8tRgipG6HU5L4zDwN0S2s7+NJo4v1WHPpcdIRhMcVDaf6z62K4n+YraUHiziucGuDl7Tl57/GWSldhVhN//OaQ==
   dependencies:
     "@twreporter/errors" "^1.1.1"
     axios "^0.27.2"
