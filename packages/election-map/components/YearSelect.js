@@ -86,9 +86,8 @@ const Spot = styled.span`
   ${({ compare, cand1, cand2 }) => {
     if (compare) {
       return `
-        ${
-          !cand1 &&
-          `
+        ${!cand1 &&
+        `
             border: 1px solid #cdcdcd;
             &:after {
               color: #cdcdcd;
@@ -104,9 +103,8 @@ const Spot = styled.span`
             }
           `
         }
-        ${
-          cand2 &&
-          `
+        ${cand2 &&
+        `
             border: 1px solid #000;
             &:before {
               background-color: #000;
@@ -138,11 +136,11 @@ const ActionButton = styled.button`
     margin-left: 12px;
   }
   ${
-    /**
-     * @param {Object} props
-     * @param {boolean} [props.cancel]
-     */
-    ({ cancel }) => cancel && 'background-color: #e0e0e0;'
+  /**
+   * @param {Object} props
+   * @param {boolean} [props.cancel]
+   */
+  ({ cancel }) => cancel && 'background-color: #e0e0e0;'
   }
 `
 
@@ -163,6 +161,7 @@ export const YearSelect = ({ className }) => {
     (state) => state.election.config.electionName
   )
   const subtype = useAppSelector((state) => state.election.control.subtype)
+  const filteredYears = years.filter((y) => y.subType.includes(subtype.key))
   const dispatch = useAppDispatch()
   const [compare, setCompare] = useState(false)
   const [compareCandidates, setCompareCandidates] = useState([
@@ -206,8 +205,9 @@ export const YearSelect = ({ className }) => {
       <SliderWrapper>
         {compare ? (
           <SpotWrapper>
-            {years.map((y) => (
-              <Spot
+            {filteredYears.map((y) => {
+              console.log({ y })
+              return <Spot
                 key={y.key}
                 content={y.key}
                 compare={compare}
@@ -223,12 +223,13 @@ export const YearSelect = ({ className }) => {
                   }
                 }}
               />
-            ))}
+            })}
           </SpotWrapper>
         ) : (
           <SpotWrapper>
-            {years.map((y) => (
-              <Spot
+            {filteredYears.map((y) => {
+              console.log({ y })
+              return <Spot
                 key={y.key}
                 content={y.key}
                 selected={y === year}
@@ -236,7 +237,7 @@ export const YearSelect = ({ className }) => {
                   dispatch(electionActions.changeYear(y))
                 }}
               />
-            ))}
+            })}
           </SpotWrapper>
         )}
         <Slider
@@ -280,9 +281,8 @@ export const YearSelect = ({ className }) => {
                   submitCompareCandidates()
                   const [year, compareYear] = compareCandidates
                   gtag.sendGAEvent('Click', {
-                    project: `比較確定：${electionName}${
-                      subtype ? ` - ${subtype.name}` : ''
-                    } / ${year.key} - ${compareYear.key} / ${device}`,
+                    project: `比較確定：${electionName}${subtype ? ` - ${subtype.name}` : ''
+                      } / ${year.key} - ${compareYear.key} / ${device}`,
                   })
                 }
               }}

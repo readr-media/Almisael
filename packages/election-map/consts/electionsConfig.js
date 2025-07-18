@@ -22,6 +22,7 @@ export const refetchInervalInSecond = 3 * 60
  * Representing a year and other units (optional) in a year
  * @typedef {Object} Year
  * @property {number} key - The number of the year.
+ * @property {Array<string>} subType - The type which in that year
  * @property {Array<ReferendumNumber>} [numbers] - The numbers of referendum.
  *
  * Representing the default param that evc component will use
@@ -93,11 +94,11 @@ export const electionsConfig = [
       { name: '罷免', key: 'recall-july', mobileOnly: false },
     ],
     years: [
-      { key: 2012 },
-      { key: 2016 },
-      { key: 2020 },
-      { key: 2024 },
-      { key: 2025 },
+      { key: 2012, subType: ['normal', 'mountainIndigenous', 'plainIndigenous', 'party', 'all'] },
+      { key: 2016, subType: ['normal', 'mountainIndigenous', 'plainIndigenous', 'party', 'all'] },
+      { key: 2020, subType: ['normal', 'mountainIndigenous', 'plainIndigenous', 'party', 'all'] },
+      { key: 2024, subType: ['normal', 'mountainIndigenous', 'plainIndigenous', 'party', 'all'] },
+      { key: 2025, subType: ['recall-july'] },
     ],
     meta: {
       evc: {
