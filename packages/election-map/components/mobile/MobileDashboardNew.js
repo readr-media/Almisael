@@ -128,13 +128,19 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
     dispatch(stopCompare())
   }
 
+  const subtype = useAppSelector((state) => state.election.control.subtype)
+  const filteredYears =
+    electionsType === 'legislator'
+      ? years.filter((y) => y?.subType?.includes(subtype.key))
+      : years
+
   const topButtonJsx = compareMode ? (
     <TopButton onClick={handleCloseCompareMode}>離開</TopButton>
   ) : (
     <>
       {electionsType !== 'referendum' &&
         currentSubType?.key !== 'recall-july' &&
-        years.map((y) => (
+        filteredYears.map((y) => (
           <TopButton
             isSelected={year.key === y.key}
             key={y.key}
