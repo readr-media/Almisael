@@ -1,12 +1,14 @@
 const chalk = require('chalk')
 const { exec } = require('child_process')
-const { select } = require('@inquirer/prompts')
-const fs = require('fs')
+const { checkbox } = require('@inquirer/prompts')
+const fs = require('fs').promises
 const path = require('path')
+const util = require('util')
+const execPromise = util.promisify(exec)
 
 async function run() {
-  const org = await select({
-    message: 'Select an organization:',
+  const orgs = await checkbox({
+    message: 'Select organizations (use space bar to select):',
     choices: [
       { name: 'readr-media', value: 'readr-media' },
       { name: 'mirror-media', value: 'mirror-media' },
@@ -15,55 +17,62 @@ async function run() {
     ],
   })
 
-  const env = await select({
-    message: 'Select an environment:',
+  const envs = await checkbox({
+    message: 'Select environments (use space bar to select):',
     choices: [
       { name: 'dev', value: 'dev' },
       { name: 'prod', value: 'prod' },
     ],
   })
 
-  console.log(
-    chalk.blue(`Start building process for ${org} in ${env} environment`)
-  )
+  if (orgs.length === 0 || envs.length === 0) {
+    console.log(
+      chalk.yellow('No organization or environment selected. Exiting.')
+    )
+    return
+  }
 
-  // Generate config.js from template
   const templatePath = path.resolve(__dirname, 'consts', 'config.js.template')
   const configPath = path.resolve(__dirname, 'consts', 'config.js')
+  const templateData = await fs.readFile(templatePath, 'utf8')
 
-  fs.readFile(templatePath, 'utf8', (err, data) => {
-    if (err) {
-      return console.log(chalk.red(err))
-    }
-    const result = data
-      .replace(/ORGANIZATION_PLACEHOLDER/g, org)
-      .replace(/ENVIRONMENT_PLACEHOLDER/g, env)
+  for (const org of orgs) {
+    for (const env of envs) {
+      const outDir = `${org}-${env}-out`
+      console.log(
+        chalk.blue(`
+Building for ${org} in ${env} environment...`)
+      )
 
-    fs.writeFile(configPath, result, 'utf8', (err) => {
-      if (err) return console.log(chalk.red(err))
-
+      // Generate config.js
+      const result = templateData
+        .replace(/ORGANIZATION_PLACEHOLDER/g, org)
+        .replace(/ENVIRONMENT_PLACEHOLDER/g, env)
+      await fs.writeFile(configPath, result, 'utf8')
       console.log(chalk.green('Successfully generated config.js'))
-      console.log(chalk.blue('Running yarn build...'))
 
-      const buildProcess = exec('yarn export')
-
-      buildProcess.stdout.on('data', (data) => {
-        console.log(data)
-      })
-
-      buildProcess.stderr.on('data', (data) => {
-        console.error(chalk.red(data))
-      })
-
-      buildProcess.on('close', (code) => {
-        if (code === 0) {
-          console.log(chalk.green('Build completed successfully.'))
-        } else {
-          console.log(chalk.red(`Build process exited with code ${code}`))
+      // Run build and export
+      console.log(chalk.blue(`Running build and exporting to ${outDir}...`))
+      try {
+        // We use 'next build && next export' directly to pass the --outdir flag
+        const { stdout, stderr } = await execPromise(
+          `next build && next export --outdir ${outDir}`
+        )
+        console.log(stdout)
+        if (stderr) {
+          console.error(chalk.yellow(stderr))
         }
-      })
-    })
-  })
+        console.log(
+          chalk.green(
+            `Build for ${org} (${env}) completed successfully in '${outDir}' folder.`
+          )
+        )
+      } catch (error) {
+        console.error(chalk.red(`Build for ${org} (${env}) failed:`))
+        console.error(chalk.red(error.stderr || error.message))
+      }
+    }
+  }
 }
 
 run()
