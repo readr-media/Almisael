@@ -1,4 +1,19 @@
-const chalk = require('chalk')
+/*
+gsutil -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/taiwan-elections
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/dev-taiwan-elections
+gsutil -m cp -r ./out/* gs://readr-coverage/project/3/dev-taiwan-elections
+--- dev ---
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://v3-statics-dev.mirrormedia.mg/projects/dev-taiwan-elections
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://readr-coverage/project/3/dev-taiwan-elections
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://static-mnews-tw-dev/projects/dev-taiwan-elections
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://statics-dev.mirrordaily.news/projects/dev-taiwan-elections
+--- prod ---
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/taiwan-elections
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://readr-coverage/project/3/taiwan-elections
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://static-mnews-tw-prod/projects/taiwan-elections
+gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://statics-prod.mirrordaily.news/projects/taiwan-elections
+*/
+const { default: chalk } = require('chalk')
 const { exec } = require('child_process')
 const { checkbox } = require('@inquirer/prompts')
 const fs = require('fs').promises
@@ -36,6 +51,27 @@ async function run() {
   const configPath = path.resolve(__dirname, 'consts', 'config.js')
   const templateData = await fs.readFile(templatePath, 'utf8')
 
+  const pushToGCS = async (outDir) => {
+    const dirToBucketMap = {
+      'readr-media-dev-out':
+        'gsutil -h "Cache-Control:no-store" -m cp -r ./readr-media-dev-out/* gs://readr-coverage/project/3/dev-taiwan-elections',
+      'readr-media-prod-out':
+        'gsutil -h "Cache-Control:no-store" -m cp -r ./readr-media-prod-out/* gs://readr-coverage/project/3/taiwan-elections',
+      'mirror-tv-dev-out':
+        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-tv-dev-out/* gs://static-mnews-tw-dev/projects/dev-taiwan-elections',
+      'mirror-tv-prod-out':
+        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-tv-prod-out/* gs://static-mnews-tw-prod/projects/taiwan-elections',
+      'mirror-daily-dev-out':
+        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-daily-dev-out/* gs://statics-dev.mirrordaily.news/projects/dev-taiwan-elections',
+      'mirror-daily-prod-out':
+        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-daily-prod-out/* gs://statics-prod.mirrordaily.news/projects/taiwan-elections',
+      'mirror-media-dev-out':
+        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-media-dev-out/* gs://v3-statics-dev.mirrormedia.mg/projects/dev-taiwan-elections',
+      'mirror-media-prod-out':
+        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-media-prod-out/* gs://v3-statics.mirrormedia.mg/projects/taiwan-elections',
+    }
+    return dirToBucketMap[outDir]
+  }
   for (const org of orgs) {
     for (const env of envs) {
       const outDir = `${org}-${env}-out`
@@ -67,6 +103,19 @@ Building for ${org} in ${env} environment...`)
             `Build for ${org} (${env}) completed successfully in '${outDir}' folder.`
           )
         )
+      } catch (error) {
+        console.error(chalk.red(`Build for ${org} (${env}) failed:`))
+        console.error(chalk.red(error.stderr || error.message))
+      }
+      try {
+        const gcsPath = await pushToGCS(outDir)
+        const { stdout, stderr } = await execPromise(gcsPath)
+
+        console.log(stdout)
+        if (stderr) {
+          console.error(chalk.yellow(stderr))
+        }
+        console.log(chalk.green(`push to ${gcsPath}`))
       } catch (error) {
         console.error(chalk.red(`Build for ${org} (${env}) failed:`))
         console.error(chalk.red(error.stderr || error.message))
