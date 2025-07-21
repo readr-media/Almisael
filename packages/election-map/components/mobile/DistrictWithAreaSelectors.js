@@ -180,6 +180,7 @@ export default function DistrictWithAreaSelectors({}) {
       ]
     }
     return [...allVillage]
+  }, [currentAreaCode])
 
   useEffect(() => {
     if (!hasDistrictMapping) {
