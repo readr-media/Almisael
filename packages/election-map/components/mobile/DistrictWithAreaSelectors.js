@@ -119,7 +119,7 @@ export default function DistrictWithAreaSelectors({}) {
       return []
     }
 
-    return allTown?.find((item) => item.code === code)?.sub
+    return allTown?.find((item) => item.code === code)?.sub ?? []
   }
 
   /**
@@ -180,7 +180,6 @@ export default function DistrictWithAreaSelectors({}) {
       ]
     }
     return [...allVillage]
-  }, [allVillage, currentAreaCode])
 
   useEffect(() => {
     if (!hasDistrictMapping) {
@@ -252,6 +251,12 @@ export default function DistrictWithAreaSelectors({}) {
     hasDistrictMapping,
   ])
   useEffect(() => {
+    if (currentElectionSubType.key === 'recall-july') {
+      setCurrentDistrictType('county')
+      setCurrentCountyCode('63000')
+    }
+  }, [])
+  useEffect(() => {
     if (!hasDistrictMapping) {
       return
     }
@@ -265,11 +270,11 @@ export default function DistrictWithAreaSelectors({}) {
       case 'president':
         break
       case 'legislator':
-        if (currentElectionSubType.key === 'recall-july') {
-          setCurrentDistrictType('county')
-          setCurrentCountyCode('63000')
-          break
-        }
+        // if (currentElectionSubType.key === 'recall-july') {
+        //   setCurrentDistrictType('county')
+        //   setCurrentCountyCode('63000')
+        //   break
+        // }
         if (!currentCountyCode) {
           setCurrentDistrictType('county')
           setCurrentCountyCode(allCounty?.[0]?.code)
@@ -312,7 +317,6 @@ export default function DistrictWithAreaSelectors({}) {
         onSelected={handleOnClick}
         placeholderValue="-"
       ></Selector>
-
       <Selector
         shouldShowNickName={true}
         options={optionsForThirdDistrictSelector}
