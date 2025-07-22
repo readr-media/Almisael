@@ -271,11 +271,6 @@ export default function DistrictWithAreaSelectors({}) {
       case 'president':
         break
       case 'legislator':
-        // if (currentElectionSubType.key === 'recall-july') {
-        //   setCurrentDistrictType('county')
-        //   setCurrentCountyCode('63000')
-        //   break
-        // }
         if (!currentCountyCode) {
           setCurrentDistrictType('county')
           setCurrentCountyCode(allCounty?.[0]?.code)
