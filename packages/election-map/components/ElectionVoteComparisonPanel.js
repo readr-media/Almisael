@@ -146,7 +146,7 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
     const selectedArea = areaCode.slice(-2)
     election = {
       ...election,
-      districts: election.districts.filter(
+      districts: election?.districts.filter(
         (district) => district.districtName === selectedArea
       ),
     }
