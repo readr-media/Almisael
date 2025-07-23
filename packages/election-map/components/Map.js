@@ -280,13 +280,13 @@ export const Map = ({
   const areaClicked = (feature) => {
     // NOTE: if it is running do not open area
     if (subtype.key === 'recall-july' && isRunning) return
-    const {
-      COUNTYCODE: countyCode,
-      COUNTYNAME: countyName,
-      AREACODE: areaCode,
-      AREANAME: areaName,
-    } = feature.properties
 
+    const {
+      COUNTYNAME: countyName,
+      AREANAME: areaName,
+      COUNTYCODE: countyCode,
+      AREACODE: areaCode,
+    } = feature.properties
     dispatch(
       electionActions.changeLevelControl({
         level: 2,
@@ -541,6 +541,8 @@ export const Map = ({
       )?.candidates
       if (!areaCandidates || !areaCandidates.length) return defaultColor
       const { agreeRate, disagreeRate } = areaCandidates?.[0]
+
+      if (agreeRate === 0 && disagreeRate === 0) return '#999'
       const agree = agreeRate >= disagreeRate
       const color = getGradiantReferendumColor(
         agree,
@@ -661,8 +663,12 @@ export const Map = ({
           district.county + district.town + district.vill === mapVillCode
       )?.candidates
       if (villageCandidates && villageCandidates.length) {
-        const { agreeRate, disagreeRate } = villageCandidates[0]
-        const agree = agreeRate >= disagreeRate
+        const { agreeRate, disagreeRate, ytpRate } = villageCandidates[0]
+        console.log({ villageCand: villageCandidates[0] })
+        const threshold = 25
+        const agree = agreeRate > disagreeRate
+        const isRecallPassed = ytpRate >= threshold && agree
+        if (agreeRate === 0 && disagreeRate === 0) return defaultColor
         const color = getGradiantReferendumColor(
           agree,
           agree ? agreeRate : disagreeRate
