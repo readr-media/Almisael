@@ -1,7 +1,7 @@
 import widgets from '@readr-media/react-election-widgets'
 import axios from './api'
 
-import { environment, isRunning } from '../consts/config'
+import { environment, isBackup, isRunning } from '../consts/config'
 
 const gcsBaseUrl =
   environment === 'dev'
@@ -433,7 +433,9 @@ export const fetchLegislatorMapData = async ({
     default:
       break
   }
-  const mapDataUrl = `${gcsBaseUrl}/${yearKey}/${electionType}/map/${folderName}/${transformedSubtype}/${fileName}.json`
+  const mapDataUrl = isBackup
+    ? `${gcsBaseUrl}/${yearKey}_backup/${electionType}/map/${folderName}/${transformedSubtype}/${fileName}.json`
+    : `${gcsBaseUrl}/${yearKey}/${electionType}/map/${folderName}/${transformedSubtype}/${fileName}.json`
   const { data } = await axios.get(mapDataUrl)
   return data
 }

@@ -26,6 +26,7 @@ export const organization = 'ORGANIZATION_PLACEHOLDER'
 
 /** @typedef {boolean} isRunning - fetch isRunning data or not */
 export const isRunning = false
+export const isBackup = false
 /** @type {Env} */
 export const environment = 'ENVIRONMENT_PLACEHOLDER' // 'dev | prod'
 const ga4Ids = {
