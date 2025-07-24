@@ -337,6 +337,15 @@ Infobox
 - **fix(map): extend recall-july support to area and village color functions**
   - 擴展了 `Map.js` 中 `getAreaColor` 和 `getVillageColor` 函數的功能，使其支援 `recall-july`，確保選區和村里層級地圖顏色顯示正確。
 
+### 2025-07-24: 罷免選舉村里層級視覺化增強
+
+- **feat(map): implement diagonal hatch pattern for recall-july villages**
+  - 在 `Map.js` 中實作了村里層級的對角線填充圖案功能，針對罷免選舉 (`recall-july`) 提供更直觀的視覺化表示。
+  - 當選舉類型為 `legislator` 且子類型為 `recall-july` 時，在村里層級會顯示對角線填充圖案覆蓋在既有的村里顏色上。
+  - 填充條件：村里的 `agreeRate > disagreeRate` 且 `ytpRate >= 25%`（達到罷免門檻）。
+  - 圖案規格：白色對角線條紋，線寬 0.3px，旋轉角度 -8.92 度，提供清晰的視覺區別。
+  - 此功能透過 SVG pattern 實作，確保在不同縮放層級下都能正確顯示，並且不影響地圖的互動功能。
+
 ### 2025-07-01: 全國性罷免功能開發
 
 - **feat(map): support recall-july subtype in Map component**

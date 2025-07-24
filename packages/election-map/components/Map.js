@@ -174,7 +174,11 @@ export const Map = ({
 
     const villagesToHatch = displayingVillages?.features?.filter((feature) => {
       const mapVillCode = feature.properties.VILLCODE
-      const villageCandidates = electionData[2]?.[areaCode]?.districts.find(
+
+      // At level 3 (village level), data is accessed via townCode
+      // At level 2 (area level), data is accessed via areaCode
+      const dataKey = levelControl.level === 3 ? townCode : areaCode
+      const villageCandidates = electionData[2]?.[dataKey]?.districts.find(
         (district) =>
           district.county + district.town + district.vill === mapVillCode
       )?.candidates
@@ -205,6 +209,9 @@ export const Map = ({
     displayingVillages,
     electionData,
     areaCode,
+    townCode,
+    levelControl.level,
+    activeCode,
     path,
   ])
 
@@ -730,11 +737,12 @@ export const Map = ({
       <defs>
         <pattern
           id="hatch-pattern"
-          width="2"
+          width="1"
           height="1"
           patternUnits="userSpaceOnUse"
+          patternTransform="rotate(8.92)"
         >
-          <path d="M 0,1 L 2,1" stroke="white" strokeWidth="0.3" />
+          <path d="M 0,0.5 L 1,0.5" stroke="white" strokeWidth="0.1" />
         </pattern>
       </defs>
       <rect
