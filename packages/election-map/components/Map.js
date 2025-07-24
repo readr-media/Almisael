@@ -167,6 +167,47 @@ export const Map = ({
     return d3.geoPath(projection)
   }, [counties, height, width])
 
+  const villageHatchLayer = useMemo(() => {
+    if (electionType !== 'legislator' || subtype?.key !== 'recall-july') {
+      return null
+    }
+
+    const villagesToHatch = displayingVillages?.features?.filter((feature) => {
+      const mapVillCode = feature.properties.VILLCODE
+      const villageCandidates = electionData[2]?.[areaCode]?.districts.find(
+        (district) =>
+          district.county + district.town + district.vill === mapVillCode
+      )?.candidates
+
+      if (villageCandidates && villageCandidates.length) {
+        const { agreeRate, disagreeRate, ytpRate } = villageCandidates[0]
+        const threshold = 25
+        const agree = agreeRate > disagreeRate
+        const isRecallPassed = ytpRate >= threshold && agree
+        return isRecallPassed
+      }
+      return false
+    })
+
+    return villagesToHatch?.map((feature) => {
+      return (
+        <path
+          key={`${feature.properties.VILLCODE}-hatch`}
+          d={path(feature)}
+          fill="url(#hatch-pattern)"
+          pointerEvents="none"
+        />
+      )
+    })
+  }, [
+    electionType,
+    subtype?.key,
+    displayingVillages,
+    electionData,
+    areaCode,
+    path,
+  ])
+
   useEffect(() => {
     const getXYZ = (feature) => {
       if (feature) {
@@ -663,12 +704,9 @@ export const Map = ({
           district.county + district.town + district.vill === mapVillCode
       )?.candidates
       if (villageCandidates && villageCandidates.length) {
-        const { agreeRate, disagreeRate, ytpRate } = villageCandidates[0]
-        const threshold = 25
-        const agree = agreeRate > disagreeRate
-        const isRecallPassed = ytpRate >= threshold && agree
-        console.warn({ isRecallPassed })
+        const { agreeRate, disagreeRate } = villageCandidates[0]
         if (agreeRate === 0 && disagreeRate === 0) return defaultColor
+        const agree = agreeRate >= disagreeRate
         const color = getGradiantReferendumColor(
           agree,
           agree ? agreeRate : disagreeRate
@@ -689,6 +727,16 @@ export const Map = ({
       height={height}
       viewBox={`0 0 ${width} ${height}`}
     >
+      <defs>
+        <pattern
+          id="hatch-pattern"
+          width="2"
+          height="1"
+          patternUnits="userSpaceOnUse"
+        >
+          <path d="M 0,1 L 2,1" stroke="white" strokeWidth="0.3" />
+        </pattern>
+      </defs>
       <rect
         className="background"
         id={`${id}-id-background`}
@@ -890,6 +938,8 @@ export const Map = ({
               }
             />
           ))}
+
+          {villageHatchLayer}
 
           {activeCode && (
             // duplicate active map on above
