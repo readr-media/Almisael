@@ -1,6 +1,6 @@
 export const defaultElectionType = 'legislator'
-export const currentYear = 2024
-export const refetchInervalInSecond = 3 * 60
+export const currentYear = 2025
+export const refetchInervalInSecond = 1 * 60
 
 /**
  * Representing the type of the election.
@@ -94,10 +94,46 @@ export const electionsConfig = [
       { name: '罷免', key: 'recall-july', mobileOnly: false },
     ],
     years: [
-      { key: 2012, subType: ['normal', 'mountainIndigenous', 'plainIndigenous', 'party', 'all'] },
-      { key: 2016, subType: ['normal', 'mountainIndigenous', 'plainIndigenous', 'party', 'all'] },
-      { key: 2020, subType: ['normal', 'mountainIndigenous', 'plainIndigenous', 'party', 'all'] },
-      { key: 2024, subType: ['normal', 'mountainIndigenous', 'plainIndigenous', 'party', 'all'] },
+      {
+        key: 2012,
+        subType: [
+          'normal',
+          'mountainIndigenous',
+          'plainIndigenous',
+          'party',
+          'all',
+        ],
+      },
+      {
+        key: 2016,
+        subType: [
+          'normal',
+          'mountainIndigenous',
+          'plainIndigenous',
+          'party',
+          'all',
+        ],
+      },
+      {
+        key: 2020,
+        subType: [
+          'normal',
+          'mountainIndigenous',
+          'plainIndigenous',
+          'party',
+          'all',
+        ],
+      },
+      {
+        key: 2024,
+        subType: [
+          'normal',
+          'mountainIndigenous',
+          'plainIndigenous',
+          'party',
+          'all',
+        ],
+      },
       { key: 2025, subType: ['recall-july'] },
     ],
     meta: {

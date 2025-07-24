@@ -484,7 +484,7 @@ export default function InfoBox({ infoboxData, year }) {
                     <Wrapper key={index}>
                       <div className="prof-rate prof-rate--text-align-start">
                         <div className="range">{districtName}</div>
-                        <div>投票率3: {district?.profRate}%</div>
+                        <div>投票率: {district?.profRate}%</div>
                       </div>
                       <CandidatesInfoWrapper maxHeight={'100%'}>
                         {orderedCandidates.map((candidate) =>
@@ -661,7 +661,7 @@ export default function InfoBox({ infoboxData, year }) {
               {shouldShowExpandButton && <Divider />}
               <div className="prof-rate prof-rate--text-align-start">
                 <div className="range">{districtName}</div>
-                <div>投票率4 {infoboxData?.profRate}%</div>
+                <div>投票率 {infoboxData?.profRate}%</div>
                 {isParty && (
                   <div className="legislator-party-vote-range-hint">
                     ＊此為第一階段投票率
@@ -756,7 +756,7 @@ export default function InfoBox({ infoboxData, year }) {
                     <Wrapper key={index}>
                       <div className="prof-rate prof-rate--text-align-start">
                         <div className="range">{districtName}</div>
-                        <div>投票率1: {district?.profRate}%</div>
+                        <div>投票率: {district?.profRate}%</div>
                       </div>
                       <CandidatesInfoWrapper maxHeight={'100%'}>
                         {orderedCandidates.map((candidate) => {
@@ -814,7 +814,7 @@ export default function InfoBox({ infoboxData, year }) {
             <div className="prof-rate prof-rate--text-align-start">
               {level === 2 && <div className="range">{districtName}</div>}
               {districtNote && <div className="range-note">{districtNote}</div>}
-              <div>投票率2 {infoboxData?.[0]?.profRate}%</div>
+              <div>投票率 {infoboxData?.[0]?.profRate}%</div>
               {isParty && (
                 <div className="legislator-party-vote-range-hint">
                   ＊此為第一階段投票率

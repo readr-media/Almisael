@@ -38,12 +38,12 @@ const ga4Ids = {
     prod: 'G-341XFN0675',
   },
   'mirror-daily': {
-    dev: 'G-36HYH6NF6P',
-    prod: 'G-341XFN0675',
+    dev: 'G-0CGKWKQTJG',
+    prod: 'G-26WVTWCT5X',
   },
   'mirror-tv': {
-    dev: 'G-36HYH6NF6P',
-    prod: 'G-341XFN0675',
+    dev: 'G-YZ07T9YJ6T',
+    prod: 'G-SZR4JRJ0G2',
   },
 }
 
@@ -70,15 +70,15 @@ const siteUrls = {
 export const siteUrl = siteUrls[organization][environment]
 
 export const og = {
-  title: '【持續更新】2025 立委、市長罷免開票即時資訊',
+  title: '【持續更新】2025 立委罷免開票即時資訊',
   descriptioin:
     organization === 'readr-media'
-      ? '2025 年立法委員、市長罷免開票即時資訊、結果看 READr！提供最詳盡的選舉票數地圖、歷年比較等功能。'
+      ? '2025 年立法委員罷免開票即時資訊、結果看 READr！提供最詳盡的選舉票數地圖、歷年比較等功能。'
       : organization === 'mirror-daily'
-      ? '鏡報即時關注 2025 年立法委員、市長罷免結果！提供最詳盡的選舉票數地圖、歷年比較等功能。'
+      ? '鏡報即時關注 2025 年立法委員罷免結果！提供最詳盡的選舉票數地圖、歷年比較等功能。'
       : organization === 'mirror-tv'
-      ? '鏡新聞即時關注 2025 年立法委員、市長罷免結果！提供最詳盡的選舉票數地圖、歷年比較等功能。'
-      : '鏡週刊即時關注 2025 年立法委員、市長罷免結果！提供最詳盡的選舉票數地圖、歷年比較等功能。',
+      ? '鏡新聞即時關注 2025 年立法委員罷免結果！提供最詳盡的選舉票數地圖、歷年比較等功能。'
+      : '鏡週刊即時關注 2025 年立法委員罷免結果！提供最詳盡的選舉票數地圖、歷年比較等功能。',
 
   image:
     // 待更新

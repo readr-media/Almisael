@@ -197,7 +197,7 @@ export const LandingPage = () => {
           {!isMobile ? (
             <Intro>
               <h1>
-                2025 立委、市長罷免 <br />
+                2025 立委罷免 <br />
                 開票即時資訊
               </h1>
               <p>{og.descriptioin}</p>
@@ -206,7 +206,7 @@ export const LandingPage = () => {
             <IntroWrapper preventCollapse={true}>
               <Intro>
                 <h1>
-                  2025 立委、市長罷免 <br />
+                  2025 立委罷免 <br />
                   開票即時資訊
                 </h1>
                 <p>{og.descriptioin}</p>

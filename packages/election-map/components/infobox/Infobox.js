@@ -612,7 +612,7 @@ const RecallLegislatorInfobox = ({
                       <ThresholdBarChart
                         title="通過門檻"
                         thresholdValue={votePop}
-                        totalValue={candidate.agreeTks + candidate.disagreeTks}
+                        totalValue={votePop}
                         shouldShowThresholdValue={shouldShowThresholdValueLevelList.includes(
                           level
                         )}

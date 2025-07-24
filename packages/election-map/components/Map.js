@@ -73,7 +73,7 @@ export const Map = ({
         const districtWithAreaMapping =
           districtMapping.districtWithArea[year.key]
         const countyMappingObj = districtWithAreaMapping.sub.find(
-          (countyObj) => countyObj.code === countyCode
+          (countyObj) => countyObj?.code === countyCode
         )
 
         if (countyMappingObj) {
@@ -664,10 +664,10 @@ export const Map = ({
       )?.candidates
       if (villageCandidates && villageCandidates.length) {
         const { agreeRate, disagreeRate, ytpRate } = villageCandidates[0]
-        console.log({ villageCand: villageCandidates[0] })
         const threshold = 25
         const agree = agreeRate > disagreeRate
         const isRecallPassed = ytpRate >= threshold && agree
+        console.warn({ isRecallPassed })
         if (agreeRate === 0 && disagreeRate === 0) return defaultColor
         const color = getGradiantReferendumColor(
           agree,

@@ -107,7 +107,7 @@ export default function DistrictWithAreaSelectors({}) {
       return []
     }
 
-    return allCounty?.find((item) => item.code === code)?.sub ?? []
+    return allCounty?.find((item) => item?.code === code)?.sub ?? []
   }
 
   function getAllVillage(code) {
@@ -119,7 +119,7 @@ export default function DistrictWithAreaSelectors({}) {
       return []
     }
 
-    return allTown?.find((item) => item.code === code)?.sub ?? []
+    return allTown?.find((item) => item?.code === code)?.sub ?? []
   }
 
   /**
@@ -158,7 +158,7 @@ export default function DistrictWithAreaSelectors({}) {
         (district) => district.county
       )
       return allCounty.filter((county) => {
-        return recallCountyCodes?.includes(county.code)
+        return recallCountyCodes?.includes(county?.code)
       })
     }
     return allCounty
