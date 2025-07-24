@@ -301,7 +301,6 @@ export default function Home() {
               setPage(page - 1)
 
               gtag.sendGAEvent('click_pagination', {
-                project: projectName,
                 direction: 'left',
                 pagination_page: page - 1,
               })
@@ -318,7 +317,6 @@ export default function Home() {
               setPage(page + 1)
 
               gtag.sendGAEvent('click_pagination', {
-                project: projectName,
                 direction: 'right',
                 pagination_page: page + 1,
               })
@@ -338,7 +336,6 @@ export default function Home() {
             setPage(page - 1)
 
             gtag.sendGAEvent('click_pagination', {
-              project: projectName,
               direction: 'left',
               pagination_page: page - 1,
             })
@@ -351,7 +348,6 @@ export default function Home() {
             setPage(page + 1)
 
             gtag.sendGAEvent('click_pagination', {
-              project: projectName,
               direction: 'right',
               pagination_page: page + 1,
             })
