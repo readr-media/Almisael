@@ -84,12 +84,12 @@ export const og = {
   image:
     // 待更新
     organization === 'readr-media'
-      ? 'https://v3-statics.mirrormedia.mg/images/ac988365-677b-4593-8c86-c54843f8900b-w1600.webP'
+      ? 'https://v3-statics.mirrormedia.mg/images/80c88d20-5028-4116-bfd9-19a51b7f17ce-w1600.webP'
       : organization === 'mirror-daily'
-      ? 'https://v3-statics.mirrormedia.mg/images/d1aa8800-3aaf-4d79-b080-b8a7c7e4effc-w1600.webP'
+      ? 'https://v3-statics.mirrormedia.mg/images/4986c143-616d-49f2-a669-a58f474e4fb7-w1600.webP'
       : organization === 'mirror-tv'
-      ? 'https://v3-statics.mirrormedia.mg/images/7775e28c-02c5-424e-9365-34be74fcfae8-w1600.webP'
-      : 'https://v3-statics.mirrormedia.mg/images/6253d92d-e133-4222-a2b9-fe2d433a1e71-w1600.webP',
+      ? 'https://v3-statics.mirrormedia.mg/images/a10a31de-a44f-4972-84cd-63b4c0a48249-w1600.webP'
+      : 'https://v3-statics.mirrormedia.mg/images/ae4e3049-5ddf-4469-bfe1-2377cbc9debf-w1600.webP',
   url:
     organization === 'readr-media'
       ? environment === 'prod'
