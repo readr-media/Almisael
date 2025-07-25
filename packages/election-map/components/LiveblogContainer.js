@@ -58,7 +58,7 @@ export const LiveblogContainer = () => {
   const liveblogUrl =
     environment === 'dev'
       ? 'https://editools-gcs.readr.tw/files/liveblogs/taiwan-elections-test.json'
-      : 'https://editools-gcs.readr.tw/files/liveblogs/taiwan-elections.json'
+      : 'https://editools-gcs.readr.tw/files/liveblogs/legislator_11.json'
   useEffect(() => {
     const fetchLiveblog = async () => {
       const { data } = await axios.get(liveblogUrl)
