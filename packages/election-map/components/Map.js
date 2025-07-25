@@ -187,7 +187,7 @@ export const Map = ({
         const { agreeRate, disagreeRate, ytpRate } = villageCandidates[0]
         const threshold = 25
         const agree = agreeRate > disagreeRate
-        const isRecallPassed = ytpRate >= threshold && agree
+        const isRecallPassed = ytpRate < threshold && agree
         return isRecallPassed
       }
       return false

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { getInfoBoxData } from '../../utils/infoboxData'
 import { ThresholdBarChart } from '../ThresholdBarChart'
-
+import Image from 'next/image'
 /**
  *  Inside infobox data, a summary object or district object may have a note object
  *  which is special description to the current infobox data.
@@ -112,9 +112,29 @@ const FinalHint = styled.span`
     }
   }
 `
+const StripeHintWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const StripeHint = styled.p`
+  color: #939393;
+  font-size: 16px;
+  font-weight: 500;
+`
 
 const HintWrapper = styled.p`
   margin: 0 0 20px 0;
+  > span:before {
+    margin-left: 1px;
+  }
+`
+const RecallHintWrapper = styled(HintWrapper)`
+  margin: 0 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
   > span:before {
     margin-left: 1px;
   }
@@ -124,14 +144,6 @@ const EndVotedText = styled.div`
   align-items: center;
   gap: 8px;
   color: #939393;
-  ${
-    /**
-     * @param {object} props
-     * @param {boolean} props.isLevelOne - Is the title in level 1.
-     * @returns
-     */
-    (props) => (props.isLevelOne ? 'margin-bottom:20px;' : '')
-  }
 `
 
 const GrayBoxIndicator = styled.div`
@@ -545,11 +557,7 @@ const RecallLegislatorInfobox = ({
       <HintWrapper>
         <RunningHint>開票中</RunningHint>
       </HintWrapper>
-    ) : (
-      <HintWrapper>
-        <FinalHint>開票結束</FinalHint>
-      </HintWrapper>
-    )
+    ) : null
   ) : (
     <></>
   )
@@ -638,10 +646,28 @@ const RecallLegislatorInfobox = ({
             return (
               <NormalLegislatorDistrict key={legislatorPrefix}>
                 {level === 1 && isStarted && !isRunning && (
-                  <EndVotedText isLevelOne={level === 1}>
-                    <GrayBoxIndicator />
-                    開票結束
-                  </EndVotedText>
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      marginBottom: '20px',
+                    }}
+                  >
+                    <EndVotedText>
+                      <GrayBoxIndicator />
+                      開票結束
+                    </EndVotedText>
+                    <StripeHintWrapper>
+                      <img
+                        src="/images/icon-stripe.png"
+                        alt="icon stripe"
+                        width={12}
+                        height={12}
+                        style={{ marginRight: '8px' }}
+                      />
+                      <StripeHint>斜線表未過1/4門檻</StripeHint>
+                    </StripeHintWrapper>
+                  </div>
                 )}
                 {level === 1 && (
                   <NormalLegislatorArea>{areaName}</NormalLegislatorArea>
@@ -650,7 +676,7 @@ const RecallLegislatorInfobox = ({
                   投票率 {profRate}%
                 </NormalLegislatorTitle>
                 {level !== 1 && isStarted && !isRunning && (
-                  <EndVotedText isLevelOne={level === 1}>
+                  <EndVotedText>
                     <GrayBoxIndicator />
                     開票結束
                   </EndVotedText>
