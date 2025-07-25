@@ -598,11 +598,7 @@ const RecallLegislatorInfobox = ({
                       <RecallLegislatorCandidateName>
                         {candidate.name}
                         <PassStatus elected={elected}>
-                          {candidate.adptVictor
-                            ? '通過'
-                            : notElected
-                            ? '不通過'
-                            : ''}
+                          {elected ? '通過' : notElected ? '不通過' : ''}
                         </PassStatus>
                       </RecallLegislatorCandidateName>
                       <RecallLegislatorCandidateParty>
