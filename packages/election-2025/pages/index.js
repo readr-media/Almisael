@@ -11,7 +11,6 @@ import {
   color,
   staticFileDestination,
   mnewsJsonEndpoint,
-  projectName,
 } from '../config/index.mjs'
 
 /**
@@ -325,8 +324,9 @@ export default function Home() {
         />
       </ArrowContainer>
       <Notice>
-        {`最後更新時間：${data.updatedAt}
-        票數說明：1.呈現票數係根據各台已報導票數輸入，與其即時票數略有落差。2.正確結果以中選會為主。資料來源：${
+        {`最後更新時間：${
+          data.updatedAt
+        } 票數說明：正確結果以中選會為主。資料來源：${
           sourceMap[data?.source] || '中央選舉委員會'
         }`}
       </Notice>
