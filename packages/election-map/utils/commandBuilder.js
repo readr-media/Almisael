@@ -15,9 +15,11 @@ function buildGsutilCommand(sourceDir, bucket, cacheControl = null) {
   const baseCommand = 'gsutil'
   const flags = '-m cp -r'
   const source = `./${sourceDir}/*`
-  
+
   // Correct order: gsutil [cache-header] [flags] source dest
-  return `${baseCommand} ${cacheHeader} ${flags} ${source} ${bucket}`.replace(/\s+/g, ' ').trim()
+  return `${baseCommand} ${cacheHeader} ${flags} ${source} ${bucket}`
+    .replace(/\s+/g, ' ')
+    .trim()
 }
 
 /**
@@ -32,5 +34,6 @@ function buildExportCommand(outDir) {
 module.exports = {
   buildGsutilCommand,
   buildExportCommand,
-  execPromise
+  execPromise,
 }
+

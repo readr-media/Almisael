@@ -1,6 +1,5 @@
-const { execPromise, buildExportCommand } = require('../utils/command-builder')
+const { execPromise, buildExportCommand } = require('../utils/commandBuilder')
 const logger = require('../utils/logger')
-const fs = require('fs').promises
 
 class BuildService {
   /**
@@ -51,4 +50,3 @@ class BuildService {
 }
 
 module.exports = BuildService
-

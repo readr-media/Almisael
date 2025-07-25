@@ -106,7 +106,7 @@ class ValidationService {
     try {
       return await confirm({
         message: 'Run in dry-run mode? (build only, skip GCS deployment)',
-        default: false
+        default: false,
       })
     } catch (error) {
       throw errorHandler.createValidationError(
@@ -118,4 +118,3 @@ class ValidationService {
 }
 
 module.exports = ValidationService
-

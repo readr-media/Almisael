@@ -58,8 +58,8 @@ class ErrorHandler {
       message: error.message,
       context: {
         ...error.context,
-        ...additionalContext
-      }
+        ...additionalContext,
+      },
     }
 
     // Add stack trace in development
@@ -128,5 +128,6 @@ module.exports = {
   ConfigurationError,
   BuildError,
   GCSError,
-  ValidationError
+  ValidationError,
 }
+

@@ -4,10 +4,7 @@ const path = require('path')
 class ConfigService {
   constructor() {
     this.config = null
-    this.configPath = path.resolve(
-      __dirname,
-      '../config/deployment-config.json'
-    )
+    this.configPath = path.resolve(__dirname, '../config/deploymentConfig.json')
     this.templatePath = path.resolve(__dirname, '../consts/config.js.template')
     this.outputPath = path.resolve(__dirname, '../consts/config.js')
   }
@@ -73,4 +70,3 @@ class ConfigService {
 }
 
 module.exports = ConfigService
-

@@ -31,7 +31,7 @@ DRY_RUN=true node deploy.js
 
 ## Supported Organizations
 
-- **readr-media**: READr台灣媒體
+- **readr-media**: READr
 - **mirror-media**: 鏡週刊
 - **mirror-tv**: 鏡新聞
 - **mirror-daily**: 鏡報
@@ -243,8 +243,8 @@ The new CLI maintains 100% backward compatibility with the previous `deploy.js` 
 To modify or extend the deployment system:
 
 1. **Add New Organization**: Update `config/deployment-config.json`
-2. **Modify Build Process**: Edit `services/build-service.js`
-3. **Change GCS Logic**: Update `services/gcs-service.js`
-4. **Add Validation**: Extend `services/validation-service.js`
+2. **Modify Build Process**: Edit `services/buildService.js`
+3. **Change GCS Logic**: Update `services/gcsService.js`
+4. **Add Validation**: Extend `services/validationService.js`
 
 All changes should include corresponding tests in the `__tests__/deploy/` directory.

@@ -1,4 +1,4 @@
-const { execPromise, buildGsutilCommand } = require('../utils/command-builder')
+const { execPromise, buildGsutilCommand } = require('../utils/commandBuilder')
 const logger = require('../utils/logger')
 
 class GCSService {
@@ -13,43 +13,45 @@ class GCSService {
    */
   async deployToGCS(org, env, outDir, deployConfig, dryRun = false) {
     const command = buildGsutilCommand(
-      outDir, 
-      deployConfig.bucket, 
+      outDir,
+      deployConfig.bucket,
       deployConfig.cacheControl
     )
-    
+
     if (dryRun) {
-      logger.info(`[DRY RUN] Would deploy ${org} (${env}) to GCS`, { 
+      logger.info(`[DRY RUN] Would deploy ${org} (${env}) to GCS`, {
         bucket: deployConfig.bucket,
         command,
-        outDir
+        outDir,
       })
-      return { success: true, stdout: `[DRY RUN] Deployment skipped for ${org} (${env})` }
+      return {
+        success: true,
+        stdout: `[DRY RUN] Deployment skipped for ${org} (${env})`,
+      }
     }
-    
+
     try {
-      logger.info(`Starting GCS deployment for ${org} (${env})`, { 
+      logger.info(`Starting GCS deployment for ${org} (${env})`, {
         bucket: deployConfig.bucket,
-        command 
+        command,
       })
-      
+
       const { stdout, stderr } = await execPromise(command)
-      
+
       if (stderr) {
         logger.warn(`GCS deployment warnings for ${org} (${env})`, { stderr })
       }
-      
-      logger.success(`GCS deployment completed for ${org} (${env})`, { 
-        bucket: deployConfig.bucket 
+
+      logger.success(`GCS deployment completed for ${org} (${env})`, {
+        bucket: deployConfig.bucket,
       })
       return { success: true, stdout }
-      
     } catch (error) {
       logger.error(`GCS deployment failed for ${org} (${env})`, {
         error: error.message,
         stderr: error.stderr,
         bucket: deployConfig.bucket,
-        command
+        command,
       })
       return { success: false, error }
     }
