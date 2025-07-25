@@ -51,7 +51,7 @@ switch (releaseTarget) {
   case 'mirrorMedia':
     assetPrefixPath = `https://www.mirrormedia.mg/projects/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
+      'https://whoareyou-gcs.readr.tw/elections/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://www.mirrormedia.mg/projects/${projectName}`
@@ -81,7 +81,7 @@ switch (releaseTarget) {
   case 'mirrorDaily':
     assetPrefixPath = `https://www.mirrordaily.news/projects/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
+      'https://whoareyou-gcs.readr.tw/elections/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://www.mirrordaily.news/projects/${projectName}`
@@ -111,7 +111,7 @@ switch (releaseTarget) {
   case 'mirrorTV':
     assetPrefixPath = `https://www.mnews.tw/projects/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
+      'https://whoareyou-gcs.readr.tw/elections/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://www.mnews.tw/projects/${projectName}`
@@ -141,7 +141,7 @@ switch (releaseTarget) {
   case 'readr':
     assetPrefixPath = `https://www.readr.tw/project/3/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
+      'https://whoareyou-gcs.readr.tw/elections/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://www.readr.tw/project/3/${projectName}`
