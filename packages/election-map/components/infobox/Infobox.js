@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { getInfoBoxData } from '../../utils/infoboxData'
 import { ThresholdBarChart } from '../ThresholdBarChart'
-import Image from 'next/image'
 /**
  *  Inside infobox data, a summary object or district object may have a note object
  *  which is special description to the current infobox data.
@@ -129,16 +128,7 @@ const HintWrapper = styled.p`
     margin-left: 1px;
   }
 `
-const RecallHintWrapper = styled(HintWrapper)`
-  margin: 0 0 20px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  > span:before {
-    margin-left: 1px;
-  }
-`
+
 const EndVotedText = styled.div`
   display: flex;
   align-items: center;

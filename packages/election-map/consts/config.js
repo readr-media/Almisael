@@ -19,7 +19,7 @@ gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://statics-prod.mirrordail
  *
  */
 /** @type {Organization} */
-export const organization = 'readr-media'
+export const organization = 'mirror-daily'
 // export const organization = 'mirror-media'
 // export const organization = 'mirror-daily'
 // export const organization = 'mirror-tv'
