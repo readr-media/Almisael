@@ -36,7 +36,7 @@ switch (releaseTarget) {
   case 'dev-mirrorMedia':
     assetPrefixPath = `https://dev.mirrormedia.mg/projects/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025_recall_election_data_final/iframe_data.json'
+      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://dev.mirrormedia.mg/projects/${projectName}`
@@ -51,7 +51,7 @@ switch (releaseTarget) {
   case 'mirrorMedia':
     assetPrefixPath = `https://www.mirrormedia.mg/projects/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025_recall_election_data_final/iframe_data.json'
+      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://www.mirrormedia.mg/projects/${projectName}`
@@ -66,7 +66,7 @@ switch (releaseTarget) {
   case 'dev-mirrorDaily':
     assetPrefixPath = `https://dev.mirrordaily.news/projects/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025_recall_election_data_final/iframe_data.json'
+      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://dev.mirrordaily.news/projects/${projectName}`
@@ -81,7 +81,7 @@ switch (releaseTarget) {
   case 'mirrorDaily':
     assetPrefixPath = `https://www.mirrordaily.news/projects/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025_recall_election_data_final/iframe_data.json'
+      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://www.mirrordaily.news/projects/${projectName}`
@@ -96,7 +96,7 @@ switch (releaseTarget) {
   case 'dev-mirrorTV':
     assetPrefixPath = `https://dev.mnews.tw/projects/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025_recall_election_data_final/iframe_data.json'
+      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://dev.mnews.tw/projects/${projectName}`
@@ -111,7 +111,7 @@ switch (releaseTarget) {
   case 'mirrorTV':
     assetPrefixPath = `https://www.mnews.tw/projects/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025_recall_election_data_final/iframe_data.json'
+      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://www.mnews.tw/projects/${projectName}`
@@ -126,7 +126,7 @@ switch (releaseTarget) {
   case 'dev-readr':
     assetPrefixPath = `https://www.readr.tw/project/3/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025_recall_election_data_final/iframe_data.json'
+      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://www.readr.tw/project/3/${projectName}`
@@ -141,7 +141,7 @@ switch (releaseTarget) {
   case 'readr':
     assetPrefixPath = `https://www.readr.tw/project/3/${projectName}`
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025_recall_election_data_final/iframe_data.json'
+      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = `https://www.readr.tw/project/3/${projectName}`
@@ -156,7 +156,7 @@ switch (releaseTarget) {
   default:
     assetPrefixPath = '.'
     cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025_recall_election_data_final/iframe_data.json'
+      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
     mnewsJsonEndpoint =
       'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
     staticFileDestination = ``
