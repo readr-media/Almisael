@@ -26,7 +26,7 @@ export const organization = 'readr-media'
 
 /** @typedef {boolean} isRunning - fetch isRunning data or not */
 export const isRunning = false
-export const isBackup = true
+export const isBackup = false
 /** @type {Env} */
 export const environment = 'dev' // 'dev | prod'
 const ga4Ids = {
