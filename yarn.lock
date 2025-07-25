@@ -1630,10 +1630,10 @@
   resolved "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.28.tgz"
   integrity sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==
 
-"@readr-media/react-election-widgets@1.1.6":
-  version "1.1.6"
-  resolved "https://registry.npmjs.org/@readr-media/react-election-widgets/-/react-election-widgets-1.1.6.tgz"
-  integrity sha512-8tRgipG6HU5L4zDwN0S2s7+NJo4v1WHPpcdIRhMcVDaf6z62K4n+YraUHiziucGuDl7Tl57/GWSldhVhN//OaQ==
+"@readr-media/react-election-widgets@1.1.8":
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/@readr-media/react-election-widgets/-/react-election-widgets-1.1.8.tgz#ae5e4d26726ae1a514fa0d0fc2a730b219721ea0"
+  integrity sha512-1/TMyfoRdZ5qonHxQLCHbI14CIzYSXeDhZCWttjxdd/7TWG8JcnShv2I5JQjHRFChR3YVBXVxtrkHyyiVYt79A==
   dependencies:
     "@twreporter/errors" "^1.1.1"
     axios "^0.27.2"
