@@ -475,26 +475,27 @@ export const Map = ({
         return defaultColor
       }
     }
-    if (subtype && subtype.key === 'recall-july') {
-      const candidate = electionData[0]?.districts
-        ?.find((district) => district.county === mapCountyCode)
-        ?.candidates.at(0)
-      if (candidate) return '#999999'
-      return '#D9D9D9'
-    }
     if (electionType === 'legislator') {
-      const { agreeRate, disagreeRate } =
-        electionData[0]?.districts
+      if (subtype && subtype.key === 'recall-july') {
+        const candidate = electionData[0]?.districts
           ?.find((district) => district.county === mapCountyCode)
-          ?.candidates.at(0) || {}
-      if (agreeRate) {
-        const agree = agreeRate >= disagreeRate
-        const color = getGradiantReferendumColor(
-          agree,
-          agree ? agreeRate : disagreeRate
-        )
-        return color
+          ?.candidates.at(0)
+        if (candidate) return '#999999'
+        return '#D9D9D9'
       } else {
+        const countyCandidates = electionData[0]?.districts?.find(
+          (district) => district.county === mapCountyCode
+        )?.candidates
+        if (countyCandidates) {
+          const winningCandidate = getWinningCandidate(countyCandidates)
+          if (winningCandidate) {
+            const color = getGradiantPartyColor(
+              winningCandidate.party,
+              winningCandidate.tksRate
+            )
+            return color
+          }
+        }
         return defaultColor
       }
     }
