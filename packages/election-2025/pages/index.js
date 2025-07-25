@@ -11,7 +11,6 @@ import {
   color,
   staticFileDestination,
   mnewsJsonEndpoint,
-  projectName,
 } from '../config/index.mjs'
 
 /**
