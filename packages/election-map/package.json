@@ -7,11 +7,19 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --watch",
+    "test:ci": "jest",
+    "test:deploy": "jest __tests__/deploy/",
+    "test:deploy-current": "jest __tests__/deploy/ --verbose",
+    "test:services": "jest __tests__/services/",
+    "test:integration": "jest __tests__/deploy/deploy.integration.test.js",
+    "test:deploy-regression": "jest __tests__/deploy/ --testNamePattern=\"(integration|mock)\"",
     "lint": "next lint",
     "export": "next build && next export",
-    "deploy": "node deploy.js"
+    "deploy": "node deploy.js",
+    "deploy:dry-run": "DRY_RUN=true node deploy.js"
   },
   "dependencies": {
+    "@inquirer/prompts": "^7.7.1",
     "@readr-media/react-election-widgets": "1.1.6",
     "@readr-media/react-live-blog": "1.1.13",
     "@reduxjs/toolkit": "^1.9.7",

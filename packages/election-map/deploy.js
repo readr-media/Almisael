@@ -1,127 +1,119 @@
-/*
-gsutil -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/taiwan-elections
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/dev-taiwan-elections
-gsutil -m cp -r ./out/* gs://readr-coverage/project/3/dev-taiwan-elections
---- dev ---
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://v3-statics-dev.mirrormedia.mg/projects/dev-taiwan-elections
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://readr-coverage/project/3/dev-taiwan-elections
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://static-mnews-tw-dev/projects/dev-taiwan-elections
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://statics-dev.mirrordaily.news/projects/dev-taiwan-elections
---- prod ---
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://v3-statics.mirrormedia.mg/projects/taiwan-elections
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://readr-coverage/project/3/taiwan-elections
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://static-mnews-tw-prod/projects/taiwan-elections
-gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://statics-prod.mirrordaily.news/projects/taiwan-elections
-*/
 const { default: chalk } = require('chalk')
-const { exec } = require('child_process')
 const { checkbox } = require('@inquirer/prompts')
-const fs = require('fs').promises
-const path = require('path')
-const util = require('util')
-const execPromise = util.promisify(exec)
+
+const ConfigService = require('./services/config-service')
+const BuildService = require('./services/build-service')
+const GCSService = require('./services/gcs-service')
+const ValidationService = require('./services/validation-service')
+const logger = require('./utils/logger')
 
 async function run() {
-  const orgs = await checkbox({
-    message: 'Select organizations (use space bar to select):',
-    choices: [
-      { name: 'readr-media', value: 'readr-media' },
-      { name: 'mirror-media', value: 'mirror-media' },
-      { name: 'mirror-daily', value: 'mirror-daily' },
-      { name: 'mirror-tv', value: 'mirror-tv' },
-    ],
-  })
+  const configService = new ConfigService()
+  const buildService = new BuildService()
+  const gcsService = new GCSService()
+  const validationService = new ValidationService()
 
-  const envs = await checkbox({
-    message: 'Select environments (use space bar to select):',
-    choices: [
-      { name: 'dev', value: 'dev' },
-      { name: 'prod', value: 'prod' },
-    ],
-  })
+  try {
+    // Load valid options from configuration
+    const { organizations, environments } = await configService.getValidOptions()
 
-  if (orgs.length === 0 || envs.length === 0) {
-    console.log(
-      chalk.yellow('No organization or environment selected. Exiting.')
-    )
-    return
-  }
+    // Get user selections with validation
+    const orgs = await validationService.promptOrganizations(organizations)
+    const envs = await validationService.promptEnvironments(environments)
+    
+    // Check for DRY_RUN environment variable or prompt user
+    const dryRun = process.env.DRY_RUN === 'true' || await validationService.promptDryRun()
 
-  const templatePath = path.resolve(__dirname, 'consts', 'config.js.template')
-  const configPath = path.resolve(__dirname, 'consts', 'config.js')
-  const templateData = await fs.readFile(templatePath, 'utf8')
-
-  const pushToGCS = async (outDir) => {
-    const dirToBucketMap = {
-      'readr-media-dev-out':
-        'gsutil -h "Cache-Control:no-store" -m cp -r ./readr-media-dev-out/* gs://readr-coverage/project/3/dev-taiwan-elections',
-      'readr-media-prod-out':
-        'gsutil -h "Cache-Control:no-store" -m cp -r ./readr-media-prod-out/* gs://readr-coverage/project/3/taiwan-elections',
-      'mirror-tv-dev-out':
-        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-tv-dev-out/* gs://static-mnews-tw-dev/projects/dev-taiwan-elections',
-      'mirror-tv-prod-out':
-        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-tv-prod-out/* gs://static-mnews-tw-prod/projects/taiwan-elections',
-      'mirror-daily-dev-out':
-        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-daily-dev-out/* gs://statics-dev.mirrordaily.news/projects/dev-taiwan-elections',
-      'mirror-daily-prod-out':
-        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-daily-prod-out/* gs://statics-prod.mirrordaily.news/projects/taiwan-elections',
-      'mirror-media-dev-out':
-        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-media-dev-out/* gs://v3-statics-dev.mirrormedia.mg/projects/dev-taiwan-elections',
-      'mirror-media-prod-out':
-        'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-media-prod-out/* gs://v3-statics.mirrormedia.mg/projects/taiwan-elections',
+    if (orgs.length === 0 || envs.length === 0) {
+      logger.warn('No organization or environment selected. Exiting.')
+      return
     }
-    return dirToBucketMap[outDir]
-  }
-  for (const org of orgs) {
-    for (const env of envs) {
-      const outDir = `${org}-${env}-out`
-      console.log(
-        chalk.blue(`
-Building for ${org} in ${env} environment...`)
-      )
 
-      // Generate config.js
-      const result = templateData
-        .replace(/ORGANIZATION_PLACEHOLDER/g, org)
-        .replace(/ENVIRONMENT_PLACEHOLDER/g, env)
-      await fs.writeFile(configPath, result, 'utf8')
-      console.log(chalk.green('Successfully generated config.js'))
+    if (dryRun) {
+      logger.info('Running in DRY RUN mode - builds will be created but not deployed to GCS')
+    }
 
-      // Run build and export
-      console.log(chalk.blue(`Running build and exporting to ${outDir}...`))
-      try {
-        // We use 'next build && next export' directly to pass the --outdir flag
-        const { stdout, stderr } = await execPromise(
-          `next build && next export --outdir ${outDir}`
-        )
-        console.log(stdout)
-        if (stderr) {
-          console.error(chalk.yellow(stderr))
+    // Process deployments sequentially for builds, parallel for GCS
+    const results = []
+    
+    for (const org of orgs) {
+      for (const env of envs) {
+        try {
+          const result = await processDeployment(org, env, configService, buildService, gcsService, dryRun)
+          results.push({ status: 'fulfilled', value: result })
+        } catch (error) {
+          results.push({ 
+            status: 'rejected', 
+            value: { org, env, status: 'failed', error: error.message }
+          })
         }
-        console.log(
-          chalk.green(
-            `Build for ${org} (${env}) completed successfully in '${outDir}' folder.`
-          )
-        )
-      } catch (error) {
-        console.error(chalk.red(`Build for ${org} (${env}) failed:`))
-        console.error(chalk.red(error.stderr || error.message))
-      }
-      try {
-        const gcsPath = await pushToGCS(outDir)
-        const { stdout, stderr } = await execPromise(gcsPath)
-
-        console.log(stdout)
-        if (stderr) {
-          console.error(chalk.yellow(stderr))
-        }
-        console.log(chalk.green(`push to ${gcsPath}`))
-      } catch (error) {
-        console.error(chalk.red(`Build for ${org} (${env}) failed:`))
-        console.error(chalk.red(error.stderr || error.message))
       }
     }
+    
+    // Report final results
+    reportResults(results, orgs, envs)
+
+  } catch (error) {
+    logger.error('Deployment process failed', { error: error.message })
+    process.exit(1)
   }
+}
+
+async function processDeployment(org, env, configService, buildService, gcsService, dryRun = false) {
+  const outDir = `${org}-${env}-out`
+  
+  try {
+    // Generate configuration file
+    await configService.generateConfigFile(org, env)
+    logger.success(`Generated config.js for ${org} (${env})`)
+
+    // Build and export
+    const buildResult = await buildService.buildAndExport(org, env, outDir)
+    if (!buildResult.success) {
+      throw new Error(`Build failed: ${buildResult.error.message}`)
+    }
+
+    // Get deployment configuration
+    const deployConfig = await configService.getDeploymentConfig(org, env)
+
+    // Deploy to GCS (or simulate in dry-run mode)
+    const deployResult = await gcsService.deployToGCS(org, env, outDir, deployConfig, dryRun)
+    if (!deployResult.success) {
+      throw new Error(`GCS deployment failed: ${deployResult.error.message}`)
+    }
+
+    return { org, env, status: 'success' }
+
+  } catch (error) {
+    logger.error(`Deployment failed for ${org} (${env})`, { error: error.message })
+    return { org, env, status: 'failed', error: error.message }
+  }
+}
+
+function reportResults(results, orgs, envs) {
+  const successful = results.filter(r => r.status === 'fulfilled' && r.value.status === 'success')
+  const failed = results.filter(r => r.status === 'rejected' || r.value.status === 'failed')
+
+  logger.info('Deployment Summary', {
+    total: results.length,
+    successful: successful.length,
+    failed: failed.length,
+    organizations: orgs,
+    environments: envs
+  })
+
+  if (failed.length > 0) {
+    logger.error('Failed deployments:', {
+      failures: failed.map(f => ({
+        org: f.value?.org || 'unknown',
+        env: f.value?.env || 'unknown',
+        error: f.value?.error || f.reason
+      }))
+    })
+    process.exit(1)
+  }
+
+  logger.success('All deployments completed successfully!')
 }
 
 run()
