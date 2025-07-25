@@ -39,7 +39,7 @@ import {
  * Find the latest year that supports a specific subtype
  * @param {Year[]} years - Array of year configurations
  * @param {string} subtypeKey - The subtype key to search for
- * @returns {Year|null} Latest compatible year or null
+ * @returns {Year|null} Latest compatible year or fallback to latest year
  */
 function findLatestYearForSubtype(years, subtypeKey) {
   if (!subtypeKey) return years[years.length - 1] // fallback to latest
@@ -50,7 +50,7 @@ function findLatestYearForSubtype(years, subtypeKey) {
 
   return compatibleYears.length > 0
     ? compatibleYears[compatibleYears.length - 1] // latest compatible
-    : null
+    : years[years.length - 1] // fallback to latest year instead of null
 }
 
 const defaultElectionsData = generateDefaultElectionsData()
@@ -155,7 +155,12 @@ const electionsSlice = createSlice({
         newSubtype?.key,
         newNumber?.key
       )
-      if (newElectionData.mapData.isRunning) {
+      // 防護性檢查：確保資料存在且 mapData 有效
+      if (
+        newElectionData &&
+        newElectionData.mapData &&
+        newElectionData.mapData.isRunning
+      ) {
         state.data.electionsData = updateElectionsData(
           state.data.electionsData,
           defaultElectionData,
@@ -264,8 +269,15 @@ const electionsSlice = createSlice({
           newSubtype?.key,
           state.control.number?.key
         )
-        // [to-do] check if the seat data is sync to the state.data.electionsData
-        newElectionData.seatData = oldElectionData.seatData
+        // 防護性檢查：確保兩個 electionData 都存在且有 seatData
+        if (
+          oldElectionData &&
+          newElectionData &&
+          oldElectionData.seatData &&
+          newElectionData.seatData
+        ) {
+          newElectionData.seatData = oldElectionData.seatData
+        }
       } else if (state.config.electionType === 'legislator') {
         const oldElectionData = getElectionData(
           state.data.electionsData,
@@ -281,7 +293,15 @@ const electionsSlice = createSlice({
           newSubtype?.key,
           state.control.number?.key
         )
-        newElectionData.seatData.all = oldElectionData.seatData.all
+        // 防護性檢查：確保兩個 electionData 都存在且有 seatData
+        if (
+          oldElectionData &&
+          newElectionData &&
+          oldElectionData.seatData &&
+          newElectionData.seatData
+        ) {
+          newElectionData.seatData.all = oldElectionData.seatData.all
+        }
         state.control.level = defaultLevelControl
       }
       if (state.compare.info.compareMode) {
