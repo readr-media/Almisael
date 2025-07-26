@@ -149,7 +149,7 @@ const BarContainer = styled.div`
   position: relative;
   width: 52px;
   height: 16px;
-  background-color: #e3e3e3;
+  background-color: #a0a0a0;
   @media (min-width: ${breakpoint.md}) {
     width: 88px;
   }
