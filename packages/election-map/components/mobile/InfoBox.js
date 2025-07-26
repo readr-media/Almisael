@@ -341,7 +341,7 @@ export default function InfoBox({ infoboxData, year }) {
             level
           )}
           shouldShowThresholdBar={false}
-          totalValue={candidate.disagreeTks + candidate.agreeTks}
+          totalValue={votePop}
           data={thresholdBarChartData}
         />
       </CandidateInfo>

@@ -19,7 +19,7 @@ gsutil -h "Cache-Control:no-store" -m cp -r ./out/* gs://statics-prod.mirrordail
  *
  */
 /** @type {Organization} */
-export const organization = 'mirror-daily'
+export const organization = 'readr-media'
 // export const organization = 'mirror-media'
 // export const organization = 'mirror-daily'
 // export const organization = 'mirror-tv'
@@ -28,7 +28,7 @@ export const organization = 'mirror-daily'
 export const isRunning = false
 export const isBackup = false
 /** @type {Env} */
-export const environment = 'dev' // 'dev | prod'
+export const environment = 'prod' // 'dev | prod'
 const ga4Ids = {
   'readr-media': {
     dev: 'G-YDKYSDG3RL',
