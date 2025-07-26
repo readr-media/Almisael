@@ -165,6 +165,7 @@ const VoteCount = styled.p`
   color: #fff;
   font-size: 12px;
   line-height: 13px;
+  z-index: 1;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3), 0px 1px 4px rgba(0, 0, 0, 0.5);
 `
 const QuarterLine = styled.div`
@@ -173,7 +174,6 @@ const QuarterLine = styled.div`
   height: 100%;
   border-left: 1px dashed #000;
   left: ${({ percent }) => `${percent}%`};
-  z-index: 10;
 `
 
 const Notice = styled.p`
