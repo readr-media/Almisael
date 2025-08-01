@@ -1,0 +1,3297 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "苗栗縣 第02選區 苗栗市中苗里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 73.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 58.1,
+          "candVictor": "*",
+          "tks": 466,
+          "profRate": 36.25,
+          "agreeRate": 62.44,
+          "disagreeRate": 37.56
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市青苗里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 70.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 56.77,
+          "candVictor": "*",
+          "tks": 369,
+          "profRate": 28.9,
+          "agreeRate": 22.17,
+          "disagreeRate": 77.83
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市維祥里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.24,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 61.57,
+          "candVictor": "*",
+          "tks": 1317,
+          "profRate": 25.18,
+          "agreeRate": 13.24,
+          "disagreeRate": 86.76
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市維新里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.64,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 63.22,
+          "candVictor": "*",
+          "tks": 1564,
+          "profRate": 76.18,
+          "agreeRate": 83.34,
+          "disagreeRate": 16.66
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市玉清里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 75.67,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 64.21,
+          "candVictor": "*",
+          "tks": 983,
+          "profRate": 94.92,
+          "agreeRate": 59.59,
+          "disagreeRate": 40.41
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市玉華里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.9,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 62.04,
+          "candVictor": "*",
+          "tks": 1517,
+          "profRate": 37.61,
+          "agreeRate": 94.84,
+          "disagreeRate": 5.16
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市綠苗里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 71.68,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 60.85,
+          "candVictor": "*",
+          "tks": 314,
+          "profRate": 80.13,
+          "agreeRate": 29.82,
+          "disagreeRate": 70.18
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市高苗里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 70.6,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 62.31,
+          "candVictor": "*",
+          "tks": 1306,
+          "profRate": 37.27,
+          "agreeRate": 62.09,
+          "disagreeRate": 37.91
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市新苗里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 71.94,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 58.32,
+          "candVictor": "*",
+          "tks": 319,
+          "profRate": 60.04,
+          "agreeRate": 97.02,
+          "disagreeRate": 2.98
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市玉苗里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 73.94,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 60.11,
+          "candVictor": "*",
+          "tks": 342,
+          "profRate": 57.33,
+          "agreeRate": 38.0,
+          "disagreeRate": 62.0
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市大同里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 70.89,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 62.27,
+          "candVictor": "*",
+          "tks": 203,
+          "profRate": 53.11,
+          "agreeRate": 30.25,
+          "disagreeRate": 69.75
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市恭敬里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 72.86,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 55.98,
+          "candVictor": "*",
+          "tks": 501,
+          "profRate": 84.86,
+          "agreeRate": 76.37,
+          "disagreeRate": 23.63
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市水源里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 73.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 59.23,
+          "candVictor": "*",
+          "tks": 972,
+          "profRate": 13.95,
+          "agreeRate": 28.32,
+          "disagreeRate": 71.68
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市勝利里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 75.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 60.12,
+          "candVictor": "*",
+          "tks": 1589,
+          "profRate": 50.73,
+          "agreeRate": 61.7,
+          "disagreeRate": 38.3
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市清華里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 75.42,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 60.1,
+          "candVictor": "*",
+          "tks": 1267,
+          "profRate": 58.76,
+          "agreeRate": 79.14,
+          "disagreeRate": 20.86
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市上苗里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 72.9,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 57.35,
+          "candVictor": "*",
+          "tks": 593,
+          "profRate": 68.83,
+          "agreeRate": 46.58,
+          "disagreeRate": 53.42
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市北苗里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 74.36,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 57.95,
+          "candVictor": "*",
+          "tks": 2016,
+          "profRate": 40.21,
+          "agreeRate": 94.39,
+          "disagreeRate": 5.61
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市嘉盛里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 74.55,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 60.94,
+          "candVictor": "*",
+          "tks": 1426,
+          "profRate": 61.4,
+          "agreeRate": 41.89,
+          "disagreeRate": 58.11
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市福星里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 72.44,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 59.8,
+          "candVictor": "*",
+          "tks": 1678,
+          "profRate": 58.46,
+          "agreeRate": 62.77,
+          "disagreeRate": 37.23
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市福安里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 71.31,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 59.15,
+          "candVictor": "*",
+          "tks": 1377,
+          "profRate": 55.04,
+          "agreeRate": 59.05,
+          "disagreeRate": 40.95
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市嘉新里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 77.26,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 63.38,
+          "candVictor": "*",
+          "tks": 1274,
+          "profRate": 73.74,
+          "agreeRate": 40.49,
+          "disagreeRate": 59.51
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市建功里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 59.51,
+          "candVictor": "*",
+          "tks": 1655,
+          "profRate": 11.73,
+          "agreeRate": 33.91,
+          "disagreeRate": 66.09
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市福麗里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 69.99,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 59.22,
+          "candVictor": "*",
+          "tks": 2069,
+          "profRate": 39.32,
+          "agreeRate": 77.46,
+          "disagreeRate": 22.54
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市文山里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 75.49,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 56.54,
+          "candVictor": "*",
+          "tks": 1725,
+          "profRate": 93.34,
+          "agreeRate": 7.31,
+          "disagreeRate": 92.69
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市文聖里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 72.57,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 59.14,
+          "candVictor": "*",
+          "tks": 1437,
+          "profRate": 7.11,
+          "agreeRate": 42.51,
+          "disagreeRate": 57.49
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市新川里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 73.56,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 62.69,
+          "candVictor": "*",
+          "tks": 494,
+          "profRate": 62.68,
+          "agreeRate": 96.01,
+          "disagreeRate": 3.99
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市南勢里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 70.04,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 64.42,
+          "candVictor": "*",
+          "tks": 793,
+          "profRate": 19.61,
+          "agreeRate": 91.03,
+          "disagreeRate": 8.97
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 苗栗市新英里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "010",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 69.1,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 59.0,
+          "candVictor": "*",
+          "tks": 613,
+          "profRate": 79.82,
+          "agreeRate": 1.05,
+          "disagreeRate": 98.95
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市流東里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 67.56,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 50.52,
+          "candVictor": "*",
+          "tks": 683,
+          "profRate": 18.0,
+          "agreeRate": 78.85,
+          "disagreeRate": 21.15
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市珊湖里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 70.95,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 52.76,
+          "candVictor": "*",
+          "tks": 592,
+          "profRate": 24.72,
+          "agreeRate": 42.37,
+          "disagreeRate": 57.63
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市斗煥里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 70.57,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 52.73,
+          "candVictor": "*",
+          "tks": 967,
+          "profRate": 42.9,
+          "agreeRate": 75.3,
+          "disagreeRate": 24.7
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市新華里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 71.38,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 53.36,
+          "candVictor": "*",
+          "tks": 1317,
+          "profRate": 80.72,
+          "agreeRate": 54.24,
+          "disagreeRate": 45.76
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市興隆里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.6,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 50.14,
+          "candVictor": "*",
+          "tks": 1565,
+          "profRate": 70.35,
+          "agreeRate": 84.46,
+          "disagreeRate": 15.54
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市上埔里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 70.59,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 54.95,
+          "candVictor": "*",
+          "tks": 922,
+          "profRate": 78.13,
+          "agreeRate": 45.89,
+          "disagreeRate": 54.11
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市土牛里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 72.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 42.8,
+          "candVictor": " ",
+          "tks": 306,
+          "profRate": 73.22,
+          "agreeRate": 28.83,
+          "disagreeRate": 71.17
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市頭份里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 71.78,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 46.92,
+          "candVictor": " ",
+          "tks": 1045,
+          "profRate": 47.04,
+          "agreeRate": 29.03,
+          "disagreeRate": 70.97
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市忠孝里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 74.91,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 49.2,
+          "candVictor": " ",
+          "tks": 1044,
+          "profRate": 11.3,
+          "agreeRate": 58.68,
+          "disagreeRate": 41.32
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市自強里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 70.03,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 47.52,
+          "candVictor": " ",
+          "tks": 604,
+          "profRate": 2.49,
+          "agreeRate": 23.23,
+          "disagreeRate": 76.77
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市信義里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 50.95,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 49.6,
+          "candVictor": " ",
+          "tks": 245,
+          "profRate": 5.25,
+          "agreeRate": 59.51,
+          "disagreeRate": 40.49
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市仁愛里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 69.4,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 48.49,
+          "candVictor": " ",
+          "tks": 482,
+          "profRate": 63.39,
+          "agreeRate": 61.07,
+          "disagreeRate": 38.93
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市上興里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 66.24,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 46.68,
+          "candVictor": " ",
+          "tks": 639,
+          "profRate": 86.01,
+          "agreeRate": 23.4,
+          "disagreeRate": 76.6
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市下興里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 70.18,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 49.76,
+          "candVictor": " ",
+          "tks": 818,
+          "profRate": 35.85,
+          "agreeRate": 43.49,
+          "disagreeRate": 56.51
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市和平里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 78.1,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 47.77,
+          "candVictor": " ",
+          "tks": 364,
+          "profRate": 78.56,
+          "agreeRate": 37.56,
+          "disagreeRate": 62.44
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市山下里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 76.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 47.25,
+          "candVictor": " ",
+          "tks": 1384,
+          "profRate": 88.08,
+          "agreeRate": 17.57,
+          "disagreeRate": 82.43
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市後庄里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 76.53,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 39.39,
+          "candVictor": " ",
+          "tks": 1359,
+          "profRate": 43.35,
+          "agreeRate": 39.04,
+          "disagreeRate": 60.96
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市合興里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 73.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 40.51,
+          "candVictor": " ",
+          "tks": 715,
+          "profRate": 11.72,
+          "agreeRate": 10.14,
+          "disagreeRate": 89.86
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市文化里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 76.66,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 40.84,
+          "candVictor": " ",
+          "tks": 1068,
+          "profRate": 25.08,
+          "agreeRate": 28.58,
+          "disagreeRate": 71.42
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市中興里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 71.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 43.1,
+          "candVictor": " ",
+          "tks": 834,
+          "profRate": 78.06,
+          "agreeRate": 49.98,
+          "disagreeRate": 50.02
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市蟠桃里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 72.65,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 41.78,
+          "candVictor": " ",
+          "tks": 953,
+          "profRate": 37.68,
+          "agreeRate": 12.06,
+          "disagreeRate": 87.94
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市建國里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 74.64,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 46.62,
+          "candVictor": " ",
+          "tks": 1098,
+          "profRate": 13.98,
+          "agreeRate": 39.45,
+          "disagreeRate": 60.55
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市成功里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 73.43,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 46.89,
+          "candVictor": " ",
+          "tks": 1146,
+          "profRate": 65.24,
+          "agreeRate": 93.52,
+          "disagreeRate": 6.48
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市民族里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 73.35,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 52.3,
+          "candVictor": "*",
+          "tks": 738,
+          "profRate": 3.56,
+          "agreeRate": 28.18,
+          "disagreeRate": 71.82
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市民權里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 72.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 44.32,
+          "candVictor": " ",
+          "tks": 702,
+          "profRate": 64.84,
+          "agreeRate": 67.62,
+          "disagreeRate": 32.38
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市東庄里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 72.38,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 44.11,
+          "candVictor": " ",
+          "tks": 1476,
+          "profRate": 23.88,
+          "agreeRate": 17.37,
+          "disagreeRate": 82.63
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市田寮里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 73.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 47.06,
+          "candVictor": " ",
+          "tks": 1297,
+          "profRate": 18.52,
+          "agreeRate": 17.12,
+          "disagreeRate": 82.88
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市民生里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 70.86,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 49.12,
+          "candVictor": " ",
+          "tks": 777,
+          "profRate": 37.38,
+          "agreeRate": 58.81,
+          "disagreeRate": 41.19
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市蘆竹里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 73.09,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 45.63,
+          "candVictor": " ",
+          "tks": 397,
+          "profRate": 60.55,
+          "agreeRate": 71.79,
+          "disagreeRate": 28.21
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市尖山里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 72.37,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 53.25,
+          "candVictor": "*",
+          "tks": 451,
+          "profRate": 85.93,
+          "agreeRate": 10.49,
+          "disagreeRate": 89.51
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市廣興里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 74.05,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 59.74,
+          "candVictor": "*",
+          "tks": 365,
+          "profRate": 92.71,
+          "agreeRate": 32.82,
+          "disagreeRate": 67.18
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市尖下里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 70.51,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 55.0,
+          "candVictor": "*",
+          "tks": 897,
+          "profRate": 57.69,
+          "agreeRate": 14.53,
+          "disagreeRate": 85.47
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭份市濫坑里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "050",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 70.9,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 56.91,
+          "candVictor": "*",
+          "tks": 803,
+          "profRate": 84.33,
+          "agreeRate": 95.89,
+          "disagreeRate": 4.11
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 卓蘭鎮老庄里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "070",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.67,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 50.41,
+          "candVictor": "*",
+          "tks": 617,
+          "profRate": 5.77,
+          "agreeRate": 74.55,
+          "disagreeRate": 25.45
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 卓蘭鎮新榮里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "070",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 74.8,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 44.31,
+          "candVictor": " ",
+          "tks": 319,
+          "profRate": 38.49,
+          "agreeRate": 28.2,
+          "disagreeRate": 71.8
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 卓蘭鎮中街里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "070",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 76.32,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 44.47,
+          "candVictor": " ",
+          "tks": 217,
+          "profRate": 53.38,
+          "agreeRate": 24.83,
+          "disagreeRate": 75.17
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 卓蘭鎮新厝里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "070",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 69.28,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 46.52,
+          "candVictor": " ",
+          "tks": 434,
+          "profRate": 4.63,
+          "agreeRate": 48.09,
+          "disagreeRate": 51.91
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 卓蘭鎮豐田里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "070",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 71.61,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 44.21,
+          "candVictor": " ",
+          "tks": 267,
+          "profRate": 33.58,
+          "agreeRate": 95.62,
+          "disagreeRate": 4.38
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 卓蘭鎮西坪里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "070",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 70.31,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 52.78,
+          "candVictor": "*",
+          "tks": 266,
+          "profRate": 62.27,
+          "agreeRate": 92.85,
+          "disagreeRate": 7.15
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 卓蘭鎮苗豐里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "070",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.73,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 44.99,
+          "candVictor": " ",
+          "tks": 211,
+          "profRate": 19.66,
+          "agreeRate": 6.62,
+          "disagreeRate": 93.38
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 卓蘭鎮上新里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "070",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 71.05,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 43.88,
+          "candVictor": " ",
+          "tks": 570,
+          "profRate": 11.08,
+          "agreeRate": 18.96,
+          "disagreeRate": 81.04
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 卓蘭鎮內灣里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "070",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 70.87,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 46.71,
+          "candVictor": " ",
+          "tks": 617,
+          "profRate": 26.59,
+          "agreeRate": 7.51,
+          "disagreeRate": 92.49
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 卓蘭鎮坪林里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "070",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 68.86,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 57.14,
+          "candVictor": "*",
+          "tks": 624,
+          "profRate": 16.24,
+          "agreeRate": 43.82,
+          "disagreeRate": 56.18
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 卓蘭鎮景山里",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "070",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 62.49,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 53.14,
+          "candVictor": "*",
+          "tks": 296,
+          "profRate": 56.25,
+          "agreeRate": 94.51,
+          "disagreeRate": 5.49
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉大湖村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 71.62,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 62.83,
+          "candVictor": "*",
+          "tks": 661,
+          "profRate": 11.44,
+          "agreeRate": 41.31,
+          "disagreeRate": 58.69
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉明湖村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 71.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 68.35,
+          "candVictor": "*",
+          "tks": 244,
+          "profRate": 46.36,
+          "agreeRate": 65.85,
+          "disagreeRate": 34.15
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉大寮村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 70.86,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 57.18,
+          "candVictor": "*",
+          "tks": 426,
+          "profRate": 64.72,
+          "agreeRate": 33.61,
+          "disagreeRate": 66.39
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉靜湖村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 71.21,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 65.31,
+          "candVictor": "*",
+          "tks": 706,
+          "profRate": 61.89,
+          "agreeRate": 71.4,
+          "disagreeRate": 28.6
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉富興村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 68.3,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 57.96,
+          "candVictor": "*",
+          "tks": 466,
+          "profRate": 46.67,
+          "agreeRate": 80.62,
+          "disagreeRate": 19.38
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉大南村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 61.24,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 69.07,
+          "candVictor": "*",
+          "tks": 201,
+          "profRate": 9.65,
+          "agreeRate": 1.46,
+          "disagreeRate": 98.54
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉南湖村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 64.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 58.69,
+          "candVictor": "*",
+          "tks": 206,
+          "profRate": 5.07,
+          "agreeRate": 7.68,
+          "disagreeRate": 92.32
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉東興村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 65.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 60.51,
+          "candVictor": "*",
+          "tks": 262,
+          "profRate": 17.59,
+          "agreeRate": 30.1,
+          "disagreeRate": 69.9
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉武榮村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 69.15,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 61.69,
+          "candVictor": "*",
+          "tks": 190,
+          "profRate": 21.27,
+          "agreeRate": 94.55,
+          "disagreeRate": 5.45
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉義和村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 64.61,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 57.86,
+          "candVictor": "*",
+          "tks": 493,
+          "profRate": 35.6,
+          "agreeRate": 69.92,
+          "disagreeRate": 30.08
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉栗林村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 62.0,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 52.07,
+          "candVictor": "*",
+          "tks": 289,
+          "profRate": 85.4,
+          "agreeRate": 63.51,
+          "disagreeRate": 36.49
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 大湖鄉新開村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "080",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 68.66,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 59.74,
+          "candVictor": "*",
+          "tks": 374,
+          "profRate": 43.2,
+          "agreeRate": 21.62,
+          "disagreeRate": 78.38
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉館中村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.72,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 55.36,
+          "candVictor": "*",
+          "tks": 578,
+          "profRate": 86.62,
+          "agreeRate": 2.6,
+          "disagreeRate": 97.4
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉館東村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 72.07,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 59.96,
+          "candVictor": "*",
+          "tks": 942,
+          "profRate": 69.15,
+          "agreeRate": 96.61,
+          "disagreeRate": 3.39
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉館南村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 71.77,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 57.94,
+          "candVictor": "*",
+          "tks": 1336,
+          "profRate": 58.02,
+          "agreeRate": 38.26,
+          "disagreeRate": 61.74
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉中義村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 69.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 58.07,
+          "candVictor": "*",
+          "tks": 849,
+          "profRate": 19.32,
+          "agreeRate": 11.79,
+          "disagreeRate": 88.21
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉玉泉村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 73.76,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 56.81,
+          "candVictor": "*",
+          "tks": 918,
+          "profRate": 40.1,
+          "agreeRate": 0.7,
+          "disagreeRate": 99.3
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉大坑村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 69.68,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 56.69,
+          "candVictor": "*",
+          "tks": 339,
+          "profRate": 69.95,
+          "agreeRate": 51.99,
+          "disagreeRate": 48.01
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉福基村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 69.64,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 64.79,
+          "candVictor": "*",
+          "tks": 414,
+          "profRate": 93.74,
+          "agreeRate": 29.22,
+          "disagreeRate": 70.78
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉福德村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 71.7,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 60.99,
+          "candVictor": "*",
+          "tks": 136,
+          "profRate": 58.58,
+          "agreeRate": 98.57,
+          "disagreeRate": 1.43
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉福星村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 73.41,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 54.92,
+          "candVictor": "*",
+          "tks": 759,
+          "profRate": 51.6,
+          "agreeRate": 80.38,
+          "disagreeRate": 19.62
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉石墻村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 67.55,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 63.17,
+          "candVictor": "*",
+          "tks": 566,
+          "profRate": 30.89,
+          "agreeRate": 75.43,
+          "disagreeRate": 24.57
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉開礦村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 71.09,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 65.92,
+          "candVictor": "*",
+          "tks": 118,
+          "profRate": 30.89,
+          "agreeRate": 28.72,
+          "disagreeRate": 71.28
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉五谷村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.96,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 55.17,
+          "candVictor": "*",
+          "tks": 832,
+          "profRate": 44.14,
+          "agreeRate": 54.4,
+          "disagreeRate": 45.6
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉玉谷村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 70.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 60.15,
+          "candVictor": "*",
+          "tks": 572,
+          "profRate": 26.15,
+          "agreeRate": 79.01,
+          "disagreeRate": 20.99
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉鶴岡村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 60.33,
+          "candVictor": "*",
+          "tks": 651,
+          "profRate": 36.25,
+          "agreeRate": 19.16,
+          "disagreeRate": 80.84
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉鶴山村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 72.51,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 61.15,
+          "candVictor": "*",
+          "tks": 584,
+          "profRate": 81.06,
+          "agreeRate": 68.28,
+          "disagreeRate": 31.72
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉尖山村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 71.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 59.7,
+          "candVictor": "*",
+          "tks": 554,
+          "profRate": 46.33,
+          "agreeRate": 40.38,
+          "disagreeRate": 59.62
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉仁安村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 71.3,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 62.76,
+          "candVictor": "*",
+          "tks": 536,
+          "profRate": 10.02,
+          "agreeRate": 95.73,
+          "disagreeRate": 4.27
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉南河村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 69.67,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 75.18,
+          "candVictor": "*",
+          "tks": 106,
+          "profRate": 52.83,
+          "agreeRate": 79.8,
+          "disagreeRate": 20.2
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 公館鄉北河村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "090",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 66.99,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 70.65,
+          "candVictor": "*",
+          "tks": 142,
+          "profRate": 82.4,
+          "agreeRate": 21.92,
+          "disagreeRate": 78.08
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 南庄鄉東村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "110",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 68.78,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 63.37,
+          "candVictor": "*",
+          "tks": 410,
+          "profRate": 43.3,
+          "agreeRate": 44.39,
+          "disagreeRate": 55.61
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 南庄鄉西村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "110",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 68.72,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 62.98,
+          "candVictor": "*",
+          "tks": 228,
+          "profRate": 27.96,
+          "agreeRate": 19.55,
+          "disagreeRate": 80.45
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 南庄鄉南江村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "110",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 67.47,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 62.48,
+          "candVictor": "*",
+          "tks": 358,
+          "profRate": 55.28,
+          "agreeRate": 91.78,
+          "disagreeRate": 8.22
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 南庄鄉田美村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "110",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 64.6,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 60.54,
+          "candVictor": "*",
+          "tks": 270,
+          "profRate": 35.63,
+          "agreeRate": 29.49,
+          "disagreeRate": 70.51
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 南庄鄉獅山村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "110",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 63.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 57.24,
+          "candVictor": "*",
+          "tks": 249,
+          "profRate": 5.73,
+          "agreeRate": 45.01,
+          "disagreeRate": 54.99
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 南庄鄉南富村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "110",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 71.5,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 69.37,
+          "candVictor": "*",
+          "tks": 471,
+          "profRate": 17.15,
+          "agreeRate": 92.38,
+          "disagreeRate": 7.62
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 南庄鄉員林村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "110",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 70.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 57.46,
+          "candVictor": "*",
+          "tks": 362,
+          "profRate": 96.73,
+          "agreeRate": 52.4,
+          "disagreeRate": 47.6
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 南庄鄉蓬萊村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "110",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 60.51,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 68.09,
+          "candVictor": "*",
+          "tks": 160,
+          "profRate": 80.03,
+          "agreeRate": 72.96,
+          "disagreeRate": 27.04
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 南庄鄉東河村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "110",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 60.08,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 69.78,
+          "candVictor": "*",
+          "tks": 97,
+          "profRate": 93.56,
+          "agreeRate": 25.39,
+          "disagreeRate": 74.61
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭屋鄉頭屋村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "120",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 73.2,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 64.73,
+          "candVictor": "*",
+          "tks": 1112,
+          "profRate": 92.39,
+          "agreeRate": 91.8,
+          "disagreeRate": 8.2
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭屋鄉獅潭村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "120",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 74.44,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 61.32,
+          "candVictor": "*",
+          "tks": 688,
+          "profRate": 68.81,
+          "agreeRate": 64.22,
+          "disagreeRate": 35.78
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭屋鄉北坑村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "120",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 67.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 71.15,
+          "candVictor": "*",
+          "tks": 296,
+          "profRate": 99.43,
+          "agreeRate": 57.2,
+          "disagreeRate": 42.8
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭屋鄉曲洞村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "120",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 74.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 64.72,
+          "candVictor": "*",
+          "tks": 387,
+          "profRate": 52.06,
+          "agreeRate": 23.77,
+          "disagreeRate": 76.23
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭屋鄉飛鳳村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "120",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.36,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 65.53,
+          "candVictor": "*",
+          "tks": 173,
+          "profRate": 71.99,
+          "agreeRate": 6.4,
+          "disagreeRate": 93.6
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭屋鄉象山村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "120",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.32,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 58.62,
+          "candVictor": "*",
+          "tks": 707,
+          "profRate": 98.28,
+          "agreeRate": 77.9,
+          "disagreeRate": 22.1
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭屋鄉明德村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "120",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 74.18,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 65.94,
+          "candVictor": "*",
+          "tks": 426,
+          "profRate": 92.27,
+          "agreeRate": 43.58,
+          "disagreeRate": 56.42
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 頭屋鄉鳴鳳村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "120",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 69.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 55.1,
+          "candVictor": "*",
+          "tks": 108,
+          "profRate": 52.22,
+          "agreeRate": 66.26,
+          "disagreeRate": 33.74
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 三灣鄉三灣村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "160",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.87,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 55.13,
+          "candVictor": "*",
+          "tks": 785,
+          "profRate": 14.94,
+          "agreeRate": 19.08,
+          "disagreeRate": 80.92
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 三灣鄉內灣村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "160",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 76.73,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 57.95,
+          "candVictor": "*",
+          "tks": 255,
+          "profRate": 39.57,
+          "agreeRate": 48.85,
+          "disagreeRate": 51.15
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 三灣鄉銅鏡村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "160",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 72.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 61.88,
+          "candVictor": "*",
+          "tks": 336,
+          "profRate": 81.31,
+          "agreeRate": 34.75,
+          "disagreeRate": 65.25
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 三灣鄉頂寮村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "160",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 71.43,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 70.07,
+          "candVictor": "*",
+          "tks": 103,
+          "profRate": 29.57,
+          "agreeRate": 72.73,
+          "disagreeRate": 27.27
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 三灣鄉北埔村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "160",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 70.55,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 58.61,
+          "candVictor": "*",
+          "tks": 194,
+          "profRate": 19.13,
+          "agreeRate": 24.1,
+          "disagreeRate": 75.9
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 三灣鄉大河村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "160",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 69.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 64.74,
+          "candVictor": "*",
+          "tks": 224,
+          "profRate": 24.5,
+          "agreeRate": 78.55,
+          "disagreeRate": 21.45
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 三灣鄉大坪村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "160",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 74.59,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 57.2,
+          "candVictor": "*",
+          "tks": 151,
+          "profRate": 73.96,
+          "agreeRate": 1.86,
+          "disagreeRate": 98.14
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 三灣鄉永和村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "160",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 70.89,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 65.69,
+          "candVictor": "*",
+          "tks": 157,
+          "profRate": 1.9,
+          "agreeRate": 5.84,
+          "disagreeRate": 94.16
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 獅潭鄉百壽村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "170",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 69.6,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 71.43,
+          "candVictor": "*",
+          "tks": 110,
+          "profRate": 0.82,
+          "agreeRate": 60.68,
+          "disagreeRate": 39.32
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 獅潭鄉永興村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "170",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 65.81,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 64.26,
+          "candVictor": "*",
+          "tks": 205,
+          "profRate": 48.93,
+          "agreeRate": 22.21,
+          "disagreeRate": 77.79
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 獅潭鄉新店村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "170",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 70.43,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 64.09,
+          "candVictor": "*",
+          "tks": 382,
+          "profRate": 92.61,
+          "agreeRate": 62.8,
+          "disagreeRate": 37.2
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 獅潭鄉和興村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "170",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 65.09,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 58.11,
+          "candVictor": "*",
+          "tks": 197,
+          "profRate": 96.41,
+          "agreeRate": 43.27,
+          "disagreeRate": 56.73
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 獅潭鄉豐林村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "170",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 70.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 70.9,
+          "candVictor": "*",
+          "tks": 268,
+          "profRate": 27.25,
+          "agreeRate": 62.31,
+          "disagreeRate": 37.69
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 獅潭鄉新豐村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "170",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 75.24,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 73.91,
+          "candVictor": "*",
+          "tks": 170,
+          "profRate": 92.77,
+          "agreeRate": 24.59,
+          "disagreeRate": 75.41
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 獅潭鄉竹木村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "170",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 76.39,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 66.46,
+          "candVictor": "*",
+          "tks": 321,
+          "profRate": 51.57,
+          "agreeRate": 49.98,
+          "disagreeRate": 50.02
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 泰安鄉八卦村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "180",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 66.9,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 69.89,
+          "candVictor": "*",
+          "tks": 65,
+          "profRate": 94.14,
+          "agreeRate": 93.52,
+          "disagreeRate": 6.48
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 泰安鄉錦水村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "180",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 65.67,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 66.82,
+          "candVictor": "*",
+          "tks": 143,
+          "profRate": 1.37,
+          "agreeRate": 59.24,
+          "disagreeRate": 40.76
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 泰安鄉清安村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "180",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 72.42,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 68.97,
+          "candVictor": "*",
+          "tks": 289,
+          "profRate": 17.39,
+          "agreeRate": 26.84,
+          "disagreeRate": 73.16
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 泰安鄉大興村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "180",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 70.59,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 77.59,
+          "candVictor": "*",
+          "tks": 45,
+          "profRate": 23.01,
+          "agreeRate": 68.88,
+          "disagreeRate": 31.12
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 泰安鄉中興村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "180",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 57.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 55.42,
+          "candVictor": "*",
+          "tks": 46,
+          "profRate": 63.85,
+          "agreeRate": 81.91,
+          "disagreeRate": 18.09
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 泰安鄉梅園村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "180",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 57.69,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 80.0,
+          "candVictor": "*",
+          "tks": 12,
+          "profRate": 81.08,
+          "agreeRate": 86.77,
+          "disagreeRate": 13.23
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 泰安鄉象鼻村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "180",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 65.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 64.0,
+          "candVictor": "*",
+          "tks": 16,
+          "profRate": 13.48,
+          "agreeRate": 42.43,
+          "disagreeRate": 57.57
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區 泰安鄉士林村",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": "180",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 53.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "邱鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 75.0,
+          "candVictor": "*",
+          "tks": 15,
+          "profRate": 43.09,
+          "agreeRate": 65.12,
+          "disagreeRate": 34.88
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

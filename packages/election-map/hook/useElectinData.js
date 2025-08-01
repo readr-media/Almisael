@@ -11,6 +11,7 @@ import {
   fetchDistrictWithAreaMappingData,
 } from '../utils/fetchElectionData'
 import gtag from '../utils/gtag'
+import DataSourceResolver from '../utils/DataSourceResolver'
 
 /**
  * @typedef {import('../consts/electionsConfig').ElectionType} ElectionType
@@ -121,7 +122,7 @@ export const useElectionData = (showLoading) => {
       }
       case 'legislator': {
         // only normal legislator will scroll evc
-        if (subtype.key === 'normal') {
+        if (subtype.key === 'normal' || subtype.key === 'recall-july') {
           try {
             const areaCode = levelControl.areaCode
             const area = areaCode.slice(-2)
@@ -194,7 +195,7 @@ export const useElectionData = (showLoading) => {
         }
         case 'legislator': {
           // only normal legislator will handle evc callback
-          if (subtype.key === 'normal') {
+          if (subtype.key === 'normal' || subtype.key === 'recall-july') {
             const area = evcSelectedValue.slice(1, 3)
             const newAreaCode = levelControl.countyCode + area
             const target = document.querySelector(`#first-id-${newAreaCode}`)
@@ -202,8 +203,10 @@ export const useElectionData = (showLoading) => {
               let event = new MouseEvent('click', { bubbles: true })
               target.dispatchEvent(event)
             }
+            const electionTypeLabel =
+              subtype.key === 'recall-july' ? '大罷免' : '立法委員區域'
             gtag.sendGAEvent('Click', {
-              project: `票數比較篩選：${year.key} / 立法委員區域 / ${evcSelectedValue} / ${device}`,
+              project: `票數比較篩選：${year.key} / ${electionTypeLabel} / ${evcSelectedValue} / ${device}`,
             })
           }
           break
@@ -244,7 +247,14 @@ export const useElectionData = (showLoading) => {
       ] = await Promise.allSettled([
         prepareElectionData(
           electionData,
-          electionConfig,
+          {
+            ...electionConfig,
+            electionType: DataSourceResolver.prepareApiParams({
+              electionType: electionConfig.electionType,
+              subtypeKey: subtype?.key,
+              year: year?.key
+            }).electionType,
+          },
           levelControl,
           year?.key,
           subtype?.key,
@@ -364,9 +374,15 @@ export const useElectionData = (showLoading) => {
     const prepareDistrictMappingData = async () => {
       if (electionConfig.electionType === 'legislator') {
         if (!districtMapping.districtWithArea[year.key]) {
-          const data = await fetchDistrictWithAreaMappingData({
+          // TODO: 當 API 更新後移除映射邏輯
+          const apiParams = DataSourceResolver.prepareApiParams({
             electionType: electionConfig.electionType,
-            year: year.key,
+            subtypeKey: subtype?.key,
+            year: year.key
+          })
+          const data = await fetchDistrictWithAreaMappingData({
+            electionType: apiParams.electionType,
+            year: apiParams.year,
           })
           dispatch(
             electionActions.changeDistrictWithAreaMappingData({

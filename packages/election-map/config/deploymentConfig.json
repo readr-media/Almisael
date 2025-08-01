@@ -1,0 +1,53 @@
+{
+  "organizations": {
+    "readr-media": {
+      "dev": {
+        "bucket": "gs://readr-coverage/project/3/dev-taiwan-elections",
+        "cacheControl": "no-store"
+      },
+      "prod": {
+        "bucket": "gs://readr-coverage/project/3/taiwan-elections",
+        "cacheControl": "no-store"
+      }
+    },
+    "mirror-media": {
+      "dev": {
+        "bucket": "gs://v3-statics-dev.mirrormedia.mg/projects/dev-taiwan-elections",
+        "cacheControl": "no-store"
+      },
+      "prod": {
+        "bucket": "gs://v3-statics.mirrormedia.mg/projects/taiwan-elections",
+        "cacheControl": "no-store"
+      }
+    },
+    "mirror-tv": {
+      "dev": {
+        "bucket": "gs://static-mnews-tw-dev/projects/dev-taiwan-elections",
+        "cacheControl": "no-store"
+      },
+      "prod": {
+        "bucket": "gs://static-mnews-tw-prod/projects/taiwan-elections",
+        "cacheControl": "no-store"
+      }
+    },
+    "mirror-daily": {
+      "dev": {
+        "bucket": "gs://statics-dev.mirrordaily.news/projects/dev-taiwan-elections",
+        "cacheControl": "no-store"
+      },
+      "prod": {
+        "bucket": "gs://statics-prod.mirrordaily.news/projects/taiwan-elections",
+        "cacheControl": "no-store"
+      }
+    }
+  },
+  "commands": {
+    "build": "next build",
+    "export": "next export --outdir",
+    "gsutil": {
+      "base": "gsutil",
+      "flags": ["-m", "cp", "-r"],
+      "cacheControlFlag": "-h"
+    }
+  }
+}

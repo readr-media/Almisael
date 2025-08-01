@@ -1,7 +1,7 @@
 import widgets from '@readr-media/react-election-widgets'
-import axios from 'axios'
+import axios from './api'
 
-import { environment } from '../consts/config'
+import { environment, isBackup, isRunning } from '../consts/config'
 
 const gcsBaseUrl =
   environment === 'dev'
@@ -185,6 +185,7 @@ export const fetchLegislatorSeatData = async ({
       data = await loader.loadAllLegislatorData({ year: yearKey })
       break
     case 'normal':
+    case 'recall-july':
       data = await loader.loadAreaLegislatorData({ year: yearKey, countyCode })
       break
     case 'mountainIndigenous':
@@ -286,7 +287,19 @@ export const fetchLegislatorEvcData = async ({
   subtypeKey,
   district = '',
 }) => {
-  let subtype = subtypeKey === 'normal' ? 'district' : subtypeKey
+  if (subtypeKey === 'recall-july') {
+    const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
+    const data = await loader.loadRecallData({
+      year: yearKey,
+      recallType: 'recall',
+      district,
+    })
+    return data
+  }
+  let subtype =
+    subtypeKey === 'normal' || subtypeKey === 'recall-july'
+      ? 'district'
+      : subtypeKey
   const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
   const data = await loader.loadLegislatorData({
     year: yearKey,
@@ -403,6 +416,10 @@ export const fetchLegislatorMapData = async ({
     case 'normal':
       transformedSubtype = 'normal'
       break
+    case 'recall-july':
+      // NOTE: switch for running or finish GCS resources
+      transformedSubtype = isRunning ? 'recall-july-dev' : 'recall-july'
+      break
     case 'mountainIndigenous':
       transformedSubtype = 'mountain-indigenous'
       break
@@ -416,7 +433,9 @@ export const fetchLegislatorMapData = async ({
     default:
       break
   }
-  const mapDataUrl = `${gcsBaseUrl}/${yearKey}/${electionType}/map/${folderName}/${transformedSubtype}/${fileName}.json`
+  const mapDataUrl = isBackup
+    ? `${gcsBaseUrl}/${yearKey}_backup/${electionType}/map/${folderName}/${transformedSubtype}/${fileName}.json`
+    : `${gcsBaseUrl}/${yearKey}/${electionType}/map/${folderName}/${transformedSubtype}/${fileName}.json`
   const { data } = await axios.get(mapDataUrl)
   return data
 }

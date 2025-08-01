@@ -18,6 +18,7 @@ import {
   fetchLegislatorMapData,
   fetchLegislatorSeatData,
 } from './fetchElectionData'
+import DataSourceResolver from './DataSourceResolver'
 
 /**
  * @typedef {{ [key: number]: null | Object}} ModuleData
@@ -373,7 +374,8 @@ export const generateDefaultElectionsData = () => {
       }
 
       case 'legislator':
-      case 'councilMember': {
+      case 'councilMember':
+      case 'recall-july': {
         const { subtypes } = election
         singleElectionData = years.reduce((obj, { key }) => {
           obj[key] = subtypes.reduce((obj, { key }) => {
@@ -429,7 +431,8 @@ export const updateElectionsData = (
     }
 
     case 'legislator':
-    case 'councilMember': {
+    case 'councilMember':
+    case 'recall-july': {
       electionsData[electionType][yearKey][subtypeKey] = newElectionData
       break
     }
@@ -469,7 +472,8 @@ export const getElectionData = (
     }
 
     case 'legislator':
-    case 'councilMember': {
+    case 'councilMember':
+    case 'recall-july': {
       electionData = electionsData[electionType][yearKey][subtypeKey]
       break
     }
@@ -804,6 +808,7 @@ export const prepareElectionData = async (
 
         break
       case 'legislator':
+      case 'recall-july':
         switch (level) {
           case 0:
             // handle evc data
@@ -820,9 +825,15 @@ export const prepareElectionData = async (
               // fetch evcData if in refetch mode or no specific evc data
               if (forceRefetching || (!forceRefetching && !newEvcData[level])) {
                 try {
+                  // TODO: 當 API 更新後移除映射邏輯
+                  const apiParams = DataSourceResolver.prepareApiParams({
+                    electionType,
+                    subtypeKey,
+                    year: yearKey,
+                  })
                   const data = await fetchLegislatorEvcData({
                     yearKey,
-                    subtypeKey,
+                    subtypeKey: apiParams.subtypeKey,
                   })
                   newEvcData[level] = data
                 } catch (error) {
@@ -837,6 +848,7 @@ export const prepareElectionData = async (
               // fetch all seatData if in refetch mode or no specific seat data
               if (forceRefetching || (!forceRefetching && !newSeatData.all)) {
                 try {
+                  // TODO: 當 API 更新後移除映射邏輯
                   const data = await fetchLegislatorSeatData({
                     subtype: 'all',
                     yearKey,
@@ -859,8 +871,14 @@ export const prepareElectionData = async (
                   (!forceRefetching && !newSeatData[level])
                 ) {
                   try {
+                    // TODO: 當 API 更新後移除映射邏輯
+                    const apiParams = DataSourceResolver.prepareApiParams({
+                      electionType,
+                      subtypeKey,
+                      year: yearKey,
+                    })
                     const data = await fetchLegislatorSeatData({
-                      subtype: subtypeKey,
+                      subtype: apiParams.subtypeKey,
                       yearKey,
                     })
                     newSeatData[level] = data
@@ -872,19 +890,29 @@ export const prepareElectionData = async (
             }
 
             // handle map data
-            //only subtypes in 'mountainIndigenous', 'plainIndigenous' and 'party' show mapData in level 0
+            //subtypes 'normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous' and 'party' show mapData in level 0
             if (
-              ['mountainIndigenous', 'plainIndigenous', 'party'].includes(
-                subtypeKey
-              )
+              [
+                'normal',
+                'recall-july',
+                'mountainIndigenous',
+                'plainIndigenous',
+                'party',
+              ].includes(subtypeKey)
             ) {
               // fetch mapData if in refetch mode or no specific map data
               if (forceRefetching || (!forceRefetching && !newMapData[level])) {
                 try {
-                  const data = await fetchLegislatorMapData({
+                  // TODO: 當 API 更新後移除映射邏輯
+                  const apiParams = DataSourceResolver.prepareApiParams({
                     electionType,
-                    yearKey,
                     subtypeKey,
+                    year: yearKey,
+                  })
+                  const data = await fetchLegislatorMapData({
+                    electionType: apiParams.electionType,
+                    yearKey,
+                    subtypeKey: apiParams.subtypeKey,
                     folderName:
                       electionConfig.meta.map.folderNames[subtypeKey][level],
                     fileName: electionConfig.meta.map.fileNames[level],
@@ -906,11 +934,15 @@ export const prepareElectionData = async (
             }
 
             // handle infobox data
-            //only subtypes in 'mountainIndigenous', 'plainIndigenous' and 'party' show infoboxData in level 0
+            //subtypes 'normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous' and 'party' show infoboxData in level 0
             if (
-              ['mountainIndigenous', 'plainIndigenous', 'party'].includes(
-                subtypeKey
-              )
+              [
+                'normal',
+                'recall-july',
+                'mountainIndigenous',
+                'plainIndigenous',
+                'party',
+              ].includes(subtypeKey)
             ) {
               newInfoboxData.electionData = newMapData[level]?.summary || []
               newInfoboxData.isRunning = newMapData.isRunning
@@ -923,16 +955,25 @@ export const prepareElectionData = async (
              * 1. evc will not show in compare mode
              * 2. only subtype 'normal' starts to show evc in level 1
              */
-            if (!compareMode && subtypeKey === 'normal') {
+            if (
+              !compareMode &&
+              (subtypeKey === 'normal' || subtypeKey === 'recall-july')
+            ) {
               // fetch evcData if in refetch mode or no specific evc data
               if (
                 forceRefetching ||
                 (!forceRefetching && !newEvcData[level][countyCode])
               ) {
                 try {
+                  // TODO: 當 API 更新後移除映射邏輯
+                  const apiParams = DataSourceResolver.prepareApiParams({
+                    electionType,
+                    subtypeKey,
+                    year: yearKey,
+                  })
                   const data = await fetchLegislatorEvcData({
                     yearKey,
-                    subtypeKey,
+                    subtypeKey: apiParams.subtypeKey,
                     district: countyMappingData.find(
                       (countyData) => countyData.countyCode === countyCode
                     ).countyNameEng,
@@ -949,15 +990,24 @@ export const prepareElectionData = async (
              * 1. seat chart will not show in compare mode
              * 2. only subtype 'normal'
              */
-            if (!compareMode && subtypeKey === 'normal') {
+            if (
+              !compareMode &&
+              (subtypeKey === 'normal' || subtypeKey === 'recall-july')
+            ) {
               // fetch seatData if in refetch mode or no specific seat data
               if (
                 forceRefetching ||
                 (!forceRefetching && !newSeatData[level][countyCode])
               ) {
                 try {
+                  // TODO: 當 API 更新後移除映射邏輯
+                  const apiParams = DataSourceResolver.prepareApiParams({
+                    electionType,
+                    subtypeKey,
+                    year: yearKey,
+                  })
                   const data = await fetchLegislatorSeatData({
-                    subtype: subtypeKey,
+                    subtype: apiParams.subtypeKey,
                     yearKey,
                     countyCode,
                   })
@@ -977,10 +1027,16 @@ export const prepareElectionData = async (
                 (!forceRefetching && !newMapData[level][countyCode])
               ) {
                 try {
-                  const data = await fetchLegislatorMapData({
+                  // TODO: 當 API 更新後移除映射邏輯
+                  const apiParams = DataSourceResolver.prepareApiParams({
                     electionType,
-                    yearKey,
                     subtypeKey,
+                    year: yearKey,
+                  })
+                  const data = await fetchLegislatorMapData({
+                    electionType: apiParams.electionType,
+                    yearKey,
+                    subtypeKey: apiParams.subtypeKey,
                     folderName:
                       electionConfig.meta.map.folderNames[subtypeKey][level],
                     fileName: countyCode,
@@ -1003,7 +1059,7 @@ export const prepareElectionData = async (
 
             // handle infobox data
             // subtpe 'normal' starts to show infoboxData in level 1
-            if (subtypeKey === 'normal') {
+            if (subtypeKey === 'normal' || subtypeKey === 'recall-july') {
               newInfoboxData.electionData =
                 newMapData[level][countyCode]?.districts || []
               newInfoboxData.isRunning = newMapData.isRunning
@@ -1026,18 +1082,27 @@ export const prepareElectionData = async (
             // handle map data
             // subtype 'all' won't show mapData
             if (subtypeKey !== 'all') {
-              // only subtype 'normal' use areaCode as level 2
-              const levelCode = subtypeKey === 'normal' ? areaCode : townCode
+              // only subtype 'normal' and 'recall-july' use areaCode as level 2
+              const levelCode =
+                subtypeKey === 'normal' || subtypeKey === 'recall-july'
+                  ? areaCode
+                  : townCode
               // fetch mapData if in refetch mode or no specific map data
               if (
                 forceRefetching ||
                 (!forceRefetching && !newMapData[level][levelCode])
               ) {
                 try {
-                  const data = await fetchLegislatorMapData({
+                  // TODO: 當 API 更新後移除映射邏輯
+                  const apiParams = DataSourceResolver.prepareApiParams({
                     electionType,
-                    yearKey,
                     subtypeKey,
+                    year: yearKey,
+                  })
+                  const data = await fetchLegislatorMapData({
+                    electionType: apiParams.electionType,
+                    yearKey,
+                    subtypeKey: apiParams.subtypeKey,
                     folderName:
                       electionConfig.meta.map.folderNames[subtypeKey][level],
                     fileName: levelCode,
@@ -1064,7 +1129,7 @@ export const prepareElectionData = async (
               newInfoboxData.electionData =
                 newMapData[1]?.[countyCode]?.districts?.filter((district) => {
                   const levelCode =
-                    subtypeKey === 'normal'
+                    subtypeKey === 'normal' || subtypeKey === 'recall-july'
                       ? district.county + district.area
                       : district.county + district.town
                   return levelCode === levelControl.activeCode
@@ -1077,7 +1142,10 @@ export const prepareElectionData = async (
             // handle infobox data only
             // subtype 'all' won't show infoboxData
             if (subtypeKey !== 'all') {
-              const levelCode = subtypeKey === 'normal' ? areaCode : townCode
+              const levelCode =
+                subtypeKey === 'normal' || subtypeKey === 'recall-july'
+                  ? areaCode
+                  : townCode
               newInfoboxData.electionData =
                 newMapData[2][levelCode]?.districts.filter(
                   (district) =>
@@ -1257,6 +1325,7 @@ export const prepareElectionData = async (
             // fetch mapData if in refetch mode or no specific map data
             if (forceRefetching || (!forceRefetching && !newMapData[level])) {
               try {
+                // TODO: clean up
                 const data = await fetchReferendumMapData({
                   electionType,
                   yearKey,

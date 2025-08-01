@@ -84,14 +84,17 @@ export default function DistrictWithAreaSelectors({}) {
   const electionsType = useAppSelector(
     (state) => state.election.config.electionType
   )
-
   const currentElectionSubType = useAppSelector(
     (state) => state.election.control.subtype
   )
   const year = useAppSelector((state) => state.election.control.year)
 
+  const electionData = useAppSelector((state) => state.election.data.mapData)
+
   const isConstituency =
-    electionsType === 'legislator' && currentElectionSubType.key === 'normal'
+    electionsType === 'legislator' &&
+    (currentElectionSubType.key === 'normal' ||
+      currentElectionSubType.key === 'recall-july')
 
   const allTown = getAllTown(currentCountyCode)
   const allVillage = getAllVillage(currentAreaCode)
@@ -104,7 +107,7 @@ export default function DistrictWithAreaSelectors({}) {
       return []
     }
 
-    return allCounty?.find((item) => item.code === code)?.sub ?? []
+    return allCounty?.find((item) => item?.code === code)?.sub ?? []
   }
 
   function getAllVillage(code) {
@@ -116,7 +119,7 @@ export default function DistrictWithAreaSelectors({}) {
       return []
     }
 
-    return allTown?.find((item) => item.code === code)?.sub
+    return allTown?.find((item) => item?.code === code)?.sub ?? []
   }
 
   /**
@@ -150,8 +153,16 @@ export default function DistrictWithAreaSelectors({}) {
   }
 
   const optionsForFirstDistrictSelector = useMemo(() => {
+    if (currentElectionSubType.key === 'recall-july') {
+      const recallCountyCodes = electionData[0]?.districts.map(
+        (district) => district.county
+      )
+      return allCounty.filter((county) => {
+        return recallCountyCodes?.includes(county?.code)
+      })
+    }
     return allCounty
-  }, [allCounty])
+  }, [allCounty, currentElectionSubType.key, electionData])
   const optionsForSecondDistrictSelector = useMemo(() => {
     if (currentCountyCode) {
       return [
@@ -169,7 +180,7 @@ export default function DistrictWithAreaSelectors({}) {
       ]
     }
     return [...allVillage]
-  }, [allVillage, currentAreaCode])
+  }, [currentAreaCode])
 
   useEffect(() => {
     if (!hasDistrictMapping) {
@@ -241,6 +252,12 @@ export default function DistrictWithAreaSelectors({}) {
     hasDistrictMapping,
   ])
   useEffect(() => {
+    if (currentElectionSubType.key === 'recall-july') {
+      setCurrentDistrictType('county')
+      setCurrentCountyCode('63000')
+    }
+  }, [])
+  useEffect(() => {
     if (!hasDistrictMapping) {
       return
     }
@@ -296,7 +313,6 @@ export default function DistrictWithAreaSelectors({}) {
         onSelected={handleOnClick}
         placeholderValue="-"
       ></Selector>
-
       <Selector
         shouldShowNickName={true}
         options={optionsForThirdDistrictSelector}

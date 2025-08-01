@@ -1,0 +1,1986 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "桃園市 第01選區 桃園區三元里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "076",
+      "type": "normal",
+      "profRate": 71.72,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 52.55,
+          "candVictor": "*",
+          "tks": 1403,
+          "profRate": 1.45,
+          "agreeRate": 16.51,
+          "disagreeRate": 83.49
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區三民里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "045",
+      "type": "normal",
+      "profRate": 75.93,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 55.52,
+          "candVictor": "*",
+          "tks": 1669,
+          "profRate": 91.46,
+          "agreeRate": 46.07,
+          "disagreeRate": 53.93
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區大有里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "057",
+      "type": "normal",
+      "profRate": 71.62,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 54.46,
+          "candVictor": "*",
+          "tks": 2417,
+          "profRate": 36.35,
+          "agreeRate": 25.96,
+          "disagreeRate": 74.04
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區大業里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "078",
+      "type": "normal",
+      "profRate": 73.36,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 50.16,
+          "candVictor": "*",
+          "tks": 1767,
+          "profRate": 93.69,
+          "agreeRate": 61.79,
+          "disagreeRate": 38.21
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區大興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "046",
+      "type": "normal",
+      "profRate": 69.22,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 46.5,
+          "candVictor": "*",
+          "tks": 1639,
+          "profRate": 5.0,
+          "agreeRate": 19.55,
+          "disagreeRate": 80.45
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區汴洲里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 73.29,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 43.96,
+          "candVictor": " ",
+          "tks": 2217,
+          "profRate": 13.9,
+          "agreeRate": 48.99,
+          "disagreeRate": 51.01
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區忠義里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 69.87,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 54.44,
+          "candVictor": "*",
+          "tks": 1275,
+          "profRate": 75.54,
+          "agreeRate": 76.58,
+          "disagreeRate": 23.42
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區青溪里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 75.13,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 45.03,
+          "candVictor": " ",
+          "tks": 1672,
+          "profRate": 69.35,
+          "agreeRate": 97.04,
+          "disagreeRate": 2.96
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區春日里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "047",
+      "type": "normal",
+      "profRate": 70.5,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 46.1,
+          "candVictor": "*",
+          "tks": 1858,
+          "profRate": 89.35,
+          "agreeRate": 41.21,
+          "disagreeRate": 58.79
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區會稽里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 70.73,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 54.83,
+          "candVictor": "*",
+          "tks": 1391,
+          "profRate": 48.18,
+          "agreeRate": 41.16,
+          "disagreeRate": 58.84
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區萬壽里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 70.38,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 37.17,
+          "candVictor": " ",
+          "tks": 223,
+          "profRate": 69.23,
+          "agreeRate": 89.41,
+          "disagreeRate": 10.59
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區福元里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "079",
+      "type": "normal",
+      "profRate": 74.09,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 53.67,
+          "candVictor": "*",
+          "tks": 1754,
+          "profRate": 60.62,
+          "agreeRate": 63.61,
+          "disagreeRate": 36.39
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區檜樂里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "081",
+      "type": "normal",
+      "profRate": 71.37,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 54.53,
+          "candVictor": "*",
+          "tks": 2257,
+          "profRate": 64.64,
+          "agreeRate": 92.56,
+          "disagreeRate": 7.44
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區寶山里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "058",
+      "type": "normal",
+      "profRate": 72.6,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 51.04,
+          "candVictor": "*",
+          "tks": 1479,
+          "profRate": 48.18,
+          "agreeRate": 78.22,
+          "disagreeRate": 21.78
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 桃園區寶民里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "010",
+      "vill": "082",
+      "type": "normal",
+      "profRate": 68.56,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 52.44,
+          "candVictor": "*",
+          "tks": 1419,
+          "profRate": 95.83,
+          "agreeRate": 21.3,
+          "disagreeRate": 78.7
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區新興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.99,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 34.22,
+          "candVictor": " ",
+          "tks": 709,
+          "profRate": 58.59,
+          "agreeRate": 38.44,
+          "disagreeRate": 61.56
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區中福里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.35,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 35.83,
+          "candVictor": " ",
+          "tks": 1025,
+          "profRate": 73.61,
+          "agreeRate": 84.73,
+          "disagreeRate": 15.27
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區上興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 75.04,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 46.68,
+          "candVictor": "*",
+          "tks": 1180,
+          "profRate": 3.58,
+          "agreeRate": 9.61,
+          "disagreeRate": 90.39
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區中興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 73.68,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 45.69,
+          "candVictor": "*",
+          "tks": 1681,
+          "profRate": 52.78,
+          "agreeRate": 57.11,
+          "disagreeRate": 42.89
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區新莊里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 74.76,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 40.51,
+          "candVictor": " ",
+          "tks": 1474,
+          "profRate": 98.19,
+          "agreeRate": 2.34,
+          "disagreeRate": 97.66
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區上竹里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 73.98,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 43.63,
+          "candVictor": " ",
+          "tks": 1076,
+          "profRate": 61.63,
+          "agreeRate": 87.52,
+          "disagreeRate": 12.48
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區宏竹里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 73.32,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 39.28,
+          "candVictor": " ",
+          "tks": 821,
+          "profRate": 6.66,
+          "agreeRate": 83.95,
+          "disagreeRate": 16.05
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區大竹里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 76.03,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 46.31,
+          "candVictor": "*",
+          "tks": 1827,
+          "profRate": 75.37,
+          "agreeRate": 96.32,
+          "disagreeRate": 3.68
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區富竹里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 75.87,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 28.49,
+          "candVictor": " ",
+          "tks": 294,
+          "profRate": 65.35,
+          "agreeRate": 76.59,
+          "disagreeRate": 23.41
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區蘆竹里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.04,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 35.47,
+          "candVictor": " ",
+          "tks": 978,
+          "profRate": 82.37,
+          "agreeRate": 97.36,
+          "disagreeRate": 2.64
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區南興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 72.41,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 50.47,
+          "candVictor": "*",
+          "tks": 1837,
+          "profRate": 5.29,
+          "agreeRate": 34.12,
+          "disagreeRate": 65.88
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區福昌里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 72.98,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 49.7,
+          "candVictor": "*",
+          "tks": 1757,
+          "profRate": 96.1,
+          "agreeRate": 36.44,
+          "disagreeRate": 63.56
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區福興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 71.41,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 48.47,
+          "candVictor": "*",
+          "tks": 1155,
+          "profRate": 99.58,
+          "agreeRate": 18.41,
+          "disagreeRate": 81.59
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區正興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 68.63,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 44.56,
+          "candVictor": " ",
+          "tks": 1257,
+          "profRate": 33.9,
+          "agreeRate": 84.41,
+          "disagreeRate": 15.59
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區順興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 71.89,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 46.57,
+          "candVictor": "*",
+          "tks": 1310,
+          "profRate": 35.99,
+          "agreeRate": 79.84,
+          "disagreeRate": 20.16
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區蘆興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 75.14,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 45.82,
+          "candVictor": " ",
+          "tks": 531,
+          "profRate": 65.12,
+          "agreeRate": 89.55,
+          "disagreeRate": 10.45
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區南榮里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 73.41,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 46.33,
+          "candVictor": "*",
+          "tks": 1160,
+          "profRate": 83.08,
+          "agreeRate": 99.44,
+          "disagreeRate": 0.56
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區南崁里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 74.02,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 47.83,
+          "candVictor": "*",
+          "tks": 1244,
+          "profRate": 13.7,
+          "agreeRate": 82.19,
+          "disagreeRate": 17.81
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區錦興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 76.31,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 46.75,
+          "candVictor": "*",
+          "tks": 1324,
+          "profRate": 19.12,
+          "agreeRate": 58.35,
+          "disagreeRate": 41.65
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區興榮里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 75.07,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 51.43,
+          "candVictor": "*",
+          "tks": 1023,
+          "profRate": 98.78,
+          "agreeRate": 68.92,
+          "disagreeRate": 31.08
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區錦中里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 72.06,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 46.98,
+          "candVictor": "*",
+          "tks": 1033,
+          "profRate": 89.48,
+          "agreeRate": 83.52,
+          "disagreeRate": 16.48
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區長興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 66.8,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 44.31,
+          "candVictor": " ",
+          "tks": 720,
+          "profRate": 21.27,
+          "agreeRate": 40.8,
+          "disagreeRate": 59.2
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區五福里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 75.49,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 47.43,
+          "candVictor": "*",
+          "tks": 803,
+          "profRate": 35.17,
+          "agreeRate": 66.87,
+          "disagreeRate": 33.13
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區中山里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 71.42,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 49.07,
+          "candVictor": "*",
+          "tks": 1138,
+          "profRate": 23.97,
+          "agreeRate": 37.03,
+          "disagreeRate": 62.97
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區福祿里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 73.07,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 46.91,
+          "candVictor": "*",
+          "tks": 1024,
+          "profRate": 36.22,
+          "agreeRate": 37.38,
+          "disagreeRate": 62.62
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區羊稠里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 74.31,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 48.9,
+          "candVictor": "*",
+          "tks": 1581,
+          "profRate": 68.71,
+          "agreeRate": 5.64,
+          "disagreeRate": 94.36
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區吉祥里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 75.24,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 53.93,
+          "candVictor": "*",
+          "tks": 1481,
+          "profRate": 72.48,
+          "agreeRate": 9.87,
+          "disagreeRate": 90.13
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區長壽里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 72.73,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 52.26,
+          "candVictor": "*",
+          "tks": 1967,
+          "profRate": 62.42,
+          "agreeRate": 78.31,
+          "disagreeRate": 21.69
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區營盤里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 74.12,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 51.03,
+          "candVictor": "*",
+          "tks": 1740,
+          "profRate": 33.13,
+          "agreeRate": 79.64,
+          "disagreeRate": 20.36
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區營福里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 72.11,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 48.35,
+          "candVictor": "*",
+          "tks": 1052,
+          "profRate": 17.67,
+          "agreeRate": 35.8,
+          "disagreeRate": 64.2
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區瓦窯里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 71.03,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 53.22,
+          "candVictor": "*",
+          "tks": 1215,
+          "profRate": 42.33,
+          "agreeRate": 63.88,
+          "disagreeRate": 36.12
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區內厝里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 62.19,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 38.03,
+          "candVictor": " ",
+          "tks": 572,
+          "profRate": 95.81,
+          "agreeRate": 57.1,
+          "disagreeRate": 42.9
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區山鼻里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 72.87,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 44.51,
+          "candVictor": " ",
+          "tks": 633,
+          "profRate": 27.92,
+          "agreeRate": 85.05,
+          "disagreeRate": 14.95
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區山腳里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 73.63,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 35.54,
+          "candVictor": " ",
+          "tks": 869,
+          "profRate": 69.03,
+          "agreeRate": 55.31,
+          "disagreeRate": 44.69
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區外社里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 74.1,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 31.76,
+          "candVictor": " ",
+          "tks": 336,
+          "profRate": 19.45,
+          "agreeRate": 20.05,
+          "disagreeRate": 79.95
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區坑子里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 72.07,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 28.79,
+          "candVictor": " ",
+          "tks": 315,
+          "profRate": 5.41,
+          "agreeRate": 11.08,
+          "disagreeRate": 88.92
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區坑口里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 73.86,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 41.78,
+          "candVictor": " ",
+          "tks": 635,
+          "profRate": 84.76,
+          "agreeRate": 7.8,
+          "disagreeRate": 92.2
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區海湖里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 68.07,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 45.67,
+          "candVictor": "*",
+          "tks": 786,
+          "profRate": 10.63,
+          "agreeRate": 14.27,
+          "disagreeRate": 85.73
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 蘆竹區濱海里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "050",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 65.33,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 42.18,
+          "candVictor": " ",
+          "tks": 634,
+          "profRate": 36.11,
+          "agreeRate": 72.11,
+          "disagreeRate": 27.89
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區大同里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 71.94,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 48.9,
+          "candVictor": "*",
+          "tks": 1934,
+          "profRate": 50.86,
+          "agreeRate": 85.98,
+          "disagreeRate": 14.02
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區大坑里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 71.91,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 40.78,
+          "candVictor": " ",
+          "tks": 531,
+          "profRate": 91.04,
+          "agreeRate": 33.5,
+          "disagreeRate": 66.5
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區大崗里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 70.01,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 48.38,
+          "candVictor": "*",
+          "tks": 1328,
+          "profRate": 25.68,
+          "agreeRate": 65.61,
+          "disagreeRate": 34.39
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區大湖里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 70.35,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 50.07,
+          "candVictor": "*",
+          "tks": 1903,
+          "profRate": 90.53,
+          "agreeRate": 97.64,
+          "disagreeRate": 2.36
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區大華里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 72.73,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 48.95,
+          "candVictor": "*",
+          "tks": 2959,
+          "profRate": 6.3,
+          "agreeRate": 38.88,
+          "disagreeRate": 61.12
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區山頂里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 68.34,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 50.6,
+          "candVictor": "*",
+          "tks": 1719,
+          "profRate": 76.27,
+          "agreeRate": 58.38,
+          "disagreeRate": 41.62
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區山福里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 71.34,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 47.66,
+          "candVictor": "*",
+          "tks": 1009,
+          "profRate": 57.38,
+          "agreeRate": 13.29,
+          "disagreeRate": 86.71
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區山德里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 71.87,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 47.87,
+          "candVictor": "*",
+          "tks": 1518,
+          "profRate": 20.93,
+          "agreeRate": 41.06,
+          "disagreeRate": 58.94
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區中興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 70.49,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 48.66,
+          "candVictor": "*",
+          "tks": 1489,
+          "profRate": 40.11,
+          "agreeRate": 36.7,
+          "disagreeRate": 63.3
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區公西里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 74.62,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 46.59,
+          "candVictor": " ",
+          "tks": 424,
+          "profRate": 48.93,
+          "agreeRate": 48.99,
+          "disagreeRate": 51.01
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區文化里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 72.19,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 49.48,
+          "candVictor": "*",
+          "tks": 2621,
+          "profRate": 55.2,
+          "agreeRate": 52.41,
+          "disagreeRate": 47.59
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區文青里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 75.4,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 53.17,
+          "candVictor": "*",
+          "tks": 3501,
+          "profRate": 91.91,
+          "agreeRate": 76.33,
+          "disagreeRate": 23.67
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區兔坑里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 69.14,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 47.18,
+          "candVictor": "*",
+          "tks": 1221,
+          "profRate": 38.42,
+          "agreeRate": 39.88,
+          "disagreeRate": 60.12
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區幸福里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 66.15,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 49.02,
+          "candVictor": "*",
+          "tks": 1406,
+          "profRate": 51.39,
+          "agreeRate": 84.98,
+          "disagreeRate": 15.02
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區長庚里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 75.53,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 47.65,
+          "candVictor": "*",
+          "tks": 1746,
+          "profRate": 87.04,
+          "agreeRate": 98.84,
+          "disagreeRate": 1.16
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區南上里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 74.11,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 43.95,
+          "candVictor": " ",
+          "tks": 581,
+          "profRate": 51.35,
+          "agreeRate": 90.93,
+          "disagreeRate": 9.07
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區南美里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 73.9,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 50.43,
+          "candVictor": "*",
+          "tks": 820,
+          "profRate": 94.59,
+          "agreeRate": 42.46,
+          "disagreeRate": 57.54
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區迴龍里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 70.97,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 45.84,
+          "candVictor": "*",
+          "tks": 1849,
+          "profRate": 16.3,
+          "agreeRate": 90.53,
+          "disagreeRate": 9.47
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區陸光里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 75.28,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 83.4,
+          "candVictor": "*",
+          "tks": 2090,
+          "profRate": 76.4,
+          "agreeRate": 80.29,
+          "disagreeRate": 19.71
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區新路里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 74.37,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 49.83,
+          "candVictor": "*",
+          "tks": 1768,
+          "profRate": 13.37,
+          "agreeRate": 17.93,
+          "disagreeRate": 82.07
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區新興里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 51.76,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 61.53,
+          "candVictor": "*",
+          "tks": 966,
+          "profRate": 98.27,
+          "agreeRate": 19.86,
+          "disagreeRate": 80.14
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區新嶺里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 69.16,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 44.76,
+          "candVictor": " ",
+          "tks": 1064,
+          "profRate": 40.64,
+          "agreeRate": 94.51,
+          "disagreeRate": 5.49
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區楓福里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 76.51,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 53.94,
+          "candVictor": "*",
+          "tks": 1321,
+          "profRate": 94.47,
+          "agreeRate": 61.3,
+          "disagreeRate": 38.7
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區楓樹里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.63,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 47.27,
+          "candVictor": "*",
+          "tks": 1308,
+          "profRate": 83.63,
+          "agreeRate": 49.91,
+          "disagreeRate": 50.09
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區福源里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 71.58,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 53.52,
+          "candVictor": "*",
+          "tks": 662,
+          "profRate": 97.77,
+          "agreeRate": 54.1,
+          "disagreeRate": 45.9
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區精忠里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 73.45,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 65.49,
+          "candVictor": "*",
+          "tks": 2332,
+          "profRate": 85.07,
+          "agreeRate": 80.17,
+          "disagreeRate": 19.83
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區樂善里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 73.12,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 51.36,
+          "candVictor": "*",
+          "tks": 4210,
+          "profRate": 87.24,
+          "agreeRate": 5.44,
+          "disagreeRate": 94.56
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區龍華里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 73.22,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 43.81,
+          "candVictor": " ",
+          "tks": 1026,
+          "profRate": 16.1,
+          "agreeRate": 78.05,
+          "disagreeRate": 21.95
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區龍壽里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 69.58,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 34.43,
+          "candVictor": " ",
+          "tks": 377,
+          "profRate": 97.44,
+          "agreeRate": 75.52,
+          "disagreeRate": 24.48
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區龜山里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 71.75,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 49.97,
+          "candVictor": "*",
+          "tks": 2194,
+          "profRate": 5.65,
+          "agreeRate": 21.41,
+          "disagreeRate": 78.59
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區嶺頂里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 68.62,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 43.55,
+          "candVictor": " ",
+          "tks": 1098,
+          "profRate": 97.82,
+          "agreeRate": 36.86,
+          "disagreeRate": 63.14
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第01選區 龜山區舊路里",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": "070",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 74.41,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 50.26,
+          "candVictor": "*",
+          "tks": 959,
+          "profRate": 33.56,
+          "agreeRate": 45.53,
+          "disagreeRate": 54.47
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

@@ -1,0 +1,30 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "臺東縣 第01選區",
+      "area_nickname": "臺東市、成功鎮、關山鎮、卑南鄉、鹿野鄉、池上鄉、東河鄉、長濱鄉、太麻里鄉、大武鄉、綠島鄉、海端鄉、延平鄉、金峰鄉、達仁鄉、蘭嶼鄉",
+      "county": "10014",
+      "area": "01",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 65.22,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "黃建賓",
+          "party": "中國國民黨",
+          "tksRate": 34.79,
+          "candVictor": "*",
+          "tks": 25778,
+          "profRate": 61.96,
+          "agreeRate": 5.01,
+          "disagreeRate": 94.99
+        }
+      ]
+    }
+  ]
+}

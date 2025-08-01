@@ -1,0 +1,1434 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "臺北市 第03選區 松山區莊敬里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.67,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 57.72,
+          "candVictor": "*",
+          "tks": 1746,
+          "profRate": 61.71,
+          "agreeRate": 71.15,
+          "disagreeRate": 28.85
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區東榮里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.91,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 51.44,
+          "candVictor": "*",
+          "tks": 2394,
+          "profRate": 97.41,
+          "agreeRate": 14.42,
+          "disagreeRate": 85.58
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區三民里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 74.37,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 56.69,
+          "candVictor": "*",
+          "tks": 2257,
+          "profRate": 91.19,
+          "agreeRate": 96.59,
+          "disagreeRate": 3.41
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區新益里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 77.83,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 54.09,
+          "candVictor": "*",
+          "tks": 1542,
+          "profRate": 5.51,
+          "agreeRate": 24.15,
+          "disagreeRate": 75.85
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區富錦里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.19,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 56.08,
+          "candVictor": "*",
+          "tks": 1703,
+          "profRate": 87.69,
+          "agreeRate": 44.96,
+          "disagreeRate": 55.04
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區新東里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 77.04,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 55.32,
+          "candVictor": "*",
+          "tks": 1654,
+          "profRate": 16.26,
+          "agreeRate": 22.78,
+          "disagreeRate": 77.22
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區富泰里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 74.89,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 59.58,
+          "candVictor": "*",
+          "tks": 1604,
+          "profRate": 76.92,
+          "agreeRate": 10.81,
+          "disagreeRate": 89.19
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區介壽里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 75.6,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 50.81,
+          "candVictor": "*",
+          "tks": 1290,
+          "profRate": 51.7,
+          "agreeRate": 5.82,
+          "disagreeRate": 94.18
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區精忠里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.33,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 55.56,
+          "candVictor": "*",
+          "tks": 1388,
+          "profRate": 0.5,
+          "agreeRate": 41.81,
+          "disagreeRate": 58.19
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區東光里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 75.03,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 56.54,
+          "candVictor": "*",
+          "tks": 2370,
+          "profRate": 86.74,
+          "agreeRate": 82.07,
+          "disagreeRate": 17.93
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區龍田里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 76.48,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 65.03,
+          "candVictor": "*",
+          "tks": 4017,
+          "profRate": 47.64,
+          "agreeRate": 65.7,
+          "disagreeRate": 34.3
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區東昌里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 76.64,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 49.66,
+          "candVictor": "*",
+          "tks": 737,
+          "profRate": 67.57,
+          "agreeRate": 94.23,
+          "disagreeRate": 5.77
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區東勢里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 75.75,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 51.56,
+          "candVictor": "*",
+          "tks": 1288,
+          "profRate": 30.83,
+          "agreeRate": 26.37,
+          "disagreeRate": 73.63
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區中華里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 75.7,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 57.39,
+          "candVictor": "*",
+          "tks": 2120,
+          "profRate": 25.0,
+          "agreeRate": 46.82,
+          "disagreeRate": 53.18
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區民有里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 75.66,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 50.0,
+          "candVictor": "*",
+          "tks": 2657,
+          "profRate": 48.11,
+          "agreeRate": 20.54,
+          "disagreeRate": 79.46
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區民福里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 75.32,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 59.22,
+          "candVictor": "*",
+          "tks": 2249,
+          "profRate": 17.55,
+          "agreeRate": 44.36,
+          "disagreeRate": 55.64
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區松基里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 73.85,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 49.46,
+          "candVictor": "*",
+          "tks": 1045,
+          "profRate": 71.59,
+          "agreeRate": 16.89,
+          "disagreeRate": 83.11
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區安平里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 73.54,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 50.78,
+          "candVictor": "*",
+          "tks": 2480,
+          "profRate": 8.17,
+          "agreeRate": 89.73,
+          "disagreeRate": 10.27
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區鵬程里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 77.68,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 60.18,
+          "candVictor": "*",
+          "tks": 1762,
+          "profRate": 95.77,
+          "agreeRate": 13.63,
+          "disagreeRate": 86.37
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 松山區自強里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "010",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 75.24,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 73.12,
+          "candVictor": "*",
+          "tks": 4010,
+          "profRate": 65.37,
+          "agreeRate": 48.41,
+          "disagreeRate": 51.59
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區正守里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.1,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 48.81,
+          "candVictor": "*",
+          "tks": 966,
+          "profRate": 41.54,
+          "agreeRate": 84.77,
+          "disagreeRate": 15.23
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區正義里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 69.24,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 52.83,
+          "candVictor": "*",
+          "tks": 1566,
+          "profRate": 54.65,
+          "agreeRate": 40.0,
+          "disagreeRate": 60.0
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區正得里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 70.27,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 52.65,
+          "candVictor": "*",
+          "tks": 1132,
+          "profRate": 84.55,
+          "agreeRate": 46.12,
+          "disagreeRate": 53.88
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區民安里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 73.57,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 47.27,
+          "candVictor": " ",
+          "tks": 1247,
+          "profRate": 81.31,
+          "agreeRate": 35.22,
+          "disagreeRate": 64.78
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區康樂里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 70.97,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 53.69,
+          "candVictor": "*",
+          "tks": 837,
+          "profRate": 76.82,
+          "agreeRate": 13.92,
+          "disagreeRate": 86.08
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區中山里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 70.2,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 49.76,
+          "candVictor": "*",
+          "tks": 2001,
+          "profRate": 2.1,
+          "agreeRate": 22.03,
+          "disagreeRate": 77.97
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區聚盛里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 67.12,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 54.75,
+          "candVictor": "*",
+          "tks": 1244,
+          "profRate": 22.89,
+          "agreeRate": 93.66,
+          "disagreeRate": 6.34
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區集英里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 72.8,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 43.33,
+          "candVictor": " ",
+          "tks": 1736,
+          "profRate": 84.7,
+          "agreeRate": 20.94,
+          "disagreeRate": 79.06
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區聚葉里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 71.15,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 48.73,
+          "candVictor": "*",
+          "tks": 1116,
+          "profRate": 64.4,
+          "agreeRate": 60.59,
+          "disagreeRate": 39.41
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區恆安里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 71.91,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 50.92,
+          "candVictor": "*",
+          "tks": 1523,
+          "profRate": 17.34,
+          "agreeRate": 52.9,
+          "disagreeRate": 47.1
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區晴光里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 70.17,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 51.61,
+          "candVictor": "*",
+          "tks": 1637,
+          "profRate": 80.4,
+          "agreeRate": 52.32,
+          "disagreeRate": 47.68
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區圓山里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.16,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 46.76,
+          "candVictor": " ",
+          "tks": 1117,
+          "profRate": 55.05,
+          "agreeRate": 51.74,
+          "disagreeRate": 48.26
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區新庄里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 74.21,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 46.0,
+          "candVictor": " ",
+          "tks": 1338,
+          "profRate": 40.01,
+          "agreeRate": 70.92,
+          "disagreeRate": 29.08
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區劍潭里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 74.24,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 76.1,
+          "candVictor": "*",
+          "tks": 1643,
+          "profRate": 12.24,
+          "agreeRate": 89.99,
+          "disagreeRate": 10.01
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區大直里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 75.84,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 54.65,
+          "candVictor": "*",
+          "tks": 2817,
+          "profRate": 40.81,
+          "agreeRate": 71.35,
+          "disagreeRate": 28.65
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區成功里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 73.99,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 51.89,
+          "candVictor": "*",
+          "tks": 1906,
+          "profRate": 11.47,
+          "agreeRate": 80.93,
+          "disagreeRate": 19.07
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區永安里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 75.4,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 51.76,
+          "candVictor": "*",
+          "tks": 2833,
+          "profRate": 30.8,
+          "agreeRate": 36.38,
+          "disagreeRate": 63.62
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區金泰里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "041",
+      "type": "normal",
+      "profRate": 74.4,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 54.47,
+          "candVictor": "*",
+          "tks": 2479,
+          "profRate": 60.45,
+          "agreeRate": 45.06,
+          "disagreeRate": 54.94
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區北安里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "042",
+      "type": "normal",
+      "profRate": 75.47,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 59.48,
+          "candVictor": "*",
+          "tks": 897,
+          "profRate": 44.97,
+          "agreeRate": 57.82,
+          "disagreeRate": 42.18
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區新喜里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 73.6,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 45.02,
+          "candVictor": " ",
+          "tks": 1338,
+          "profRate": 77.86,
+          "agreeRate": 13.31,
+          "disagreeRate": 86.69
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區新福里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 74.87,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 42.56,
+          "candVictor": " ",
+          "tks": 1272,
+          "profRate": 19.35,
+          "agreeRate": 60.77,
+          "disagreeRate": 39.23
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區松江里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 75.91,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 47.68,
+          "candVictor": " ",
+          "tks": 1805,
+          "profRate": 9.1,
+          "agreeRate": 75.72,
+          "disagreeRate": 24.28
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區新生里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 75.77,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 47.02,
+          "candVictor": " ",
+          "tks": 1325,
+          "profRate": 57.69,
+          "agreeRate": 32.38,
+          "disagreeRate": 67.62
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區中庄里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 72.85,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 44.9,
+          "candVictor": " ",
+          "tks": 1344,
+          "profRate": 18.51,
+          "agreeRate": 89.77,
+          "disagreeRate": 10.23
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區大佳里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 73.37,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 36.33,
+          "candVictor": " ",
+          "tks": 186,
+          "profRate": 55.0,
+          "agreeRate": 1.23,
+          "disagreeRate": 98.77
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區行政里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 60.12,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 49.82,
+          "candVictor": "*",
+          "tks": 1828,
+          "profRate": 1.09,
+          "agreeRate": 7.63,
+          "disagreeRate": 92.37
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區行仁里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 75.28,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 46.42,
+          "candVictor": " ",
+          "tks": 2191,
+          "profRate": 44.43,
+          "agreeRate": 89.61,
+          "disagreeRate": 10.39
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區行孝里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 73.55,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 46.32,
+          "candVictor": " ",
+          "tks": 1215,
+          "profRate": 78.84,
+          "agreeRate": 56.36,
+          "disagreeRate": 43.64
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區下埤里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 75.51,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 47.86,
+          "candVictor": " ",
+          "tks": 2199,
+          "profRate": 29.66,
+          "agreeRate": 53.84,
+          "disagreeRate": 46.16
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區江寧里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 75.41,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 50.45,
+          "candVictor": "*",
+          "tks": 2074,
+          "profRate": 55.01,
+          "agreeRate": 71.97,
+          "disagreeRate": 28.03
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區江山里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 75.38,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 46.84,
+          "candVictor": " ",
+          "tks": 2114,
+          "profRate": 35.72,
+          "agreeRate": 64.36,
+          "disagreeRate": 35.64
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區中吉里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 74.61,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 43.95,
+          "candVictor": " ",
+          "tks": 1452,
+          "profRate": 97.82,
+          "agreeRate": 91.7,
+          "disagreeRate": 8.3
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區中原里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 74.47,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 45.01,
+          "candVictor": " ",
+          "tks": 1348,
+          "profRate": 33.92,
+          "agreeRate": 51.81,
+          "disagreeRate": 48.19
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區興亞里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 73.25,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 48.21,
+          "candVictor": " ",
+          "tks": 1575,
+          "profRate": 96.43,
+          "agreeRate": 48.98,
+          "disagreeRate": 51.02
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區中央里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 75.43,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 48.72,
+          "candVictor": "*",
+          "tks": 1069,
+          "profRate": 6.1,
+          "agreeRate": 85.86,
+          "disagreeRate": 14.14
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區朱馥里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 72.25,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 51.72,
+          "candVictor": "*",
+          "tks": 1710,
+          "profRate": 29.25,
+          "agreeRate": 99.49,
+          "disagreeRate": 0.51
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區龍洲里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 76.27,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 67.68,
+          "candVictor": "*",
+          "tks": 2092,
+          "profRate": 89.78,
+          "agreeRate": 73.95,
+          "disagreeRate": 26.05
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區朱園里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 73.49,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 48.22,
+          "candVictor": " ",
+          "tks": 1299,
+          "profRate": 85.68,
+          "agreeRate": 63.98,
+          "disagreeRate": 36.02
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區埤頭里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 72.03,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 52.01,
+          "candVictor": "*",
+          "tks": 1007,
+          "profRate": 54.83,
+          "agreeRate": 5.56,
+          "disagreeRate": 94.44
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區朱崙里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 75.89,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 50.43,
+          "candVictor": "*",
+          "tks": 935,
+          "profRate": 43.4,
+          "agreeRate": 15.92,
+          "disagreeRate": 84.08
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區力行里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 71.98,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 48.79,
+          "candVictor": " ",
+          "tks": 1775,
+          "profRate": 8.29,
+          "agreeRate": 51.5,
+          "disagreeRate": 48.5
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第03選區 中山區復華里",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": "040",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 73.38,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 56.23,
+          "candVictor": "*",
+          "tks": 1549,
+          "profRate": 63.71,
+          "agreeRate": 95.17,
+          "disagreeRate": 4.83
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

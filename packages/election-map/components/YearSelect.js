@@ -162,7 +162,14 @@ export const YearSelect = ({ className }) => {
   const electionName = useAppSelector(
     (state) => state.election.config.electionName
   )
+  const electionType = useAppSelector(
+    (state) => state.election.config.electionType
+  )
   const subtype = useAppSelector((state) => state.election.control.subtype)
+  const filteredYears =
+    electionType === 'legislator'
+      ? years.filter((y) => y?.subType?.includes(subtype.key))
+      : years
   const dispatch = useAppDispatch()
   const [compare, setCompare] = useState(false)
   const [compareCandidates, setCompareCandidates] = useState([
@@ -206,37 +213,41 @@ export const YearSelect = ({ className }) => {
       <SliderWrapper>
         {compare ? (
           <SpotWrapper>
-            {years.map((y) => (
-              <Spot
-                key={y.key}
-                content={y.key}
-                compare={compare}
-                selected={
-                  (compareCandidates[0] && y === compareCandidates[0]) ||
-                  (compareCandidates[1] && y === compareCandidates[1])
-                }
-                cand1={compareCandidates[0] && y === compareCandidates[0]}
-                cand2={compareCandidates[1] && y === compareCandidates[1]}
-                onClick={() => {
-                  if (y !== compareCandidates[0]) {
-                    setCompareCandidates(([cand1]) => [cand1, y])
+            {filteredYears.map((y) => {
+              return (
+                <Spot
+                  key={y.key}
+                  content={y.key}
+                  compare={compare}
+                  selected={
+                    (compareCandidates[0] && y === compareCandidates[0]) ||
+                    (compareCandidates[1] && y === compareCandidates[1])
                   }
-                }}
-              />
-            ))}
+                  cand1={compareCandidates[0] && y === compareCandidates[0]}
+                  cand2={compareCandidates[1] && y === compareCandidates[1]}
+                  onClick={() => {
+                    if (y !== compareCandidates[0]) {
+                      setCompareCandidates(([cand1]) => [cand1, y])
+                    }
+                  }}
+                />
+              )
+            })}
           </SpotWrapper>
         ) : (
           <SpotWrapper>
-            {years.map((y) => (
-              <Spot
-                key={y.key}
-                content={y.key}
-                selected={y === year}
-                onClick={() => {
-                  dispatch(electionActions.changeYear(y))
-                }}
-              />
-            ))}
+            {filteredYears.map((y) => {
+              return (
+                <Spot
+                  key={y.key}
+                  content={y.key}
+                  selected={y === year}
+                  onClick={() => {
+                    dispatch(electionActions.changeYear(y))
+                  }}
+                />
+              )
+            })}
           </SpotWrapper>
         )}
         <Slider

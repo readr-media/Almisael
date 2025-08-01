@@ -1,0 +1,2492 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "桃園市 第02選區 楊梅區仁美里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 74.78,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 56.96,
+          "candVictor": "*",
+          "tks": 1539,
+          "profRate": 66.26,
+          "agreeRate": 39.6,
+          "disagreeRate": 60.4
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區埔心里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 79.03,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 49.55,
+          "candVictor": "*",
+          "tks": 498,
+          "profRate": 29.95,
+          "agreeRate": 0.43,
+          "disagreeRate": 99.57
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區光華里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 71.84,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 61.3,
+          "candVictor": "*",
+          "tks": 1267,
+          "profRate": 90.32,
+          "agreeRate": 54.21,
+          "disagreeRate": 45.79
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區金龍里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 75.09,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 64.93,
+          "candVictor": "*",
+          "tks": 774,
+          "profRate": 13.68,
+          "agreeRate": 67.48,
+          "disagreeRate": 32.52
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區四維里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 75.31,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 59.54,
+          "candVictor": "*",
+          "tks": 2006,
+          "profRate": 87.56,
+          "agreeRate": 92.55,
+          "disagreeRate": 7.45
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區永平里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 70.64,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 59.1,
+          "candVictor": "*",
+          "tks": 786,
+          "profRate": 77.19,
+          "agreeRate": 65.58,
+          "disagreeRate": 34.42
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區瑞塘里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 72.68,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 55.75,
+          "candVictor": "*",
+          "tks": 2207,
+          "profRate": 75.87,
+          "agreeRate": 42.82,
+          "disagreeRate": 57.18
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區瑞坪里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 70.44,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 61.15,
+          "candVictor": "*",
+          "tks": 2517,
+          "profRate": 87.1,
+          "agreeRate": 93.04,
+          "disagreeRate": 6.96
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區梅溪里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 71.41,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 57.54,
+          "candVictor": "*",
+          "tks": 1592,
+          "profRate": 88.01,
+          "agreeRate": 45.39,
+          "disagreeRate": 54.61
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區瑞溪里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 71.26,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 57.13,
+          "candVictor": "*",
+          "tks": 1378,
+          "profRate": 4.77,
+          "agreeRate": 33.09,
+          "disagreeRate": 66.91
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區金溪里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 73.28,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 60.56,
+          "candVictor": "*",
+          "tks": 1686,
+          "profRate": 74.34,
+          "agreeRate": 46.74,
+          "disagreeRate": 53.26
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區三民里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 71.46,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 60.98,
+          "candVictor": "*",
+          "tks": 1377,
+          "profRate": 91.89,
+          "agreeRate": 80.89,
+          "disagreeRate": 19.11
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區楊明里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 73.36,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 58.24,
+          "candVictor": "*",
+          "tks": 3236,
+          "profRate": 79.07,
+          "agreeRate": 71.81,
+          "disagreeRate": 28.19
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區裕成里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 74.07,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 63.09,
+          "candVictor": "*",
+          "tks": 1417,
+          "profRate": 44.68,
+          "agreeRate": 66.53,
+          "disagreeRate": 33.47
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區裕新里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 65.2,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 61.69,
+          "candVictor": "*",
+          "tks": 929,
+          "profRate": 85.74,
+          "agreeRate": 40.62,
+          "disagreeRate": 59.38
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區大同里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.34,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 62.52,
+          "candVictor": "*",
+          "tks": 1563,
+          "profRate": 34.74,
+          "agreeRate": 18.71,
+          "disagreeRate": 81.29
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區中山里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 76.37,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 59.6,
+          "candVictor": "*",
+          "tks": 1316,
+          "profRate": 96.07,
+          "agreeRate": 80.07,
+          "disagreeRate": 19.93
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區楊梅里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 75.41,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 60.68,
+          "candVictor": "*",
+          "tks": 1684,
+          "profRate": 19.71,
+          "agreeRate": 16.43,
+          "disagreeRate": 83.57
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區楊江里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 74.37,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 61.73,
+          "candVictor": "*",
+          "tks": 463,
+          "profRate": 58.31,
+          "agreeRate": 88.79,
+          "disagreeRate": 11.21
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區梅新里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 72.13,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 57.73,
+          "candVictor": "*",
+          "tks": 773,
+          "profRate": 87.05,
+          "agreeRate": 16.19,
+          "disagreeRate": 83.81
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區紅梅里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 74.16,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 59.59,
+          "candVictor": "*",
+          "tks": 1069,
+          "profRate": 71.97,
+          "agreeRate": 5.55,
+          "disagreeRate": 94.45
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區永寧里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 65.23,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 56.48,
+          "candVictor": "*",
+          "tks": 2764,
+          "profRate": 28.13,
+          "agreeRate": 96.61,
+          "disagreeRate": 3.39
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區大平里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.09,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 61.19,
+          "candVictor": "*",
+          "tks": 1285,
+          "profRate": 45.36,
+          "agreeRate": 38.56,
+          "disagreeRate": 61.44
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區秀才里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 75.53,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 53.23,
+          "candVictor": "*",
+          "tks": 1269,
+          "profRate": 69.57,
+          "agreeRate": 28.56,
+          "disagreeRate": 71.44
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區東流里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 69.31,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 49.48,
+          "candVictor": "*",
+          "tks": 953,
+          "profRate": 42.81,
+          "agreeRate": 53.33,
+          "disagreeRate": 46.67
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區豐野里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 73.37,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 54.34,
+          "candVictor": "*",
+          "tks": 1464,
+          "profRate": 75.68,
+          "agreeRate": 42.73,
+          "disagreeRate": 57.27
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區富岡里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 76.09,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 58.5,
+          "candVictor": "*",
+          "tks": 740,
+          "profRate": 36.99,
+          "agreeRate": 53.8,
+          "disagreeRate": 46.2
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區富豐里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 72.28,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 57.02,
+          "candVictor": "*",
+          "tks": 1215,
+          "profRate": 93.89,
+          "agreeRate": 1.44,
+          "disagreeRate": 98.56
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區員本里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 73.02,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 52.82,
+          "candVictor": "*",
+          "tks": 1066,
+          "profRate": 21.07,
+          "agreeRate": 39.54,
+          "disagreeRate": 60.46
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區三湖里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 73.46,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 54.68,
+          "candVictor": "*",
+          "tks": 1121,
+          "profRate": 10.99,
+          "agreeRate": 34.26,
+          "disagreeRate": 65.74
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區頭湖里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "041",
+      "type": "normal",
+      "profRate": 68.83,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 59.28,
+          "candVictor": "*",
+          "tks": 1076,
+          "profRate": 49.64,
+          "agreeRate": 53.83,
+          "disagreeRate": 46.17
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區上湖里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 70.2,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 52.51,
+          "candVictor": "*",
+          "tks": 2092,
+          "profRate": 52.32,
+          "agreeRate": 61.62,
+          "disagreeRate": 38.38
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區上田里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 73.04,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 50.67,
+          "candVictor": "*",
+          "tks": 1019,
+          "profRate": 84.08,
+          "agreeRate": 94.95,
+          "disagreeRate": 5.05
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區高山里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 68.88,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 60.79,
+          "candVictor": "*",
+          "tks": 1476,
+          "profRate": 94.9,
+          "agreeRate": 64.15,
+          "disagreeRate": 35.85
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區高上里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 73.49,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 52.72,
+          "candVictor": "*",
+          "tks": 988,
+          "profRate": 13.24,
+          "agreeRate": 79.6,
+          "disagreeRate": 20.4
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區青山里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 64.6,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 55.88,
+          "candVictor": "*",
+          "tks": 1534,
+          "profRate": 36.65,
+          "agreeRate": 48.64,
+          "disagreeRate": 51.36
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區高榮里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 75.13,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 48.22,
+          "candVictor": "*",
+          "tks": 1167,
+          "profRate": 91.0,
+          "agreeRate": 6.87,
+          "disagreeRate": 93.13
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區雙榮里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 77.99,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 51.19,
+          "candVictor": "*",
+          "tks": 1221,
+          "profRate": 55.49,
+          "agreeRate": 15.02,
+          "disagreeRate": 84.98
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區新榮里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 74.54,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 48.19,
+          "candVictor": "*",
+          "tks": 1143,
+          "profRate": 10.96,
+          "agreeRate": 0.7,
+          "disagreeRate": 99.3
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區水美里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 73.21,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 58.48,
+          "candVictor": "*",
+          "tks": 1673,
+          "profRate": 1.93,
+          "agreeRate": 1.8,
+          "disagreeRate": 98.2
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 楊梅區瑞原里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "040",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 70.48,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 58.88,
+          "candVictor": "*",
+          "tks": 1446,
+          "profRate": 20.37,
+          "agreeRate": 18.88,
+          "disagreeRate": 81.12
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區大園里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 69.71,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 42.33,
+          "candVictor": " ",
+          "tks": 1743,
+          "profRate": 11.39,
+          "agreeRate": 16.73,
+          "disagreeRate": 83.27
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區田心里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 71.44,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 40.95,
+          "candVictor": " ",
+          "tks": 1998,
+          "profRate": 70.45,
+          "agreeRate": 94.78,
+          "disagreeRate": 5.22
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區溪海里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 66.52,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 38.74,
+          "candVictor": " ",
+          "tks": 1108,
+          "profRate": 30.42,
+          "agreeRate": 23.02,
+          "disagreeRate": 76.98
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區和平里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 70.38,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 35.02,
+          "candVictor": " ",
+          "tks": 381,
+          "profRate": 38.93,
+          "agreeRate": 24.77,
+          "disagreeRate": 75.23
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區橫峰里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.6,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 41.9,
+          "candVictor": " ",
+          "tks": 1206,
+          "profRate": 29.23,
+          "agreeRate": 67.79,
+          "disagreeRate": 32.21
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區青峰里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 74.45,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 47.01,
+          "candVictor": " ",
+          "tks": 1330,
+          "profRate": 52.38,
+          "agreeRate": 66.79,
+          "disagreeRate": 33.21
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區青山里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 76.45,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 43.21,
+          "candVictor": " ",
+          "tks": 1116,
+          "profRate": 15.67,
+          "agreeRate": 14.98,
+          "disagreeRate": 85.02
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區五權里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 73.28,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 34.88,
+          "candVictor": " ",
+          "tks": 1244,
+          "profRate": 10.09,
+          "agreeRate": 16.97,
+          "disagreeRate": 83.03
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區埔心里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.29,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 39.82,
+          "candVictor": " ",
+          "tks": 1228,
+          "profRate": 8.65,
+          "agreeRate": 48.18,
+          "disagreeRate": 51.82
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區大海里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 75.76,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 48.05,
+          "candVictor": "*",
+          "tks": 247,
+          "profRate": 5.53,
+          "agreeRate": 4.39,
+          "disagreeRate": 95.61
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區三石里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 75.69,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 39.6,
+          "candVictor": " ",
+          "tks": 786,
+          "profRate": 1.81,
+          "agreeRate": 78.58,
+          "disagreeRate": 21.42
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區菓林里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 69.96,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 42.01,
+          "candVictor": " ",
+          "tks": 1810,
+          "profRate": 52.37,
+          "agreeRate": 6.09,
+          "disagreeRate": 93.91
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區竹圍里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 75.5,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 44.73,
+          "candVictor": " ",
+          "tks": 310,
+          "profRate": 45.27,
+          "agreeRate": 46.63,
+          "disagreeRate": 53.37
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區海口里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 69.83,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 43.01,
+          "candVictor": " ",
+          "tks": 286,
+          "profRate": 87.01,
+          "agreeRate": 7.3,
+          "disagreeRate": 92.7
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區沙崙里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 70.16,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 45.8,
+          "candVictor": " ",
+          "tks": 436,
+          "profRate": 48.44,
+          "agreeRate": 23.94,
+          "disagreeRate": 76.06
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區後厝里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 76.56,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 42.66,
+          "candVictor": " ",
+          "tks": 247,
+          "profRate": 67.95,
+          "agreeRate": 44.42,
+          "disagreeRate": 55.58
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區圳頭里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 71.23,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 40.25,
+          "candVictor": " ",
+          "tks": 541,
+          "profRate": 4.89,
+          "agreeRate": 61.89,
+          "disagreeRate": 38.11
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區內海里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 73.82,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 40.82,
+          "candVictor": " ",
+          "tks": 638,
+          "profRate": 76.68,
+          "agreeRate": 68.6,
+          "disagreeRate": 31.4
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區北港里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 67.98,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 38.04,
+          "candVictor": " ",
+          "tks": 735,
+          "profRate": 67.65,
+          "agreeRate": 39.14,
+          "disagreeRate": 60.86
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 大園區南港里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "060",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 66.62,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 42.88,
+          "candVictor": " ",
+          "tks": 1782,
+          "profRate": 62.23,
+          "agreeRate": 52.16,
+          "disagreeRate": 47.84
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區新屋里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 71.51,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 43.36,
+          "candVictor": " ",
+          "tks": 839,
+          "profRate": 81.19,
+          "agreeRate": 71.45,
+          "disagreeRate": 28.55
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區新生里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 75.38,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 43.13,
+          "candVictor": " ",
+          "tks": 1250,
+          "profRate": 77.05,
+          "agreeRate": 29.26,
+          "disagreeRate": 70.74
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區後湖里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 73.81,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 38.73,
+          "candVictor": " ",
+          "tks": 397,
+          "profRate": 54.46,
+          "agreeRate": 51.54,
+          "disagreeRate": 48.46
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區清華里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 72.97,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 44.43,
+          "candVictor": " ",
+          "tks": 1256,
+          "profRate": 20.69,
+          "agreeRate": 82.29,
+          "disagreeRate": 17.71
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區石磊里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 70.24,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 39.6,
+          "candVictor": " ",
+          "tks": 609,
+          "profRate": 97.35,
+          "agreeRate": 80.19,
+          "disagreeRate": 19.81
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區東明里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 76.59,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 38.69,
+          "candVictor": " ",
+          "tks": 402,
+          "profRate": 15.07,
+          "agreeRate": 3.0,
+          "disagreeRate": 97.0
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區社子里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 75.86,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 37.98,
+          "candVictor": " ",
+          "tks": 368,
+          "profRate": 82.28,
+          "agreeRate": 98.21,
+          "disagreeRate": 1.79
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區埔頂里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 73.35,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 43.56,
+          "candVictor": " ",
+          "tks": 768,
+          "profRate": 96.62,
+          "agreeRate": 90.41,
+          "disagreeRate": 9.59
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區九斗里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 72.5,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 38.82,
+          "candVictor": " ",
+          "tks": 599,
+          "profRate": 5.14,
+          "agreeRate": 74.06,
+          "disagreeRate": 25.94
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區頭洲里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 73.08,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 43.19,
+          "candVictor": " ",
+          "tks": 1369,
+          "profRate": 33.04,
+          "agreeRate": 98.71,
+          "disagreeRate": 1.29
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區大坡里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 70.45,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 33.48,
+          "candVictor": " ",
+          "tks": 297,
+          "profRate": 25.25,
+          "agreeRate": 1.55,
+          "disagreeRate": 98.45
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區望間里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 73.4,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 34.07,
+          "candVictor": " ",
+          "tks": 324,
+          "profRate": 40.04,
+          "agreeRate": 54.88,
+          "disagreeRate": 45.12
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區後庄里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 74.52,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 40.13,
+          "candVictor": " ",
+          "tks": 301,
+          "profRate": 33.63,
+          "agreeRate": 62.55,
+          "disagreeRate": 37.45
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區蚵間里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 70.89,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 29.72,
+          "candVictor": " ",
+          "tks": 178,
+          "profRate": 21.17,
+          "agreeRate": 69.55,
+          "disagreeRate": 30.45
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區深圳里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 77.11,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 38.43,
+          "candVictor": " ",
+          "tks": 176,
+          "profRate": 21.83,
+          "agreeRate": 65.19,
+          "disagreeRate": 34.81
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區槺榔里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 70.63,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 31.81,
+          "candVictor": " ",
+          "tks": 223,
+          "profRate": 90.5,
+          "agreeRate": 47.34,
+          "disagreeRate": 52.66
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區笨港里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 73.04,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 26.51,
+          "candVictor": " ",
+          "tks": 189,
+          "profRate": 58.85,
+          "agreeRate": 58.91,
+          "disagreeRate": 41.09
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區永安里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 74.88,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 36.08,
+          "candVictor": " ",
+          "tks": 561,
+          "profRate": 82.67,
+          "agreeRate": 15.76,
+          "disagreeRate": 84.24
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區永興里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 72.83,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 33.15,
+          "candVictor": " ",
+          "tks": 236,
+          "profRate": 24.06,
+          "agreeRate": 84.04,
+          "disagreeRate": 15.96
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區下埔里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 78.66,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 35.15,
+          "candVictor": " ",
+          "tks": 187,
+          "profRate": 93.76,
+          "agreeRate": 89.02,
+          "disagreeRate": 10.98
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區石牌里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 73.86,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 40.79,
+          "candVictor": " ",
+          "tks": 257,
+          "profRate": 48.6,
+          "agreeRate": 93.01,
+          "disagreeRate": 6.99
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區下田里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 71.35,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 31.39,
+          "candVictor": " ",
+          "tks": 361,
+          "profRate": 57.02,
+          "agreeRate": 83.44,
+          "disagreeRate": 16.56
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 新屋區赤欄里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "110",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.35,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 40.23,
+          "candVictor": " ",
+          "tks": 356,
+          "profRate": 18.55,
+          "agreeRate": 76.24,
+          "disagreeRate": 23.76
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區觀音里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 65.11,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 46.9,
+          "candVictor": " ",
+          "tks": 824,
+          "profRate": 53.86,
+          "agreeRate": 46.15,
+          "disagreeRate": 53.85
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區白玉里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 71.67,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 44.97,
+          "candVictor": " ",
+          "tks": 259,
+          "profRate": 39.41,
+          "agreeRate": 75.7,
+          "disagreeRate": 24.3
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區廣興里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 70.73,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 43.93,
+          "candVictor": " ",
+          "tks": 380,
+          "profRate": 26.3,
+          "agreeRate": 60.85,
+          "disagreeRate": 39.15
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區大潭里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 70.74,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 44.47,
+          "candVictor": " ",
+          "tks": 659,
+          "profRate": 1.28,
+          "agreeRate": 0.62,
+          "disagreeRate": 99.38
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區保生里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 70.71,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 43.45,
+          "candVictor": " ",
+          "tks": 637,
+          "profRate": 72.05,
+          "agreeRate": 45.42,
+          "disagreeRate": 54.58
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區武威里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 73.99,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 40.12,
+          "candVictor": " ",
+          "tks": 268,
+          "profRate": 44.91,
+          "agreeRate": 26.01,
+          "disagreeRate": 73.99
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區三和里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 72.55,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 39.71,
+          "candVictor": " ",
+          "tks": 222,
+          "profRate": 92.41,
+          "agreeRate": 90.68,
+          "disagreeRate": 9.32
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區新興里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 71.45,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 38.19,
+          "candVictor": " ",
+          "tks": 202,
+          "profRate": 63.92,
+          "agreeRate": 35.43,
+          "disagreeRate": 64.57
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區坑尾里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 65.75,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 40.91,
+          "candVictor": " ",
+          "tks": 486,
+          "profRate": 92.29,
+          "agreeRate": 39.75,
+          "disagreeRate": 60.25
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區金湖里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 69.43,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 39.34,
+          "candVictor": " ",
+          "tks": 677,
+          "profRate": 59.74,
+          "agreeRate": 21.14,
+          "disagreeRate": 78.86
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區藍埔里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 74.81,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 36.57,
+          "candVictor": " ",
+          "tks": 675,
+          "profRate": 70.73,
+          "agreeRate": 3.48,
+          "disagreeRate": 96.52
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區大同里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.46,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 36.13,
+          "candVictor": " ",
+          "tks": 753,
+          "profRate": 21.68,
+          "agreeRate": 23.25,
+          "disagreeRate": 76.75
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區大堀里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 71.92,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 37.28,
+          "candVictor": " ",
+          "tks": 409,
+          "profRate": 58.25,
+          "agreeRate": 2.34,
+          "disagreeRate": 97.66
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區崙坪里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.6,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 36.25,
+          "candVictor": " ",
+          "tks": 1188,
+          "profRate": 40.8,
+          "agreeRate": 5.26,
+          "disagreeRate": 94.74
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區富源里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 71.93,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 45.01,
+          "candVictor": " ",
+          "tks": 1244,
+          "profRate": 70.54,
+          "agreeRate": 17.68,
+          "disagreeRate": 82.32
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區上大里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 73.26,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 42.64,
+          "candVictor": " ",
+          "tks": 756,
+          "profRate": 41.86,
+          "agreeRate": 78.55,
+          "disagreeRate": 21.45
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區新坡里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 72.38,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 39.14,
+          "candVictor": " ",
+          "tks": 802,
+          "profRate": 36.73,
+          "agreeRate": 13.32,
+          "disagreeRate": 86.68
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區廣福里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 73.89,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 37.53,
+          "candVictor": " ",
+          "tks": 695,
+          "profRate": 56.06,
+          "agreeRate": 10.49,
+          "disagreeRate": 89.51
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區塔腳里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 69.55,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 41.0,
+          "candVictor": " ",
+          "tks": 280,
+          "profRate": 59.55,
+          "agreeRate": 54.65,
+          "disagreeRate": 45.35
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區保障里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 71.24,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 34.45,
+          "candVictor": " ",
+          "tks": 464,
+          "profRate": 66.63,
+          "agreeRate": 2.83,
+          "disagreeRate": 97.17
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區草漯里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 65.96,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 37.87,
+          "candVictor": " ",
+          "tks": 876,
+          "profRate": 34.51,
+          "agreeRate": 46.79,
+          "disagreeRate": 53.21
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區草新里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 70.21,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 43.04,
+          "candVictor": " ",
+          "tks": 1729,
+          "profRate": 47.25,
+          "agreeRate": 4.85,
+          "disagreeRate": 95.15
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區樹林里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 58.53,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 45.02,
+          "candVictor": " ",
+          "tks": 1206,
+          "profRate": 56.57,
+          "agreeRate": 26.29,
+          "disagreeRate": 73.71
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區 觀音區富林里",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": "120",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 69.27,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 39.97,
+          "candVictor": " ",
+          "tks": 542,
+          "profRate": 0.73,
+          "agreeRate": 30.43,
+          "disagreeRate": 69.57
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

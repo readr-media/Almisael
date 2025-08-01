@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import axios from 'axios'
+import axios from '../../utils/api'
 import styled from 'styled-components'
 import { Card } from './Card'
 import { electionMapColor } from '../../consts/colors'

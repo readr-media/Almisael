@@ -1,0 +1,143 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "臺北市 第01選區",
+      "area_nickname": "士林區*、北投區",
+      "county": "63000",
+      "area": "01",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 74.31,
+      "candidates": []
+    },
+    {
+      "range": "臺北市 第02選區",
+      "area_nickname": "大同區、士林區*",
+      "county": "63000",
+      "area": "02",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 74.2,
+      "candidates": []
+    },
+    {
+      "range": "臺北市 第03選區",
+      "area_nickname": "松山區*、中山區",
+      "county": "63000",
+      "area": "03",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 73.92,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "王鴻薇",
+          "party": "中國國民黨",
+          "tksRate": 52.52,
+          "candVictor": "*",
+          "tks": 105788,
+          "profRate": 80.91,
+          "agreeRate": 82.21,
+          "disagreeRate": 17.79
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第04選區",
+      "area_nickname": "內湖區、南港區",
+      "county": "63000",
+      "area": "04",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 75.6,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "李彥秀",
+          "party": "中國國民黨",
+          "tksRate": 51.11,
+          "candVictor": "*",
+          "tks": 112743,
+          "profRate": 38.66,
+          "agreeRate": 4.4,
+          "disagreeRate": 95.6
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第05選區",
+      "area_nickname": "萬華區、中正區*",
+      "county": "63000",
+      "area": "05",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 72.5,
+      "candidates": []
+    },
+    {
+      "range": "臺北市 第06選區",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 75.1,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 52.96,
+          "candVictor": "*",
+          "tks": 101310,
+          "profRate": 50.37,
+          "agreeRate": 29.7,
+          "disagreeRate": 70.3
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第07選區",
+      "area_nickname": "信義區、松山區*",
+      "county": "63000",
+      "area": "07",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 74.6,
+      "candidates": [
+        {
+          "candNo": 6,
+          "name": "徐巧芯",
+          "party": "中國國民黨",
+          "tksRate": 52.62,
+          "candVictor": "*",
+          "tks": 89925,
+          "profRate": 43.14,
+          "agreeRate": 20.54,
+          "disagreeRate": 79.46
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第08選區",
+      "area_nickname": "文山區、中正區*",
+      "county": "63000",
+      "area": "08",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 75.8,
+      "candidates": []
+    }
+  ]
+}

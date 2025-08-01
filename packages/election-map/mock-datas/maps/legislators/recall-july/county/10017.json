@@ -1,0 +1,30 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "基隆市 第01選區",
+      "area_nickname": "中正區、七堵區、暖暖區、仁愛區、中山區、安樂區、信義區",
+      "county": "10017",
+      "area": "01",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 70.82,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "林沛祥",
+          "party": "中國國民黨",
+          "tksRate": 43.62,
+          "candVictor": "*",
+          "tks": 91986,
+          "profRate": 12.54,
+          "agreeRate": 89.27,
+          "disagreeRate": 10.73
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "彰化縣 第01選區",
+      "area_nickname": "鹿港鎮、和美鎮、線西鄉、伸港鄉、福興鄉、秀水鄉",
+      "county": "10007",
+      "area": "01",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 73.01,
+      "candidates": []
+    },
+    {
+      "range": "彰化縣 第02選區",
+      "area_nickname": "彰化市、花壇鄉、芬園鄉",
+      "county": "10007",
+      "area": "02",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 74.15,
+      "candidates": []
+    },
+    {
+      "range": "彰化縣 第03選區",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 69.84,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.75,
+          "candVictor": "*",
+          "tks": 97681,
+          "profRate": 64.57,
+          "agreeRate": 36.39,
+          "disagreeRate": 63.61
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第04選區",
+      "area_nickname": "員林市、田中鎮、大村鄉、永靖鄉、社頭鄉、二水鄉、田尾鄉",
+      "county": "10007",
+      "area": "04",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 73.03,
+      "candidates": []
+    }
+  ]
+}

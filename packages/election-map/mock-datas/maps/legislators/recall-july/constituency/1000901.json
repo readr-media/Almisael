@@ -1,0 +1,4838 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "雲林縣 第01選區 虎尾鎮東仁里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.65,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 59.12,
+          "candVictor": "*",
+          "tks": 1050,
+          "profRate": 26.34,
+          "agreeRate": 61.5,
+          "disagreeRate": 38.5
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮新興里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 65.88,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 54.51,
+          "candVictor": "*",
+          "tks": 580,
+          "profRate": 41.25,
+          "agreeRate": 38.33,
+          "disagreeRate": 61.67
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮公安里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 74.43,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 57.87,
+          "candVictor": "*",
+          "tks": 1129,
+          "profRate": 60.14,
+          "agreeRate": 76.34,
+          "disagreeRate": 23.66
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮德興里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.86,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 61.38,
+          "candVictor": "*",
+          "tks": 1046,
+          "profRate": 90.46,
+          "agreeRate": 47.28,
+          "disagreeRate": 52.72
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮中山里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.14,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 56.1,
+          "candVictor": "*",
+          "tks": 331,
+          "profRate": 62.85,
+          "agreeRate": 48.11,
+          "disagreeRate": 51.89
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮西安里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.09,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 58.8,
+          "candVictor": "*",
+          "tks": 1236,
+          "profRate": 21.04,
+          "agreeRate": 53.4,
+          "disagreeRate": 46.6
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮立仁里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 74.24,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 62.24,
+          "candVictor": "*",
+          "tks": 1599,
+          "profRate": 93.36,
+          "agreeRate": 21.25,
+          "disagreeRate": 78.75
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮安慶里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 72.98,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 57.62,
+          "candVictor": "*",
+          "tks": 514,
+          "profRate": 8.53,
+          "agreeRate": 29.86,
+          "disagreeRate": 70.14
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮平和里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 76.72,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 60.81,
+          "candVictor": "*",
+          "tks": 2053,
+          "profRate": 73.72,
+          "agreeRate": 82.42,
+          "disagreeRate": 17.58
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮興南里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 71.34,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 57.85,
+          "candVictor": "*",
+          "tks": 881,
+          "profRate": 21.04,
+          "agreeRate": 58.13,
+          "disagreeRate": 41.87
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮新吉里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 73.62,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 57.53,
+          "candVictor": "*",
+          "tks": 1532,
+          "profRate": 82.84,
+          "agreeRate": 39.05,
+          "disagreeRate": 60.95
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮穎川里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 74.2,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 58.26,
+          "candVictor": "*",
+          "tks": 839,
+          "profRate": 51.71,
+          "agreeRate": 58.58,
+          "disagreeRate": 41.42
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮延平里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.94,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 59.92,
+          "candVictor": "*",
+          "tks": 477,
+          "profRate": 14.55,
+          "agreeRate": 37.02,
+          "disagreeRate": 62.98
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮建國里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 61.27,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 66.77,
+          "candVictor": "*",
+          "tks": 207,
+          "profRate": 8.64,
+          "agreeRate": 51.42,
+          "disagreeRate": 48.58
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮埒內里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 74.42,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 54.19,
+          "candVictor": "*",
+          "tks": 989,
+          "profRate": 26.77,
+          "agreeRate": 64.39,
+          "disagreeRate": 35.61
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮堀頭里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 77.48,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 60.77,
+          "candVictor": "*",
+          "tks": 378,
+          "profRate": 13.19,
+          "agreeRate": 39.02,
+          "disagreeRate": 60.98
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮安溪里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 72.73,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 54.91,
+          "candVictor": "*",
+          "tks": 649,
+          "profRate": 42.46,
+          "agreeRate": 69.28,
+          "disagreeRate": 30.72
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮興中里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 72.22,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 58.86,
+          "candVictor": "*",
+          "tks": 661,
+          "profRate": 98.58,
+          "agreeRate": 34.3,
+          "disagreeRate": 65.7
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮廉使里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 74.11,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 51.72,
+          "candVictor": "*",
+          "tks": 1355,
+          "profRate": 42.3,
+          "agreeRate": 95.15,
+          "disagreeRate": 4.85
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮惠來里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 70.01,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 54.49,
+          "candVictor": "*",
+          "tks": 843,
+          "profRate": 63.47,
+          "agreeRate": 33.33,
+          "disagreeRate": 66.67
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮頂溪里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 74.21,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 61.22,
+          "candVictor": "*",
+          "tks": 1094,
+          "profRate": 85.5,
+          "agreeRate": 76.13,
+          "disagreeRate": 23.87
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮中溪里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 75.63,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 59.91,
+          "candVictor": "*",
+          "tks": 562,
+          "profRate": 37.67,
+          "agreeRate": 36.45,
+          "disagreeRate": 63.55
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮下溪里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 76.79,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 64.0,
+          "candVictor": "*",
+          "tks": 688,
+          "profRate": 96.14,
+          "agreeRate": 8.73,
+          "disagreeRate": 91.27
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮東屯里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 70.38,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.82,
+          "candVictor": "*",
+          "tks": 383,
+          "profRate": 30.55,
+          "agreeRate": 41.95,
+          "disagreeRate": 58.05
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮西屯里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 70.06,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 39.75,
+          "candVictor": "*",
+          "tks": 386,
+          "profRate": 47.06,
+          "agreeRate": 17.73,
+          "disagreeRate": 82.27
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮芳草里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 67.78,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 42.68,
+          "candVictor": "*",
+          "tks": 245,
+          "profRate": 34.66,
+          "agreeRate": 6.48,
+          "disagreeRate": 93.52
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮墾地里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 71.65,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 58.34,
+          "candVictor": "*",
+          "tks": 892,
+          "profRate": 99.45,
+          "agreeRate": 86.99,
+          "disagreeRate": 13.01
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮北溪里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.0,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 65.4,
+          "candVictor": "*",
+          "tks": 380,
+          "profRate": 25.7,
+          "agreeRate": 0.52,
+          "disagreeRate": 99.48
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 虎尾鎮三合里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "030",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 74.92,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 64.95,
+          "candVictor": "*",
+          "tks": 617,
+          "profRate": 63.35,
+          "agreeRate": 53.14,
+          "disagreeRate": 46.86
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮忠正里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.73,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.41,
+          "candVictor": "*",
+          "tks": 247,
+          "profRate": 18.47,
+          "agreeRate": 62.35,
+          "disagreeRate": 37.65
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮順天里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.93,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.31,
+          "candVictor": "*",
+          "tks": 281,
+          "profRate": 42.86,
+          "agreeRate": 5.17,
+          "disagreeRate": 94.83
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮宮北里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 77.7,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 56.34,
+          "candVictor": "*",
+          "tks": 551,
+          "profRate": 75.95,
+          "agreeRate": 89.82,
+          "disagreeRate": 10.18
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮越港里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 75.44,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 58.24,
+          "candVictor": "*",
+          "tks": 438,
+          "profRate": 97.57,
+          "agreeRate": 52.59,
+          "disagreeRate": 47.41
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮溪邊里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 71.2,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 48.56,
+          "candVictor": "*",
+          "tks": 353,
+          "profRate": 6.29,
+          "agreeRate": 12.38,
+          "disagreeRate": 87.62
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮石廟里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 71.24,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 52.53,
+          "candVictor": "*",
+          "tks": 1050,
+          "profRate": 1.01,
+          "agreeRate": 35.37,
+          "disagreeRate": 64.63
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮興新里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 67.5,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.66,
+          "candVictor": "*",
+          "tks": 428,
+          "profRate": 17.67,
+          "agreeRate": 4.39,
+          "disagreeRate": 95.61
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮奮起里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 64.14,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.75,
+          "candVictor": " ",
+          "tks": 352,
+          "profRate": 38.84,
+          "agreeRate": 86.98,
+          "disagreeRate": 13.02
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮埤腳里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 66.35,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 41.82,
+          "candVictor": " ",
+          "tks": 312,
+          "profRate": 30.78,
+          "agreeRate": 64.64,
+          "disagreeRate": 35.36
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮後埔里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 68.46,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 51.73,
+          "candVictor": "*",
+          "tks": 763,
+          "profRate": 15.76,
+          "agreeRate": 93.89,
+          "disagreeRate": 6.11
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮崙內里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 66.37,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.65,
+          "candVictor": " ",
+          "tks": 439,
+          "profRate": 38.55,
+          "agreeRate": 25.24,
+          "disagreeRate": 74.76
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮大荖里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 72.94,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 43.77,
+          "candVictor": " ",
+          "tks": 260,
+          "profRate": 88.17,
+          "agreeRate": 82.7,
+          "disagreeRate": 17.3
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮東平里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 70.5,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 43.72,
+          "candVictor": " ",
+          "tks": 540,
+          "profRate": 98.49,
+          "agreeRate": 13.72,
+          "disagreeRate": 86.28
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮南平里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 69.63,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.42,
+          "candVictor": "*",
+          "tks": 534,
+          "profRate": 8.64,
+          "agreeRate": 54.03,
+          "disagreeRate": 45.97
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮西平里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 67.79,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 45.06,
+          "candVictor": " ",
+          "tks": 502,
+          "profRate": 64.92,
+          "agreeRate": 30.85,
+          "disagreeRate": 69.15
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮北平里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 70.06,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 43.6,
+          "candVictor": " ",
+          "tks": 235,
+          "profRate": 96.98,
+          "agreeRate": 68.53,
+          "disagreeRate": 31.47
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 土庫鎮新庄里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "050",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 68.76,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 45.14,
+          "candVictor": " ",
+          "tks": 409,
+          "profRate": 41.48,
+          "agreeRate": 96.04,
+          "disagreeRate": 3.96
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮東陽里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.42,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 41.06,
+          "candVictor": " ",
+          "tks": 193,
+          "profRate": 80.8,
+          "agreeRate": 20.34,
+          "disagreeRate": 79.66
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮光民里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 76.41,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 39.7,
+          "candVictor": " ",
+          "tks": 187,
+          "profRate": 58.56,
+          "agreeRate": 71.25,
+          "disagreeRate": 28.75
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮東華里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 72.38,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.93,
+          "candVictor": " ",
+          "tks": 130,
+          "profRate": 10.63,
+          "agreeRate": 52.1,
+          "disagreeRate": 47.9
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮南安里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 75.92,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 44.74,
+          "candVictor": " ",
+          "tks": 251,
+          "profRate": 58.29,
+          "agreeRate": 33.18,
+          "disagreeRate": 66.82
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮中和里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.73,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 39.56,
+          "candVictor": " ",
+          "tks": 89,
+          "profRate": 30.84,
+          "agreeRate": 1.96,
+          "disagreeRate": 98.04
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮義民里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.37,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 45.28,
+          "candVictor": " ",
+          "tks": 115,
+          "profRate": 74.26,
+          "agreeRate": 53.19,
+          "disagreeRate": 46.81
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮共榮里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 73.7,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 37.7,
+          "candVictor": " ",
+          "tks": 92,
+          "profRate": 61.66,
+          "agreeRate": 81.44,
+          "disagreeRate": 18.56
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮西勢里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 69.7,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 44.39,
+          "candVictor": " ",
+          "tks": 269,
+          "profRate": 39.2,
+          "agreeRate": 32.64,
+          "disagreeRate": 67.36
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮仁和里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 71.46,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 45.15,
+          "candVictor": " ",
+          "tks": 135,
+          "profRate": 42.0,
+          "agreeRate": 89.94,
+          "disagreeRate": 10.06
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮賜福里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.65,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 52.43,
+          "candVictor": "*",
+          "tks": 108,
+          "profRate": 85.51,
+          "agreeRate": 23.03,
+          "disagreeRate": 76.97
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮公舘里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 71.46,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 43.19,
+          "candVictor": " ",
+          "tks": 149,
+          "profRate": 6.56,
+          "agreeRate": 92.54,
+          "disagreeRate": 7.46
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮大同里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 69.53,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 44.44,
+          "candVictor": " ",
+          "tks": 320,
+          "profRate": 77.05,
+          "agreeRate": 14.35,
+          "disagreeRate": 85.65
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮仁安里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 76.31,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 53.18,
+          "candVictor": "*",
+          "tks": 159,
+          "profRate": 40.3,
+          "agreeRate": 8.29,
+          "disagreeRate": 91.71
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮華勝里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.97,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 44.45,
+          "candVictor": " ",
+          "tks": 1439,
+          "profRate": 45.05,
+          "agreeRate": 45.37,
+          "disagreeRate": 54.63
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮光復里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 73.19,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 51.02,
+          "candVictor": "*",
+          "tks": 578,
+          "profRate": 27.07,
+          "agreeRate": 53.65,
+          "disagreeRate": 46.35
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮扶朝里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 74.12,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 20.8,
+          "candVictor": " ",
+          "tks": 135,
+          "profRate": 17.44,
+          "agreeRate": 9.37,
+          "disagreeRate": 90.63
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮水埔里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 68.67,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 33.11,
+          "candVictor": " ",
+          "tks": 98,
+          "profRate": 34.92,
+          "agreeRate": 59.96,
+          "disagreeRate": 40.04
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮新街里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 72.46,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.16,
+          "candVictor": " ",
+          "tks": 1997,
+          "profRate": 35.35,
+          "agreeRate": 92.2,
+          "disagreeRate": 7.8
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮劉厝里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 73.71,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 40.37,
+          "candVictor": " ",
+          "tks": 308,
+          "profRate": 47.02,
+          "agreeRate": 60.21,
+          "disagreeRate": 39.79
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮後溝里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 68.27,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 40.29,
+          "candVictor": " ",
+          "tks": 247,
+          "profRate": 70.52,
+          "agreeRate": 71.18,
+          "disagreeRate": 28.82
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮新厝里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 67.12,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 48.52,
+          "candVictor": "*",
+          "tks": 115,
+          "profRate": 22.06,
+          "agreeRate": 91.95,
+          "disagreeRate": 8.05
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮府番里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 64.97,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 39.4,
+          "candVictor": " ",
+          "tks": 184,
+          "profRate": 95.06,
+          "agreeRate": 87.94,
+          "disagreeRate": 12.06
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮草湖里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 64.72,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 30.29,
+          "candVictor": " ",
+          "tks": 242,
+          "profRate": 93.77,
+          "agreeRate": 8.03,
+          "disagreeRate": 91.97
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮溝皂里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 63.44,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 37.61,
+          "candVictor": " ",
+          "tks": 252,
+          "profRate": 56.24,
+          "agreeRate": 37.51,
+          "disagreeRate": 62.49
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮番溝里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 58.66,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 36.41,
+          "candVictor": " ",
+          "tks": 146,
+          "profRate": 22.89,
+          "agreeRate": 82.95,
+          "disagreeRate": 17.05
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮大北里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 61.94,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 27.01,
+          "candVictor": " ",
+          "tks": 84,
+          "profRate": 44.4,
+          "agreeRate": 74.24,
+          "disagreeRate": 25.76
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮好收里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 69.28,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 36.71,
+          "candVictor": " ",
+          "tks": 359,
+          "profRate": 62.33,
+          "agreeRate": 42.32,
+          "disagreeRate": 57.68
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 北港鎮樹腳里",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "060",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 70.51,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 37.37,
+          "candVictor": " ",
+          "tks": 722,
+          "profRate": 84.96,
+          "agreeRate": 63.81,
+          "disagreeRate": 36.19
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉麥豐村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 64.22,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 56.14,
+          "candVictor": "*",
+          "tks": 2604,
+          "profRate": 17.72,
+          "agreeRate": 56.07,
+          "disagreeRate": 43.93
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉麥津村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 62.28,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 58.16,
+          "candVictor": "*",
+          "tks": 1501,
+          "profRate": 92.99,
+          "agreeRate": 71.67,
+          "disagreeRate": 28.33
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉瓦磘村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 61.01,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 41.77,
+          "candVictor": " ",
+          "tks": 485,
+          "profRate": 2.29,
+          "agreeRate": 55.14,
+          "disagreeRate": 44.86
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉興華村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 62.37,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 44.54,
+          "candVictor": " ",
+          "tks": 796,
+          "profRate": 65.82,
+          "agreeRate": 55.09,
+          "disagreeRate": 44.91
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉海豐村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 59.42,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 60.42,
+          "candVictor": "*",
+          "tks": 757,
+          "profRate": 71.77,
+          "agreeRate": 86.89,
+          "disagreeRate": 13.11
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉後安村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 56.48,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 57.61,
+          "candVictor": "*",
+          "tks": 958,
+          "profRate": 57.41,
+          "agreeRate": 21.09,
+          "disagreeRate": 78.91
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉中興村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 62.82,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 57.31,
+          "candVictor": "*",
+          "tks": 537,
+          "profRate": 30.38,
+          "agreeRate": 89.67,
+          "disagreeRate": 10.33
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉三盛村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 62.35,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 45.76,
+          "candVictor": " ",
+          "tks": 610,
+          "profRate": 29.23,
+          "agreeRate": 66.59,
+          "disagreeRate": 33.41
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉崙後村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 60.17,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 52.06,
+          "candVictor": "*",
+          "tks": 847,
+          "profRate": 53.76,
+          "agreeRate": 87.17,
+          "disagreeRate": 12.83
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉橋頭村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 64.59,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 51.0,
+          "candVictor": "*",
+          "tks": 1275,
+          "profRate": 58.12,
+          "agreeRate": 56.64,
+          "disagreeRate": 43.36
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉新吉村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 62.04,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 51.76,
+          "candVictor": "*",
+          "tks": 367,
+          "profRate": 56.24,
+          "agreeRate": 31.85,
+          "disagreeRate": 68.15
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉施厝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 61.38,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 48.07,
+          "candVictor": "*",
+          "tks": 1009,
+          "profRate": 75.79,
+          "agreeRate": 17.32,
+          "disagreeRate": 82.68
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 麥寮鄉雷厝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "130",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 63.66,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.69,
+          "candVictor": "*",
+          "tks": 635,
+          "profRate": 47.62,
+          "agreeRate": 65.66,
+          "disagreeRate": 34.34
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉月眉村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 63.06,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 37.69,
+          "candVictor": " ",
+          "tks": 251,
+          "profRate": 72.4,
+          "agreeRate": 51.71,
+          "disagreeRate": 48.29
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉復興村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 72.78,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 40.5,
+          "candVictor": " ",
+          "tks": 145,
+          "profRate": 61.28,
+          "agreeRate": 38.49,
+          "disagreeRate": 61.51
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉嘉隆村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 63.61,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 37.69,
+          "candVictor": " ",
+          "tks": 340,
+          "profRate": 3.53,
+          "agreeRate": 13.95,
+          "disagreeRate": 86.05
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉東南村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 70.54,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 50.48,
+          "candVictor": "*",
+          "tks": 471,
+          "profRate": 73.26,
+          "agreeRate": 95.74,
+          "disagreeRate": 4.26
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉東北村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 71.73,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 50.06,
+          "candVictor": "*",
+          "tks": 395,
+          "profRate": 45.43,
+          "agreeRate": 91.11,
+          "disagreeRate": 8.89
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉龍潭村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 60.45,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 35.4,
+          "candVictor": " ",
+          "tks": 160,
+          "profRate": 77.33,
+          "agreeRate": 12.43,
+          "disagreeRate": 87.57
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉程海村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 66.86,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 34.6,
+          "candVictor": " ",
+          "tks": 118,
+          "profRate": 86.92,
+          "agreeRate": 73.22,
+          "disagreeRate": 26.78
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉昌南村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 65.78,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.97,
+          "candVictor": " ",
+          "tks": 240,
+          "profRate": 56.74,
+          "agreeRate": 89.06,
+          "disagreeRate": 10.94
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉安南村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 60.0,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 38.37,
+          "candVictor": " ",
+          "tks": 165,
+          "profRate": 73.71,
+          "agreeRate": 79.8,
+          "disagreeRate": 20.2
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉同安村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 61.7,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 42.18,
+          "candVictor": " ",
+          "tks": 456,
+          "profRate": 45.44,
+          "agreeRate": 74.69,
+          "disagreeRate": 25.31
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉四美村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 60.51,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.2,
+          "candVictor": " ",
+          "tks": 255,
+          "profRate": 52.07,
+          "agreeRate": 77.98,
+          "disagreeRate": 22.02
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 東勢鄉新坤村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "140",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 60.91,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.23,
+          "candVictor": " ",
+          "tks": 273,
+          "profRate": 55.23,
+          "agreeRate": 59.17,
+          "disagreeRate": 40.83
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 褒忠鄉中民村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "150",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.64,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.08,
+          "candVictor": " ",
+          "tks": 576,
+          "profRate": 37.7,
+          "agreeRate": 39.56,
+          "disagreeRate": 60.44
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 褒忠鄉埔姜村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "150",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 68.0,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.59,
+          "candVictor": " ",
+          "tks": 437,
+          "profRate": 68.07,
+          "agreeRate": 55.21,
+          "disagreeRate": 44.79
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 褒忠鄉中勝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "150",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 71.85,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.05,
+          "candVictor": " ",
+          "tks": 455,
+          "profRate": 30.33,
+          "agreeRate": 14.53,
+          "disagreeRate": 85.47
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 褒忠鄉馬鳴村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "150",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 67.76,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 39.86,
+          "candVictor": " ",
+          "tks": 352,
+          "profRate": 89.62,
+          "agreeRate": 90.98,
+          "disagreeRate": 9.02
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 褒忠鄉新湖村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "150",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 66.51,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 36.24,
+          "candVictor": " ",
+          "tks": 258,
+          "profRate": 0.62,
+          "agreeRate": 45.35,
+          "disagreeRate": 54.65
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 褒忠鄉有才村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "150",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 65.23,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 40.16,
+          "candVictor": " ",
+          "tks": 200,
+          "profRate": 46.16,
+          "agreeRate": 92.38,
+          "disagreeRate": 7.62
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 褒忠鄉田洋村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "150",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 70.97,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 44.26,
+          "candVictor": " ",
+          "tks": 216,
+          "profRate": 59.7,
+          "agreeRate": 12.29,
+          "disagreeRate": 87.71
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 褒忠鄉龍岩村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "150",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 66.67,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.6,
+          "candVictor": "*",
+          "tks": 347,
+          "profRate": 88.13,
+          "agreeRate": 98.31,
+          "disagreeRate": 1.69
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 褒忠鄉潮厝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "150",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 61.6,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 39.26,
+          "candVictor": " ",
+          "tks": 192,
+          "profRate": 38.5,
+          "agreeRate": 59.59,
+          "disagreeRate": 40.41
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉台西村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 66.29,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 61.26,
+          "candVictor": "*",
+          "tks": 457,
+          "profRate": 36.0,
+          "agreeRate": 26.12,
+          "disagreeRate": 73.88
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉海南村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 61.86,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 56.23,
+          "candVictor": "*",
+          "tks": 352,
+          "profRate": 46.16,
+          "agreeRate": 72.97,
+          "disagreeRate": 27.03
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉海北村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 64.42,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 52.23,
+          "candVictor": "*",
+          "tks": 339,
+          "profRate": 35.31,
+          "agreeRate": 89.16,
+          "disagreeRate": 10.84
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉海口村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 61.02,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 51.33,
+          "candVictor": "*",
+          "tks": 578,
+          "profRate": 68.4,
+          "agreeRate": 19.43,
+          "disagreeRate": 80.57
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉山寮村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 56.74,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 56.58,
+          "candVictor": "*",
+          "tks": 245,
+          "profRate": 84.6,
+          "agreeRate": 73.9,
+          "disagreeRate": 26.1
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉溪頂村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 59.06,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.69,
+          "candVictor": " ",
+          "tks": 367,
+          "profRate": 10.48,
+          "agreeRate": 41.58,
+          "disagreeRate": 58.42
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉牛厝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 56.69,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 41.11,
+          "candVictor": " ",
+          "tks": 391,
+          "profRate": 90.34,
+          "agreeRate": 13.23,
+          "disagreeRate": 86.77
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉泉州村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 57.27,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 54.09,
+          "candVictor": "*",
+          "tks": 172,
+          "profRate": 65.19,
+          "agreeRate": 4.15,
+          "disagreeRate": 95.85
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉五榔村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 62.03,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 22.78,
+          "candVictor": " ",
+          "tks": 59,
+          "profRate": 96.85,
+          "agreeRate": 69.97,
+          "disagreeRate": 30.03
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉光華村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 66.83,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 48.77,
+          "candVictor": "*",
+          "tks": 199,
+          "profRate": 86.74,
+          "agreeRate": 39.64,
+          "disagreeRate": 60.36
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉五港村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 62.99,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 50.92,
+          "candVictor": "*",
+          "tks": 527,
+          "profRate": 45.91,
+          "agreeRate": 30.57,
+          "disagreeRate": 69.43
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉富琦村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 65.44,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 53.49,
+          "candVictor": "*",
+          "tks": 491,
+          "profRate": 60.18,
+          "agreeRate": 25.43,
+          "disagreeRate": 74.57
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉永豐村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 64.58,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 62.95,
+          "candVictor": "*",
+          "tks": 491,
+          "profRate": 19.26,
+          "agreeRate": 66.78,
+          "disagreeRate": 33.22
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉和豐村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 58.66,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 53.33,
+          "candVictor": "*",
+          "tks": 840,
+          "profRate": 46.73,
+          "agreeRate": 58.02,
+          "disagreeRate": 41.98
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 臺西鄉蚊港村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "160",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 59.95,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 64.22,
+          "candVictor": "*",
+          "tks": 596,
+          "profRate": 49.83,
+          "agreeRate": 8.19,
+          "disagreeRate": 91.81
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉長南村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 64.66,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 41.81,
+          "candVictor": " ",
+          "tks": 814,
+          "profRate": 80.47,
+          "agreeRate": 74.28,
+          "disagreeRate": 25.72
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉長北村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 61.24,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 41.1,
+          "candVictor": " ",
+          "tks": 337,
+          "profRate": 5.93,
+          "agreeRate": 46.17,
+          "disagreeRate": 53.83
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉子茂村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 62.16,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 42.78,
+          "candVictor": " ",
+          "tks": 323,
+          "profRate": 44.31,
+          "agreeRate": 16.69,
+          "disagreeRate": 83.31
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉後湖村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 68.42,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 34.3,
+          "candVictor": " ",
+          "tks": 153,
+          "profRate": 71.87,
+          "agreeRate": 95.5,
+          "disagreeRate": 4.5
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉山內村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 62.63,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 38.63,
+          "candVictor": " ",
+          "tks": 209,
+          "profRate": 66.4,
+          "agreeRate": 85.08,
+          "disagreeRate": 14.92
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉合和村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 63.9,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 37.38,
+          "candVictor": " ",
+          "tks": 228,
+          "profRate": 52.25,
+          "agreeRate": 39.95,
+          "disagreeRate": 60.05
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉五塊村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 66.18,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 55.77,
+          "candVictor": "*",
+          "tks": 295,
+          "profRate": 62.13,
+          "agreeRate": 12.83,
+          "disagreeRate": 87.17
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉潭西村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 59.39,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 22.31,
+          "candVictor": " ",
+          "tks": 89,
+          "profRate": 4.32,
+          "agreeRate": 1.37,
+          "disagreeRate": 98.63
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉潭東村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 66.36,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 34.1,
+          "candVictor": " ",
+          "tks": 118,
+          "profRate": 92.54,
+          "agreeRate": 59.07,
+          "disagreeRate": 40.93
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉客厝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 61.63,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 41.46,
+          "candVictor": " ",
+          "tks": 199,
+          "profRate": 88.01,
+          "agreeRate": 60.03,
+          "disagreeRate": 39.97
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉卓運村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 63.75,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 23.38,
+          "candVictor": " ",
+          "tks": 47,
+          "profRate": 98.76,
+          "agreeRate": 68.37,
+          "disagreeRate": 31.63
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉頂寮村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 62.16,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 40.5,
+          "candVictor": " ",
+          "tks": 260,
+          "profRate": 52.33,
+          "agreeRate": 51.16,
+          "disagreeRate": 48.84
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉下寮村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 64.61,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 41.63,
+          "candVictor": " ",
+          "tks": 368,
+          "profRate": 66.35,
+          "agreeRate": 66.93,
+          "disagreeRate": 33.07
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉龍岩村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 62.67,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 29.4,
+          "candVictor": " ",
+          "tks": 162,
+          "profRate": 44.72,
+          "agreeRate": 36.07,
+          "disagreeRate": 63.93
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉西莊村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 66.11,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 40.16,
+          "candVictor": " ",
+          "tks": 204,
+          "profRate": 72.98,
+          "agreeRate": 61.07,
+          "disagreeRate": 38.93
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉鹿北村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 63.09,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 45.41,
+          "candVictor": " ",
+          "tks": 297,
+          "profRate": 68.7,
+          "agreeRate": 82.91,
+          "disagreeRate": 17.09
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉鹿南村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 63.72,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 52.05,
+          "candVictor": "*",
+          "tks": 254,
+          "profRate": 96.26,
+          "agreeRate": 94.22,
+          "disagreeRate": 5.78
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉瓦磘村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 63.16,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 36.99,
+          "candVictor": " ",
+          "tks": 310,
+          "profRate": 31.28,
+          "agreeRate": 9.37,
+          "disagreeRate": 90.63
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉內寮村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 62.22,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 27.79,
+          "candVictor": " ",
+          "tks": 92,
+          "profRate": 27.23,
+          "agreeRate": 96.61,
+          "disagreeRate": 3.39
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉崙仔村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 63.4,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 31.57,
+          "candVictor": " ",
+          "tks": 149,
+          "profRate": 10.32,
+          "agreeRate": 92.75,
+          "disagreeRate": 7.25
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 元長鄉新吉村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "170",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 68.46,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 40.0,
+          "candVictor": " ",
+          "tks": 174,
+          "profRate": 53.05,
+          "agreeRate": 73.02,
+          "disagreeRate": 26.98
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉四湖村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 65.33,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 49.42,
+          "candVictor": "*",
+          "tks": 513,
+          "profRate": 30.68,
+          "agreeRate": 97.76,
+          "disagreeRate": 2.24
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉湖西村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 70.26,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 53.04,
+          "candVictor": "*",
+          "tks": 758,
+          "profRate": 7.65,
+          "agreeRate": 94.38,
+          "disagreeRate": 5.62
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉新庄村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 63.82,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 43.09,
+          "candVictor": " ",
+          "tks": 159,
+          "profRate": 90.42,
+          "agreeRate": 79.96,
+          "disagreeRate": 20.04
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉溪底村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 62.23,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 35.62,
+          "candVictor": " ",
+          "tks": 192,
+          "profRate": 91.44,
+          "agreeRate": 49.5,
+          "disagreeRate": 50.5
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉鹿場村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 59.98,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 39.67,
+          "candVictor": " ",
+          "tks": 190,
+          "profRate": 29.37,
+          "agreeRate": 36.03,
+          "disagreeRate": 63.97
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉蔡厝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 58.19,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 38.26,
+          "candVictor": " ",
+          "tks": 171,
+          "profRate": 32.97,
+          "agreeRate": 89.77,
+          "disagreeRate": 10.23
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉湖寮村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 51.05,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 38.48,
+          "candVictor": " ",
+          "tks": 127,
+          "profRate": 35.73,
+          "agreeRate": 34.76,
+          "disagreeRate": 65.24
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉施湖村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 55.24,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 49.75,
+          "candVictor": "*",
+          "tks": 294,
+          "profRate": 87.96,
+          "agreeRate": 83.69,
+          "disagreeRate": 16.31
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉羊調村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 58.47,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 45.02,
+          "candVictor": " ",
+          "tks": 217,
+          "profRate": 99.85,
+          "agreeRate": 26.46,
+          "disagreeRate": 73.54
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉內湖村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 50.07,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 37.28,
+          "candVictor": " ",
+          "tks": 129,
+          "profRate": 8.27,
+          "agreeRate": 54.98,
+          "disagreeRate": 45.02
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉飛東村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 53.91,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 39.15,
+          "candVictor": " ",
+          "tks": 101,
+          "profRate": 86.83,
+          "agreeRate": 29.0,
+          "disagreeRate": 71.0
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉飛沙村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 52.73,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 48.37,
+          "candVictor": "*",
+          "tks": 193,
+          "profRate": 3.56,
+          "agreeRate": 72.03,
+          "disagreeRate": 27.97
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉三姓村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 62.54,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 43.94,
+          "candVictor": " ",
+          "tks": 87,
+          "profRate": 61.01,
+          "agreeRate": 53.38,
+          "disagreeRate": 46.62
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉崙北村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 54.03,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 48.11,
+          "candVictor": "*",
+          "tks": 395,
+          "profRate": 92.67,
+          "agreeRate": 52.55,
+          "disagreeRate": 47.45
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉崙南村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 53.65,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.11,
+          "candVictor": " ",
+          "tks": 179,
+          "profRate": 42.68,
+          "agreeRate": 58.06,
+          "disagreeRate": 41.94
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉廣溝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 46.46,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.35,
+          "candVictor": "*",
+          "tks": 134,
+          "profRate": 94.21,
+          "agreeRate": 39.13,
+          "disagreeRate": 60.87
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉萡子村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 52.42,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 23.41,
+          "candVictor": " ",
+          "tks": 96,
+          "profRate": 47.97,
+          "agreeRate": 20.39,
+          "disagreeRate": 79.61
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉萡東村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 52.42,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 24.95,
+          "candVictor": " ",
+          "tks": 121,
+          "profRate": 0.77,
+          "agreeRate": 81.37,
+          "disagreeRate": 18.63
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉林厝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 54.37,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 39.28,
+          "candVictor": " ",
+          "tks": 196,
+          "profRate": 46.52,
+          "agreeRate": 8.73,
+          "disagreeRate": 91.27
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉林東村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 51.59,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 53.95,
+          "candVictor": "*",
+          "tks": 239,
+          "profRate": 25.7,
+          "agreeRate": 90.44,
+          "disagreeRate": 9.56
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 四湖鄉溪尾村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "180",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 54.41,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 50.56,
+          "candVictor": "*",
+          "tks": 182,
+          "profRate": 83.0,
+          "agreeRate": 12.04,
+          "disagreeRate": 87.96
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉口湖村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 61.3,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 52.18,
+          "candVictor": "*",
+          "tks": 323,
+          "profRate": 80.39,
+          "agreeRate": 65.21,
+          "disagreeRate": 34.79
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉湖東村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 62.22,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 55.46,
+          "candVictor": "*",
+          "tks": 371,
+          "profRate": 60.47,
+          "agreeRate": 65.34,
+          "disagreeRate": 34.66
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉頂湖村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 54.53,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 42.53,
+          "candVictor": " ",
+          "tks": 131,
+          "profRate": 38.83,
+          "agreeRate": 2.75,
+          "disagreeRate": 97.25
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉埔南村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 66.47,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 34.19,
+          "candVictor": " ",
+          "tks": 147,
+          "profRate": 45.67,
+          "agreeRate": 26.46,
+          "disagreeRate": 73.54
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉埔北村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 57.55,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 33.05,
+          "candVictor": " ",
+          "tks": 154,
+          "profRate": 93.23,
+          "agreeRate": 32.34,
+          "disagreeRate": 67.66
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉謝厝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 65.77,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 36.82,
+          "candVictor": " ",
+          "tks": 215,
+          "profRate": 51.73,
+          "agreeRate": 8.62,
+          "disagreeRate": 91.38
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉蚵寮村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 58.58,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 36.64,
+          "candVictor": " ",
+          "tks": 270,
+          "profRate": 27.18,
+          "agreeRate": 48.22,
+          "disagreeRate": 51.78
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉下崙村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 54.3,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 40.34,
+          "candVictor": " ",
+          "tks": 403,
+          "profRate": 90.3,
+          "agreeRate": 1.37,
+          "disagreeRate": 98.63
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉崙中村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 53.93,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 40.46,
+          "candVictor": " ",
+          "tks": 297,
+          "profRate": 64.92,
+          "agreeRate": 80.87,
+          "disagreeRate": 19.13
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉崙東村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 60.28,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 42.51,
+          "candVictor": " ",
+          "tks": 332,
+          "profRate": 64.24,
+          "agreeRate": 56.13,
+          "disagreeRate": 43.87
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉青蚶村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 58.24,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 28.14,
+          "candVictor": " ",
+          "tks": 74,
+          "profRate": 98.14,
+          "agreeRate": 75.82,
+          "disagreeRate": 24.18
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉港東村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 56.38,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.77,
+          "candVictor": " ",
+          "tks": 362,
+          "profRate": 59.99,
+          "agreeRate": 60.97,
+          "disagreeRate": 39.03
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉港西村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 59.7,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.69,
+          "candVictor": "*",
+          "tks": 217,
+          "profRate": 9.14,
+          "agreeRate": 86.6,
+          "disagreeRate": 13.4
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉台子村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 61.72,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 38.27,
+          "candVictor": " ",
+          "tks": 411,
+          "profRate": 58.66,
+          "agreeRate": 63.25,
+          "disagreeRate": 36.75
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉成龍村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 60.05,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 38.01,
+          "candVictor": " ",
+          "tks": 187,
+          "profRate": 35.99,
+          "agreeRate": 83.91,
+          "disagreeRate": 16.09
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉梧南村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 66.45,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 37.79,
+          "candVictor": " ",
+          "tks": 407,
+          "profRate": 58.05,
+          "agreeRate": 89.08,
+          "disagreeRate": 10.92
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉梧北村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 67.16,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 26.58,
+          "candVictor": " ",
+          "tks": 189,
+          "profRate": 85.92,
+          "agreeRate": 78.6,
+          "disagreeRate": 21.4
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉水井村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 69.12,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 55.14,
+          "candVictor": "*",
+          "tks": 327,
+          "profRate": 62.55,
+          "agreeRate": 20.4,
+          "disagreeRate": 79.6
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉後厝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 63.79,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 34.16,
+          "candVictor": " ",
+          "tks": 138,
+          "profRate": 35.41,
+          "agreeRate": 13.38,
+          "disagreeRate": 86.62
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉湖口村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 58.87,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 37.62,
+          "candVictor": " ",
+          "tks": 202,
+          "profRate": 39.89,
+          "agreeRate": 93.44,
+          "disagreeRate": 6.56
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 口湖鄉過港村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "190",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 55.3,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.21,
+          "candVictor": " ",
+          "tks": 144,
+          "profRate": 25.34,
+          "agreeRate": 51.78,
+          "disagreeRate": 48.22
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉水北村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 63.89,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 41.21,
+          "candVictor": " ",
+          "tks": 518,
+          "profRate": 35.42,
+          "agreeRate": 22.02,
+          "disagreeRate": 77.98
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉水南村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 69.52,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 38.65,
+          "candVictor": " ",
+          "tks": 497,
+          "profRate": 99.13,
+          "agreeRate": 33.84,
+          "disagreeRate": 66.16
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉萬興村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 62.58,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 27.53,
+          "candVictor": " ",
+          "tks": 109,
+          "profRate": 44.88,
+          "agreeRate": 83.14,
+          "disagreeRate": 16.86
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉尖山村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 68.23,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 36.3,
+          "candVictor": " ",
+          "tks": 151,
+          "profRate": 92.12,
+          "agreeRate": 38.54,
+          "disagreeRate": 61.46
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉大溝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 63.1,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 35.79,
+          "candVictor": " ",
+          "tks": 204,
+          "profRate": 7.96,
+          "agreeRate": 67.69,
+          "disagreeRate": 32.31
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉順興村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 59.73,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 31.16,
+          "candVictor": " ",
+          "tks": 134,
+          "profRate": 71.22,
+          "agreeRate": 50.88,
+          "disagreeRate": 49.12
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉大山村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 65.27,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 27.84,
+          "candVictor": " ",
+          "tks": 169,
+          "profRate": 7.15,
+          "agreeRate": 9.75,
+          "disagreeRate": 90.25
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉後寮村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 62.91,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 38.4,
+          "candVictor": " ",
+          "tks": 144,
+          "profRate": 63.38,
+          "agreeRate": 50.01,
+          "disagreeRate": 49.99
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉春埔村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 63.15,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 38.0,
+          "candVictor": " ",
+          "tks": 209,
+          "profRate": 28.88,
+          "agreeRate": 65.7,
+          "disagreeRate": 34.3
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉西井村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 68.13,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 48.16,
+          "candVictor": " ",
+          "tks": 183,
+          "profRate": 49.99,
+          "agreeRate": 60.48,
+          "disagreeRate": 39.52
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉車港村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 60.48,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 31.45,
+          "candVictor": " ",
+          "tks": 100,
+          "profRate": 82.28,
+          "agreeRate": 79.35,
+          "disagreeRate": 20.65
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉蘇秦村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 58.07,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 31.37,
+          "candVictor": " ",
+          "tks": 160,
+          "profRate": 9.18,
+          "agreeRate": 27.73,
+          "disagreeRate": 72.27
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉灣東村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 62.45,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 46.61,
+          "candVictor": " ",
+          "tks": 158,
+          "profRate": 7.58,
+          "agreeRate": 27.12,
+          "disagreeRate": 72.88
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉灣西村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 60.24,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 39.84,
+          "candVictor": " ",
+          "tks": 194,
+          "profRate": 11.66,
+          "agreeRate": 5.25,
+          "disagreeRate": 94.75
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉蕃薯村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 63.86,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 37.66,
+          "candVictor": " ",
+          "tks": 212,
+          "profRate": 67.34,
+          "agreeRate": 66.8,
+          "disagreeRate": 33.2
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉山腳村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 62.99,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 35.4,
+          "candVictor": " ",
+          "tks": 154,
+          "profRate": 27.83,
+          "agreeRate": 52.05,
+          "disagreeRate": 47.95
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉松北村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 63.48,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 48.6,
+          "candVictor": "*",
+          "tks": 277,
+          "profRate": 10.59,
+          "agreeRate": 18.19,
+          "disagreeRate": 81.81
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉松中村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 65.72,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 29.21,
+          "candVictor": " ",
+          "tks": 85,
+          "profRate": 89.9,
+          "agreeRate": 56.08,
+          "disagreeRate": 43.92
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉松西村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 63.42,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 37.16,
+          "candVictor": " ",
+          "tks": 136,
+          "profRate": 65.49,
+          "agreeRate": 93.43,
+          "disagreeRate": 6.57
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉瓊埔村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 62.5,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 23.68,
+          "candVictor": " ",
+          "tks": 90,
+          "profRate": 49.82,
+          "agreeRate": 54.59,
+          "disagreeRate": 45.41
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉塭底村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 59.49,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 31.68,
+          "candVictor": " ",
+          "tks": 115,
+          "profRate": 85.92,
+          "agreeRate": 48.82,
+          "disagreeRate": 51.18
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉海埔村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 62.26,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 25.86,
+          "candVictor": " ",
+          "tks": 143,
+          "profRate": 53.26,
+          "agreeRate": 71.93,
+          "disagreeRate": 28.07
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉土厝村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 65.83,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 23.97,
+          "candVictor": " ",
+          "tks": 163,
+          "profRate": 8.26,
+          "agreeRate": 36.95,
+          "disagreeRate": 63.05
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第01選區 水林鄉溪墘村",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": "200",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 69.19,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 39.24,
+          "candVictor": " ",
+          "tks": 195,
+          "profRate": 43.27,
+          "agreeRate": 72.96,
+          "disagreeRate": 27.04
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

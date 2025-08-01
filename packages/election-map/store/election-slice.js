@@ -35,6 +35,24 @@ import {
  * @property {string} evcScrollTo - The string (some id) that evc will use to scroll.
  */
 
+/**
+ * Find the latest year that supports a specific subtype
+ * @param {Year[]} years - Array of year configurations
+ * @param {string} subtypeKey - The subtype key to search for
+ * @returns {Year|null} Latest compatible year or fallback to latest year
+ */
+function findLatestYearForSubtype(years, subtypeKey) {
+  if (!subtypeKey) return years[years.length - 1] // fallback to latest
+
+  const compatibleYears = years.filter((year) =>
+    year.subType?.includes(subtypeKey)
+  )
+
+  return compatibleYears.length > 0
+    ? compatibleYears[compatibleYears.length - 1] // latest compatible
+    : years[years.length - 1] // fallback to latest year instead of null
+}
+
 const defaultElectionsData = generateDefaultElectionsData()
 
 /** @type {LevelControl} */
@@ -57,7 +75,7 @@ const defaultControl = {
     defaultElectionConfig.years[defaultElectionConfig.years.length - 1]
       .numbers[0],
   subtype: defaultElectionConfig.subtypes?.find(
-    (subtype) => subtype.key === 'normal'
+    (subtype) => subtype.key === 'recall-july'
   ),
   evcScrollTo: '',
 }
@@ -116,12 +134,18 @@ const electionsSlice = createSlice({
       const newElectionConfig = electionsConfig.find(
         (electionsConfig) => electionsConfig.electionType === newElectionType
       )
-      const newYear =
-        newElectionConfig.years[newElectionConfig.years.length - 1]
-      const newNumber = newYear.numbers && newYear.numbers[0]
-      const newSubtype = newElectionConfig.subtypes?.find(
-        (subtype) => subtype.key === 'normal'
+      // NOTE: Smart default subtype selection
+      const newSubtype =
+        newElectionConfig.subtypes?.find(
+          (subtype) => subtype.key === 'normal'
+        ) || newElectionConfig.subtypes?.[0] // fallback to first subtype
+
+      // NOTE: Find latest year that supports the selected subtype
+      const newYear = findLatestYearForSubtype(
+        newElectionConfig.years,
+        newSubtype?.key
       )
+      const newNumber = newYear?.numbers && newYear.numbers[0]
       // Preview the new election data,
       // if the election is running then reset the data to trigger refetch.
       const newElectionData = getElectionData(
@@ -131,7 +155,12 @@ const electionsSlice = createSlice({
         newSubtype?.key,
         newNumber?.key
       )
-      if (newElectionData.mapData.isRunning) {
+      // 防護性檢查：確保資料存在且 mapData 有效
+      if (
+        newElectionData &&
+        newElectionData.mapData &&
+        newElectionData.mapData.isRunning
+      ) {
         state.data.electionsData = updateElectionsData(
           state.data.electionsData,
           defaultElectionData,
@@ -196,6 +225,34 @@ const electionsSlice = createSlice({
     changeSubtype(state, action) {
       /** @type {ElectionSubtype} */
       const newSubtype = action.payload
+
+      // NOTE: Auto-adjust year for recall-july
+      if (newSubtype.key === 'recall-july') {
+        const recallYear = state.config.years.find((year) =>
+          year.subType?.includes('recall-july')
+        )
+        if (recallYear) {
+          state.control.year = recallYear // Auto-set to 2025
+        }
+      } else {
+        // NOTE: Ensure current year is valid for new subtype
+        const currentYear = state.control.year
+        const isYearValidForSubtype = currentYear?.subType?.includes(
+          newSubtype.key
+        )
+
+        if (!isYearValidForSubtype) {
+          // Find latest compatible year
+          const compatibleYear = findLatestYearForSubtype(
+            state.config.years,
+            newSubtype.key
+          )
+          if (compatibleYear) {
+            state.control.year = compatibleYear
+          }
+        }
+      }
+
       // CouncilMember share the same seat data between subtypes.
       if (state.config.electionType === 'councilMember') {
         const oldElectionData = getElectionData(
@@ -212,8 +269,15 @@ const electionsSlice = createSlice({
           newSubtype?.key,
           state.control.number?.key
         )
-        // [to-do] check if the seat data is sync to the state.data.electionsData
-        newElectionData.seatData = oldElectionData.seatData
+        // 防護性檢查：確保兩個 electionData 都存在且有 seatData
+        if (
+          oldElectionData &&
+          newElectionData &&
+          oldElectionData.seatData &&
+          newElectionData.seatData
+        ) {
+          newElectionData.seatData = oldElectionData.seatData
+        }
       } else if (state.config.electionType === 'legislator') {
         const oldElectionData = getElectionData(
           state.data.electionsData,
@@ -229,7 +293,15 @@ const electionsSlice = createSlice({
           newSubtype?.key,
           state.control.number?.key
         )
-        newElectionData.seatData.all = oldElectionData.seatData.all
+        // 防護性檢查：確保兩個 electionData 都存在且有 seatData
+        if (
+          oldElectionData &&
+          newElectionData &&
+          oldElectionData.seatData &&
+          newElectionData.seatData
+        ) {
+          newElectionData.seatData.all = oldElectionData.seatData.all
+        }
         state.control.level = defaultLevelControl
       }
       if (state.compare.info.compareMode) {

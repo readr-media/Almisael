@@ -48,6 +48,14 @@ export const Dashboard = ({
           onClick={() => {
             dispatch(mapActions.changeUiShowTutorial(false))
             dispatch(electionActions.changeElection(defaultElectionType))
+            // Switch to recall subtype after tutorial
+            dispatch(
+              electionActions.changeSubtype({
+                name: '罷免',
+                key: 'recall-july',
+                mobileOnly: false,
+              })
+            )
             dispatch(mapActions.resetUiDistrictNames())
             dispatch(mapActions.resetMapFeature())
           }}

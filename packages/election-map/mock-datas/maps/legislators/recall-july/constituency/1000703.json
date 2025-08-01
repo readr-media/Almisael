@@ -1,0 +1,4585 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "彰化縣 第03選區 溪湖鎮光平里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 73.87,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.96,
+          "candVictor": "*",
+          "tks": 443,
+          "profRate": 11.69,
+          "agreeRate": 33.23,
+          "disagreeRate": 66.77
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮平和里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 77.82,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.81,
+          "candVictor": "*",
+          "tks": 245,
+          "profRate": 20.62,
+          "agreeRate": 85.13,
+          "disagreeRate": 14.87
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮太平里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 72.81,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 60.05,
+          "candVictor": "*",
+          "tks": 705,
+          "profRate": 60.53,
+          "agreeRate": 23.27,
+          "disagreeRate": 76.73
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮光華里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 76.9,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.77,
+          "candVictor": "*",
+          "tks": 181,
+          "profRate": 23.81,
+          "agreeRate": 86.69,
+          "disagreeRate": 13.31
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮湖東里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 73.25,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.54,
+          "candVictor": "*",
+          "tks": 1681,
+          "profRate": 0.79,
+          "agreeRate": 86.74,
+          "disagreeRate": 13.26
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮中山里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 71.98,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.34,
+          "candVictor": "*",
+          "tks": 831,
+          "profRate": 43.06,
+          "agreeRate": 93.07,
+          "disagreeRate": 6.93
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮西溪里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 74.88,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.11,
+          "candVictor": "*",
+          "tks": 696,
+          "profRate": 40.6,
+          "agreeRate": 86.99,
+          "disagreeRate": 13.01
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮中竹里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 72.89,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.2,
+          "candVictor": "*",
+          "tks": 284,
+          "profRate": 7.51,
+          "agreeRate": 14.51,
+          "disagreeRate": 85.49
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮東寮里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.91,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.48,
+          "candVictor": "*",
+          "tks": 1387,
+          "profRate": 93.4,
+          "agreeRate": 68.85,
+          "disagreeRate": 31.15
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮西寮里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 76.15,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 56.16,
+          "candVictor": "*",
+          "tks": 862,
+          "profRate": 0.17,
+          "agreeRate": 84.87,
+          "disagreeRate": 15.13
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮大突里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 72.82,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.56,
+          "candVictor": "*",
+          "tks": 1385,
+          "profRate": 55.85,
+          "agreeRate": 11.46,
+          "disagreeRate": 88.54
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮北勢里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 73.43,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.48,
+          "candVictor": "*",
+          "tks": 522,
+          "profRate": 19.03,
+          "agreeRate": 57.3,
+          "disagreeRate": 42.7
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮汴頭里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 73.21,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.26,
+          "candVictor": "*",
+          "tks": 1087,
+          "profRate": 55.55,
+          "agreeRate": 72.8,
+          "disagreeRate": 27.2
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮大竹里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 72.8,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.08,
+          "candVictor": "*",
+          "tks": 914,
+          "profRate": 18.42,
+          "agreeRate": 86.77,
+          "disagreeRate": 13.23
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮湖西里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 71.84,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.11,
+          "candVictor": "*",
+          "tks": 846,
+          "profRate": 16.91,
+          "agreeRate": 83.82,
+          "disagreeRate": 16.18
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮田中里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 73.31,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 47.11,
+          "candVictor": " ",
+          "tks": 261,
+          "profRate": 99.46,
+          "agreeRate": 13.08,
+          "disagreeRate": 86.92
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮河東里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 71.21,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.28,
+          "candVictor": "*",
+          "tks": 649,
+          "profRate": 69.63,
+          "agreeRate": 60.71,
+          "disagreeRate": 39.29
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮頂庄里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 69.31,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.54,
+          "candVictor": "*",
+          "tks": 248,
+          "profRate": 70.95,
+          "agreeRate": 16.15,
+          "disagreeRate": 83.85
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮忠覺里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 73.34,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.14,
+          "candVictor": "*",
+          "tks": 472,
+          "profRate": 16.61,
+          "agreeRate": 85.5,
+          "disagreeRate": 14.5
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮湳底里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 73.74,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.37,
+          "candVictor": "*",
+          "tks": 243,
+          "profRate": 91.8,
+          "agreeRate": 57.28,
+          "disagreeRate": 42.72
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮大庭里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 72.39,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.27,
+          "candVictor": "*",
+          "tks": 489,
+          "profRate": 44.87,
+          "agreeRate": 85.84,
+          "disagreeRate": 14.16
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮媽厝里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 68.83,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 45.78,
+          "candVictor": " ",
+          "tks": 363,
+          "profRate": 68.88,
+          "agreeRate": 76.49,
+          "disagreeRate": 23.51
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮番婆里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 70.25,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.13,
+          "candVictor": "*",
+          "tks": 620,
+          "profRate": 78.19,
+          "agreeRate": 52.32,
+          "disagreeRate": 47.68
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮西勢里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 69.82,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.76,
+          "candVictor": "*",
+          "tks": 756,
+          "profRate": 79.1,
+          "agreeRate": 64.12,
+          "disagreeRate": 35.88
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪湖鎮東溪里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "110",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 71.7,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 48.15,
+          "candVictor": " ",
+          "tks": 443,
+          "profRate": 99.99,
+          "agreeRate": 73.58,
+          "disagreeRate": 26.42
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉埔鹽村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 76.31,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.86,
+          "candVictor": "*",
+          "tks": 694,
+          "profRate": 7.47,
+          "agreeRate": 16.66,
+          "disagreeRate": 83.34
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉埔南村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.44,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.87,
+          "candVictor": "*",
+          "tks": 600,
+          "profRate": 85.18,
+          "agreeRate": 69.84,
+          "disagreeRate": 30.16
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉廍子村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.48,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 63.55,
+          "candVictor": "*",
+          "tks": 551,
+          "profRate": 96.2,
+          "agreeRate": 55.44,
+          "disagreeRate": 44.56
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉出水村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 74.16,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 63.55,
+          "candVictor": "*",
+          "tks": 394,
+          "profRate": 44.93,
+          "agreeRate": 18.19,
+          "disagreeRate": 81.81
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉南港村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.88,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.81,
+          "candVictor": "*",
+          "tks": 711,
+          "profRate": 68.22,
+          "agreeRate": 27.21,
+          "disagreeRate": 72.79
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉打廉村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 70.42,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.97,
+          "candVictor": "*",
+          "tks": 326,
+          "profRate": 27.28,
+          "agreeRate": 94.69,
+          "disagreeRate": 5.31
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉豐澤村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.97,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.83,
+          "candVictor": "*",
+          "tks": 493,
+          "profRate": 26.04,
+          "agreeRate": 64.49,
+          "disagreeRate": 35.51
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉崑崙村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 74.24,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.2,
+          "candVictor": "*",
+          "tks": 433,
+          "profRate": 84.03,
+          "agreeRate": 71.16,
+          "disagreeRate": 28.84
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉角樹村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 73.85,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 61.61,
+          "candVictor": "*",
+          "tks": 284,
+          "profRate": 36.3,
+          "agreeRate": 72.57,
+          "disagreeRate": 27.43
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉好修村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 70.87,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 63.43,
+          "candVictor": "*",
+          "tks": 798,
+          "profRate": 26.05,
+          "agreeRate": 66.62,
+          "disagreeRate": 33.38
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉西湖村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 70.07,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 60.91,
+          "candVictor": "*",
+          "tks": 815,
+          "profRate": 39.18,
+          "agreeRate": 86.34,
+          "disagreeRate": 13.66
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉大有村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 71.54,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.86,
+          "candVictor": "*",
+          "tks": 416,
+          "profRate": 25.72,
+          "agreeRate": 6.06,
+          "disagreeRate": 93.94
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉新興村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 77.3,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 67.7,
+          "candVictor": "*",
+          "tks": 218,
+          "profRate": 3.01,
+          "agreeRate": 94.33,
+          "disagreeRate": 5.67
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉永平村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 68.86,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.05,
+          "candVictor": "*",
+          "tks": 411,
+          "profRate": 65.0,
+          "agreeRate": 33.88,
+          "disagreeRate": 66.12
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉永樂村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 73.27,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 60.07,
+          "candVictor": "*",
+          "tks": 346,
+          "profRate": 85.96,
+          "agreeRate": 52.84,
+          "disagreeRate": 47.16
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉石埤村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 68.82,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.76,
+          "candVictor": "*",
+          "tks": 532,
+          "profRate": 85.55,
+          "agreeRate": 36.44,
+          "disagreeRate": 63.56
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉天盛村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 71.43,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 60.9,
+          "candVictor": "*",
+          "tks": 338,
+          "profRate": 39.32,
+          "agreeRate": 73.88,
+          "disagreeRate": 26.12
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉太平村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 68.8,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 63.49,
+          "candVictor": "*",
+          "tks": 633,
+          "profRate": 93.12,
+          "agreeRate": 23.87,
+          "disagreeRate": 76.13
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉新水村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 68.69,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 70.64,
+          "candVictor": "*",
+          "tks": 676,
+          "profRate": 28.83,
+          "agreeRate": 11.43,
+          "disagreeRate": 88.57
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉三省村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 70.18,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.24,
+          "candVictor": "*",
+          "tks": 490,
+          "profRate": 99.35,
+          "agreeRate": 99.38,
+          "disagreeRate": 0.62
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔鹽鄉南新村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "140",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 70.87,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 65.23,
+          "candVictor": "*",
+          "tks": 574,
+          "profRate": 80.35,
+          "agreeRate": 22.43,
+          "disagreeRate": 77.57
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉東門村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 76.42,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.65,
+          "candVictor": "*",
+          "tks": 1311,
+          "profRate": 15.55,
+          "agreeRate": 47.57,
+          "disagreeRate": 52.43
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉埔心村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.71,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 50.78,
+          "candVictor": "*",
+          "tks": 421,
+          "profRate": 44.43,
+          "agreeRate": 12.17,
+          "disagreeRate": 87.83
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉義民村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.78,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.25,
+          "candVictor": "*",
+          "tks": 616,
+          "profRate": 26.06,
+          "agreeRate": 95.25,
+          "disagreeRate": 4.75
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉油車村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 74.18,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.36,
+          "candVictor": "*",
+          "tks": 470,
+          "profRate": 61.33,
+          "agreeRate": 20.05,
+          "disagreeRate": 79.95
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉瓦北村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 75.21,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 48.89,
+          "candVictor": "*",
+          "tks": 593,
+          "profRate": 54.25,
+          "agreeRate": 63.73,
+          "disagreeRate": 36.27
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉瓦中村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.49,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 49.54,
+          "candVictor": "*",
+          "tks": 696,
+          "profRate": 14.7,
+          "agreeRate": 21.06,
+          "disagreeRate": 78.94
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉瓦南村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 75.88,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 50.93,
+          "candVictor": "*",
+          "tks": 522,
+          "profRate": 38.22,
+          "agreeRate": 59.3,
+          "disagreeRate": 40.7
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉經口村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 72.18,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 46.9,
+          "candVictor": " ",
+          "tks": 748,
+          "profRate": 88.12,
+          "agreeRate": 27.79,
+          "disagreeRate": 72.21
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉太平村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 73.16,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 51.91,
+          "candVictor": "*",
+          "tks": 719,
+          "profRate": 96.21,
+          "agreeRate": 72.09,
+          "disagreeRate": 27.91
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉大華村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.13,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.46,
+          "candVictor": "*",
+          "tks": 254,
+          "profRate": 32.43,
+          "agreeRate": 96.07,
+          "disagreeRate": 3.93
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉仁里村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 72.64,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 56.05,
+          "candVictor": "*",
+          "tks": 477,
+          "profRate": 57.17,
+          "agreeRate": 97.69,
+          "disagreeRate": 2.31
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉舊舘村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 74.07,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 50.28,
+          "candVictor": "*",
+          "tks": 530,
+          "profRate": 40.73,
+          "agreeRate": 66.77,
+          "disagreeRate": 33.23
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉南舘村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 72.32,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 47.73,
+          "candVictor": "*",
+          "tks": 337,
+          "profRate": 22.75,
+          "agreeRate": 7.43,
+          "disagreeRate": 92.57
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉新舘村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 70.35,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.88,
+          "candVictor": "*",
+          "tks": 340,
+          "profRate": 29.91,
+          "agreeRate": 4.81,
+          "disagreeRate": 95.19
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉芎蕉村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 73.97,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 51.58,
+          "candVictor": "*",
+          "tks": 686,
+          "profRate": 27.14,
+          "agreeRate": 11.33,
+          "disagreeRate": 88.67
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉羅厝村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 70.46,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 43.74,
+          "candVictor": " ",
+          "tks": 377,
+          "profRate": 84.88,
+          "agreeRate": 69.27,
+          "disagreeRate": 30.73
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉梧鳳村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 69.36,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 51.13,
+          "candVictor": "*",
+          "tks": 295,
+          "profRate": 0.4,
+          "agreeRate": 24.8,
+          "disagreeRate": 75.2
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉二重村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 72.98,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 48.1,
+          "candVictor": "*",
+          "tks": 482,
+          "profRate": 58.14,
+          "agreeRate": 87.63,
+          "disagreeRate": 12.37
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉埤霞村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 74.04,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.74,
+          "candVictor": "*",
+          "tks": 277,
+          "profRate": 52.87,
+          "agreeRate": 71.9,
+          "disagreeRate": 28.1
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埔心鄉埤脚村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "150",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 71.75,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 63.92,
+          "candVictor": "*",
+          "tks": 395,
+          "profRate": 3.72,
+          "agreeRate": 27.68,
+          "disagreeRate": 72.32
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮中寮里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.17,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 47.83,
+          "candVictor": " ",
+          "tks": 882,
+          "profRate": 11.62,
+          "agreeRate": 76.8,
+          "disagreeRate": 23.2
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮大道里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 74.99,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 45.7,
+          "candVictor": " ",
+          "tks": 638,
+          "profRate": 24.22,
+          "agreeRate": 49.08,
+          "disagreeRate": 50.92
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮西德里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 73.94,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 51.49,
+          "candVictor": "*",
+          "tks": 1629,
+          "profRate": 41.98,
+          "agreeRate": 83.18,
+          "disagreeRate": 16.82
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮西安里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 72.41,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.82,
+          "candVictor": "*",
+          "tks": 636,
+          "profRate": 12.17,
+          "agreeRate": 74.03,
+          "disagreeRate": 25.97
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮光復里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.9,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.27,
+          "candVictor": "*",
+          "tks": 652,
+          "profRate": 92.03,
+          "agreeRate": 15.11,
+          "disagreeRate": 84.89
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮新政里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 69.54,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 50.5,
+          "candVictor": "*",
+          "tks": 252,
+          "profRate": 57.3,
+          "agreeRate": 53.06,
+          "disagreeRate": 46.94
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮重慶里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 73.27,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 44.69,
+          "candVictor": " ",
+          "tks": 160,
+          "profRate": 7.04,
+          "agreeRate": 74.09,
+          "disagreeRate": 25.91
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮五權里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 73.02,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.08,
+          "candVictor": "*",
+          "tks": 233,
+          "profRate": 74.82,
+          "agreeRate": 61.67,
+          "disagreeRate": 38.33
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮七星里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 73.05,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 48.57,
+          "candVictor": "*",
+          "tks": 474,
+          "profRate": 83.38,
+          "agreeRate": 5.25,
+          "disagreeRate": 94.75
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮居仁里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 77.11,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.3,
+          "candVictor": "*",
+          "tks": 527,
+          "profRate": 22.68,
+          "agreeRate": 67.45,
+          "disagreeRate": 32.55
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮東光里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 74.54,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 50.69,
+          "candVictor": "*",
+          "tks": 812,
+          "profRate": 13.77,
+          "agreeRate": 24.84,
+          "disagreeRate": 75.16
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮文昌里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 72.92,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.37,
+          "candVictor": "*",
+          "tks": 1208,
+          "profRate": 10.48,
+          "agreeRate": 24.13,
+          "disagreeRate": 75.87
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮中和里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 71.76,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.02,
+          "candVictor": "*",
+          "tks": 470,
+          "profRate": 69.36,
+          "agreeRate": 59.06,
+          "disagreeRate": 40.94
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮新生里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 67.37,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 56.83,
+          "candVictor": "*",
+          "tks": 724,
+          "profRate": 28.49,
+          "agreeRate": 24.34,
+          "disagreeRate": 75.66
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 北斗鎮大新里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "190",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 71.23,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 56.51,
+          "candVictor": "*",
+          "tks": 686,
+          "profRate": 60.76,
+          "agreeRate": 80.16,
+          "disagreeRate": 19.84
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮豐田里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 66.97,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.79,
+          "candVictor": "*",
+          "tks": 881,
+          "profRate": 25.02,
+          "agreeRate": 22.0,
+          "disagreeRate": 78.0
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮東和里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 71.41,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.17,
+          "candVictor": "*",
+          "tks": 733,
+          "profRate": 1.31,
+          "agreeRate": 0.76,
+          "disagreeRate": 99.24
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮南光里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 70.69,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.35,
+          "candVictor": "*",
+          "tks": 1241,
+          "profRate": 15.8,
+          "agreeRate": 44.42,
+          "disagreeRate": 55.58
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮西平里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 69.48,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.34,
+          "candVictor": "*",
+          "tks": 560,
+          "profRate": 83.46,
+          "agreeRate": 33.52,
+          "disagreeRate": 66.48
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮北平里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 69.96,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.41,
+          "candVictor": "*",
+          "tks": 1061,
+          "profRate": 96.93,
+          "agreeRate": 93.97,
+          "disagreeRate": 6.03
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮中西里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 63.02,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 60.78,
+          "candVictor": "*",
+          "tks": 564,
+          "profRate": 81.64,
+          "agreeRate": 15.22,
+          "disagreeRate": 84.78
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮廣興里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 65.55,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.89,
+          "candVictor": "*",
+          "tks": 438,
+          "profRate": 77.86,
+          "agreeRate": 30.21,
+          "disagreeRate": 69.79
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮香田里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 63.17,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.56,
+          "candVictor": "*",
+          "tks": 318,
+          "profRate": 40.41,
+          "agreeRate": 89.88,
+          "disagreeRate": 10.12
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮外竹里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 64.71,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.56,
+          "candVictor": "*",
+          "tks": 342,
+          "profRate": 96.54,
+          "agreeRate": 55.36,
+          "disagreeRate": 44.64
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮興華里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 69.55,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 61.14,
+          "candVictor": "*",
+          "tks": 461,
+          "profRate": 86.92,
+          "agreeRate": 97.76,
+          "disagreeRate": 2.24
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮東興里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 68.84,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.98,
+          "candVictor": "*",
+          "tks": 604,
+          "profRate": 23.93,
+          "agreeRate": 59.3,
+          "disagreeRate": 40.7
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮後厝里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 70.42,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 59.49,
+          "candVictor": "*",
+          "tks": 1373,
+          "profRate": 92.77,
+          "agreeRate": 42.39,
+          "disagreeRate": 57.61
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮頂厝里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 60.8,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 56.15,
+          "candVictor": "*",
+          "tks": 406,
+          "profRate": 97.04,
+          "agreeRate": 81.29,
+          "disagreeRate": 18.71
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮趙甲里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 67.33,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.19,
+          "candVictor": "*",
+          "tks": 501,
+          "profRate": 22.47,
+          "agreeRate": 47.71,
+          "disagreeRate": 52.29
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮振興里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 66.0,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.89,
+          "candVictor": "*",
+          "tks": 411,
+          "profRate": 95.92,
+          "agreeRate": 15.85,
+          "disagreeRate": 84.15
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮萬興里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 70.81,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.13,
+          "candVictor": "*",
+          "tks": 286,
+          "profRate": 29.26,
+          "agreeRate": 11.16,
+          "disagreeRate": 88.84
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮永興里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 67.28,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.18,
+          "candVictor": "*",
+          "tks": 506,
+          "profRate": 20.94,
+          "agreeRate": 93.32,
+          "disagreeRate": 6.68
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮西庄里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 68.91,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 48.94,
+          "candVictor": "*",
+          "tks": 415,
+          "profRate": 49.96,
+          "agreeRate": 82.19,
+          "disagreeRate": 17.81
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮梅芳里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 69.07,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 56.96,
+          "candVictor": "*",
+          "tks": 397,
+          "profRate": 92.16,
+          "agreeRate": 20.37,
+          "disagreeRate": 79.63
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮華崙里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 68.27,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 60.86,
+          "candVictor": "*",
+          "tks": 1348,
+          "profRate": 46.03,
+          "agreeRate": 95.73,
+          "disagreeRate": 4.27
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮萬合里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 63.69,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 64.69,
+          "candVictor": "*",
+          "tks": 414,
+          "profRate": 32.09,
+          "agreeRate": 57.76,
+          "disagreeRate": 42.24
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮東勢里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 66.12,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 63.21,
+          "candVictor": "*",
+          "tks": 378,
+          "profRate": 85.58,
+          "agreeRate": 86.48,
+          "disagreeRate": 13.52
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮大永里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 69.55,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 59.27,
+          "candVictor": "*",
+          "tks": 323,
+          "profRate": 85.37,
+          "agreeRate": 99.84,
+          "disagreeRate": 0.16
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮原斗里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 73.36,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.86,
+          "candVictor": "*",
+          "tks": 446,
+          "profRate": 34.46,
+          "agreeRate": 38.12,
+          "disagreeRate": 61.88
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮西斗里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 70.25,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.46,
+          "candVictor": "*",
+          "tks": 363,
+          "profRate": 66.56,
+          "agreeRate": 41.31,
+          "disagreeRate": 58.69
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮東華里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 69.46,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 48.19,
+          "candVictor": " ",
+          "tks": 306,
+          "profRate": 42.11,
+          "agreeRate": 88.79,
+          "disagreeRate": 11.21
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 二林鎮復豐里",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "200",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 66.82,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 51.16,
+          "candVictor": "*",
+          "tks": 221,
+          "profRate": 13.0,
+          "agreeRate": 40.81,
+          "disagreeRate": 59.19
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉和豊村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 67.52,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.13,
+          "candVictor": "*",
+          "tks": 819,
+          "profRate": 46.16,
+          "agreeRate": 60.22,
+          "disagreeRate": 39.78
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉興農村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 69.42,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.76,
+          "candVictor": "*",
+          "tks": 650,
+          "profRate": 14.19,
+          "agreeRate": 29.72,
+          "disagreeRate": 70.28
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉埤頭村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 68.22,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 47.22,
+          "candVictor": " ",
+          "tks": 458,
+          "profRate": 96.08,
+          "agreeRate": 18.04,
+          "disagreeRate": 81.96
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉豊崙村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 66.51,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 62.99,
+          "candVictor": "*",
+          "tks": 868,
+          "profRate": 61.47,
+          "agreeRate": 93.29,
+          "disagreeRate": 6.71
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉崙子村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 69.77,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.76,
+          "candVictor": "*",
+          "tks": 421,
+          "profRate": 55.81,
+          "agreeRate": 28.63,
+          "disagreeRate": 71.37
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉永豐村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 68.42,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.7,
+          "candVictor": "*",
+          "tks": 547,
+          "profRate": 74.76,
+          "agreeRate": 63.9,
+          "disagreeRate": 36.1
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉合興村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.73,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.91,
+          "candVictor": "*",
+          "tks": 1306,
+          "profRate": 94.14,
+          "agreeRate": 27.85,
+          "disagreeRate": 72.15
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉平原村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 70.95,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.42,
+          "candVictor": "*",
+          "tks": 859,
+          "profRate": 92.68,
+          "agreeRate": 8.24,
+          "disagreeRate": 91.76
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉崙腳村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 72.94,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.24,
+          "candVictor": "*",
+          "tks": 269,
+          "profRate": 10.01,
+          "agreeRate": 14.09,
+          "disagreeRate": 85.91
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉元埔村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 71.12,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 45.74,
+          "candVictor": " ",
+          "tks": 177,
+          "profRate": 36.54,
+          "agreeRate": 2.49,
+          "disagreeRate": 97.51
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉芙朝村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 67.91,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 56.71,
+          "candVictor": "*",
+          "tks": 528,
+          "profRate": 47.83,
+          "agreeRate": 68.51,
+          "disagreeRate": 31.49
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉新庄村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 71.09,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 50.99,
+          "candVictor": "*",
+          "tks": 336,
+          "profRate": 90.34,
+          "agreeRate": 42.33,
+          "disagreeRate": 57.67
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉陸嘉村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 71.95,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.17,
+          "candVictor": "*",
+          "tks": 307,
+          "profRate": 53.48,
+          "agreeRate": 26.03,
+          "disagreeRate": 73.97
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉竹圍村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 67.75,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 49.78,
+          "candVictor": "*",
+          "tks": 341,
+          "profRate": 91.04,
+          "agreeRate": 25.49,
+          "disagreeRate": 74.51
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉中和村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 69.98,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 51.48,
+          "candVictor": "*",
+          "tks": 487,
+          "profRate": 86.47,
+          "agreeRate": 74.43,
+          "disagreeRate": 25.57
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉庄內村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 66.54,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 45.96,
+          "candVictor": " ",
+          "tks": 307,
+          "profRate": 48.34,
+          "agreeRate": 43.39,
+          "disagreeRate": 56.61
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 埤頭鄉大湖村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "220",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 67.23,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 47.7,
+          "candVictor": " ",
+          "tks": 280,
+          "profRate": 2.86,
+          "agreeRate": 43.34,
+          "disagreeRate": 56.66
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉芳苑村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 60.52,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 43.89,
+          "candVictor": " ",
+          "tks": 230,
+          "profRate": 82.8,
+          "agreeRate": 68.93,
+          "disagreeRate": 31.07
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉芳中村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 68.8,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.96,
+          "candVictor": "*",
+          "tks": 134,
+          "profRate": 19.23,
+          "agreeRate": 82.96,
+          "disagreeRate": 17.04
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉仁愛村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 62.14,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.57,
+          "candVictor": "*",
+          "tks": 233,
+          "profRate": 64.66,
+          "agreeRate": 15.23,
+          "disagreeRate": 84.77
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉信義村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 52.97,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 46.83,
+          "candVictor": " ",
+          "tks": 118,
+          "profRate": 33.44,
+          "agreeRate": 9.91,
+          "disagreeRate": 90.09
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉後寮村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 65.08,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 63.04,
+          "candVictor": "*",
+          "tks": 353,
+          "profRate": 46.02,
+          "agreeRate": 69.62,
+          "disagreeRate": 30.38
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉三合村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 67.12,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 51.61,
+          "candVictor": "*",
+          "tks": 674,
+          "profRate": 16.45,
+          "agreeRate": 11.31,
+          "disagreeRate": 88.69
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉永興村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 64.98,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.41,
+          "candVictor": "*",
+          "tks": 457,
+          "profRate": 17.12,
+          "agreeRate": 84.94,
+          "disagreeRate": 15.06
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉新街村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 58.4,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.63,
+          "candVictor": "*",
+          "tks": 238,
+          "profRate": 99.79,
+          "agreeRate": 44.11,
+          "disagreeRate": 55.89
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉路上村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 58.87,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 56.55,
+          "candVictor": "*",
+          "tks": 190,
+          "profRate": 28.5,
+          "agreeRate": 42.91,
+          "disagreeRate": 57.09
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉路平村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 72.21,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 62.55,
+          "candVictor": "*",
+          "tks": 334,
+          "profRate": 49.45,
+          "agreeRate": 33.9,
+          "disagreeRate": 66.1
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉三成村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 61.44,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.83,
+          "candVictor": "*",
+          "tks": 295,
+          "profRate": 55.03,
+          "agreeRate": 71.55,
+          "disagreeRate": 28.45
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉福榮村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 61.45,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 49.37,
+          "candVictor": "*",
+          "tks": 156,
+          "profRate": 76.28,
+          "agreeRate": 1.78,
+          "disagreeRate": 98.22
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉頂廍村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 68.36,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 47.08,
+          "candVictor": " ",
+          "tks": 169,
+          "profRate": 21.09,
+          "agreeRate": 17.59,
+          "disagreeRate": 82.41
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉王功村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 64.89,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 37.5,
+          "candVictor": " ",
+          "tks": 477,
+          "profRate": 14.33,
+          "agreeRate": 40.19,
+          "disagreeRate": 59.81
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉博愛村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 68.32,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 36.34,
+          "candVictor": " ",
+          "tks": 157,
+          "profRate": 67.04,
+          "agreeRate": 63.88,
+          "disagreeRate": 36.12
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉和平村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 65.26,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 47.49,
+          "candVictor": " ",
+          "tks": 208,
+          "profRate": 42.65,
+          "agreeRate": 75.91,
+          "disagreeRate": 24.09
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉興仁村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 62.16,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 37.86,
+          "candVictor": " ",
+          "tks": 279,
+          "profRate": 34.47,
+          "agreeRate": 25.95,
+          "disagreeRate": 74.05
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉民生村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 65.25,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 41.78,
+          "candVictor": " ",
+          "tks": 160,
+          "profRate": 57.79,
+          "agreeRate": 26.98,
+          "disagreeRate": 73.02
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉新寶村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 63.32,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 44.74,
+          "candVictor": " ",
+          "tks": 417,
+          "profRate": 96.22,
+          "agreeRate": 65.61,
+          "disagreeRate": 34.39
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉五俊村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 56.18,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.73,
+          "candVictor": "*",
+          "tks": 137,
+          "profRate": 61.75,
+          "agreeRate": 51.6,
+          "disagreeRate": 48.4
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉草湖村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 66.57,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 56.89,
+          "candVictor": "*",
+          "tks": 508,
+          "profRate": 10.98,
+          "agreeRate": 66.54,
+          "disagreeRate": 33.46
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉建平村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 64.29,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.92,
+          "candVictor": "*",
+          "tks": 661,
+          "profRate": 45.89,
+          "agreeRate": 34.64,
+          "disagreeRate": 65.36
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉崙腳村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 63.8,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 60.49,
+          "candVictor": "*",
+          "tks": 274,
+          "profRate": 98.8,
+          "agreeRate": 16.72,
+          "disagreeRate": 83.28
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉文津村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 59.65,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.44,
+          "candVictor": "*",
+          "tks": 316,
+          "profRate": 12.45,
+          "agreeRate": 83.55,
+          "disagreeRate": 16.45
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉新生村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 63.85,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 50.84,
+          "candVictor": "*",
+          "tks": 392,
+          "profRate": 11.43,
+          "agreeRate": 78.84,
+          "disagreeRate": 21.16
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 芳苑鄉漢寶村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "230",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 67.69,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 50.33,
+          "candVictor": "*",
+          "tks": 1001,
+          "profRate": 60.02,
+          "agreeRate": 17.34,
+          "disagreeRate": 82.66
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉山腳村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 58.19,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.34,
+          "candVictor": "*",
+          "tks": 358,
+          "profRate": 23.06,
+          "agreeRate": 13.79,
+          "disagreeRate": 86.21
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉潭墘村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 61.7,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 42.95,
+          "candVictor": " ",
+          "tks": 262,
+          "profRate": 36.02,
+          "agreeRate": 16.98,
+          "disagreeRate": 83.02
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉大城村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 65.35,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 56.97,
+          "candVictor": "*",
+          "tks": 331,
+          "profRate": 54.13,
+          "agreeRate": 42.37,
+          "disagreeRate": 57.63
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉東城村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 66.14,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.93,
+          "candVictor": "*",
+          "tks": 462,
+          "profRate": 78.41,
+          "agreeRate": 63.8,
+          "disagreeRate": 36.2
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉西城村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 61.21,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 58.3,
+          "candVictor": "*",
+          "tks": 260,
+          "profRate": 68.39,
+          "agreeRate": 96.4,
+          "disagreeRate": 3.6
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉上山村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 63.03,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.98,
+          "candVictor": "*",
+          "tks": 356,
+          "profRate": 87.51,
+          "agreeRate": 99.18,
+          "disagreeRate": 0.82
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉永和村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 59.25,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.94,
+          "candVictor": "*",
+          "tks": 208,
+          "profRate": 27.94,
+          "agreeRate": 68.26,
+          "disagreeRate": 31.74
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉公館村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 59.79,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 59.71,
+          "candVictor": "*",
+          "tks": 332,
+          "profRate": 31.86,
+          "agreeRate": 30.32,
+          "disagreeRate": 69.68
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉豐美村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 59.34,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 44.84,
+          "candVictor": " ",
+          "tks": 204,
+          "profRate": 71.54,
+          "agreeRate": 39.84,
+          "disagreeRate": 60.16
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉三豐村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 52.69,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.05,
+          "candVictor": "*",
+          "tks": 170,
+          "profRate": 28.99,
+          "agreeRate": 10.0,
+          "disagreeRate": 90.0
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉菜寮村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 60.19,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.97,
+          "candVictor": "*",
+          "tks": 331,
+          "profRate": 20.16,
+          "agreeRate": 6.68,
+          "disagreeRate": 93.32
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉東港村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 59.54,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 64.42,
+          "candVictor": "*",
+          "tks": 411,
+          "profRate": 51.5,
+          "agreeRate": 89.97,
+          "disagreeRate": 10.03
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉西港村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 59.88,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 62.39,
+          "candVictor": "*",
+          "tks": 297,
+          "profRate": 29.96,
+          "agreeRate": 26.53,
+          "disagreeRate": 73.47
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉頂庄村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 52.98,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 52.94,
+          "candVictor": "*",
+          "tks": 162,
+          "profRate": 26.49,
+          "agreeRate": 67.33,
+          "disagreeRate": 32.67
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 大城鄉臺西村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "240",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 57.16,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 51.57,
+          "candVictor": "*",
+          "tks": 230,
+          "profRate": 24.77,
+          "agreeRate": 90.97,
+          "disagreeRate": 9.03
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉竹元村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 70.89,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.28,
+          "candVictor": "*",
+          "tks": 424,
+          "profRate": 65.46,
+          "agreeRate": 3.36,
+          "disagreeRate": 96.64
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉竹塘村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 70.31,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.45,
+          "candVictor": "*",
+          "tks": 697,
+          "profRate": 54.03,
+          "agreeRate": 17.4,
+          "disagreeRate": 82.6
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉小西村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 67.28,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 57.94,
+          "candVictor": "*",
+          "tks": 248,
+          "profRate": 70.56,
+          "agreeRate": 44.01,
+          "disagreeRate": 55.99
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉民靖村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 66.57,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.49,
+          "candVictor": "*",
+          "tks": 249,
+          "profRate": 38.67,
+          "agreeRate": 58.44,
+          "disagreeRate": 41.56
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉五庄村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 64.85,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 43.47,
+          "candVictor": " ",
+          "tks": 393,
+          "profRate": 66.38,
+          "agreeRate": 53.46,
+          "disagreeRate": 46.54
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉樹腳村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.79,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 40.05,
+          "candVictor": " ",
+          "tks": 175,
+          "profRate": 53.75,
+          "agreeRate": 79.06,
+          "disagreeRate": 20.94
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉田頭村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 62.24,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 50.24,
+          "candVictor": "*",
+          "tks": 310,
+          "profRate": 60.29,
+          "agreeRate": 72.53,
+          "disagreeRate": 27.47
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉新廣村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 66.37,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 49.09,
+          "candVictor": "*",
+          "tks": 324,
+          "profRate": 16.21,
+          "agreeRate": 98.55,
+          "disagreeRate": 1.45
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉溪墘村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 72.67,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 49.68,
+          "candVictor": "*",
+          "tks": 156,
+          "profRate": 31.49,
+          "agreeRate": 43.02,
+          "disagreeRate": 56.98
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉竹林村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 63.6,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.03,
+          "candVictor": "*",
+          "tks": 257,
+          "profRate": 48.13,
+          "agreeRate": 0.76,
+          "disagreeRate": 99.24
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉土庫村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 72.11,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 46.4,
+          "candVictor": " ",
+          "tks": 187,
+          "profRate": 42.89,
+          "agreeRate": 28.66,
+          "disagreeRate": 71.34
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉內新村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 66.67,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 46.18,
+          "candVictor": " ",
+          "tks": 145,
+          "profRate": 8.27,
+          "agreeRate": 41.58,
+          "disagreeRate": 58.42
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉長安村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 66.57,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 43.07,
+          "candVictor": " ",
+          "tks": 202,
+          "profRate": 55.89,
+          "agreeRate": 60.91,
+          "disagreeRate": 39.09
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 竹塘鄉永安村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "250",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 59.92,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 43.0,
+          "candVictor": " ",
+          "tks": 129,
+          "profRate": 76.95,
+          "agreeRate": 49.59,
+          "disagreeRate": 50.41
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉溪厝村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 69.41,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 51.37,
+          "candVictor": "*",
+          "tks": 620,
+          "profRate": 84.77,
+          "agreeRate": 3.75,
+          "disagreeRate": 96.25
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉坑厝村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 70.67,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 50.99,
+          "candVictor": "*",
+          "tks": 231,
+          "profRate": 8.78,
+          "agreeRate": 79.5,
+          "disagreeRate": 20.5
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉瓦厝村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 78.04,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 48.98,
+          "candVictor": " ",
+          "tks": 313,
+          "profRate": 27.67,
+          "agreeRate": 75.1,
+          "disagreeRate": 24.9
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉溪州村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 75.27,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 54.31,
+          "candVictor": "*",
+          "tks": 592,
+          "profRate": 40.02,
+          "agreeRate": 30.58,
+          "disagreeRate": 69.42
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉尾厝村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.57,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 55.56,
+          "candVictor": "*",
+          "tks": 705,
+          "profRate": 15.61,
+          "agreeRate": 68.31,
+          "disagreeRate": 31.69
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉東州村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 75.21,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 49.75,
+          "candVictor": "*",
+          "tks": 691,
+          "profRate": 63.3,
+          "agreeRate": 80.14,
+          "disagreeRate": 19.86
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉舊眉村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 70.71,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 50.31,
+          "candVictor": "*",
+          "tks": 492,
+          "profRate": 67.34,
+          "agreeRate": 65.2,
+          "disagreeRate": 34.8
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉圳寮村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.77,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 46.15,
+          "candVictor": " ",
+          "tks": 449,
+          "profRate": 51.09,
+          "agreeRate": 15.68,
+          "disagreeRate": 84.32
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉西畔村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 66.19,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 48.46,
+          "candVictor": " ",
+          "tks": 597,
+          "profRate": 35.04,
+          "agreeRate": 97.26,
+          "disagreeRate": 2.74
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉柑園村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 67.84,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.84,
+          "candVictor": "*",
+          "tks": 379,
+          "profRate": 75.29,
+          "agreeRate": 75.8,
+          "disagreeRate": 24.2
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉成功村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 70.07,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 47.32,
+          "candVictor": " ",
+          "tks": 556,
+          "profRate": 52.48,
+          "agreeRate": 2.56,
+          "disagreeRate": 97.44
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉大庄村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 66.33,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 43.12,
+          "candVictor": " ",
+          "tks": 495,
+          "profRate": 22.05,
+          "agreeRate": 10.28,
+          "disagreeRate": 89.72
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉榮光村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 67.13,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 61.46,
+          "candVictor": "*",
+          "tks": 319,
+          "profRate": 51.06,
+          "agreeRate": 70.65,
+          "disagreeRate": 29.35
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉潮洋村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 68.99,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 47.47,
+          "candVictor": " ",
+          "tks": 253,
+          "profRate": 69.2,
+          "agreeRate": 13.25,
+          "disagreeRate": 86.75
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉張厝村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 68.1,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 45.67,
+          "candVictor": " ",
+          "tks": 190,
+          "profRate": 70.41,
+          "agreeRate": 10.37,
+          "disagreeRate": 89.63
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉菜公村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 71.69,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 53.62,
+          "candVictor": "*",
+          "tks": 304,
+          "profRate": 34.63,
+          "agreeRate": 52.54,
+          "disagreeRate": 47.46
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉三條村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 69.91,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 46.8,
+          "candVictor": " ",
+          "tks": 249,
+          "profRate": 44.29,
+          "agreeRate": 31.83,
+          "disagreeRate": 68.17
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉三圳村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 70.31,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 49.57,
+          "candVictor": "*",
+          "tks": 403,
+          "profRate": 64.1,
+          "agreeRate": 69.66,
+          "disagreeRate": 30.34
+        }
+      ]
+    },
+    {
+      "range": "彰化縣 第03選區 溪州鄉水尾村",
+      "area_nickname": "溪湖鎮、埔鹽鄉、埔心鄉、北斗鎮、二林鎮、埤頭鄉、芳苑鄉、大城鄉、竹塘鄉、溪州鄉",
+      "county": "10007",
+      "area": "03",
+      "town": "260",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 69.03,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "謝衣鳯",
+          "party": "中國國民黨",
+          "tksRate": 40.82,
+          "candVictor": " ",
+          "tks": 407,
+          "profRate": 41.55,
+          "agreeRate": 20.55,
+          "disagreeRate": 79.45
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

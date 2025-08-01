@@ -1,0 +1,1411 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "新北市 第07選區 板橋區振興里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "051",
+      "type": "normal",
+      "profRate": 75.07,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 41.72,
+          "candVictor": " ",
+          "tks": 1148,
+          "profRate": 69.61,
+          "agreeRate": 45.4,
+          "disagreeRate": 54.6
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區振義里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "052",
+      "type": "normal",
+      "profRate": 75.57,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 38.4,
+          "candVictor": " ",
+          "tks": 1008,
+          "profRate": 54.44,
+          "agreeRate": 13.53,
+          "disagreeRate": 86.47
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區光復里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "053",
+      "type": "normal",
+      "profRate": 74.13,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 44.03,
+          "candVictor": " ",
+          "tks": 900,
+          "profRate": 67.09,
+          "agreeRate": 28.52,
+          "disagreeRate": 71.48
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區埔墘里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "054",
+      "type": "normal",
+      "profRate": 75.22,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 45.44,
+          "candVictor": " ",
+          "tks": 1805,
+          "profRate": 71.83,
+          "agreeRate": 71.22,
+          "disagreeRate": 28.78
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區富貴里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "107",
+      "type": "normal",
+      "profRate": 76.77,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 46.52,
+          "candVictor": "*",
+          "tks": 689,
+          "profRate": 64.73,
+          "agreeRate": 32.1,
+          "disagreeRate": 67.9
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區長壽里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "055",
+      "type": "normal",
+      "profRate": 75.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 41.4,
+          "candVictor": " ",
+          "tks": 751,
+          "profRate": 10.37,
+          "agreeRate": 53.8,
+          "disagreeRate": 46.2
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區福壽里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "056",
+      "type": "normal",
+      "profRate": 76.22,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 48.98,
+          "candVictor": "*",
+          "tks": 1034,
+          "profRate": 31.86,
+          "agreeRate": 53.75,
+          "disagreeRate": 46.25
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區居仁里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "120",
+      "type": "normal",
+      "profRate": 75.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 41.16,
+          "candVictor": " ",
+          "tks": 999,
+          "profRate": 98.13,
+          "agreeRate": 60.79,
+          "disagreeRate": 39.21
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區海山里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "057",
+      "type": "normal",
+      "profRate": 76.68,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 46.44,
+          "candVictor": "*",
+          "tks": 2178,
+          "profRate": 62.71,
+          "agreeRate": 22.57,
+          "disagreeRate": 77.43
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區九如里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "058",
+      "type": "normal",
+      "profRate": 73.67,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 38.97,
+          "candVictor": " ",
+          "tks": 684,
+          "profRate": 64.54,
+          "agreeRate": 98.99,
+          "disagreeRate": 1.01
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區正泰里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "108",
+      "type": "normal",
+      "profRate": 77.43,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 43.82,
+          "candVictor": " ",
+          "tks": 822,
+          "profRate": 56.43,
+          "agreeRate": 36.61,
+          "disagreeRate": 63.39
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區玉光里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "059",
+      "type": "normal",
+      "profRate": 73.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 42.58,
+          "candVictor": " ",
+          "tks": 1366,
+          "profRate": 79.19,
+          "agreeRate": 60.76,
+          "disagreeRate": 39.24
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區光仁里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "060",
+      "type": "normal",
+      "profRate": 74.8,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 44.4,
+          "candVictor": " ",
+          "tks": 757,
+          "profRate": 17.2,
+          "agreeRate": 0.45,
+          "disagreeRate": 99.55
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區雙玉里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "063",
+      "type": "normal",
+      "profRate": 74.41,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 42.76,
+          "candVictor": " ",
+          "tks": 1051,
+          "profRate": 75.75,
+          "agreeRate": 41.0,
+          "disagreeRate": 59.0
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區廣新里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "064",
+      "type": "normal",
+      "profRate": 71.38,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 44.84,
+          "candVictor": " ",
+          "tks": 916,
+          "profRate": 3.46,
+          "agreeRate": 2.54,
+          "disagreeRate": 97.46
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區深丘里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "065",
+      "type": "normal",
+      "profRate": 74.37,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 52.77,
+          "candVictor": "*",
+          "tks": 2652,
+          "profRate": 93.35,
+          "agreeRate": 15.11,
+          "disagreeRate": 84.89
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區香丘里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "066",
+      "type": "normal",
+      "profRate": 73.22,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 41.98,
+          "candVictor": " ",
+          "tks": 903,
+          "profRate": 11.74,
+          "agreeRate": 51.74,
+          "disagreeRate": 48.26
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區西安里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "067",
+      "type": "normal",
+      "profRate": 75.86,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 44.71,
+          "candVictor": " ",
+          "tks": 735,
+          "profRate": 38.84,
+          "agreeRate": 20.51,
+          "disagreeRate": 79.49
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區東丘里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "068",
+      "type": "normal",
+      "profRate": 75.27,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 43.09,
+          "candVictor": " ",
+          "tks": 1204,
+          "profRate": 88.64,
+          "agreeRate": 42.82,
+          "disagreeRate": 57.18
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區民生里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "109",
+      "type": "normal",
+      "profRate": 76.98,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 43.32,
+          "candVictor": " ",
+          "tks": 593,
+          "profRate": 58.86,
+          "agreeRate": 37.76,
+          "disagreeRate": 62.24
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區長安里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "069",
+      "type": "normal",
+      "profRate": 76.41,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 44.14,
+          "candVictor": " ",
+          "tks": 1179,
+          "profRate": 55.36,
+          "agreeRate": 84.94,
+          "disagreeRate": 15.06
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區東安里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "122",
+      "type": "normal",
+      "profRate": 75.4,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 39.99,
+          "candVictor": " ",
+          "tks": 569,
+          "profRate": 29.77,
+          "agreeRate": 29.19,
+          "disagreeRate": 70.81
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區福丘里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "070",
+      "type": "normal",
+      "profRate": 75.09,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 54.79,
+          "candVictor": "*",
+          "tks": 1640,
+          "profRate": 14.02,
+          "agreeRate": 20.4,
+          "disagreeRate": 79.6
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區福祿里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "071",
+      "type": "normal",
+      "profRate": 73.0,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 51.46,
+          "candVictor": "*",
+          "tks": 1254,
+          "profRate": 25.78,
+          "agreeRate": 75.39,
+          "disagreeRate": 24.61
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區民族里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "072",
+      "type": "normal",
+      "profRate": 76.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 46.91,
+          "candVictor": "*",
+          "tks": 1312,
+          "profRate": 4.93,
+          "agreeRate": 14.23,
+          "disagreeRate": 85.77
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區國泰里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "073",
+      "type": "normal",
+      "profRate": 76.03,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 49.0,
+          "candVictor": "*",
+          "tks": 1083,
+          "profRate": 34.77,
+          "agreeRate": 3.85,
+          "disagreeRate": 96.15
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區後埔里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "110",
+      "type": "normal",
+      "profRate": 75.98,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 51.33,
+          "candVictor": "*",
+          "tks": 1231,
+          "profRate": 9.79,
+          "agreeRate": 46.42,
+          "disagreeRate": 53.58
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區福德里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "074",
+      "type": "normal",
+      "profRate": 76.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 46.27,
+          "candVictor": "*",
+          "tks": 1446,
+          "profRate": 70.94,
+          "agreeRate": 59.83,
+          "disagreeRate": 40.17
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區景星里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "075",
+      "type": "normal",
+      "profRate": 73.51,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 47.66,
+          "candVictor": "*",
+          "tks": 1030,
+          "profRate": 30.56,
+          "agreeRate": 46.59,
+          "disagreeRate": 53.41
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區福星里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "076",
+      "type": "normal",
+      "profRate": 77.88,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 44.88,
+          "candVictor": " ",
+          "tks": 1009,
+          "profRate": 4.43,
+          "agreeRate": 39.15,
+          "disagreeRate": 60.85
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區鄉雲里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "077",
+      "type": "normal",
+      "profRate": 75.21,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 49.39,
+          "candVictor": "*",
+          "tks": 1170,
+          "profRate": 65.9,
+          "agreeRate": 98.25,
+          "disagreeRate": 1.75
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區廣德里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "078",
+      "type": "normal",
+      "profRate": 73.9,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 47.3,
+          "candVictor": "*",
+          "tks": 1980,
+          "profRate": 16.0,
+          "agreeRate": 93.02,
+          "disagreeRate": 6.98
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區大豐里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "079",
+      "type": "normal",
+      "profRate": 74.76,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 47.58,
+          "candVictor": "*",
+          "tks": 1356,
+          "profRate": 63.23,
+          "agreeRate": 5.68,
+          "disagreeRate": 94.32
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區重慶里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "080",
+      "type": "normal",
+      "profRate": 73.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 47.44,
+          "candVictor": "*",
+          "tks": 2468,
+          "profRate": 15.04,
+          "agreeRate": 86.49,
+          "disagreeRate": 13.51
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區仁愛里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "081",
+      "type": "normal",
+      "profRate": 76.71,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 57.71,
+          "candVictor": "*",
+          "tks": 1111,
+          "profRate": 85.17,
+          "agreeRate": 65.17,
+          "disagreeRate": 34.83
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區和平里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "082",
+      "type": "normal",
+      "profRate": 77.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 53.6,
+          "candVictor": "*",
+          "tks": 1355,
+          "profRate": 4.84,
+          "agreeRate": 29.64,
+          "disagreeRate": 70.36
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區廣福里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "083",
+      "type": "normal",
+      "profRate": 71.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 43.31,
+          "candVictor": " ",
+          "tks": 1006,
+          "profRate": 35.5,
+          "agreeRate": 34.28,
+          "disagreeRate": 65.72
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區五權里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "123",
+      "type": "normal",
+      "profRate": 74.08,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 43.01,
+          "candVictor": " ",
+          "tks": 1071,
+          "profRate": 6.86,
+          "agreeRate": 74.06,
+          "disagreeRate": 25.94
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區華興里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "084",
+      "type": "normal",
+      "profRate": 74.92,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 48.82,
+          "candVictor": "*",
+          "tks": 1283,
+          "profRate": 72.17,
+          "agreeRate": 25.52,
+          "disagreeRate": 74.48
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區華貴里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "085",
+      "type": "normal",
+      "profRate": 74.26,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 43.41,
+          "candVictor": " ",
+          "tks": 669,
+          "profRate": 21.2,
+          "agreeRate": 83.04,
+          "disagreeRate": 16.96
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區華福里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "111",
+      "type": "normal",
+      "profRate": 76.35,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 48.42,
+          "candVictor": "*",
+          "tks": 599,
+          "profRate": 63.62,
+          "agreeRate": 84.9,
+          "disagreeRate": 15.1
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區華德里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "086",
+      "type": "normal",
+      "profRate": 72.95,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 48.25,
+          "candVictor": "*",
+          "tks": 2041,
+          "profRate": 53.67,
+          "agreeRate": 18.7,
+          "disagreeRate": 81.3
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區華東里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "087",
+      "type": "normal",
+      "profRate": 76.28,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 52.95,
+          "candVictor": "*",
+          "tks": 2740,
+          "profRate": 30.22,
+          "agreeRate": 22.1,
+          "disagreeRate": 77.9
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區信義里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "088",
+      "type": "normal",
+      "profRate": 70.77,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 46.41,
+          "candVictor": "*",
+          "tks": 1188,
+          "profRate": 68.6,
+          "agreeRate": 94.41,
+          "disagreeRate": 5.59
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區浮洲里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "089",
+      "type": "normal",
+      "profRate": 71.93,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 38.52,
+          "candVictor": " ",
+          "tks": 842,
+          "profRate": 84.73,
+          "agreeRate": 52.44,
+          "disagreeRate": 47.56
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區華中里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "090",
+      "type": "normal",
+      "profRate": 72.74,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 37.77,
+          "candVictor": " ",
+          "tks": 1175,
+          "profRate": 93.52,
+          "agreeRate": 75.76,
+          "disagreeRate": 24.24
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區僑中里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "091",
+      "type": "normal",
+      "profRate": 73.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 41.63,
+          "candVictor": " ",
+          "tks": 1065,
+          "profRate": 10.06,
+          "agreeRate": 90.78,
+          "disagreeRate": 9.22
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區大觀里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "125",
+      "type": "normal",
+      "profRate": 72.03,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 38.99,
+          "candVictor": " ",
+          "tks": 832,
+          "profRate": 26.3,
+          "agreeRate": 35.0,
+          "disagreeRate": 65.0
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區歡園里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "126",
+      "type": "normal",
+      "profRate": 74.38,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 36.75,
+          "candVictor": " ",
+          "tks": 269,
+          "profRate": 70.28,
+          "agreeRate": 29.11,
+          "disagreeRate": 70.89
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區中山里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "092",
+      "type": "normal",
+      "profRate": 72.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 50.23,
+          "candVictor": "*",
+          "tks": 2119,
+          "profRate": 60.59,
+          "agreeRate": 52.19,
+          "disagreeRate": 47.81
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區復興里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "093",
+      "type": "normal",
+      "profRate": 76.35,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 51.61,
+          "candVictor": "*",
+          "tks": 304,
+          "profRate": 93.01,
+          "agreeRate": 87.6,
+          "disagreeRate": 12.4
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區大安里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "094",
+      "type": "normal",
+      "profRate": 74.93,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 42.48,
+          "candVictor": " ",
+          "tks": 1050,
+          "profRate": 3.35,
+          "agreeRate": 82.32,
+          "disagreeRate": 17.68
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區福安里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "095",
+      "type": "normal",
+      "profRate": 75.48,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 52.78,
+          "candVictor": "*",
+          "tks": 2462,
+          "profRate": 32.19,
+          "agreeRate": 74.84,
+          "disagreeRate": 25.16
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區聚安里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "096",
+      "type": "normal",
+      "profRate": 71.77,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 42.3,
+          "candVictor": " ",
+          "tks": 1301,
+          "profRate": 11.46,
+          "agreeRate": 21.59,
+          "disagreeRate": 78.41
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區龍安里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "097",
+      "type": "normal",
+      "profRate": 74.96,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 40.16,
+          "candVictor": " ",
+          "tks": 688,
+          "profRate": 89.69,
+          "agreeRate": 60.5,
+          "disagreeRate": 39.5
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區崑崙里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "098",
+      "type": "normal",
+      "profRate": 72.28,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 46.08,
+          "candVictor": "*",
+          "tks": 2651,
+          "profRate": 52.2,
+          "agreeRate": 56.15,
+          "disagreeRate": 43.85
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區成和里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "113",
+      "type": "normal",
+      "profRate": 71.69,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 47.22,
+          "candVictor": "*",
+          "tks": 1945,
+          "profRate": 81.01,
+          "agreeRate": 96.63,
+          "disagreeRate": 3.37
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區溪洲里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "099",
+      "type": "normal",
+      "profRate": 73.11,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 44.16,
+          "candVictor": " ",
+          "tks": 1515,
+          "profRate": 83.78,
+          "agreeRate": 96.59,
+          "disagreeRate": 3.41
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區溪福里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "124",
+      "type": "normal",
+      "profRate": 73.46,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 47.2,
+          "candVictor": "*",
+          "tks": 3954,
+          "profRate": 2.94,
+          "agreeRate": 43.4,
+          "disagreeRate": 56.6
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區溪北里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "100",
+      "type": "normal",
+      "profRate": 75.48,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 43.76,
+          "candVictor": " ",
+          "tks": 953,
+          "profRate": 76.21,
+          "agreeRate": 29.21,
+          "disagreeRate": 70.79
+        }
+      ]
+    },
+    {
+      "range": "新北市 第07選區 板橋區堂春里",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": "010",
+      "vill": "112",
+      "type": "normal",
+      "profRate": 72.71,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "葉元之",
+          "party": "中國國民黨",
+          "tksRate": 41.14,
+          "candVictor": " ",
+          "tks": 1024,
+          "profRate": 51.03,
+          "agreeRate": 6.41,
+          "disagreeRate": 93.59
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

@@ -1,0 +1,1503 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "臺中市 第03選區 后里區廣福里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 70.55,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 69.95,
+          "candVictor": "*",
+          "tks": 910,
+          "profRate": 37.01,
+          "agreeRate": 54.97,
+          "disagreeRate": 45.03
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區仁里里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.67,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 62.57,
+          "candVictor": "*",
+          "tks": 443,
+          "profRate": 35.25,
+          "agreeRate": 17.97,
+          "disagreeRate": 82.03
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區義里里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 74.35,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 61.17,
+          "candVictor": "*",
+          "tks": 1320,
+          "profRate": 97.24,
+          "agreeRate": 45.88,
+          "disagreeRate": 54.12
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區義德里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 72.42,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 63.22,
+          "candVictor": "*",
+          "tks": 1093,
+          "profRate": 55.05,
+          "agreeRate": 35.24,
+          "disagreeRate": 64.76
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區后里里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 76.87,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 58.16,
+          "candVictor": "*",
+          "tks": 1539,
+          "profRate": 20.52,
+          "agreeRate": 87.19,
+          "disagreeRate": 12.81
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區厚里里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 76.07,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 60.1,
+          "candVictor": "*",
+          "tks": 937,
+          "profRate": 21.72,
+          "agreeRate": 92.63,
+          "disagreeRate": 7.37
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區墩東里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.9,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 59.42,
+          "candVictor": "*",
+          "tks": 2002,
+          "profRate": 43.46,
+          "agreeRate": 93.42,
+          "disagreeRate": 6.58
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區墩西里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.67,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 53.81,
+          "candVictor": "*",
+          "tks": 707,
+          "profRate": 45.76,
+          "agreeRate": 29.6,
+          "disagreeRate": 70.4
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區墩南里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 75.87,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 54.32,
+          "candVictor": "*",
+          "tks": 1334,
+          "profRate": 41.09,
+          "agreeRate": 39.26,
+          "disagreeRate": 60.74
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區墩北里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 74.79,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 54.46,
+          "candVictor": "*",
+          "tks": 1379,
+          "profRate": 67.11,
+          "agreeRate": 47.39,
+          "disagreeRate": 52.61
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區中和里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 75.57,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 52.72,
+          "candVictor": "*",
+          "tks": 911,
+          "profRate": 40.86,
+          "agreeRate": 65.57,
+          "disagreeRate": 34.43
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區舊社里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 75.57,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 55.88,
+          "candVictor": "*",
+          "tks": 903,
+          "profRate": 5.98,
+          "agreeRate": 92.51,
+          "disagreeRate": 7.49
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區聯合里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.88,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 57.8,
+          "candVictor": "*",
+          "tks": 630,
+          "profRate": 61.61,
+          "agreeRate": 56.69,
+          "disagreeRate": 43.31
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區太平里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 73.49,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 61.08,
+          "candVictor": "*",
+          "tks": 890,
+          "profRate": 49.76,
+          "agreeRate": 70.24,
+          "disagreeRate": 29.76
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區眉山里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 74.48,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 60.16,
+          "candVictor": "*",
+          "tks": 1409,
+          "profRate": 20.21,
+          "agreeRate": 46.6,
+          "disagreeRate": 53.4
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區月眉里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 74.58,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 53.22,
+          "candVictor": "*",
+          "tks": 753,
+          "profRate": 63.24,
+          "agreeRate": 61.68,
+          "disagreeRate": 38.32
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區公館里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 74.35,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 57.03,
+          "candVictor": "*",
+          "tks": 872,
+          "profRate": 15.33,
+          "agreeRate": 6.73,
+          "disagreeRate": 93.27
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 后里區泰安里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "150",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 74.11,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 51.89,
+          "candVictor": "*",
+          "tks": 521,
+          "profRate": 7.02,
+          "agreeRate": 63.0,
+          "disagreeRate": 37.0
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區神岡里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 73.17,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 56.97,
+          "candVictor": "*",
+          "tks": 1246,
+          "profRate": 24.85,
+          "agreeRate": 32.49,
+          "disagreeRate": 67.51
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區庄前里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 77.69,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 58.68,
+          "candVictor": "*",
+          "tks": 987,
+          "profRate": 83.55,
+          "agreeRate": 2.88,
+          "disagreeRate": 97.12
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區北庄里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 77.37,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 52.93,
+          "candVictor": "*",
+          "tks": 1013,
+          "profRate": 18.02,
+          "agreeRate": 45.25,
+          "disagreeRate": 54.75
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區庄後里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 76.96,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 48.87,
+          "candVictor": " ",
+          "tks": 797,
+          "profRate": 8.32,
+          "agreeRate": 41.0,
+          "disagreeRate": 59.0
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區圳前里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 73.25,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 58.61,
+          "candVictor": "*",
+          "tks": 895,
+          "profRate": 24.3,
+          "agreeRate": 25.46,
+          "disagreeRate": 74.54
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區圳堵里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 75.63,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 58.61,
+          "candVictor": "*",
+          "tks": 868,
+          "profRate": 63.9,
+          "agreeRate": 54.8,
+          "disagreeRate": 45.2
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區新庄里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 72.39,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 55.4,
+          "candVictor": "*",
+          "tks": 1528,
+          "profRate": 21.28,
+          "agreeRate": 86.9,
+          "disagreeRate": 13.1
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區山皮里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 77.07,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 53.7,
+          "candVictor": "*",
+          "tks": 392,
+          "profRate": 43.44,
+          "agreeRate": 70.42,
+          "disagreeRate": 29.58
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區社口里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 74.33,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 53.39,
+          "candVictor": "*",
+          "tks": 2883,
+          "profRate": 86.47,
+          "agreeRate": 64.13,
+          "disagreeRate": 35.87
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區社南里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 75.75,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 50.52,
+          "candVictor": "*",
+          "tks": 1900,
+          "profRate": 46.53,
+          "agreeRate": 45.91,
+          "disagreeRate": 54.09
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區三角里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 76.82,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 52.58,
+          "candVictor": "*",
+          "tks": 1000,
+          "profRate": 91.32,
+          "agreeRate": 4.31,
+          "disagreeRate": 95.69
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區大社里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 72.7,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 51.4,
+          "candVictor": "*",
+          "tks": 1578,
+          "profRate": 51.11,
+          "agreeRate": 20.33,
+          "disagreeRate": 79.67
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區岸裡里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 76.25,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 47.56,
+          "candVictor": " ",
+          "tks": 974,
+          "profRate": 49.41,
+          "agreeRate": 44.74,
+          "disagreeRate": 55.26
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區豐洲里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.36,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 48.97,
+          "candVictor": "*",
+          "tks": 2455,
+          "profRate": 88.07,
+          "agreeRate": 85.75,
+          "disagreeRate": 14.25
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區神洲里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 76.39,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 50.3,
+          "candVictor": "*",
+          "tks": 912,
+          "profRate": 76.0,
+          "agreeRate": 11.71,
+          "disagreeRate": 88.29
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 神岡區溪洲里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "160",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 76.61,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 54.13,
+          "candVictor": "*",
+          "tks": 1089,
+          "profRate": 31.82,
+          "agreeRate": 87.13,
+          "disagreeRate": 12.87
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區潭秀里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 77.47,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 50.6,
+          "candVictor": "*",
+          "tks": 463,
+          "profRate": 84.0,
+          "agreeRate": 61.68,
+          "disagreeRate": 38.32
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區潭北里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.88,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 59.6,
+          "candVictor": "*",
+          "tks": 1055,
+          "profRate": 52.79,
+          "agreeRate": 51.67,
+          "disagreeRate": 48.33
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區潭陽里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 73.62,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 54.06,
+          "candVictor": "*",
+          "tks": 4050,
+          "profRate": 98.13,
+          "agreeRate": 89.73,
+          "disagreeRate": 10.27
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區福仁里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 73.36,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 56.76,
+          "candVictor": "*",
+          "tks": 4195,
+          "profRate": 96.28,
+          "agreeRate": 28.47,
+          "disagreeRate": 71.53
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區頭家里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 75.53,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 56.29,
+          "candVictor": "*",
+          "tks": 2153,
+          "profRate": 77.77,
+          "agreeRate": 88.97,
+          "disagreeRate": 11.03
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區頭家東里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 74.68,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 57.3,
+          "candVictor": "*",
+          "tks": 1747,
+          "profRate": 98.98,
+          "agreeRate": 38.17,
+          "disagreeRate": 61.83
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區家興里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 74.92,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 56.13,
+          "candVictor": "*",
+          "tks": 2746,
+          "profRate": 69.94,
+          "agreeRate": 57.47,
+          "disagreeRate": 42.53
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區家福里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 76.49,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 55.59,
+          "candVictor": "*",
+          "tks": 1883,
+          "profRate": 57.7,
+          "agreeRate": 6.9,
+          "disagreeRate": 93.1
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區甘蔗里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.55,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 57.05,
+          "candVictor": "*",
+          "tks": 3817,
+          "profRate": 89.88,
+          "agreeRate": 62.73,
+          "disagreeRate": 37.27
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區東寶里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 74.39,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 53.22,
+          "candVictor": "*",
+          "tks": 4564,
+          "profRate": 88.45,
+          "agreeRate": 39.38,
+          "disagreeRate": 60.62
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區大富里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 76.73,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 51.3,
+          "candVictor": "*",
+          "tks": 1104,
+          "profRate": 48.33,
+          "agreeRate": 60.31,
+          "disagreeRate": 39.69
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區大豐里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 75.47,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 52.87,
+          "candVictor": "*",
+          "tks": 2331,
+          "profRate": 36.88,
+          "agreeRate": 54.48,
+          "disagreeRate": 45.52
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區栗林里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 76.04,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 50.44,
+          "candVictor": "*",
+          "tks": 1790,
+          "profRate": 91.54,
+          "agreeRate": 37.41,
+          "disagreeRate": 62.59
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區嘉仁里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 75.14,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 54.3,
+          "candVictor": "*",
+          "tks": 1547,
+          "profRate": 96.24,
+          "agreeRate": 46.79,
+          "disagreeRate": 53.21
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區新田里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 74.5,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 50.05,
+          "candVictor": "*",
+          "tks": 536,
+          "profRate": 85.88,
+          "agreeRate": 92.72,
+          "disagreeRate": 7.28
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 潭子區聚興里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "170",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 67.42,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 56.42,
+          "candVictor": "*",
+          "tks": 1551,
+          "profRate": 15.73,
+          "agreeRate": 15.79,
+          "disagreeRate": 84.21
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區上雅里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.01,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 56.21,
+          "candVictor": "*",
+          "tks": 2344,
+          "profRate": 53.21,
+          "agreeRate": 32.36,
+          "disagreeRate": 67.64
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區大雅里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 75.99,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 58.07,
+          "candVictor": "*",
+          "tks": 1816,
+          "profRate": 68.06,
+          "agreeRate": 10.73,
+          "disagreeRate": 89.27
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區文雅里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 73.49,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 57.32,
+          "candVictor": "*",
+          "tks": 2372,
+          "profRate": 20.45,
+          "agreeRate": 57.6,
+          "disagreeRate": 42.4
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區三和里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 75.58,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 53.94,
+          "candVictor": "*",
+          "tks": 2076,
+          "profRate": 8.1,
+          "agreeRate": 14.0,
+          "disagreeRate": 86.0
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區二和里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.28,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 57.84,
+          "candVictor": "*",
+          "tks": 2478,
+          "profRate": 39.32,
+          "agreeRate": 23.94,
+          "disagreeRate": 76.06
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區四德里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 75.29,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 56.23,
+          "candVictor": "*",
+          "tks": 1809,
+          "profRate": 54.45,
+          "agreeRate": 39.42,
+          "disagreeRate": 60.58
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區西寶里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 72.27,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 55.32,
+          "candVictor": "*",
+          "tks": 1820,
+          "profRate": 61.9,
+          "agreeRate": 70.21,
+          "disagreeRate": 29.79
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區上楓里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 75.3,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 55.71,
+          "candVictor": "*",
+          "tks": 2543,
+          "profRate": 58.26,
+          "agreeRate": 8.78,
+          "disagreeRate": 91.22
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區大楓里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 72.7,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 55.31,
+          "candVictor": "*",
+          "tks": 1915,
+          "profRate": 89.37,
+          "agreeRate": 83.82,
+          "disagreeRate": 16.18
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區雅楓里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 71.6,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 58.91,
+          "candVictor": "*",
+          "tks": 1375,
+          "profRate": 62.05,
+          "agreeRate": 42.51,
+          "disagreeRate": 57.49
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區員林里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 76.3,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 57.43,
+          "candVictor": "*",
+          "tks": 3896,
+          "profRate": 98.54,
+          "agreeRate": 13.71,
+          "disagreeRate": 86.29
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區六寶里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 73.05,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 59.69,
+          "candVictor": "*",
+          "tks": 2461,
+          "profRate": 37.09,
+          "agreeRate": 72.56,
+          "disagreeRate": 27.44
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區秀山里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 75.64,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 56.1,
+          "candVictor": "*",
+          "tks": 1365,
+          "profRate": 88.87,
+          "agreeRate": 1.96,
+          "disagreeRate": 98.04
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區橫山里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 76.11,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 54.48,
+          "candVictor": "*",
+          "tks": 1697,
+          "profRate": 18.67,
+          "agreeRate": 59.04,
+          "disagreeRate": 40.96
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第03選區 大雅區忠義里",
+      "area_nickname": "后里區、神岡區、潭子區、大雅區",
+      "county": "66000",
+      "area": "03",
+      "town": "180",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 71.95,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "楊瓊瓔",
+          "party": "中國國民黨",
+          "tksRate": 76.76,
+          "candVictor": "*",
+          "tks": 1737,
+          "profRate": 10.32,
+          "agreeRate": 60.43,
+          "disagreeRate": 39.57
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

@@ -1,0 +1,2768 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "南投縣 第01選區 埔里鎮東門里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 70.1,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 56.87,
+          "candVictor": "*",
+          "tks": 952,
+          "profRate": 57.64,
+          "agreeRate": 91.78,
+          "disagreeRate": 8.22
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮杷城里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 70.99,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 56.73,
+          "candVictor": "*",
+          "tks": 948,
+          "profRate": 47.18,
+          "agreeRate": 59.66,
+          "disagreeRate": 40.34
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮枇杷里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 68.56,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 57.68,
+          "candVictor": "*",
+          "tks": 2613,
+          "profRate": 2.11,
+          "agreeRate": 50.77,
+          "disagreeRate": 49.23
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮水頭里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 66.97,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 57.12,
+          "candVictor": "*",
+          "tks": 1331,
+          "profRate": 77.88,
+          "agreeRate": 67.38,
+          "disagreeRate": 32.62
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮麒麟里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 63.9,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 57.61,
+          "candVictor": "*",
+          "tks": 337,
+          "profRate": 76.31,
+          "agreeRate": 7.03,
+          "disagreeRate": 92.97
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮珠格里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 67.89,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 59.58,
+          "candVictor": "*",
+          "tks": 423,
+          "profRate": 66.65,
+          "agreeRate": 51.04,
+          "disagreeRate": 48.96
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮溪南里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.28,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 60.56,
+          "candVictor": "*",
+          "tks": 433,
+          "profRate": 13.58,
+          "agreeRate": 18.95,
+          "disagreeRate": 81.05
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮西門里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 71.03,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 55.97,
+          "candVictor": "*",
+          "tks": 1059,
+          "profRate": 36.74,
+          "agreeRate": 56.73,
+          "disagreeRate": 43.27
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮南門里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.73,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 51.46,
+          "candVictor": "*",
+          "tks": 282,
+          "profRate": 26.44,
+          "agreeRate": 46.06,
+          "disagreeRate": 53.94
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮北門里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 65.43,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 58.15,
+          "candVictor": "*",
+          "tks": 856,
+          "profRate": 3.84,
+          "agreeRate": 52.33,
+          "disagreeRate": 47.67
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮北安里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 71.99,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 59.08,
+          "candVictor": "*",
+          "tks": 1200,
+          "profRate": 5.5,
+          "agreeRate": 49.22,
+          "disagreeRate": 50.78
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮北梅里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 69.03,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 59.52,
+          "candVictor": "*",
+          "tks": 1182,
+          "profRate": 61.93,
+          "agreeRate": 63.28,
+          "disagreeRate": 36.72
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮泰安里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 74.1,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 59.59,
+          "candVictor": "*",
+          "tks": 814,
+          "profRate": 76.22,
+          "agreeRate": 3.0,
+          "disagreeRate": 97.0
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮大湳里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 72.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 51.28,
+          "candVictor": "*",
+          "tks": 603,
+          "profRate": 33.19,
+          "agreeRate": 3.27,
+          "disagreeRate": 96.73
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮蜈蚣里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 64.17,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 59.04,
+          "candVictor": "*",
+          "tks": 833,
+          "profRate": 77.09,
+          "agreeRate": 29.44,
+          "disagreeRate": 70.56
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮同聲里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 70.99,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 58.58,
+          "candVictor": "*",
+          "tks": 843,
+          "profRate": 51.39,
+          "agreeRate": 55.0,
+          "disagreeRate": 45.0
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮清新里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 70.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 57.96,
+          "candVictor": "*",
+          "tks": 1336,
+          "profRate": 15.78,
+          "agreeRate": 66.35,
+          "disagreeRate": 33.65
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮薰化里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.95,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 55.54,
+          "candVictor": "*",
+          "tks": 396,
+          "profRate": 69.68,
+          "agreeRate": 76.67,
+          "disagreeRate": 23.33
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮大城里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 71.13,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 58.83,
+          "candVictor": "*",
+          "tks": 2218,
+          "profRate": 88.99,
+          "agreeRate": 0.79,
+          "disagreeRate": 99.21
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮籃城里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 74.25,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 55.03,
+          "candVictor": "*",
+          "tks": 361,
+          "profRate": 60.65,
+          "agreeRate": 41.67,
+          "disagreeRate": 58.33
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮桃米里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 68.0,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 57.17,
+          "candVictor": "*",
+          "tks": 363,
+          "profRate": 43.16,
+          "agreeRate": 79.34,
+          "disagreeRate": 20.66
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮成功里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 64.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 60.59,
+          "candVictor": "*",
+          "tks": 103,
+          "profRate": 41.38,
+          "agreeRate": 74.06,
+          "disagreeRate": 25.94
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮南村里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 67.82,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 61.06,
+          "candVictor": "*",
+          "tks": 519,
+          "profRate": 67.62,
+          "agreeRate": 56.38,
+          "disagreeRate": 43.62
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮愛蘭里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 69.44,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 61.62,
+          "candVictor": "*",
+          "tks": 533,
+          "profRate": 99.43,
+          "agreeRate": 65.26,
+          "disagreeRate": 34.74
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮鐵山里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 71.67,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 59.08,
+          "candVictor": "*",
+          "tks": 618,
+          "profRate": 0.07,
+          "agreeRate": 29.86,
+          "disagreeRate": 70.14
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮房里里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 69.76,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 65.29,
+          "candVictor": "*",
+          "tks": 553,
+          "profRate": 30.2,
+          "agreeRate": 39.89,
+          "disagreeRate": 60.11
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮向善里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 70.7,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 64.55,
+          "candVictor": "*",
+          "tks": 284,
+          "profRate": 22.91,
+          "agreeRate": 62.96,
+          "disagreeRate": 37.04
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮一新里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 77.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 73.6,
+          "candVictor": "*",
+          "tks": 524,
+          "profRate": 63.61,
+          "agreeRate": 64.52,
+          "disagreeRate": 35.48
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮合成里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 69.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 55.82,
+          "candVictor": "*",
+          "tks": 580,
+          "profRate": 46.87,
+          "agreeRate": 67.17,
+          "disagreeRate": 32.83
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮廣成里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 66.51,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 63.97,
+          "candVictor": "*",
+          "tks": 451,
+          "profRate": 66.76,
+          "agreeRate": 40.59,
+          "disagreeRate": 59.41
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮史港里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 72.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 64.1,
+          "candVictor": "*",
+          "tks": 241,
+          "profRate": 28.46,
+          "agreeRate": 26.14,
+          "disagreeRate": 73.86
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮福興里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 70.27,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 47.0,
+          "candVictor": " ",
+          "tks": 298,
+          "profRate": 22.69,
+          "agreeRate": 97.42,
+          "disagreeRate": 2.58
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 埔里鎮牛眠里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "020",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 70.3,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 57.43,
+          "candVictor": "*",
+          "tks": 1075,
+          "profRate": 93.33,
+          "agreeRate": 14.99,
+          "disagreeRate": 85.01
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮玉峰里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 75.24,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 50.44,
+          "candVictor": "*",
+          "tks": 746,
+          "profRate": 27.21,
+          "agreeRate": 41.56,
+          "disagreeRate": 58.44
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮明正里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 71.91,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 50.56,
+          "candVictor": "*",
+          "tks": 1255,
+          "profRate": 62.96,
+          "agreeRate": 62.37,
+          "disagreeRate": 37.63
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮炎峰里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.35,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 47.85,
+          "candVictor": "*",
+          "tks": 680,
+          "profRate": 0.49,
+          "agreeRate": 12.58,
+          "disagreeRate": 87.42
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮中正里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 75.81,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 48.37,
+          "candVictor": "*",
+          "tks": 223,
+          "profRate": 34.06,
+          "agreeRate": 93.56,
+          "disagreeRate": 6.44
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮和平里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.99,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 43.18,
+          "candVictor": " ",
+          "tks": 326,
+          "profRate": 62.35,
+          "agreeRate": 43.44,
+          "disagreeRate": 56.56
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮中山里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 76.02,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 45.08,
+          "candVictor": " ",
+          "tks": 752,
+          "profRate": 76.25,
+          "agreeRate": 77.17,
+          "disagreeRate": 22.83
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮敦和里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 73.87,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 48.57,
+          "candVictor": "*",
+          "tks": 2176,
+          "profRate": 37.94,
+          "agreeRate": 0.76,
+          "disagreeRate": 99.24
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮山腳里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 75.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 52.86,
+          "candVictor": "*",
+          "tks": 2939,
+          "profRate": 14.84,
+          "agreeRate": 61.76,
+          "disagreeRate": 38.24
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮新厝里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 76.47,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 52.32,
+          "candVictor": "*",
+          "tks": 1230,
+          "profRate": 70.7,
+          "agreeRate": 88.83,
+          "disagreeRate": 11.17
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮上林里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 77.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 52.21,
+          "candVictor": "*",
+          "tks": 1215,
+          "profRate": 0.77,
+          "agreeRate": 85.16,
+          "disagreeRate": 14.84
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮碧峰里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 73.44,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 40.09,
+          "candVictor": " ",
+          "tks": 1280,
+          "profRate": 43.14,
+          "agreeRate": 94.12,
+          "disagreeRate": 5.88
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮碧洲里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 76.41,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 51.48,
+          "candVictor": "*",
+          "tks": 942,
+          "profRate": 10.52,
+          "agreeRate": 60.35,
+          "disagreeRate": 39.65
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮復興里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 72.48,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 43.81,
+          "candVictor": "*",
+          "tks": 860,
+          "profRate": 11.64,
+          "agreeRate": 89.51,
+          "disagreeRate": 10.49
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮御史里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 72.56,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 43.89,
+          "candVictor": " ",
+          "tks": 1839,
+          "profRate": 46.61,
+          "agreeRate": 25.85,
+          "disagreeRate": 74.15
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮新豐里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 74.91,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 41.53,
+          "candVictor": " ",
+          "tks": 1191,
+          "profRate": 69.45,
+          "agreeRate": 48.86,
+          "disagreeRate": 51.14
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮新庄里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 74.05,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 49.18,
+          "candVictor": "*",
+          "tks": 1292,
+          "profRate": 83.89,
+          "agreeRate": 28.81,
+          "disagreeRate": 71.19
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮加老里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 76.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 42.43,
+          "candVictor": " ",
+          "tks": 673,
+          "profRate": 6.43,
+          "agreeRate": 7.59,
+          "disagreeRate": 92.41
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮石川里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 72.74,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 47.05,
+          "candVictor": "*",
+          "tks": 502,
+          "profRate": 53.62,
+          "agreeRate": 43.84,
+          "disagreeRate": 56.16
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮北投里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 75.02,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 37.63,
+          "candVictor": " ",
+          "tks": 794,
+          "profRate": 36.21,
+          "agreeRate": 12.59,
+          "disagreeRate": 87.41
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮富寮里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 47.22,
+          "candVictor": "*",
+          "tks": 2249,
+          "profRate": 87.0,
+          "agreeRate": 99.29,
+          "disagreeRate": 0.71
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮北勢里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 73.05,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 44.85,
+          "candVictor": " ",
+          "tks": 557,
+          "profRate": 38.66,
+          "agreeRate": 31.78,
+          "disagreeRate": 68.22
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮中原里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 73.45,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 37.88,
+          "candVictor": " ",
+          "tks": 533,
+          "profRate": 63.19,
+          "agreeRate": 12.24,
+          "disagreeRate": 87.76
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮南埔里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 74.45,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 45.49,
+          "candVictor": " ",
+          "tks": 1338,
+          "profRate": 19.45,
+          "agreeRate": 57.77,
+          "disagreeRate": 42.23
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮坪頂里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 75.08,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 53.52,
+          "candVictor": "*",
+          "tks": 380,
+          "profRate": 84.42,
+          "agreeRate": 86.22,
+          "disagreeRate": 13.78
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮土城里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 69.62,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 51.52,
+          "candVictor": "*",
+          "tks": 544,
+          "profRate": 10.27,
+          "agreeRate": 49.11,
+          "disagreeRate": 50.89
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮平林里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 74.51,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 56.15,
+          "candVictor": "*",
+          "tks": 420,
+          "profRate": 41.26,
+          "agreeRate": 48.6,
+          "disagreeRate": 51.4
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 草屯鎮雙冬里",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "030",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 66.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 51.15,
+          "candVictor": "*",
+          "tks": 714,
+          "profRate": 20.84,
+          "agreeRate": 63.18,
+          "disagreeRate": 36.82
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉廣興村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 69.42,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 48.59,
+          "candVictor": "*",
+          "tks": 242,
+          "profRate": 99.66,
+          "agreeRate": 96.72,
+          "disagreeRate": 3.28
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉崁頂村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 68.53,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 54.42,
+          "candVictor": "*",
+          "tks": 160,
+          "profRate": 19.91,
+          "agreeRate": 41.98,
+          "disagreeRate": 58.02
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉八仙村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 71.96,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 52.22,
+          "candVictor": "*",
+          "tks": 270,
+          "profRate": 96.12,
+          "agreeRate": 74.12,
+          "disagreeRate": 25.88
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉福盛村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 67.78,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 55.71,
+          "candVictor": "*",
+          "tks": 234,
+          "profRate": 15.13,
+          "agreeRate": 50.9,
+          "disagreeRate": 49.1
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉和興村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 66.78,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 54.85,
+          "candVictor": "*",
+          "tks": 215,
+          "profRate": 66.44,
+          "agreeRate": 72.62,
+          "disagreeRate": 27.38
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉復興村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.15,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 54.4,
+          "candVictor": "*",
+          "tks": 99,
+          "profRate": 39.19,
+          "agreeRate": 68.81,
+          "disagreeRate": 31.19
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉永平村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 71.2,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 60.05,
+          "candVictor": "*",
+          "tks": 675,
+          "profRate": 70.3,
+          "agreeRate": 55.4,
+          "disagreeRate": 44.6
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉中寮村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 67.13,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 58.7,
+          "candVictor": "*",
+          "tks": 226,
+          "profRate": 82.6,
+          "agreeRate": 39.15,
+          "disagreeRate": 60.85
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉廣福村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 68.33,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 43.69,
+          "candVictor": " ",
+          "tks": 135,
+          "profRate": 51.39,
+          "agreeRate": 0.32,
+          "disagreeRate": 99.68
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉永福村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 69.65,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 56.98,
+          "candVictor": "*",
+          "tks": 486,
+          "profRate": 39.21,
+          "agreeRate": 49.28,
+          "disagreeRate": 50.72
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉義和村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 70.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 50.94,
+          "candVictor": "*",
+          "tks": 354,
+          "profRate": 26.53,
+          "agreeRate": 96.27,
+          "disagreeRate": 3.73
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉清水村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 64.12,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 56.15,
+          "candVictor": "*",
+          "tks": 292,
+          "profRate": 89.59,
+          "agreeRate": 69.25,
+          "disagreeRate": 30.75
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉內城村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 70.45,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 55.78,
+          "candVictor": "*",
+          "tks": 164,
+          "profRate": 42.01,
+          "agreeRate": 35.48,
+          "disagreeRate": 64.52
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉龍安村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 69.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 44.68,
+          "candVictor": " ",
+          "tks": 189,
+          "profRate": 16.41,
+          "agreeRate": 13.68,
+          "disagreeRate": 86.32
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉爽文村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 69.25,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 54.64,
+          "candVictor": "*",
+          "tks": 165,
+          "profRate": 72.88,
+          "agreeRate": 87.66,
+          "disagreeRate": 12.34
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉龍岩村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 71.76,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 60.71,
+          "candVictor": "*",
+          "tks": 258,
+          "profRate": 12.75,
+          "agreeRate": 23.33,
+          "disagreeRate": 76.67
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉永芳村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 72.13,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 59.21,
+          "candVictor": "*",
+          "tks": 180,
+          "profRate": 58.81,
+          "agreeRate": 47.92,
+          "disagreeRate": 52.08
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 中寮鄉永和村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "080",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 71.49,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 57.82,
+          "candVictor": "*",
+          "tks": 196,
+          "profRate": 67.77,
+          "agreeRate": 71.85,
+          "disagreeRate": 28.15
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉魚池村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 66.8,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 57.29,
+          "candVictor": "*",
+          "tks": 676,
+          "profRate": 42.04,
+          "agreeRate": 35.25,
+          "disagreeRate": 64.75
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉東池村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 65.22,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 57.94,
+          "candVictor": "*",
+          "tks": 551,
+          "profRate": 54.99,
+          "agreeRate": 91.85,
+          "disagreeRate": 8.15
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉大林村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 65.74,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 49.31,
+          "candVictor": "*",
+          "tks": 321,
+          "profRate": 96.85,
+          "agreeRate": 58.13,
+          "disagreeRate": 41.87
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉東光村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 64.87,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 54.78,
+          "candVictor": "*",
+          "tks": 407,
+          "profRate": 70.32,
+          "agreeRate": 71.47,
+          "disagreeRate": 28.53
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉共和村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 68.82,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 58.1,
+          "candVictor": "*",
+          "tks": 391,
+          "profRate": 6.83,
+          "agreeRate": 47.45,
+          "disagreeRate": 52.55
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉新城村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 66.84,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 53.27,
+          "candVictor": "*",
+          "tks": 619,
+          "profRate": 8.37,
+          "agreeRate": 39.2,
+          "disagreeRate": 60.8
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉大雁村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 64.37,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 51.72,
+          "candVictor": "*",
+          "tks": 195,
+          "profRate": 57.7,
+          "agreeRate": 75.16,
+          "disagreeRate": 24.84
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉五城村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 67.53,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 59.5,
+          "candVictor": "*",
+          "tks": 260,
+          "profRate": 65.83,
+          "agreeRate": 37.78,
+          "disagreeRate": 62.22
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉中明村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 66.3,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 58.11,
+          "candVictor": "*",
+          "tks": 344,
+          "profRate": 25.9,
+          "agreeRate": 54.04,
+          "disagreeRate": 45.96
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉水社村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 69.3,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 63.88,
+          "candVictor": "*",
+          "tks": 329,
+          "profRate": 67.66,
+          "agreeRate": 28.93,
+          "disagreeRate": 71.07
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉日月村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 70.3,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 60.87,
+          "candVictor": "*",
+          "tks": 238,
+          "profRate": 15.25,
+          "agreeRate": 62.91,
+          "disagreeRate": 37.09
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉頭社村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 62.06,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 52.99,
+          "candVictor": "*",
+          "tks": 275,
+          "profRate": 58.45,
+          "agreeRate": 28.03,
+          "disagreeRate": 71.97
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 魚池鄉武登村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "090",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 60.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 63.75,
+          "candVictor": "*",
+          "tks": 197,
+          "profRate": 47.91,
+          "agreeRate": 86.1,
+          "disagreeRate": 13.9
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉國姓村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 68.35,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 55.94,
+          "candVictor": "*",
+          "tks": 584,
+          "profRate": 86.76,
+          "agreeRate": 97.65,
+          "disagreeRate": 2.35
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉石門村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 67.1,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 60.64,
+          "candVictor": "*",
+          "tks": 647,
+          "profRate": 12.05,
+          "agreeRate": 19.74,
+          "disagreeRate": 80.26
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉大旗村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 64.89,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 52.27,
+          "candVictor": "*",
+          "tks": 207,
+          "profRate": 62.9,
+          "agreeRate": 44.86,
+          "disagreeRate": 55.14
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉長流村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 65.38,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 61.21,
+          "candVictor": "*",
+          "tks": 497,
+          "profRate": 87.04,
+          "agreeRate": 11.67,
+          "disagreeRate": 88.33
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉長豐村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 62.92,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 63.12,
+          "candVictor": "*",
+          "tks": 279,
+          "profRate": 20.94,
+          "agreeRate": 92.83,
+          "disagreeRate": 7.17
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉長福村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 66.57,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 60.68,
+          "candVictor": "*",
+          "tks": 267,
+          "profRate": 23.12,
+          "agreeRate": 23.13,
+          "disagreeRate": 76.87
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉北港村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 66.32,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 54.94,
+          "candVictor": "*",
+          "tks": 617,
+          "profRate": 12.5,
+          "agreeRate": 79.13,
+          "disagreeRate": 20.87
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉福龜村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 70.17,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 58.54,
+          "candVictor": "*",
+          "tks": 672,
+          "profRate": 74.86,
+          "agreeRate": 71.17,
+          "disagreeRate": 28.83
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉乾溝村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 66.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 57.35,
+          "candVictor": "*",
+          "tks": 273,
+          "profRate": 63.68,
+          "agreeRate": 21.97,
+          "disagreeRate": 78.03
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉柑林村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 67.93,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 66.05,
+          "candVictor": "*",
+          "tks": 465,
+          "profRate": 55.39,
+          "agreeRate": 81.38,
+          "disagreeRate": 18.62
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉大石村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 67.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 61.57,
+          "candVictor": "*",
+          "tks": 266,
+          "profRate": 1.59,
+          "agreeRate": 54.18,
+          "disagreeRate": 45.82
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉北山村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 66.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 54.66,
+          "candVictor": "*",
+          "tks": 487,
+          "profRate": 43.41,
+          "agreeRate": 89.9,
+          "disagreeRate": 10.1
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 國姓鄉南港村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "100",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 64.67,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 66.85,
+          "candVictor": "*",
+          "tks": 615,
+          "profRate": 46.86,
+          "agreeRate": 17.12,
+          "disagreeRate": 82.88
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉南豐村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 65.09,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 65.75,
+          "candVictor": "*",
+          "tks": 215,
+          "profRate": 91.25,
+          "agreeRate": 60.68,
+          "disagreeRate": 39.32
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉大同村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 67.55,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 68.54,
+          "candVictor": "*",
+          "tks": 499,
+          "profRate": 82.66,
+          "agreeRate": 90.45,
+          "disagreeRate": 9.55
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉榮興村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 54.05,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 89.47,
+          "candVictor": "*",
+          "tks": 17,
+          "profRate": 7.08,
+          "agreeRate": 70.9,
+          "disagreeRate": 29.1
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉春陽村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 69.74,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 59.62,
+          "candVictor": "*",
+          "tks": 31,
+          "profRate": 55.86,
+          "agreeRate": 67.33,
+          "disagreeRate": 32.67
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉精英村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 68.63,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 52.94,
+          "candVictor": "*",
+          "tks": 36,
+          "profRate": 58.85,
+          "agreeRate": 72.28,
+          "disagreeRate": 27.72
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉都達村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 52.17,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 80.0,
+          "candVictor": "*",
+          "tks": 8,
+          "profRate": 15.74,
+          "agreeRate": 59.69,
+          "disagreeRate": 40.31
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉德鹿谷村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 46.15,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 75.0,
+          "candVictor": "*",
+          "tks": 9,
+          "profRate": 34.28,
+          "agreeRate": 32.43,
+          "disagreeRate": 67.57
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉發祥村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 52.17,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 64.71,
+          "candVictor": "*",
+          "tks": 22,
+          "profRate": 92.13,
+          "agreeRate": 30.27,
+          "disagreeRate": 69.73
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉力行村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 31.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 100.0,
+          "candVictor": "*",
+          "tks": 5,
+          "profRate": 77.87,
+          "agreeRate": 51.77,
+          "disagreeRate": 48.23
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉翠華村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 38.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 55.56,
+          "candVictor": "*",
+          "tks": 35,
+          "profRate": 87.0,
+          "agreeRate": 20.53,
+          "disagreeRate": 79.47
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉親愛村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 64.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 63.79,
+          "candVictor": "*",
+          "tks": 37,
+          "profRate": 73.47,
+          "agreeRate": 11.28,
+          "disagreeRate": 88.72
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉萬豐村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 64.0,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 83.33,
+          "candVictor": "*",
+          "tks": 25,
+          "profRate": 68.0,
+          "agreeRate": 81.32,
+          "disagreeRate": 18.68
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉法治村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 67.5,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 52.0,
+          "candVictor": "*",
+          "tks": 13,
+          "profRate": 48.73,
+          "agreeRate": 38.48,
+          "disagreeRate": 61.52
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉中正村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 60.29,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 63.41,
+          "candVictor": "*",
+          "tks": 26,
+          "profRate": 11.58,
+          "agreeRate": 71.83,
+          "disagreeRate": 28.17
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉互助村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 68.18,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 67.12,
+          "candVictor": "*",
+          "tks": 49,
+          "profRate": 32.63,
+          "agreeRate": 9.07,
+          "disagreeRate": 90.93
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第01選區 仁愛鄉新生村",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": "130",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 53.49,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 73.91,
+          "candVictor": "*",
+          "tks": 17,
+          "profRate": 62.76,
+          "agreeRate": 75.13,
+          "disagreeRate": 24.87
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

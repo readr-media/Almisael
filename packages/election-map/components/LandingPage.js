@@ -161,9 +161,10 @@ const StyledImage = styled(Image)`
 
 const teamMembers = [
   '監製：簡信昌',
-  '製作人：李又如、王薏晴',
-  '工程：李文瀚、傅典洋、張容瑄、劉鴻明、',
-  '李又如、李法賢、蘇庭葳', // 工程名稱太長，強制換行
+  '製作人：李又如、羅偉力、張慈珉、王薏晴',
+  '工程：林祐哲、黃曉敏、何羿勤、李文瀚、',
+  '傅典洋、張容瑄、劉鴻明、李又如、',
+  '李法賢、蘇庭葳', // 工程名稱太長，強制換行
   '設計：曾立宇、吳曼努',
   '社群：徐湘芸',
 ]
@@ -196,8 +197,7 @@ export const LandingPage = () => {
           {!isMobile ? (
             <Intro>
               <h1>
-                2024 總統、立委選舉
-                <br />
+                2025 立委罷免 <br />
                 開票即時資訊
               </h1>
               <p>{og.descriptioin}</p>
@@ -206,8 +206,7 @@ export const LandingPage = () => {
             <IntroWrapper preventCollapse={true}>
               <Intro>
                 <h1>
-                  2024 總統、立委選舉
-                  <br />
+                  2025 立委罷免 <br />
                   開票即時資訊
                 </h1>
                 <p>{og.descriptioin}</p>
