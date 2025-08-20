@@ -4,6 +4,7 @@ import { useAppSelector } from '../../hook/useRedux'
 import { useState } from 'react'
 import { getInfoBoxData } from '../../utils/infoboxData'
 import gtag from '../../utils/gtag'
+import { ThresholdBarChart } from '../ThresholdBarChart'
 /**
  * @typedef {import('../../utils/electionsData').InfoboxData} InfoboxData
  * @typedef {import('../../consts/electionsConfig').ElectionType} ElectionType
@@ -245,6 +246,15 @@ const InfoNote = styled.p`
     border: none;
   }
 `
+const IsCandidatePassedText = styled.div`
+  ${
+    /**
+     * @param {object} props
+     * @param {boolean} props.isVictor - is victor or not
+     */
+    (props) => (props.isVictor ? 'color:#5673DA;' : 'color:#FF8585;')
+  }
+`
 
 /**
  *
@@ -301,6 +311,39 @@ export default function InfoBox({ infoboxData, year }) {
           {electedSvg}
           <span className="tks-rate">{candidate.tksRate}%</span>
         </div>
+      </CandidateInfo>
+    )
+  }
+  const getRecallInfoboxItemJsx = (candidate, level, votePop) => {
+    if (!candidate) {
+      return null
+    }
+    const isVictor = candidate.adptVictor === 'Y'
+    const isLoser = candidate.adptVictor === 'N'
+    const thresholdBarChartData = [
+      { label: '同意', value: candidate.agreeTks, color: '#448DE3' },
+      { label: '不同意', value: candidate.disagreeTks, color: '#ED4541' },
+    ]
+    const shouldShowThresholdValueLevelList = [0, 1]
+    return (
+      <CandidateInfo isVictor={false} key={candidate.canNo}>
+        <div className="name">{candidate.name}</div>
+        <div className="party-and-tks-rate">
+          <span className="party">{candidate.party}</span>
+          <IsCandidatePassedText isVictor={isVictor}>
+            {isVictor ? '通過' : isLoser ? '不通過' : ''}
+          </IsCandidatePassedText>
+        </div>
+        <ThresholdBarChart
+          title="通過門檻"
+          thresholdValue={votePop}
+          shouldShowThresholdValue={shouldShowThresholdValueLevelList.includes(
+            level
+          )}
+          shouldShowThresholdBar={false}
+          totalValue={votePop}
+          data={thresholdBarChartData}
+        />
       </CandidateInfo>
     )
   }
@@ -628,9 +671,9 @@ export default function InfoBox({ infoboxData, year }) {
               {!!note?.text && <InfoNote>{note.text}</InfoNote>}
 
               <CandidatesInfoWrapper maxHeight={maxHeight}>
-                {orderedCandidates.map((candidate) =>
-                  getInfoboxItemJsx(candidate)
-                )}
+                {orderedCandidates.map((candidate) => {
+                  return getInfoboxItemJsx(candidate)
+                })}
               </CandidatesInfoWrapper>
               {shouldShowExpandButton && <Divider />}
             </Wrapper>
@@ -705,7 +748,7 @@ export default function InfoBox({ infoboxData, year }) {
                   ) {
                     return null
                   }
-                  districtName = district?.range
+                  districtName = `第${district?.area}選區`
                   const orderedCandidates = sortCandidatesByTksRate(
                     district.candidates
                   )
@@ -716,9 +759,15 @@ export default function InfoBox({ infoboxData, year }) {
                         <div>投票率: {district?.profRate}%</div>
                       </div>
                       <CandidatesInfoWrapper maxHeight={'100%'}>
-                        {orderedCandidates.map((candidate) =>
-                          getInfoboxItemJsx(candidate)
-                        )}
+                        {orderedCandidates.map((candidate) => {
+                          if (currentElectionSubType.key === 'recall-july')
+                            return getRecallInfoboxItemJsx(
+                              candidate,
+                              level,
+                              district?.votePop
+                            )
+                          return getInfoboxItemJsx(candidate)
+                        })}
                       </CandidatesInfoWrapper>
                     </Wrapper>
                   )
@@ -773,9 +822,11 @@ export default function InfoBox({ infoboxData, year }) {
               )}
             </div>
             <CandidatesInfoWrapper maxHeight={maxHeight}>
-              {orderedCandidates.map((candidate) =>
-                getInfoboxItemJsx(candidate)
-              )}
+              {orderedCandidates.map((candidate) => {
+                if (currentElectionSubType.key === 'recall-july')
+                  return getRecallInfoboxItemJsx(candidate)
+                return getInfoboxItemJsx(candidate)
+              })}
             </CandidatesInfoWrapper>
             {shouldShowExpandButton && <Divider />}
           </Wrapper>

@@ -1,0 +1,2078 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "臺中市 第02選區 沙鹿區居仁里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 75.38,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.65,
+          "candVictor": "*",
+          "tks": 469,
+          "profRate": 58.3,
+          "agreeRate": 26.02,
+          "disagreeRate": 73.98
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區洛泉里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 77.48,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 53.09,
+          "candVictor": "*",
+          "tks": 739,
+          "profRate": 44.41,
+          "agreeRate": 36.22,
+          "disagreeRate": 63.78
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區沙鹿里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 74.82,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 43.0,
+          "candVictor": " ",
+          "tks": 261,
+          "profRate": 58.21,
+          "agreeRate": 79.28,
+          "disagreeRate": 20.72
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區美仁里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 75.56,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 59.76,
+          "candVictor": "*",
+          "tks": 196,
+          "profRate": 56.83,
+          "agreeRate": 18.36,
+          "disagreeRate": 81.64
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區興仁里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 77.6,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.9,
+          "candVictor": "*",
+          "tks": 904,
+          "profRate": 30.4,
+          "agreeRate": 34.96,
+          "disagreeRate": 65.04
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區興安里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 74.57,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.99,
+          "candVictor": "*",
+          "tks": 1235,
+          "profRate": 79.43,
+          "agreeRate": 34.46,
+          "disagreeRate": 65.54
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區斗抵里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 77.53,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 52.86,
+          "candVictor": "*",
+          "tks": 1764,
+          "profRate": 54.36,
+          "agreeRate": 91.26,
+          "disagreeRate": 8.74
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區鹿峰里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 76.22,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 46.42,
+          "candVictor": " ",
+          "tks": 1966,
+          "profRate": 68.57,
+          "agreeRate": 95.62,
+          "disagreeRate": 4.38
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區鹿寮里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 77.88,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 45.66,
+          "candVictor": " ",
+          "tks": 2404,
+          "profRate": 26.61,
+          "agreeRate": 36.51,
+          "disagreeRate": 63.49
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區竹林里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 74.06,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.91,
+          "candVictor": "*",
+          "tks": 2769,
+          "profRate": 4.54,
+          "agreeRate": 30.8,
+          "disagreeRate": 69.2
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區犁分里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 75.61,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.19,
+          "candVictor": "*",
+          "tks": 398,
+          "profRate": 60.02,
+          "agreeRate": 48.95,
+          "disagreeRate": 51.05
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區福興里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 77.42,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 56.44,
+          "candVictor": "*",
+          "tks": 1644,
+          "profRate": 71.94,
+          "agreeRate": 75.48,
+          "disagreeRate": 24.52
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區北勢里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 74.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 54.56,
+          "candVictor": "*",
+          "tks": 1958,
+          "profRate": 75.08,
+          "agreeRate": 20.86,
+          "disagreeRate": 79.14
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區晉江里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 76.53,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 56.7,
+          "candVictor": "*",
+          "tks": 732,
+          "profRate": 58.59,
+          "agreeRate": 21.9,
+          "disagreeRate": 78.1
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區六路里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 75.0,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 54.24,
+          "candVictor": "*",
+          "tks": 2173,
+          "profRate": 43.01,
+          "agreeRate": 62.72,
+          "disagreeRate": 37.28
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區南勢里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 77.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 60.77,
+          "candVictor": "*",
+          "tks": 1526,
+          "profRate": 63.4,
+          "agreeRate": 70.97,
+          "disagreeRate": 29.03
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區埔子里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 78.21,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 64.95,
+          "candVictor": "*",
+          "tks": 2947,
+          "profRate": 65.2,
+          "agreeRate": 20.56,
+          "disagreeRate": 79.44
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區三鹿里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 74.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 62.26,
+          "candVictor": "*",
+          "tks": 3365,
+          "profRate": 49.79,
+          "agreeRate": 96.99,
+          "disagreeRate": 3.01
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區公明里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 73.66,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 60.71,
+          "candVictor": "*",
+          "tks": 1808,
+          "profRate": 54.41,
+          "agreeRate": 93.52,
+          "disagreeRate": 6.48
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區清泉里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 76.93,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 58.21,
+          "candVictor": "*",
+          "tks": 982,
+          "profRate": 60.92,
+          "agreeRate": 14.93,
+          "disagreeRate": 85.07
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 沙鹿區西勢里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "130",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 74.76,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 58.25,
+          "candVictor": "*",
+          "tks": 844,
+          "profRate": 72.15,
+          "agreeRate": 38.59,
+          "disagreeRate": 61.41
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區烏日里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 76.43,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 46.15,
+          "candVictor": " ",
+          "tks": 2901,
+          "profRate": 91.89,
+          "agreeRate": 27.21,
+          "disagreeRate": 72.79
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區湖日里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 72.76,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 45.85,
+          "candVictor": " ",
+          "tks": 878,
+          "profRate": 13.05,
+          "agreeRate": 16.34,
+          "disagreeRate": 83.66
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區三和里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 73.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 49.69,
+          "candVictor": "*",
+          "tks": 2660,
+          "profRate": 54.14,
+          "agreeRate": 50.71,
+          "disagreeRate": 49.29
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區榮泉里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 76.55,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 51.36,
+          "candVictor": "*",
+          "tks": 2393,
+          "profRate": 31.59,
+          "agreeRate": 64.58,
+          "disagreeRate": 35.42
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區學田里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 74.86,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 52.22,
+          "candVictor": "*",
+          "tks": 954,
+          "profRate": 17.08,
+          "agreeRate": 25.44,
+          "disagreeRate": 74.56
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區九德里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 75.49,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 45.88,
+          "candVictor": " ",
+          "tks": 4128,
+          "profRate": 79.2,
+          "agreeRate": 56.97,
+          "disagreeRate": 43.03
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區仁德里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 76.49,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 47.67,
+          "candVictor": " ",
+          "tks": 2623,
+          "profRate": 65.61,
+          "agreeRate": 75.37,
+          "disagreeRate": 24.63
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區前竹里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 78.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 41.89,
+          "candVictor": " ",
+          "tks": 483,
+          "profRate": 17.4,
+          "agreeRate": 42.22,
+          "disagreeRate": 57.78
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區五光里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 76.78,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 46.22,
+          "candVictor": " ",
+          "tks": 568,
+          "profRate": 99.68,
+          "agreeRate": 31.38,
+          "disagreeRate": 68.62
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區光明里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 76.88,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 48.85,
+          "candVictor": "*",
+          "tks": 741,
+          "profRate": 20.22,
+          "agreeRate": 91.38,
+          "disagreeRate": 8.62
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區東園里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 77.46,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 53.48,
+          "candVictor": "*",
+          "tks": 899,
+          "profRate": 80.92,
+          "agreeRate": 38.92,
+          "disagreeRate": 61.08
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區溪埧里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 77.82,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 49.7,
+          "candVictor": "*",
+          "tks": 1635,
+          "profRate": 75.85,
+          "agreeRate": 9.76,
+          "disagreeRate": 90.24
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區螺潭里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 79.75,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.67,
+          "candVictor": "*",
+          "tks": 831,
+          "profRate": 43.33,
+          "agreeRate": 67.29,
+          "disagreeRate": 32.71
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區北里里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 77.64,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 49.71,
+          "candVictor": "*",
+          "tks": 594,
+          "profRate": 85.33,
+          "agreeRate": 91.65,
+          "disagreeRate": 8.35
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區南里里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 77.9,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 61.06,
+          "candVictor": "*",
+          "tks": 613,
+          "profRate": 35.3,
+          "agreeRate": 54.64,
+          "disagreeRate": 45.36
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 烏日區溪尾里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "230",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 74.4,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 68.95,
+          "candVictor": "*",
+          "tks": 393,
+          "profRate": 3.17,
+          "agreeRate": 66.65,
+          "disagreeRate": 33.35
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區王田里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 75.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.84,
+          "candVictor": "*",
+          "tks": 1566,
+          "profRate": 8.33,
+          "agreeRate": 51.57,
+          "disagreeRate": 48.43
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區中和里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 76.77,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 59.16,
+          "candVictor": "*",
+          "tks": 368,
+          "profRate": 30.73,
+          "agreeRate": 8.63,
+          "disagreeRate": 91.37
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區福山里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.98,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 53.93,
+          "candVictor": "*",
+          "tks": 1346,
+          "profRate": 25.63,
+          "agreeRate": 34.68,
+          "disagreeRate": 65.32
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區營埔里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 74.72,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 57.73,
+          "candVictor": "*",
+          "tks": 609,
+          "profRate": 99.07,
+          "agreeRate": 21.43,
+          "disagreeRate": 78.57
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區社腳里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 78.36,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 59.04,
+          "candVictor": "*",
+          "tks": 1032,
+          "profRate": 56.86,
+          "agreeRate": 60.19,
+          "disagreeRate": 39.81
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區新興里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.96,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 55.25,
+          "candVictor": "*",
+          "tks": 994,
+          "profRate": 92.63,
+          "agreeRate": 44.62,
+          "disagreeRate": 55.38
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區大東里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 75.44,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 54.45,
+          "candVictor": "*",
+          "tks": 1150,
+          "profRate": 25.08,
+          "agreeRate": 55.06,
+          "disagreeRate": 44.94
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區大肚里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 78.73,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 55.76,
+          "candVictor": "*",
+          "tks": 895,
+          "profRate": 70.25,
+          "agreeRate": 51.5,
+          "disagreeRate": 48.5
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區永和里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 75.42,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 54.34,
+          "candVictor": "*",
+          "tks": 313,
+          "profRate": 15.98,
+          "agreeRate": 81.77,
+          "disagreeRate": 18.23
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區磺溪里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 77.39,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 59.69,
+          "candVictor": "*",
+          "tks": 742,
+          "profRate": 3.85,
+          "agreeRate": 65.23,
+          "disagreeRate": 34.77
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區永順里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 77.61,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 54.96,
+          "candVictor": "*",
+          "tks": 687,
+          "profRate": 4.43,
+          "agreeRate": 87.93,
+          "disagreeRate": 12.07
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區成功里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 78.21,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 65.65,
+          "candVictor": "*",
+          "tks": 453,
+          "profRate": 52.95,
+          "agreeRate": 62.21,
+          "disagreeRate": 37.79
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區山陽里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 75.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 54.78,
+          "candVictor": "*",
+          "tks": 504,
+          "profRate": 76.34,
+          "agreeRate": 72.12,
+          "disagreeRate": 27.88
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區頂街里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 74.32,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 56.52,
+          "candVictor": "*",
+          "tks": 2948,
+          "profRate": 41.38,
+          "agreeRate": 72.25,
+          "disagreeRate": 27.75
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區瑞井里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 74.18,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 52.73,
+          "candVictor": "*",
+          "tks": 1856,
+          "profRate": 8.23,
+          "agreeRate": 86.62,
+          "disagreeRate": 13.38
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區蔗廍里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 72.95,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 48.91,
+          "candVictor": "*",
+          "tks": 1660,
+          "profRate": 80.53,
+          "agreeRate": 65.12,
+          "disagreeRate": 34.88
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 大肚區自強里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "240",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 72.23,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 56.91,
+          "candVictor": "*",
+          "tks": 1310,
+          "profRate": 19.28,
+          "agreeRate": 84.64,
+          "disagreeRate": 15.36
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區竹坑里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.7,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 60.14,
+          "candVictor": "*",
+          "tks": 1329,
+          "profRate": 83.85,
+          "agreeRate": 19.62,
+          "disagreeRate": 80.38
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區龍東里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 59.0,
+          "candVictor": "*",
+          "tks": 1200,
+          "profRate": 78.69,
+          "agreeRate": 68.48,
+          "disagreeRate": 31.52
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區龍西里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 76.28,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 59.75,
+          "candVictor": "*",
+          "tks": 763,
+          "profRate": 72.26,
+          "agreeRate": 41.54,
+          "disagreeRate": 58.46
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區田中里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 76.66,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 57.23,
+          "candVictor": "*",
+          "tks": 1610,
+          "profRate": 39.17,
+          "agreeRate": 61.92,
+          "disagreeRate": 38.08
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區福田里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 70.42,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 65.14,
+          "candVictor": "*",
+          "tks": 454,
+          "profRate": 35.86,
+          "agreeRate": 94.13,
+          "disagreeRate": 5.87
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區麗水里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 75.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 68.12,
+          "candVictor": "*",
+          "tks": 1081,
+          "profRate": 26.57,
+          "agreeRate": 85.09,
+          "disagreeRate": 14.91
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區龍津里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 73.75,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 53.18,
+          "candVictor": "*",
+          "tks": 1859,
+          "profRate": 84.62,
+          "agreeRate": 75.98,
+          "disagreeRate": 24.02
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區三德里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 74.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 53.73,
+          "candVictor": "*",
+          "tks": 1096,
+          "profRate": 11.71,
+          "agreeRate": 25.25,
+          "disagreeRate": 74.75
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區忠和里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 75.76,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 51.24,
+          "candVictor": "*",
+          "tks": 1782,
+          "profRate": 87.34,
+          "agreeRate": 35.13,
+          "disagreeRate": 64.87
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區山腳里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 73.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 55.17,
+          "candVictor": "*",
+          "tks": 2232,
+          "profRate": 56.07,
+          "agreeRate": 79.84,
+          "disagreeRate": 20.16
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區龍泉里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 73.1,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 56.71,
+          "candVictor": "*",
+          "tks": 3172,
+          "profRate": 14.74,
+          "agreeRate": 80.16,
+          "disagreeRate": 19.84
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區龍崗里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 74.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 58.77,
+          "candVictor": "*",
+          "tks": 1139,
+          "profRate": 66.16,
+          "agreeRate": 77.52,
+          "disagreeRate": 22.48
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區新庄里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 74.2,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 53.13,
+          "candVictor": "*",
+          "tks": 2324,
+          "profRate": 33.35,
+          "agreeRate": 39.63,
+          "disagreeRate": 60.37
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區南寮里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 81.77,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 56.3,
+          "candVictor": "*",
+          "tks": 666,
+          "profRate": 42.16,
+          "agreeRate": 70.32,
+          "disagreeRate": 29.68
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區新東里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 73.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 54.12,
+          "candVictor": "*",
+          "tks": 1793,
+          "profRate": 28.61,
+          "agreeRate": 27.72,
+          "disagreeRate": 72.28
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 龍井區東海里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "250",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 74.05,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 54.07,
+          "candVictor": "*",
+          "tks": 3280,
+          "profRate": 76.17,
+          "agreeRate": 42.08,
+          "disagreeRate": 57.92
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區桐林里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 78.39,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 54.8,
+          "candVictor": "*",
+          "tks": 497,
+          "profRate": 79.38,
+          "agreeRate": 3.56,
+          "disagreeRate": 96.44
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區吉峰里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 72.19,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.73,
+          "candVictor": "*",
+          "tks": 3186,
+          "profRate": 70.2,
+          "agreeRate": 34.93,
+          "disagreeRate": 65.07
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區甲寅里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 74.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 51.71,
+          "candVictor": "*",
+          "tks": 1719,
+          "profRate": 16.39,
+          "agreeRate": 58.3,
+          "disagreeRate": 41.7
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區本鄉里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 76.02,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 51.1,
+          "candVictor": "*",
+          "tks": 835,
+          "profRate": 70.09,
+          "agreeRate": 50.9,
+          "disagreeRate": 49.1
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區中正里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 78.77,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 51.19,
+          "candVictor": "*",
+          "tks": 755,
+          "profRate": 38.39,
+          "agreeRate": 5.33,
+          "disagreeRate": 94.67
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區錦榮里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.94,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 54.67,
+          "candVictor": "*",
+          "tks": 492,
+          "profRate": 13.07,
+          "agreeRate": 95.02,
+          "disagreeRate": 4.98
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區萊園里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 77.21,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.41,
+          "candVictor": "*",
+          "tks": 372,
+          "profRate": 85.48,
+          "agreeRate": 63.39,
+          "disagreeRate": 36.61
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區本堂里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 74.57,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 55.0,
+          "candVictor": "*",
+          "tks": 2257,
+          "profRate": 38.16,
+          "agreeRate": 4.42,
+          "disagreeRate": 95.58
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區北柳里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 77.42,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 47.73,
+          "candVictor": " ",
+          "tks": 1407,
+          "profRate": 25.41,
+          "agreeRate": 96.2,
+          "disagreeRate": 3.8
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區南柳里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 76.13,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 51.13,
+          "candVictor": "*",
+          "tks": 700,
+          "profRate": 74.18,
+          "agreeRate": 27.4,
+          "disagreeRate": 72.6
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區四德里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 73.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.81,
+          "candVictor": "*",
+          "tks": 881,
+          "profRate": 11.53,
+          "agreeRate": 13.22,
+          "disagreeRate": 86.78
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區五福里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 76.86,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.42,
+          "candVictor": "*",
+          "tks": 965,
+          "profRate": 20.66,
+          "agreeRate": 76.29,
+          "disagreeRate": 23.71
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區丁台里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 76.02,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 48.47,
+          "candVictor": "*",
+          "tks": 809,
+          "profRate": 93.8,
+          "agreeRate": 0.25,
+          "disagreeRate": 99.75
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區北勢里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 78.43,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 64.02,
+          "candVictor": "*",
+          "tks": 977,
+          "profRate": 5.46,
+          "agreeRate": 33.59,
+          "disagreeRate": 66.41
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區南勢里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 76.09,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 55.1,
+          "candVictor": "*",
+          "tks": 508,
+          "profRate": 68.25,
+          "agreeRate": 52.09,
+          "disagreeRate": 47.91
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區萬豐里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 72.33,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 48.86,
+          "candVictor": "*",
+          "tks": 857,
+          "profRate": 18.74,
+          "agreeRate": 35.91,
+          "disagreeRate": 64.09
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區舊正里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 75.1,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 52.9,
+          "candVictor": "*",
+          "tks": 774,
+          "profRate": 58.43,
+          "agreeRate": 50.04,
+          "disagreeRate": 49.96
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區坑口里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 73.26,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 53.25,
+          "candVictor": "*",
+          "tks": 1082,
+          "profRate": 98.67,
+          "agreeRate": 56.2,
+          "disagreeRate": 43.8
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區峰谷里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 74.42,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 54.2,
+          "candVictor": "*",
+          "tks": 426,
+          "profRate": 80.91,
+          "agreeRate": 84.45,
+          "disagreeRate": 15.55
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第02選區 霧峰區六股里",
+      "area_nickname": "沙鹿區、烏日區、大肚區、龍井區、霧峰區",
+      "county": "66000",
+      "area": "02",
+      "town": "260",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 77.22,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "顏寬恒",
+          "party": "中國國民黨",
+          "tksRate": 50.7,
+          "candVictor": "*",
+          "tks": 872,
+          "profRate": 68.71,
+          "agreeRate": 22.19,
+          "disagreeRate": 77.81
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

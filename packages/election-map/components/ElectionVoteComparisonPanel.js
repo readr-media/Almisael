@@ -3,6 +3,7 @@ import { CollapsibleWrapper } from './collapsible/CollapsibleWrapper'
 import widgets from '@readr-media/react-election-widgets'
 import { useAppSelector } from '../hook/useRedux'
 import gtag from '../utils/gtag'
+import { isRecallSubtype } from '../utils/recallValidator'
 
 /**
  * @typedef {import('../consts/electionsConfig').ElectionType} ElectionType
@@ -75,6 +76,9 @@ const computeShouldShowEVC = (election, electionType, subtype) => {
     case 'mayor':
       return Array.isArray(election.districts) && !!election.districts.length
     case 'legislator':
+      if (isRecallSubtype(subtype.key)) {
+        return Array.isArray(election.districts) && !!election.districts.length
+      }
       switch (subtype.key) {
         case 'normal':
           return (
@@ -116,8 +120,8 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
     (state) => state.election.config.electionType
   )
   const subtype = useAppSelector((state) => state.election.control.subtype)
-  const countyCode = useAppSelector(
-    (state) => state.election.control.level.countyCode
+  const { countyCode, level, areaCode } = useAppSelector(
+    (state) => state.election.control.level
   )
   const evcData = useAppSelector((state) => state.election.data.evcData)
   let wrapperTitle = useAppSelector(
@@ -125,19 +129,32 @@ const ElectionVoteComparisonPanel = ({ onEvcSelected, isMobile = false }) => {
   )
   wrapperTitle =
     typeof wrapperTitle === 'string' ? wrapperTitle : wrapperTitle[subtype.key]
-
   let election
-  // only councilMember and legislator with subtype 'normal' will have evcData for level 1
+  // only councilMember and legislator with subtype 'normal' or recall will have evcData for level 1
   if (
     electionType === 'councilMember' ||
-    (electionType === 'legislator' && subtype.key === 'normal')
+    (electionType === 'legislator' &&
+      (subtype.key === 'normal' || isRecallSubtype(subtype.key)))
   ) {
     election = evcData[1][countyCode]
   } else {
     election = evcData[0]
   }
-  const shouldShowEVC = computeShouldShowEVC(election, electionType, subtype)
 
+  if (
+    electionType === 'legislator' &&
+    (subtype.key === 'normal' || isRecallSubtype(subtype.key)) &&
+    level >= 2
+  ) {
+    const selectedArea = areaCode.slice(-2)
+    election = {
+      ...election,
+      districts: election?.districts.filter(
+        (district) => district.districtName === selectedArea
+      ),
+    }
+  }
+  const shouldShowEVC = computeShouldShowEVC(election, electionType, subtype)
   const electionVoteComparisonJsx = isMobile ? (
     <ElectionVotesComparisonMobileWrapper>
       <StyledEVC

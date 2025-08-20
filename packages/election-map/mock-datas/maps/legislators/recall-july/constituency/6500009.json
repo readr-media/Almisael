@@ -1,0 +1,1825 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "新北市 第09選區 中和區宜安里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "074",
+      "type": "normal",
+      "profRate": 75.89,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 59.65,
+          "candVictor": "*",
+          "tks": 779,
+          "profRate": 51.84,
+          "agreeRate": 25.62,
+          "disagreeRate": 74.38
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區安樂里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 76.38,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 59.69,
+          "candVictor": "*",
+          "tks": 1389,
+          "profRate": 25.63,
+          "agreeRate": 50.73,
+          "disagreeRate": 49.27
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區安和里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 75.41,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 55.36,
+          "candVictor": "*",
+          "tks": 1069,
+          "profRate": 56.78,
+          "agreeRate": 47.66,
+          "disagreeRate": 52.34
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區安順里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "075",
+      "type": "normal",
+      "profRate": 77.26,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.56,
+          "candVictor": "*",
+          "tks": 1666,
+          "profRate": 97.64,
+          "agreeRate": 33.93,
+          "disagreeRate": 66.07
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區安平里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 77.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 60.21,
+          "candVictor": "*",
+          "tks": 2312,
+          "profRate": 80.28,
+          "agreeRate": 27.87,
+          "disagreeRate": 72.13
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區中安里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 76.67,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 62.66,
+          "candVictor": "*",
+          "tks": 1816,
+          "profRate": 80.99,
+          "agreeRate": 86.59,
+          "disagreeRate": 13.41
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區泰安里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 73.03,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 52.65,
+          "candVictor": "*",
+          "tks": 1102,
+          "profRate": 24.31,
+          "agreeRate": 92.98,
+          "disagreeRate": 7.02
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區秀山里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 74.6,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.43,
+          "candVictor": "*",
+          "tks": 1603,
+          "profRate": 65.34,
+          "agreeRate": 0.92,
+          "disagreeRate": 99.08
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區秀成里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 74.66,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 54.7,
+          "candVictor": "*",
+          "tks": 1152,
+          "profRate": 8.62,
+          "agreeRate": 72.71,
+          "disagreeRate": 27.29
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區秀義里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "076",
+      "type": "normal",
+      "profRate": 75.5,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 53.36,
+          "candVictor": "*",
+          "tks": 897,
+          "profRate": 83.46,
+          "agreeRate": 74.84,
+          "disagreeRate": 25.16
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區秀福里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 74.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 54.73,
+          "candVictor": "*",
+          "tks": 1642,
+          "profRate": 95.33,
+          "agreeRate": 80.12,
+          "disagreeRate": 19.88
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區秀景里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 73.98,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.7,
+          "candVictor": "*",
+          "tks": 2327,
+          "profRate": 1.26,
+          "agreeRate": 85.52,
+          "disagreeRate": 14.48
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區秀明里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 72.41,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 62.61,
+          "candVictor": "*",
+          "tks": 1889,
+          "profRate": 35.59,
+          "agreeRate": 98.62,
+          "disagreeRate": 1.38
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區秀峰里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 73.63,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 56.28,
+          "candVictor": "*",
+          "tks": 1641,
+          "profRate": 0.53,
+          "agreeRate": 89.97,
+          "disagreeRate": 10.03
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區秀士里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "077",
+      "type": "normal",
+      "profRate": 73.03,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 59.64,
+          "candVictor": "*",
+          "tks": 903,
+          "profRate": 11.22,
+          "agreeRate": 94.15,
+          "disagreeRate": 5.85
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區秀水里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "072",
+      "type": "normal",
+      "profRate": 74.04,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 59.75,
+          "candVictor": "*",
+          "tks": 1379,
+          "profRate": 30.53,
+          "agreeRate": 63.1,
+          "disagreeRate": 36.9
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 中和區秀仁里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "030",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 74.32,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 56.56,
+          "candVictor": "*",
+          "tks": 1130,
+          "profRate": 33.39,
+          "agreeRate": 19.23,
+          "disagreeRate": 80.77
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區光復里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 74.32,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.59,
+          "candVictor": "*",
+          "tks": 607,
+          "profRate": 31.87,
+          "agreeRate": 71.64,
+          "disagreeRate": 28.36
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區網溪里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "052",
+      "type": "normal",
+      "profRate": 72.42,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 59.88,
+          "candVictor": "*",
+          "tks": 406,
+          "profRate": 1.89,
+          "agreeRate": 43.27,
+          "disagreeRate": 56.73
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區復興里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 74.45,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 60.75,
+          "candVictor": "*",
+          "tks": 879,
+          "profRate": 21.54,
+          "agreeRate": 62.79,
+          "disagreeRate": 37.21
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區竹林里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 74.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 60.0,
+          "candVictor": "*",
+          "tks": 1317,
+          "profRate": 13.93,
+          "agreeRate": 19.58,
+          "disagreeRate": 80.42
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區桂林里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "055",
+      "type": "normal",
+      "profRate": 72.5,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 61.66,
+          "candVictor": "*",
+          "tks": 1341,
+          "profRate": 12.12,
+          "agreeRate": 96.57,
+          "disagreeRate": 3.43
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區上林里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "051",
+      "type": "normal",
+      "profRate": 73.89,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 63.16,
+          "candVictor": "*",
+          "tks": 1332,
+          "profRate": 16.06,
+          "agreeRate": 37.83,
+          "disagreeRate": 62.17
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區福林里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 73.93,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.3,
+          "candVictor": "*",
+          "tks": 1130,
+          "profRate": 36.74,
+          "agreeRate": 99.55,
+          "disagreeRate": 0.45
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區勵行里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 73.12,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 52.03,
+          "candVictor": "*",
+          "tks": 384,
+          "profRate": 89.53,
+          "agreeRate": 84.3,
+          "disagreeRate": 15.7
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區中興里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 73.36,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.16,
+          "candVictor": "*",
+          "tks": 1121,
+          "profRate": 72.8,
+          "agreeRate": 37.89,
+          "disagreeRate": 62.11
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區永興里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "054",
+      "type": "normal",
+      "profRate": 71.06,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.17,
+          "candVictor": "*",
+          "tks": 1064,
+          "profRate": 34.25,
+          "agreeRate": 73.49,
+          "disagreeRate": 26.51
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區正興里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "053",
+      "type": "normal",
+      "profRate": 72.9,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 55.86,
+          "candVictor": "*",
+          "tks": 744,
+          "profRate": 45.62,
+          "agreeRate": 27.46,
+          "disagreeRate": 72.54
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區豫溪里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 52.73,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.3,
+          "candVictor": "*",
+          "tks": 1303,
+          "profRate": 56.3,
+          "agreeRate": 47.07,
+          "disagreeRate": 52.93
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區光明里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 77.49,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 60.45,
+          "candVictor": "*",
+          "tks": 1125,
+          "profRate": 10.9,
+          "agreeRate": 69.5,
+          "disagreeRate": 30.5
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區福和里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 74.27,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.43,
+          "candVictor": "*",
+          "tks": 1827,
+          "profRate": 8.59,
+          "agreeRate": 64.49,
+          "disagreeRate": 35.51
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區得和里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 75.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 60.92,
+          "candVictor": "*",
+          "tks": 1576,
+          "profRate": 4.61,
+          "agreeRate": 85.45,
+          "disagreeRate": 14.55
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區永貞里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.83,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.95,
+          "candVictor": "*",
+          "tks": 1163,
+          "profRate": 65.02,
+          "agreeRate": 92.1,
+          "disagreeRate": 7.9
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區永福里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 76.66,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.05,
+          "candVictor": "*",
+          "tks": 974,
+          "profRate": 8.28,
+          "agreeRate": 50.85,
+          "disagreeRate": 49.15
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區河濱里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "048",
+      "type": "normal",
+      "profRate": 74.28,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 59.08,
+          "candVictor": "*",
+          "tks": 1142,
+          "profRate": 85.77,
+          "agreeRate": 54.17,
+          "disagreeRate": 45.83
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區秀和里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "047",
+      "type": "normal",
+      "profRate": 75.74,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.28,
+          "candVictor": "*",
+          "tks": 1712,
+          "profRate": 31.24,
+          "agreeRate": 84.56,
+          "disagreeRate": 15.44
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區永元里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 75.48,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 54.73,
+          "candVictor": "*",
+          "tks": 1549,
+          "profRate": 92.97,
+          "agreeRate": 73.94,
+          "disagreeRate": 26.06
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區民權里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 74.84,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.83,
+          "candVictor": "*",
+          "tks": 1555,
+          "profRate": 68.33,
+          "agreeRate": 1.61,
+          "disagreeRate": 98.39
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區民族里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 74.78,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 60.37,
+          "candVictor": "*",
+          "tks": 1659,
+          "profRate": 96.66,
+          "agreeRate": 14.12,
+          "disagreeRate": 85.88
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區秀朗里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 73.33,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 54.49,
+          "candVictor": "*",
+          "tks": 1244,
+          "profRate": 85.52,
+          "agreeRate": 9.47,
+          "disagreeRate": 90.53
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區秀成里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 72.8,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 56.12,
+          "candVictor": "*",
+          "tks": 945,
+          "profRate": 93.85,
+          "agreeRate": 39.48,
+          "disagreeRate": 60.52
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區秀林里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 76.08,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 54.02,
+          "candVictor": "*",
+          "tks": 1297,
+          "profRate": 6.25,
+          "agreeRate": 18.0,
+          "disagreeRate": 82.0
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區秀得里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "050",
+      "type": "normal",
+      "profRate": 75.61,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 59.55,
+          "candVictor": "*",
+          "tks": 948,
+          "profRate": 83.83,
+          "agreeRate": 67.13,
+          "disagreeRate": 32.87
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區秀元里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "060",
+      "type": "normal",
+      "profRate": 74.92,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 55.35,
+          "candVictor": "*",
+          "tks": 1024,
+          "profRate": 10.72,
+          "agreeRate": 36.03,
+          "disagreeRate": 63.97
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區民生里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "049",
+      "type": "normal",
+      "profRate": 75.12,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.03,
+          "candVictor": "*",
+          "tks": 1351,
+          "profRate": 7.37,
+          "agreeRate": 86.91,
+          "disagreeRate": 13.09
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區民本里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 71.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 56.62,
+          "candVictor": "*",
+          "tks": 1283,
+          "profRate": 41.08,
+          "agreeRate": 15.53,
+          "disagreeRate": 84.47
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區民富里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "059",
+      "type": "normal",
+      "profRate": 74.02,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 55.58,
+          "candVictor": "*",
+          "tks": 952,
+          "profRate": 20.53,
+          "agreeRate": 86.42,
+          "disagreeRate": 13.58
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區民樂里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 76.08,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 61.7,
+          "candVictor": "*",
+          "tks": 1735,
+          "profRate": 54.07,
+          "agreeRate": 89.15,
+          "disagreeRate": 10.85
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區民治里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 72.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 61.29,
+          "candVictor": "*",
+          "tks": 1023,
+          "profRate": 44.96,
+          "agreeRate": 45.46,
+          "disagreeRate": 54.54
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區智光里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 71.66,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.83,
+          "candVictor": "*",
+          "tks": 1063,
+          "profRate": 32.42,
+          "agreeRate": 61.41,
+          "disagreeRate": 38.59
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區潭安里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 74.05,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 60.61,
+          "candVictor": "*",
+          "tks": 1722,
+          "profRate": 89.04,
+          "agreeRate": 91.72,
+          "disagreeRate": 8.28
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區潭墘里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 74.23,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 61.5,
+          "candVictor": "*",
+          "tks": 1687,
+          "profRate": 71.02,
+          "agreeRate": 73.89,
+          "disagreeRate": 26.11
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區店街里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "056",
+      "type": "normal",
+      "profRate": 72.88,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.91,
+          "candVictor": "*",
+          "tks": 1432,
+          "profRate": 2.56,
+          "agreeRate": 33.78,
+          "disagreeRate": 66.22
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區大新里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 76.11,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.54,
+          "candVictor": "*",
+          "tks": 953,
+          "profRate": 95.49,
+          "agreeRate": 22.48,
+          "disagreeRate": 77.52
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區永安里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 76.3,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.28,
+          "candVictor": "*",
+          "tks": 1520,
+          "profRate": 25.87,
+          "agreeRate": 38.87,
+          "disagreeRate": 61.13
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區永樂里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "061",
+      "type": "normal",
+      "profRate": 73.73,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 53.77,
+          "candVictor": "*",
+          "tks": 749,
+          "profRate": 26.48,
+          "agreeRate": 12.5,
+          "disagreeRate": 87.5
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區水源里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 74.9,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.43,
+          "candVictor": "*",
+          "tks": 1360,
+          "profRate": 92.63,
+          "agreeRate": 71.64,
+          "disagreeRate": 28.36
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區協和里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 74.59,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 55.42,
+          "candVictor": "*",
+          "tks": 981,
+          "profRate": 78.4,
+          "agreeRate": 49.06,
+          "disagreeRate": 50.94
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區雙和里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 75.99,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 56.34,
+          "candVictor": "*",
+          "tks": 1338,
+          "profRate": 32.91,
+          "agreeRate": 63.38,
+          "disagreeRate": 36.62
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區安和里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 76.75,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.61,
+          "candVictor": "*",
+          "tks": 1393,
+          "profRate": 29.63,
+          "agreeRate": 3.96,
+          "disagreeRate": 96.04
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區前溪里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "043",
+      "type": "normal",
+      "profRate": 73.72,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 59.92,
+          "candVictor": "*",
+          "tks": 776,
+          "profRate": 76.75,
+          "agreeRate": 91.96,
+          "disagreeRate": 8.04
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區和平里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "044",
+      "type": "normal",
+      "profRate": 72.55,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 55.46,
+          "candVictor": "*",
+          "tks": 1570,
+          "profRate": 64.74,
+          "agreeRate": 59.49,
+          "disagreeRate": 40.51
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區保平里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 76.44,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 50.39,
+          "candVictor": "*",
+          "tks": 1477,
+          "profRate": 87.33,
+          "agreeRate": 4.44,
+          "disagreeRate": 95.56
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區中溪里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 74.95,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 52.95,
+          "candVictor": "*",
+          "tks": 1623,
+          "profRate": 48.0,
+          "agreeRate": 26.14,
+          "disagreeRate": 73.86
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區保安里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 75.73,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 54.3,
+          "candVictor": "*",
+          "tks": 2316,
+          "profRate": 74.68,
+          "agreeRate": 98.84,
+          "disagreeRate": 1.16
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區保順里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "062",
+      "type": "normal",
+      "profRate": 75.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 56.71,
+          "candVictor": "*",
+          "tks": 3688,
+          "profRate": 36.73,
+          "agreeRate": 92.54,
+          "disagreeRate": 7.46
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區下溪里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "046",
+      "type": "normal",
+      "profRate": 75.68,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 56.57,
+          "candVictor": "*",
+          "tks": 1611,
+          "profRate": 20.53,
+          "agreeRate": 0.29,
+          "disagreeRate": 99.71
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區大同里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "042",
+      "type": "normal",
+      "profRate": 73.78,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 66.92,
+          "candVictor": "*",
+          "tks": 441,
+          "profRate": 75.35,
+          "agreeRate": 8.07,
+          "disagreeRate": 91.93
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區新生里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "041",
+      "type": "normal",
+      "profRate": 71.94,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 65.19,
+          "candVictor": "*",
+          "tks": 382,
+          "profRate": 33.7,
+          "agreeRate": 30.5,
+          "disagreeRate": 69.5
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區永成里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 72.51,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 75.29,
+          "candVictor": "*",
+          "tks": 451,
+          "profRate": 4.97,
+          "agreeRate": 69.29,
+          "disagreeRate": 30.71
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區忠義里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 75.3,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 76.24,
+          "candVictor": "*",
+          "tks": 369,
+          "profRate": 90.68,
+          "agreeRate": 54.13,
+          "disagreeRate": 45.87
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區仁愛里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 77.89,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 54.05,
+          "candVictor": "*",
+          "tks": 947,
+          "profRate": 93.28,
+          "agreeRate": 76.21,
+          "disagreeRate": 23.79
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區文化里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 74.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.71,
+          "candVictor": "*",
+          "tks": 977,
+          "profRate": 36.34,
+          "agreeRate": 86.19,
+          "disagreeRate": 13.81
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區信義里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "057",
+      "type": "normal",
+      "profRate": 73.53,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 52.52,
+          "candVictor": "*",
+          "tks": 833,
+          "profRate": 84.03,
+          "agreeRate": 59.49,
+          "disagreeRate": 40.51
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區後溪里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "058",
+      "type": "normal",
+      "profRate": 75.3,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 44.61,
+          "candVictor": "*",
+          "tks": 554,
+          "profRate": 7.35,
+          "agreeRate": 37.04,
+          "disagreeRate": 62.96
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區上溪里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 71.2,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 57.64,
+          "candVictor": "*",
+          "tks": 641,
+          "profRate": 8.28,
+          "agreeRate": 2.75,
+          "disagreeRate": 97.25
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區頂溪里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 76.35,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.97,
+          "candVictor": "*",
+          "tks": 920,
+          "profRate": 22.53,
+          "agreeRate": 75.99,
+          "disagreeRate": 24.01
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區河堤里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 73.19,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 59.61,
+          "candVictor": "*",
+          "tks": 1228,
+          "profRate": 33.38,
+          "agreeRate": 50.71,
+          "disagreeRate": 49.29
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區 永和區新廍里",
+      "area_nickname": "中和區*、永和區",
+      "county": "65000",
+      "area": "09",
+      "town": "040",
+      "vill": "045",
+      "type": "normal",
+      "profRate": 75.67,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 61.11,
+          "candVictor": "*",
+          "tks": 850,
+          "profRate": 69.29,
+          "agreeRate": 32.82,
+          "disagreeRate": 67.18
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

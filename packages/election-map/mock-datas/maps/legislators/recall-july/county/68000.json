@@ -1,0 +1,133 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "桃園市 第01選區",
+      "area_nickname": "桃園區*、蘆竹區、龜山區",
+      "county": "68000",
+      "area": "01",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 72.25,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "牛煦庭",
+          "party": "中國國民黨",
+          "tksRate": 48.44,
+          "candVictor": "*",
+          "tks": 116571,
+          "profRate": 86.36,
+          "agreeRate": 86.97,
+          "disagreeRate": 13.03
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第02選區",
+      "area_nickname": "楊梅區、大園區、新屋區、觀音區",
+      "county": "68000",
+      "area": "02",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 71.67,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "涂權吉",
+          "party": "中國國民黨",
+          "tksRate": 48.19,
+          "candVictor": "*",
+          "tks": 103697,
+          "profRate": 23.43,
+          "agreeRate": 4.14,
+          "disagreeRate": 95.86
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 73.66,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 46.84,
+          "candVictor": "*",
+          "tks": 102056,
+          "profRate": 85.36,
+          "agreeRate": 79.59,
+          "disagreeRate": 20.41
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第04選區",
+      "area_nickname": "桃園區*",
+      "county": "68000",
+      "area": "04",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 72.8,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "萬美玲",
+          "party": "中國國民黨",
+          "tksRate": 56.8,
+          "candVictor": "*",
+          "tks": 119423,
+          "profRate": 1.16,
+          "agreeRate": 32.63,
+          "disagreeRate": 67.37
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第05選區",
+      "area_nickname": "平鎮區、龍潭區",
+      "county": "68000",
+      "area": "05",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 73.5,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "呂玉玲",
+          "party": "中國國民黨",
+          "tksRate": 52.1,
+          "candVictor": "*",
+          "tks": 104995,
+          "profRate": 51.4,
+          "agreeRate": 40.1,
+          "disagreeRate": 59.9
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第06選區",
+      "area_nickname": "八德區、大溪區、復興區、中壢區*",
+      "county": "68000",
+      "area": "06",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 72.9,
+      "candidates": []
+    }
+  ]
+}

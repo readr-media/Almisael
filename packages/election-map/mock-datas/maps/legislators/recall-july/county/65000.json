@@ -1,0 +1,199 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "新北市 第01選區",
+      "area_nickname": "淡水區、泰山區、林口區、三芝區、石門區、八里區",
+      "county": "65000",
+      "area": "01",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 71.7,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "洪孟楷",
+          "party": "中國國民黨",
+          "tksRate": 58.71,
+          "candVictor": "*",
+          "tks": 158596,
+          "profRate": 94.53,
+          "agreeRate": 15.25,
+          "disagreeRate": 84.75
+        }
+      ]
+    },
+    {
+      "range": "新北市 第02選區",
+      "area_nickname": "三重區*、蘆洲區、五股區",
+      "county": "65000",
+      "area": "02",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 72.41,
+      "candidates": []
+    },
+    {
+      "range": "新北市 第03選區",
+      "area_nickname": "三重區*",
+      "county": "65000",
+      "area": "03",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 73.15,
+      "candidates": []
+    },
+    {
+      "range": "新北市 第04選區",
+      "area_nickname": "新莊區*",
+      "county": "65000",
+      "area": "04",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 73.57,
+      "candidates": []
+    },
+    {
+      "range": "新北市 第05選區",
+      "area_nickname": "樹林區、鶯歌區、新莊區*",
+      "county": "65000",
+      "area": "05",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 71.9,
+      "candidates": []
+    },
+    {
+      "range": "新北市 第06選區",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "06",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 72.5,
+      "candidates": []
+    },
+    {
+      "range": "新北市 第07選區",
+      "area_nickname": "板橋區*",
+      "county": "65000",
+      "area": "07",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 73.1,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "葉元之",
+          "party": "中國國��黨",
+          "tksRate": 48.2,
+          "candVictor": "*",
+          "tks": 78134,
+          "profRate": 80.13,
+          "agreeRate": 9.52,
+          "disagreeRate": 90.48
+        }
+      ]
+    },
+    {
+      "range": "新北市 第08選區",
+      "area_nickname": "中和區*",
+      "county": "65000",
+      "area": "08",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 72.9,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "張智倫",
+          "party": "中國國民黨",
+          "tksRate": 49.8,
+          "candVictor": "*",
+          "tks": 89573,
+          "profRate": 53.58,
+          "agreeRate": 68.9,
+          "disagreeRate": 31.1
+        }
+      ]
+    },
+    {
+      "range": "新北市 第09選區",
+      "area_nickname": "永和區、中和區*",
+      "county": "65000",
+      "area": "09",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 73.4,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "林德福",
+          "party": "中國國民黨",
+          "tksRate": 58.1,
+          "candVictor": "*",
+          "tks": 96932,
+          "profRate": 59.38,
+          "agreeRate": 84.23,
+          "disagreeRate": 15.77
+        }
+      ]
+    },
+    {
+      "range": "新北市 第10選區",
+      "area_nickname": "土城區、三峽區",
+      "county": "65000",
+      "area": "10",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 73.1,
+      "candidates": []
+    },
+    {
+      "range": "新北市 第11選區",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 74.2,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 54.1,
+          "candVictor": "*",
+          "tks": 109169,
+          "profRate": 44.44,
+          "agreeRate": 8,
+          "disagreeRate": 92
+        }
+      ]
+    },
+    {
+      "range": "新北市 第12選區",
+      "area_nickname": "汐止區、金山區、萬里區、瑞芳區、平溪區、雙溪區、貢寮區",
+      "county": "65000",
+      "area": "12",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 72.8,
+      "candidates": []
+    }
+  ]
+}

@@ -1,0 +1,1227 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "臺北市 第06選區 大安區德安里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 71.83,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 57.06,
+          "candVictor": "*",
+          "tks": 1783,
+          "profRate": 50.95,
+          "agreeRate": 42.63,
+          "disagreeRate": 57.37
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區仁慈里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 75.59,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 48.01,
+          "candVictor": " ",
+          "tks": 1484,
+          "profRate": 63.28,
+          "agreeRate": 50.02,
+          "disagreeRate": 49.98
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區和安里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.46,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 53.36,
+          "candVictor": "*",
+          "tks": 2034,
+          "profRate": 48.92,
+          "agreeRate": 18.03,
+          "disagreeRate": 81.97
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區民炤里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 72.52,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 48.49,
+          "candVictor": " ",
+          "tks": 2201,
+          "profRate": 43.02,
+          "agreeRate": 6.11,
+          "disagreeRate": 93.89
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區仁愛里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 67.46,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 52.15,
+          "candVictor": "*",
+          "tks": 1384,
+          "profRate": 75.11,
+          "agreeRate": 63.42,
+          "disagreeRate": 36.58
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區義村里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.12,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 61.48,
+          "candVictor": "*",
+          "tks": 2016,
+          "profRate": 54.32,
+          "agreeRate": 65.41,
+          "disagreeRate": 34.59
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區民輝里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.88,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 49.71,
+          "candVictor": "*",
+          "tks": 1897,
+          "profRate": 25.22,
+          "agreeRate": 54.52,
+          "disagreeRate": 45.48
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區昌隆里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 70.74,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 48.01,
+          "candVictor": " ",
+          "tks": 857,
+          "profRate": 41.4,
+          "agreeRate": 55.95,
+          "disagreeRate": 44.05
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區誠安里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 70.69,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 48.28,
+          "candVictor": " ",
+          "tks": 1079,
+          "profRate": 67.81,
+          "agreeRate": 28.9,
+          "disagreeRate": 71.1
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區光武里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 70.14,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 52.1,
+          "candVictor": "*",
+          "tks": 2158,
+          "profRate": 99.72,
+          "agreeRate": 36.52,
+          "disagreeRate": 63.48
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區龍坡里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 73.53,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 51.84,
+          "candVictor": "*",
+          "tks": 1666,
+          "profRate": 43.51,
+          "agreeRate": 42.25,
+          "disagreeRate": 57.75
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區龍泉里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 74.88,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 48.46,
+          "candVictor": " ",
+          "tks": 1371,
+          "profRate": 76.52,
+          "agreeRate": 66.65,
+          "disagreeRate": 33.35
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區古風里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 74.15,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 49.92,
+          "candVictor": "*",
+          "tks": 1204,
+          "profRate": 46.73,
+          "agreeRate": 92.59,
+          "disagreeRate": 7.41
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區古莊里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.38,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 50.82,
+          "candVictor": "*",
+          "tks": 2158,
+          "profRate": 49.47,
+          "agreeRate": 27.37,
+          "disagreeRate": 72.63
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區龍安里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 60.39,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 49.99,
+          "candVictor": "*",
+          "tks": 1835,
+          "profRate": 88.23,
+          "agreeRate": 61.65,
+          "disagreeRate": 38.35
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區錦安里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 75.18,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 50.23,
+          "candVictor": "*",
+          "tks": 1717,
+          "profRate": 14.53,
+          "agreeRate": 10.45,
+          "disagreeRate": 89.55
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區福住里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 73.46,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 49.6,
+          "candVictor": "*",
+          "tks": 1690,
+          "profRate": 16.51,
+          "agreeRate": 99.12,
+          "disagreeRate": 0.88
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區永康里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 73.17,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 55.6,
+          "candVictor": "*",
+          "tks": 1132,
+          "profRate": 17.24,
+          "agreeRate": 67.21,
+          "disagreeRate": 32.79
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區光明里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 75.26,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 51.24,
+          "candVictor": "*",
+          "tks": 1072,
+          "profRate": 93.45,
+          "agreeRate": 19.14,
+          "disagreeRate": 80.86
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區錦泰里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 75.23,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 53.76,
+          "candVictor": "*",
+          "tks": 1137,
+          "profRate": 59.98,
+          "agreeRate": 62.38,
+          "disagreeRate": 37.62
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區錦華里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 77.57,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 54.25,
+          "candVictor": "*",
+          "tks": 1826,
+          "profRate": 11.63,
+          "agreeRate": 72.97,
+          "disagreeRate": 27.03
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區龍圖里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 73.26,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 56.02,
+          "candVictor": "*",
+          "tks": 2176,
+          "profRate": 28.28,
+          "agreeRate": 14.57,
+          "disagreeRate": 85.43
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區新龍里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 77.11,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 61.57,
+          "candVictor": "*",
+          "tks": 2496,
+          "profRate": 89.58,
+          "agreeRate": 93.01,
+          "disagreeRate": 6.99
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區龍陣里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 75.15,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 52.1,
+          "candVictor": "*",
+          "tks": 1065,
+          "profRate": 61.41,
+          "agreeRate": 98.93,
+          "disagreeRate": 1.07
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區龍雲里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 72.57,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 52.36,
+          "candVictor": "*",
+          "tks": 1395,
+          "profRate": 67.4,
+          "agreeRate": 97.46,
+          "disagreeRate": 2.54
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區龍生里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 76.29,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 53.97,
+          "candVictor": "*",
+          "tks": 2082,
+          "profRate": 69.28,
+          "agreeRate": 67.02,
+          "disagreeRate": 32.98
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區住安里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 71.94,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 55.69,
+          "candVictor": "*",
+          "tks": 1590,
+          "profRate": 2.28,
+          "agreeRate": 70.26,
+          "disagreeRate": 29.74
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區義安里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 71.91,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 55.9,
+          "candVictor": "*",
+          "tks": 1711,
+          "profRate": 26.64,
+          "agreeRate": 97.0,
+          "disagreeRate": 3.0
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區通化里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 72.68,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 46.82,
+          "candVictor": " ",
+          "tks": 1641,
+          "profRate": 65.5,
+          "agreeRate": 97.04,
+          "disagreeRate": 2.96
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區通安里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 73.72,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 52.91,
+          "candVictor": "*",
+          "tks": 1675,
+          "profRate": 31.92,
+          "agreeRate": 92.36,
+          "disagreeRate": 7.64
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區臨江里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 72.88,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 50.48,
+          "candVictor": "*",
+          "tks": 1207,
+          "profRate": 68.61,
+          "agreeRate": 55.28,
+          "disagreeRate": 44.72
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區法治里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 74.91,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 57.8,
+          "candVictor": "*",
+          "tks": 1557,
+          "profRate": 10.46,
+          "agreeRate": 90.65,
+          "disagreeRate": 9.35
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區全安里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 71.93,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 55.54,
+          "candVictor": "*",
+          "tks": 1389,
+          "profRate": 43.86,
+          "agreeRate": 72.26,
+          "disagreeRate": 27.74
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區群賢里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 73.39,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 56.7,
+          "candVictor": "*",
+          "tks": 1850,
+          "profRate": 5.95,
+          "agreeRate": 80.12,
+          "disagreeRate": 19.88
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區群英里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 74.71,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 66.57,
+          "candVictor": "*",
+          "tks": 2788,
+          "profRate": 81.51,
+          "agreeRate": 70.31,
+          "disagreeRate": 29.69
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區虎嘯里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 74.89,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 52.86,
+          "candVictor": "*",
+          "tks": 1165,
+          "profRate": 0.23,
+          "agreeRate": 27.71,
+          "disagreeRate": 72.29
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區臥龍里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 77.06,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 53.32,
+          "candVictor": "*",
+          "tks": 642,
+          "profRate": 1.77,
+          "agreeRate": 32.56,
+          "disagreeRate": 67.44
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區龍淵里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 75.23,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 50.93,
+          "candVictor": "*",
+          "tks": 2643,
+          "profRate": 99.29,
+          "agreeRate": 56.67,
+          "disagreeRate": 43.33
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區龍門里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "041",
+      "type": "normal",
+      "profRate": 73.37,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 50.88,
+          "candVictor": "*",
+          "tks": 1221,
+          "profRate": 5.06,
+          "agreeRate": 97.35,
+          "disagreeRate": 2.65
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區大學里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "043",
+      "type": "normal",
+      "profRate": 74.71,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 51.74,
+          "candVictor": "*",
+          "tks": 2571,
+          "profRate": 79.98,
+          "agreeRate": 89.07,
+          "disagreeRate": 10.93
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區芳和里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "044",
+      "type": "normal",
+      "profRate": 73.94,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 53.3,
+          "candVictor": "*",
+          "tks": 1787,
+          "profRate": 91.98,
+          "agreeRate": 97.5,
+          "disagreeRate": 2.5
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區黎元里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "046",
+      "type": "normal",
+      "profRate": 75.45,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 49.72,
+          "candVictor": "*",
+          "tks": 1625,
+          "profRate": 38.11,
+          "agreeRate": 81.85,
+          "disagreeRate": 18.15
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區黎孝里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "047",
+      "type": "normal",
+      "profRate": 76.07,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 51.11,
+          "candVictor": "*",
+          "tks": 2380,
+          "profRate": 1.37,
+          "agreeRate": 96.12,
+          "disagreeRate": 3.88
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區黎和里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "048",
+      "type": "normal",
+      "profRate": 76.62,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 54.72,
+          "candVictor": "*",
+          "tks": 1587,
+          "profRate": 86.96,
+          "agreeRate": 93.36,
+          "disagreeRate": 6.64
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區建安里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "049",
+      "type": "normal",
+      "profRate": 70.82,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 53.66,
+          "candVictor": "*",
+          "tks": 1421,
+          "profRate": 25.97,
+          "agreeRate": 85.93,
+          "disagreeRate": 14.07
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區建倫里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "050",
+      "type": "normal",
+      "profRate": 69.87,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 54.28,
+          "candVictor": "*",
+          "tks": 1787,
+          "profRate": 11.5,
+          "agreeRate": 50.41,
+          "disagreeRate": 49.59
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區敦安里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "051",
+      "type": "normal",
+      "profRate": 71.28,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 50.8,
+          "candVictor": "*",
+          "tks": 1725,
+          "profRate": 63.13,
+          "agreeRate": 9.03,
+          "disagreeRate": 90.97
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區正聲里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "052",
+      "type": "normal",
+      "profRate": 71.7,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 54.96,
+          "candVictor": "*",
+          "tks": 1396,
+          "profRate": 46.09,
+          "agreeRate": 42.63,
+          "disagreeRate": 57.37
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區敦煌里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "053",
+      "type": "normal",
+      "profRate": 72.73,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 50.74,
+          "candVictor": "*",
+          "tks": 1714,
+          "profRate": 3.72,
+          "agreeRate": 35.96,
+          "disagreeRate": 64.04
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區華聲里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "054",
+      "type": "normal",
+      "profRate": 71.2,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 53.79,
+          "candVictor": "*",
+          "tks": 1241,
+          "profRate": 57.06,
+          "agreeRate": 91.29,
+          "disagreeRate": 8.71
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區車層里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "055",
+      "type": "normal",
+      "profRate": 71.43,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 51.41,
+          "candVictor": "*",
+          "tks": 1782,
+          "profRate": 15.95,
+          "agreeRate": 61.5,
+          "disagreeRate": 38.5
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區光信里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "056",
+      "type": "normal",
+      "profRate": 73.77,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 52.76,
+          "candVictor": "*",
+          "tks": 2221,
+          "profRate": 52.27,
+          "agreeRate": 88.27,
+          "disagreeRate": 11.73
+        }
+      ]
+    },
+    {
+      "range": "臺北市 第06選區 大安區學府里",
+      "area_nickname": "大安區",
+      "county": "63000",
+      "area": "06",
+      "town": "030",
+      "vill": "057",
+      "type": "normal",
+      "profRate": 71.38,
+      "candidates": [
+        {
+          "candNo": 4,
+          "name": "羅智強",
+          "party": "中國國民黨",
+          "tksRate": 56.51,
+          "candVictor": "*",
+          "tks": 742,
+          "profRate": 27.73,
+          "agreeRate": 29.87,
+          "disagreeRate": 70.13
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

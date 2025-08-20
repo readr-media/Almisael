@@ -68,14 +68,14 @@
 
 ### redux slices
 
-因為所有的選舉類別、各自的子類別和所有的選舉年份、公投案號都存在 `electionsConfig` 之中，因此在專案初始化的時候 `election-slice` 就會先透過 `electionsConfig` 來產生一個包含所有選制下各年份、各公投案號、各子類別等條件組成的儲存三大資料的 Object，可以看[此段註解](https://github.com/readr-media/Almisael/blob/main/packages/election-map/utils/electionsData.js#L102-L350)會比較好理解 `electionsData` 的結構。
+因為所有的選舉類別、各自的子類別和所有的選舉年份、公投案號都存在 `electionsConfig` 之中，因此在專案初始化的時候 `election-slice` 就會先透過 `electionsConfig` 來產生一個包含所有選制下各年份、各公投案號、各子類別等條件組成的儲存三大資料的 Object��� 可以看[此段註解](https://github.com/readr-media/Almisael/blob/main/packages/election-map/utils/electionsData.js#L102-L350)會比較好理解 `electionsData` 的結構。
 
 `electionsData` 因為受限於各個選制都有各自不同的邏輯，像是年份和案號、有的有子類別有的沒有，因此沒辦法設計成完全一樣的格式，因此在讀取和寫入的時候需要另外依靠不同的選制各別處理 (寫入： [updateElectionsData](https://github.com/readr-media/Almisael/blob/main/packages/election-map/utils/electionsData.js#L412)，讀取： [getElectionData](https://github.com/readr-media/Almisael/blob/main/packages/election-map/utils/electionsData.js#L452))。
 
 除了 `electionsData` 之外，`electionSlice` 中還存了大量的狀態，見 [`initialElectionState`](https://github.com/readr-media/Almisael/blob/main/packages/election-map/store/election-slice.js#L83)：
 
 - config: 當前顯示中的選舉類別的 electionConfig，用來讓年份、公投案號等 component 知道要 render 哪些時間和案號。
-- data: 除了 `electionsData` 之外，其餘的 properties 都是各個 panels 在當前的選舉條件下所需要顯示的資料，像是 infobox、地圖、席次表和票數比較，這些資料都是在切換選制、子類別、年份、層級時在 `prepareElectionData` 拿取對應的三大資料後更新 `electionsData` 後， `useElectionData` 隨著 rerender 而產生出新的對應資料。
+- data: 除了 `electionsData` 之外，其餘的 properties 都是各個 panels 在當前的選舉條件下所需要顯示的資料，像是 infobox、地圖、席次表和票數比較，這些資料都是在切換選制、子類別、年份、層級時在 `prepareElectionData` 拿取對應的三大資 ��� 後更新 `electionsData` 後， `useElectionData` 隨著 rerender 而產生出新的對應資料。
 - compare: 如同 data 中的 `infoboxData`、`mapData`，都是在 `useElectionData` rerender 的時候當 `compareMode=true` 的時候依照 compare 的選制、子類別、年份、公投案號和層級等條件拿取 `electionsData` 中對應的資料，微小的不同的是 compareMode 的情況下並不會顯示席次表和票數比較。
 - control: 當前顯示的子選舉類別、年份、公投案號和層級，選制因為已經在 config 中有涵蓋所以不需要另外存選制在這之中。
 
@@ -116,9 +116,28 @@ evc 主要為顯示目前選制下的整體的投票資訊，只會有該選制�
 #### SeatChart (席次表)
 
 資料：只有子選制最高層級的資料
-介紹開票中席次表用開票中、尚未有席次的正檔名稱邏輯，補充近即時開票中章節
+介紹開票中席次表用開票中、尚未有席 �� 的正檔名稱邏輯，補充近即時開票中章節
 介紹立委切換按鈕
 使用方式
+
+### Reusable Components
+
+#### ThresholdBarChart
+
+`ThresholdBarChart` 是一個可複用的長條圖元件，用於顯示帶有門檻標示的數據。
+
+- **位置**: `components/ThresholdBarChart.js`
+- **Props**:
+  - `title` (string): 門檻標題。
+  - `thresholdValue` (number): 門檻數值。
+  - `totalValue` (number): 用於計算百分比的總數。
+  - `data` (array): 長條圖的資料陣列，每個物件包含 `label`, `value`, `color`。
+  - `unit` (string, optional): 顯示在數值後的單位，預設為 `'票'`。
+- **功能**:
+  - 根據傳入的 `data` 動態渲染多個長條圖。
+  - 自動計算並顯示每個長條的百分比。
+  - 在圖表上繪製一條表示門檻位置的虛線。
+  - 為了視覺清晰，當長條太短時會自動隱藏內部的數值標籤。
 
 ### 地圖
 
@@ -132,7 +151,7 @@ evc 主要為顯示目前選制下的整體的投票資訊，只會有該選制�
 
 以下詳述三個階段的狀態，其中開票結束的狀態其實就等同於即時開票結束，該選舉結束變成歷史選舉，換句話說，歷史選舉中的資料就會符合開票結束的長相。
 
-#### 開票前：
+#### 開票前
 
 EVC
 Seat
@@ -145,7 +164,7 @@ Infobox
 }
 ```
 
-#### 開票中：
+#### 開票中
 
 ```
 {
@@ -154,7 +173,7 @@ Infobox
 }
 ```
 
-#### 開票結束：
+#### 開票結束
 
 ```
 {
@@ -169,7 +188,7 @@ Infobox
 
 ## 選制
 
-這個專案涵蓋台灣各種類別的大選，因為各個選制之間有需多差異但又需要共用同樣的架構來呈現，因此造成程式碼在處理選制上有許多 case by case 的處理方式，而對於選制本身有基本的了解有助於維護並開發新的功能，以下逐一介紹選制並把各選制特殊的商業邏輯一併補上。
+這個專案涵蓋台灣各種類別的大選，因為各個選制之間有需多差異 �� 又需要共用同樣的架構來呈現，因此造成程式碼在處理選制上有許多 case by case 的處理方式，而對於選制本身有基本的了解有助於維護並開發新的功能，以下逐一介紹。
 
 如對任一選舉有疑惑可以查看[中選會選舉資料庫](https://db.cec.gov.tw/ElecTable/Election?type=President)以查看各年度選舉資料長相。
 
@@ -191,7 +210,7 @@ Infobox
 
 #### 區域立法委員
 
-區域立委由各縣市向下劃分１到多個選區，選區由一個到多個鄉鎮市區所組成，單一鄉鎮市區有可能被拆成兩個選區 (ex: 台北市松山區北松山南松山為不同選區)，選區以下則是村里 (桌機版的選區地圖是由村里透過 mapping 表組成)。
+區域立委由各縣市向下劃分１到多個選區，選區由一個到多個鄉鎮市區所組成，單一鄉鎮市區有可能被拆成兩個選區 (ex: 台北市松山區北松山南松山為不同選區)，選 �� 以下則是村里 (桌機版的選區地圖是由村里透過 mapping 表組成)。
 
 各縣市內的各選區內選民針對該選區的多位候選人進行單人勝出的投票，也就是單一選區只會有一人勝選。
 
@@ -233,7 +252,7 @@ Infobox
 
 區域縣市議員由各縣市向下劃分 1 到多個選區，選區由一到多個鄉鎮市區所組成，不像區域立法委員，區域縣市議員的選區沒有將鄉鎮市區拆分成兩個以上的選區。
 
-> 雖然選區是由鄉鎮市區組成，但在開發當下因時程較趕以及不夠熟悉地圖資料的合成等技術，因此在選舉模板地圖版中仍是以行政區為主要的瀏覽方式，未來若有時間應將區域縣市議員改為選區地圖的呈現方式，不過後端生成的選舉資料也會需要重新產生。
+> 雖然選區是由鄉鎮市區組成，但在開發當下因時程較趕以及不夠熟悉地圖資料的合成等技術，因此在選舉模板地圖版中仍是以行政區為主要的瀏覽方式，未來若有時間應將區域縣市議員改為選區地圖的呈現方式，不過後端生成的選舉資料也會需要重新產 ��。
 
 各縣市內的各選區內的選民針對該選區的多位候選人進行多人勝出(視各選區分配席次而有所不同)的投票，也就是單一選區多人勝選。
 
@@ -253,10 +272,96 @@ Infobox
 
 ### 全國性公投
 
-全國性公投以公投案號為單位，全國選民針對每一個公投案投下同意或是不同意票，最後決定公投通過與否。
+全國性公投以公投案號為單位，全國選民針對每一個公投案投下同意或是不同意票，最後決定公投通 ��� 與否。
 
 - 選舉範圍：全國
 - 勝出： 通過/不通過
 - 各地圖/篩選層級：全國 > 縣市 > 鄉鎮市區 > 村里 (選區為行政區)
 
 ## 新年度修改方式
+
+# 2025 罷免功能架構說明
+
+## 資料源 mapping 機制
+
+為了支援罷免選舉功能，建立了彈性的資料源 mapping 機制：
+
+### 核心檔案
+
+- `utils/dataSourceMapping.js` - 配置檔案，定義 recall-july 到 legislator.normal 的資料 mapping 規則
+- `utils/DataSourceResolver.js` - 統一的資料源解析工具類，提供 API 參數準備和 mapping 檢查功能
+- `utils/mockUtils.js` - 向後相容性檔案，保持既有整合點的相容性
+
+### mapping 邏輯
+
+目前 `recall-july` subType 會：
+
+1. 在 UI 層面顯示為獨立的罷免選舉選項
+2. 在資料層面使用 `legislator.normal` (區域立委) 的資料
+3. 透過 `DataSourceResolver` 統一處理所有 API 呼叫的參數轉換
+
+### 未來升級路徑
+
+當 API 支援獨立的罷免資料後：
+
+1. 更新 `dataSourceMapping.js` 中的 mapping 配置
+2. 移除 `mockUtils.js` 檔案 (保留向後相容性)
+
+---
+
+## 開發紀錄
+
+### 2025-07-01: 全國性罷免功能開發
+
+- **feat(map): support recall-july subtype in Map component**
+
+  - 在 `Map.js` 中增加了對 `recall-july` 子類型的支援，使其在地圖上能夠正確處理相關的顯示邏輯。
+
+- **docs: update documentation for recall election feature**
+  - 更新 `README.md`，加入了關於罷免選舉功能的初步說明。
+
+### 2025-07-02: 新增與修正
+
+- **feat(ui): add reusable ThresholdBarChart component**
+
+  - 新增 `ThresholdBarChart.js` 元件，用於顯示帶有門檻標示的水平長條圖。
+  - 此元件具有良好的 props 設計 �� 可高度複用。
+
+- **fix(ui): improve ThresholdBarChart reusability and style**
+
+  - 優化 `ThresholdBarChart` 元件，增加了 `unit` prop 使單位可自訂。
+  - 調整了圖例和標籤顯示邏輯，使其更符合設計並避免文字擁擠。
+
+- **feat(infobox): integrate ThresholdBarChart for recall-july elections**
+  - 在 `Infobox.js` 的 `NormalLegislatorInfobox` 元件中整合 `ThresholdBarChart`。
+  - 針對 `recall-july` 子類型選舉，自動將候選人資料轉換為門檻圖表格式。
+  - 實作台灣罷免選舉門檻計算邏輯（需 25% 合格選民參與投票）。
+  - 使用藍色 (#5673da) 表示支持罷免，紅色 (#ff8585) 表示反對罷免。
+  - 保持對一般立委選舉的向後相容性，非罷免選舉仍使用原有顯示方式。
+
+### 2025-07-02: 修正罷免選舉功能
+
+- **fix(data): complete recall-july infobox data support across all levels**
+
+  - 完整修復了 `electionsData.js` 中 `prepareElectionData` 函數在所有層級（level 0, 2, 3）對 `recall-july` subtype 的 Infobox 資料處理，確保各層級都能正確顯示資訊。
+
+- **docs(map): document recall-july feature implementation details**
+
+  - 在 `README.md` 中新增了關於罷免選舉功能的詳細架構說明和開發紀錄。
+
+- **fix(data): correct recall-july area code handling in data fetching**
+
+  - 修正了 `electionsData.js` 中 `recall-july` 在選區層級（level 2）的編碼處理，確保 API 請求使用正確的 `areaCode`。
+
+- **fix(map): extend recall-july support to area and village color functions**
+  - 擴展了 `Map.js` 中 `getAreaColor` 和 `getVillageColor` 函數的功能，使其支援 `recall-july`，確保選區和村里層級地圖顏色顯示正確。
+
+### 2025-07-24: 罷免選舉村里層級視覺化增強
+
+- **feat(map): implement diagonal hatch pattern for recall-july villages**
+  - 在 `Map.js` 中實作了村里層級的對角線填充圖案功能，針對罷免選舉 (`recall-july`) 提供更直觀的視覺化表示。
+  - 當選舉類型為 `legislator` 且子類型為 `recall-july` 時，在村里層級會顯示對角線填充圖案覆蓋在既有的村里顏色上。
+  - 填充條件：村里的 `agreeRate > disagreeRate` 且 `ytpRate >= 25%`（達到罷免門檻）。
+  - 圖案規格：白色對角線條紋，線寬 0.3px，旋轉角度 -8.92 度，提供清晰的視覺區別。
+  - 此功能透過 SVG pattern 實作，確保在不同縮放層級下都能正確顯示，並且不影響地圖的互動功能。
+

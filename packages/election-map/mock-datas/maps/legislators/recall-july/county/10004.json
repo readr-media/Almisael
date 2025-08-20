@@ -1,0 +1,53 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "新竹縣 第01選區",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 72.58,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 55.91,
+          "candVictor": "*",
+          "tks": 84959,
+          "profRate": 60.35,
+          "agreeRate": 64.4,
+          "disagreeRate": 35.6
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 75.05,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 44.82,
+          "candVictor": "*",
+          "tks": 76608,
+          "profRate": 91.93,
+          "agreeRate": 32.93,
+          "disagreeRate": 67.07
+        }
+      ]
+    }
+  ]
+}

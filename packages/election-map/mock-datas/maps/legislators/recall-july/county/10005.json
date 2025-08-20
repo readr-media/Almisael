@@ -1,0 +1,53 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "苗栗縣 第01選區",
+      "area_nickname": "苑裡鎮、通霄鎮、竹南鎮、後龍鎮、銅鑼鄉、三義鄉、西湖鄉、造橋鄉",
+      "county": "10005",
+      "area": "01",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 71.63,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "陳超明",
+          "party": "無黨籍及未經政黨推薦",
+          "tksRate": 56.85,
+          "candVictor": "*",
+          "tks": 79521,
+          "profRate": 4.47,
+          "agreeRate": 11.99,
+          "disagreeRate": 88.01
+        }
+      ]
+    },
+    {
+      "range": "苗栗縣 第02選區",
+      "area_nickname": "苗栗市、頭份市、卓蘭鎮、大湖鄉、公館鄉、南庄鄉、頭屋鄉、三灣鄉、獅潭鄉、泰安鄉",
+      "county": "10005",
+      "area": "02",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 72.06,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "���鎮軍",
+          "party": "中國國民黨",
+          "tksRate": 55.05,
+          "candVictor": "*",
+          "tks": 89111,
+          "profRate": 69.3,
+          "agreeRate": 52.23,
+          "disagreeRate": 47.77
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1664 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "臺中市 第06選區 中區綠川里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "010",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 71.26,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 42.73,
+          "candVictor": " ",
+          "tks": 426,
+          "profRate": 65.05,
+          "agreeRate": 49.71,
+          "disagreeRate": 50.29
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 中區繼光里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "010",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 69.56,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 43.84,
+          "candVictor": " ",
+          "tks": 413,
+          "profRate": 84.68,
+          "agreeRate": 6.59,
+          "disagreeRate": 93.41
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 中區公園里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "010",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 68.33,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 43.91,
+          "candVictor": " ",
+          "tks": 389,
+          "profRate": 38.6,
+          "agreeRate": 76.5,
+          "disagreeRate": 23.5
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 中區光復里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "010",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 70.22,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 47.02,
+          "candVictor": " ",
+          "tks": 584,
+          "profRate": 31.29,
+          "agreeRate": 51.07,
+          "disagreeRate": 48.93
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 中區大墩里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "010",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 69.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 42.96,
+          "candVictor": " ",
+          "tks": 546,
+          "profRate": 82.52,
+          "agreeRate": 4.32,
+          "disagreeRate": 95.68
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 中區柳川里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "010",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 62.44,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 48.24,
+          "candVictor": " ",
+          "tks": 534,
+          "profRate": 42.51,
+          "agreeRate": 80.54,
+          "disagreeRate": 19.46
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 中區大誠里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "010",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 70.51,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 47.78,
+          "candVictor": "*",
+          "tks": 720,
+          "profRate": 54.0,
+          "agreeRate": 74.81,
+          "disagreeRate": 25.19
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 中區中華里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "010",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 67.91,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 48.62,
+          "candVictor": "*",
+          "tks": 597,
+          "profRate": 79.79,
+          "agreeRate": 41.97,
+          "disagreeRate": 58.03
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區新庄里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 63.07,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 49.66,
+          "candVictor": "*",
+          "tks": 881,
+          "profRate": 49.94,
+          "agreeRate": 16.47,
+          "disagreeRate": 83.53
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區振興里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 74.55,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 47.05,
+          "candVictor": " ",
+          "tks": 997,
+          "profRate": 38.82,
+          "agreeRate": 3.23,
+          "disagreeRate": 96.77
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區東橋里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.31,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 46.24,
+          "candVictor": " ",
+          "tks": 1219,
+          "profRate": 44.37,
+          "agreeRate": 80.37,
+          "disagreeRate": 19.63
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區東興里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 76.7,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 48.73,
+          "candVictor": "*",
+          "tks": 996,
+          "profRate": 70.35,
+          "agreeRate": 88.36,
+          "disagreeRate": 11.64
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區泉源里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 75.73,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 50.67,
+          "candVictor": "*",
+          "tks": 757,
+          "profRate": 43.53,
+          "agreeRate": 45.89,
+          "disagreeRate": 54.11
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區干城里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 76.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 50.36,
+          "candVictor": "*",
+          "tks": 779,
+          "profRate": 94.88,
+          "agreeRate": 44.46,
+          "disagreeRate": 55.54
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區旱溪里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 75.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 48.95,
+          "candVictor": "*",
+          "tks": 864,
+          "profRate": 89.52,
+          "agreeRate": 60.18,
+          "disagreeRate": 39.82
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區樂成里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 72.39,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 47.84,
+          "candVictor": " ",
+          "tks": 785,
+          "profRate": 85.9,
+          "agreeRate": 1.33,
+          "disagreeRate": 98.67
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區東門里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 76.99,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 51.09,
+          "candVictor": "*",
+          "tks": 2682,
+          "profRate": 39.89,
+          "agreeRate": 4.05,
+          "disagreeRate": 95.95
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區十甲里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.37,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 53.27,
+          "candVictor": "*",
+          "tks": 1849,
+          "profRate": 72.54,
+          "agreeRate": 46.17,
+          "disagreeRate": 53.83
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區東英里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 76.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 52.45,
+          "candVictor": "*",
+          "tks": 2906,
+          "profRate": 16.35,
+          "agreeRate": 74.39,
+          "disagreeRate": 25.61
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區東南里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 73.1,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 56.52,
+          "candVictor": "*",
+          "tks": 1456,
+          "profRate": 89.81,
+          "agreeRate": 93.75,
+          "disagreeRate": 6.25
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區東勢里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 70.24,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 55.37,
+          "candVictor": "*",
+          "tks": 943,
+          "profRate": 42.69,
+          "agreeRate": 16.58,
+          "disagreeRate": 83.42
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區合作里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 72.05,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 65.54,
+          "candVictor": "*",
+          "tks": 1750,
+          "profRate": 45.85,
+          "agreeRate": 27.83,
+          "disagreeRate": 72.17
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區富仁里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 71.8,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 70.5,
+          "candVictor": "*",
+          "tks": 1900,
+          "profRate": 92.63,
+          "agreeRate": 59.68,
+          "disagreeRate": 40.32
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區富台里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 70.93,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 68.41,
+          "candVictor": "*",
+          "tks": 771,
+          "profRate": 89.15,
+          "agreeRate": 69.2,
+          "disagreeRate": 30.8
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 東區東信里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "020",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 75.98,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 50.81,
+          "candVictor": "*",
+          "tks": 3247,
+          "profRate": 45.4,
+          "agreeRate": 43.01,
+          "disagreeRate": 56.99
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區長春里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 71.59,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 50.16,
+          "candVictor": "*",
+          "tks": 626,
+          "profRate": 20.86,
+          "agreeRate": 48.31,
+          "disagreeRate": 51.69
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區長榮里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 77.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 50.47,
+          "candVictor": "*",
+          "tks": 865,
+          "profRate": 73.6,
+          "agreeRate": 14.08,
+          "disagreeRate": 85.92
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區城隍里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 52.58,
+          "candVictor": "*",
+          "tks": 1294,
+          "profRate": 6.05,
+          "agreeRate": 41.28,
+          "disagreeRate": 58.72
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區國光里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 74.56,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 49.94,
+          "candVictor": "*",
+          "tks": 1321,
+          "profRate": 73.26,
+          "agreeRate": 42.75,
+          "disagreeRate": 57.25
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區南門里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 76.17,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 51.49,
+          "candVictor": "*",
+          "tks": 1312,
+          "profRate": 5.33,
+          "agreeRate": 90.41,
+          "disagreeRate": 9.59
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區德義里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 75.55,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 54.72,
+          "candVictor": "*",
+          "tks": 1124,
+          "profRate": 94.08,
+          "agreeRate": 22.03,
+          "disagreeRate": 77.97
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區積善里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 75.98,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 52.09,
+          "candVictor": "*",
+          "tks": 945,
+          "profRate": 95.16,
+          "agreeRate": 83.39,
+          "disagreeRate": 16.61
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區江川里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 76.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 52.08,
+          "candVictor": "*",
+          "tks": 1028,
+          "profRate": 65.53,
+          "agreeRate": 18.96,
+          "disagreeRate": 81.04
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區新榮里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 74.53,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 56.61,
+          "candVictor": "*",
+          "tks": 1892,
+          "profRate": 26.67,
+          "agreeRate": 17.09,
+          "disagreeRate": 82.91
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區福興里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 75.84,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 53.96,
+          "candVictor": "*",
+          "tks": 1486,
+          "profRate": 75.26,
+          "agreeRate": 64.24,
+          "disagreeRate": 35.76
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區福平里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 74.68,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 52.86,
+          "candVictor": "*",
+          "tks": 1979,
+          "profRate": 8.75,
+          "agreeRate": 7.3,
+          "disagreeRate": 92.7
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區福順里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 74.8,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 56.71,
+          "candVictor": "*",
+          "tks": 2294,
+          "profRate": 50.92,
+          "agreeRate": 7.08,
+          "disagreeRate": 92.92
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區和平里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 72.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 57.95,
+          "candVictor": "*",
+          "tks": 1694,
+          "profRate": 83.33,
+          "agreeRate": 59.35,
+          "disagreeRate": 40.65
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區平和里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 74.47,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 51.82,
+          "candVictor": "*",
+          "tks": 1265,
+          "profRate": 75.59,
+          "agreeRate": 11.54,
+          "disagreeRate": 88.46
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區南和里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 69.25,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 59.98,
+          "candVictor": "*",
+          "tks": 2910,
+          "profRate": 67.95,
+          "agreeRate": 57.66,
+          "disagreeRate": 42.34
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區永興里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 75.78,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 59.72,
+          "candVictor": "*",
+          "tks": 3442,
+          "profRate": 47.34,
+          "agreeRate": 21.58,
+          "disagreeRate": 78.42
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區永和里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 73.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 58.3,
+          "candVictor": "*",
+          "tks": 1883,
+          "profRate": 40.83,
+          "agreeRate": 36.66,
+          "disagreeRate": 63.34
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區樹義里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 76.7,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 59.73,
+          "candVictor": "*",
+          "tks": 5225,
+          "profRate": 91.06,
+          "agreeRate": 28.75,
+          "disagreeRate": 71.25
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區工學里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 77.12,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 61.97,
+          "candVictor": "*",
+          "tks": 3078,
+          "profRate": 16.95,
+          "agreeRate": 20.55,
+          "disagreeRate": 79.45
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區樹德里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 77.63,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 59.32,
+          "candVictor": "*",
+          "tks": 3720,
+          "profRate": 6.6,
+          "agreeRate": 49.92,
+          "disagreeRate": 50.08
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區西川里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 74.95,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 53.68,
+          "candVictor": "*",
+          "tks": 1612,
+          "profRate": 47.83,
+          "agreeRate": 49.76,
+          "disagreeRate": 50.24
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 南區崇倫里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "030",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 76.44,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 55.35,
+          "candVictor": "*",
+          "tks": 2192,
+          "profRate": 21.57,
+          "agreeRate": 91.84,
+          "disagreeRate": 8.16
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區三民里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 53.97,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 45.71,
+          "candVictor": " ",
+          "tks": 554,
+          "profRate": 35.64,
+          "agreeRate": 79.85,
+          "disagreeRate": 20.15
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區利民里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 74.45,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 53.45,
+          "candVictor": "*",
+          "tks": 496,
+          "profRate": 78.33,
+          "agreeRate": 37.4,
+          "disagreeRate": 62.6
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區民生里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.53,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 52.11,
+          "candVictor": "*",
+          "tks": 630,
+          "profRate": 38.45,
+          "agreeRate": 80.83,
+          "disagreeRate": 19.17
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區廣民里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.33,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 49.03,
+          "candVictor": "*",
+          "tks": 457,
+          "profRate": 23.28,
+          "agreeRate": 39.52,
+          "disagreeRate": 60.48
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區平和里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 71.82,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 48.01,
+          "candVictor": "*",
+          "tks": 591,
+          "profRate": 64.72,
+          "agreeRate": 17.07,
+          "disagreeRate": 82.93
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區東昇里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 77.05,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 49.78,
+          "candVictor": "*",
+          "tks": 795,
+          "profRate": 73.89,
+          "agreeRate": 56.6,
+          "disagreeRate": 43.4
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區公民里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 74.84,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 46.05,
+          "candVictor": " ",
+          "tks": 1581,
+          "profRate": 80.29,
+          "agreeRate": 32.07,
+          "disagreeRate": 67.93
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區藍興里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 78.86,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 47.02,
+          "candVictor": " ",
+          "tks": 1398,
+          "profRate": 7.74,
+          "agreeRate": 8.38,
+          "disagreeRate": 91.62
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區公舘里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 74.35,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 46.92,
+          "candVictor": " ",
+          "tks": 1844,
+          "profRate": 62.32,
+          "agreeRate": 89.97,
+          "disagreeRate": 10.03
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區安龍里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 74.73,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 45.87,
+          "candVictor": " ",
+          "tks": 895,
+          "profRate": 14.27,
+          "agreeRate": 19.15,
+          "disagreeRate": 80.85
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區吉龍里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 74.82,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 49.29,
+          "candVictor": "*",
+          "tks": 2253,
+          "profRate": 85.4,
+          "agreeRate": 33.47,
+          "disagreeRate": 66.53
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區土庫里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 74.88,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 45.25,
+          "candVictor": " ",
+          "tks": 1801,
+          "profRate": 34.51,
+          "agreeRate": 73.98,
+          "disagreeRate": 26.02
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區大忠里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 79.17,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 48.77,
+          "candVictor": "*",
+          "tks": 1582,
+          "profRate": 92.37,
+          "agreeRate": 10.38,
+          "disagreeRate": 89.62
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區民龍里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 73.63,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 50.57,
+          "candVictor": "*",
+          "tks": 1246,
+          "profRate": 77.2,
+          "agreeRate": 66.48,
+          "disagreeRate": 33.52
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區和龍里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 71.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 41.6,
+          "candVictor": " ",
+          "tks": 631,
+          "profRate": 32.13,
+          "agreeRate": 52.35,
+          "disagreeRate": 47.65
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區後龍里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 73.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 43.23,
+          "candVictor": " ",
+          "tks": 1016,
+          "profRate": 58.34,
+          "agreeRate": 65.46,
+          "disagreeRate": 34.54
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區双龍里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 72.95,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 48.95,
+          "candVictor": "*",
+          "tks": 909,
+          "profRate": 8.01,
+          "agreeRate": 53.23,
+          "disagreeRate": 46.77
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區昇平里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 74.11,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 45.37,
+          "candVictor": " ",
+          "tks": 1789,
+          "profRate": 46.49,
+          "agreeRate": 47.11,
+          "disagreeRate": 52.89
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區中興里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 75.92,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 42.06,
+          "candVictor": " ",
+          "tks": 1072,
+          "profRate": 19.75,
+          "agreeRate": 88.05,
+          "disagreeRate": 11.95
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區公益里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 75.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 43.86,
+          "candVictor": " ",
+          "tks": 847,
+          "profRate": 59.57,
+          "agreeRate": 98.8,
+          "disagreeRate": 1.2
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區公德里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 75.27,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 49.24,
+          "candVictor": "*",
+          "tks": 1499,
+          "profRate": 33.18,
+          "agreeRate": 37.93,
+          "disagreeRate": 62.07
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區公正里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 76.31,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 48.18,
+          "candVictor": " ",
+          "tks": 2209,
+          "profRate": 4.31,
+          "agreeRate": 81.35,
+          "disagreeRate": 18.65
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區公平里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 73.36,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 50.86,
+          "candVictor": "*",
+          "tks": 1772,
+          "profRate": 86.46,
+          "agreeRate": 92.26,
+          "disagreeRate": 7.74
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區忠明里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 72.76,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 45.85,
+          "candVictor": " ",
+          "tks": 1813,
+          "profRate": 84.1,
+          "agreeRate": 97.21,
+          "disagreeRate": 2.79
+        }
+      ]
+    },
+    {
+      "range": "臺中市 第06選區 西區忠誠里",
+      "area_nickname": "中區、東區、南區、西區",
+      "county": "66000",
+      "area": "06",
+      "town": "040",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 73.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅廷瑋",
+          "party": "中國國民黨",
+          "tksRate": 45.38,
+          "candVictor": " ",
+          "tks": 1772,
+          "profRate": 76.37,
+          "agreeRate": 2.29,
+          "disagreeRate": 97.71
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

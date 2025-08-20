@@ -1,0 +1,2492 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "新竹縣 第01選區 竹北市新社里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 74.07,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 56.04,
+          "candVictor": "*",
+          "tks": 2821,
+          "profRate": 1.86,
+          "agreeRate": 27.99,
+          "disagreeRate": 72.01
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 竹北市新國里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 76.03,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 51.84,
+          "candVictor": "*",
+          "tks": 2335,
+          "profRate": 81.65,
+          "agreeRate": 41.61,
+          "disagreeRate": 58.39
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 竹北市聯興里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 75.64,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 56.33,
+          "candVictor": "*",
+          "tks": 1801,
+          "profRate": 94.28,
+          "agreeRate": 98.92,
+          "disagreeRate": 1.08
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 竹北市麻園里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 75.39,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 52.83,
+          "candVictor": "*",
+          "tks": 755,
+          "profRate": 92.25,
+          "agreeRate": 15.29,
+          "disagreeRate": 84.71
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 竹北市溪州里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 76.06,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 54.15,
+          "candVictor": "*",
+          "tks": 978,
+          "profRate": 8.71,
+          "agreeRate": 6.72,
+          "disagreeRate": 93.28
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 竹北市新庄里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 74.89,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 56.93,
+          "candVictor": "*",
+          "tks": 460,
+          "profRate": 94.17,
+          "agreeRate": 30.08,
+          "disagreeRate": 69.92
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 竹北市白地里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 74.27,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 52.61,
+          "candVictor": "*",
+          "tks": 816,
+          "profRate": 99.77,
+          "agreeRate": 15.04,
+          "disagreeRate": 84.96
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 竹北市新港里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 73.92,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 39.41,
+          "candVictor": " ",
+          "tks": 335,
+          "profRate": 16.31,
+          "agreeRate": 71.6,
+          "disagreeRate": 28.4
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 竹北市大眉里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 73.37,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 53.61,
+          "candVictor": "*",
+          "tks": 660,
+          "profRate": 80.75,
+          "agreeRate": 86.8,
+          "disagreeRate": 13.2
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 竹北市大義里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 74.26,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 37.7,
+          "candVictor": " ",
+          "tks": 443,
+          "profRate": 33.35,
+          "agreeRate": 25.82,
+          "disagreeRate": 74.18
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 竹北市尚義里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 73.35,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 45.25,
+          "candVictor": "*",
+          "tks": 543,
+          "profRate": 32.77,
+          "agreeRate": 97.0,
+          "disagreeRate": 3.0
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 竹北市崇義里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "010",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 72.69,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 46.14,
+          "candVictor": "*",
+          "tks": 597,
+          "profRate": 36.77,
+          "agreeRate": 95.87,
+          "disagreeRate": 4.13
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮新埔里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 72.44,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 57.03,
+          "candVictor": "*",
+          "tks": 361,
+          "profRate": 9.5,
+          "agreeRate": 7.31,
+          "disagreeRate": 92.69
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮新生里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 75.58,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 52.24,
+          "candVictor": "*",
+          "tks": 198,
+          "profRate": 76.95,
+          "agreeRate": 76.44,
+          "disagreeRate": 23.56
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮新民里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 72.31,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 56.6,
+          "candVictor": "*",
+          "tks": 386,
+          "profRate": 12.63,
+          "agreeRate": 0.8,
+          "disagreeRate": 99.2
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮田新里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 75.93,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 53.54,
+          "candVictor": "*",
+          "tks": 1399,
+          "profRate": 50.95,
+          "agreeRate": 33.86,
+          "disagreeRate": 66.14
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮旱坑里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 69.82,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 57.14,
+          "candVictor": "*",
+          "tks": 640,
+          "profRate": 71.53,
+          "agreeRate": 16.77,
+          "disagreeRate": 83.23
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮五埔里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 69.56,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 59.7,
+          "candVictor": "*",
+          "tks": 754,
+          "profRate": 76.41,
+          "agreeRate": 75.3,
+          "disagreeRate": 24.7
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮四座里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 73.6,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 51.71,
+          "candVictor": "*",
+          "tks": 1151,
+          "profRate": 17.17,
+          "agreeRate": 16.15,
+          "disagreeRate": 83.85
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮照門里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 70.69,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 58.04,
+          "candVictor": "*",
+          "tks": 498,
+          "profRate": 93.76,
+          "agreeRate": 62.76,
+          "disagreeRate": 37.24
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮清水里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 74.74,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 56.47,
+          "candVictor": "*",
+          "tks": 157,
+          "profRate": 36.92,
+          "agreeRate": 99.89,
+          "disagreeRate": 0.11
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮鹿鳴里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 72.32,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 49.02,
+          "candVictor": "*",
+          "tks": 226,
+          "profRate": 45.8,
+          "agreeRate": 21.46,
+          "disagreeRate": 78.54
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮新北里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 76.18,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 62.76,
+          "candVictor": "*",
+          "tks": 246,
+          "profRate": 3.57,
+          "agreeRate": 29.19,
+          "disagreeRate": 70.81
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮巨埔里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 72.46,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 50.83,
+          "candVictor": "*",
+          "tks": 368,
+          "profRate": 40.8,
+          "agreeRate": 59.2,
+          "disagreeRate": 40.8
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮內立里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 69.33,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 61.01,
+          "candVictor": "*",
+          "tks": 435,
+          "profRate": 52.93,
+          "agreeRate": 41.99,
+          "disagreeRate": 58.01
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮寶石里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 70.77,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 56.81,
+          "candVictor": "*",
+          "tks": 313,
+          "profRate": 67.35,
+          "agreeRate": 87.6,
+          "disagreeRate": 12.4
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮文山里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 73.81,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 56.06,
+          "candVictor": "*",
+          "tks": 1924,
+          "profRate": 36.76,
+          "agreeRate": 32.28,
+          "disagreeRate": 67.72
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮上寮里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 70.47,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 55.67,
+          "candVictor": "*",
+          "tks": 648,
+          "profRate": 62.66,
+          "agreeRate": 34.28,
+          "disagreeRate": 65.72
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮下寮里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 73.5,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 56.76,
+          "candVictor": "*",
+          "tks": 978,
+          "profRate": 81.61,
+          "agreeRate": 72.78,
+          "disagreeRate": 27.22
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮南平里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 72.69,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 60.0,
+          "candVictor": "*",
+          "tks": 396,
+          "profRate": 87.98,
+          "agreeRate": 11.92,
+          "disagreeRate": 88.08
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新埔鎮北平里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "030",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 72.88,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 54.44,
+          "candVictor": "*",
+          "tks": 233,
+          "profRate": 56.36,
+          "agreeRate": 30.58,
+          "disagreeRate": 69.42
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮東興里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 78.38,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 67.06,
+          "candVictor": "*",
+          "tks": 230,
+          "profRate": 94.35,
+          "agreeRate": 93.17,
+          "disagreeRate": 6.83
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮西安里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.82,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 65.95,
+          "candVictor": "*",
+          "tks": 854,
+          "profRate": 50.87,
+          "agreeRate": 75.95,
+          "disagreeRate": 24.05
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮南雄里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.49,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 65.58,
+          "candVictor": "*",
+          "tks": 322,
+          "profRate": 48.0,
+          "agreeRate": 50.22,
+          "disagreeRate": 49.78
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮北斗里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 72.04,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 62.23,
+          "candVictor": "*",
+          "tks": 1554,
+          "profRate": 56.95,
+          "agreeRate": 54.37,
+          "disagreeRate": 45.63
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮北山里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.62,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 61.52,
+          "candVictor": "*",
+          "tks": 307,
+          "profRate": 49.12,
+          "agreeRate": 44.17,
+          "disagreeRate": 55.83
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮仁安里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 70.2,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 57.65,
+          "candVictor": "*",
+          "tks": 358,
+          "profRate": 51.22,
+          "agreeRate": 50.98,
+          "disagreeRate": 49.02
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮南山里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 68.74,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 62.65,
+          "candVictor": "*",
+          "tks": 421,
+          "profRate": 11.77,
+          "agreeRate": 65.54,
+          "disagreeRate": 34.46
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮東安里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 71.66,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 62.42,
+          "candVictor": "*",
+          "tks": 1566,
+          "profRate": 58.88,
+          "agreeRate": 84.22,
+          "disagreeRate": 15.78
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮東山里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 70.69,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 56.69,
+          "candVictor": "*",
+          "tks": 301,
+          "profRate": 21.91,
+          "agreeRate": 99.61,
+          "disagreeRate": 0.39
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮東光里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 70.34,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 61.15,
+          "candVictor": "*",
+          "tks": 488,
+          "profRate": 98.37,
+          "agreeRate": 59.33,
+          "disagreeRate": 40.67
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮南新里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 68.1,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 61.1,
+          "candVictor": "*",
+          "tks": 344,
+          "profRate": 91.74,
+          "agreeRate": 29.26,
+          "disagreeRate": 70.74
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮新富里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 66.53,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 57.23,
+          "candVictor": "*",
+          "tks": 178,
+          "profRate": 47.93,
+          "agreeRate": 11.57,
+          "disagreeRate": 88.43
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮玉山里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 65.25,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 62.5,
+          "candVictor": "*",
+          "tks": 160,
+          "profRate": 13.85,
+          "agreeRate": 0.71,
+          "disagreeRate": 99.29
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮金山里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 68.39,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 62.73,
+          "candVictor": "*",
+          "tks": 207,
+          "profRate": 90.46,
+          "agreeRate": 38.86,
+          "disagreeRate": 61.14
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮錦山里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 66.07,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 64.29,
+          "candVictor": "*",
+          "tks": 279,
+          "profRate": 84.71,
+          "agreeRate": 21.33,
+          "disagreeRate": 78.67
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮大同里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 73.22,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 54.43,
+          "candVictor": "*",
+          "tks": 289,
+          "profRate": 19.69,
+          "agreeRate": 55.86,
+          "disagreeRate": 44.14
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮石光里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 75.3,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 61.31,
+          "candVictor": "*",
+          "tks": 748,
+          "profRate": 4.02,
+          "agreeRate": 83.1,
+          "disagreeRate": 16.9
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮東平里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 73.05,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 58.22,
+          "candVictor": "*",
+          "tks": 372,
+          "profRate": 1.27,
+          "agreeRate": 40.08,
+          "disagreeRate": 59.92
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮上林里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 73.58,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 66.29,
+          "candVictor": "*",
+          "tks": 354,
+          "profRate": 78.59,
+          "agreeRate": 8.95,
+          "disagreeRate": 91.05
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮新力里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 76.87,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 68.07,
+          "candVictor": "*",
+          "tks": 275,
+          "profRate": 5.03,
+          "agreeRate": 95.63,
+          "disagreeRate": 4.37
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 關西鎮南和里",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "040",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 76.15,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 60.18,
+          "candVictor": "*",
+          "tks": 331,
+          "profRate": 33.06,
+          "agreeRate": 6.33,
+          "disagreeRate": 93.67
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉和興村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.63,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 55.0,
+          "candVictor": "*",
+          "tks": 1078,
+          "profRate": 0.66,
+          "agreeRate": 5.1,
+          "disagreeRate": 94.9
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉東興村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 72.32,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 50.72,
+          "candVictor": "*",
+          "tks": 1659,
+          "profRate": 9.79,
+          "agreeRate": 58.52,
+          "disagreeRate": 41.48
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉德盛村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 70.87,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 54.86,
+          "candVictor": "*",
+          "tks": 1869,
+          "profRate": 33.97,
+          "agreeRate": 0.92,
+          "disagreeRate": 99.08
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉愛勢村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.98,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 52.37,
+          "candVictor": "*",
+          "tks": 1527,
+          "profRate": 46.24,
+          "agreeRate": 23.05,
+          "disagreeRate": 76.95
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉仁勢村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 75.09,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 51.34,
+          "candVictor": "*",
+          "tks": 306,
+          "profRate": 60.88,
+          "agreeRate": 13.23,
+          "disagreeRate": 86.77
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉孝勢村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 76.21,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 53.33,
+          "candVictor": "*",
+          "tks": 457,
+          "profRate": 80.96,
+          "agreeRate": 35.3,
+          "disagreeRate": 64.7
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉中勢村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 75.16,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 52.39,
+          "candVictor": "*",
+          "tks": 1324,
+          "profRate": 39.91,
+          "agreeRate": 86.88,
+          "disagreeRate": 13.12
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉中正村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 76.75,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 50.14,
+          "candVictor": "*",
+          "tks": 1453,
+          "profRate": 92.41,
+          "agreeRate": 54.39,
+          "disagreeRate": 45.61
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉信勢村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 70.16,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 53.92,
+          "candVictor": "*",
+          "tks": 1924,
+          "profRate": 94.37,
+          "agreeRate": 87.08,
+          "disagreeRate": 12.92
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉信義村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 74.12,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 53.97,
+          "candVictor": "*",
+          "tks": 1582,
+          "profRate": 91.68,
+          "agreeRate": 80.4,
+          "disagreeRate": 19.6
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉波羅村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 71.04,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 48.77,
+          "candVictor": "*",
+          "tks": 711,
+          "profRate": 11.88,
+          "agreeRate": 85.98,
+          "disagreeRate": 14.02
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉長嶺村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 71.91,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 54.73,
+          "candVictor": "*",
+          "tks": 1175,
+          "profRate": 80.49,
+          "agreeRate": 84.83,
+          "disagreeRate": 15.17
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉長安村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 70.12,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 51.1,
+          "candVictor": "*",
+          "tks": 348,
+          "profRate": 40.41,
+          "agreeRate": 1.35,
+          "disagreeRate": 98.65
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉湖口村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.76,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 55.55,
+          "candVictor": "*",
+          "tks": 1066,
+          "profRate": 92.25,
+          "agreeRate": 5.96,
+          "disagreeRate": 94.04
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉湖鏡村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 74.87,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 62.1,
+          "candVictor": "*",
+          "tks": 1101,
+          "profRate": 28.78,
+          "agreeRate": 10.5,
+          "disagreeRate": 89.5
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉湖南村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.85,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 59.63,
+          "candVictor": "*",
+          "tks": 616,
+          "profRate": 11.31,
+          "agreeRate": 21.26,
+          "disagreeRate": 78.74
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉中興村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 68.24,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 59.39,
+          "candVictor": "*",
+          "tks": 2359,
+          "profRate": 26.1,
+          "agreeRate": 92.19,
+          "disagreeRate": 7.81
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉鳳凰村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 67.08,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 56.0,
+          "candVictor": "*",
+          "tks": 1863,
+          "profRate": 44.68,
+          "agreeRate": 50.48,
+          "disagreeRate": 49.52
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉勝利村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 69.09,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 61.12,
+          "candVictor": "*",
+          "tks": 1652,
+          "profRate": 31.64,
+          "agreeRate": 41.05,
+          "disagreeRate": 58.95
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 湖口鄉鳳山村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "050",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 70.5,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 63.51,
+          "candVictor": "*",
+          "tks": 1326,
+          "profRate": 81.17,
+          "agreeRate": 62.22,
+          "disagreeRate": 37.78
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉福興村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.03,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 54.99,
+          "candVictor": "*",
+          "tks": 408,
+          "profRate": 80.99,
+          "agreeRate": 54.07,
+          "disagreeRate": 45.93
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉青埔村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 70.03,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 55.22,
+          "candVictor": "*",
+          "tks": 698,
+          "profRate": 4.18,
+          "agreeRate": 34.32,
+          "disagreeRate": 65.68
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉中崙村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 69.85,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 58.16,
+          "candVictor": "*",
+          "tks": 1201,
+          "profRate": 8.11,
+          "agreeRate": 30.27,
+          "disagreeRate": 69.73
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉瑞興村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 65.96,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 52.73,
+          "candVictor": "*",
+          "tks": 599,
+          "profRate": 82.11,
+          "agreeRate": 53.26,
+          "disagreeRate": 46.74
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉後湖村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 69.23,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 54.7,
+          "candVictor": "*",
+          "tks": 629,
+          "profRate": 31.95,
+          "agreeRate": 37.37,
+          "disagreeRate": 62.63
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉坡頭村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.36,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 48.01,
+          "candVictor": "*",
+          "tks": 265,
+          "profRate": 80.81,
+          "agreeRate": 19.97,
+          "disagreeRate": 80.03
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉埔和村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 70.1,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 44.04,
+          "candVictor": "*",
+          "tks": 798,
+          "profRate": 24.67,
+          "agreeRate": 24.54,
+          "disagreeRate": 75.46
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉新豐村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 70.42,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 47.7,
+          "candVictor": "*",
+          "tks": 674,
+          "profRate": 56.13,
+          "agreeRate": 13.76,
+          "disagreeRate": 86.24
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉員山村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 72.74,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 52.4,
+          "candVictor": "*",
+          "tks": 1038,
+          "profRate": 38.24,
+          "agreeRate": 62.62,
+          "disagreeRate": 37.38
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉忠孝村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 75.66,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 57.78,
+          "candVictor": "*",
+          "tks": 1470,
+          "profRate": 36.44,
+          "agreeRate": 2.53,
+          "disagreeRate": 97.47
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉山崎村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 74.65,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 55.74,
+          "candVictor": "*",
+          "tks": 1709,
+          "profRate": 74.87,
+          "agreeRate": 2.82,
+          "disagreeRate": 97.18
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉上坑村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.04,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 60.79,
+          "candVictor": "*",
+          "tks": 659,
+          "profRate": 81.37,
+          "agreeRate": 42.84,
+          "disagreeRate": 57.16
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉鳳坑村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 71.23,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 61.53,
+          "candVictor": "*",
+          "tks": 435,
+          "profRate": 36.3,
+          "agreeRate": 89.49,
+          "disagreeRate": 10.51
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉重興村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 69.06,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 58.65,
+          "candVictor": "*",
+          "tks": 2030,
+          "profRate": 35.48,
+          "agreeRate": 21.25,
+          "disagreeRate": 78.75
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉崎頂村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 72.53,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 61.58,
+          "candVictor": "*",
+          "tks": 1114,
+          "profRate": 47.38,
+          "agreeRate": 50.44,
+          "disagreeRate": 49.56
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉松林村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 73.01,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 57.09,
+          "candVictor": "*",
+          "tks": 1776,
+          "profRate": 32.13,
+          "agreeRate": 95.42,
+          "disagreeRate": 4.58
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 新豐鄉松柏村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "060",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 74.92,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 51.33,
+          "candVictor": "*",
+          "tks": 2353,
+          "profRate": 17.02,
+          "agreeRate": 72.88,
+          "disagreeRate": 27.12
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉華龍村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 72.35,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 65.48,
+          "candVictor": "*",
+          "tks": 165,
+          "profRate": 34.53,
+          "agreeRate": 35.34,
+          "disagreeRate": 64.66
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉五龍村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 77.83,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 66.08,
+          "candVictor": "*",
+          "tks": 226,
+          "profRate": 44.92,
+          "agreeRate": 20.37,
+          "disagreeRate": 79.63
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉秀湖村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 69.7,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 69.4,
+          "candVictor": "*",
+          "tks": 415,
+          "profRate": 97.82,
+          "agreeRate": 79.76,
+          "disagreeRate": 20.24
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉永興村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 67.07,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 73.06,
+          "candVictor": "*",
+          "tks": 198,
+          "profRate": 39.21,
+          "agreeRate": 62.19,
+          "disagreeRate": 37.81
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉石潭村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 69.29,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 64.09,
+          "candVictor": "*",
+          "tks": 1085,
+          "profRate": 64.97,
+          "agreeRate": 35.31,
+          "disagreeRate": 64.69
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉新鳳村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.05,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 59.37,
+          "candVictor": "*",
+          "tks": 621,
+          "profRate": 65.11,
+          "agreeRate": 89.89,
+          "disagreeRate": 10.11
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉中坑村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 70.57,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 72.99,
+          "candVictor": "*",
+          "tks": 281,
+          "profRate": 15.43,
+          "agreeRate": 34.59,
+          "disagreeRate": 65.41
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉水坑村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 70.51,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 54.6,
+          "candVictor": "*",
+          "tks": 273,
+          "profRate": 79.49,
+          "agreeRate": 11.66,
+          "disagreeRate": 88.34
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉文林村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 72.98,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 64.33,
+          "candVictor": "*",
+          "tks": 1048,
+          "profRate": 24.97,
+          "agreeRate": 50.2,
+          "disagreeRate": 49.8
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉芎林村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 76.24,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 57.33,
+          "candVictor": "*",
+          "tks": 645,
+          "profRate": 21.35,
+          "agreeRate": 98.8,
+          "disagreeRate": 1.2
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉上山村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 76.55,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 54.71,
+          "candVictor": "*",
+          "tks": 2011,
+          "profRate": 48.91,
+          "agreeRate": 66.38,
+          "disagreeRate": 33.62
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 芎林鄉下山村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "070",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 77.21,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 57.64,
+          "candVictor": "*",
+          "tks": 509,
+          "profRate": 62.29,
+          "agreeRate": 63.96,
+          "disagreeRate": 36.04
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 尖石鄉嘉樂村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "120",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 65.32,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 65.79,
+          "candVictor": "*",
+          "tks": 125,
+          "profRate": 66.82,
+          "agreeRate": 79.01,
+          "disagreeRate": 20.99
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 尖石鄉義興村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "120",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 67.84,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 63.85,
+          "candVictor": "*",
+          "tks": 83,
+          "profRate": 87.84,
+          "agreeRate": 30.96,
+          "disagreeRate": 69.04
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 尖石鄉新樂村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "120",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 69.78,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 67.46,
+          "candVictor": "*",
+          "tks": 85,
+          "profRate": 79.86,
+          "agreeRate": 74.01,
+          "disagreeRate": 25.99
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 尖石鄉錦屏村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "120",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 62.07,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 70.93,
+          "candVictor": "*",
+          "tks": 61,
+          "profRate": 85.73,
+          "agreeRate": 46.52,
+          "disagreeRate": 53.48
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 尖石鄉梅花村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "120",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 64.91,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 76.47,
+          "candVictor": "*",
+          "tks": 26,
+          "profRate": 8.02,
+          "agreeRate": 28.66,
+          "disagreeRate": 71.34
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 尖石鄉玉峰村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "120",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 47.44,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 72.73,
+          "candVictor": "*",
+          "tks": 24,
+          "profRate": 25.88,
+          "agreeRate": 86.2,
+          "disagreeRate": 13.8
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第01選區 尖石鄉秀巒村",
+      "area_nickname": "竹北市*、新埔鎮、關西鎮、湖口鄉、新豐鄉、芎林鄉、尖石鄉",
+      "county": "10004",
+      "area": "01",
+      "town": "120",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 41.9,
+      "candidates": [
+        {
+          "candNo": 2,
+          "name": "徐欣瑩",
+          "party": "中國國民黨",
+          "tksRate": 75.0,
+          "candVictor": "*",
+          "tks": 33,
+          "profRate": 39.8,
+          "agreeRate": 3.16,
+          "disagreeRate": 96.84
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

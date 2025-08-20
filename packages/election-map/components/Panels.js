@@ -86,6 +86,7 @@ export const Panels = ({ onEvcSelected }) => {
   const electionConfig = useAppSelector((state) => state.election.config)
   const year = useAppSelector((state) => state.election.control.year)
   const number = useAppSelector((state) => state.election.control.number)
+  const subtype = useAppSelector((state) => state.election.control.subtype)
   const renderingDistrictNames = useAppSelector(
     (state) => state.map.ui.districtNames
   )
@@ -127,8 +128,12 @@ export const Panels = ({ onEvcSelected }) => {
             <InfoboxPanels />
           </>
         )}
-        {!compareMode && <SeatsPanel />}
-        {!number && <StyledYearSelect key={electionType + year.key} />}
+        {!compareMode &&
+          electionConfig.meta.seat &&
+          subtype?.key !== 'recall-july' && <SeatsPanel />}
+        {!number && subtype?.key !== 'recall-july' && (
+          <StyledYearSelect key={electionType + year.key} />
+        )}
         <PlaceHolder electionType={electionType} compareMode={compareMode} />
         {number && (
           <>

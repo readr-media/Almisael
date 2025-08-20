@@ -30,6 +30,9 @@ fs.readdirSync(inputPath).forEach((fileName) => {
   const subFolderName = fileName.split('.')[0].split('_')[2] + '/'
   // Path to each CSV file
   const filePath = inputPath + fileName
+  if (fs.statSync(filePath).isDirectory()) {
+    return
+  }
 
   const rawVillages = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
 

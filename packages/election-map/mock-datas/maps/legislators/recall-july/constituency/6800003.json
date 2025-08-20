@@ -1,0 +1,1756 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "桃園市 第03選區 中壢區後寮里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "042",
+      "type": "normal",
+      "profRate": 70.1,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 47.0,
+          "candVictor": "*",
+          "tks": 1564,
+          "profRate": 61.2,
+          "agreeRate": 43.16,
+          "disagreeRate": 56.84
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區明德里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "062",
+      "type": "normal",
+      "profRate": 76.09,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 43.58,
+          "candVictor": " ",
+          "tks": 1460,
+          "profRate": 0.03,
+          "agreeRate": 1.04,
+          "disagreeRate": 98.96
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區至善里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "063",
+      "type": "normal",
+      "profRate": 70.71,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 55.75,
+          "candVictor": "*",
+          "tks": 1397,
+          "profRate": 43.24,
+          "agreeRate": 95.28,
+          "disagreeRate": 4.72
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區龍慈里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "082",
+      "type": "normal",
+      "profRate": 72.75,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 52.7,
+          "candVictor": "*",
+          "tks": 1739,
+          "profRate": 40.44,
+          "agreeRate": 3.69,
+          "disagreeRate": 96.31
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區龍興里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 73.54,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 47.28,
+          "candVictor": "*",
+          "tks": 1408,
+          "profRate": 41.14,
+          "agreeRate": 13.39,
+          "disagreeRate": 86.61
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區龍德里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "065",
+      "type": "normal",
+      "profRate": 77.27,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 52.12,
+          "candVictor": "*",
+          "tks": 1558,
+          "profRate": 58.82,
+          "agreeRate": 31.86,
+          "disagreeRate": 68.14
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區龍岡里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 75.1,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 57.76,
+          "candVictor": "*",
+          "tks": 1812,
+          "profRate": 76.02,
+          "agreeRate": 98.02,
+          "disagreeRate": 1.98
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區龍東里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 73.25,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 63.19,
+          "candVictor": "*",
+          "tks": 2130,
+          "profRate": 47.83,
+          "agreeRate": 88.78,
+          "disagreeRate": 11.22
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區龍昌里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 72.33,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 53.38,
+          "candVictor": "*",
+          "tks": 2185,
+          "profRate": 39.37,
+          "agreeRate": 27.83,
+          "disagreeRate": 72.17
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區龍平里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.24,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 65.51,
+          "candVictor": "*",
+          "tks": 1261,
+          "profRate": 96.12,
+          "agreeRate": 6.67,
+          "disagreeRate": 93.33
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區仁美里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 73.58,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 51.4,
+          "candVictor": "*",
+          "tks": 1976,
+          "profRate": 66.05,
+          "agreeRate": 58.6,
+          "disagreeRate": 41.4
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區仁福里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "072",
+      "type": "normal",
+      "profRate": 71.6,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 53.13,
+          "candVictor": "*",
+          "tks": 1680,
+          "profRate": 71.92,
+          "agreeRate": 49.21,
+          "disagreeRate": 50.79
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區華愛里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "076",
+      "type": "normal",
+      "profRate": 73.15,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 56.62,
+          "candVictor": "*",
+          "tks": 1343,
+          "profRate": 20.08,
+          "agreeRate": 93.34,
+          "disagreeRate": 6.66
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區普仁里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 67.52,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 45.52,
+          "candVictor": "*",
+          "tks": 1244,
+          "profRate": 56.03,
+          "agreeRate": 74.96,
+          "disagreeRate": 25.04
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區普忠里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "060",
+      "type": "normal",
+      "profRate": 74.01,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 46.15,
+          "candVictor": "*",
+          "tks": 1054,
+          "profRate": 14.97,
+          "agreeRate": 38.54,
+          "disagreeRate": 61.46
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區普強里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "061",
+      "type": "normal",
+      "profRate": 75.86,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 47.9,
+          "candVictor": "*",
+          "tks": 1243,
+          "profRate": 36.51,
+          "agreeRate": 13.13,
+          "disagreeRate": 86.87
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區普慶里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "053",
+      "type": "normal",
+      "profRate": 75.98,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 50.44,
+          "candVictor": "*",
+          "tks": 968,
+          "profRate": 37.59,
+          "agreeRate": 42.3,
+          "disagreeRate": 57.7
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區信義里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 76.91,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 42.46,
+          "candVictor": " ",
+          "tks": 1357,
+          "profRate": 33.17,
+          "agreeRate": 15.06,
+          "disagreeRate": 84.94
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區正義里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "066",
+      "type": "normal",
+      "profRate": 73.8,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 43.58,
+          "candVictor": " ",
+          "tks": 1304,
+          "profRate": 53.61,
+          "agreeRate": 91.66,
+          "disagreeRate": 8.34
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區普義里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 51.38,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 50.91,
+          "candVictor": "*",
+          "tks": 1405,
+          "profRate": 34.12,
+          "agreeRate": 75.64,
+          "disagreeRate": 24.36
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區德義里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "069",
+      "type": "normal",
+      "profRate": 74.54,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 47.87,
+          "candVictor": "*",
+          "tks": 854,
+          "profRate": 58.24,
+          "agreeRate": 13.25,
+          "disagreeRate": 86.75
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區仁義里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "070",
+      "type": "normal",
+      "profRate": 73.82,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 43.37,
+          "candVictor": " ",
+          "tks": 1170,
+          "profRate": 33.25,
+          "agreeRate": 35.72,
+          "disagreeRate": 64.28
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區忠義里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 72.61,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 46.21,
+          "candVictor": "*",
+          "tks": 1280,
+          "profRate": 58.11,
+          "agreeRate": 78.51,
+          "disagreeRate": 21.49
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區中興里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "081",
+      "type": "normal",
+      "profRate": 72.28,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 52.18,
+          "candVictor": "*",
+          "tks": 1207,
+          "profRate": 23.61,
+          "agreeRate": 80.64,
+          "disagreeRate": 19.36
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區自立里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 72.78,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 67.59,
+          "candVictor": "*",
+          "tks": 2338,
+          "profRate": 69.9,
+          "agreeRate": 47.29,
+          "disagreeRate": 52.71
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區自信里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "083",
+      "type": "normal",
+      "profRate": 73.36,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 53.28,
+          "candVictor": "*",
+          "tks": 2040,
+          "profRate": 85.0,
+          "agreeRate": 36.31,
+          "disagreeRate": 63.69
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區莊敬里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "077",
+      "type": "normal",
+      "profRate": 74.53,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 64.34,
+          "candVictor": "*",
+          "tks": 1519,
+          "profRate": 15.4,
+          "agreeRate": 18.43,
+          "disagreeRate": 81.57
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區自治里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "078",
+      "type": "normal",
+      "profRate": 73.7,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 63.06,
+          "candVictor": "*",
+          "tks": 1567,
+          "profRate": 38.33,
+          "agreeRate": 94.6,
+          "disagreeRate": 5.4
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區內壢里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 70.4,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 55.33,
+          "candVictor": "*",
+          "tks": 799,
+          "profRate": 60.74,
+          "agreeRate": 98.96,
+          "disagreeRate": 1.04
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區成功里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 71.16,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 48.8,
+          "candVictor": "*",
+          "tks": 1427,
+          "profRate": 43.55,
+          "agreeRate": 77.28,
+          "disagreeRate": 22.72
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區福德里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "058",
+      "type": "normal",
+      "profRate": 75.49,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 51.88,
+          "candVictor": "*",
+          "tks": 1034,
+          "profRate": 6.96,
+          "agreeRate": 82.83,
+          "disagreeRate": 17.17
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區中原里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 73.67,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 50.12,
+          "candVictor": "*",
+          "tks": 1245,
+          "profRate": 53.06,
+          "agreeRate": 77.91,
+          "disagreeRate": 22.09
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區忠孝里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "057",
+      "type": "normal",
+      "profRate": 75.14,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 48.99,
+          "candVictor": "*",
+          "tks": 1600,
+          "profRate": 92.94,
+          "agreeRate": 70.3,
+          "disagreeRate": 29.7
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區興華里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "087",
+      "type": "normal",
+      "profRate": 73.14,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 48.48,
+          "candVictor": "*",
+          "tks": 1942,
+          "profRate": 58.78,
+          "agreeRate": 58.72,
+          "disagreeRate": 41.28
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區復興里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 71.26,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 41.7,
+          "candVictor": " ",
+          "tks": 1080,
+          "profRate": 81.11,
+          "agreeRate": 51.25,
+          "disagreeRate": 48.75
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區復華里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "056",
+      "type": "normal",
+      "profRate": 75.16,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 47.0,
+          "candVictor": "*",
+          "tks": 1843,
+          "profRate": 25.87,
+          "agreeRate": 89.5,
+          "disagreeRate": 10.5
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區文化里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 74.65,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 45.91,
+          "candVictor": "*",
+          "tks": 2837,
+          "profRate": 40.59,
+          "agreeRate": 31.0,
+          "disagreeRate": 69.0
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區和平里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "059",
+      "type": "normal",
+      "profRate": 75.96,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 48.62,
+          "candVictor": "*",
+          "tks": 882,
+          "profRate": 7.97,
+          "agreeRate": 9.05,
+          "disagreeRate": 90.95
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區內定里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 75.32,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 37.41,
+          "candVictor": " ",
+          "tks": 1870,
+          "profRate": 49.05,
+          "agreeRate": 9.94,
+          "disagreeRate": 90.06
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區石頭里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 71.14,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 41.79,
+          "candVictor": " ",
+          "tks": 453,
+          "profRate": 17.19,
+          "agreeRate": 79.44,
+          "disagreeRate": 20.56
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區中央里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 75.33,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 45.68,
+          "candVictor": " ",
+          "tks": 1115,
+          "profRate": 23.87,
+          "agreeRate": 95.98,
+          "disagreeRate": 4.02
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區新興里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 74.75,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 46.65,
+          "candVictor": "*",
+          "tks": 1199,
+          "profRate": 7.26,
+          "agreeRate": 74.06,
+          "disagreeRate": 25.94
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區林森里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "084",
+      "type": "normal",
+      "profRate": 76.13,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 48.45,
+          "candVictor": "*",
+          "tks": 1347,
+          "profRate": 57.83,
+          "agreeRate": 5.64,
+          "disagreeRate": 94.36
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區振興里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "052",
+      "type": "normal",
+      "profRate": 74.63,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 49.9,
+          "candVictor": "*",
+          "tks": 1666,
+          "profRate": 19.4,
+          "agreeRate": 59.35,
+          "disagreeRate": 40.65
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區東興里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 74.97,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 43.56,
+          "candVictor": " ",
+          "tks": 1028,
+          "profRate": 6.71,
+          "agreeRate": 26.9,
+          "disagreeRate": 73.1
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區健行里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "079",
+      "type": "normal",
+      "profRate": 74.56,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 47.85,
+          "candVictor": "*",
+          "tks": 1483,
+          "profRate": 45.54,
+          "agreeRate": 55.87,
+          "disagreeRate": 44.13
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區水尾里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 73.75,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 42.72,
+          "candVictor": " ",
+          "tks": 1115,
+          "profRate": 28.69,
+          "agreeRate": 68.81,
+          "disagreeRate": 31.19
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區金華里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "085",
+      "type": "normal",
+      "profRate": 77.49,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 55.18,
+          "candVictor": "*",
+          "tks": 1689,
+          "profRate": 85.27,
+          "agreeRate": 24.87,
+          "disagreeRate": 75.13
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區興福里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "088",
+      "type": "normal",
+      "profRate": 75.01,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 44.04,
+          "candVictor": " ",
+          "tks": 1204,
+          "profRate": 48.46,
+          "agreeRate": 64.13,
+          "disagreeRate": 35.87
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區忠福里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 74.79,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 44.89,
+          "candVictor": " ",
+          "tks": 1314,
+          "profRate": 1.1,
+          "agreeRate": 90.12,
+          "disagreeRate": 9.88
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區幸福里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "073",
+      "type": "normal",
+      "profRate": 73.04,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 44.89,
+          "candVictor": " ",
+          "tks": 1897,
+          "profRate": 40.35,
+          "agreeRate": 76.41,
+          "disagreeRate": 23.59
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區永福里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "074",
+      "type": "normal",
+      "profRate": 76.42,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 44.58,
+          "candVictor": " ",
+          "tks": 1771,
+          "profRate": 39.86,
+          "agreeRate": 61.97,
+          "disagreeRate": 38.03
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區青埔里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 75.63,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 39.17,
+          "candVictor": " ",
+          "tks": 2596,
+          "profRate": 0.93,
+          "agreeRate": 42.21,
+          "disagreeRate": 57.79
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區新街里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 71.83,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 49.32,
+          "candVictor": "*",
+          "tks": 799,
+          "profRate": 22.67,
+          "agreeRate": 57.57,
+          "disagreeRate": 42.43
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區興南里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "041",
+      "type": "normal",
+      "profRate": 72.0,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 49.25,
+          "candVictor": "*",
+          "tks": 1015,
+          "profRate": 33.83,
+          "agreeRate": 14.43,
+          "disagreeRate": 85.57
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區興國里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 76.47,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 46.26,
+          "candVictor": " ",
+          "tks": 624,
+          "profRate": 59.75,
+          "agreeRate": 0.95,
+          "disagreeRate": 99.05
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區興平里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "080",
+      "type": "normal",
+      "profRate": 77.65,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 41.46,
+          "candVictor": " ",
+          "tks": 743,
+          "profRate": 57.05,
+          "agreeRate": 19.44,
+          "disagreeRate": 80.56
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區興和里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "054",
+      "type": "normal",
+      "profRate": 78.34,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 39.28,
+          "candVictor": " ",
+          "tks": 797,
+          "profRate": 20.26,
+          "agreeRate": 18.86,
+          "disagreeRate": 81.14
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區永興里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 71.54,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 45.35,
+          "candVictor": " ",
+          "tks": 278,
+          "profRate": 6.65,
+          "agreeRate": 2.09,
+          "disagreeRate": 97.91
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區中壢里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 74.89,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 46.37,
+          "candVictor": "*",
+          "tks": 230,
+          "profRate": 82.91,
+          "agreeRate": 76.72,
+          "disagreeRate": 23.28
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區中榮里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "050",
+      "type": "normal",
+      "profRate": 73.35,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 40.96,
+          "candVictor": " ",
+          "tks": 231,
+          "profRate": 6.88,
+          "agreeRate": 46.65,
+          "disagreeRate": 53.35
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區中建里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 71.22,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 37.72,
+          "candVictor": " ",
+          "tks": 261,
+          "profRate": 45.64,
+          "agreeRate": 67.51,
+          "disagreeRate": 32.49
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區舊明里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "045",
+      "type": "normal",
+      "profRate": 74.46,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 37.88,
+          "candVictor": " ",
+          "tks": 372,
+          "profRate": 64.84,
+          "agreeRate": 84.68,
+          "disagreeRate": 15.32
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區新明里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 73.27,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 42.54,
+          "candVictor": " ",
+          "tks": 1103,
+          "profRate": 10.3,
+          "agreeRate": 57.69,
+          "disagreeRate": 42.31
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區光明里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 73.58,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 49.72,
+          "candVictor": "*",
+          "tks": 1864,
+          "profRate": 16.74,
+          "agreeRate": 69.55,
+          "disagreeRate": 30.45
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區永光里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "055",
+      "type": "normal",
+      "profRate": 73.16,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 44.12,
+          "candVictor": " ",
+          "tks": 1693,
+          "profRate": 32.35,
+          "agreeRate": 29.38,
+          "disagreeRate": 70.62
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區三民里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "048",
+      "type": "normal",
+      "profRate": 74.36,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 40.08,
+          "candVictor": " ",
+          "tks": 944,
+          "profRate": 9.78,
+          "agreeRate": 59.57,
+          "disagreeRate": 40.43
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區五權里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "044",
+      "type": "normal",
+      "profRate": 75.25,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 41.85,
+          "candVictor": " ",
+          "tks": 1899,
+          "profRate": 0.28,
+          "agreeRate": 34.66,
+          "disagreeRate": 65.34
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區五福里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "064",
+      "type": "normal",
+      "profRate": 74.59,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 41.77,
+          "candVictor": " ",
+          "tks": 1058,
+          "profRate": 51.43,
+          "agreeRate": 51.87,
+          "disagreeRate": 48.13
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區芝芭里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "046",
+      "type": "normal",
+      "profRate": 73.47,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 37.02,
+          "candVictor": " ",
+          "tks": 1292,
+          "profRate": 1.14,
+          "agreeRate": 27.71,
+          "disagreeRate": 72.29
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區洽溪里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 74.7,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 38.89,
+          "candVictor": " ",
+          "tks": 1449,
+          "profRate": 80.03,
+          "agreeRate": 22.72,
+          "disagreeRate": 77.28
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區青溪里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "086",
+      "type": "normal",
+      "profRate": 76.49,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 41.9,
+          "candVictor": " ",
+          "tks": 1029,
+          "profRate": 76.25,
+          "agreeRate": 89.86,
+          "disagreeRate": 10.14
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區內厝里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "051",
+      "type": "normal",
+      "profRate": 75.67,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 37.99,
+          "candVictor": " ",
+          "tks": 1319,
+          "profRate": 38.48,
+          "agreeRate": 46.58,
+          "disagreeRate": 53.42
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區月眉里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "047",
+      "type": "normal",
+      "profRate": 73.9,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 32.27,
+          "candVictor": " ",
+          "tks": 1334,
+          "profRate": 50.83,
+          "agreeRate": 64.67,
+          "disagreeRate": 35.33
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區山東里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "049",
+      "type": "normal",
+      "profRate": 74.03,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 31.79,
+          "candVictor": " ",
+          "tks": 859,
+          "profRate": 81.81,
+          "agreeRate": 18.18,
+          "disagreeRate": 81.82
+        }
+      ]
+    },
+    {
+      "range": "桃園市 第03選區 中壢區過嶺里",
+      "area_nickname": "中壢區*",
+      "county": "68000",
+      "area": "03",
+      "town": "020",
+      "vill": "043",
+      "type": "normal",
+      "profRate": 74.26,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "魯明哲",
+          "party": "中國國民黨",
+          "tksRate": 38.57,
+          "candVictor": " ",
+          "tks": 2364,
+          "profRate": 95.28,
+          "agreeRate": 12.06,
+          "disagreeRate": 87.94
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

@@ -1,0 +1,2331 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "新北市 第11選區 新店區新店里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 72.25,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 50.32,
+          "candVictor": "*",
+          "tks": 555,
+          "profRate": 74.48,
+          "agreeRate": 59.12,
+          "disagreeRate": 40.88
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區張南里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "032",
+      "type": "normal",
+      "profRate": 72.99,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 60.62,
+          "candVictor": "*",
+          "tks": 959,
+          "profRate": 30.55,
+          "agreeRate": 57.04,
+          "disagreeRate": 42.96
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區國校里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "033",
+      "type": "normal",
+      "profRate": 72.43,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 55.33,
+          "candVictor": "*",
+          "tks": 877,
+          "profRate": 49.86,
+          "agreeRate": 36.66,
+          "disagreeRate": 63.34
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區文中里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "034",
+      "type": "normal",
+      "profRate": 73.75,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 64.93,
+          "candVictor": "*",
+          "tks": 722,
+          "profRate": 22.29,
+          "agreeRate": 61.52,
+          "disagreeRate": 38.48
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區廣明里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "035",
+      "type": "normal",
+      "profRate": 71.9,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 45.49,
+          "candVictor": " ",
+          "tks": 242,
+          "profRate": 65.14,
+          "agreeRate": 93.95,
+          "disagreeRate": 6.05
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區文明里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "036",
+      "type": "normal",
+      "profRate": 74.99,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 53.28,
+          "candVictor": "*",
+          "tks": 852,
+          "profRate": 62.78,
+          "agreeRate": 56.53,
+          "disagreeRate": 43.47
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區中興里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "037",
+      "type": "normal",
+      "profRate": 55.18,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 63.5,
+          "candVictor": "*",
+          "tks": 2328,
+          "profRate": 41.79,
+          "agreeRate": 60.84,
+          "disagreeRate": 39.16
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區新生里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "038",
+      "type": "normal",
+      "profRate": 75.02,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 62.27,
+          "candVictor": "*",
+          "tks": 2276,
+          "profRate": 10.2,
+          "agreeRate": 99.42,
+          "disagreeRate": 0.58
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區新德里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "039",
+      "type": "normal",
+      "profRate": 71.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 56.79,
+          "candVictor": "*",
+          "tks": 908,
+          "profRate": 67.39,
+          "agreeRate": 38.2,
+          "disagreeRate": 61.8
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區張北里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "040",
+      "type": "normal",
+      "profRate": 74.1,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 61.34,
+          "candVictor": "*",
+          "tks": 3506,
+          "profRate": 25.6,
+          "agreeRate": 19.97,
+          "disagreeRate": 80.03
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區五峯里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "041",
+      "type": "normal",
+      "profRate": 73.92,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 59.17,
+          "candVictor": "*",
+          "tks": 2850,
+          "profRate": 80.53,
+          "agreeRate": 27.74,
+          "disagreeRate": 72.26
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區長春里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "065",
+      "type": "normal",
+      "profRate": 76.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 63.86,
+          "candVictor": "*",
+          "tks": 1053,
+          "profRate": 48.09,
+          "agreeRate": 3.73,
+          "disagreeRate": 96.27
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區新安里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "042",
+      "type": "normal",
+      "profRate": 73.67,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 63.51,
+          "candVictor": "*",
+          "tks": 1587,
+          "profRate": 95.98,
+          "agreeRate": 88.77,
+          "disagreeRate": 11.23
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區忠誠里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "043",
+      "type": "normal",
+      "profRate": 76.93,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 60.39,
+          "candVictor": "*",
+          "tks": 953,
+          "profRate": 95.73,
+          "agreeRate": 28.05,
+          "disagreeRate": 71.95
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區中正里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "044",
+      "type": "normal",
+      "profRate": 74.33,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 61.31,
+          "candVictor": "*",
+          "tks": 2250,
+          "profRate": 56.62,
+          "agreeRate": 5.19,
+          "disagreeRate": 94.81
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區中華里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "045",
+      "type": "normal",
+      "profRate": 73.43,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 64.36,
+          "candVictor": "*",
+          "tks": 1777,
+          "profRate": 36.82,
+          "agreeRate": 76.48,
+          "disagreeRate": 23.52
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區仁愛里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "046",
+      "type": "normal",
+      "profRate": 74.18,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 63.18,
+          "candVictor": "*",
+          "tks": 810,
+          "profRate": 52.51,
+          "agreeRate": 71.91,
+          "disagreeRate": 28.09
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區建國里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "061",
+      "type": "normal",
+      "profRate": 72.61,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 64.14,
+          "candVictor": "*",
+          "tks": 1218,
+          "profRate": 82.24,
+          "agreeRate": 18.97,
+          "disagreeRate": 81.03
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區百忍里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "047",
+      "type": "normal",
+      "profRate": 74.33,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 62.86,
+          "candVictor": "*",
+          "tks": 1425,
+          "profRate": 86.03,
+          "agreeRate": 15.12,
+          "disagreeRate": 84.88
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區百和里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "048",
+      "type": "normal",
+      "profRate": 74.93,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 60.55,
+          "candVictor": "*",
+          "tks": 1220,
+          "profRate": 29.49,
+          "agreeRate": 2.96,
+          "disagreeRate": 97.04
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區福德里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "049",
+      "type": "normal",
+      "profRate": 71.76,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 59.57,
+          "candVictor": "*",
+          "tks": 1370,
+          "profRate": 29.61,
+          "agreeRate": 69.79,
+          "disagreeRate": 30.21
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區百福里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "050",
+      "type": "normal",
+      "profRate": 75.2,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 60.6,
+          "candVictor": "*",
+          "tks": 1446,
+          "profRate": 93.57,
+          "agreeRate": 91.99,
+          "disagreeRate": 8.01
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區福民里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "051",
+      "type": "normal",
+      "profRate": 73.38,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 67.87,
+          "candVictor": "*",
+          "tks": 1713,
+          "profRate": 95.63,
+          "agreeRate": 62.96,
+          "disagreeRate": 37.04
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區中山里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "052",
+      "type": "normal",
+      "profRate": 78.01,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 64.2,
+          "candVictor": "*",
+          "tks": 2911,
+          "profRate": 83.98,
+          "agreeRate": 87.7,
+          "disagreeRate": 12.3
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區和平里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "053",
+      "type": "normal",
+      "profRate": 71.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 64.33,
+          "candVictor": "*",
+          "tks": 606,
+          "profRate": 98.07,
+          "agreeRate": 47.64,
+          "disagreeRate": 52.36
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區中央里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "054",
+      "type": "normal",
+      "profRate": 76.4,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 63.07,
+          "candVictor": "*",
+          "tks": 2429,
+          "profRate": 52.42,
+          "agreeRate": 63.8,
+          "disagreeRate": 36.2
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區國豐里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 73.87,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 62.64,
+          "candVictor": "*",
+          "tks": 1197,
+          "profRate": 89.52,
+          "agreeRate": 10.78,
+          "disagreeRate": 89.22
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區明德里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.68,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 60.08,
+          "candVictor": "*",
+          "tks": 1472,
+          "profRate": 65.84,
+          "agreeRate": 44.21,
+          "disagreeRate": 55.79
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區大豐里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 75.3,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 59.06,
+          "candVictor": "*",
+          "tks": 1336,
+          "profRate": 72.99,
+          "agreeRate": 14.87,
+          "disagreeRate": 85.13
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區大同里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 78.4,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 59.66,
+          "candVictor": "*",
+          "tks": 1498,
+          "profRate": 21.18,
+          "agreeRate": 93.6,
+          "disagreeRate": 6.4
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區江陵里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 75.03,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 60.82,
+          "candVictor": "*",
+          "tks": 2127,
+          "profRate": 38.75,
+          "agreeRate": 47.0,
+          "disagreeRate": 53.0
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區復興里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "062",
+      "type": "normal",
+      "profRate": 68.88,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 59.66,
+          "candVictor": "*",
+          "tks": 1121,
+          "profRate": 85.52,
+          "agreeRate": 6.54,
+          "disagreeRate": 93.46
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區寶興里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 75.71,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 60.05,
+          "candVictor": "*",
+          "tks": 2136,
+          "profRate": 24.34,
+          "agreeRate": 98.66,
+          "disagreeRate": 1.34
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區寶福里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "058",
+      "type": "normal",
+      "profRate": 74.85,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 61.9,
+          "candVictor": "*",
+          "tks": 2808,
+          "profRate": 82.79,
+          "agreeRate": 36.68,
+          "disagreeRate": 63.32
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區寶安里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 74.09,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 62.48,
+          "candVictor": "*",
+          "tks": 2120,
+          "profRate": 94.07,
+          "agreeRate": 9.87,
+          "disagreeRate": 90.13
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區信義里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 75.11,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 56.77,
+          "candVictor": "*",
+          "tks": 2393,
+          "profRate": 93.15,
+          "agreeRate": 16.96,
+          "disagreeRate": 83.04
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區忠孝里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 72.74,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 64.31,
+          "candVictor": "*",
+          "tks": 1110,
+          "profRate": 61.79,
+          "agreeRate": 27.67,
+          "disagreeRate": 72.33
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區大鵬里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 76.49,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 80.29,
+          "candVictor": "*",
+          "tks": 1458,
+          "profRate": 53.57,
+          "agreeRate": 72.97,
+          "disagreeRate": 27.03
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區太平里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 73.86,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 60.08,
+          "candVictor": "*",
+          "tks": 1153,
+          "profRate": 42.68,
+          "agreeRate": 23.03,
+          "disagreeRate": 76.97
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區美城里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "063",
+      "type": "normal",
+      "profRate": 71.46,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 61.74,
+          "candVictor": "*",
+          "tks": 1015,
+          "profRate": 56.71,
+          "agreeRate": 73.18,
+          "disagreeRate": 26.82
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區頂城里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 66.25,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 59.0,
+          "candVictor": "*",
+          "tks": 485,
+          "profRate": 21.51,
+          "agreeRate": 12.14,
+          "disagreeRate": 87.86
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區下城里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 70.02,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 51.99,
+          "candVictor": "*",
+          "tks": 1007,
+          "profRate": 95.22,
+          "agreeRate": 67.66,
+          "disagreeRate": 32.34
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區柴埕里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 71.02,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 57.7,
+          "candVictor": "*",
+          "tks": 3107,
+          "profRate": 65.84,
+          "agreeRate": 1.35,
+          "disagreeRate": 98.65
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區安和里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "056",
+      "type": "normal",
+      "profRate": 73.35,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 56.48,
+          "candVictor": "*",
+          "tks": 2738,
+          "profRate": 44.07,
+          "agreeRate": 93.12,
+          "disagreeRate": 6.88
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區永安里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 71.97,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 57.49,
+          "candVictor": "*",
+          "tks": 1757,
+          "profRate": 30.09,
+          "agreeRate": 81.1,
+          "disagreeRate": 18.9
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區新和里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "066",
+      "type": "normal",
+      "profRate": 72.72,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 62.34,
+          "candVictor": "*",
+          "tks": 1528,
+          "profRate": 17.42,
+          "agreeRate": 99.75,
+          "disagreeRate": 0.25
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區永平里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "067",
+      "type": "normal",
+      "profRate": 73.23,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 59.46,
+          "candVictor": "*",
+          "tks": 1999,
+          "profRate": 89.17,
+          "agreeRate": 44.84,
+          "disagreeRate": 55.16
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區公崙里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 73.58,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 61.08,
+          "candVictor": "*",
+          "tks": 5005,
+          "profRate": 74.93,
+          "agreeRate": 45.03,
+          "disagreeRate": 54.97
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區安昌里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "064",
+      "type": "normal",
+      "profRate": 75.13,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 60.27,
+          "candVictor": "*",
+          "tks": 2078,
+          "profRate": 78.48,
+          "agreeRate": 31.75,
+          "disagreeRate": 68.25
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區德安里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 70.78,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 57.71,
+          "candVictor": "*",
+          "tks": 2035,
+          "profRate": 49.77,
+          "agreeRate": 21.8,
+          "disagreeRate": 78.2
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區達觀里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "068",
+      "type": "normal",
+      "profRate": 73.89,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 68.7,
+          "candVictor": "*",
+          "tks": 1767,
+          "profRate": 96.8,
+          "agreeRate": 38.87,
+          "disagreeRate": 61.13
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區明城里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "055",
+      "type": "normal",
+      "profRate": 73.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 66.53,
+          "candVictor": "*",
+          "tks": 1443,
+          "profRate": 78.52,
+          "agreeRate": 7.38,
+          "disagreeRate": 92.62
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區小城里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "059",
+      "type": "normal",
+      "profRate": 75.09,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 63.19,
+          "candVictor": "*",
+          "tks": 1461,
+          "profRate": 17.05,
+          "agreeRate": 41.82,
+          "disagreeRate": 58.18
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區雙城里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 69.93,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 58.54,
+          "candVictor": "*",
+          "tks": 2049,
+          "profRate": 97.56,
+          "agreeRate": 39.23,
+          "disagreeRate": 60.77
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區香坡里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "060",
+      "type": "normal",
+      "profRate": 71.95,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 64.58,
+          "candVictor": "*",
+          "tks": 4604,
+          "profRate": 41.42,
+          "agreeRate": 84.28,
+          "disagreeRate": 15.72
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區日興里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 67.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 55.82,
+          "candVictor": "*",
+          "tks": 1832,
+          "profRate": 49.92,
+          "agreeRate": 43.68,
+          "disagreeRate": 56.32
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區玫瑰里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 71.76,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 63.53,
+          "candVictor": "*",
+          "tks": 2261,
+          "profRate": 65.21,
+          "agreeRate": 17.99,
+          "disagreeRate": 82.01
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區吉祥里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "057",
+      "type": "normal",
+      "profRate": 73.0,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 68.84,
+          "candVictor": "*",
+          "tks": 2037,
+          "profRate": 63.21,
+          "agreeRate": 92.85,
+          "disagreeRate": 7.15
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區塗潭里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 66.52,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 36.24,
+          "candVictor": " ",
+          "tks": 208,
+          "profRate": 57.26,
+          "agreeRate": 62.29,
+          "disagreeRate": 37.71
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區華城里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "069",
+      "type": "normal",
+      "profRate": 74.03,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 63.97,
+          "candVictor": "*",
+          "tks": 1179,
+          "profRate": 37.88,
+          "agreeRate": 70.59,
+          "disagreeRate": 29.41
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區青潭里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 70.9,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 57.79,
+          "candVictor": "*",
+          "tks": 1888,
+          "profRate": 42.03,
+          "agreeRate": 88.27,
+          "disagreeRate": 11.73
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區美潭里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 71.86,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 61.52,
+          "candVictor": "*",
+          "tks": 1957,
+          "profRate": 56.82,
+          "agreeRate": 22.83,
+          "disagreeRate": 77.17
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區員潭里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 71.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 60.17,
+          "candVictor": "*",
+          "tks": 1905,
+          "profRate": 63.52,
+          "agreeRate": 68.24,
+          "disagreeRate": 31.76
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區雙坑里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 67.06,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 48.55,
+          "candVictor": "*",
+          "tks": 218,
+          "profRate": 92.25,
+          "agreeRate": 64.62,
+          "disagreeRate": 35.38
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區粗坑里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 71.34,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 48.04,
+          "candVictor": " ",
+          "tks": 894,
+          "profRate": 73.57,
+          "agreeRate": 98.09,
+          "disagreeRate": 1.91
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區屈尺里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 70.33,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 50.81,
+          "candVictor": "*",
+          "tks": 782,
+          "profRate": 8.82,
+          "agreeRate": 86.48,
+          "disagreeRate": 13.52
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區龜山里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 66.08,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 47.36,
+          "candVictor": " ",
+          "tks": 466,
+          "profRate": 77.92,
+          "agreeRate": 45.99,
+          "disagreeRate": 54.01
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區廣興里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 68.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 44.33,
+          "candVictor": " ",
+          "tks": 360,
+          "profRate": 56.65,
+          "agreeRate": 76.73,
+          "disagreeRate": 23.27
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 新店區直潭里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "060",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 72.27,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 41.06,
+          "candVictor": " ",
+          "tks": 333,
+          "profRate": 54.46,
+          "agreeRate": 35.26,
+          "disagreeRate": 64.74
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 深坑區萬順里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "180",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 70.16,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 50.91,
+          "candVictor": "*",
+          "tks": 780,
+          "profRate": 68.81,
+          "agreeRate": 65.82,
+          "disagreeRate": 34.18
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 深坑區萬福里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "180",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 71.96,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 50.78,
+          "candVictor": "*",
+          "tks": 842,
+          "profRate": 55.93,
+          "agreeRate": 84.44,
+          "disagreeRate": 15.56
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 深坑區土庫里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "180",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 70.32,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 52.07,
+          "candVictor": "*",
+          "tks": 932,
+          "profRate": 64.73,
+          "agreeRate": 86.68,
+          "disagreeRate": 13.32
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 深坑區深坑里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "180",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 71.07,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 47.59,
+          "candVictor": " ",
+          "tks": 998,
+          "profRate": 31.23,
+          "agreeRate": 77.7,
+          "disagreeRate": 22.3
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 深坑區埔新里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "180",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 72.25,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 53.41,
+          "candVictor": "*",
+          "tks": 2043,
+          "profRate": 93.66,
+          "agreeRate": 68.16,
+          "disagreeRate": 31.84
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 深坑區昇高里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "180",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 73.98,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 62.16,
+          "candVictor": "*",
+          "tks": 833,
+          "profRate": 90.6,
+          "agreeRate": 65.48,
+          "disagreeRate": 34.52
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 深坑區賴仲里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "180",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 72.81,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 56.26,
+          "candVictor": "*",
+          "tks": 840,
+          "profRate": 35.34,
+          "agreeRate": 44.71,
+          "disagreeRate": 55.29
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 深坑區阿柔里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "180",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 76.45,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 49.0,
+          "candVictor": "*",
+          "tks": 196,
+          "profRate": 14.04,
+          "agreeRate": 0.95,
+          "disagreeRate": 99.05
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區石碇里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 74.51,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 58.3,
+          "candVictor": "*",
+          "tks": 151,
+          "profRate": 42.43,
+          "agreeRate": 28.03,
+          "disagreeRate": 71.97
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區潭邊里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 68.96,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 49.6,
+          "candVictor": "*",
+          "tks": 247,
+          "profRate": 56.39,
+          "agreeRate": 15.99,
+          "disagreeRate": 84.01
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區烏塗里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 69.65,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 42.86,
+          "candVictor": " ",
+          "tks": 159,
+          "profRate": 9.57,
+          "agreeRate": 88.15,
+          "disagreeRate": 11.85
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區彭山里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 67.14,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 57.3,
+          "candVictor": "*",
+          "tks": 106,
+          "profRate": 40.68,
+          "agreeRate": 43.33,
+          "disagreeRate": 56.67
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區豐田里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 75.57,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 50.0,
+          "candVictor": "*",
+          "tks": 130,
+          "profRate": 67.75,
+          "agreeRate": 87.74,
+          "disagreeRate": 12.26
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區隆盛里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 64.96,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 42.97,
+          "candVictor": " ",
+          "tks": 168,
+          "profRate": 35.42,
+          "agreeRate": 45.02,
+          "disagreeRate": 54.98
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區豐林里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 75.8,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 49.75,
+          "candVictor": "*",
+          "tks": 100,
+          "profRate": 11.1,
+          "agreeRate": 56.95,
+          "disagreeRate": 43.05
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區中民里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 70.22,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 48.52,
+          "candVictor": "*",
+          "tks": 229,
+          "profRate": 12.15,
+          "agreeRate": 2.77,
+          "disagreeRate": 97.23
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區永定里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 64.73,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 45.85,
+          "candVictor": " ",
+          "tks": 160,
+          "profRate": 34.37,
+          "agreeRate": 16.31,
+          "disagreeRate": 83.69
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區光明里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 75.2,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 49.73,
+          "candVictor": "*",
+          "tks": 91,
+          "profRate": 22.77,
+          "agreeRate": 23.24,
+          "disagreeRate": 76.76
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區永安里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 68.06,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 47.27,
+          "candVictor": " ",
+          "tks": 251,
+          "profRate": 9.91,
+          "agreeRate": 39.46,
+          "disagreeRate": 60.54
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 石碇區格頭里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "190",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.29,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 36.08,
+          "candVictor": " ",
+          "tks": 241,
+          "profRate": 87.4,
+          "agreeRate": 84.59,
+          "disagreeRate": 15.41
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 坪林區坪林里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "200",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 71.72,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 46.35,
+          "candVictor": " ",
+          "tks": 406,
+          "profRate": 25.43,
+          "agreeRate": 59.39,
+          "disagreeRate": 40.61
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 坪林區水德里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "200",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 74.92,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 43.25,
+          "candVictor": " ",
+          "tks": 202,
+          "profRate": 21.05,
+          "agreeRate": 18.18,
+          "disagreeRate": 81.82
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 坪林區大林里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "200",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 70.49,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 41.85,
+          "candVictor": " ",
+          "tks": 308,
+          "profRate": 39.34,
+          "agreeRate": 0.34,
+          "disagreeRate": 99.66
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 坪林區石𥕢里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "200",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 64.94,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 44.09,
+          "candVictor": " ",
+          "tks": 112,
+          "profRate": 56.97,
+          "agreeRate": 69.25,
+          "disagreeRate": 30.75
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 坪林區粗窟里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "200",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 70.29,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 47.8,
+          "candVictor": "*",
+          "tks": 271,
+          "profRate": 70.49,
+          "agreeRate": 35.88,
+          "disagreeRate": 64.12
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 坪林區上德里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "200",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 66.83,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 50.67,
+          "candVictor": "*",
+          "tks": 266,
+          "profRate": 53.83,
+          "agreeRate": 63.78,
+          "disagreeRate": 36.22
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 坪林區漁光里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "200",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 61.53,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 34.62,
+          "candVictor": " ",
+          "tks": 170,
+          "profRate": 17.44,
+          "agreeRate": 61.55,
+          "disagreeRate": 38.45
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 烏來區忠治里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "290",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 71.79,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 52.56,
+          "candVictor": "*",
+          "tks": 349,
+          "profRate": 11.41,
+          "agreeRate": 67.05,
+          "disagreeRate": 32.95
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 烏來區烏來里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "290",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 68.11,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 52.97,
+          "candVictor": "*",
+          "tks": 482,
+          "profRate": 27.51,
+          "agreeRate": 99.92,
+          "disagreeRate": 0.08
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 烏來區孝義里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "290",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 68.44,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 47.22,
+          "candVictor": " ",
+          "tks": 68,
+          "profRate": 28.78,
+          "agreeRate": 59.54,
+          "disagreeRate": 40.46
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 烏來區信賢里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "290",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 65.44,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 37.36,
+          "candVictor": " ",
+          "tks": 65,
+          "profRate": 30.66,
+          "agreeRate": 74.79,
+          "disagreeRate": 25.21
+        }
+      ]
+    },
+    {
+      "range": "新北市 第11選區 烏來區福山里",
+      "area_nickname": "新店區、深坑區、石碇區、坪林區、烏來區",
+      "county": "65000",
+      "area": "11",
+      "town": "290",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 61.54,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "羅明才",
+          "party": "中國國民黨",
+          "tksRate": 42.31,
+          "candVictor": " ",
+          "tks": 33,
+          "profRate": 41.06,
+          "agreeRate": 74.55,
+          "disagreeRate": 25.45
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}

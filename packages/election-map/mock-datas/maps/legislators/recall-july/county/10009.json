@@ -1,0 +1,41 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "雲林縣 第01選區",
+      "area_nickname": "虎尾鎮、土庫鎮、北港鎮、麥寮鄉、東勢鄉、褒忠鄉、臺西鄉、元長鄉、四湖鄉、口湖鄉、水林鄉",
+      "county": "10009",
+      "area": "01",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 66.2,
+      "candidates": [
+        {
+          "candNo": 5,
+          "name": "丁學忠",
+          "party": "中國國民黨",
+          "tksRate": 47.77,
+          "candVictor": "*",
+          "tks": 84736,
+          "profRate": 29.11,
+          "agreeRate": 58.44,
+          "disagreeRate": 41.56
+        }
+      ]
+    },
+    {
+      "range": "雲林縣 第02選區",
+      "area_nickname": "斗六市、斗南鎮、西螺鎮、古坑鄉、大埤鄉、莿桐鄉、林內鄉、二崙鄉、崙背鄉",
+      "county": "10009",
+      "area": "02",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 70.91,
+      "candidates": []
+    }
+  ]
+}

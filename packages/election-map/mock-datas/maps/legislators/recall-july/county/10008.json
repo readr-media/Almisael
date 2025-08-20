@@ -1,0 +1,53 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "南投縣 第01選區",
+      "area_nickname": "埔里鎮、草屯鎮、中寮鄉、魚池鄉、國姓鄉、仁愛鄉",
+      "county": "10008",
+      "area": "01",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 71.03,
+      "candidates": [
+        {
+          "candNo": 1,
+          "name": "馬文君",
+          "party": "中國國民黨",
+          "tksRate": 53.09,
+          "candVictor": "*",
+          "tks": 68890,
+          "profRate": 3.89,
+          "agreeRate": 33.39,
+          "disagreeRate": 66.61
+        }
+      ]
+    },
+    {
+      "range": "南投縣 第02選區",
+      "area_nickname": "南投市、竹山鎮、集集鎮、名間鄉、鹿谷鄉、水里鄉、信義鄉",
+      "county": "10008",
+      "area": "02",
+      "town": null,
+      "vill": null,
+      "type": "normal",
+      "profRate": 72.05,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "游顥",
+          "party": "中國國民黨",
+          "tksRate": 49.8,
+          "candVictor": "*",
+          "tks": 70012,
+          "profRate": 2.4,
+          "agreeRate": 57.7,
+          "disagreeRate": 42.3
+        }
+      ]
+    }
+  ]
+}

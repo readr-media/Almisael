@@ -1,10 +1,12 @@
-export const defaultElectionType = 'president'
-export const currentYear = 2024
-export const refetchInervalInSecond = 3 * 60
+import { isRecallSubtype, getRecallMonth } from '../utils/recallValidator'
+
+export const defaultElectionType = 'legislator'
+export const currentYear = 2025
+export const refetchIntervalInSecond = 1 * 60
 
 /**
  * Representing the type of the election.
- * @typedef {'president' | 'mayor' | 'legislator' | 'councilMember' | 'referendum'} ElectionType
+ * @typedef {'president' | 'mayor' | 'legislator' | 'councilMember' | 'referendum' | string} ElectionType
  *
  * Representing a subtype of a election
  * @typedef {Object} ElectionSubtype
@@ -22,6 +24,7 @@ export const refetchInervalInSecond = 3 * 60
  * Representing a year and other units (optional) in a year
  * @typedef {Object} Year
  * @property {number} key - The number of the year.
+ * @property {Array<string>} subType - The type which in that year
  * @property {Array<ReferendumNumber>} [numbers] - The numbers of referendum.
  *
  * Representing the default param that evc component will use
@@ -63,7 +66,12 @@ export const electionsConfig = [
   {
     electionType: 'president',
     electionName: '總統',
-    years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }, { key: 2024 }],
+    years: [
+      { key: 2012, subType: [] },
+      { key: 2016, subType: [] },
+      { key: 2020, subType: [] },
+      { key: 2024, subType: [] },
+    ],
     meta: {
       evc: { wrapperTitle: '正副總統候選人' },
       map: {
@@ -90,8 +98,52 @@ export const electionsConfig = [
       { name: '平地原住民', key: 'plainIndigenous', mobileOnly: false },
       { name: '不分區', key: 'party', mobileOnly: false },
       { name: '全國', key: 'all', mobileOnly: true },
+      { name: '七月罷免', key: 'recall-july', mobileOnly: false },
+      { name: '八月罷免', key: 'recall-august', mobileOnly: false },
     ],
-    years: [{ key: 2012 }, { key: 2016 }, { key: 2020 }, { key: 2024 }],
+    years: [
+      {
+        key: 2012,
+        subType: [
+          'normal',
+          'mountainIndigenous',
+          'plainIndigenous',
+          'party',
+          'all',
+        ],
+      },
+      {
+        key: 2016,
+        subType: [
+          'normal',
+          'mountainIndigenous',
+          'plainIndigenous',
+          'party',
+          'all',
+        ],
+      },
+      {
+        key: 2020,
+        subType: [
+          'normal',
+          'mountainIndigenous',
+          'plainIndigenous',
+          'party',
+          'all',
+        ],
+      },
+      {
+        key: 2024,
+        subType: [
+          'normal',
+          'mountainIndigenous',
+          'plainIndigenous',
+          'party',
+          'all',
+        ],
+      },
+      { key: 2025, subType: ['recall-july', 'recall-august'] },
+    ],
     meta: {
       evc: {
         wrapperTitle: {
@@ -99,6 +151,8 @@ export const electionsConfig = [
           mountainIndigenous: '山地原住民候選人',
           plainIndigenous: '平地原住民候選人',
           party: '不分區政黨',
+          'recall-july': '罷免候選人',
+          'recall-august': '罷免候選人',
         },
       },
       map: {
@@ -107,6 +161,7 @@ export const electionsConfig = [
           mountainIndigenous: false,
           plainIndigenous: false,
           party: false,
+          'recall-july': true,
         },
         // Only normal type starts from county level.
         folderNames: {
@@ -130,6 +185,11 @@ export const electionsConfig = [
             1: 'county',
             2: 'town',
           },
+          'recall-july': {
+            0: 'country',
+            1: 'county',
+            2: 'constituency',
+          },
         },
         fileNames: {
           0: 'country',
@@ -144,6 +204,7 @@ export const electionsConfig = [
           plainIndigenous: '立法委員席次圖',
           party: '立法委員席次圖',
           all: '立法委員席次圖',
+          'recall-july': '立法委員席次圖',
         },
         componentTitle: {
           normal: '區域立法委員選舉',
@@ -151,6 +212,7 @@ export const electionsConfig = [
           plainIndigenous: '平地原住民立法委員選舉',
           party: '不分區立法委員選舉',
           all: '立法委員選舉（總席次圖）',
+          'recall-july': '大罷免選舉',
         },
       },
     },
@@ -158,7 +220,12 @@ export const electionsConfig = [
   {
     electionType: 'mayor',
     electionName: '縣市首長',
-    years: [{ key: 2010 }, { key: 2014 }, { key: 2018 }, { key: 2022 }],
+    years: [
+      { key: 2010, subType: [] },
+      { key: 2014, subType: [] },
+      { key: 2018, subType: [] },
+      { key: 2022, subType: [] },
+    ],
     meta: {
       evc: { wrapperTitle: '縣市首長候選人' },
       map: {
@@ -183,7 +250,12 @@ export const electionsConfig = [
       { name: '原住民', key: 'indigenous', mobileOnly: false },
     ],
     electionName: '縣市議員',
-    years: [{ key: 2010 }, { key: 2014 }, { key: 2018 }, { key: 2022 }],
+    years: [
+      { key: 2010, subType: [] },
+      { key: 2014, subType: [] },
+      { key: 2018, subType: [] },
+      { key: 2022, subType: [] },
+    ],
     meta: {
       evc: { wrapperTitle: '縣市議員候選人' },
       map: {
@@ -211,6 +283,7 @@ export const electionsConfig = [
     years: [
       {
         key: 2018,
+        subType: [],
         numbers: [
           {
             year: 2018,
@@ -284,6 +357,7 @@ export const electionsConfig = [
       },
       {
         key: 2021,
+        subType: [],
         numbers: [
           {
             year: 2021,
@@ -316,6 +390,7 @@ export const electionsConfig = [
       },
       {
         key: 2022,
+        subType: [],
         numbers: [
           {
             year: 2022,
@@ -345,6 +420,108 @@ export const electionsConfig = [
     },
   },
 ]
+
+// Helper functions for dynamic recall support
+
+/**
+ * Get the appropriate wrapper title for a given subtype, supporting dynamic recall months
+ * @param {string} subtypeKey - The subtype key (e.g., 'normal', 'recall-july', 'recall-august')
+ * @returns {string} The wrapper title
+ */
+export const getLegislatorWrapperTitle = (subtypeKey) => {
+  const legislatorConfig = electionsConfig.find(
+    (config) => config.electionType === 'legislator'
+  )
+  const defaultTitles = legislatorConfig?.meta?.evc?.wrapperTitle || {}
+
+  // If it's a known static subtype, return it
+  if (defaultTitles[subtypeKey]) {
+    return defaultTitles[subtypeKey]
+  }
+
+  // If it's a recall subtype, return the generic recall title
+  if (isRecallSubtype(subtypeKey)) {
+    return '罷免候選人'
+  }
+
+  return ''
+}
+
+/**
+ * Get the appropriate component title for a given subtype, supporting dynamic recall months
+ * @param {string} subtypeKey - The subtype key (e.g., 'normal', 'recall-july', 'recall-august')
+ * @returns {string} The component title
+ */
+export const getLegislatorComponentTitle = (subtypeKey) => {
+  const legislatorConfig = electionsConfig.find(
+    (config) => config.electionType === 'legislator'
+  )
+  const defaultTitles = legislatorConfig?.meta?.seat?.componentTitle || {}
+
+  // If it's a known static subtype, return it
+  if (defaultTitles[subtypeKey]) {
+    return defaultTitles[subtypeKey]
+  }
+
+  // If it's a recall subtype, return the generic recall title
+  if (isRecallSubtype(subtypeKey)) {
+    return '大罷免選舉'
+  }
+
+  return ''
+}
+
+/**
+ * Check if map color should be enabled for a given subtype, supporting dynamic recall months
+ * @param {string} subtypeKey - The subtype key (e.g., 'normal', 'recall-july', 'recall-august')
+ * @returns {boolean} Whether map color should be enabled
+ */
+export const getLegislatorMapColor = (subtypeKey) => {
+  const legislatorConfig = electionsConfig.find(
+    (config) => config.electionType === 'legislator'
+  )
+  const defaultMapColors = legislatorConfig?.meta?.map?.mapColor || {}
+
+  // If it's a known static subtype, return it
+  if (typeof defaultMapColors[subtypeKey] !== 'undefined') {
+    return defaultMapColors[subtypeKey]
+  }
+
+  // If it's a recall subtype, enable map color (like recall-july)
+  if (isRecallSubtype(subtypeKey)) {
+    return true
+  }
+
+  return false
+}
+
+/**
+ * Get the appropriate folder names for a given subtype, supporting dynamic recall months
+ * @param {string} subtypeKey - The subtype key (e.g., 'normal', 'recall-july', 'recall-august')
+ * @returns {Object} The folder names configuration
+ */
+export const getLegislatorFolderNames = (subtypeKey) => {
+  const legislatorConfig = electionsConfig.find(
+    (config) => config.electionType === 'legislator'
+  )
+  const defaultFolderNames = legislatorConfig?.meta?.map?.folderNames || {}
+
+  // If it's a known static subtype, return it
+  if (defaultFolderNames[subtypeKey]) {
+    return defaultFolderNames[subtypeKey]
+  }
+
+  // If it's a recall subtype, use the same structure as recall-july
+  if (isRecallSubtype(subtypeKey)) {
+    return {
+      0: 'country',
+      1: 'county',
+      2: 'constituency',
+    }
+  }
+
+  return {}
+}
 
 export const defaultElectionConfig = electionsConfig.find(
   (electionConfig) => electionConfig.electionType === defaultElectionType

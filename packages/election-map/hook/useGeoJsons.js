@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import { feature } from 'topojson'
 import { useAppDispatch } from './useRedux'
 import { mapActions } from '../store/map-slice'
-
 /**
  * @typedef {import('topojson-specification').Topology} Topology
  */
@@ -18,7 +17,7 @@ const fetchTopoJson = (url) => {
 
 const fetchTwMapTopoJsons = async () => {
   const twMapUrl =
-    'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan_map_2023.json'
+    'https://whoareyou-gcs.readr.tw/taiwan-map/taiwan_map_2025.json'
 
   try {
     const twMapTopoJson = await fetchTopoJson(twMapUrl)

@@ -13,6 +13,7 @@ import { useAppDispatch, useAppSelector } from '../hook/useRedux'
 import * as topojson from 'topojson'
 import { mapActions } from '../store/map-slice'
 import gtag from '../utils/gtag'
+import { isRecallSubtype } from '../utils/recallValidator'
 
 const SVG = styled.svg`
   use {
@@ -29,6 +30,7 @@ const SVG = styled.svg`
  * @param {Function} props.setTooltip
  * @param {import('../utils/electionsData').ElectionData} props.electionData
  * @param {boolean} props.mapColor
+ * @param {boolean} props.isRunning
  * @returns {JSX.Element}
  */
 export const Map = ({
@@ -38,6 +40,7 @@ export const Map = ({
   setTooltip,
   electionData,
   mapColor,
+  isRunning,
 }) => {
   const dispatch = useAppDispatch()
   const electionType = useAppSelector(
@@ -63,12 +66,15 @@ export const Map = ({
   const subtype = useAppSelector((state) => state.election.control.subtype)
   const displayingDistricts = useMemo(() => {
     let displayingTowns, displayingAreas, displayingVillages
-    if (electionType === 'legislator' && subtype?.key === 'normal') {
+    if (
+      electionType === 'legislator' &&
+      (subtype?.key === 'normal' || isRecallSubtype(subtype?.key))
+    ) {
       if (districtMapping.districtWithArea[year.key]) {
         const districtWithAreaMapping =
           districtMapping.districtWithArea[year.key]
         const countyMappingObj = districtWithAreaMapping.sub.find(
-          (countyObj) => countyObj.code === countyCode
+          (countyObj) => countyObj?.code === countyCode
         )
 
         if (countyMappingObj) {
@@ -162,6 +168,54 @@ export const Map = ({
     return d3.geoPath(projection)
   }, [counties, height, width])
 
+  const villageHatchLayer = useMemo(() => {
+    if (electionType !== 'legislator' || !isRecallSubtype(subtype?.key)) {
+      return null
+    }
+
+    const villagesToHatch = displayingVillages?.features?.filter((feature) => {
+      const mapVillCode = feature.properties.VILLCODE
+
+      // At level 3 (village level), data is accessed via townCode
+      // At level 2 (area level), data is accessed via areaCode
+      const dataKey = levelControl.level === 3 ? townCode : areaCode
+      const villageCandidates = electionData[2]?.[dataKey]?.districts.find(
+        (district) =>
+          district.county + district.town + district.vill === mapVillCode
+      )?.candidates
+
+      if (villageCandidates && villageCandidates.length) {
+        const { agreeRate, disagreeRate, ytpRate } = villageCandidates[0]
+        const threshold = 25
+        const agree = agreeRate > disagreeRate
+        const isRecallPassed = ytpRate < threshold && agree
+        return isRecallPassed
+      }
+      return false
+    })
+
+    return villagesToHatch?.map((feature) => {
+      return (
+        <path
+          key={`${feature.properties.VILLCODE}-hatch`}
+          d={path(feature)}
+          fill="url(#hatch-pattern)"
+          pointerEvents="none"
+        />
+      )
+    })
+  }, [
+    electionType,
+    subtype?.key,
+    displayingVillages,
+    electionData,
+    areaCode,
+    townCode,
+    levelControl.level,
+    activeCode,
+    path,
+  ])
+
   useEffect(() => {
     const getXYZ = (feature) => {
       if (feature) {
@@ -205,6 +259,10 @@ export const Map = ({
   }
 
   const countyClicked = (feature) => {
+    const countyHasData = !!electionData?.[0]?.districts?.find(
+      (county) => county.county === feature.properties.COUNTYCODE
+    )
+    if (isRecallSubtype(subtype?.key) && !countyHasData) return
     const { COUNTYCODE: countyCode, COUNTYNAME: countyName } =
       feature.properties
     dispatch(
@@ -269,13 +327,15 @@ export const Map = ({
     })
   }
   const areaClicked = (feature) => {
-    const {
-      COUNTYCODE: countyCode,
-      COUNTYNAME: countyName,
-      AREACODE: areaCode,
-      AREANAME: areaName,
-    } = feature.properties
+    // NOTE: if it is running do not open area
+    if (isRecallSubtype(subtype.key) && isRunning) return
 
+    const {
+      COUNTYNAME: countyName,
+      AREANAME: areaName,
+      COUNTYCODE: countyCode,
+      AREACODE: areaCode,
+    } = feature.properties
     dispatch(
       electionActions.changeLevelControl({
         level: 2,
@@ -390,14 +450,15 @@ export const Map = ({
    */
   const getCountyColor = (mapCountyCode) => {
     if (!mapColor || !electionData[0]) {
+      if (subtype && isRecallSubtype(subtype.key)) return '#999'
       return defaultColor
     }
 
     // By pass when activeCode exists and is not countyCode. (Only country level and  county level matters.)
     if (activeCode && activeCode !== mapCountyCode) {
+      if (subtype && isRecallSubtype(subtype.key)) return '#999'
       return defaultColor
     }
-
     if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
         electionData[0]?.districts?.find(
@@ -411,6 +472,31 @@ export const Map = ({
         )
         return color
       } else {
+        return defaultColor
+      }
+    }
+    if (electionType === 'legislator') {
+      if (subtype && isRecallSubtype(subtype.key)) {
+        const candidate = electionData[0]?.districts
+          ?.find((district) => district.county === mapCountyCode)
+          ?.candidates.at(0)
+        // Return consistent color for all recall subtypes when there's data structure
+        if (candidate) return '#999999'
+        return '#D9D9D9'
+      } else {
+        const countyCandidates = electionData[0]?.districts?.find(
+          (district) => district.county === mapCountyCode
+        )?.candidates
+        if (countyCandidates) {
+          const winningCandidate = getWinningCandidate(countyCandidates)
+          if (winningCandidate) {
+            const color = getGradiantPartyColor(
+              winningCandidate.party,
+              winningCandidate.tksRate
+            )
+            return color
+          }
+        }
         return defaultColor
       }
     }
@@ -499,9 +585,24 @@ export const Map = ({
     if (activeCode && activeCode !== countyCode) {
       return defaultColor
     }
+    if (isRecallSubtype(subtype.key)) {
+      const areaCandidates = electionData?.[1]?.[countyCode]?.districts?.find(
+        (district) => district.county + district.area === mapAreaCode
+      )?.candidates
+      if (!areaCandidates || !areaCandidates.length) return defaultColor
+      const { agreeRate, disagreeRate } = areaCandidates?.[0]
 
-    // Only normal legislator will show area map and use this function.
-    if (electionType === 'legislator') {
+      if (agreeRate === 0 && disagreeRate === 0) return '#999'
+      const agree = agreeRate >= disagreeRate
+      const color = getGradiantReferendumColor(
+        agree,
+        agree ? agreeRate : disagreeRate
+      )
+      return color
+    }
+
+    // Only normal legislator and recall will show area map and use this function.
+    if (electionType === 'legislator' && subtype.key === 'normal') {
       // Try to find the area candidates from the countyCode map data.
       const areaCandidates = electionData[1][countyCode]?.districts?.find(
         (district) => district.county + district.area === mapAreaCode
@@ -533,7 +634,7 @@ export const Map = ({
       return defaultColor
     }
 
-    // since only normal legislator will use areaCode to define color and other
+    // since only normal legislator and recall will use areaCode to define color and other
     // legislator subtype won't show any color, separate the legislator type if sufficient.
     if (electionType !== 'legislator') {
       const townCode = mapVillCode.slice(0, -3)
@@ -580,7 +681,7 @@ export const Map = ({
           return color
         }
       }
-    } else {
+    } else if (subtype.key === 'normal') {
       // If the level is 3 (village level), only show the color for the active villCode
       if (
         levelControl.level === 3 &&
@@ -606,6 +707,23 @@ export const Map = ({
           return color
         }
       }
+    } else if (isRecallSubtype(subtype.key)) {
+      const villageCandidates = electionData[2][areaCode]?.districts.find(
+        (district) =>
+          district.county + district.town + district.vill === mapVillCode
+      )?.candidates
+      if (villageCandidates && villageCandidates.length) {
+        const { agreeRate, disagreeRate } = villageCandidates[0]
+        if (agreeRate === 0 && disagreeRate === 0) return defaultColor
+        const agree = agreeRate >= disagreeRate
+        const color = getGradiantReferendumColor(
+          agree,
+          agree ? agreeRate : disagreeRate
+        )
+        return color
+      } else {
+        return '#D9D9D9'
+      }
     }
     // Fallback to default color if none of the situation fits.
     return defaultColor
@@ -618,6 +736,17 @@ export const Map = ({
       height={height}
       viewBox={`0 0 ${width} ${height}`}
     >
+      <defs>
+        <pattern
+          id="hatch-pattern"
+          width="1"
+          height="1"
+          patternUnits="userSpaceOnUse"
+          patternTransform="rotate(8.92)"
+        >
+          <path d="M 0,0.5 L 1,0.5" stroke="white" strokeWidth="0.1" />
+        </pattern>
+      </defs>
       <rect
         className="background"
         id={`${id}-id-background`}
@@ -819,6 +948,8 @@ export const Map = ({
               }
             />
           ))}
+
+          {villageHatchLayer}
 
           {activeCode && (
             // duplicate active map on above

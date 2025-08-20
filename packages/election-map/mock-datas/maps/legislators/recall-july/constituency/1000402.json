@@ -1,0 +1,1940 @@
+{
+  "updatedAt": "2025-07-26 22:21",
+  "is_running": false,
+  "is_started": true,
+  "districts": [
+    {
+      "range": "新竹縣 第02選區 竹北市鹿場里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 79.87,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 35.98,
+          "candVictor": " ",
+          "tks": 3042,
+          "profRate": 69.56,
+          "agreeRate": 86.54,
+          "disagreeRate": 13.46
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市東平里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 80.28,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 31.49,
+          "candVictor": " ",
+          "tks": 2980,
+          "profRate": 70.75,
+          "agreeRate": 2.61,
+          "disagreeRate": 97.39
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市中興里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 79.48,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 36.8,
+          "candVictor": " ",
+          "tks": 2416,
+          "profRate": 35.55,
+          "agreeRate": 41.11,
+          "disagreeRate": 58.89
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市隘口里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 79.12,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 35.65,
+          "candVictor": " ",
+          "tks": 958,
+          "profRate": 31.9,
+          "agreeRate": 75.33,
+          "disagreeRate": 24.67
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市東海里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 73.63,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 52.55,
+          "candVictor": "*",
+          "tks": 1094,
+          "profRate": 55.89,
+          "agreeRate": 89.69,
+          "disagreeRate": 10.31
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市東興里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "027",
+      "type": "normal",
+      "profRate": 78.43,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 32.91,
+          "candVictor": " ",
+          "tks": 1967,
+          "profRate": 65.02,
+          "agreeRate": 12.83,
+          "disagreeRate": 87.17
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市北興里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "028",
+      "type": "normal",
+      "profRate": 79.24,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 30.14,
+          "candVictor": " ",
+          "tks": 1493,
+          "profRate": 88.07,
+          "agreeRate": 13.76,
+          "disagreeRate": 86.24
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市十興里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 78.22,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 34.95,
+          "candVictor": " ",
+          "tks": 1821,
+          "profRate": 20.45,
+          "agreeRate": 97.41,
+          "disagreeRate": 2.59
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市興安里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "029",
+      "type": "normal",
+      "profRate": 78.72,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 43.12,
+          "candVictor": "*",
+          "tks": 1204,
+          "profRate": 65.51,
+          "agreeRate": 87.81,
+          "disagreeRate": 12.19
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市文化里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "030",
+      "type": "normal",
+      "profRate": 78.03,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 42.91,
+          "candVictor": "*",
+          "tks": 1075,
+          "profRate": 46.95,
+          "agreeRate": 14.28,
+          "disagreeRate": 85.72
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市斗崙里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 79.16,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 37.13,
+          "candVictor": " ",
+          "tks": 2013,
+          "profRate": 49.66,
+          "agreeRate": 87.66,
+          "disagreeRate": 12.34
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市中崙里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "031",
+      "type": "normal",
+      "profRate": 80.15,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 37.86,
+          "candVictor": " ",
+          "tks": 1964,
+          "profRate": 20.92,
+          "agreeRate": 94.83,
+          "disagreeRate": 5.17
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市北崙里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 77.9,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 45.6,
+          "candVictor": "*",
+          "tks": 1311,
+          "profRate": 82.77,
+          "agreeRate": 61.29,
+          "disagreeRate": 38.71
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市新崙里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 75.75,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 39.42,
+          "candVictor": " ",
+          "tks": 1931,
+          "profRate": 31.49,
+          "agreeRate": 63.34,
+          "disagreeRate": 36.66
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市竹北里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 75.82,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 38.27,
+          "candVictor": " ",
+          "tks": 2377,
+          "profRate": 70.87,
+          "agreeRate": 23.93,
+          "disagreeRate": 76.07
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市竹仁里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 75.41,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 44.52,
+          "candVictor": "*",
+          "tks": 2770,
+          "profRate": 39.86,
+          "agreeRate": 9.51,
+          "disagreeRate": 90.49
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市福德里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "026",
+      "type": "normal",
+      "profRate": 73.78,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 47.03,
+          "candVictor": "*",
+          "tks": 1069,
+          "profRate": 9.77,
+          "agreeRate": 45.49,
+          "disagreeRate": 54.51
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市竹義里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 68.4,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 43.43,
+          "candVictor": "*",
+          "tks": 1688,
+          "profRate": 59.07,
+          "agreeRate": 37.43,
+          "disagreeRate": 62.57
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹北市泰和里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "010",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 74.24,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 44.44,
+          "candVictor": "*",
+          "tks": 1935,
+          "profRate": 40.83,
+          "agreeRate": 89.24,
+          "disagreeRate": 10.76
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮上坪里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 71.76,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 55.91,
+          "candVictor": "*",
+          "tks": 104,
+          "profRate": 92.92,
+          "agreeRate": 10.71,
+          "disagreeRate": 89.29
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮瑞峰里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 70.32,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 59.23,
+          "candVictor": "*",
+          "tks": 154,
+          "profRate": 8.96,
+          "agreeRate": 15.31,
+          "disagreeRate": 84.69
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮軟橋里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 71.93,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 56.9,
+          "candVictor": "*",
+          "tks": 136,
+          "profRate": 93.47,
+          "agreeRate": 96.31,
+          "disagreeRate": 3.69
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮員崠里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 70.95,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 54.83,
+          "candVictor": "*",
+          "tks": 766,
+          "profRate": 92.75,
+          "agreeRate": 32.49,
+          "disagreeRate": 67.51
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮上舘里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 71.81,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 52.23,
+          "candVictor": "*",
+          "tks": 3050,
+          "profRate": 58.64,
+          "agreeRate": 62.47,
+          "disagreeRate": 37.53
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮東寧里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 71.75,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 53.69,
+          "candVictor": "*",
+          "tks": 1185,
+          "profRate": 30.04,
+          "agreeRate": 60.65,
+          "disagreeRate": 39.35
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮中正里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "021",
+      "type": "normal",
+      "profRate": 74.82,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 48.53,
+          "candVictor": "*",
+          "tks": 873,
+          "profRate": 75.64,
+          "agreeRate": 21.19,
+          "disagreeRate": 78.81
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮大鄉里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 70.47,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 52.98,
+          "candVictor": "*",
+          "tks": 1580,
+          "profRate": 55.04,
+          "agreeRate": 56.59,
+          "disagreeRate": 43.41
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮中山里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "020",
+      "type": "normal",
+      "profRate": 71.96,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 56.85,
+          "candVictor": "*",
+          "tks": 618,
+          "profRate": 31.57,
+          "agreeRate": 95.13,
+          "disagreeRate": 4.87
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮南華里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "022",
+      "type": "normal",
+      "profRate": 72.94,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 52.65,
+          "candVictor": "*",
+          "tks": 368,
+          "profRate": 91.13,
+          "agreeRate": 32.57,
+          "disagreeRate": 67.43
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮東華里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 78.38,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 53.53,
+          "candVictor": "*",
+          "tks": 250,
+          "profRate": 61.39,
+          "agreeRate": 35.42,
+          "disagreeRate": 64.58
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮商華里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 61.05,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 55.63,
+          "candVictor": "*",
+          "tks": 874,
+          "profRate": 75.27,
+          "agreeRate": 62.55,
+          "disagreeRate": 37.45
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮竹東里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 71.87,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 50.86,
+          "candVictor": "*",
+          "tks": 445,
+          "profRate": 49.34,
+          "agreeRate": 44.23,
+          "disagreeRate": 55.77
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮忠孝里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "024",
+      "type": "normal",
+      "profRate": 71.51,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 53.6,
+          "candVictor": "*",
+          "tks": 506,
+          "profRate": 38.1,
+          "agreeRate": 91.81,
+          "disagreeRate": 8.19
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮鷄林里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "012",
+      "type": "normal",
+      "profRate": 72.0,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 54.05,
+          "candVictor": "*",
+          "tks": 1282,
+          "profRate": 60.75,
+          "agreeRate": 71.92,
+          "disagreeRate": 28.08
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮仁愛里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "013",
+      "type": "normal",
+      "profRate": 74.1,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 50.35,
+          "candVictor": "*",
+          "tks": 1138,
+          "profRate": 40.33,
+          "agreeRate": 32.63,
+          "disagreeRate": 67.37
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮榮樂里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 74.22,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 53.85,
+          "candVictor": "*",
+          "tks": 490,
+          "profRate": 67.54,
+          "agreeRate": 40.91,
+          "disagreeRate": 59.09
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮榮華里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "023",
+      "type": "normal",
+      "profRate": 73.88,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 53.21,
+          "candVictor": "*",
+          "tks": 2599,
+          "profRate": 47.08,
+          "agreeRate": 76.18,
+          "disagreeRate": 23.82
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮五豐里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "014",
+      "type": "normal",
+      "profRate": 68.17,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 52.14,
+          "candVictor": "*",
+          "tks": 2374,
+          "profRate": 74.04,
+          "agreeRate": 94.53,
+          "disagreeRate": 5.47
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮陸豐里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "025",
+      "type": "normal",
+      "profRate": 74.77,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 61.36,
+          "candVictor": "*",
+          "tks": 243,
+          "profRate": 67.59,
+          "agreeRate": 5.48,
+          "disagreeRate": 94.52
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮三重里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "015",
+      "type": "normal",
+      "profRate": 72.6,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 51.63,
+          "candVictor": "*",
+          "tks": 2251,
+          "profRate": 68.82,
+          "agreeRate": 35.26,
+          "disagreeRate": 64.74
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮二重里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "019",
+      "type": "normal",
+      "profRate": 75.28,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 47.4,
+          "candVictor": "*",
+          "tks": 3957,
+          "profRate": 47.75,
+          "agreeRate": 18.93,
+          "disagreeRate": 81.07
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮頭重里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "016",
+      "type": "normal",
+      "profRate": 75.3,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 49.98,
+          "candVictor": "*",
+          "tks": 1633,
+          "profRate": 14.57,
+          "agreeRate": 82.5,
+          "disagreeRate": 17.5
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮員山里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "017",
+      "type": "normal",
+      "profRate": 76.45,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 51.13,
+          "candVictor": "*",
+          "tks": 703,
+          "profRate": 51.77,
+          "agreeRate": 41.26,
+          "disagreeRate": 58.74
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 竹東鎮柯湖里",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "020",
+      "vill": "018",
+      "type": "normal",
+      "profRate": 75.09,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 54.81,
+          "candVictor": "*",
+          "tks": 222,
+          "profRate": 70.87,
+          "agreeRate": 65.45,
+          "disagreeRate": 34.55
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 橫山鄉橫山村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "080",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 70.28,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 56.47,
+          "candVictor": "*",
+          "tks": 1208,
+          "profRate": 41.6,
+          "agreeRate": 68.53,
+          "disagreeRate": 31.47
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 橫山鄉田寮村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "080",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 70.42,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 57.62,
+          "candVictor": "*",
+          "tks": 325,
+          "profRate": 89.91,
+          "agreeRate": 29.57,
+          "disagreeRate": 70.43
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 橫山鄉南昌村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "080",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 64.94,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 65.26,
+          "candVictor": "*",
+          "tks": 62,
+          "profRate": 58.63,
+          "agreeRate": 55.63,
+          "disagreeRate": 44.37
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 橫山鄉豐鄉村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "080",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 62.21,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 53.23,
+          "candVictor": "*",
+          "tks": 66,
+          "profRate": 17.49,
+          "agreeRate": 79.95,
+          "disagreeRate": 20.05
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 橫山鄉豐田村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "080",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 68.45,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 54.21,
+          "candVictor": "*",
+          "tks": 116,
+          "profRate": 26.38,
+          "agreeRate": 80.97,
+          "disagreeRate": 19.03
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 橫山鄉內灣村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "080",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 69.9,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 56.79,
+          "candVictor": "*",
+          "tks": 322,
+          "profRate": 42.13,
+          "agreeRate": 31.49,
+          "disagreeRate": 68.51
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 橫山鄉力行村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "080",
+      "vill": "011",
+      "type": "normal",
+      "profRate": 75.37,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 60.0,
+          "candVictor": "*",
+          "tks": 333,
+          "profRate": 95.64,
+          "agreeRate": 0.78,
+          "disagreeRate": 99.22
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 橫山鄉福興村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "080",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 73.91,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 51.25,
+          "candVictor": "*",
+          "tks": 144,
+          "profRate": 87.14,
+          "agreeRate": 89.38,
+          "disagreeRate": 10.62
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 橫山鄉沙坑村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "080",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 74.35,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 53.04,
+          "candVictor": "*",
+          "tks": 340,
+          "profRate": 53.23,
+          "agreeRate": 60.63,
+          "disagreeRate": 39.37
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 橫山鄉新興村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "080",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 70.6,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 64.75,
+          "candVictor": "*",
+          "tks": 654,
+          "profRate": 47.65,
+          "agreeRate": 43.39,
+          "disagreeRate": 56.61
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 橫山鄉大肚村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "080",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 73.07,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 59.58,
+          "candVictor": "*",
+          "tks": 678,
+          "profRate": 63.35,
+          "agreeRate": 69.31,
+          "disagreeRate": 30.69
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 北埔鄉北埔村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "090",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.93,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 51.73,
+          "candVictor": "*",
+          "tks": 389,
+          "profRate": 85.05,
+          "agreeRate": 43.35,
+          "disagreeRate": 56.65
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 北埔鄉南興村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "090",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 71.0,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 59.66,
+          "candVictor": "*",
+          "tks": 463,
+          "profRate": 79.05,
+          "agreeRate": 45.57,
+          "disagreeRate": 54.43
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 北埔鄉大湖村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "090",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 70.67,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 63.17,
+          "candVictor": "*",
+          "tks": 223,
+          "profRate": 21.11,
+          "agreeRate": 98.33,
+          "disagreeRate": 1.67
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 北埔鄉埔尾村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "090",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 71.09,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 54.97,
+          "candVictor": "*",
+          "tks": 934,
+          "profRate": 61.01,
+          "agreeRate": 41.32,
+          "disagreeRate": 58.68
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 北埔鄉水磜村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "090",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 68.33,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 50.78,
+          "candVictor": "*",
+          "tks": 262,
+          "profRate": 28.58,
+          "agreeRate": 91.28,
+          "disagreeRate": 8.72
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 北埔鄉南埔村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "090",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 74.79,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 59.85,
+          "candVictor": "*",
+          "tks": 158,
+          "profRate": 56.48,
+          "agreeRate": 99.75,
+          "disagreeRate": 0.25
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 北埔鄉大林村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "090",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 75.26,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 55.31,
+          "candVictor": "*",
+          "tks": 276,
+          "profRate": 44.75,
+          "agreeRate": 10.61,
+          "disagreeRate": 89.39
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 北埔鄉南坑村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "090",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 71.1,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 61.9,
+          "candVictor": "*",
+          "tks": 130,
+          "profRate": 87.09,
+          "agreeRate": 42.18,
+          "disagreeRate": 57.82
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 北埔鄉外坪村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "090",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 66.67,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 55.37,
+          "candVictor": "*",
+          "tks": 98,
+          "profRate": 85.1,
+          "agreeRate": 86.5,
+          "disagreeRate": 13.5
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 寶山鄉雙新村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "100",
+      "vill": "010",
+      "type": "normal",
+      "profRate": 72.29,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 46.75,
+          "candVictor": "*",
+          "tks": 877,
+          "profRate": 85.27,
+          "agreeRate": 96.08,
+          "disagreeRate": 3.92
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 寶山鄉雙溪村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "100",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 72.61,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 45.07,
+          "candVictor": "*",
+          "tks": 823,
+          "profRate": 98.14,
+          "agreeRate": 62.93,
+          "disagreeRate": 37.07
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 寶山鄉大崎村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "100",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 73.46,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 51.8,
+          "candVictor": "*",
+          "tks": 676,
+          "profRate": 59.61,
+          "agreeRate": 29.32,
+          "disagreeRate": 70.68
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 寶山鄉三峰村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "100",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 72.86,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 51.98,
+          "candVictor": "*",
+          "tks": 367,
+          "profRate": 55.1,
+          "agreeRate": 44.34,
+          "disagreeRate": 55.66
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 寶山鄉新城村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "100",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 74.53,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 52.77,
+          "candVictor": "*",
+          "tks": 429,
+          "profRate": 47.99,
+          "agreeRate": 8.44,
+          "disagreeRate": 91.56
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 寶山鄉寶斗村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "100",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 69.97,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 52.72,
+          "candVictor": "*",
+          "tks": 252,
+          "profRate": 45.68,
+          "agreeRate": 90.07,
+          "disagreeRate": 9.93
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 寶山鄉深井村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "100",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 75.92,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 58.66,
+          "candVictor": "*",
+          "tks": 332,
+          "profRate": 37.37,
+          "agreeRate": 97.94,
+          "disagreeRate": 2.06
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 寶山鄉寶山村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "100",
+      "vill": "008",
+      "type": "normal",
+      "profRate": 75.0,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 53.08,
+          "candVictor": "*",
+          "tks": 362,
+          "profRate": 20.02,
+          "agreeRate": 59.89,
+          "disagreeRate": 40.11
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 寶山鄉油田村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "100",
+      "vill": "009",
+      "type": "normal",
+      "profRate": 75.49,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 58.75,
+          "candVictor": "*",
+          "tks": 245,
+          "profRate": 64.75,
+          "agreeRate": 9.37,
+          "disagreeRate": 90.63
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 寶山鄉山湖村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "100",
+      "vill": "007",
+      "type": "normal",
+      "profRate": 74.24,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 56.81,
+          "candVictor": "*",
+          "tks": 217,
+          "profRate": 39.84,
+          "agreeRate": 18.56,
+          "disagreeRate": 81.44
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 峨眉鄉峨眉村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "110",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 76.22,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 58.6,
+          "candVictor": "*",
+          "tks": 334,
+          "profRate": 86.83,
+          "agreeRate": 72.31,
+          "disagreeRate": 27.69
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 峨眉鄉中盛村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "110",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 75.0,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 43.67,
+          "candVictor": "*",
+          "tks": 207,
+          "profRate": 24.57,
+          "agreeRate": 97.01,
+          "disagreeRate": 2.99
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 峨眉鄉石井村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "110",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 76.37,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 53.75,
+          "candVictor": "*",
+          "tks": 215,
+          "profRate": 91.36,
+          "agreeRate": 65.85,
+          "disagreeRate": 34.15
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 峨眉鄉七星村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "110",
+      "vill": "005",
+      "type": "normal",
+      "profRate": 72.99,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 54.92,
+          "candVictor": "*",
+          "tks": 229,
+          "profRate": 72.01,
+          "agreeRate": 73.8,
+          "disagreeRate": 26.2
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 峨眉鄉富興村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "110",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 68.75,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 55.24,
+          "candVictor": "*",
+          "tks": 485,
+          "profRate": 40.26,
+          "agreeRate": 19.28,
+          "disagreeRate": 80.72
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 峨眉鄉湖光村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "110",
+      "vill": "006",
+      "type": "normal",
+      "profRate": 71.99,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 55.5,
+          "candVictor": "*",
+          "tks": 333,
+          "profRate": 90.79,
+          "agreeRate": 20.56,
+          "disagreeRate": 79.44
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 五峰鄉大隘村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "130",
+      "vill": "001",
+      "type": "normal",
+      "profRate": 71.72,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 66.18,
+          "candVictor": "*",
+          "tks": 45,
+          "profRate": 4.29,
+          "agreeRate": 12.16,
+          "disagreeRate": 87.84
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 五峰鄉桃山村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "130",
+      "vill": "004",
+      "type": "normal",
+      "profRate": 65.66,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 50.0,
+          "candVictor": "*",
+          "tks": 52,
+          "profRate": 4.51,
+          "agreeRate": 98.07,
+          "disagreeRate": 1.93
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 五峰鄉花園村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "130",
+      "vill": "002",
+      "type": "normal",
+      "profRate": 64.71,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 50.0,
+          "candVictor": "*",
+          "tks": 27,
+          "profRate": 36.23,
+          "agreeRate": 89.03,
+          "disagreeRate": 10.97
+        }
+      ]
+    },
+    {
+      "range": "新竹縣 第02選區 五峰鄉竹林村",
+      "area_nickname": "竹北市*、竹東鎮、橫山鄉、北埔鄉、寶山鄉、峨眉鄉、五峰鄉",
+      "county": "10004",
+      "area": "02",
+      "town": "130",
+      "vill": "003",
+      "type": "normal",
+      "profRate": 60.61,
+      "candidates": [
+        {
+          "candNo": 3,
+          "name": "林思銘",
+          "party": "中國國民黨",
+          "tksRate": 57.89,
+          "candVictor": "*",
+          "tks": 11,
+          "profRate": 4.03,
+          "agreeRate": 29.01,
+          "disagreeRate": 70.99
+        }
+      ]
+    }
+  ],
+  "updateAt": "2025-07-26 22:21"
+}
