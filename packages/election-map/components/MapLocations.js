@@ -44,8 +44,7 @@ const Location = styled.span`
        */
       ({ shrink }) => (shrink ? `font-size: 14px` : `font-size: 18px;`)
     }}
-  }
-`
+  }`
 
 /**
  *

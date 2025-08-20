@@ -28,7 +28,7 @@ export const organization = 'readr-media'
 export const isRunning = false
 export const isBackup = false
 /** @type {Env} */
-export const environment = 'prod' // 'dev | prod'
+export const environment = 'dev' // 'dev | prod'
 const ga4Ids = {
   'readr-media': {
     dev: 'G-YDKYSDG3RL',

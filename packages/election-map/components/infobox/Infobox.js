@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { getInfoBoxData } from '../../utils/infoboxData'
 import { ThresholdBarChart } from '../ThresholdBarChart'
+import { isRecallSubtype } from '../../utils/recallValidator'
 /**
  *  Inside infobox data, a summary object or district object may have a note object
  *  which is special description to the current infobox data.
@@ -967,17 +968,19 @@ const LegislatorInfobox = ({
   }
 
   // separate all types for individual component to support extreme custom UI for each type
+  if (isRecallSubtype(subtype.key)) {
+    return (
+      <RecallLegislatorInfobox
+        level={level}
+        data={data}
+        isRunning={isRunning}
+        isStarted={isStarted}
+        isCurrentYear={isCurrentYear}
+      />
+    )
+  }
+
   switch (subtype.key) {
-    case 'recall-july':
-      return (
-        <RecallLegislatorInfobox
-          level={level}
-          data={data}
-          isRunning={isRunning}
-          isStarted={isStarted}
-          isCurrentYear={isCurrentYear}
-        />
-      )
     case 'normal':
       return (
         <NormalLegislatorInfobox
@@ -1047,7 +1050,13 @@ const CouncilMemberCandidate = styled.div`
   margin-top: 20px;
   align-items: center;
   line-height: 23px;
-  ${({ elected }) => elected && 'color: #DB4C65;'}
+  ${
+    /**
+     * @param {Object} props
+     * @param {boolean} props.elected
+     */
+    ({ elected }) => (elected ? 'color: #DB4C65;' : '')
+  }
 `
 
 const CouncilMemberCandidateName = styled.div`
@@ -1098,7 +1107,7 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
           <></>
         )}
         {districts.map(({ county, area, range, candidates, profRate }) => {
-          const councilMemberdPrefix = county + area
+          const councilMemberPrefix = county + area
           const areaName = range.split(' ')[1]
           const candidateComps = Array.isArray(candidates) ? (
             [...candidates]
@@ -1113,7 +1122,7 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
                 return (
                   <CouncilMemberCandidate
                     elected={elected}
-                    key={councilMemberdPrefix + candidate.candNo}
+                    key={councilMemberPrefix + candidate.candNo}
                   >
                     <CouncilMemberCandidateName>
                       {candidate.name}
@@ -1129,7 +1138,7 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
             <></>
           )
           return (
-            <CouncilMemberDistrict key={councilMemberdPrefix}>
+            <CouncilMemberDistrict key={councilMemberPrefix}>
               <CouncilMemberArea>{areaName}</CouncilMemberArea>
               <CouncilMemberTitle>投票率 {profRate}%</CouncilMemberTitle>
               {candidateComps}
@@ -1155,11 +1164,11 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
 
   const councilMembers = data.map((district) => {
     const { candidates = [], profRate, type, county, town, area } = district
-    const councilMemberdPrefix = county + town + area + type
+    const councilMemberPrefix = county + town + area + type
 
     if (type === 'normal') {
       return (
-        <CouncilMemberTypeWrapper key={councilMemberdPrefix}>
+        <CouncilMemberTypeWrapper key={councilMemberPrefix}>
           <CouncilMemberTitle>
             投票率 {profRate}%
             {isCurrentYear ? (
@@ -1184,8 +1193,8 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
               return (
                 <CouncilMemberCandidate
                   elected={elected}
-                  id={councilMemberdPrefix + candidate.candNo}
-                  key={councilMemberdPrefix + candidate.candNo}
+                  id={councilMemberPrefix + candidate.candNo}
+                  key={councilMemberPrefix + candidate.candNo}
                 >
                   <CouncilMemberCandidateName>
                     {candidate.name}
@@ -1201,7 +1210,7 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
       )
     } else {
       return (
-        <CouncilMemberTypeWrapper key={councilMemberdPrefix}>
+        <CouncilMemberTypeWrapper key={councilMemberPrefix}>
           <CouncilMemberArea>
             {type === 'plainIndigenous' ? '平地原住民' : '山地原住民'}
           </CouncilMemberArea>
@@ -1229,7 +1238,7 @@ const CouncilMemberInfobox = ({ level, data, isRunning, isCurrentYear }) => {
               return (
                 <CouncilMemberCandidate
                   elected={elected}
-                  key={councilMemberdPrefix + candidate.candNo}
+                  key={councilMemberPrefix + candidate.candNo}
                 >
                   <CouncilMemberCandidateName>
                     {candidate.name}

@@ -11,6 +11,7 @@
  */
 
 import { currentYear } from '../consts/electionsConfig'
+import { isRecallSubtype } from './recallValidator'
 
 /**
  * TODOs:
@@ -150,7 +151,7 @@ const legislatorInfoboxData = (
 ) => {
   // normal level 0 點擊地圖看更多
   if (
-    (subtype?.key === 'normal' || subtype?.key === 'recall-july') &&
+    (subtype?.key === 'normal' || isRecallSubtype(subtype?.key)) &&
     level === 0
   ) {
     if (infoboxType === 'mobile') {

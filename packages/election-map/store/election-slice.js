@@ -12,6 +12,7 @@ import {
   getElectionData,
   updateElectionsData,
 } from '../utils/electionsData'
+import { isRecallSubtype } from '../utils/recallValidator'
 
 /**
  * @typedef {import('../consts/electionsConfig').ElectionType } ElectionType
@@ -74,9 +75,10 @@ const defaultControl = {
       .numbers &&
     defaultElectionConfig.years[defaultElectionConfig.years.length - 1]
       .numbers[0],
-  subtype: defaultElectionConfig.subtypes?.find(
-    (subtype) => subtype.key === 'recall-july'
-  ),
+  subtype:
+    defaultElectionConfig.subtypes?.find((subtype) =>
+      isRecallSubtype(subtype.key)
+    ) || defaultElectionConfig.subtypes?.[0],
   evcScrollTo: '',
 }
 
@@ -226,13 +228,13 @@ const electionsSlice = createSlice({
       /** @type {ElectionSubtype} */
       const newSubtype = action.payload
 
-      // NOTE: Auto-adjust year for recall-july
-      if (newSubtype.key === 'recall-july') {
+      // NOTE: Auto-adjust year for recall subtypes
+      if (isRecallSubtype(newSubtype.key)) {
         const recallYear = state.config.years.find((year) =>
-          year.subType?.includes('recall-july')
+          year.subType?.some((subType) => isRecallSubtype(subType))
         )
         if (recallYear) {
-          state.control.year = recallYear // Auto-set to 2025
+          state.control.year = recallYear // Auto-set to recall year
         }
       } else {
         // NOTE: Ensure current year is valid for new subtype

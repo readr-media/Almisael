@@ -92,6 +92,11 @@ node create-legislator-constituency-map-mapping.js FolderPath=input/
 
 gcs district-with-area folder 上傳位置：[link](<https://console.cloud.google.com/storage/browser/whoareyou-gcs.readr.tw/elections-dev/district-mapping/district-with-area/legislator?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=mirrorlearning-161006&prefix=&forceOnObjectsSortingFiltering=false>)
 
+你可以在 terminal 進到 legislator/ 底下，執行指令(前提是有GCP cli)：
+```bash
+gcloud storage cp -r ./input/output/* gs://whoareyou-gcs.readr.tw/elections-dev/district-mapping/district-with-area/legislator
+```
+
 > gcs 上選舉相關的資料分成 dev 和 prod，記得兩邊都有上傳一次各年份 mapping.json
 
 #### district-with-area.json 同樣會應用在選區地圖

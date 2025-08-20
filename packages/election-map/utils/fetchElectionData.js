@@ -2,6 +2,7 @@ import widgets from '@readr-media/react-election-widgets'
 import axios from './api'
 
 import { environment, isBackup, isRunning } from '../consts/config'
+import { isRecallSubtype, getRecallMonth } from './recallValidator'
 
 const gcsBaseUrl =
   environment === 'dev'
@@ -185,7 +186,6 @@ export const fetchLegislatorSeatData = async ({
       data = await loader.loadAllLegislatorData({ year: yearKey })
       break
     case 'normal':
-    case 'recall-july':
       data = await loader.loadAreaLegislatorData({ year: yearKey, countyCode })
       break
     case 'mountainIndigenous':
@@ -200,7 +200,14 @@ export const fetchLegislatorSeatData = async ({
       data = await loader.loadPartyLegislatorData({ year: yearKey })
       break
     default:
-      console.error('fetchLegislatorSeatData without valid subtype', subtype)
+      if (isRecallSubtype(subtype)) {
+        data = await loader.loadAreaLegislatorData({
+          year: yearKey,
+          countyCode,
+        })
+      } else {
+        console.error('fetchLegislatorSeatData without valid subtype', subtype)
+      }
       break
   }
   return data
@@ -287,17 +294,17 @@ export const fetchLegislatorEvcData = async ({
   subtypeKey,
   district = '',
 }) => {
-  if (subtypeKey === 'recall-july') {
+  if (isRecallSubtype(subtypeKey)) {
     const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
     const data = await loader.loadRecallData({
       year: yearKey,
-      recallType: 'recall',
+      recallType: 'recall-august',
       district,
     })
     return data
   }
   let subtype =
-    subtypeKey === 'normal' || subtypeKey === 'recall-july'
+    subtypeKey === 'normal' || isRecallSubtype(subtypeKey)
       ? 'district'
       : subtypeKey
   const loader = new EVCDataLoader({ version: 'v2', apiUrl: gcsBaseUrl })
@@ -416,10 +423,6 @@ export const fetchLegislatorMapData = async ({
     case 'normal':
       transformedSubtype = 'normal'
       break
-    case 'recall-july':
-      // NOTE: switch for running or finish GCS resources
-      transformedSubtype = isRunning ? 'recall-july-dev' : 'recall-july'
-      break
     case 'mountainIndigenous':
       transformedSubtype = 'mountain-indigenous'
       break
@@ -429,13 +432,19 @@ export const fetchLegislatorMapData = async ({
     case 'party':
       transformedSubtype = 'party'
       break
-
     default:
+      if (isRecallSubtype(subtypeKey)) {
+        const month = getRecallMonth(subtypeKey)
+        const baseSubtype = `recall-${month}`
+        // NOTE: switch for running or finish GCS resources
+        transformedSubtype = isRunning ? `${baseSubtype}-dev` : baseSubtype
+      }
       break
   }
   const mapDataUrl = isBackup
     ? `${gcsBaseUrl}/${yearKey}_backup/${electionType}/map/${folderName}/${transformedSubtype}/${fileName}.json`
     : `${gcsBaseUrl}/${yearKey}/${electionType}/map/${folderName}/${transformedSubtype}/${fileName}.json`
+  console.log({ mapDataUrl })
   const { data } = await axios.get(mapDataUrl)
   return data
 }

@@ -13,6 +13,7 @@ import { useAppDispatch, useAppSelector } from '../hook/useRedux'
 import * as topojson from 'topojson'
 import { mapActions } from '../store/map-slice'
 import gtag from '../utils/gtag'
+import { isRecallSubtype } from '../utils/recallValidator'
 
 const SVG = styled.svg`
   use {
@@ -67,7 +68,7 @@ export const Map = ({
     let displayingTowns, displayingAreas, displayingVillages
     if (
       electionType === 'legislator' &&
-      (subtype?.key === 'normal' || subtype?.key === 'recall-july')
+      (subtype?.key === 'normal' || isRecallSubtype(subtype?.key))
     ) {
       if (districtMapping.districtWithArea[year.key]) {
         const districtWithAreaMapping =
@@ -168,7 +169,7 @@ export const Map = ({
   }, [counties, height, width])
 
   const villageHatchLayer = useMemo(() => {
-    if (electionType !== 'legislator' || subtype?.key !== 'recall-july') {
+    if (electionType !== 'legislator' || !isRecallSubtype(subtype?.key)) {
       return null
     }
 
@@ -261,7 +262,7 @@ export const Map = ({
     const countyHasData = !!electionData?.[0]?.districts?.find(
       (county) => county.county === feature.properties.COUNTYCODE
     )
-    if (subtype?.key === 'recall-july' && !countyHasData) return
+    if (isRecallSubtype(subtype?.key) && !countyHasData) return
     const { COUNTYCODE: countyCode, COUNTYNAME: countyName } =
       feature.properties
     dispatch(
@@ -327,7 +328,7 @@ export const Map = ({
   }
   const areaClicked = (feature) => {
     // NOTE: if it is running do not open area
-    if (subtype.key === 'recall-july' && isRunning) return
+    if (isRecallSubtype(subtype.key) && isRunning) return
 
     const {
       COUNTYNAME: countyName,
@@ -449,16 +450,15 @@ export const Map = ({
    */
   const getCountyColor = (mapCountyCode) => {
     if (!mapColor || !electionData[0]) {
-      if (subtype && subtype.key === 'recall-july') return '#999'
+      if (subtype && isRecallSubtype(subtype.key)) return '#999'
       return defaultColor
     }
 
     // By pass when activeCode exists and is not countyCode. (Only country level and  county level matters.)
     if (activeCode && activeCode !== mapCountyCode) {
-      if (subtype && subtype.key === 'recall-july') return '#999'
+      if (subtype && isRecallSubtype(subtype.key)) return '#999'
       return defaultColor
     }
-
     if (electionType === 'referendum') {
       const { agreeRate, disagreeRate } =
         electionData[0]?.districts?.find(
@@ -476,10 +476,11 @@ export const Map = ({
       }
     }
     if (electionType === 'legislator') {
-      if (subtype && subtype.key === 'recall-july') {
+      if (subtype && isRecallSubtype(subtype.key)) {
         const candidate = electionData[0]?.districts
           ?.find((district) => district.county === mapCountyCode)
           ?.candidates.at(0)
+        // Return consistent color for all recall subtypes when there's data structure
         if (candidate) return '#999999'
         return '#D9D9D9'
       } else {
@@ -584,7 +585,7 @@ export const Map = ({
     if (activeCode && activeCode !== countyCode) {
       return defaultColor
     }
-    if (subtype.key === 'recall-july') {
+    if (isRecallSubtype(subtype.key)) {
       const areaCandidates = electionData?.[1]?.[countyCode]?.districts?.find(
         (district) => district.county + district.area === mapAreaCode
       )?.candidates
@@ -600,7 +601,7 @@ export const Map = ({
       return color
     }
 
-    // Only normal legislator and recall-july will show area map and use this function.
+    // Only normal legislator and recall will show area map and use this function.
     if (electionType === 'legislator' && subtype.key === 'normal') {
       // Try to find the area candidates from the countyCode map data.
       const areaCandidates = electionData[1][countyCode]?.districts?.find(
@@ -633,7 +634,7 @@ export const Map = ({
       return defaultColor
     }
 
-    // since only normal legislator and recall-july will use areaCode to define color and other
+    // since only normal legislator and recall will use areaCode to define color and other
     // legislator subtype won't show any color, separate the legislator type if sufficient.
     if (electionType !== 'legislator') {
       const townCode = mapVillCode.slice(0, -3)
@@ -706,7 +707,7 @@ export const Map = ({
           return color
         }
       }
-    } else if (subtype.key === 'recall-july') {
+    } else if (isRecallSubtype(subtype.key)) {
       const villageCandidates = electionData[2][areaCode]?.districts.find(
         (district) =>
           district.county + district.town + district.vill === mapVillCode

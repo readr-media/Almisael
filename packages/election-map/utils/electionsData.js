@@ -3,7 +3,9 @@ import {
   countyMappingData,
   currentYear,
   electionsConfig,
+  getLegislatorFolderNames,
 } from '../consts/electionsConfig'
+import { isRecallSubtype } from './recallValidator'
 import {
   fetchPresidentEvcData,
   fetchPresidentMapData,
@@ -375,7 +377,19 @@ export const generateDefaultElectionsData = () => {
 
       case 'legislator':
       case 'councilMember':
-      case 'recall-july': {
+      default: {
+        // Handle any recall subtype the same as legislator/councilMember
+        if (isRecallSubtype(electionType)) {
+          const { subtypes } = election
+          singleElectionData = years.reduce((obj, { key }) => {
+            obj[key] = subtypes.reduce((obj, { key }) => {
+              obj[key] = deepCloneObj(defaultElectionData)
+              return obj
+            }, {})
+            return obj
+          }, {})
+          break
+        }
         const { subtypes } = election
         singleElectionData = years.reduce((obj, { key }) => {
           obj[key] = subtypes.reduce((obj, { key }) => {
@@ -397,8 +411,6 @@ export const generateDefaultElectionsData = () => {
         }, {})
         break
       }
-      default:
-        break
     }
     electionsData[electionType] = singleElectionData
     return electionsData
@@ -431,8 +443,7 @@ export const updateElectionsData = (
     }
 
     case 'legislator':
-    case 'councilMember':
-    case 'recall-july': {
+    case 'councilMember': {
       electionsData[electionType][yearKey][subtypeKey] = newElectionData
       break
     }
@@ -441,8 +452,13 @@ export const updateElectionsData = (
       electionsData[electionType][yearKey][numberKey] = newElectionData
       break
     }
-    default:
+    default: {
+      // Handle recall subtypes like legislator/councilMember
+      if (isRecallSubtype(electionType)) {
+        electionsData[electionType][yearKey][subtypeKey] = newElectionData
+      }
       break
+    }
   }
   return electionsData
 }
@@ -808,7 +824,6 @@ export const prepareElectionData = async (
 
         break
       case 'legislator':
-      case 'recall-july':
         switch (level) {
           case 0:
             // handle evc data
@@ -890,15 +905,13 @@ export const prepareElectionData = async (
             }
 
             // handle map data
-            //subtypes 'normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous' and 'party' show mapData in level 0
+            //subtypes 'normal', recall subtypes, 'mountainIndigenous', 'plainIndigenous' and 'party' show mapData in level 0
             if (
-              [
-                'normal',
-                'recall-july',
-                'mountainIndigenous',
-                'plainIndigenous',
-                'party',
-              ].includes(subtypeKey)
+              subtypeKey === 'normal' ||
+              isRecallSubtype(subtypeKey) ||
+              ['mountainIndigenous', 'plainIndigenous', 'party'].includes(
+                subtypeKey
+              )
             ) {
               // fetch mapData if in refetch mode or no specific map data
               if (forceRefetching || (!forceRefetching && !newMapData[level])) {
@@ -913,8 +926,7 @@ export const prepareElectionData = async (
                     electionType: apiParams.electionType,
                     yearKey,
                     subtypeKey: apiParams.subtypeKey,
-                    folderName:
-                      electionConfig.meta.map.folderNames[subtypeKey][level],
+                    folderName: getLegislatorFolderNames(subtypeKey)[level],
                     fileName: electionConfig.meta.map.fileNames[level],
                   })
                   newMapData[level] = data
@@ -934,15 +946,13 @@ export const prepareElectionData = async (
             }
 
             // handle infobox data
-            //subtypes 'normal', 'recall-july', 'mountainIndigenous', 'plainIndigenous' and 'party' show infoboxData in level 0
+            //subtypes 'normal', recall subtypes, 'mountainIndigenous', 'plainIndigenous' and 'party' show infoboxData in level 0
             if (
-              [
-                'normal',
-                'recall-july',
-                'mountainIndigenous',
-                'plainIndigenous',
-                'party',
-              ].includes(subtypeKey)
+              subtypeKey === 'normal' ||
+              isRecallSubtype(subtypeKey) ||
+              ['mountainIndigenous', 'plainIndigenous', 'party'].includes(
+                subtypeKey
+              )
             ) {
               newInfoboxData.electionData = newMapData[level]?.summary || []
               newInfoboxData.isRunning = newMapData.isRunning
@@ -957,7 +967,7 @@ export const prepareElectionData = async (
              */
             if (
               !compareMode &&
-              (subtypeKey === 'normal' || subtypeKey === 'recall-july')
+              (subtypeKey === 'normal' || isRecallSubtype(subtypeKey))
             ) {
               // fetch evcData if in refetch mode or no specific evc data
               if (
@@ -992,7 +1002,7 @@ export const prepareElectionData = async (
              */
             if (
               !compareMode &&
-              (subtypeKey === 'normal' || subtypeKey === 'recall-july')
+              (subtypeKey === 'normal' || isRecallSubtype(subtypeKey))
             ) {
               // fetch seatData if in refetch mode or no specific seat data
               if (
@@ -1037,8 +1047,7 @@ export const prepareElectionData = async (
                     electionType: apiParams.electionType,
                     yearKey,
                     subtypeKey: apiParams.subtypeKey,
-                    folderName:
-                      electionConfig.meta.map.folderNames[subtypeKey][level],
+                    folderName: getLegislatorFolderNames(subtypeKey)[level],
                     fileName: countyCode,
                   })
                   newMapData[level][countyCode] = data
@@ -1059,7 +1068,7 @@ export const prepareElectionData = async (
 
             // handle infobox data
             // subtpe 'normal' starts to show infoboxData in level 1
-            if (subtypeKey === 'normal' || subtypeKey === 'recall-july') {
+            if (subtypeKey === 'normal' || isRecallSubtype(subtypeKey)) {
               newInfoboxData.electionData =
                 newMapData[level][countyCode]?.districts || []
               newInfoboxData.isRunning = newMapData.isRunning
@@ -1084,7 +1093,7 @@ export const prepareElectionData = async (
             if (subtypeKey !== 'all') {
               // only subtype 'normal' and 'recall-july' use areaCode as level 2
               const levelCode =
-                subtypeKey === 'normal' || subtypeKey === 'recall-july'
+                subtypeKey === 'normal' || isRecallSubtype(subtypeKey)
                   ? areaCode
                   : townCode
               // fetch mapData if in refetch mode or no specific map data
@@ -1103,8 +1112,7 @@ export const prepareElectionData = async (
                     electionType: apiParams.electionType,
                     yearKey,
                     subtypeKey: apiParams.subtypeKey,
-                    folderName:
-                      electionConfig.meta.map.folderNames[subtypeKey][level],
+                    folderName: getLegislatorFolderNames(subtypeKey)[level],
                     fileName: levelCode,
                   })
                   newMapData[level][levelCode] = data
@@ -1129,7 +1137,7 @@ export const prepareElectionData = async (
               newInfoboxData.electionData =
                 newMapData[1]?.[countyCode]?.districts?.filter((district) => {
                   const levelCode =
-                    subtypeKey === 'normal' || subtypeKey === 'recall-july'
+                    subtypeKey === 'normal' || isRecallSubtype(subtypeKey)
                       ? district.county + district.area
                       : district.county + district.town
                   return levelCode === levelControl.activeCode
@@ -1143,7 +1151,7 @@ export const prepareElectionData = async (
             // subtype 'all' won't show infoboxData
             if (subtypeKey !== 'all') {
               const levelCode =
-                subtypeKey === 'normal' || subtypeKey === 'recall-july'
+                subtypeKey === 'normal' || isRecallSubtype(subtypeKey)
                   ? areaCode
                   : townCode
               newInfoboxData.electionData =

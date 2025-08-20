@@ -6,6 +6,7 @@ import { Map } from './Map'
 import { MapTooltip } from './MapTooltip'
 import { useAppSelector } from '../hook/useRedux'
 import { useGeoJsons } from '../hook/useGeoJsons'
+import { getLegislatorMapColor } from '../consts/electionsConfig'
 
 // margin-left: 368px;
 // width: ${({ compareMode }) =>
@@ -18,35 +19,66 @@ const Wrapper = styled.div`
   position: fixed;
 
   @media (min-width: 1025px) {
-    ${({ dashboardInView }) => !dashboardInView && `display: none;`}
-    ${({ compareMode }) =>
-      compareMode &&
+    ${
+      /**
+       * @param {Object} props
+       * @param {boolean} props.dashboardInView
+       */
+      (props) => (!props.dashboardInView ? `display: none;` : '')
+    }
+    ${
+      /**
+       * @param {Object} props
+       * @param {boolean} props.compareMode
+       */
+      ({ compareMode }) =>
+        compareMode
+          ? `
+        width: calc(100vw - 368px);
+        left: 368px;
       `
-      width: calc(100vw - 368px);
-      left: 368px;
-    `}
+          : ''
+    }
   }
 
   @media (max-width: 1024px) {
     position: absolute;
-    ${({ compareMode }) =>
-      compareMode &&
+    ${
+      /**
+       * @param {Object} props
+       * @param {boolean} props.compareMode
+       */
+      ({ compareMode }) =>
+        compareMode &&
+        `
+          svg:first-of-type {
+            border-bottom: 1px solid #000;
+          } 
       `
-        svg:first-of-type {
-          border-bottom: 1px solid #000;
-        } 
-    `}
+    }
   }
 `
 
 const CompareInfo = styled.div`
   position: absolute;
   top: 16px;
-  left: ${({ left }) => (left ? '0' : 'calc(50vw - 184px)')};
+  left: ${
+    /**
+     * @param {Object} props
+     * @param {boolean} props.left
+     */
+    ({ left }) => (left ? '0' : 'calc(50vw - 184px)')
+  };
   font-size: 24px;
   font-weight: 700;
   @media (max-width: 1024px) {
-    top: ${({ left }) => (left ? '74px' : 'calc(50vh - 20px + 8px)')};
+    top: ${
+      /**
+       * @param {Object} props
+       * @param {boolean} props.left
+       */
+      ({ left }) => (left ? '74px' : 'calc(50vh - 20px + 8px)')
+    };
     left: 8px;
     font-size: 12px;
   }
@@ -72,11 +104,18 @@ export const MapContainer = ({ dashboardInView }) => {
   const mapColorMeta = useAppSelector(
     (state) => state.election.config.meta.map.mapColor
   )
+  const electionType = useAppSelector(
+    (state) => state.election.config.electionType
+  )
   const isRunning = useAppSelector(
     (state) => state.election.data.mapData.isRunning
   )
   const mapColor =
-    typeof mapColorMeta === 'boolean' ? mapColorMeta : mapColorMeta[subtype.key]
+    electionType === 'legislator'
+      ? getLegislatorMapColor(subtype.key)
+      : typeof mapColorMeta === 'boolean'
+      ? mapColorMeta
+      : mapColorMeta[subtype.key]
 
   const compareElectionData = useAppSelector(
     (state) => state.election.compare.mapData

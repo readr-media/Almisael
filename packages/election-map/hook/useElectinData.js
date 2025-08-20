@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { getElectionData, defaultElectionData } from '../utils/electionsData'
-import { currentYear, refetchInervalInSecond } from '../consts/electionsConfig'
+import { currentYear, refetchIntervalInSecond } from '../consts/electionsConfig'
 import { countyMappingData } from '../consts/electionsConfig'
 import { deepCloneObj } from '../utils/deepClone'
 import { prepareElectionData } from '../utils/electionsData'
@@ -12,9 +12,12 @@ import {
 } from '../utils/fetchElectionData'
 import gtag from '../utils/gtag'
 import DataSourceResolver from '../utils/DataSourceResolver'
+import { isRecallSubtype } from '../utils/recallValidator'
 
 /**
  * @typedef {import('../consts/electionsConfig').ElectionType} ElectionType
+ * @typedef {import('../utils/electionsData').ElectionData} ElectionData
+ * @typedef {import('../utils/electionsData').InfoboxData} InfoboxData
  */
 
 /**
@@ -121,8 +124,8 @@ export const useElectionData = (showLoading) => {
         break
       }
       case 'legislator': {
-        // only normal legislator will scroll evc
-        if (subtype.key === 'normal' || subtype.key === 'recall-july') {
+        // only normal legislator and recall subtypes will scroll evc
+        if (subtype.key === 'normal' || isRecallSubtype(subtype.key)) {
           try {
             const areaCode = levelControl.areaCode
             const area = areaCode.slice(-2)
@@ -194,8 +197,8 @@ export const useElectionData = (showLoading) => {
           break
         }
         case 'legislator': {
-          // only normal legislator will handle evc callback
-          if (subtype.key === 'normal' || subtype.key === 'recall-july') {
+          // only normal legislator and recall subtypes will handle evc callback
+          if (subtype.key === 'normal' || isRecallSubtype(subtype.key)) {
             const area = evcSelectedValue.slice(1, 3)
             const newAreaCode = levelControl.countyCode + area
             const target = document.querySelector(`#first-id-${newAreaCode}`)
@@ -203,8 +206,9 @@ export const useElectionData = (showLoading) => {
               let event = new MouseEvent('click', { bubbles: true })
               target.dispatchEvent(event)
             }
-            const electionTypeLabel =
-              subtype.key === 'recall-july' ? '大罷免' : '立法委員區域'
+            const electionTypeLabel = isRecallSubtype(subtype.key)
+              ? '大罷免'
+              : '立法委員區域'
             gtag.sendGAEvent('Click', {
               project: `票數比較篩選：${year.key} / ${electionTypeLabel} / ${evcSelectedValue} / ${device}`,
             })
@@ -241,50 +245,57 @@ export const useElectionData = (showLoading) => {
       showLoading(true)
       const { filter } = compareInfo
       const refetchMode = false
-      const [
-        { value: electionDataResult },
-        { value: compareElectionDataResult },
-      ] = await Promise.allSettled([
-        prepareElectionData(
-          electionData,
-          {
-            ...electionConfig,
-            electionType: DataSourceResolver.prepareApiParams({
-              electionType: electionConfig.electionType,
-              subtypeKey: subtype?.key,
-              year: year?.key
-            }).electionType,
-          },
-          levelControl,
-          year?.key,
-          subtype?.key,
-          number?.key,
-          lastUpdate,
-          compareInfo?.compareMode,
-          refetchMode
-        ),
-        compareInfo.compareMode
-          ? prepareElectionData(
-              compareElectionData,
-              electionConfig,
-              levelControl,
-              filter?.year?.key,
-              filter?.subtype?.key,
-              filter?.number?.key,
-              lastUpdate,
-              compareInfo?.compareMode,
-              refetchMode
-            )
-          : Promise.resolve({}),
-      ])
+      const [electionDataSettled, compareElectionDataSettled] =
+        await Promise.allSettled([
+          prepareElectionData(
+            electionData,
+            {
+              ...electionConfig,
+              electionType: DataSourceResolver.prepareApiParams({
+                electionType: electionConfig.electionType,
+                subtypeKey: subtype?.key,
+                year: year?.key,
+              }).electionType,
+            },
+            levelControl,
+            year?.key,
+            subtype?.key,
+            number?.key,
+            lastUpdate,
+            compareInfo?.compareMode,
+            refetchMode
+          ),
+          compareInfo.compareMode
+            ? prepareElectionData(
+                compareElectionData,
+                electionConfig,
+                levelControl,
+                filter?.year?.key,
+                filter?.subtype?.key,
+                filter?.number?.key,
+                lastUpdate,
+                compareInfo?.compareMode,
+                refetchMode
+              )
+            : Promise.resolve({}),
+        ])
 
-      if (electionDataResult.newElectionData) {
+      const electionDataResult =
+        electionDataSettled.status === 'fulfilled'
+          ? electionDataSettled.value
+          : {}
+      const compareElectionDataResult =
+        compareElectionDataSettled.status === 'fulfilled'
+          ? compareElectionDataSettled.value
+          : {}
+
+      if (electionDataResult?.newElectionData) {
         const {
           newElectionData,
           newInfoboxData,
           newLastUpdate,
           newCurrentYearElectionState,
-        } = electionDataResult
+        } = /** @type {any} */ (electionDataResult)
 
         dispatch(electionActions.changeInfoboxData(newInfoboxData))
         dispatch(
@@ -321,13 +332,13 @@ export const useElectionData = (showLoading) => {
         }
       }
 
-      if (compareElectionDataResult.newElectionData) {
+      if (compareElectionDataResult?.newElectionData) {
         const {
           newElectionData,
           newInfoboxData,
           newLastUpdate,
           newCurrentYearElectionState,
-        } = compareElectionDataResult
+        } = /** @type {any} */ (compareElectionDataResult)
         dispatch(electionActions.changeCompareInfoboxData(newInfoboxData))
 
         dispatch(
@@ -378,7 +389,7 @@ export const useElectionData = (showLoading) => {
           const apiParams = DataSourceResolver.prepareApiParams({
             electionType: electionConfig.electionType,
             subtypeKey: subtype?.key,
-            year: year.key
+            year: year.key,
           })
           const data = await fetchDistrictWithAreaMappingData({
             electionType: apiParams.electionType,
@@ -407,7 +418,7 @@ export const useElectionData = (showLoading) => {
   useEffect(() => {
     const interval = window.setInterval(() => {
       setShouldRefetch(true)
-    }, refetchInervalInSecond * 1000)
+    }, refetchIntervalInSecond * 1000)
 
     return () => {
       window.clearInterval(interval)
@@ -445,15 +456,24 @@ export const useElectionData = (showLoading) => {
             refetchMode
           )
         : Promise.resolve({})
-      const [{ value: normalResult }, { value: compareResult }] =
+      const [normalResultSettled, compareResultSettled] =
         await Promise.allSettled([
           mapData.isRunning ? normalRefetch : Promise.resolve({}),
           compareMapData?.isRunning ? compareRefetch : Promise.resolve({}),
         ])
 
-      if (normalResult.newElectionData) {
+      const normalResult =
+        normalResultSettled.status === 'fulfilled'
+          ? normalResultSettled.value
+          : {}
+      const compareResult =
+        compareResultSettled.status === 'fulfilled'
+          ? compareResultSettled.value
+          : {}
+
+      if (normalResult?.newElectionData) {
         const { newElectionData, newLastUpdate, newCurrentYearElectionState } =
-          normalResult
+          /** @type {any} */ (normalResult)
 
         dispatch(
           electionActions.changeElectionsData({
@@ -476,9 +496,9 @@ export const useElectionData = (showLoading) => {
           }
         }
       }
-      if (compareResult.newElectionData) {
+      if (compareResult?.newElectionData) {
         const { newElectionData, newLastUpdate, newCurrentYearElectionState } =
-          compareResult
+          /** @type {any} */ (compareResult)
 
         dispatch(
           electionActions.changeElectionsData({
