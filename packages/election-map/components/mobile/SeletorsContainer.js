@@ -9,6 +9,7 @@ import { useDistrictMapping } from '../../hook/useDistrictMapping'
 import useDetectScrollDirection from '../../hook/useDetectScrollDirection'
 import { useAppSelector } from '../../hook/useRedux'
 import { useInView } from 'react-intersection-observer'
+import { isRecallSubtype } from '../../utils/recallValidator'
 /**
  * @typedef {Object} NationData
  * @property {string} name
@@ -124,7 +125,7 @@ export default function SelectorsContainer({ className = '' }) {
   const shouldShowDistrictWithAreaSelectors =
     electionsType === 'legislator' &&
     (currentElectionSubtype.key === 'normal' ||
-      currentElectionSubtype.key === 'recall-july')
+      isRecallSubtype(currentElectionSubtype.key))
   useEffect(() => {
     setShouldActivate(!inView)
   }, [inView])

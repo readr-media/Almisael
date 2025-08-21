@@ -52,7 +52,7 @@ export const Dashboard = ({
             dispatch(
               electionActions.changeSubtype({
                 name: '罷免',
-                key: 'recall-july',
+                key: 'recall-august',
                 mobileOnly: false,
               })
             )

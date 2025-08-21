@@ -8,6 +8,7 @@ import { useDistrictMapping } from '../../hook/useDistrictMapping'
 import { useAppSelector } from '../../hook/useRedux'
 import { useAppDispatch } from '../../hook/useRedux'
 import { electionActions } from '../../store/election-slice'
+import { isRecallSubtype } from '../../utils/recallValidator'
 /**
  * @typedef {Object} NationData
  * @property {string} name
@@ -91,7 +92,7 @@ export default function DistrictSelectors() {
   const isConstituency =
     electionsType === 'legislator' &&
     (currentElectionSubType.key === 'normal' ||
-      currentElectionSubType.key === 'recall-july')
+      isRecallSubtype(currentElectionSubType.key))
 
   const allTown = getAllTown(currentCountyCode)
 
@@ -161,7 +162,7 @@ export default function DistrictSelectors() {
       case 'legislator':
         if (
           currentElectionSubType.key === 'normal' ||
-          currentElectionSubType.key === 'recall-july'
+          isRecallSubtype(currentElectionSubType.key)
         ) {
           return [...districtMapping.sub]
         }
