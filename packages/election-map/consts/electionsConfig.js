@@ -401,6 +401,19 @@ export const electionsConfig = [
           },
         ],
       },
+      {
+        key: 2025,
+        subType: [],
+        numbers: [
+          {
+            year: 2025,
+            key: '21',
+            name: '公投第21案',
+            detail:
+              '您是否同意第三核能發電廠經主管機關同意確認無安全疑慮後，繼續運轉？',
+          },
+        ],
+      },
     ],
     meta: {
       evc: { wrapperTitle: '全國性公投' },

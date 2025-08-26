@@ -5,6 +5,7 @@ import { electionNamePairs } from '../utils/election'
 import { Infobox } from './infobox/Infobox'
 import { useAppSelector } from '../hook/useRedux'
 import gtag from '../utils/gtag'
+import { isRecallSubtype } from '../utils/recallValidator'
 
 const Wrppaer = styled.div`
   width: 320px;
@@ -77,6 +78,7 @@ export const InfoboxPanel = ({
           subtype={subtype}
           isCurrentYear={year.key === currentYear}
           year={year.key}
+          isRecall={subtype?.key ? isRecallSubtype(subtype.key) : false}
         />
       </InfoboxWrapper>
     </Wrppaer>

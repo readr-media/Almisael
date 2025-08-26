@@ -18,7 +18,14 @@ import { imageLoader } from '../../loader'
 const InfoboxWrapper = styled.div`
   font-family: 'Noto Sans TC', sans-serif;
   padding: 16px 22px;
-  height: 626px;
+  height: ${
+    /**
+     *
+     * @param {Object} props - Component props
+     * @param {boolean} props.isRecall - Flag to determine the height of the infobox
+     */
+    ({ isRecall }) => (isRecall ? '626px' : '202px')
+  };
   overflow: auto;
 
   @media (max-width: 1024px) {
@@ -1377,11 +1384,12 @@ const ReferendumInfobox = ({ data, isRunning, isCurrentYear }) => {
  * @param {Object} props
  * @param {import('../../utils/electionsData').InfoboxData} props.data
  * @param {boolean} props.isCurrentYear
+ * @param {boolean} props.isRecall
  * @param {number} props.year
  * @param {import('../../consts/electionsConfig').ElectionSubtype} props.subtype
  * @returns {JSX.Element}
  */
-export const Infobox = ({ data, isCurrentYear, year, subtype }) => {
+export const Infobox = ({ data, isCurrentYear, year, subtype, isRecall }) => {
   const { electionType, level, electionData, isRunning, isStarted } = data
   let infobox
 
@@ -1486,5 +1494,5 @@ export const Infobox = ({ data, isCurrentYear, year, subtype }) => {
       break
   }
 
-  return <InfoboxWrapper>{infobox}</InfoboxWrapper>
+  return <InfoboxWrapper isRecall={isRecall}>{infobox}</InfoboxWrapper>
 }
