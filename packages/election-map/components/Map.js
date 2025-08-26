@@ -168,6 +168,88 @@ export const Map = ({
     return d3.geoPath(projection)
   }, [counties, height, width])
 
+  const checkHatchCondition = (candidates) => {
+    if (!candidates || !candidates.length) return false
+    const { agreeRate, disagreeRate, ytpRate } = candidates[0]
+    const threshold = 25
+    const agree = agreeRate > disagreeRate
+    return ytpRate < threshold && agree
+  }
+
+  const countyHatchLayer = useMemo(() => {
+    if (electionType !== 'legislator' || !isRecallSubtype(subtype?.key)) {
+      return null
+    }
+
+    const countiesToHatch = counties?.features?.filter((feature) => {
+      const mapCountyCode = feature.properties.COUNTYCODE
+      const countyData = electionData[0]?.districts?.find(
+        (district) => district.county === mapCountyCode
+      )?.candidates
+
+      return checkHatchCondition(countyData)
+    })
+
+    return countiesToHatch?.map((feature) => (
+      <path
+        key={`${feature.properties.COUNTYCODE}-hatch`}
+        d={path(feature)}
+        fill="url(#hatch-pattern)"
+        pointerEvents="none"
+      />
+    ))
+  }, [electionType, subtype?.key, counties, electionData, path])
+
+  const townHatchLayer = useMemo(() => {
+    if (electionType !== 'legislator' || !isRecallSubtype(subtype?.key)) {
+      return null
+    }
+
+    const townsToHatch = displayingTowns?.features?.filter((feature) => {
+      const mapTownCode = feature.properties.TOWNCODE
+      const countyCode = mapTownCode.slice(0, -3)
+      const townData = electionData[1]?.[countyCode]?.districts?.find(
+        (district) => district.county + district.town === mapTownCode
+      )?.candidates
+
+      return checkHatchCondition(townData)
+    })
+
+    return townsToHatch?.map((feature) => (
+      <path
+        key={`${feature.properties.TOWNCODE}-hatch`}
+        d={path(feature)}
+        fill="url(#hatch-pattern)"
+        pointerEvents="none"
+      />
+    ))
+  }, [electionType, subtype?.key, displayingTowns, electionData, path])
+
+  const areaHatchLayer = useMemo(() => {
+    if (electionType !== 'legislator' || !isRecallSubtype(subtype?.key)) {
+      return null
+    }
+
+    const areasToHatch = displayingAreas?.features?.filter((feature) => {
+      const mapAreaCode = feature.properties.AREACODE
+      const countyCode = mapAreaCode.slice(0, -2)
+      const areaData = electionData[1]?.[countyCode]?.districts?.find(
+        (district) => district.county + district.area === mapAreaCode
+      )?.candidates
+
+      return checkHatchCondition(areaData)
+    })
+
+    return areasToHatch?.map((feature) => (
+      <path
+        key={`${feature.properties.AREACODE}-hatch`}
+        d={path(feature)}
+        fill="url(#hatch-pattern)"
+        pointerEvents="none"
+      />
+    ))
+  }, [electionType, subtype?.key, displayingAreas, electionData, path])
+
   const villageHatchLayer = useMemo(() => {
     if (electionType !== 'legislator' || !isRecallSubtype(subtype?.key)) {
       return null
@@ -178,20 +260,20 @@ export const Map = ({
 
       // At level 3 (village level), data is accessed via townCode
       // At level 2 (area level), data is accessed via areaCode
-      const dataKey = levelControl.level === 3 ? townCode : areaCode
-      const villageCandidates = electionData[2]?.[dataKey]?.districts.find(
+      // But if townCode is empty, fallback to areaCode even at level 3
+      const dataKey = areaCode
+
+      // Add null check for dataKey
+      if (!dataKey || !electionData[2]?.[dataKey]) {
+        return false
+      }
+
+      const villageCandidates = electionData[2][dataKey].districts?.find(
         (district) =>
           district.county + district.town + district.vill === mapVillCode
       )?.candidates
 
-      if (villageCandidates && villageCandidates.length) {
-        const { agreeRate, disagreeRate, ytpRate } = villageCandidates[0]
-        const threshold = 25
-        const agree = agreeRate > disagreeRate
-        const isRecallPassed = ytpRate < threshold && agree
-        return isRecallPassed
-      }
-      return false
+      return checkHatchCondition(villageCandidates)
     })
 
     return villagesToHatch?.map((feature) => {
@@ -212,7 +294,6 @@ export const Map = ({
     areaCode,
     townCode,
     levelControl.level,
-    activeCode,
     path,
   ])
 
@@ -708,10 +789,19 @@ export const Map = ({
         }
       }
     } else if (isRecallSubtype(subtype.key)) {
-      const villageCandidates = electionData[2][areaCode]?.districts.find(
+      // Use same data access logic as villageHatchLayer
+      // But if townCode is empty, fallback to areaCode even at level 3
+      const dataKey = areaCode
+
+      if (!dataKey || !electionData[2]?.[dataKey]) {
+        return '#D9D9D9'
+      }
+
+      const villageCandidates = electionData[2][dataKey].districts?.find(
         (district) =>
           district.county + district.town + district.vill === mapVillCode
       )?.candidates
+
       if (villageCandidates && villageCandidates.length) {
         const { agreeRate, disagreeRate } = villageCandidates[0]
         if (agreeRate === 0 && disagreeRate === 0) return defaultColor
@@ -806,6 +896,8 @@ export const Map = ({
               }
             />
           ))}
+
+          {countyHatchLayer}
         </g>
         <g id={`${id}-towns`}>
           {displayingTowns?.features?.map((feature) => (
@@ -854,6 +946,8 @@ export const Map = ({
               }
             />
           ))}
+
+          {townHatchLayer}
         </g>
         <g id={`${id}-areas`}>
           {displayingAreas?.features?.map((feature) => (
@@ -901,7 +995,10 @@ export const Map = ({
               }
             />
           ))}
+
+          {areaHatchLayer}
         </g>
+
         <g id={`${id}-villages`}>
           {displayingVillages?.features?.map((feature) => (
             <path
@@ -949,8 +1046,6 @@ export const Map = ({
             />
           ))}
 
-          {villageHatchLayer}
-
           {activeCode && (
             // duplicate active map on above
             <use
@@ -959,6 +1054,7 @@ export const Map = ({
               stroke="white"
             />
           )}
+          {villageHatchLayer}
         </g>
       </g>
     </SVG>
