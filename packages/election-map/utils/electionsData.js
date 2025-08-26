@@ -488,8 +488,7 @@ export const getElectionData = (
     }
 
     case 'legislator':
-    case 'councilMember':
-    case 'recall-july': {
+    case 'councilMember': {
       electionData = electionsData[electionType][yearKey][subtypeKey]
       break
     }
@@ -499,6 +498,10 @@ export const getElectionData = (
       break
     }
     default:
+      // Handle recall subtypes as legislator data
+      if (isRecallSubtype(electionType)) {
+        electionData = electionsData['legislator'][yearKey][electionType]
+      }
       break
   }
 

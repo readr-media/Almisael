@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { getInfoBoxData } from '../../utils/infoboxData'
 import gtag from '../../utils/gtag'
 import { ThresholdBarChart } from '../ThresholdBarChart'
+import { isRecallSubtype } from '../../utils/recallValidator'
 /**
  * @typedef {import('../../utils/electionsData').InfoboxData} InfoboxData
  * @typedef {import('../../consts/electionsConfig').ElectionType} ElectionType
@@ -760,7 +761,7 @@ export default function InfoBox({ infoboxData, year }) {
                       </div>
                       <CandidatesInfoWrapper maxHeight={'100%'}>
                         {orderedCandidates.map((candidate) => {
-                          if (currentElectionSubType.key === 'recall-july')
+                          if (isRecallSubtype(currentElectionSubType.key))
                             return getRecallInfoboxItemJsx(
                               candidate,
                               level,
@@ -823,7 +824,7 @@ export default function InfoBox({ infoboxData, year }) {
             </div>
             <CandidatesInfoWrapper maxHeight={maxHeight}>
               {orderedCandidates.map((candidate) => {
-                if (currentElectionSubType.key === 'recall-july')
+                if (isRecallSubtype(currentElectionSubType.key))
                   return getRecallInfoboxItemJsx(candidate)
                 return getInfoboxItemJsx(candidate)
               })}

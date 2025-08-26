@@ -8,6 +8,7 @@ import { useDistrictMapping } from '../../hook/useDistrictMapping'
 import { useAppSelector } from '../../hook/useRedux'
 import { useAppDispatch } from '../../hook/useRedux'
 import { electionActions } from '../../store/election-slice'
+import { isRecallSubtype } from '../../utils/recallValidator'
 /**
  * @typedef {Object} NationData
  * @property {string} name
@@ -41,6 +42,22 @@ import { electionActions } from '../../store/election-slice'
 
 /**
  * @typedef {'nation' | 'county' | 'town' | 'village' | 'constituency'} DistrictType
+ */
+
+/**
+ * District selector component that provides cascading dropdown functionality for location selection.
+ * For recall election subtypes, the dropdowns are filtered to show only districts with actual voting data.
+ *
+ * The component supports three levels of selection:
+ * 1. County/City level (optionsForFirstDistrictSelector) - Shows counties with voting data for recall elections
+ * 2. Town/Area level (optionsForSecondDistrictSelector) - Shows towns with voting data for recall elections
+ * 3. Village level (optionsForThirdDistrictSelector) - Shows villages with voting data for recall elections
+ *
+ * For non-recall election subtypes, all available options are shown without filtering.
+ *
+ * @component
+ * @param {Object} props - Component props
+ * @returns {JSX.Element} District selector component with three cascading dropdowns
  */
 
 const Wrapper = styled.div`
@@ -90,11 +107,11 @@ export default function DistrictWithAreaSelectors({}) {
   const year = useAppSelector((state) => state.election.control.year)
 
   const electionData = useAppSelector((state) => state.election.data.mapData)
-
+  console.log({ electionData })
   const isConstituency =
     electionsType === 'legislator' &&
     (currentElectionSubType.key === 'normal' ||
-      currentElectionSubType.key === 'recall-july')
+      isRecallSubtype(currentElectionSubType.key))
 
   const allTown = getAllTown(currentCountyCode)
   const allVillage = getAllVillage(currentAreaCode)
@@ -106,8 +123,15 @@ export default function DistrictWithAreaSelectors({}) {
     if (!code) {
       return []
     }
+    const availableTownCode = electionData[1][
+      currentCountyCode
+    ]?.districts?.map((item) => `${item.county}${item.area}`)
 
-    return allCounty?.find((item) => item?.code === code)?.sub ?? []
+    return (
+      allCounty
+        ?.find((item) => item?.code === code)
+        ?.sub.filter((sub) => availableTownCode?.includes(sub.code)) ?? []
+    )
   }
 
   function getAllVillage(code) {
@@ -153,34 +177,167 @@ export default function DistrictWithAreaSelectors({}) {
   }
 
   const optionsForFirstDistrictSelector = useMemo(() => {
-    if (currentElectionSubType.key === 'recall-july') {
-      const recallCountyCodes = electionData[0]?.districts.map(
-        (district) => district.county
-      )
+    if (isRecallSubtype(currentElectionSubType.key)) {
+      const recallCountyCodes = electionData[0]?.districts
+        .filter(
+          (district) =>
+            district &&
+            district.candidates &&
+            Array.isArray(district.candidates) &&
+            district.candidates.length > 0
+        )
+        .map((district) => district.county)
       return allCounty.filter((county) => {
         return recallCountyCodes?.includes(county?.code)
       })
     }
     return allCounty
   }, [allCounty, currentElectionSubType.key, electionData])
+  /**
+   * Generates options for the second district selector (town/area level).
+   * For recall election subtypes, filters to show only towns with actual voting data.
+   *
+   * Data source: electionData[0].districts (country level election data)
+   * Filtering criteria: district.county === currentCountyCode && district.area exists
+   *
+   * @type {Array<{type: string, code: string, name: string}>}
+   */
   const optionsForSecondDistrictSelector = useMemo(() => {
     if (currentCountyCode) {
+      let filteredTowns = allTown
+      if (isRecallSubtype(currentElectionSubType.key)) {
+        try {
+          // Validate election data exists and has proper structure
+          if (
+            !electionData ||
+            !Array.isArray(electionData) ||
+            !electionData[0]?.districts
+          ) {
+            console.warn(
+              'DistrictWithAreaSelectors: Missing or invalid election data for second district filtering'
+            )
+            return [
+              { type: 'county', code: currentCountyCode, name: '-' },
+              ...allTown,
+            ]
+          }
+
+          const recallAreaCodes = electionData[0].districts
+            .filter(
+              (district) =>
+                district &&
+                district.county === currentCountyCode &&
+                district.area &&
+                district.candidates &&
+                Array.isArray(district.candidates) &&
+                district.candidates.length > 0
+            )
+            .map((district) => district.area)
+            .filter(Boolean) // Remove any undefined/null values
+
+          if (recallAreaCodes && recallAreaCodes.length > 0) {
+            filteredTowns = allTown.filter(
+              (town) => town?.code && recallAreaCodes.includes(town.code)
+            )
+          } else {
+            console.warn(
+              `DistrictWithAreaSelectors: No recall area codes found for county ${currentCountyCode}`
+            )
+          }
+        } catch (error) {
+          console.error(
+            'DistrictWithAreaSelectors: Error filtering second district options:',
+            error
+          )
+          // Fallback to showing all towns on error
+          filteredTowns = allTown
+        }
+      }
+
       return [
         { type: 'county', code: currentCountyCode, name: '-' },
-        ...allTown,
+        ...filteredTowns,
       ]
     }
     return [...allTown]
-  }, [allTown, currentCountyCode])
+  }, [allTown, currentCountyCode, currentElectionSubType.key, electionData])
+  /**
+   * Generates options for the third district selector (village level).
+   * For recall election subtypes, filters to show only villages with actual voting data.
+   *
+   * Data source: electionData[2][currentAreaCode].districts (constituency level election data)
+   * Filtering criteria: district.county === currentCountyCode && district.area === currentAreaCode && district.vill exists
+   *
+   * @type {Array<{type: string, code: string, name: string}>}
+   */
   const optionsForThirdDistrictSelector = useMemo(() => {
     if (currentAreaCode) {
+      let filteredVillages = allVillage
+
+      if (isRecallSubtype(currentElectionSubType.key)) {
+        try {
+          // Validate election data exists and has proper structure for village level
+          if (
+            !electionData ||
+            !electionData[2] ||
+            !electionData[2][currentAreaCode]?.districts
+          ) {
+            console.warn(
+              'DistrictWithAreaSelectors: Missing or invalid election data for third district filtering'
+            )
+            return [
+              { type: 'constituency', code: currentAreaCode, name: '-' },
+              ...allVillage,
+            ]
+          }
+
+          const recallVillageCodes = electionData[2][currentAreaCode].districts
+            .filter(
+              (district) =>
+                district &&
+                district.county === currentCountyCode &&
+                district.area === currentAreaCode &&
+                district.vill &&
+                district.candidates &&
+                Array.isArray(district.candidates) &&
+                district.candidates.length > 0
+            )
+            .map((district) => district.vill)
+            .filter(Boolean) // Remove any undefined/null values
+
+          if (recallVillageCodes && recallVillageCodes.length > 0) {
+            filteredVillages = allVillage.filter(
+              (village) =>
+                village?.code && recallVillageCodes.includes(village.code)
+            )
+          } else {
+            console.warn(
+              `DistrictWithAreaSelectors: No recall village codes found for area ${currentAreaCode}`
+            )
+          }
+        } catch (error) {
+          console.error(
+            'DistrictWithAreaSelectors: Error filtering third district options:',
+            error
+          )
+          // Fallback to showing all villages on error
+          filteredVillages = allVillage
+        }
+      }
+
       return [
         { type: 'constituency', code: currentAreaCode, name: '-' },
-        ...allVillage,
+        ...filteredVillages,
       ]
     }
     return [...allVillage]
-  }, [currentAreaCode])
+  }, [
+    allVillage,
+    currentAreaCode,
+    currentCountyCode,
+    currentElectionSubType.key,
+    electionData,
+  ])
 
   useEffect(() => {
     if (!hasDistrictMapping) {
@@ -252,9 +409,9 @@ export default function DistrictWithAreaSelectors({}) {
     hasDistrictMapping,
   ])
   useEffect(() => {
-    if (currentElectionSubType.key === 'recall-july') {
+    if (isRecallSubtype(currentElectionSubType.key)) {
       setCurrentDistrictType('county')
-      setCurrentCountyCode('63000')
+      setCurrentCountyCode('65000')
     }
   }, [])
   useEffect(() => {

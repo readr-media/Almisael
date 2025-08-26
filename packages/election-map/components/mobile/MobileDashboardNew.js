@@ -10,6 +10,7 @@ import { useAppDispatch } from '../../hook/useRedux'
 import { electionActions } from '../../store/election-slice'
 import SelectorContainer from './SeletorsContainer'
 import { electionMapColor } from '../../consts/colors'
+import { isRecallSubtype } from '../../utils/recallValidator'
 /**
  * @typedef {Object} NationData
  * @property {string} name
@@ -139,7 +140,7 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
   ) : (
     <>
       {electionsType !== 'referendum' &&
-        currentSubType?.key !== 'recall-july' &&
+        !isRecallSubtype(currentSubType?.key) &&
         filteredYears.map((y) => (
           <TopButton
             isSelected={year.key === y.key}
@@ -151,7 +152,7 @@ export const MobileDashboardNew = ({ onEvcSelected }) => {
             {y.key}
           </TopButton>
         ))}
-      {currentSubType?.key !== 'recall-july' && (
+      {!isRecallSubtype(currentSubType?.key) && (
         <TopButton onClick={() => setShouldOpenYearComparisonMenuBar(true)}>
           比較
         </TopButton>

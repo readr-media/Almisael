@@ -10,6 +10,7 @@ import { useAppSelector } from '../hook/useRedux'
 import ElectionSelector from './mobile/ElectionSelector'
 import { electionNamePairs } from '../utils/election'
 import { useMemo } from 'react'
+import { isRecallSubtype } from '../utils/recallValidator'
 
 const Wrapper = styled.div`
   position: relative;
@@ -104,7 +105,7 @@ export const Panels = ({ onEvcSelected }) => {
     }
     return electionConfig.subtypes.filter((subtype) => !subtype.mobileOnly)
   }, [electionConfig.subtypes])
-
+  console.log('isRecallSubtype(subtype?.key)', isRecallSubtype(subtype?.key))
   return (
     <Wrapper>
       <LeftPanelWrapper>
@@ -130,8 +131,8 @@ export const Panels = ({ onEvcSelected }) => {
         )}
         {!compareMode &&
           electionConfig.meta.seat &&
-          subtype?.key !== 'recall-july' && <SeatsPanel />}
-        {!number && subtype?.key !== 'recall-july' && (
+          !isRecallSubtype(subtype?.key) && <SeatsPanel />}
+        {!number && !isRecallSubtype(subtype?.key) && (
           <StyledYearSelect key={electionType + year.key} />
         )}
         <PlaceHolder electionType={electionType} compareMode={compareMode} />

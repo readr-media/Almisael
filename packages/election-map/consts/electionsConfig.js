@@ -98,8 +98,8 @@ export const electionsConfig = [
       { name: '平地原住民', key: 'plainIndigenous', mobileOnly: false },
       { name: '不分區', key: 'party', mobileOnly: false },
       { name: '全國', key: 'all', mobileOnly: true },
-      { name: '七月罷免', key: 'recall-july', mobileOnly: false },
       { name: '八月罷免', key: 'recall-august', mobileOnly: false },
+      { name: '七月罷免', key: 'recall-july', mobileOnly: false },
     ],
     years: [
       {
@@ -142,7 +142,7 @@ export const electionsConfig = [
           'all',
         ],
       },
-      { key: 2025, subType: ['recall-july', 'recall-august'] },
+      { key: 2025, subType: ['recall-august', 'recall-july'] },
     ],
     meta: {
       evc: {

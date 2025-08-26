@@ -2,6 +2,9 @@ import styled from 'styled-components'
 import { getInfoBoxData } from '../../utils/infoboxData'
 import { ThresholdBarChart } from '../ThresholdBarChart'
 import { isRecallSubtype } from '../../utils/recallValidator'
+import IconStripe from '../../public/images/icon-stripe.png'
+import Image from 'next/image'
+import { imageLoader } from '../../loader'
 /**
  *  Inside infobox data, a summary object or district object may have a note object
  *  which is special description to the current infobox data.
@@ -527,13 +530,15 @@ const NormalLegislatorInfobox = ({ level, data, isRunning, isCurrentYear }) => {
 }
 
 /**
+ * RecallLegislatorInfobox component for displaying recall election data.
+ * Shows StripeHint ("斜線表未過1/4門檻") at all levels when election has started but is not running.
  *
  * @param {Object} props
- * @param {number} props.level
- * @param {Object} props.data
- * @param {boolean} props.isRunning
- * @param {boolean} props.isStarted
- * @param {boolean} props.isCurrentYear
+ * @param {number} props.level - Display level (1: county, 2+: constituency/village)
+ * @param {Object} props.data - Election data containing districts and candidates
+ * @param {boolean} props.isRunning - Whether vote counting is currently in progress
+ * @param {boolean} props.isStarted - Whether the election has started
+ * @param {boolean} props.isCurrentYear - Whether this is the current year's election
  * @returns {JSX.Element}
  */
 const RecallLegislatorInfobox = ({
@@ -636,7 +641,7 @@ const RecallLegislatorInfobox = ({
             )
             return (
               <NormalLegislatorDistrict key={legislatorPrefix}>
-                {level === 1 && isStarted && !isRunning && (
+                {isStarted && !isRunning && (
                   <div
                     style={{
                       display: 'flex',
@@ -649,9 +654,10 @@ const RecallLegislatorInfobox = ({
                       開票結束
                     </EndVotedText>
                     <StripeHintWrapper>
-                      <img
-                        src="/images/icon-stripe.png"
+                      <Image
+                        src={IconStripe}
                         alt="icon stripe"
+                        loader={imageLoader}
                         width={12}
                         height={12}
                         style={{ marginRight: '8px' }}
@@ -666,12 +672,6 @@ const RecallLegislatorInfobox = ({
                 <NormalLegislatorTitle>
                   投票率 {profRate}%
                 </NormalLegislatorTitle>
-                {level !== 1 && isStarted && !isRunning && (
-                  <EndVotedText>
-                    <GrayBoxIndicator />
-                    開票結束
-                  </EndVotedText>
-                )}
                 {candidateComps}
               </NormalLegislatorDistrict>
             )

@@ -22,7 +22,13 @@ const Slider = styled.input`
   background: #b9b9b9;
   border-radius: 5px;
   outline: none;
-  ${({ compare }) => compare && `visibility: hidden;`}
+  ${
+    /**
+     * @param {Object} props
+     * @param {boolean} [props.compare]
+     */
+    ({ compare }) => (compare ? `visibility: hidden;` : '')
+  }
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -64,7 +70,13 @@ const Spot = styled.span`
   align-items: center;
 
   &:before {
-    display: ${({ selected }) => (selected ? 'block' : 'none')};
+    display: ${
+      /**
+       * @param {Object} props
+       * @param {boolean} [props.selected]
+       */
+      ({ selected }) => (selected ? 'block' : 'none')
+    };
     content: '';
     width: 12px;
     height: 12px;
@@ -83,42 +95,52 @@ const Spot = styled.span`
     top: 23px;
   }
 
-  ${({ compare, cand1, cand2 }) => {
-    if (compare) {
-      return `
-        ${
-          !cand1 &&
-          `
-            border: 1px solid #cdcdcd;
-            &:after {
-              color: #cdcdcd;
-            }
-            &:hover {
+  ${
+    /**
+     * @param {Object} props
+     * @param {boolean} [props.compare]
+     * @param {boolean} [props.cand1]
+     * @param {boolean} [props.cand2]
+     */
+    ({ compare, cand1, cand2 }) => {
+      if (compare) {
+        return `
+          ${
+            !cand1
+              ? `
+              border: 1px solid #cdcdcd;
+              &:after {
+                color: #cdcdcd;
+              }
+              &:hover {
+                border: 1px solid #000;
+                &:before {
+                  background-color: #000;
+                }
+                &:after {
+                  color: #000;
+                }  
+              }
+            `
+              : ''
+          }
+          ${
+            cand2
+              ? `
               border: 1px solid #000;
               &:before {
                 background-color: #000;
               }
               &:after {
                 color: #000;
-              }  
-            }
-          `
-        }
-        ${
-          cand2 &&
-          `
-            border: 1px solid #000;
-            &:before {
-              background-color: #000;
-            }
-            &:after {
-              color: #000;
-            }
-          `
-        }
-      `
+              }
+            `
+              : ''
+          }
+        `
+      }
     }
-  }}
+  }
 `
 
 const ButtonWrapper = styled.div`
@@ -126,7 +148,7 @@ const ButtonWrapper = styled.div`
 `
 const ActionButton = styled.button`
   width: 80px;
-  height 32px;
+  height: 32px;
   border-radius: 12px;
   border: 1px solid #000;
   background-color: #ffc7bb;
