@@ -15,11 +15,6 @@ switch (releaseTarget) {
   case 'mirrorTV':
     execCommand = `gsutil -m cp -r ./out/${releaseTarget}/* gs://static-mnews-tw-prod/projects/${projectName}`
     break
-  case 'readr':
-    execCommand = `gsutil -m cp -r ./out/${releaseTarget}/* gs://readr-coverage/project/3/${projectName}`
-    break
-  case 'dev-readr':
-    execCommand = `gsutil -m cp -r ./out/${releaseTarget}/* gs://readr-coverage/project/3/${projectName}`
   case 'dev-mirrorDaily':
     execCommand = `gsutil -m cp -r ./out/${releaseTarget}/* gs://statics-dev.mirrordaily.news/projects/${projectName}`
   case 'mirrorDaily':

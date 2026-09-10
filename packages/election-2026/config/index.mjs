@@ -1,4 +1,4 @@
-// 'mirrorMedia' | 'mirrorTV' | 'readr'
+// 'mirrorMedia' | 'mirrorTV' |
 const releaseTarget = process.env.NEXT_PUBLIC_RELEASE_TARGET
 const projectName = 'election2026-homepage'
 let assetPrefixPath = ''
@@ -24,11 +24,6 @@ const COLOR_SETTING_MIRROR = {
 const COLOR_SETTING_DAILY = {
   vectorLeft: 'daily-left',
   vectorRight: 'daily-right',
-}
-
-const COLOR_SETTING_READR = {
-  vectorLeft: 'readr-left',
-  vectorRight: 'readr-right',
 }
 
 let color = COLOR_SETTING_TV
@@ -121,36 +116,6 @@ switch (releaseTarget) {
     }
     ga4Id = 'G-SZR4JRJ0G2'
     color = COLOR_SETTING_TV
-    break
-
-  case 'dev-readr':
-    assetPrefixPath = `https://www.readr.tw/project/3/${projectName}`
-    cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
-    mnewsJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
-    staticFileDestination = `https://www.readr.tw/project/3/${projectName}`
-    breakpoint = {
-      sm: '768px',
-      md: '1200px',
-    }
-    ga4Id = 'G-YDKYSDG3RL'
-    color = COLOR_SETTING_READR
-    break
-
-  case 'readr':
-    assetPrefixPath = `https://www.readr.tw/project/3/${projectName}`
-    cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections/2025/legislator/iframe/recall-july/iframe.json'
-    mnewsJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
-    staticFileDestination = `https://www.readr.tw/project/3/${projectName}`
-    breakpoint = {
-      sm: '768px',
-      md: '1200px',
-    }
-    ga4Id = 'G-4Z12TPZTMB'
-    color = COLOR_SETTING_READR
     break
 
   default:
