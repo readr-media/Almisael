@@ -1,4 +1,4 @@
-// 'mirrorMedia' | 'mirrorTV' |
+// 'mirrorMedia' | 'mirrorTV' | 'mirrorDaily'
 const releaseTarget = process.env.NEXT_PUBLIC_RELEASE_TARGET
 const projectName = 'election2026-homepage'
 let assetPrefixPath = ''
