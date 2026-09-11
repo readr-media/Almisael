@@ -17,6 +17,7 @@ switch (releaseTarget) {
     break
   case 'dev-mirrorDaily':
     execCommand = `gsutil -m cp -r ./out/${releaseTarget}/* gs://statics-dev.mirrordaily.news/projects/${projectName}`
+    break
   case 'mirrorDaily':
     execCommand = `gsutil -m cp -r ./out/${releaseTarget}/* gs://statics-prod.mirrordaily.news/projects/${projectName}`
     break
