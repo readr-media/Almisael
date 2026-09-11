@@ -37,9 +37,18 @@ const fetcher = (url) => {
 
 const Wrapper = styled.section`
   position: relative;
-  padding: 0 4px;
+  width: 320px;
+  padding: 0 16px;
+  background-color: #f4f5f6;
+
   @media (min-width: ${breakpoint.sm}) {
-    padding: 0 12px;
+    width: 720px;
+    padding: 0 24px;
+  }
+
+  @media (min-width: ${breakpoint.md}) {
+    width: 970px;
+    padding: 0 24px;
   }
 `
 const ArrowContainer = styled.div`
