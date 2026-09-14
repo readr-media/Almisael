@@ -51,6 +51,15 @@ const Wrapper = styled.section`
     padding: 0 24px;
   }
 `
+const Title = styled.h1`
+  padding-top: 16px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: #1b3f5c;
+`
+
 const ArrowContainer = styled.div`
   display: flex;
   column-gap: 12px;
@@ -267,6 +276,7 @@ export default function Home() {
 
   return (
     <Wrapper>
+      <Title>22縣市長開票進度</Title>
       <VoteCardContainer>
         {current.map((item) => (
           <VoteCard key={item.name}>
