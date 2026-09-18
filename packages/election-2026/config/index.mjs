@@ -2,8 +2,11 @@
 const releaseTarget = process.env.NEXT_PUBLIC_RELEASE_TARGET
 const projectName = 'election2026-homepage'
 let assetPrefixPath = ''
-let mnewsJsonEndpoint = ''
-let cecJsonEndpoint = ''
+let mayorJsonEndpoint = ''
+const DEV_MAYOR_JSON_ENDPOINT =
+  'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
+const PROD_MAYOR_JSON_ENDPOINT =
+  'https://whoareyou-gcs.readr.tw/elections/2025/legislator/iframe/recall-july/iframe.json'
 let staticFileDestination = ''
 let breakpoint = {
   sm: '768px',
@@ -30,10 +33,7 @@ let color = COLOR_SETTING_TV
 switch (releaseTarget) {
   case 'dev-mirrorMedia':
     assetPrefixPath = `https://dev.mirrormedia.mg/projects/${projectName}`
-    cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
-    mnewsJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
+    mayorJsonEndpoint = DEV_MAYOR_JSON_ENDPOINT
     staticFileDestination = `https://dev.mirrormedia.mg/projects/${projectName}`
     breakpoint = {
       sm: '768px',
@@ -45,10 +45,7 @@ switch (releaseTarget) {
 
   case 'mirrorMedia':
     assetPrefixPath = `https://www.mirrormedia.mg/projects/${projectName}`
-    cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections/2025/legislator/iframe/recall-july/iframe.json'
-    mnewsJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
+    mayorJsonEndpoint = PROD_MAYOR_JSON_ENDPOINT
     staticFileDestination = `https://www.mirrormedia.mg/projects/${projectName}`
     breakpoint = {
       sm: '768px',
@@ -60,10 +57,7 @@ switch (releaseTarget) {
 
   case 'dev-mirrorDaily':
     assetPrefixPath = `https://dev.mirrordaily.news/projects/${projectName}`
-    cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
-    mnewsJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
+    mayorJsonEndpoint = DEV_MAYOR_JSON_ENDPOINT
     staticFileDestination = `https://dev.mirrordaily.news/projects/${projectName}`
     breakpoint = {
       sm: '768px',
@@ -75,10 +69,7 @@ switch (releaseTarget) {
 
   case 'mirrorDaily':
     assetPrefixPath = `https://www.mirrordaily.news/projects/${projectName}`
-    cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections/2025/legislator/iframe/recall-july/iframe.json'
-    mnewsJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
+    mayorJsonEndpoint = PROD_MAYOR_JSON_ENDPOINT
     staticFileDestination = `https://www.mirrordaily.news/projects/${projectName}`
     breakpoint = {
       sm: '768px',
@@ -90,10 +81,7 @@ switch (releaseTarget) {
 
   case 'dev-mirrorTV':
     assetPrefixPath = `https://dev.mnews.tw/projects/${projectName}`
-    cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
-    mnewsJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
+    mayorJsonEndpoint = DEV_MAYOR_JSON_ENDPOINT
     staticFileDestination = `https://dev.mnews.tw/projects/${projectName}`
     breakpoint = {
       sm: '768px',
@@ -105,10 +93,7 @@ switch (releaseTarget) {
 
   case 'mirrorTV':
     assetPrefixPath = `https://www.mnews.tw/projects/${projectName}`
-    cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections/2025/legislator/iframe/recall-july/iframe.json'
-    mnewsJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
+    mayorJsonEndpoint = PROD_MAYOR_JSON_ENDPOINT
     staticFileDestination = `https://www.mnews.tw/projects/${projectName}`
     breakpoint = {
       sm: '768px',
@@ -120,10 +105,7 @@ switch (releaseTarget) {
 
   default:
     assetPrefixPath = '.'
-    cecJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/elections-dev/2025/legislator/iframe/recall-july/iframe.json'
-    mnewsJsonEndpoint =
-      'https://whoareyou-gcs.readr.tw/json/202507_recall_iframe.json'
+    mayorJsonEndpoint = DEV_MAYOR_JSON_ENDPOINT
     staticFileDestination = ``
     breakpoint = {
       sm: '768px',
@@ -135,8 +117,7 @@ switch (releaseTarget) {
 
 export {
   assetPrefixPath,
-  cecJsonEndpoint,
-  mnewsJsonEndpoint,
+  mayorJsonEndpoint,
   staticFileDestination,
   projectName,
   breakpoint,

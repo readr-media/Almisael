@@ -2,15 +2,13 @@ import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import useSWR from 'swr'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 import gtag from '../utils/gtag'
 
 import {
-  cecJsonEndpoint,
+  mayorJsonEndpoint,
   breakpoint,
   color,
   staticFileDestination,
-  mnewsJsonEndpoint,
 } from '../config/index.mjs'
 
 /**
@@ -242,12 +240,7 @@ const sourceMap = {
 }
 
 export default function Home() {
-  const router = useRouter()
-  const source = router.query?.source
-
-  const endpoint = source === 'mirror' ? mnewsJsonEndpoint : cecJsonEndpoint
-
-  const { data, error, isLoading } = useSWR(endpoint, fetcher, {
+  const { data, error, isLoading } = useSWR(mayorJsonEndpoint, fetcher, {
     refreshInterval: 1000 * 60,
     revalidateIfStale: true,
   })
