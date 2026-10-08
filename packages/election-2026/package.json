@@ -27,6 +27,7 @@
     "deploy:mirrorDaily": "NEXT_PUBLIC_RELEASE_TARGET='mirrorDaily' node ./deploy-scripts/index.mjs"
   },
   "dependencies": {
+    "@radix-ui/react-select": "^2.3.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-query": "^3.39.3",

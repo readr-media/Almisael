@@ -1,28 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import useSWR from 'swr'
 import Image from 'next/image'
-import gtag from '../utils/gtag'
+import Select from '../components/Select'
 
 import {
   mayorJsonEndpoint,
   breakpoint,
-  color,
   staticFileDestination,
 } from '../config/index.mjs'
-
-/**
- * @typedef {Object} HeightAndWidth
- * @property {string} width
- * @property {string} height
- */
-
-/**
- * @typedef {Object}ImageSize
- * @property {HeightAndWidth} mobile
- * @property {HeightAndWidth} desktop
- *
- */
 
 const fetcher = (url) => {
   const timestamp = new Date().getTime()
@@ -34,7 +20,6 @@ const fetcher = (url) => {
 }
 
 const Wrapper = styled.section`
-  position: relative;
   width: 320px;
   padding: 0 16px;
   background-color: #f4f5f6;
@@ -46,197 +31,160 @@ const Wrapper = styled.section`
 
   @media (min-width: ${breakpoint.md}) {
     width: 970px;
-    padding: 0 24px;
+  }
+`
+const CitySelectorWrapper = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 2px solid #d8d8d8;
+
+  @media (min-width: ${breakpoint.md}) {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 12px;
   }
 `
 const Title = styled.h1`
-  padding-top: 16px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 500;
   text-align: center;
   color: #1b3f5c;
-`
 
-const ArrowContainer = styled.div`
-  display: flex;
-  column-gap: 12px;
-  justify-content: center;
-  margin: 16px 0;
+  @media (min-width: ${breakpoint.md}) {
+    padding-top: 16px;
+  }
+`
+const CitySelectorDesktop = styled.div`
+  display: none;
+
+  @media (min-width: ${breakpoint.md}) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 8px;
+    gap: 8px;
+`
+const CitySelectorMobile = styled.div`
+  display: block;
+
+  @media (min-width: ${breakpoint.md}) {
+    display: none;
+  }
+`
+const City = styled.div`
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: white;
+  color: #4a4a4a;
   cursor: pointer;
+
+  &:hover {
+    border: 1px solid #949494;
+    background-color: #f4f5f6;
+    color: #2b2b2b;
+  }
+
+  ${({ $isActive }) =>
+    $isActive &&
+    `
+    border: 1px solid #2074d5;
+    background-color: #2074d5;
+    color: white;
+
+    &:hover {
+      border: 1px solid #2074d5;
+      background-color: #2074d5;
+      color: white;
+    }
+  `}
 `
-
-const VoteCardContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  min-height: 138px;
-  @media (min-width: ${breakpoint.sm}) {
-    grid-template-columns: repeat(6, 1fr);
-  }
-`
-
-const VoteCard = styled.div`
-  position: relative;
-  border-top: 1px solid #979797;
-  padding: 4px 6px;
-
-  &:nth-child(1),
-  &:nth-child(2),
-  &:nth-child(3) {
-    border-top: 0;
-  }
-
-  &:not(:nth-child(3n)):not(:last-child)::after {
-    content: '';
-    position: absolute;
-    top: 4px;
-    bottom: 4px;
-    right: 0;
-    width: 1px;
-    background-color: #979797;
-  }
+const VoteBarChartWrapper = styled.section`
+  height: 214px;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: 2px solid white;
 
   @media (min-width: ${breakpoint.sm}) {
-    &:not(:nth-child(6n)):not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 4px;
-      bottom: 4px;
-      right: 0;
-      width: 1px;
-      background-color: #979797;
-    }
+    flex-direction: row;
+    height: 84px;
+    gap: 24px;
+  }
 
-    &:nth-child(4),
-    &:nth-child(5),
-    &:nth-child(6) {
-      border-top: 0;
-    }
+  @media (min-width: ${breakpoint.md}) {
+    gap: 32px;
   }
 `
+const VoteBarChart = styled.div`
+  width: 288px;
 
-const InfoWrapper = styled.div`
+  @media (min-width: ${breakpoint.sm}) {
+    width: 208px;
+  }
+
+  @media (min-width: ${breakpoint.md}) {
+    width: 286px;
+  }
+`
+const VoteBarChartTop = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 8px;
-`
-
-const Name = styled.p`
-  color: #000;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 1;
-`
-
-const Result = styled.p`
-  color: ${
-    /**
-     * @param {Object} props
-     * @param {boolean} [props.isPassed]
-     */
-    ({ isPassed }) => (isPassed ? '#448DE3' : '#D74A47')
-  };
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 1;
-`
-
-const AgreeContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  column-gap: 4px;
   margin-bottom: 4px;
+  font-weight: 500;
+  line-height: 24px;
 `
-
-const DisAgreeContainer = styled.div`
+const CandidateInfo = styled.div`
   display: flex;
-  justify-content: space-between;
-  column-gap: 4px;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8px;
+  font-size: 16px;
+  color: #4a4a4a;
 `
-
-const Option = styled.p`
-  color: #000;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 1;
-`
-const BarContainer = styled.div`
-  position: relative;
-  width: 52px;
-  height: 16px;
-  background-color: #a0a0a0;
-  @media (min-width: ${breakpoint.md}) {
-    width: 88px;
-  }
+const VoteShare = styled.div`
+  font-size: 14px;
+  color: #6e6e6e;
 `
 const VoteBar = styled.div`
-  width: ${({ percent }) => `${percent || 0}%`};
+  width: 100%;
+  height: 24px;
+`
+const VoteCount = styled.div`
   height: 100%;
-  background-color: ${({ isAgree }) => (isAgree ? '#448DE3' : '#D74A47')};
-`
-const VoteCount = styled.p`
-  position: absolute;
-  left: 4px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 13px;
-  z-index: 1;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3), 0px 1px 4px rgba(0, 0, 0, 0.5);
-`
-const QuarterLine = styled.div`
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  border-left: 1px dashed #000;
-  left: ${({ percent }) => `${percent}%`};
-`
-
-const Notice = styled.p`
-  color: #153047;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 1;
-  @media (min-width: ${breakpoint.sm}) {
-    font-size: 12px;
-  }
+  line-height: 20px;
+  color: #2b2b2b;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
 `
-
-const MaskLeft = styled.div`
-  background-color: transparent;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  cursor: pointer;
+const SourceAndTimestamp = styled.div`
+  padding-top: 8px;
+  padding-bottom: 12px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #6e6e6e;
 `
-
-const MaskRight = styled.div`
-  background-color: transparent;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  cursor: pointer;
-`
-
-const passStatus = {
-  Yes: 'Y',
-  No: 'N',
+const PartyEmblemMap = {
+  中國國民黨: `${staticFileDestination}/kmt.svg`,
+  民主進步黨: `${staticFileDestination}/dpp.svg`,
+  台灣民眾黨: `${staticFileDestination}/tpp.svg`,
+  無黨籍: `${staticFileDestination}/independent.svg`,
 }
 
-const passStatusLabel = {
-  [passStatus.Yes]: '通過',
-  [passStatus.No]: '未通過',
-}
-
-const sourceMap = {
-  mnews: '鏡新聞',
-  cec: '中央選舉委員會',
+const VoteBarMap = {
+  中國國民黨: '#7cb0ee',
+  民主進步黨: '#62bc90',
+  台灣民眾黨: '#57c2c2',
+  無黨籍: '#a8b0bb',
 }
 
 export default function Home() {
@@ -244,128 +192,106 @@ export default function Home() {
     refreshInterval: 1000 * 60,
     revalidateIfStale: true,
   })
-  const [page, setPage] = useState(1)
-  const [pageSize, setPageSize] = useState(6)
 
-  useEffect(() => {
-    const updatePageSize = () => {
-      if (window.innerWidth < Number(breakpoint.sm.replace('px', ''))) {
-        setPageSize(6)
-      } else {
-        setPageSize(12)
-      }
-    }
-
-    updatePageSize()
-    window.addEventListener('resize', updatePageSize)
-
-    return () => window.removeEventListener('resize', updatePageSize)
-  }, [])
-
+  const [selectedCity, setSelectedCity] = useState(
+    data?.polling[0]?.city || '臺北市'
+  )
   if (error) return <div>failed to load</div>
   if (isLoading) return <></>
 
-  const current = data.result.slice((page - 1) * pageSize, page * pageSize)
-
   return (
     <Wrapper>
-      <Title>22縣市長開票進度</Title>
-      <VoteCardContainer>
-        {current.map((item) => (
-          <VoteCard key={item.name}>
-            <InfoWrapper>
-              <Name>{item.name}</Name>
-              <Result isPassed={item.adptVictor === passStatus['Yes']}>
-                {passStatusLabel[item.adptVictor]}
-              </Result>
-            </InfoWrapper>
-            <AgreeContainer>
-              <Option>同意</Option>
-              <BarContainer>
-                <QuarterLine
-                  percent={(item.votePop / 4 / item.votePop) * 100}
-                />
-                <VoteBar isAgree={true} percent={item.ytpRate}>
-                  <VoteCount>{item.agreeTks}</VoteCount>
-                </VoteBar>
-              </BarContainer>
-            </AgreeContainer>
-            <DisAgreeContainer>
-              <Option>不同意</Option>
-              <BarContainer>
-                <VoteBar isAgree={false} percent={item.ntpRate}>
-                  <VoteCount>{item.disagreeTks}</VoteCount>
-                </VoteBar>
-              </BarContainer>
-            </DisAgreeContainer>
-          </VoteCard>
-        ))}
-      </VoteCardContainer>
-      <ArrowContainer>
-        <Image
-          src={`${staticFileDestination}/${color.vectorLeft}.svg`}
-          width={32}
-          height={32}
-          alt="arrow-left"
-          onClick={() => {
-            if (page > 1) {
-              setPage(page - 1)
+      <CitySelectorWrapper>
+        <Title>22縣市長開票進度</Title>
+        <CitySelectorDesktop>
+          {data?.polling?.map((item) => (
+            <City
+              key={item?.city}
+              $isActive={selectedCity === item?.city}
+              onClick={() => setSelectedCity(item?.city)}
+            >
+              {item?.city}
+            </City>
+          ))}
+        </CitySelectorDesktop>
+        <CitySelectorMobile>
+          <Select
+            options={data?.polling?.map((item) => ({
+              value: item?.city,
+              label: item?.city,
+            }))}
+            value={selectedCity}
+            onValueChange={setSelectedCity}
+          />
+        </CitySelectorMobile>
+      </CitySelectorWrapper>
 
-              gtag.sendGAEvent('click_pagination', {
-                direction: 'left',
-                pagination_page: page - 1,
-              })
+      <VoteBarChartWrapper>
+        {data?.polling
+          ?.find((item) => item.city === selectedCity)
+          ?.candidates?.map((candidate) => (
+            <VoteBarChart key={candidate?.name}>
+              <VoteBarChartTop>
+                <CandidateInfo>
+                  <div>{candidate?.candNo}</div>
+                  <div>{candidate?.name}</div>
+                  <Image
+                    src={PartyEmblemMap[candidate?.party]}
+                    width={16}
+                    height={16}
+                    alt={candidate?.party}
+                  />
+                  {data?.isStarted && candidate?.candVictor && (
+                    <Image
+                      src={`${staticFileDestination}/elected.svg`}
+                      width={16}
+                      height={16}
+                      alt="當選"
+                    />
+                  )}
+                </CandidateInfo>
+                <VoteShare>
+                  {data?.isStarted &&
+                    candidate?.tksRate &&
+                    `${candidate?.tksRate}%`}
+                </VoteShare>
+              </VoteBarChartTop>
+              <VoteBar>
+                <VoteCount
+                  style={{
+                    width:
+                      candidate?.absTksRate > 0
+                        ? `max(4px, ${candidate?.absTksRate}%)`
+                        : '0%',
+                    backgroundColor: VoteBarMap[candidate?.party],
+                  }}
+                >
+                  {data?.isStarted && candidate?.tks !== 0
+                    ? candidate?.tks.toLocaleString()
+                    : '—'}
+                </VoteCount>
+              </VoteBar>
+            </VoteBarChart>
+          ))}
+      </VoteBarChartWrapper>
+      <SourceAndTimestamp>
+        {data?.isStarted ? (
+          <div>
+            最後更新時間：
+            {
+              data?.polling?.find((item) => item?.city === selectedCity)
+                ?.updatedAt
             }
-          }}
-        />
-        <Image
-          src={`${staticFileDestination}/${color.vectorRight}.svg`}
-          width={32}
-          height={32}
-          alt="arrow-right"
-          onClick={() => {
-            if (page * pageSize < data?.result.length) {
-              setPage(page + 1)
-
-              gtag.sendGAEvent('click_pagination', {
-                direction: 'right',
-                pagination_page: page + 1,
-              })
-            }
-          }}
-        />
-      </ArrowContainer>
-      <Notice>
-        {`最後更新時間：${
-          data.updatedAt
-        } 票數說明：正確結果以中選會為主。資料來源：${
-          sourceMap[data?.source] || '中央選舉委員會'
-        }`}
-      </Notice>
-      <MaskLeft
-        onClick={() => {
-          if (page > 1) {
-            setPage(page - 1)
-
-            gtag.sendGAEvent('click_pagination', {
-              direction: 'left',
-              pagination_page: page - 1,
-            })
-          }
-        }}
-      />
-      <MaskRight
-        onClick={() => {
-          if (page * pageSize < data?.result.length) {
-            setPage(page + 1)
-
-            gtag.sendGAEvent('click_pagination', {
-              direction: 'right',
-              pagination_page: page + 1,
-            })
-          }
-        }}
-      />
+          </div>
+        ) : (
+          <div>開票開始時間：2026-11-28 16:00:00</div>
+        )}
+        <div>
+          資料來源：
+          {data?.polling?.find((item) => item?.city === selectedCity)?.source ||
+            '中央選舉委員會'}
+        </div>
+      </SourceAndTimestamp>
     </Wrapper>
   )
 }
