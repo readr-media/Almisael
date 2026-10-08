@@ -194,32 +194,40 @@ export default function Home() {
   })
 
   const [selectedCity, setSelectedCity] = useState(
-    data?.polling[0]?.city || '臺北市'
+    data?.polling?.[0]?.city || '臺北市'
   )
   if (error) return <div>failed to load</div>
   if (isLoading) return <></>
+
+  const currentCityData = data?.polling?.find(
+    (item) => item?.city === selectedCity
+  )
 
   return (
     <Wrapper>
       <CitySelectorWrapper>
         <Title>22縣市長開票進度</Title>
         <CitySelectorDesktop>
-          {data?.polling?.map((item) => (
-            <City
-              key={item?.city}
-              $isActive={selectedCity === item?.city}
-              onClick={() => setSelectedCity(item?.city)}
-            >
-              {item?.city}
-            </City>
-          ))}
+          {data?.polling
+            ?.filter((item) => Boolean(item?.city))
+            .map((item) => (
+              <City
+                key={item?.city}
+                $isActive={selectedCity === item?.city}
+                onClick={() => setSelectedCity(item?.city)}
+              >
+                {item?.city}
+              </City>
+            ))}
         </CitySelectorDesktop>
         <CitySelectorMobile>
           <Select
-            options={data?.polling?.map((item) => ({
-              value: item?.city,
-              label: item?.city,
-            }))}
+            options={data?.polling
+              ?.filter((item) => Boolean(item?.city))
+              .map((item) => ({
+                value: item?.city,
+                label: item?.city,
+              }))}
             value={selectedCity}
             onValueChange={setSelectedCity}
           />
@@ -227,69 +235,65 @@ export default function Home() {
       </CitySelectorWrapper>
 
       <VoteBarChartWrapper>
-        {data?.polling
-          ?.find((item) => item.city === selectedCity)
-          ?.candidates?.map((candidate) => (
-            <VoteBarChart key={candidate?.name}>
-              <VoteBarChartTop>
-                <CandidateInfo>
-                  <div>{candidate?.candNo}</div>
-                  <div>{candidate?.name}</div>
+        {currentCityData?.candidates?.map((candidate) => (
+          <VoteBarChart key={candidate?.name}>
+            <VoteBarChartTop>
+              <CandidateInfo>
+                <div>{candidate?.candNo}</div>
+                <div>{candidate?.name}</div>
+                <Image
+                  src={PartyEmblemMap[candidate?.party]}
+                  width={16}
+                  height={16}
+                  alt={candidate?.party}
+                />
+                {data?.isStarted && candidate?.candVictor && (
                   <Image
-                    src={PartyEmblemMap[candidate?.party]}
+                    src={`${staticFileDestination}/elected.svg`}
                     width={16}
                     height={16}
-                    alt={candidate?.party}
+                    alt="當選"
                   />
-                  {data?.isStarted && candidate?.candVictor && (
-                    <Image
-                      src={`${staticFileDestination}/elected.svg`}
-                      width={16}
-                      height={16}
-                      alt="當選"
-                    />
-                  )}
-                </CandidateInfo>
-                <VoteShare>
-                  {data?.isStarted &&
-                    candidate?.tksRate &&
-                    `${candidate?.tksRate}%`}
-                </VoteShare>
-              </VoteBarChartTop>
-              <VoteBar>
-                <VoteCount
-                  style={{
-                    width:
-                      candidate?.absTksRate > 0
-                        ? `max(4px, ${candidate?.absTksRate}%)`
-                        : '0%',
-                    backgroundColor: VoteBarMap[candidate?.party],
-                  }}
-                >
-                  {data?.isStarted && candidate?.tks !== 0
-                    ? candidate?.tks.toLocaleString()
-                    : '—'}
-                </VoteCount>
-              </VoteBar>
-            </VoteBarChart>
-          ))}
+                )}
+              </CandidateInfo>
+              <VoteShare>
+                {data?.isStarted &&
+                  candidate?.tksRate &&
+                  `${candidate?.tksRate}%`}
+              </VoteShare>
+            </VoteBarChartTop>
+            <VoteBar>
+              <VoteCount
+                style={{
+                  width:
+                    candidate?.absTksRate > 0
+                      ? `max(4px, ${candidate?.absTksRate}%)`
+                      : '0%',
+                  backgroundColor: VoteBarMap[candidate?.party],
+                }}
+              >
+                {data?.isStarted &&
+                typeof candidate?.tks === 'number' &&
+                candidate?.tks !== 0
+                  ? candidate?.tks.toLocaleString()
+                  : '—'}
+              </VoteCount>
+            </VoteBar>
+          </VoteBarChart>
+        ))}
       </VoteBarChartWrapper>
       <SourceAndTimestamp>
         {data?.isStarted ? (
           <div>
             最後更新時間：
-            {
-              data?.polling?.find((item) => item?.city === selectedCity)
-                ?.updatedAt
-            }
+            {currentCityData?.updatedAt}
           </div>
         ) : (
           <div>開票開始時間：2026-11-28 16:00:00</div>
         )}
         <div>
           資料來源：
-          {data?.polling?.find((item) => item?.city === selectedCity)?.source ||
-            '中央選舉委員會'}
+          {currentCityData?.source || '中央選舉委員會'}
         </div>
       </SourceAndTimestamp>
     </Wrapper>
