@@ -199,8 +199,8 @@ export default function Home() {
   const [selectedCity, setSelectedCity] = useState(
     data?.polling?.[0]?.city || '臺北市'
   )
-  if (error) return <div>failed to load</div>
-  if (isLoading) return <></>
+  if (error) return <div>Failed to load</div>
+  if (isLoading) return null
 
   const currentCityData = data?.polling?.find(
     (item) => item?.city === selectedCity
