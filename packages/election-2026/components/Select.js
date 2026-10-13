@@ -1,3 +1,4 @@
+import { useState, useRef } from 'react'
 import * as RadixSelect from '@radix-ui/react-select'
 import styled from 'styled-components'
 
@@ -86,9 +87,32 @@ export default function Select({
   value,
   onValueChange,
 }) {
+  const [open, setOpen] = useState(false)
+  const isClosingRef = useRef(false)
+  const triggerRef = useRef(null)
+
   return (
-    <RadixSelect.Root value={value} onValueChange={onValueChange}>
-      <StyledTrigger>
+    <RadixSelect.Root
+      value={value}
+      onValueChange={onValueChange}
+      open={open}
+      onOpenChange={(nextOpen) => {
+        if (isClosingRef.current) return
+        setOpen(nextOpen)
+      }}
+    >
+      <StyledTrigger
+        ref={triggerRef}
+        onPointerDown={() => {
+          if (open) {
+            isClosingRef.current = true
+            setOpen(false)
+            setTimeout(() => {
+              isClosingRef.current = false
+            }, 350)
+          }
+        }}
+      >
         <RadixSelect.Value placeholder={placeholder} />
         <RadixSelect.Icon>
           <DesignerArrow />
@@ -96,7 +120,34 @@ export default function Select({
       </StyledTrigger>
 
       <RadixSelect.Portal>
-        <StyledContent align="end" position="popper" sideOffset={4}>
+        <StyledContent
+          align="end"
+          position="popper"
+          sideOffset={4}
+          onPointerDownOutside={(event) => {
+            const originalEvent = event.detail?.originalEvent
+            const rect = triggerRef.current?.getBoundingClientRect()
+            const clientX = originalEvent?.clientX
+            const clientY = originalEvent?.clientY
+
+            if (rect && clientX !== undefined && clientY !== undefined) {
+              const isInsideTrigger =
+                clientX >= rect.left &&
+                clientX <= rect.right &&
+                clientY >= rect.top &&
+                clientY <= rect.bottom
+
+              if (isInsideTrigger) {
+                event.preventDefault()
+                isClosingRef.current = true
+                setOpen(false)
+                setTimeout(() => {
+                  isClosingRef.current = false
+                }, 350)
+              }
+            }
+          }}
+        >
           <StyledViewport>
             {options.map((opt) => (
               <StyledItem key={opt.value} value={opt.value}>
