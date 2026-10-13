@@ -78,9 +78,12 @@ const City = styled.div`
   border: 1px solid #d8d8d8;
   border-radius: 4px;
   padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
   background-color: white;
   color: #4a4a4a;
   cursor: pointer;
+  white-space: nowrap;
 
   &:hover {
     border: 1px solid #949494;
