@@ -10,13 +10,13 @@ import {
   staticFileDestination,
 } from '../config/index.mjs'
 
-const fetcher = (url) => {
+const fetcher = async (url) => {
   const timestamp = new Date().getTime()
-  return fetch(`${url}?t=${timestamp}`).then((res) => {
-    const result = res.json()
-    result.then((r) => console.log(r?.updateAt))
-    return result
-  })
+  const res = await fetch(`${url}?t=${timestamp}`)
+  if (!res.ok) {
+    throw new Error(`HTTP error! status: ${res.status}`)
+  }
+  return res.json()
 }
 
 const Wrapper = styled.section`
