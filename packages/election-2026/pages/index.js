@@ -66,6 +66,7 @@ const CitySelectorDesktop = styled.div`
     flex-wrap: wrap;
     padding-top: 8px;
     gap: 8px;
+  }
 `
 const CitySelectorMobile = styled.div`
   display: block;
