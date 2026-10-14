@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import * as RadixSelect from '@radix-ui/react-select'
 import styled from 'styled-components'
+import { breakpoint } from '../config/index.mjs'
 
 const StyledTrigger = styled(RadixSelect.Trigger)`
   display: inline-flex;
@@ -36,7 +37,7 @@ const StyledTrigger = styled(RadixSelect.Trigger)`
 
 const StyledContent = styled(RadixSelect.Content)`
   width: 200px;
-  max-height: 320px;
+  max-height: 268px;
   overflow: hidden;
   padding: 8px;
   background-color: white;
@@ -44,6 +45,10 @@ const StyledContent = styled(RadixSelect.Content)`
   border: 1px solid #d8d8d8;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
   z-index: 999;
+
+  @media (min-width: ${breakpoint.sm}) {
+    max-height: 140px;
+  }
 `
 
 const StyledViewport = styled(RadixSelect.Viewport)`
