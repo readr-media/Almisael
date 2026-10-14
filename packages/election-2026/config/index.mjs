@@ -9,8 +9,8 @@ const PROD_MAYOR_JSON_ENDPOINT =
   'https://whoareyou-gcs.readr.tw/elections/2026/mayor/iframe.json'
 let staticFileDestination = ''
 const breakpoint = {
-  sm: '768px',
-  md: '1200px',
+  sm: '720px',
+  md: '970px',
 }
 
 switch (releaseTarget) {
