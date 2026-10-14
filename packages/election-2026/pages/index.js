@@ -239,52 +239,58 @@ export default function Home() {
       </CitySelectorWrapper>
 
       <VoteBarChartWrapper>
-        {currentCityData?.candidates?.map((candidate) => (
-          <VoteBarChart key={candidate?.name}>
-            <VoteBarChartTop>
-              <CandidateInfo>
-                <div>{candidate?.candNo}</div>
-                <div>{candidate?.name}</div>
-                <Image
-                  src={PartyEmblemMap[candidate?.party]}
-                  width={16}
-                  height={16}
-                  alt={candidate?.party}
-                />
-                {data?.isStarted && candidate?.candVictor && (
-                  <Image
-                    src={`${staticFileDestination}/elected.svg`}
-                    width={16}
-                    height={16}
-                    alt="當選"
-                  />
-                )}
-              </CandidateInfo>
-              <VoteShare>
-                {data?.isStarted &&
-                  candidate?.tksRate &&
-                  `${candidate?.tksRate}%`}
-              </VoteShare>
-            </VoteBarChartTop>
-            <VoteBar>
-              <VoteCount
-                style={{
-                  width:
-                    candidate?.absTksRate > 0
-                      ? `max(4px, ${candidate?.absTksRate}%)`
-                      : '0%',
-                  backgroundColor: VoteBarMap[candidate?.party],
-                }}
-              >
-                {data?.isStarted &&
-                typeof candidate?.tks === 'number' &&
-                candidate?.tks !== 0
-                  ? candidate?.tks.toLocaleString()
-                  : '—'}
-              </VoteCount>
-            </VoteBar>
-          </VoteBarChart>
-        ))}
+        {currentCityData?.candidates?.map((candidate) => {
+          const partyEmblemSrc = PartyEmblemMap[candidate?.party]
+
+          return (
+            <VoteBarChart key={candidate?.name}>
+              <VoteBarChartTop>
+                <CandidateInfo>
+                  <div>{candidate?.candNo}</div>
+                  <div>{candidate?.name}</div>
+                  {partyEmblemSrc && (
+                    <Image
+                      src={partyEmblemSrc}
+                      width={16}
+                      height={16}
+                      alt={candidate?.party}
+                    />
+                  )}
+                  {data?.isStarted && candidate?.candVictor && (
+                    <Image
+                      src={`${staticFileDestination}/elected.svg`}
+                      width={16}
+                      height={16}
+                      alt="當選"
+                    />
+                  )}
+                </CandidateInfo>
+                <VoteShare>
+                  {data?.isStarted &&
+                    candidate?.tksRate &&
+                    `${candidate?.tksRate}%`}
+                </VoteShare>
+              </VoteBarChartTop>
+              <VoteBar>
+                <VoteCount
+                  style={{
+                    width:
+                      candidate?.absTksRate > 0
+                        ? `max(4px, ${candidate?.absTksRate}%)`
+                        : '0%',
+                    backgroundColor: VoteBarMap[candidate?.party],
+                  }}
+                >
+                  {data?.isStarted &&
+                  typeof candidate?.tks === 'number' &&
+                  candidate?.tks !== 0
+                    ? candidate?.tks.toLocaleString()
+                    : '—'}
+                </VoteCount>
+              </VoteBar>
+            </VoteBarChart>
+          )
+        })}
       </VoteBarChartWrapper>
       <SourceAndTimestamp>
         {data?.isStarted ? (
