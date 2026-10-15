@@ -177,18 +177,24 @@ const SourceAndTimestamp = styled.div`
   line-height: 18px;
   color: #6e6e6e;
 `
-const PartyEmblemMap = {
-  中國國民黨: `${staticFileDestination}/kmt.svg`,
-  民主進步黨: `${staticFileDestination}/dpp.svg`,
-  台灣民眾黨: `${staticFileDestination}/tpp.svg`,
-  無黨籍: `${staticFileDestination}/independent.svg`,
-}
 
-const VoteBarMap = {
-  中國國民黨: '#7cb0ee',
-  民主進步黨: '#62bc90',
-  台灣民眾黨: '#57c2c2',
-  無黨籍: '#a8b0bb',
+const PartyStyleMap = {
+  中國國民黨: {
+    emblem: `${staticFileDestination}/kmt.svg`,
+    color: '#7cb0ee',
+  },
+  民主進步黨: {
+    emblem: `${staticFileDestination}/dpp.svg`,
+    color: '#62bc90',
+  },
+  台灣民眾黨: {
+    emblem: `${staticFileDestination}/tpp.svg`,
+    color: '#57c2c2',
+  },
+  無黨籍: {
+    emblem: `${staticFileDestination}/independent.svg`,
+    color: '#a8b0bb',
+  },
 }
 
 export default function Home() {
@@ -242,7 +248,7 @@ export default function Home() {
 
       <VoteBarChartWrapper>
         {currentCityData?.candidates?.map((candidate) => {
-          const partyEmblemSrc = PartyEmblemMap[candidate?.party]
+          const partyStyle = PartyStyleMap[candidate?.party]
 
           return (
             <VoteBarChart key={candidate?.name}>
@@ -250,9 +256,9 @@ export default function Home() {
                 <CandidateInfo>
                   <div>{candidate?.candNo}</div>
                   <div>{candidate?.name}</div>
-                  {partyEmblemSrc && (
+                  {partyStyle?.emblem && (
                     <Image
-                      src={partyEmblemSrc}
+                      src={partyStyle?.emblem}
                       width={16}
                       height={16}
                       alt={candidate?.party}
@@ -280,7 +286,8 @@ export default function Home() {
                       candidate?.absTksRate > 0
                         ? `max(4px, ${candidate?.absTksRate}%)`
                         : '0%',
-                    backgroundColor: VoteBarMap[candidate?.party] || '#a8b0bb',
+                    backgroundColor:
+                      partyStyle?.color || PartyStyleMap['無黨籍']?.color,
                   }}
                 >
                   {data?.isStarted &&
