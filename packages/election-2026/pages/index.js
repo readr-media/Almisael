@@ -203,16 +203,15 @@ export default function Home() {
     revalidateIfStale: true,
   })
 
-  const [selectedCity, setSelectedCity] = useState(
-    data?.polling?.[0]?.city || '臺北市'
-  )
-  console.log('isLoading', isLoading)
-  console.log('data?.polling?.[0]?.city', data?.polling?.[0]?.city)
+  const [selectedCity, setSelectedCity] = useState(null)
+
   if (error) return <div>Failed to load</div>
   if (isLoading) return null
 
+  const effectiveCity = selectedCity ?? data?.polling?.[0]?.city
+
   const currentCityData = data?.polling?.find(
-    (item) => item?.city === selectedCity
+    (item) => item?.city === effectiveCity
   )
 
   return (
@@ -225,7 +224,7 @@ export default function Home() {
             .map((item) => (
               <City
                 key={item?.city}
-                $isActive={selectedCity === item?.city}
+                $isActive={effectiveCity === item?.city}
                 onClick={() => setSelectedCity(item?.city)}
               >
                 {item?.city}
@@ -240,7 +239,7 @@ export default function Home() {
                 value: item?.city,
                 label: item?.city,
               }))}
-            value={selectedCity}
+            value={effectiveCity}
             onValueChange={setSelectedCity}
           />
         </CitySelectorMobile>
