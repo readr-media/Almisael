@@ -200,6 +200,8 @@ export default function Home() {
   const [selectedCity, setSelectedCity] = useState(
     data?.polling?.[0]?.city || '臺北市'
   )
+  console.log('isLoading', isLoading)
+  console.log('data?.polling?.[0]?.city', data?.polling?.[0]?.city)
   if (error) return <div>Failed to load</div>
   if (isLoading) return null
 
@@ -278,7 +280,7 @@ export default function Home() {
                       candidate?.absTksRate > 0
                         ? `max(4px, ${candidate?.absTksRate}%)`
                         : '0%',
-                    backgroundColor: VoteBarMap[candidate?.party],
+                    backgroundColor: VoteBarMap[candidate?.party] || '#a8b0bb',
                   }}
                 >
                   {data?.isStarted &&
