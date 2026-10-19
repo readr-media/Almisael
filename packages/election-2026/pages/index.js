@@ -75,21 +75,28 @@ const CitySelectorMobile = styled.div`
     display: none;
   }
 `
-const City = styled.div`
+const City = styled.button`
   border: 1px solid #d8d8d8;
   border-radius: 4px;
   padding: 8px 12px;
   font-size: 14px;
+  font-family: inherit;
   font-weight: 500;
   background-color: white;
   color: #4a4a4a;
   cursor: pointer;
   white-space: nowrap;
+  appearance: none;
 
   &:hover {
     border: 1px solid #949494;
     background-color: #f4f5f6;
     color: #2b2b2b;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #2074d5;
+    outline-offset: 2px;
   }
 
   ${({ $isActive }) =>
@@ -224,7 +231,9 @@ export default function Home() {
             .map((item) => (
               <City
                 key={item?.city}
+                type="button"
                 $isActive={effectiveCity === item?.city}
+                aria-current={effectiveCity === item?.city ? 'true' : undefined}
                 onClick={() => setSelectedCity(item?.city)}
               >
                 {item?.city}
