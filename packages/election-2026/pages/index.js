@@ -205,7 +205,7 @@ export default function Home() {
 
   const [selectedCity, setSelectedCity] = useState(null)
 
-  if (error) return <div>Failed to load</div>
+  if (error && !data) return <div>載入失敗，請重新整理</div>
   if (isLoading) return null
 
   const effectiveCity = selectedCity ?? data?.polling?.[0]?.city
