@@ -263,7 +263,7 @@ export default function Home() {
               <VoteBarChartTop>
                 <CandidateInfo>
                   <div>{candidate?.candNo}</div>
-                  <div>{candidate?.name}</div>
+                  <div style={{ whiteSpace: 'nowrap' }}>{candidate?.name}</div>
                   {partyStyle?.emblem && (
                     <Image
                       src={partyStyle?.emblem}
