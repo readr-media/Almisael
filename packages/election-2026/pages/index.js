@@ -283,7 +283,7 @@ export default function Home() {
                 </CandidateInfo>
                 <VoteShare>
                   {data?.isStarted &&
-                    candidate?.tksRate &&
+                    candidate?.tksRate > 0 &&
                     `${candidate?.tksRate}%`}
                 </VoteShare>
               </VoteBarChartTop>
