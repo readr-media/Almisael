@@ -56,6 +56,7 @@ yarn deploy:mirrorMedia       # build 後把 out/mirrorMedia 上傳到正式站�
 
 ## 架構重點
 
+- **HTML 必須以 `Cache-Control: no-store` 上傳**:`deploy-scripts/index.mjs` 會自動處理。手動上傳或用其他指令部署時要自行帶上，否則 GCS 會快取 1 小時且無法清除。
 - **`config/index.mjs` 是所有跟網站相關設定的唯一來源**:新增一個發布網站時，要同步修改這個檔案、`package.json` 裡的 script、以及 `deploy-scripts/index.mjs` 的部署目標，三處要保持一致。
 - **`pages/index.js` 是整個 app**:用 `useSWR` 每 60 秒輪詢一次開票資料，依使用者選的縣市過濾出候選人清單並渲染得票長條圖。背景輪詢失敗時會保留上一次成功的資料繼續顯示，只有在「從未成功拿到任何資料」時才顯示錯誤畫面。
 - **樣式用 `styled-components`**，全域 reset 寫在 `styles/global-styles.js`，在 `pages/_app.js` 套用一次。
