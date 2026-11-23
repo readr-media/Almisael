@@ -23,7 +23,7 @@ election-2026/
 │   ├── _document.js         # 自訂 HTML document 結構
 │   └── index.js             # 處理 iframe UI 與邏輯的主要檔案
 ├── deploy-scripts/
-│   └── index.mjs           # build 完後用 gsutil 把靜態檔案丟到對應網站的 GCS bucket
+│   └── index.mjs           # build 完後用 gcloud storage 把靜態檔案上傳到對應網站的 GCS bucket
 ├── styles/
 │   └── global-styles.js    # styled-components 的全域 CSS reset
 ├── public/
