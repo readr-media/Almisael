@@ -12,7 +12,7 @@
     },
     "mirror-media": {
       "dev": {
-        "bucket": "gs://v3-statics-dev.mirrormedia.mg/projects/dev-taiwan-elections",
+        "bucket": "gs://mirrormedia-nonprod-statics-dev/projects/dev-taiwan-elections",
         "cacheControl": "no-store"
       },
       "prod": {

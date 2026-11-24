@@ -4,7 +4,7 @@ const releaseTarget = process.env.NEXT_PUBLIC_RELEASE_TARGET
 let execCommand = ''
 switch (releaseTarget) {
   case 'dev-mirrorMedia':
-    execCommand = `gsutil -m cp -r ./out/${releaseTarget}/* gs://v3-statics-dev.mirrormedia.mg/projects/${projectName}`
+    execCommand = `gsutil -m cp -r ./out/${releaseTarget}/* gs://mirrormedia-nonprod-statics-dev/projects/${projectName}`
     break
   case 'mirrorMedia':
     execCommand = `gsutil -m cp -r ./out/${releaseTarget}/* gs://v3-statics.mirrormedia.mg/projects/${projectName}`

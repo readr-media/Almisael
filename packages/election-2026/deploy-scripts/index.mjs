@@ -2,7 +2,7 @@ import { exec } from 'child_process'
 import { projectName } from '../config/index.mjs'
 const releaseTarget = process.env.NEXT_PUBLIC_RELEASE_TARGET
 const buckets = {
-  'dev-mirrorMedia': 'v3-statics-dev.mirrormedia.mg',
+  'dev-mirrorMedia': 'mirrormedia-nonprod-statics-dev',
   mirrorMedia: 'v3-statics.mirrormedia.mg',
   'dev-mirrorTV': 'v2-static-mnews-tw-dev',
   mirrorTV: 'v2-static-mnews-tw-prod',

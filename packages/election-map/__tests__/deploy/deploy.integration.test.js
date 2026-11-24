@@ -67,7 +67,7 @@ describe('Deploy Script Integration Tests', () => {
     const expectedMappings = {
       'readr-media-dev-out': 'gs://readr-coverage/project/3/dev-taiwan-elections',
       'readr-media-prod-out': 'gs://readr-coverage/project/3/taiwan-elections',
-      'mirror-media-dev-out': 'gs://v3-statics-dev.mirrormedia.mg/projects/dev-taiwan-elections',
+      'mirror-media-dev-out': 'gs://mirrormedia-nonprod-statics-dev/projects/dev-taiwan-elections',
       'mirror-media-prod-out': 'gs://v3-statics.mirrormedia.mg/projects/taiwan-elections',
       'mirror-tv-dev-out': 'gs://static-mnews-tw-dev/projects/dev-taiwan-elections',
       'mirror-tv-prod-out': 'gs://static-mnews-tw-prod/projects/taiwan-elections',
@@ -111,7 +111,7 @@ describe('Deploy Script Integration Tests', () => {
       'mirror-tv-prod-out': 'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-tv-prod-out/* gs://static-mnews-tw-prod/projects/taiwan-elections',
       'mirror-daily-dev-out': 'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-daily-dev-out/* gs://statics-dev.mirrordaily.news/projects/dev-taiwan-elections',
       'mirror-daily-prod-out': 'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-daily-prod-out/* gs://statics-prod.mirrordaily.news/projects/taiwan-elections',
-      'mirror-media-dev-out': 'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-media-dev-out/* gs://v3-statics-dev.mirrormedia.mg/projects/dev-taiwan-elections',
+      'mirror-media-dev-out': 'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-media-dev-out/* gs://mirrormedia-nonprod-statics-dev/projects/dev-taiwan-elections',
       'mirror-media-prod-out': 'gsutil -h "Cache-Control:no-store" -m cp -r ./mirror-media-prod-out/* gs://v3-statics.mirrormedia.mg/projects/taiwan-elections'
     }
     return dirToBucketMap[outDir]
