@@ -8,7 +8,7 @@
 
 即時開票 iframe，由以下三個區塊組成：縣市選擇器(桌機版為按鈕群組，平板版和手機版為下拉式選單)、選中縣市的候選人得票長條圖、資料來源與時間戳。資料為每分鐘向後端 JSON API 輪詢一次，用 [SWR](https://swr.vercel.app/) 處理快取跟重新驗證。
 
-因為 iframe 會分別嵌入在集團三個新聞網站和 APP 上，三網的 GCS bucket 路徑、GA4 帳號、資料來源網址都不一樣，所以整個專案的建置流程是靠 `NEXT_PUBLIC_RELEASE_TARGET` 這個環境變數，在 build 時切出不同版本。
+因為 iframe 會分別嵌入在集團三個新聞網站和 APP 上，三網的 GCS bucket 路徑、資料來源網址都不一樣，所以整個專案的建置流程是靠 `NEXT_PUBLIC_RELEASE_TARGET` 這個環境變數，在 build 時切出不同版本。
 
 ## 專案結構
 
@@ -19,15 +19,13 @@ election-2026/
 ├── components/
 │   └── Select.js           # 縣市下拉式選單(Radix UI)，於平板版和手機版渲染
 ├── pages/
-│   ├── _app.js              # Next.js 全域進入點，初始化 GA4
+│   ├── _app.js              # Next.js 全域進入點
 │   ├── _document.js         # 自訂 HTML document 結構
 │   └── index.js             # 處理 iframe UI 與邏輯的主要檔案
 ├── deploy-scripts/
-│   └── index.mjs           # build 完後用 gsutil 把靜態檔案丟到對應網站的 GCS bucket
+│   └── index.mjs           # build 完後用 gcloud storage 把靜態檔案上傳到對應網站的 GCS bucket
 ├── styles/
 │   └── global-styles.js    # styled-components 的全域 CSS reset
-├── utils/
-│   └── gtag.js              # 包裝 react-ga4，記錄分頁點擊等互動事件
 ├── public/
 │   └── *.svg                # 候選人黨徽等靜態圖片資源
 └── next.config.mjs          # 設定 assetPrefix，讓 build 出來的靜態檔案走各網站自己的 GCS bucket 路徑
@@ -60,4 +58,3 @@ yarn deploy:mirrorMedia       # build 後把 out/mirrorMedia 上傳到正式站�
 - **`config/index.mjs` 是所有跟網站相關設定的唯一來源**:新增一個發布網站時，要同步修改這個檔案、`package.json` 裡的 script、以及 `deploy-scripts/index.mjs` 的部署目標，三處要保持一致。
 - **`pages/index.js` 是整個 app**:用 `useSWR` 每 60 秒輪詢一次開票資料，依使用者選的縣市過濾出候選人清單並渲染得票長條圖。背景輪詢失敗時會保留上一次成功的資料繼續顯示，只有在「從未成功拿到任何資料」時才顯示錯誤畫面。
 - **樣式用 `styled-components`**，全域 reset 寫在 `styles/global-styles.js`，在 `pages/_app.js` 套用一次。
-- **分析事件**透過 `utils/gtag.js` 包裝 `react-ga4`，初始化時用對應網站的 `ga4Id`。
